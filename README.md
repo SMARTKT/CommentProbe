@@ -28,11 +28,13 @@ git clone https://github.com/glennrp/libpng.git
 
 2. At this point, the directory structure would look like this
 
+```
     .
     ├── CommentProbe
     ├── projects
     │   ├── libpng
     ├── SmartKT
+```
 
 3. Run initialize.py inside folder SmartKT for libpng project
 
