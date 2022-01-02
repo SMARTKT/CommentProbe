@@ -35,8 +35,14 @@ Do a cd .. and go back to the directory containing CommentProbe and project
 
 
 ### Part 2 - Running Correlated Knwoledge Graph generation process (developed into a tool named SmartKT)
+
 1. Download SmartKT - tool used to generate intermediate output which is used in CommentProbe. The url to download it from is - 
 `https://tinyurl.com/1gsy599o`. This will redirect to a Google Drive folder which contains two zip files, download the zip file - `smartKT_Knowledge_Graph_Generation_without_Docker.zip`. Only this file is required. After downloading, extract it (the extraction process will take some time) and  we recommend changing the name of the folder to SmartKT, though it isn't compulsory.
+
+
+
+
+
 
 2. At this point, the directory structure would look like this
 
@@ -51,6 +57,8 @@ Do a cd .. and go back to the directory containing CommentProbe and project
 3. Run initialize.py inside folder SmartKT for libpng project
 
 ```
+sudo su
+chmod -R u=rwx,go=rx parsers/
 cd SmartKT
 python initialize.py ../project/libpng
 ```
