@@ -83,14 +83,14 @@ In line 2228, set the list variable `FILES_TO_RUN` to have all of the code files
 
 3. We provide a problem domain file for libpng in `CommentProbe/ProblemDomainConcepts/libpng_ProblemDomainConcepts.txt`. However, any other custom txt file of same format can also be used. Set the variable `PROBLEM_DOMAIN_FILE` at line 2237 in `run_script.py` to the path of the Problem Domain file.
 
-4. Ensure that the folder `CommentProbe/CommentProbe/CSV` is empty.
+4. Create a folder CSV inside CommentProbe/CommentProbe/
 
 5. Run `run_script.py`
 
 ```
 sudo python2 run_script.py
 ```
-
+Need Stanford parser, openJdk
 
 ### Part 4 - Running Concatenation Project
 
