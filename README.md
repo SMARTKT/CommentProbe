@@ -59,8 +59,10 @@ Do a cd .. and go back to the directory containing CommentProbe and project
 ```
 
 cd SmartKT
-sudo su
-chmod -R u=rwx,go=rx parsers/
+sudo chmod -R 777 .
+ensure zlib is installed
+instal clang 9.0.0 from https://releases.llvm.org/download.html
+
 python initialize.py ../project/libpng
 ```
 
