@@ -8,14 +8,16 @@ This is the official repository for Comment Probe project
 1. Clone the Comment Probe repository
 `https://github.com/SMARTKT/CommentProbe.git`
 
-2. Create a new folder. The target project will be cloned in this directory.
+git clone https://github.com/SMARTKT/CommentProbe.git
+
+2. Create a new folder  (say project) for the target {\em Github} project you want to run Comment Probe on. 
 
 ```
-mkdir projects
-cd projects
+mkdir project
+cd project
 ```
 
-3. Clone the target project - in this case, libpng
+3. Clone the target {\em Github}  project - in this case, libpng
 
 ```
 git clone https://github.com/glennrp/libpng.git
