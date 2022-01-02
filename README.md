@@ -21,19 +21,26 @@ cd project
 
 ```
 git clone https://github.com/glennrp/libpng.git
+
+The directory structure after this clone
 ```
+ ├── CommentProbe
+ ├── project
+ │   ├── libpng
+ 
+Do a cd .. and go back to the directory containing CommentProbe and project
 
 
-### Part 2 - Running SmartKT
+### Part 2 - Running Correlated Knwoledge Graph generation process (developed into a tool named SMARTKT)
 1. Download SMARTKT - tool used to generate intermediate output which is used in CommentProbe. The url to download it from is - 
-`https://tinyurl.com/1gsy599o`. This will redirect to a Google Drive folder which contains two zip files, download the zip file - `smartKT_Knowledge_Graph_Generation_without_Docker.zip`. Only this file is required. After downloading, extract it. We recommend changing the name of the folder to SmartKT, though it isn't compulsory.
+`https://tinyurl.com/1gsy599o`. This will redirect to a Google Drive folder which contains two zip files, download the zip file - `smartKT_Knowledge_Graph_Generation_without_Docker.zip`. Only this file is required. After downloading, extract it (the extraction process will take some time) and  we recommend changing the name of the folder to SmartKT, though it isn't compulsory.
 
 2. At this point, the directory structure would look like this
 
 ```
     .
     ├── CommentProbe
-    ├── projects
+    ├── project
     │   ├── libpng
     ├── SmartKT
 ```
