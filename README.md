@@ -24,9 +24,12 @@ git clone https://github.com/glennrp/libpng.git
 
 The directory structure after this clone
 ```
+```
  ├── CommentProbe
  ├── project
  │   ├── libpng
+ 
+ ```
  
 Do a cd .. and go back to the directory containing CommentProbe and project
 
