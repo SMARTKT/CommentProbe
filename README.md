@@ -57,9 +57,10 @@ Do a cd .. and go back to the directory containing CommentProbe and project
 3. Run initialize.py inside folder SmartKT for libpng project
 
 ```
+
+cd SmartKT
 sudo su
 chmod -R u=rwx,go=rx parsers/
-cd SmartKT
 python initialize.py ../project/libpng
 ```
 
