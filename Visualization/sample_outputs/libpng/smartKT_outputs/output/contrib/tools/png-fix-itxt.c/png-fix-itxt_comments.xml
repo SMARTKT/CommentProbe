@@ -1,0 +1,1147 @@
+<?xml version="1.0" ?>
+<COMMENTS project_name="libpng" project_path="/home/dewang/smartKT/SmartKT/kgg/projects/libpng">
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="png-fix-itxt version 1.0.0
+ *
+ * Copyright 2015 Glenn Randers-Pehrson
+ * Last changed in libpng 1.6.18 [July 23, 2015]
+ *
+ * This code is released under the libpng license.
+ * For conditions of distribution and use, see the disclaimer
+ * and license in png.h
+ *
+ * Usage:
+ *
+ *     png-fix-itxt.exe &lt; bad.png &gt; good.png
+ *
+ * Fixes a PNG file written with libpng-1.6.0 or 1.6.1 that has one or more
+ * uncompressed iTXt chunks.  Assumes that the actual length is greater
+ * than or equal to the value in the length byte, and that the CRC is
+ * correct for the actual length.  This program hunts for the CRC and
+ * adjusts the length byte accordingly.  It is not an error to process a
+ * PNG file that has no iTXt chunks or one that has valid iTXt chunks;
+ * such files will simply be copied.
+ *
+ * Requires zlib (for crc32 and Z_NULL); build with
+ *
+ *     gcc -O -o png-fix-itxt png-fix-itxt.c -lz
+ *
+ * If you need to handle iTXt chunks larger than 500000 kbytes you must
+ * rebuild png-fix-itxt with a larger values of MAX_LENGTH (or a smaller value
+ * if you know you will never encounter such huge iTXt chunks)." comment_scope_start="2" comment_scope_end="165">
+		<SYMBOLS>
+			<macroExpansion type="" spelling="MAX_LENGTH" id="102532102961"/>
+			<macroExpansion type="" spelling="GETBREAK" id="103837389021"/>
+			<macroExpansion type="" spelling="GETBREAK" id="104131829381"/>
+			<macroExpansion type="" spelling="GETBREAK" id="100560675433"/>
+			<macroExpansion type="" spelling="GETBREAK" id="101538733768"/>
+			<macroExpansion type="" spelling="GETBREAK" id="103876124198"/>
+			<macroExpansion type="" spelling="GETBREAK" id="100155986688"/>
+			<macroExpansion type="" spelling="GETBREAK" id="101802257762"/>
+			<macroExpansion type="" spelling="GETBREAK" id="104175977542"/>
+			<macroExpansion type="" spelling="GETBREAK" id="103260181184"/>
+			<macroExpansion type="" spelling="MAX_LENGTH" id="102841807029"/>
+			<macroExpansion type="" spelling="Z_NULL" id="100106182504"/>
+			<macroExpansion type="" spelling="GETBREAK" id="103327804998"/>
+			<macroExpansion type="" spelling="MAX_LENGTH" id="102873473094"/>
+			<macroExpansion type="" spelling="GETBREAK" id="102010365255"/>
+			<macroExpansion type="" spelling="GETBREAK" id="103824901062"/>
+			<inclusionDirective type="" spelling="stdio.h" id="102623719821"/>
+			<inclusionDirective type="" spelling="zlib.h" id="100543146776"/>
+			<VarDecl type="unsigned int" spelling="i" id="103282378136"/>
+			<VarDecl type="unsigned char [500000]" spelling="buf" id="103534625953"/>
+			<VarDecl type="unsigned long" spelling="crc" id="101660434653"/>
+			<VarDecl type="unsigned char" spelling="c" id="100601412355"/>
+			<VarDecl type="int" spelling="inchar" id="101029998036"/>
+			<VarDecl type="unsigned long" spelling="length" id="102684274242"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="103266396004"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="102645761937"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="104101062456"/>
+			<DeclRefExpr type="int" spelling="inchar" id="102875654381"/>
+			<DeclRefExpr type="int (void)" spelling="getchar" id="101671575181"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101967452231"/>
+			<DeclRefExpr type="int" spelling="inchar" id="101459243920"/>
+			<DeclRefExpr type="int" spelling="inchar" id="101759335946"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="102661589765"/>
+			<DeclRefExpr type="int (int)" spelling="putchar" id="100062543029"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="104209325640"/>
+			<DeclRefExpr type="int" spelling="inchar" id="101228057944"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100976568203"/>
+			<DeclRefExpr type="int" spelling="inchar" id="101002736769"/>
+			<DeclRefExpr type="int (void)" spelling="getchar" id="101650018656"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="103128826544"/>
+			<DeclRefExpr type="int" spelling="inchar" id="100036440858"/>
+			<DeclRefExpr type="int" spelling="inchar" id="102111217045"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="103271078896"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="102245223503"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="102557093110"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="103917628333"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101703458348"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="100103718533"/>
+			<DeclRefExpr type="int" spelling="inchar" id="101270247935"/>
+			<DeclRefExpr type="int (void)" spelling="getchar" id="102813830906"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="102048507751"/>
+			<DeclRefExpr type="int" spelling="inchar" id="102324595800"/>
+			<DeclRefExpr type="int" spelling="inchar" id="100439656909"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101376412524"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="102805121505"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101485447185"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="103013630823"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101869979460"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="103127005260"/>
+			<DeclRefExpr type="int" spelling="inchar" id="100574635476"/>
+			<DeclRefExpr type="int (void)" spelling="getchar" id="103945538412"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101176436577"/>
+			<DeclRefExpr type="int" spelling="inchar" id="100117499665"/>
+			<DeclRefExpr type="int" spelling="inchar" id="103071076889"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100158572000"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="100726163195"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101436029062"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="101738179341"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100456963072"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="102977170637"/>
+			<DeclRefExpr type="int" spelling="inchar" id="104208890472"/>
+			<DeclRefExpr type="int (void)" spelling="getchar" id="102832526031"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="103183384268"/>
+			<DeclRefExpr type="int" spelling="inchar" id="104094536046"/>
+			<DeclRefExpr type="int" spelling="inchar" id="100773843828"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100032733925"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="101356077365"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="102091551031"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="102713356489"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="102560452987"/>
+			<DeclRefExpr type="int" spelling="inchar" id="104237405043"/>
+			<DeclRefExpr type="int (void)" spelling="getchar" id="103840190425"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="104158272012"/>
+			<DeclRefExpr type="int" spelling="inchar" id="101887395954"/>
+			<DeclRefExpr type="int" spelling="inchar" id="100839902359"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101860199070"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="103651446116"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101079306110"/>
+			<DeclRefExpr type="int" spelling="inchar" id="100506266140"/>
+			<DeclRefExpr type="int (void)" spelling="getchar" id="101775641767"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100413210848"/>
+			<DeclRefExpr type="int" spelling="inchar" id="102114925964"/>
+			<DeclRefExpr type="int" spelling="inchar" id="102542948288"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100111369427"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="102406303740"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100839208039"/>
+			<DeclRefExpr type="int" spelling="inchar" id="100020583972"/>
+			<DeclRefExpr type="int (void)" spelling="getchar" id="101654375625"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101506997885"/>
+			<DeclRefExpr type="int" spelling="inchar" id="101391443561"/>
+			<DeclRefExpr type="int" spelling="inchar" id="102477836222"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100722488483"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="103163102833"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="102698156771"/>
+			<DeclRefExpr type="int" spelling="inchar" id="102770854728"/>
+			<DeclRefExpr type="int (void)" spelling="getchar" id="100430397967"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101768454473"/>
+			<DeclRefExpr type="int" spelling="inchar" id="101173268874"/>
+			<DeclRefExpr type="int" spelling="inchar" id="100850028177"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100385377722"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="100810983502"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100716977199"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="101815450358"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="102909581663"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="102803170782"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="103256953486"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="101446037002"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="104237137016"/>
+			<DeclRefExpr type="uLong (uLong, const Bytef *, uInt)" spelling="crc32" id="102118802890"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="101344190175"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="104173413580"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="101041994633"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="100771334147"/>
+			<DeclRefExpr type="int" spelling="inchar" id="102484372610"/>
+			<DeclRefExpr type="int (void)" spelling="getchar" id="103653968673"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="104220257613"/>
+			<DeclRefExpr type="int" spelling="inchar" id="103312417415"/>
+			<DeclRefExpr type="int" spelling="inchar" id="103864844903"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100781833144"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="101976239989"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="102951731794"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101332903585"/>
+			<DeclRefExpr type="int" spelling="inchar" id="101512358112"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="102402074163"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="100316255320"/>
+			<DeclRefExpr type="uLong (uLong, const Bytef *, uInt)" spelling="crc32" id="103806578624"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="104145529271"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="103634339709"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="100795400971"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="102057342527"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="102555615287"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="103313389850"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="102150018149"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="100372609258"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="102380994577"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="102144823487"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="101325562217"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="100731105214"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="102504366918"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="103848277254"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="103306126521"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="102775552773"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="104109782515"/>
+			<DeclRefExpr type="int" spelling="inchar" id="100311869982"/>
+			<DeclRefExpr type="int (void)" spelling="getchar" id="102226317498"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="102835287691"/>
+			<DeclRefExpr type="int" spelling="inchar" id="102322546903"/>
+			<DeclRefExpr type="int" spelling="inchar" id="103031117432"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101849250968"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="101919801077"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="100276287167"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101377543928"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="100077227387"/>
+			<DeclRefExpr type="uLong (uLong, const Bytef *, uInt)" spelling="crc32" id="101768978735"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="102784084601"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="103081193302"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="103684988827"/>
+			<DeclRefExpr type="int" spelling="inchar" id="100195259008"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100728378385"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="101473309288"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="103119160218"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="102454202030"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="101931692307"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="101637245001"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="101815037208"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="101007983209"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="100506472364"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="102709694739"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="103838634736"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="101882357549"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="101785424012"/>
+			<DeclRefExpr type="int (int)" spelling="putchar" id="103280621021"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="100402407559"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="101546426481"/>
+			<DeclRefExpr type="int" spelling="inchar" id="101644710102"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101724424326"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="100092689851"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="103356632969"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="103017714621"/>
+			<DeclRefExpr type="int (int)" spelling="putchar" id="103566435508"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="103054370963"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="101966932575"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="102101714151"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="102471269307"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="104026038809"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="103271195234"/>
+			<DeclRefExpr type="int" spelling="inchar" id="103870134104"/>
+			<DeclRefExpr type="int (void)" spelling="getchar" id="103959610485"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100745011927"/>
+			<DeclRefExpr type="int" spelling="inchar" id="100782216902"/>
+			<DeclRefExpr type="int" spelling="inchar" id="101383412628"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="103401813565"/>
+			<DeclRefExpr type="int (int)" spelling="putchar" id="101121065811"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101009072101"/>
+			<DeclRefExpr type="int" spelling="inchar" id="100566731793"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="102994853976"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="103931006582"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="103230838404"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="100946161596"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="100787467674"/>
+			<DeclRefExpr type="int" spelling="inchar" id="103949989916"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100988140936"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="103893314549"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="102477117429"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="102584699323"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="101653813957"/>
+			<TypeRef type="uInt" spelling="uInt" id="102031508155"/>
+			<UnexposedExpr type="unsigned int" spelling="i" id="100183441141"/>
+			<UnexposedExpr type="int (*)(void)" spelling="getchar" id="103301821322"/>
+			<UnexposedExpr type="unsigned int" spelling="inchar" id="100689162211"/>
+			<UnexposedExpr type="int" spelling="inchar" id="103381384243"/>
+			<UnexposedExpr type="int" spelling="inchar" id="103075511708"/>
+			<UnexposedExpr type="int" spelling="c" id="100876647866"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="103529220104"/>
+			<UnexposedExpr type="int (*)(int)" spelling="putchar" id="102585457516"/>
+			<UnexposedExpr type="int" spelling="c" id="102953925167"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="101144802416"/>
+			<UnexposedExpr type="int" spelling="inchar" id="102355459555"/>
+			<UnexposedExpr type="int" spelling="c" id="102208170721"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="100702041939"/>
+			<UnexposedExpr type="int (*)(void)" spelling="getchar" id="100886237702"/>
+			<UnexposedExpr type="unsigned int" spelling="inchar" id="100974998894"/>
+			<UnexposedExpr type="int" spelling="inchar" id="102168966958"/>
+			<UnexposedExpr type="int" spelling="inchar" id="102281820169"/>
+			<UnexposedExpr type="int" spelling="c" id="102436686084"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="102934450662"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="103576863322"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="101472705451"/>
+			<UnexposedExpr type="unsigned long" spelling="c" id="100917446292"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="103546454729"/>
+			<UnexposedExpr type="int (*)(void)" spelling="getchar" id="102903405545"/>
+			<UnexposedExpr type="unsigned int" spelling="inchar" id="101435469192"/>
+			<UnexposedExpr type="int" spelling="inchar" id="100594443980"/>
+			<UnexposedExpr type="int" spelling="inchar" id="102800363958"/>
+			<UnexposedExpr type="int" spelling="c" id="102661507979"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="103620927072"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="102591245790"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="101793571812"/>
+			<UnexposedExpr type="unsigned long" spelling="c" id="104070664599"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="102204016782"/>
+			<UnexposedExpr type="int (*)(void)" spelling="getchar" id="102017984627"/>
+			<UnexposedExpr type="unsigned int" spelling="inchar" id="101716173156"/>
+			<UnexposedExpr type="int" spelling="inchar" id="104184165780"/>
+			<UnexposedExpr type="int" spelling="inchar" id="101757423710"/>
+			<UnexposedExpr type="int" spelling="c" id="102859196881"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="102196830631"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="104191648849"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="100893183731"/>
+			<UnexposedExpr type="unsigned long" spelling="c" id="102674717954"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="101787163846"/>
+			<UnexposedExpr type="int (*)(void)" spelling="getchar" id="102332179318"/>
+			<UnexposedExpr type="unsigned int" spelling="inchar" id="100402913066"/>
+			<UnexposedExpr type="int" spelling="inchar" id="103691264225"/>
+			<UnexposedExpr type="int" spelling="inchar" id="103190239979"/>
+			<UnexposedExpr type="int" spelling="c" id="101559775153"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="100692740685"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="101698144044"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="100718203717"/>
+			<UnexposedExpr type="unsigned long" spelling="c" id="101223420678"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="101002683667"/>
+			<UnexposedExpr type="int (*)(void)" spelling="getchar" id="104060955487"/>
+			<UnexposedExpr type="unsigned int" spelling="inchar" id="101482165669"/>
+			<UnexposedExpr type="int" spelling="inchar" id="104178459623"/>
+			<UnexposedExpr type="int" spelling="inchar" id="100665036380"/>
+			<UnexposedExpr type="int" spelling="c" id="101360983745"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="102649311110"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="102793546059"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="100450251939"/>
+			<UnexposedExpr type="int (*)(void)" spelling="getchar" id="100308741324"/>
+			<UnexposedExpr type="unsigned int" spelling="inchar" id="101270586706"/>
+			<UnexposedExpr type="int" spelling="inchar" id="103925035654"/>
+			<UnexposedExpr type="int" spelling="inchar" id="101128918984"/>
+			<UnexposedExpr type="int" spelling="c" id="100321860082"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="102370890077"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="101615174130"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="101730604985"/>
+			<UnexposedExpr type="int (*)(void)" spelling="getchar" id="103252836639"/>
+			<UnexposedExpr type="unsigned int" spelling="inchar" id="103775042338"/>
+			<UnexposedExpr type="int" spelling="inchar" id="103458846794"/>
+			<UnexposedExpr type="int" spelling="inchar" id="103277897428"/>
+			<UnexposedExpr type="int" spelling="c" id="100123541018"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="101407652509"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="101908865333"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="103238340166"/>
+			<UnexposedExpr type="int (*)(void)" spelling="getchar" id="101014427891"/>
+			<UnexposedExpr type="unsigned int" spelling="inchar" id="104012191215"/>
+			<UnexposedExpr type="int" spelling="inchar" id="104293507777"/>
+			<UnexposedExpr type="int" spelling="inchar" id="102313832163"/>
+			<UnexposedExpr type="int" spelling="c" id="102138545809"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="104088180315"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="100564201302"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="101972269462"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="101862845561"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="101960801380"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="102611412424"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="102279259268"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="100868585748"/>
+			<UnexposedExpr type="uLong (*)(uLong, const Bytef *, uInt)" spelling="crc32" id="100936214412"/>
+			<UnexposedExpr type="unsigned long" spelling="i" id="100731795601"/>
+			<UnexposedExpr type="unsigned int" spelling="i" id="104244708762"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="103165440659"/>
+			<UnexposedExpr type="int (*)(void)" spelling="getchar" id="102408345911"/>
+			<UnexposedExpr type="unsigned int" spelling="inchar" id="102315222105"/>
+			<UnexposedExpr type="int" spelling="inchar" id="103574588424"/>
+			<UnexposedExpr type="int" spelling="inchar" id="104002172611"/>
+			<UnexposedExpr type="int" spelling="c" id="101752051044"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="104248942119"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="101502530114"/>
+			<UnexposedExpr type="unsigned int" spelling="i" id="101034368478"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="102933694444"/>
+			<UnexposedExpr type="int" spelling="inchar" id="102093670420"/>
+			<UnexposedExpr type="int" spelling="c" id="102234438057"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="103001711406"/>
+			<UnexposedExpr type="uLong (*)(uLong, const Bytef *, uInt)" spelling="crc32" id="101351666047"/>
+			<UnexposedExpr type="unsigned long" spelling="crc" id="100305429814"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="102825288718"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="101403718225"/>
+			<UnexposedExpr type="unsigned long" spelling="crc" id="102696091582"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="100402097929"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="101359300275"/>
+			<UnexposedExpr type="unsigned long" spelling="crc" id="103834234472"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="104144439682"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="102126441098"/>
+			<UnexposedExpr type="unsigned long" spelling="crc" id="101242327987"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="101903457649"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="100052328169"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="103857358035"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="101101443725"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="100416815890"/>
+			<UnexposedExpr type="int (*)(void)" spelling="getchar" id="101659506017"/>
+			<UnexposedExpr type="unsigned int" spelling="inchar" id="102168797689"/>
+			<UnexposedExpr type="int" spelling="inchar" id="103422795700"/>
+			<UnexposedExpr type="int" spelling="inchar" id="100348233678"/>
+			<UnexposedExpr type="int" spelling="c" id="102048129622"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="101633095367"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="103421601057"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="100883309848"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="100027998738"/>
+			<UnexposedExpr type="uLong (*)(uLong, const Bytef *, uInt)" spelling="crc32" id="100085355469"/>
+			<UnexposedExpr type="unsigned long" spelling="crc" id="101769452921"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="102104050459"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="101830399348"/>
+			<UnexposedExpr type="int" spelling="inchar" id="101612431759"/>
+			<UnexposedExpr type="int" spelling="c" id="101820104892"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="100674020512"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="100709001999"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="100374567851"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="100243063880"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="104248818423"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="101475783622"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="102847986085"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="104288740936"/>
+			<UnexposedExpr type="unsigned long" spelling="i" id="102765714369"/>
+			<UnexposedExpr type="unsigned int" spelling="i" id="100403126932"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="100210340251"/>
+			<UnexposedExpr type="int (*)(int)" spelling="putchar" id="101482413254"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="101240052094"/>
+			<UnexposedExpr type="unsigned int" spelling="i" id="103088951585"/>
+			<UnexposedExpr type="int" spelling="inchar" id="102873010717"/>
+			<UnexposedExpr type="int" spelling="c" id="102780738699"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="102746605956"/>
+			<UnexposedExpr type="unsigned int" spelling="i" id="102184626046"/>
+			<UnexposedExpr type="int (*)(int)" spelling="putchar" id="102116501333"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="102659148878"/>
+			<UnexposedExpr type="unsigned int" spelling="i" id="103314324535"/>
+			<UnexposedExpr type="unsigned long" spelling="i" id="103492399057"/>
+			<UnexposedExpr type="unsigned int" spelling="i" id="100898656174"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="102918968254"/>
+			<UnexposedExpr type="int (*)(void)" spelling="getchar" id="102343902156"/>
+			<UnexposedExpr type="unsigned int" spelling="inchar" id="101182668642"/>
+			<UnexposedExpr type="int" spelling="inchar" id="104168984283"/>
+			<UnexposedExpr type="int" spelling="inchar" id="102971152138"/>
+			<UnexposedExpr type="int" spelling="c" id="102658287578"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="104150376085"/>
+			<UnexposedExpr type="int (*)(int)" spelling="putchar" id="101213147591"/>
+			<UnexposedExpr type="int" spelling="c" id="101993130852"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="101130564299"/>
+			<UnexposedExpr type="int" spelling="inchar" id="100270311476"/>
+			<UnexposedExpr type="int" spelling="c" id="100676943452"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="101537216870"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="103113400940"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="100067294984"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="103547468297"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="102676478649"/>
+			<UnexposedExpr type="int" spelling="inchar" id="101853634131"/>
+			<UnexposedExpr type="int" spelling="c" id="104274543642"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="100780590722"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="102627872018"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="103358163405"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="100124674697"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="101592782648"/>
+			<CallExpr type="int" spelling="getchar" id="104208323976"/>
+			<CallExpr type="int" spelling="putchar" id="103201840490"/>
+			<CallExpr type="int" spelling="getchar" id="101499731266"/>
+			<CallExpr type="int" spelling="getchar" id="104144164426"/>
+			<CallExpr type="int" spelling="getchar" id="103191997245"/>
+			<CallExpr type="int" spelling="getchar" id="103398879376"/>
+			<CallExpr type="int" spelling="getchar" id="103063307025"/>
+			<CallExpr type="int" spelling="getchar" id="101467222787"/>
+			<CallExpr type="int" spelling="getchar" id="104183680552"/>
+			<CallExpr type="int" spelling="getchar" id="103229638954"/>
+			<CallExpr type="uLong" spelling="crc32" id="101417601307"/>
+			<CallExpr type="int" spelling="getchar" id="102955278761"/>
+			<CallExpr type="uLong" spelling="crc32" id="103894740764"/>
+			<CallExpr type="int" spelling="getchar" id="101696267930"/>
+			<CallExpr type="uLong" spelling="crc32" id="100092215361"/>
+			<CallExpr type="int" spelling="putchar" id="102723584670"/>
+			<CallExpr type="int" spelling="putchar" id="103868757799"/>
+			<CallExpr type="int" spelling="getchar" id="103651652300"/>
+			<CallExpr type="int" spelling="putchar" id="100501051571"/>
+			<macroDefinition type="" spelling="MAX_LENGTH" id="101971740025"/>
+			<macroDefinition type="" spelling="GETBREAK" id="104209104847"/>
+			<FunctionDecl type="int (void)" spelling="main" id="101683621958"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="last" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="for" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="usage" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="length" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="greater" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="equal" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="value" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="length" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="byte" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="for" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="length" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="for" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="length" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="byte" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="error" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="process" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="valid" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="for" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="handle" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="larger" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="larger" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="values" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="smaller" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="value" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="libpng"/>
+			<PROBLEM_DOMAIN word="libpng"/>
+			<PROBLEM_DOMAIN word="png"/>
+			<PROBLEM_DOMAIN word="png"/>
+			<PROBLEM_DOMAIN word="png"/>
+			<PROBLEM_DOMAIN word="png"/>
+			<PROBLEM_DOMAIN word="uncompressed"/>
+			<PROBLEM_DOMAIN word="itxt"/>
+			<PROBLEM_DOMAIN word="crc"/>
+			<PROBLEM_DOMAIN word="crc"/>
+			<PROBLEM_DOMAIN word="png"/>
+			<PROBLEM_DOMAIN word="itxt"/>
+			<PROBLEM_DOMAIN word="itxt"/>
+			<PROBLEM_DOMAIN word="zlib"/>
+			<PROBLEM_DOMAIN word="gcc"/>
+			<PROBLEM_DOMAIN word="itxt"/>
+			<PROBLEM_DOMAIN word="itxt"/>
+			<PROBLEM_DOMAIN word="glenn randers-pehrson"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="Read one character (inchar), also return octet (c), break if EOF" comment_scope_start="37" comment_scope_end="49">
+		<SYMBOLS>
+			<macroExpansion type="" spelling="MAX_LENGTH" id="102532102961"/>
+			<VarDecl type="unsigned int" spelling="i" id="103282378136"/>
+			<VarDecl type="unsigned char [500000]" spelling="buf" id="103534625953"/>
+			<VarDecl type="unsigned long" spelling="crc" id="101660434653"/>
+			<VarDecl type="unsigned char" spelling="c" id="100601412355"/>
+			<VarDecl type="int" spelling="inchar" id="101029998036"/>
+			<macroDefinition type="" spelling="GETBREAK" id="104209104847"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="read" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="character" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="return" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="break" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="Skip 8-byte signature" comment_scope_start="50" comment_scope_end="55">
+		<SYMBOLS>
+			<macroExpansion type="" spelling="GETBREAK" id="103837389021"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="103266396004"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="102645761937"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="104101062456"/>
+			<DeclRefExpr type="int" spelling="inchar" id="102875654381"/>
+			<DeclRefExpr type="int (void)" spelling="getchar" id="101671575181"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101967452231"/>
+			<DeclRefExpr type="int" spelling="inchar" id="101459243920"/>
+			<DeclRefExpr type="int" spelling="inchar" id="101759335946"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="102661589765"/>
+			<DeclRefExpr type="int (int)" spelling="putchar" id="100062543029"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="104209325640"/>
+			<UnexposedExpr type="unsigned int" spelling="i" id="100183441141"/>
+			<UnexposedExpr type="int (*)(void)" spelling="getchar" id="103301821322"/>
+			<UnexposedExpr type="unsigned int" spelling="inchar" id="100689162211"/>
+			<UnexposedExpr type="int" spelling="inchar" id="103381384243"/>
+			<UnexposedExpr type="int" spelling="inchar" id="103075511708"/>
+			<UnexposedExpr type="int" spelling="c" id="100876647866"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="103529220104"/>
+			<UnexposedExpr type="int (*)(int)" spelling="putchar" id="102585457516"/>
+			<UnexposedExpr type="int" spelling="c" id="102953925167"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="101144802416"/>
+			<CallExpr type="int" spelling="getchar" id="104208323976"/>
+			<CallExpr type="int" spelling="putchar" id="103201840490"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="signature"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="!EOF" comment_scope_start="57" comment_scope_end="57">
+		<SYMBOLS>
+			<DeclRefExpr type="int" spelling="inchar" id="101228057944"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100976568203"/>
+			<UnexposedExpr type="int" spelling="inchar" id="102355459555"/>
+			<UnexposedExpr type="int" spelling="c" id="102208170721"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="100702041939"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="Read the length" comment_scope_start="60" comment_scope_end="60"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="must be 32 bits!" comment_scope_start="61" comment_scope_end="61">
+		<SYMBOLS>
+			<VarDecl type="unsigned long" spelling="length" id="102684274242"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="Read the chunkname" comment_scope_start="67" comment_scope_end="73">
+		<SYMBOLS>
+			<macroExpansion type="" spelling="GETBREAK" id="100155986688"/>
+			<macroExpansion type="" spelling="GETBREAK" id="101802257762"/>
+			<macroExpansion type="" spelling="GETBREAK" id="104175977542"/>
+			<macroExpansion type="" spelling="GETBREAK" id="103260181184"/>
+			<DeclRefExpr type="int" spelling="inchar" id="104237405043"/>
+			<DeclRefExpr type="int (void)" spelling="getchar" id="103840190425"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="104158272012"/>
+			<DeclRefExpr type="int" spelling="inchar" id="101887395954"/>
+			<DeclRefExpr type="int" spelling="inchar" id="100839902359"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101860199070"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="103651446116"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101079306110"/>
+			<DeclRefExpr type="int" spelling="inchar" id="100506266140"/>
+			<DeclRefExpr type="int (void)" spelling="getchar" id="101775641767"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100413210848"/>
+			<DeclRefExpr type="int" spelling="inchar" id="102114925964"/>
+			<DeclRefExpr type="int" spelling="inchar" id="102542948288"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100111369427"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="102406303740"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100839208039"/>
+			<DeclRefExpr type="int" spelling="inchar" id="100020583972"/>
+			<DeclRefExpr type="int (void)" spelling="getchar" id="101654375625"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101506997885"/>
+			<DeclRefExpr type="int" spelling="inchar" id="101391443561"/>
+			<DeclRefExpr type="int" spelling="inchar" id="102477836222"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100722488483"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="103163102833"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="102698156771"/>
+			<DeclRefExpr type="int" spelling="inchar" id="102770854728"/>
+			<DeclRefExpr type="int (void)" spelling="getchar" id="100430397967"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101768454473"/>
+			<DeclRefExpr type="int" spelling="inchar" id="101173268874"/>
+			<DeclRefExpr type="int" spelling="inchar" id="100850028177"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100385377722"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="100810983502"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100716977199"/>
+			<UnexposedExpr type="int (*)(void)" spelling="getchar" id="104060955487"/>
+			<UnexposedExpr type="unsigned int" spelling="inchar" id="101482165669"/>
+			<UnexposedExpr type="int" spelling="inchar" id="104178459623"/>
+			<UnexposedExpr type="int" spelling="inchar" id="100665036380"/>
+			<UnexposedExpr type="int" spelling="c" id="101360983745"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="102649311110"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="102793546059"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="100450251939"/>
+			<UnexposedExpr type="int (*)(void)" spelling="getchar" id="100308741324"/>
+			<UnexposedExpr type="unsigned int" spelling="inchar" id="101270586706"/>
+			<UnexposedExpr type="int" spelling="inchar" id="103925035654"/>
+			<UnexposedExpr type="int" spelling="inchar" id="101128918984"/>
+			<UnexposedExpr type="int" spelling="c" id="100321860082"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="102370890077"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="101615174130"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="101730604985"/>
+			<UnexposedExpr type="int (*)(void)" spelling="getchar" id="103252836639"/>
+			<UnexposedExpr type="unsigned int" spelling="inchar" id="103775042338"/>
+			<UnexposedExpr type="int" spelling="inchar" id="103458846794"/>
+			<UnexposedExpr type="int" spelling="inchar" id="103277897428"/>
+			<UnexposedExpr type="int" spelling="c" id="100123541018"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="101407652509"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="101908865333"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="103238340166"/>
+			<UnexposedExpr type="int (*)(void)" spelling="getchar" id="101014427891"/>
+			<UnexposedExpr type="unsigned int" spelling="inchar" id="104012191215"/>
+			<UnexposedExpr type="int" spelling="inchar" id="104293507777"/>
+			<UnexposedExpr type="int" spelling="inchar" id="102313832163"/>
+			<UnexposedExpr type="int" spelling="c" id="102138545809"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="104088180315"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="100564201302"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="101972269462"/>
+			<CallExpr type="int" spelling="getchar" id="103063307025"/>
+			<CallExpr type="int" spelling="getchar" id="101467222787"/>
+			<CallExpr type="int" spelling="getchar" id="104183680552"/>
+			<CallExpr type="int" spelling="getchar" id="103229638954"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="read" type=" 'Operations as part of Data structure"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="The iTXt chunk type expressed as integers is (105, 84, 88, 116)" comment_scope_start="74" comment_scope_end="128">
+		<SYMBOLS>
+			<macroExpansion type="" spelling="MAX_LENGTH" id="102841807029"/>
+			<macroExpansion type="" spelling="Z_NULL" id="100106182504"/>
+			<macroExpansion type="" spelling="GETBREAK" id="103327804998"/>
+			<macroExpansion type="" spelling="MAX_LENGTH" id="102873473094"/>
+			<macroExpansion type="" spelling="GETBREAK" id="102010365255"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="101815450358"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="102909581663"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="102803170782"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="103256953486"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="101446037002"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="104237137016"/>
+			<DeclRefExpr type="uLong (uLong, const Bytef *, uInt)" spelling="crc32" id="102118802890"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="101344190175"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="104173413580"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="101041994633"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="100771334147"/>
+			<DeclRefExpr type="int" spelling="inchar" id="102484372610"/>
+			<DeclRefExpr type="int (void)" spelling="getchar" id="103653968673"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="104220257613"/>
+			<DeclRefExpr type="int" spelling="inchar" id="103312417415"/>
+			<DeclRefExpr type="int" spelling="inchar" id="103864844903"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100781833144"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="101976239989"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="102951731794"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101332903585"/>
+			<DeclRefExpr type="int" spelling="inchar" id="101512358112"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="102402074163"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="100316255320"/>
+			<DeclRefExpr type="uLong (uLong, const Bytef *, uInt)" spelling="crc32" id="103806578624"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="104145529271"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="103634339709"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="100795400971"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="102057342527"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="102555615287"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="103313389850"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="102150018149"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="100372609258"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="102380994577"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="102144823487"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="101325562217"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="100731105214"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="102504366918"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="103848277254"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="103306126521"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="102775552773"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="104109782515"/>
+			<DeclRefExpr type="int" spelling="inchar" id="100311869982"/>
+			<DeclRefExpr type="int (void)" spelling="getchar" id="102226317498"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="102835287691"/>
+			<DeclRefExpr type="int" spelling="inchar" id="102322546903"/>
+			<DeclRefExpr type="int" spelling="inchar" id="103031117432"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101849250968"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="101919801077"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="100276287167"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101377543928"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="100077227387"/>
+			<DeclRefExpr type="uLong (uLong, const Bytef *, uInt)" spelling="crc32" id="101768978735"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="102784084601"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="103081193302"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="103684988827"/>
+			<DeclRefExpr type="int" spelling="inchar" id="100195259008"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100728378385"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="101473309288"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="103119160218"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="102454202030"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="101931692307"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="101637245001"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="101815037208"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="101007983209"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="100506472364"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="102709694739"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="103838634736"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="101882357549"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="101785424012"/>
+			<DeclRefExpr type="int (int)" spelling="putchar" id="103280621021"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="100402407559"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="101546426481"/>
+			<TypeRef type="uInt" spelling="uInt" id="102031508155"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="101862845561"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="101960801380"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="102611412424"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="102279259268"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="100868585748"/>
+			<UnexposedExpr type="uLong (*)(uLong, const Bytef *, uInt)" spelling="crc32" id="100936214412"/>
+			<UnexposedExpr type="unsigned long" spelling="i" id="100731795601"/>
+			<UnexposedExpr type="unsigned int" spelling="i" id="104244708762"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="103165440659"/>
+			<UnexposedExpr type="int (*)(void)" spelling="getchar" id="102408345911"/>
+			<UnexposedExpr type="unsigned int" spelling="inchar" id="102315222105"/>
+			<UnexposedExpr type="int" spelling="inchar" id="103574588424"/>
+			<UnexposedExpr type="int" spelling="inchar" id="104002172611"/>
+			<UnexposedExpr type="int" spelling="c" id="101752051044"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="104248942119"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="101502530114"/>
+			<UnexposedExpr type="unsigned int" spelling="i" id="101034368478"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="102933694444"/>
+			<UnexposedExpr type="int" spelling="inchar" id="102093670420"/>
+			<UnexposedExpr type="int" spelling="c" id="102234438057"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="103001711406"/>
+			<UnexposedExpr type="uLong (*)(uLong, const Bytef *, uInt)" spelling="crc32" id="101351666047"/>
+			<UnexposedExpr type="unsigned long" spelling="crc" id="100305429814"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="102825288718"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="101403718225"/>
+			<UnexposedExpr type="unsigned long" spelling="crc" id="102696091582"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="100402097929"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="101359300275"/>
+			<UnexposedExpr type="unsigned long" spelling="crc" id="103834234472"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="104144439682"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="102126441098"/>
+			<UnexposedExpr type="unsigned long" spelling="crc" id="101242327987"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="101903457649"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="100052328169"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="103857358035"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="101101443725"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="100416815890"/>
+			<UnexposedExpr type="int (*)(void)" spelling="getchar" id="101659506017"/>
+			<UnexposedExpr type="unsigned int" spelling="inchar" id="102168797689"/>
+			<UnexposedExpr type="int" spelling="inchar" id="103422795700"/>
+			<UnexposedExpr type="int" spelling="inchar" id="100348233678"/>
+			<UnexposedExpr type="int" spelling="c" id="102048129622"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="101633095367"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="103421601057"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="100883309848"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="100027998738"/>
+			<UnexposedExpr type="uLong (*)(uLong, const Bytef *, uInt)" spelling="crc32" id="100085355469"/>
+			<UnexposedExpr type="unsigned long" spelling="crc" id="101769452921"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="102104050459"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="101830399348"/>
+			<UnexposedExpr type="int" spelling="inchar" id="101612431759"/>
+			<UnexposedExpr type="int" spelling="c" id="101820104892"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="100674020512"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="100709001999"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="100374567851"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="100243063880"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="104248818423"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="101475783622"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="102847986085"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="104288740936"/>
+			<UnexposedExpr type="unsigned long" spelling="i" id="102765714369"/>
+			<UnexposedExpr type="unsigned int" spelling="i" id="100403126932"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="100210340251"/>
+			<UnexposedExpr type="int (*)(int)" spelling="putchar" id="101482413254"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="101240052094"/>
+			<UnexposedExpr type="unsigned int" spelling="i" id="103088951585"/>
+			<CallExpr type="uLong" spelling="crc32" id="101417601307"/>
+			<CallExpr type="int" spelling="getchar" id="102955278761"/>
+			<CallExpr type="uLong" spelling="crc32" id="103894740764"/>
+			<CallExpr type="int" spelling="getchar" id="101696267930"/>
+			<CallExpr type="uLong" spelling="crc32" id="100092215361"/>
+			<CallExpr type="int" spelling="putchar" id="102723584670"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="itxt"/>
+			<PROBLEM_DOMAIN word="chunk"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="To do: handle this more gracefully" comment_scope_start="78" comment_scope_end="78"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="Initialize the CRC" comment_scope_start="80" comment_scope_end="82">
+		<SYMBOLS>
+			<macroExpansion type="" spelling="Z_NULL" id="100106182504"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="104237137016"/>
+			<DeclRefExpr type="uLong (uLong, const Bytef *, uInt)" spelling="crc32" id="102118802890"/>
+			<UnexposedExpr type="uLong (*)(uLong, const Bytef *, uInt)" spelling="crc32" id="100936214412"/>
+			<CallExpr type="uLong" spelling="crc32" id="101417601307"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="initialize" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="crc"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="Copy the data bytes" comment_scope_start="83" comment_scope_end="87">
+		<SYMBOLS>
+			<macroExpansion type="" spelling="GETBREAK" id="103327804998"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="101344190175"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="104173413580"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="101041994633"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="100771334147"/>
+			<DeclRefExpr type="int" spelling="inchar" id="102484372610"/>
+			<DeclRefExpr type="int (void)" spelling="getchar" id="103653968673"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="104220257613"/>
+			<DeclRefExpr type="int" spelling="inchar" id="103312417415"/>
+			<DeclRefExpr type="int" spelling="inchar" id="103864844903"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100781833144"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="101976239989"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="102951731794"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101332903585"/>
+			<UnexposedExpr type="unsigned long" spelling="i" id="100731795601"/>
+			<UnexposedExpr type="unsigned int" spelling="i" id="104244708762"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="103165440659"/>
+			<UnexposedExpr type="int (*)(void)" spelling="getchar" id="102408345911"/>
+			<UnexposedExpr type="unsigned int" spelling="inchar" id="102315222105"/>
+			<UnexposedExpr type="int" spelling="inchar" id="103574588424"/>
+			<UnexposedExpr type="int" spelling="inchar" id="104002172611"/>
+			<UnexposedExpr type="int" spelling="c" id="101752051044"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="104248942119"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="101502530114"/>
+			<UnexposedExpr type="unsigned int" spelling="i" id="101034368478"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="102933694444"/>
+			<CallExpr type="int" spelling="getchar" id="102955278761"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="data" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="bytes" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="EOF" comment_scope_start="89" comment_scope_end="89">
+		<SYMBOLS>
+			<DeclRefExpr type="int" spelling="inchar" id="101512358112"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="102402074163"/>
+			<UnexposedExpr type="int" spelling="inchar" id="102093670420"/>
+			<UnexposedExpr type="int" spelling="c" id="102234438057"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="103001711406"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="Calculate the CRC" comment_scope_start="92" comment_scope_end="96">
+		<SYMBOLS>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="100316255320"/>
+			<DeclRefExpr type="uLong (uLong, const Bytef *, uInt)" spelling="crc32" id="103806578624"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="104145529271"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="103634339709"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="100795400971"/>
+			<TypeRef type="uInt" spelling="uInt" id="102031508155"/>
+			<UnexposedExpr type="uLong (*)(uLong, const Bytef *, uInt)" spelling="crc32" id="101351666047"/>
+			<UnexposedExpr type="unsigned long" spelling="crc" id="100305429814"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="102825288718"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="101403718225"/>
+			<CallExpr type="uLong" spelling="crc32" id="103894740764"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="crc"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="Check the CRC" comment_scope_start="97" comment_scope_end="111">
+		<SYMBOLS>
+			<macroExpansion type="" spelling="MAX_LENGTH" id="102873473094"/>
+			<macroExpansion type="" spelling="GETBREAK" id="102010365255"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="102057342527"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="102555615287"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="103313389850"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="102150018149"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="100372609258"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="102380994577"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="102144823487"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="101325562217"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="100731105214"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="102504366918"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="103848277254"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="103306126521"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="102775552773"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="104109782515"/>
+			<DeclRefExpr type="int" spelling="inchar" id="100311869982"/>
+			<DeclRefExpr type="int (void)" spelling="getchar" id="102226317498"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="102835287691"/>
+			<DeclRefExpr type="int" spelling="inchar" id="102322546903"/>
+			<DeclRefExpr type="int" spelling="inchar" id="103031117432"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101849250968"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="101919801077"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="100276287167"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101377543928"/>
+			<UnexposedExpr type="unsigned long" spelling="crc" id="102696091582"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="100402097929"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="101359300275"/>
+			<UnexposedExpr type="unsigned long" spelling="crc" id="103834234472"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="104144439682"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="102126441098"/>
+			<UnexposedExpr type="unsigned long" spelling="crc" id="101242327987"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="101903457649"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="100052328169"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="103857358035"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="101101443725"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="100416815890"/>
+			<UnexposedExpr type="int (*)(void)" spelling="getchar" id="101659506017"/>
+			<UnexposedExpr type="unsigned int" spelling="inchar" id="102168797689"/>
+			<UnexposedExpr type="int" spelling="inchar" id="103422795700"/>
+			<UnexposedExpr type="int" spelling="inchar" id="100348233678"/>
+			<UnexposedExpr type="int" spelling="c" id="102048129622"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="101633095367"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="103421601057"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="100883309848"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="100027998738"/>
+			<CallExpr type="int" spelling="getchar" id="101696267930"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="check" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="crc"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="Update the CRC" comment_scope_start="112" comment_scope_end="114">
+		<SYMBOLS>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="100077227387"/>
+			<DeclRefExpr type="uLong (uLong, const Bytef *, uInt)" spelling="crc32" id="101768978735"/>
+			<DeclRefExpr type="unsigned long" spelling="crc" id="102784084601"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="103081193302"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="103684988827"/>
+			<UnexposedExpr type="uLong (*)(uLong, const Bytef *, uInt)" spelling="crc32" id="100085355469"/>
+			<UnexposedExpr type="unsigned long" spelling="crc" id="101769452921"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="102104050459"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="101830399348"/>
+			<CallExpr type="uLong" spelling="crc32" id="100092215361"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="update" type=" 'Operations as part of Data structure"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="crc"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="EOF" comment_scope_start="116" comment_scope_end="116">
+		<SYMBOLS>
+			<DeclRefExpr type="int" spelling="inchar" id="100195259008"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100728378385"/>
+			<UnexposedExpr type="int" spelling="inchar" id="101612431759"/>
+			<UnexposedExpr type="int" spelling="c" id="101820104892"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="100674020512"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="Update length bytes" comment_scope_start="119" comment_scope_end="124">
+		<SYMBOLS>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="101473309288"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="103119160218"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="102454202030"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="101931692307"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="101637245001"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="101815037208"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="101007983209"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="100506472364"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="100709001999"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="100374567851"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="100243063880"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="104248818423"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="101475783622"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="102847986085"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="104288740936"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="update" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="length" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="bytes" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="Write the fixed iTXt chunk (length, name, data, crc)" comment_scope_start="125" comment_scope_end="128">
+		<SYMBOLS>
+			<DeclRefExpr type="unsigned int" spelling="i" id="102709694739"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="103838634736"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="101882357549"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="101785424012"/>
+			<DeclRefExpr type="int (int)" spelling="putchar" id="103280621021"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="100402407559"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="101546426481"/>
+			<UnexposedExpr type="unsigned long" spelling="i" id="102765714369"/>
+			<UnexposedExpr type="unsigned int" spelling="i" id="100403126932"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="100210340251"/>
+			<UnexposedExpr type="int (*)(int)" spelling="putchar" id="101482413254"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="101240052094"/>
+			<UnexposedExpr type="unsigned int" spelling="i" id="103088951585"/>
+			<CallExpr type="int" spelling="putchar" id="102723584670"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="write" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="length" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="data" type=" 'Data-Structure and its Components"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="itxt"/>
+			<PROBLEM_DOMAIN word="chunk"/>
+			<PROBLEM_DOMAIN word="crc"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="EOF" comment_scope_start="132" comment_scope_end="132">
+		<SYMBOLS>
+			<DeclRefExpr type="int" spelling="inchar" id="101644710102"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101724424326"/>
+			<UnexposedExpr type="int" spelling="inchar" id="102873010717"/>
+			<UnexposedExpr type="int" spelling="c" id="102780738699"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="102746605956"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="Copy bytes that were already read (length and chunk name)" comment_scope_start="135" comment_scope_end="138">
+		<SYMBOLS>
+			<DeclRefExpr type="unsigned int" spelling="i" id="100092689851"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="103356632969"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="103017714621"/>
+			<DeclRefExpr type="int (int)" spelling="putchar" id="103566435508"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="103054370963"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="101966932575"/>
+			<UnexposedExpr type="unsigned int" spelling="i" id="102184626046"/>
+			<UnexposedExpr type="int (*)(int)" spelling="putchar" id="102116501333"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="102659148878"/>
+			<UnexposedExpr type="unsigned int" spelling="i" id="103314324535"/>
+			<CallExpr type="int" spelling="putchar" id="103868757799"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="bytes" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="read" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="length" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="chunk"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="Copy data bytes and CRC" comment_scope_start="139" comment_scope_end="144">
+		<SYMBOLS>
+			<macroExpansion type="" spelling="GETBREAK" id="103824901062"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="102101714151"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="102471269307"/>
+			<DeclRefExpr type="unsigned long" spelling="length" id="104026038809"/>
+			<DeclRefExpr type="unsigned int" spelling="i" id="103271195234"/>
+			<DeclRefExpr type="int" spelling="inchar" id="103870134104"/>
+			<DeclRefExpr type="int (void)" spelling="getchar" id="103959610485"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100745011927"/>
+			<DeclRefExpr type="int" spelling="inchar" id="100782216902"/>
+			<DeclRefExpr type="int" spelling="inchar" id="101383412628"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="103401813565"/>
+			<DeclRefExpr type="int (int)" spelling="putchar" id="101121065811"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="101009072101"/>
+			<UnexposedExpr type="unsigned long" spelling="i" id="103492399057"/>
+			<UnexposedExpr type="unsigned int" spelling="i" id="100898656174"/>
+			<UnexposedExpr type="unsigned long" spelling="length" id="102918968254"/>
+			<UnexposedExpr type="int (*)(void)" spelling="getchar" id="102343902156"/>
+			<UnexposedExpr type="unsigned int" spelling="inchar" id="101182668642"/>
+			<UnexposedExpr type="int" spelling="inchar" id="104168984283"/>
+			<UnexposedExpr type="int" spelling="inchar" id="102971152138"/>
+			<UnexposedExpr type="int" spelling="c" id="102658287578"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="104150376085"/>
+			<UnexposedExpr type="int (*)(int)" spelling="putchar" id="101213147591"/>
+			<UnexposedExpr type="int" spelling="c" id="101993130852"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="101130564299"/>
+			<CallExpr type="int" spelling="getchar" id="103651652300"/>
+			<CallExpr type="int" spelling="putchar" id="100501051571"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="data" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="bytes" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="crc"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="EOF" comment_scope_start="146" comment_scope_end="146">
+		<SYMBOLS>
+			<DeclRefExpr type="int" spelling="inchar" id="100566731793"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="102994853976"/>
+			<UnexposedExpr type="int" spelling="inchar" id="100270311476"/>
+			<UnexposedExpr type="int" spelling="c" id="100676943452"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="101537216870"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="The IEND chunk type expressed as integers is (73, 69, 78, 68)" comment_scope_start="151" comment_scope_end="154">
+		<SYMBOLS>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="103931006582"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="103230838404"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="100946161596"/>
+			<DeclRefExpr type="unsigned char [500000]" spelling="buf" id="100787467674"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="103113400940"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="100067294984"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="103547468297"/>
+			<UnexposedExpr type="unsigned char *" spelling="buf" id="102676478649"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="chunk"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c" comment_text="EOF" comment_scope_start="156" comment_scope_end="156">
+		<SYMBOLS>
+			<DeclRefExpr type="int" spelling="inchar" id="103949989916"/>
+			<DeclRefExpr type="unsigned char" spelling="c" id="100988140936"/>
+			<UnexposedExpr type="int" spelling="inchar" id="101853634131"/>
+			<UnexposedExpr type="int" spelling="c" id="104274543642"/>
+			<UnexposedExpr type="unsigned char" spelling="c" id="100780590722"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+</COMMENTS>

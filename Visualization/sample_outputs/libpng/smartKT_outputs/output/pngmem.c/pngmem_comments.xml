@@ -1,0 +1,579 @@
+<?xml version="1.0" ?>
+<COMMENTS project_name="libpng" project_path="/home/dewang/smartKT/SmartKT/kgg/projects/libpng">
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="Free a png_struct" comment_scope_start="23" comment_scope_end="23"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="PRIVATE" comment_scope_start="24" comment_scope_end="24"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="png_free might call png_error and may certainly call
+       * png_get_mem_ptr, so fake a temporary png_struct to support this." comment_scope_start="29" comment_scope_end="36">
+		<SYMBOLS>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="500615512741"/>
+			<DeclRefExpr type="void *(void *, int, unsigned long)" spelling="memset" id="502712201531"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="503870828144"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="503487337456"/>
+			<DeclRefExpr type="void (png_const_structrp, png_voidp)" spelling="png_free" id="500364365826"/>
+			<DeclRefExpr type="png_struct" spelling="dummy_struct" id="501383958895"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="504200955127"/>
+			<CallExpr type="void *" spelling="memset" id="501563918812"/>
+			<CallExpr type="void" spelling="png_free" id="500495223342"/>
+			<TypeRef type="png_struct" spelling="png_struct" id="500526132577"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="500602344815"/>
+			<UnexposedExpr type="void *(*)(void *, int, unsigned long)" spelling="memset" id="504095727784"/>
+			<UnexposedExpr type="void *" spelling="png_ptr" id="502002432302"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="503069620818"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="502919553214"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_voidp)" spelling="png_free" id="502642935480"/>
+			<UnexposedExpr type="png_voidp" spelling="png_ptr" id="500052466888"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="501839801632"/>
+			<VarDecl type="png_struct" spelling="dummy_struct" id="500569205352"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="temporary" type=" 'Properties of Datastructure / Function / Blocks"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="png_error"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="We may have a jmp_buf left to deallocate." comment_scope_start="37" comment_scope_end="40">
+		<SYMBOLS>
+			<DeclRefExpr type="void (png_structrp)" spelling="png_free_jmpbuf" id="500019162871"/>
+			<DeclRefExpr type="png_struct" spelling="dummy_struct" id="502323097942"/>
+			<CallExpr type="void" spelling="png_free_jmpbuf" id="504179269716"/>
+			<UnexposedExpr type="void (*)(png_structrp)" spelling="png_free_jmpbuf" id="500414546543"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="left" type=" 'Data-Structure and its Components"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="Allocate memory.  For reasonable files, size should never exceed
+ * 64K.  However, zlib may allocate more than 64K if you don't tell
+ * it not to.  See zconf.h and png.h for more information.  zlib does
+ * need to allocate exactly 64K, so whatever you call here must
+ * have the ability to do that." comment_scope_start="43" comment_scope_end="61">
+		<SYMBOLS>
+			<DeclRefExpr type="png_voidp" spelling="ret" id="503148547356"/>
+			<DeclRefExpr type="png_voidp (png_const_structrp, png_alloc_size_t)" spelling="png_malloc" id="502490340429"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="502575048952"/>
+			<DeclRefExpr type="png_alloc_size_t" spelling="size" id="500162421929"/>
+			<DeclRefExpr type="png_voidp" spelling="ret" id="503998691441"/>
+			<DeclRefExpr type="void *(void *, int, unsigned long)" spelling="memset" id="503008056242"/>
+			<DeclRefExpr type="png_voidp" spelling="ret" id="501115811387"/>
+			<DeclRefExpr type="png_alloc_size_t" spelling="size" id="503314431392"/>
+			<DeclRefExpr type="png_voidp" spelling="ret" id="500658904230"/>
+			<CallExpr type="png_voidp" spelling="png_malloc" id="502958140494"/>
+			<CallExpr type="void *" spelling="memset" id="502953105739"/>
+			<ParmDecl type="png_const_structrp" spelling="png_ptr" id="501644492231"/>
+			<ParmDecl type="png_alloc_size_t" spelling="size" id="503133902576"/>
+			<TypeRef type="png_voidp" spelling="png_voidp" id="504074170209"/>
+			<TypeRef type="png_const_structrp" spelling="png_const_structrp" id="501331374507"/>
+			<TypeRef type="png_alloc_size_t" spelling="png_alloc_size_t" id="504133510068"/>
+			<TypeRef type="png_voidp" spelling="png_voidp" id="504074170209"/>
+			<FunctionDecl type="png_voidp (png_const_structrp, png_alloc_size_t)" spelling="png_calloc" id="501598494147"/>
+			<UnexposedExpr type="png_voidp (*)(png_const_structrp, png_alloc_size_t)" spelling="png_malloc" id="501704689706"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="503423004564"/>
+			<UnexposedExpr type="png_alloc_size_t" spelling="size" id="504131091755"/>
+			<UnexposedExpr type="png_voidp" spelling="ret" id="501871365794"/>
+			<UnexposedExpr type="void *(*)(void *, int, unsigned long)" spelling="memset" id="503166630919"/>
+			<UnexposedExpr type="png_voidp" spelling="ret" id="501234553843"/>
+			<UnexposedExpr type="png_alloc_size_t" spelling="size" id="503173414059"/>
+			<UnexposedExpr type="png_voidp" spelling="ret" id="500176681009"/>
+			<VarDecl type="png_voidp" spelling="ret" id="500762894865"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="allocate" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="memory" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="for" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="size" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="allocate" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="for" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="allocate" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="do" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="zlib"/>
+			<PROBLEM_DOMAIN word="png"/>
+			<PROBLEM_DOMAIN word="zlib"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="png_malloc_base, an internal function added at libpng 1.6.0, does the work of
+ * allocating memory, taking into account limits and PNG_USER_MEM_SUPPORTED.
+ * Checking and error handling must happen outside this routine; it returns NULL
+ * if the allocation cannot be done (for any reason.)" comment_scope_start="62" comment_scope_end="66"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="PRIVATE" comment_scope_start="67" comment_scope_end="67">
+		<SYMBOLS>
+			<TypeRef type="png_voidp" spelling="png_voidp" id="504074170209"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="private" type=" 'Properties of Datastructure / Function / Blocks"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="Moved to png_malloc_base from png_malloc_default in 1.6.0; the DOS
+    * allocators have also been removed in 1.6.0, so any 16-bit system now has
+    * to implement a user memory handler.  This checks to be sure it isn't
+    * called with big numbers." comment_scope_start="71" comment_scope_end="79"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="Some compilers complain that this is always true.  However, it
+    * can be false when integer overflow happens." comment_scope_start="80" comment_scope_end="94">
+		<SYMBOLS>
+			<DeclRefExpr type="png_alloc_size_t" spelling="size" id="500010757042"/>
+			<DeclRefExpr type="png_alloc_size_t" spelling="size" id="503007158504"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="502078645850"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="503178359296"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="504140431298"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="502437017553"/>
+			<DeclRefExpr type="png_alloc_size_t" spelling="size" id="504294526436"/>
+			<CallExpr type="png_voidp" spelling="malloc_fn" id="502612195434"/>
+			<TypeRef type="size_t" spelling="size_t" id="501295998608"/>
+			<TypeRef type="png_structrp" spelling="png_structrp" id="503317925503"/>
+			<TypeRef type="png_ptruint" spelling="png_ptruint" id="501266450809"/>
+			<UnexposedExpr type="png_alloc_size_t" spelling="size" id="502640927903"/>
+			<UnexposedExpr type="png_alloc_size_t" spelling="size" id="500658522798"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="503217857067"/>
+			<UnexposedExpr type="png_malloc_ptr" spelling="malloc_fn" id="503797095803"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="500866063556"/>
+			<UnexposedExpr type="png_malloc_ptr" spelling="malloc_fn" id="502644459284"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="501736379995"/>
+			<UnexposedExpr type="png_alloc_size_t" spelling="size" id="501645715053"/>
+			<MemberRefExpr type="const png_malloc_ptr" spelling="malloc_fn" id="501000983439"/>
+			<MemberRefExpr type="const png_malloc_ptr" spelling="malloc_fn" id="503149218711"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="integer" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="overflow" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="checked for truncation above" comment_scope_start="95" comment_scope_end="95">
+		<SYMBOLS>
+			<DeclRefExpr type="void *(unsigned long)" spelling="malloc" id="502205020578"/>
+			<DeclRefExpr type="png_alloc_size_t" spelling="size" id="502556980908"/>
+			<CallExpr type="void *" spelling="malloc" id="500824457344"/>
+			<TypeRef type="size_t" spelling="size_t" id="501295998608"/>
+			<UnexposedExpr type="void *(*)(unsigned long)" spelling="malloc" id="503955363878"/>
+			<UnexposedExpr type="png_alloc_size_t" spelling="size" id="504248370632"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="checked" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="for" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="This is really here only to work round a spurious warning in GCC 4.6 and 4.7
+ * that arises because of the checks in png_realloc_array that are repeated in
+ * png_malloc_array." comment_scope_start="104" comment_scope_end="111">
+		<SYMBOLS>
+			<ParmDecl type="png_const_structrp" spelling="png_ptr" id="500481328485"/>
+			<ParmDecl type="int" spelling="nelements" id="502430667256"/>
+			<ParmDecl type="size_t" spelling="element_size" id="500166518356"/>
+			<TypeRef type="png_voidp" spelling="png_voidp" id="504074170209"/>
+			<TypeRef type="png_const_structrp" spelling="png_const_structrp" id="501331374507"/>
+			<TypeRef type="size_t" spelling="size_t" id="501295998608"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="round" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="checks" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="gcc"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="known to be &gt; 0" comment_scope_start="112" comment_scope_end="112">
+		<SYMBOLS>
+			<DeclRefExpr type="int" spelling="nelements" id="500636215621"/>
+			<TypeRef type="png_alloc_size_t" spelling="png_alloc_size_t" id="504133510068"/>
+			<TypeRef type="png_alloc_size_t" spelling="png_alloc_size_t" id="504133510068"/>
+			<UnexposedExpr type="int" spelling="nelements" id="503028745610"/>
+			<VarDecl type="png_alloc_size_t" spelling="req" id="501722699332"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="The failure case when the request is too large" comment_scope_start="117" comment_scope_end="119">
+		<SYMBOLS>
+			<FunctionDecl type="png_voidp (png_const_structrp, int, size_t)" spelling="png_malloc_array_checked" id="502653971195"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="failure" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="case" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="PRIVATE" comment_scope_start="121" comment_scope_end="121">
+		<SYMBOLS>
+			<TypeRef type="png_voidp" spelling="png_voidp" id="504074170209"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="private" type=" 'Properties of Datastructure / Function / Blocks"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="PRIVATE" comment_scope_start="131" comment_scope_end="131">
+		<SYMBOLS>
+			<TypeRef type="png_voidp" spelling="png_voidp" id="504074170209"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="private" type=" 'Properties of Datastructure / Function / Blocks"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="These are internal errors:" comment_scope_start="135" comment_scope_end="139">
+		<SYMBOLS>
+			<DeclRefExpr type="int" spelling="add_elements" id="500594337612"/>
+			<DeclRefExpr type="size_t" spelling="element_size" id="502172331266"/>
+			<DeclRefExpr type="int" spelling="old_elements" id="503309708584"/>
+			<DeclRefExpr type="png_const_voidp" spelling="old_array" id="504292305586"/>
+			<DeclRefExpr type="int" spelling="old_elements" id="500789578744"/>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp) __attribute__((noreturn))" spelling="png_error" id="502968979450"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="501498051258"/>
+			<StringLiteral type="char [30]" spelling="&quot;internal error: array realloc&quot;" id="500444369619"/>
+			<CallExpr type="void" spelling="png_error" id="501260850941"/>
+			<UnexposedExpr type="int" spelling="add_elements" id="502678931899"/>
+			<UnexposedExpr type="size_t" spelling="element_size" id="502225216769"/>
+			<UnexposedExpr type="int" spelling="old_elements" id="501003152442"/>
+			<UnexposedExpr type="png_const_voidp" spelling="old_array" id="503092509662"/>
+			<UnexposedExpr type="int" spelling="old_elements" id="500810175717"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp) __attribute__((noreturn))" spelling="png_error" id="502904433617"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="504243750043"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="internal" type=" 'Properties of Datastructure / Function / Blocks"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="Check for overflow on the elements count (so the caller does not have to
+    * check.)" comment_scope_start="140" comment_scope_end="161">
+		<SYMBOLS>
+			<DeclRefExpr type="int" spelling="add_elements" id="502561483012"/>
+			<DeclRefExpr type="int" spelling="old_elements" id="501646737647"/>
+			<DeclRefExpr type="png_voidp (png_const_structrp, int, size_t)" spelling="png_malloc_array_checked" id="501769984105"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="501014866495"/>
+			<DeclRefExpr type="int" spelling="old_elements" id="500060629379"/>
+			<DeclRefExpr type="int" spelling="add_elements" id="500286047151"/>
+			<DeclRefExpr type="size_t" spelling="element_size" id="503725364696"/>
+			<DeclRefExpr type="png_voidp" spelling="new_array" id="500820906471"/>
+			<DeclRefExpr type="int" spelling="old_elements" id="502526056245"/>
+			<DeclRefExpr type="void *(void *, const void *, unsigned long)" spelling="memcpy" id="501922239352"/>
+			<DeclRefExpr type="png_voidp" spelling="new_array" id="501284799173"/>
+			<DeclRefExpr type="png_const_voidp" spelling="old_array" id="503439629460"/>
+			<DeclRefExpr type="size_t" spelling="element_size" id="500759375739"/>
+			<DeclRefExpr type="int" spelling="old_elements" id="502856203348"/>
+			<DeclRefExpr type="void *(void *, int, unsigned long)" spelling="memset" id="503389999846"/>
+			<DeclRefExpr type="png_voidp" spelling="new_array" id="501921165913"/>
+			<DeclRefExpr type="size_t" spelling="element_size" id="503698554999"/>
+			<DeclRefExpr type="int" spelling="old_elements" id="502711897281"/>
+			<DeclRefExpr type="size_t" spelling="element_size" id="503140988347"/>
+			<DeclRefExpr type="int" spelling="add_elements" id="503330422040"/>
+			<DeclRefExpr type="png_voidp" spelling="new_array" id="504019603726"/>
+			<CallExpr type="png_voidp" spelling="png_malloc_array_checked" id="504022395223"/>
+			<CallExpr type="void *" spelling="memcpy" id="503328787540"/>
+			<CallExpr type="void *" spelling="memset" id="501737826720"/>
+			<TypeRef type="png_voidp" spelling="png_voidp" id="504074170209"/>
+			<UnexposedExpr type="int" spelling="add_elements" id="502122798189"/>
+			<UnexposedExpr type="int" spelling="old_elements" id="500360369116"/>
+			<UnexposedExpr type="png_voidp (*)(png_const_structrp, int, size_t)" spelling="png_malloc_array_checked" id="500671899899"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="504131731926"/>
+			<UnexposedExpr type="int" spelling="old_elements" id="501423984888"/>
+			<UnexposedExpr type="int" spelling="add_elements" id="501095736496"/>
+			<UnexposedExpr type="size_t" spelling="element_size" id="502990905289"/>
+			<UnexposedExpr type="png_voidp" spelling="new_array" id="502313740804"/>
+			<UnexposedExpr type="int" spelling="old_elements" id="500836516099"/>
+			<UnexposedExpr type="void *(*)(void *, const void *, unsigned long)" spelling="memcpy" id="503572667250"/>
+			<UnexposedExpr type="png_voidp" spelling="new_array" id="503671349497"/>
+			<UnexposedExpr type="png_const_voidp" spelling="old_array" id="500587839001"/>
+			<UnexposedExpr type="size_t" spelling="element_size" id="501150273099"/>
+			<UnexposedExpr type="int" spelling="old_elements" id="501217523983"/>
+			<UnexposedExpr type="void *(*)(void *, int, unsigned long)" spelling="memset" id="501144725991"/>
+			<UnexposedExpr type="png_voidp" spelling="new_array" id="501039692405"/>
+			<UnexposedExpr type="size_t" spelling="element_size" id="503416267624"/>
+			<UnexposedExpr type="int" spelling="old_elements" id="500770027636"/>
+			<UnexposedExpr type="size_t" spelling="element_size" id="501546635053"/>
+			<UnexposedExpr type="int" spelling="add_elements" id="500884933060"/>
+			<UnexposedExpr type="png_voidp" spelling="new_array" id="500162662208"/>
+			<VarDecl type="png_voidp" spelling="new_array" id="500399641709"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="check" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="for" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="overflow" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="count" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="check" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="Because png_malloc_array worked the size calculations below cannot
+          * overflow." comment_scope_start="150" comment_scope_end="160">
+		<SYMBOLS>
+			<DeclRefExpr type="int" spelling="old_elements" id="502526056245"/>
+			<DeclRefExpr type="void *(void *, const void *, unsigned long)" spelling="memcpy" id="501922239352"/>
+			<DeclRefExpr type="png_voidp" spelling="new_array" id="501284799173"/>
+			<DeclRefExpr type="png_const_voidp" spelling="old_array" id="503439629460"/>
+			<DeclRefExpr type="size_t" spelling="element_size" id="500759375739"/>
+			<DeclRefExpr type="int" spelling="old_elements" id="502856203348"/>
+			<DeclRefExpr type="void *(void *, int, unsigned long)" spelling="memset" id="503389999846"/>
+			<DeclRefExpr type="png_voidp" spelling="new_array" id="501921165913"/>
+			<DeclRefExpr type="size_t" spelling="element_size" id="503698554999"/>
+			<DeclRefExpr type="int" spelling="old_elements" id="502711897281"/>
+			<DeclRefExpr type="size_t" spelling="element_size" id="503140988347"/>
+			<DeclRefExpr type="int" spelling="add_elements" id="503330422040"/>
+			<DeclRefExpr type="png_voidp" spelling="new_array" id="504019603726"/>
+			<CallExpr type="void *" spelling="memcpy" id="503328787540"/>
+			<CallExpr type="void *" spelling="memset" id="501737826720"/>
+			<UnexposedExpr type="int" spelling="old_elements" id="500836516099"/>
+			<UnexposedExpr type="void *(*)(void *, const void *, unsigned long)" spelling="memcpy" id="503572667250"/>
+			<UnexposedExpr type="png_voidp" spelling="new_array" id="503671349497"/>
+			<UnexposedExpr type="png_const_voidp" spelling="old_array" id="500587839001"/>
+			<UnexposedExpr type="size_t" spelling="element_size" id="501150273099"/>
+			<UnexposedExpr type="int" spelling="old_elements" id="501217523983"/>
+			<UnexposedExpr type="void *(*)(void *, int, unsigned long)" spelling="memset" id="501144725991"/>
+			<UnexposedExpr type="png_voidp" spelling="new_array" id="501039692405"/>
+			<UnexposedExpr type="size_t" spelling="element_size" id="503416267624"/>
+			<UnexposedExpr type="int" spelling="old_elements" id="500770027636"/>
+			<UnexposedExpr type="size_t" spelling="element_size" id="501546635053"/>
+			<UnexposedExpr type="int" spelling="add_elements" id="500884933060"/>
+			<UnexposedExpr type="png_voidp" spelling="new_array" id="500162662208"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="size" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="overflow" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="error" comment_scope_start="163" comment_scope_end="163"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="TEXT || sPLT || STORE_UNKNOWN_CHUNKS" comment_scope_start="165" comment_scope_end="165"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="Various functions that have different error handling are derived from this.
+ * png_malloc always exists, but if PNG_USER_MEM_SUPPORTED is defined a separate
+ * function png_malloc_default is also provided." comment_scope_start="167" comment_scope_end="181">
+		<SYMBOLS>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="500114132573"/>
+			<DeclRefExpr type="png_voidp" spelling="ret" id="501573068248"/>
+			<DeclRefExpr type="png_voidp (png_const_structrp, png_alloc_size_t)" spelling="png_malloc_base" id="501533686310"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="502368229913"/>
+			<DeclRefExpr type="png_alloc_size_t" spelling="size" id="503610508452"/>
+			<DeclRefExpr type="png_voidp" spelling="ret" id="502254309234"/>
+			<CallExpr type="png_voidp" spelling="png_malloc_base" id="504088934584"/>
+			<ParmDecl type="png_const_structrp" spelling="png_ptr" id="500633920679"/>
+			<ParmDecl type="png_alloc_size_t" spelling="size" id="504175243371"/>
+			<TypeRef type="png_voidp" spelling="png_voidp" id="504074170209"/>
+			<TypeRef type="png_const_structrp" spelling="png_const_structrp" id="501331374507"/>
+			<TypeRef type="png_alloc_size_t" spelling="png_alloc_size_t" id="504133510068"/>
+			<TypeRef type="png_voidp" spelling="png_voidp" id="504074170209"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="504075950366"/>
+			<UnexposedExpr type="png_voidp (*)(png_const_structrp, png_alloc_size_t)" spelling="png_malloc_base" id="502328276582"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="501775489183"/>
+			<UnexposedExpr type="png_alloc_size_t" spelling="size" id="503144577657"/>
+			<UnexposedExpr type="png_voidp" spelling="ret" id="502699837575"/>
+			<VarDecl type="png_voidp" spelling="ret" id="501499892076"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="error" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="separate" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="'m' means png_malloc" comment_scope_start="182" comment_scope_end="182">
+		<SYMBOLS>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp) __attribute__((noreturn))" spelling="png_error" id="500745374363"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="501050497552"/>
+			<StringLiteral type="char [14]" spelling="&quot;Out of memory&quot;" id="503005582924"/>
+			<CallExpr type="void" spelling="png_error" id="501342340255"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp) __attribute__((noreturn))" spelling="png_error" id="502263542549"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="502382152585"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="Passing 'NULL' here bypasses the application provided memory handler." comment_scope_start="197" comment_scope_end="197"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="use malloc" comment_scope_start="198" comment_scope_end="198">
+		<SYMBOLS>
+			<DeclRefExpr type="png_voidp" spelling="ret" id="503132925213"/>
+			<DeclRefExpr type="png_voidp (png_const_structrp, png_alloc_size_t)" spelling="png_malloc_base" id="500492189610"/>
+			<DeclRefExpr type="png_alloc_size_t" spelling="size" id="501140121658"/>
+			<CallExpr type="png_voidp" spelling="png_malloc_base" id="500815046851"/>
+			<UnexposedExpr type="png_voidp (*)(png_const_structrp, png_alloc_size_t)" spelling="png_malloc_base" id="502645477033"/>
+			<UnexposedExpr type="png_alloc_size_t" spelling="size" id="503316520398"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="malloc" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="'M' means png_malloc_default" comment_scope_start="201" comment_scope_end="201">
+		<SYMBOLS>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp) __attribute__((noreturn))" spelling="png_error" id="503397888533"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="502983904581"/>
+			<StringLiteral type="char [14]" spelling="&quot;Out of Memory&quot;" id="503279637596"/>
+			<CallExpr type="void" spelling="png_error" id="501348510616"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp) __attribute__((noreturn))" spelling="png_error" id="501363733377"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="501263942521"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="USER_MEM" comment_scope_start="205" comment_scope_end="205"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="This function was added at libpng version 1.2.3.  The png_malloc_warn()
+ * function will issue a png_warning and return NULL instead of issuing a
+ * png_error, if it fails to allocate the requested memory." comment_scope_start="207" comment_scope_end="227">
+		<SYMBOLS>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="503430946136"/>
+			<DeclRefExpr type="png_voidp (png_const_structrp, png_alloc_size_t)" spelling="png_malloc_base" id="502148262027"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="500247891041"/>
+			<DeclRefExpr type="png_alloc_size_t" spelling="size" id="500296962393"/>
+			<DeclRefExpr type="png_voidp" spelling="ret" id="503675121320"/>
+			<DeclRefExpr type="png_voidp" spelling="ret" id="500549435331"/>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp)" spelling="png_warning" id="500912416450"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="500776460189"/>
+			<StringLiteral type="char [14]" spelling="&quot;Out of memory&quot;" id="504077004262"/>
+			<CallExpr type="png_voidp" spelling="png_malloc_base" id="501845458366"/>
+			<CallExpr type="void" spelling="png_warning" id="503042048517"/>
+			<ParmDecl type="png_const_structrp" spelling="png_ptr" id="503838272684"/>
+			<ParmDecl type="png_alloc_size_t" spelling="size" id="500454711073"/>
+			<TypeRef type="png_voidp" spelling="png_voidp" id="504074170209"/>
+			<TypeRef type="png_const_structrp" spelling="png_const_structrp" id="501331374507"/>
+			<TypeRef type="png_alloc_size_t" spelling="png_alloc_size_t" id="504133510068"/>
+			<TypeRef type="png_voidp" spelling="png_voidp" id="504074170209"/>
+			<FunctionDecl type="png_voidp (png_const_structrp, png_alloc_size_t)" spelling="png_malloc_warn" id="500335518175"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="500360013776"/>
+			<UnexposedExpr type="png_voidp (*)(png_const_structrp, png_alloc_size_t)" spelling="png_malloc_base" id="503970905602"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="503817359259"/>
+			<UnexposedExpr type="png_alloc_size_t" spelling="size" id="501146051306"/>
+			<UnexposedExpr type="png_voidp" spelling="ret" id="503259082113"/>
+			<UnexposedExpr type="png_voidp" spelling="ret" id="501677048943"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp)" spelling="png_warning" id="501217918021"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="500433187418"/>
+			<VarDecl type="png_voidp" spelling="ret" id="501720724462"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="added" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="return" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="null" type=" 'Properties of Datastructure / Function / Blocks"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="allocate" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="memory" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="libpng"/>
+			<PROBLEM_DOMAIN word="png_error"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="Free a pointer allocated by png_malloc().  If ptr is NULL, return
+ * without taking any action." comment_scope_start="228" comment_scope_end="249">
+		<SYMBOLS>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="500508786926"/>
+			<DeclRefExpr type="png_voidp" spelling="ptr" id="502987594898"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="504260789542"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="503111352412"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="503433359257"/>
+			<DeclRefExpr type="png_voidp" spelling="ptr" id="501636817752"/>
+			<DeclRefExpr type="void (png_const_structrp, png_voidp)" spelling="png_free_default" id="502444587215"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="501669649848"/>
+			<DeclRefExpr type="png_voidp" spelling="ptr" id="501837584339"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="502781301905"/>
+			<DeclRefExpr type="png_voidp" spelling="ptr" id="500859085436"/>
+			<CallExpr type="void" spelling="free_fn" id="504272723610"/>
+			<CallExpr type="void" spelling="png_free_default" id="502493347631"/>
+			<ParmDecl type="png_const_structrp" spelling="png_ptr" id="501364705134"/>
+			<ParmDecl type="png_voidp" spelling="ptr" id="502764001302"/>
+			<ParmDecl type="png_const_structrp" spelling="png_ptr" id="503367335790"/>
+			<ParmDecl type="png_voidp" spelling="ptr" id="501844364640"/>
+			<TypeRef type="png_const_structrp" spelling="png_const_structrp" id="501331374507"/>
+			<TypeRef type="png_voidp" spelling="png_voidp" id="504074170209"/>
+			<TypeRef type="png_structrp" spelling="png_structrp" id="503317925503"/>
+			<TypeRef type="png_ptruint" spelling="png_ptruint" id="501266450809"/>
+			<TypeRef type="png_const_structrp" spelling="png_const_structrp" id="501331374507"/>
+			<TypeRef type="png_voidp" spelling="png_voidp" id="504074170209"/>
+			<FunctionDecl type="void (png_const_structrp, png_voidp)" spelling="png_free" id="501718511289"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="501676627418"/>
+			<UnexposedExpr type="png_voidp" spelling="ptr" id="502698939681"/>
+			<UnexposedExpr type="png_free_ptr" spelling="free_fn" id="500053844326"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="502906356601"/>
+			<UnexposedExpr type="png_free_ptr" spelling="free_fn" id="503191685949"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="500378512546"/>
+			<UnexposedExpr type="png_voidp" spelling="ptr" id="502438609254"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_voidp)" spelling="png_free_default" id="502310181667"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="502495027393"/>
+			<UnexposedExpr type="png_voidp" spelling="ptr" id="502834281174"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="500654392666"/>
+			<UnexposedExpr type="png_voidp" spelling="ptr" id="500760096918"/>
+			<MemberRefExpr type="const png_free_ptr" spelling="free_fn" id="502684950428"/>
+			<MemberRefExpr type="const png_free_ptr" spelling="free_fn" id="502762108457"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="free" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="pointer" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="allocated" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="null" type=" 'Properties of Datastructure / Function / Blocks"/>
+			<POGRAM_DOMAIN word="return" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="USER_MEM" comment_scope_start="250" comment_scope_end="250"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="This function is called when the application wants to use another method
+ * of allocating and freeing memory." comment_scope_start="256" comment_scope_end="270">
+		<SYMBOLS>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="502397178763"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="501204273450"/>
+			<DeclRefExpr type="png_voidp" spelling="mem_ptr" id="503028889167"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="502079891712"/>
+			<DeclRefExpr type="png_malloc_ptr" spelling="malloc_fn" id="503462385331"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="502138232242"/>
+			<DeclRefExpr type="png_free_ptr" spelling="free_fn" id="502850611268"/>
+			<ParmDecl type="png_structrp" spelling="png_ptr" id="501063553317"/>
+			<ParmDecl type="png_voidp" spelling="mem_ptr" id="501748340849"/>
+			<ParmDecl type="png_malloc_ptr" spelling="malloc_fn" id="503851749096"/>
+			<ParmDecl type="png_free_ptr" spelling="free_fn" id="501029959680"/>
+			<TypeRef type="png_structrp" spelling="png_structrp" id="503317925503"/>
+			<TypeRef type="png_voidp" spelling="png_voidp" id="504074170209"/>
+			<TypeRef type="png_malloc_ptr" spelling="png_malloc_ptr" id="503875090431"/>
+			<TypeRef type="png_free_ptr" spelling="png_free_ptr" id="503064367829"/>
+			<FunctionDecl type="void (png_structrp, png_voidp, png_malloc_ptr, png_free_ptr)" spelling="png_set_mem_fn" id="501153816293"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="501479142575"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="501997982200"/>
+			<UnexposedExpr type="png_voidp" spelling="mem_ptr" id="503515036702"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="501064257511"/>
+			<UnexposedExpr type="png_malloc_ptr" spelling="malloc_fn" id="500004854313"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="501975113255"/>
+			<UnexposedExpr type="png_free_ptr" spelling="free_fn" id="500444870190"/>
+			<MemberRefExpr type="png_voidp" spelling="mem_ptr" id="503755413258"/>
+			<MemberRefExpr type="png_malloc_ptr" spelling="malloc_fn" id="504035775673"/>
+			<MemberRefExpr type="png_free_ptr" spelling="free_fn" id="503511734321"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="allocating" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="freeing" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="memory" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="application"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="This function returns a pointer to the mem_ptr associated with the user
+ * functions.  The application should free any memory associated with this
+ * pointer before png_write_destroy and png_read_destroy are called." comment_scope_start="271" comment_scope_end="282">
+		<SYMBOLS>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="502188428551"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="500802464693"/>
+			<ParmDecl type="png_const_structrp" spelling="png_ptr" id="503817947281"/>
+			<TypeRef type="png_voidp" spelling="png_voidp" id="504074170209"/>
+			<TypeRef type="png_const_structrp" spelling="png_const_structrp" id="501331374507"/>
+			<FunctionDecl type="png_voidp (png_const_structrp)" spelling="png_get_mem_ptr" id="500337525092"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="500360690225"/>
+			<UnexposedExpr type="png_voidp" spelling="mem_ptr" id="502557807205"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="503626333933"/>
+			<MemberRefExpr type="const png_voidp" spelling="mem_ptr" id="504128171671"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="returns" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="pointer" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="free" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="memory" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="pointer" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="application"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="USER_MEM" comment_scope_start="283" comment_scope_end="283"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c" comment_text="READ || WRITE" comment_scope_start="284" comment_scope_end="284"/>
+</COMMENTS>

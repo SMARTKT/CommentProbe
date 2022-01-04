@@ -1,0 +1,258 @@
+/usr/bin/cmake -H/home/dewang/smartKT/SmartKT/kgg/projects/libpng -B/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[1]: Entering directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+make -f CMakeFiles/genfiles.dir/build.make CMakeFiles/genfiles.dir/depend
+make -f CMakeFiles/png-fix-itxt.dir/build.make CMakeFiles/png-fix-itxt.dir/depend
+make[2]: Entering directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+cd /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/dewang/smartKT/SmartKT/kgg/projects/libpng /home/dewang/smartKT/SmartKT/kgg/projects/libpng /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/genfiles.dir/DependInfo.cmake --color=
+make[2]: Entering directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+cd /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/dewang/smartKT/SmartKT/kgg/projects/libpng /home/dewang/smartKT/SmartKT/kgg/projects/libpng /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/png-fix-itxt.dir/DependInfo.cmake --color=
+Dependee "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/genfiles.dir/DependInfo.cmake" is newer than depender "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/genfiles.dir/depend.internal".
+Dependee "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/genfiles.dir/depend.internal".
+Dependee "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/png-fix-itxt.dir/DependInfo.cmake" is newer than depender "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/png-fix-itxt.dir/depend.internal".
+Dependee "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/png-fix-itxt.dir/depend.internal".
+Scanning dependencies of target genfiles
+Scanning dependencies of target png-fix-itxt
+make[2]: Leaving directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+make[2]: Leaving directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+make -f CMakeFiles/genfiles.dir/build.make CMakeFiles/genfiles.dir/build
+make -f CMakeFiles/png-fix-itxt.dir/build.make CMakeFiles/png-fix-itxt.dir/build
+make[2]: Entering directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+make[2]: Entering directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+[  2%] Generating pnglibconf.c
+[  2%] Generating pngprefix.h
+[  4%] Building C object CMakeFiles/png-fix-itxt.dir/contrib/tools/png-fix-itxt.c.o
+/usr/bin/cmake -DOUTPUT=pnglibconf.c -P /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/scripts/gensrc.cmake
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/png-fix-itxt.dir/contrib/tools/png-fix-itxt.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c
+/usr/bin/cmake -DOUTPUT=pngprefix.h -P /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/scripts/gensrc.cmake
+[  5%] Generating scripts/pnglibconf.c
+/usr/bin/cmake -DOUTPUT=scripts/pnglibconf.c -P /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/scripts/gensrc.cmake
+[  7%] Generating scripts/symbols.out
+/usr/bin/cmake -DINPUT=/home/dewang/smartKT/SmartKT/kgg/projects/libpng/scripts/symbols.c -DOUTPUT=/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/scripts/symbols.out -P /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/scripts/genout.cmake
+[  8%] Generating pnglibconf.out
+/usr/bin/cmake -DINPUT=/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/pnglibconf.c -DOUTPUT=/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/pnglibconf.out -P /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/scripts/genout.cmake
+[  9%] Generating scripts/symbols.chk
+/usr/bin/cmake -DINPUT=/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/scripts/symbols.out -DOUTPUT=/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/scripts/symbols.chk -P /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/scripts/genchk.cmake
+[ 11%] Linking C executable png-fix-itxt
+/usr/bin/cmake -E cmake_link_script CMakeFiles/png-fix-itxt.dir/link.txt --verbose=1
+[ 12%] Generating pnglibconf.h
+/usr/bin/cmake -DOUTPUT=pnglibconf.h -P /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/scripts/gensrc.cmake
+[ 14%] Generating scripts/prefix.out
+/usr/bin/cmake -DINPUT=/home/dewang/smartKT/SmartKT/kgg/projects/libpng/scripts/prefix.c -DOUTPUT=/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/scripts/prefix.out -P /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/scripts/genout.cmake
+/usr/bin/cc -g  -rdynamic CMakeFiles/png-fix-itxt.dir/contrib/tools/png-fix-itxt.c.o  -o png-fix-itxt -lz -lm 
+make[2]: Leaving directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+[ 16%] Generating scripts/vers.out
+[ 16%] Generating scripts/sym.out
+[ 16%] Built target png-fix-itxt
+/usr/bin/cmake -DINPUT=/home/dewang/smartKT/SmartKT/kgg/projects/libpng/scripts/sym.c -DOUTPUT=/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/scripts/sym.out -P /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/scripts/genout.cmake
+/usr/bin/cmake -DINPUT=/home/dewang/smartKT/SmartKT/kgg/projects/libpng/scripts/vers.c -DOUTPUT=/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/scripts/vers.out -P /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/scripts/genout.cmake
+[ 18%] Generating scripts/intprefix.out
+/usr/bin/cmake -DINPUT=/home/dewang/smartKT/SmartKT/kgg/projects/libpng/scripts/intprefix.c -DOUTPUT=/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/scripts/intprefix.out -P /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/scripts/genout.cmake
+[ 19%] Generating libpng.vers
+/usr/bin/cmake -E remove /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/libpng.vers
+[ 21%] Generating libpng.sym
+/usr/bin/cmake -E remove /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/libpng.sym
+/usr/bin/cmake -E copy /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/scripts/vers.out /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/libpng.vers
+/usr/bin/cmake -E copy /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/scripts/sym.out /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/libpng.sym
+make[2]: Leaving directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+[ 21%] Built target genfiles
+make -f CMakeFiles/png.dir/build.make CMakeFiles/png.dir/depend
+make -f CMakeFiles/png_static.dir/build.make CMakeFiles/png_static.dir/depend
+make[2]: Entering directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+cd /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/dewang/smartKT/SmartKT/kgg/projects/libpng /home/dewang/smartKT/SmartKT/kgg/projects/libpng /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/png.dir/DependInfo.cmake --color=
+make[2]: Entering directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+cd /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/dewang/smartKT/SmartKT/kgg/projects/libpng /home/dewang/smartKT/SmartKT/kgg/projects/libpng /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/png_static.dir/DependInfo.cmake --color=
+Dependee "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/png_static.dir/DependInfo.cmake" is newer than depender "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/png_static.dir/depend.internal".
+Dependee "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/png.dir/DependInfo.cmake" is newer than depender "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/png.dir/depend.internal".
+Dependee "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/png_static.dir/depend.internal".
+Dependee "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/png.dir/depend.internal".
+Scanning dependencies of target png
+Scanning dependencies of target png_static
+make[2]: Leaving directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+make -f CMakeFiles/png.dir/build.make CMakeFiles/png.dir/build
+make[2]: Leaving directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+make -f CMakeFiles/png_static.dir/build.make CMakeFiles/png_static.dir/build
+make[2]: Entering directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+make[2]: Entering directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+[ 23%] Building C object CMakeFiles/png.dir/png.c.o
+[ 23%] Building C object CMakeFiles/png.dir/pngerror.c.o
+[ 25%] Building C object CMakeFiles/png.dir/pngget.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -Dpng_EXPORTS -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g -fPIC   -o CMakeFiles/png.dir/png.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/png.c
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -Dpng_EXPORTS -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g -fPIC   -o CMakeFiles/png.dir/pngerror.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngerror.c
+[ 26%] Building C object CMakeFiles/png_static.dir/png.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -Dpng_EXPORTS -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g -fPIC   -o CMakeFiles/png.dir/pngget.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngget.c
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/png_static.dir/png.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/png.c
+[ 28%] Building C object CMakeFiles/png.dir/pngmem.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -Dpng_EXPORTS -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g -fPIC   -o CMakeFiles/png.dir/pngmem.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c
+[ 29%] Building C object CMakeFiles/png.dir/pngpread.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -Dpng_EXPORTS -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g -fPIC   -o CMakeFiles/png.dir/pngpread.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c
+[ 30%] Building C object CMakeFiles/png.dir/pngread.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -Dpng_EXPORTS -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g -fPIC   -o CMakeFiles/png.dir/pngread.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngread.c
+[ 32%] Building C object CMakeFiles/png_static.dir/pngerror.c.o
+[ 33%] Building C object CMakeFiles/png.dir/pngrio.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/png_static.dir/pngerror.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngerror.c
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -Dpng_EXPORTS -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g -fPIC   -o CMakeFiles/png.dir/pngrio.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngrio.c
+[ 35%] Building C object CMakeFiles/png.dir/pngrtran.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -Dpng_EXPORTS -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g -fPIC   -o CMakeFiles/png.dir/pngrtran.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngrtran.c
+[ 36%] Building C object CMakeFiles/png.dir/pngrutil.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -Dpng_EXPORTS -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g -fPIC   -o CMakeFiles/png.dir/pngrutil.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngrutil.c
+[ 38%] Building C object CMakeFiles/png_static.dir/pngget.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/png_static.dir/pngget.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngget.c
+[ 39%] Building C object CMakeFiles/png.dir/pngset.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -Dpng_EXPORTS -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g -fPIC   -o CMakeFiles/png.dir/pngset.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngset.c
+[ 40%] Building C object CMakeFiles/png_static.dir/pngmem.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/png_static.dir/pngmem.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c
+[ 42%] Building C object CMakeFiles/png_static.dir/pngpread.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/png_static.dir/pngpread.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c
+[ 43%] Building C object CMakeFiles/png.dir/pngtrans.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -Dpng_EXPORTS -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g -fPIC   -o CMakeFiles/png.dir/pngtrans.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c
+[ 45%] Building C object CMakeFiles/png.dir/pngwio.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -Dpng_EXPORTS -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g -fPIC   -o CMakeFiles/png.dir/pngwio.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwio.c
+[ 46%] Building C object CMakeFiles/png.dir/pngwrite.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -Dpng_EXPORTS -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g -fPIC   -o CMakeFiles/png.dir/pngwrite.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwrite.c
+[ 47%] Building C object CMakeFiles/png.dir/pngwtran.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -Dpng_EXPORTS -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g -fPIC   -o CMakeFiles/png.dir/pngwtran.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwtran.c
+[ 49%] Building C object CMakeFiles/png.dir/pngwutil.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -Dpng_EXPORTS -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g -fPIC   -o CMakeFiles/png.dir/pngwutil.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwutil.c
+[ 50%] Building C object CMakeFiles/png_static.dir/pngread.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/png_static.dir/pngread.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngread.c
+[ 52%] Building C object CMakeFiles/png.dir/intel/intel_init.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -Dpng_EXPORTS -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g -fPIC   -o CMakeFiles/png.dir/intel/intel_init.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/intel_init.c
+[ 53%] Building C object CMakeFiles/png.dir/intel/filter_sse2_intrinsics.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -Dpng_EXPORTS -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g -fPIC   -o CMakeFiles/png.dir/intel/filter_sse2_intrinsics.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c
+[ 54%] Building C object CMakeFiles/png_static.dir/pngrio.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/png_static.dir/pngrio.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngrio.c
+[ 56%] Building C object CMakeFiles/png_static.dir/pngrtran.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/png_static.dir/pngrtran.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngrtran.c
+[ 57%] Building C object CMakeFiles/png_static.dir/pngrutil.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/png_static.dir/pngrutil.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngrutil.c
+[ 59%] Building C object CMakeFiles/png_static.dir/pngset.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/png_static.dir/pngset.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngset.c
+[ 60%] Linking C shared library libpng16d.so
+/usr/bin/cmake -E cmake_link_script CMakeFiles/png.dir/link.txt --verbose=1
+[ 61%] Building C object CMakeFiles/png_static.dir/pngtrans.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/png_static.dir/pngtrans.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c
+/usr/bin/cc -fPIC -g -Wl,--version-script='/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/libpng.vers' -shared -Wl,-soname,libpng16d.so.16 -o libpng16d.so.16.38.git CMakeFiles/png.dir/png.c.o CMakeFiles/png.dir/pngerror.c.o CMakeFiles/png.dir/pngget.c.o CMakeFiles/png.dir/pngmem.c.o CMakeFiles/png.dir/pngpread.c.o CMakeFiles/png.dir/pngread.c.o CMakeFiles/png.dir/pngrio.c.o CMakeFiles/png.dir/pngrtran.c.o CMakeFiles/png.dir/pngrutil.c.o CMakeFiles/png.dir/pngset.c.o CMakeFiles/png.dir/pngtrans.c.o CMakeFiles/png.dir/pngwio.c.o CMakeFiles/png.dir/pngwrite.c.o CMakeFiles/png.dir/pngwtran.c.o CMakeFiles/png.dir/pngwutil.c.o CMakeFiles/png.dir/intel/intel_init.c.o CMakeFiles/png.dir/intel/filter_sse2_intrinsics.c.o -lz -lm 
+/usr/bin/cmake -E cmake_symlink_library libpng16d.so.16.38.git libpng16d.so.16 libpng16d.so
+/usr/bin/cmake -E create_symlink libpng16d.so /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/libpng.so
+[ 63%] Building C object CMakeFiles/png_static.dir/pngwio.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/png_static.dir/pngwio.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwio.c
+make[2]: Leaving directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+[ 64%] Building C object CMakeFiles/png_static.dir/pngwrite.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/png_static.dir/pngwrite.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwrite.c
+[ 66%] Building C object CMakeFiles/png_static.dir/pngwtran.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/png_static.dir/pngwtran.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwtran.c
+[ 71%] Built target png
+make -f CMakeFiles/pngstest.dir/build.make CMakeFiles/pngstest.dir/depend
+make[2]: Entering directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+cd /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/dewang/smartKT/SmartKT/kgg/projects/libpng /home/dewang/smartKT/SmartKT/kgg/projects/libpng /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngstest.dir/DependInfo.cmake --color=
+Dependee "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngstest.dir/DependInfo.cmake" is newer than depender "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngstest.dir/depend.internal".
+Dependee "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngstest.dir/depend.internal".
+Scanning dependencies of target pngstest
+make[2]: Leaving directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+make -f CMakeFiles/pngstest.dir/build.make CMakeFiles/pngstest.dir/build
+make[2]: Entering directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+[ 73%] Building C object CMakeFiles/pngstest.dir/contrib/libtests/pngstest.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/pngstest.dir/contrib/libtests/pngstest.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngstest.c
+[ 74%] Building C object CMakeFiles/png_static.dir/pngwutil.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/png_static.dir/pngwutil.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwutil.c
+[ 76%] Building C object CMakeFiles/png_static.dir/intel/intel_init.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/png_static.dir/intel/intel_init.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/intel_init.c
+make -f CMakeFiles/pngimage.dir/build.make CMakeFiles/pngimage.dir/depend
+make[2]: Entering directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+cd /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/dewang/smartKT/SmartKT/kgg/projects/libpng /home/dewang/smartKT/SmartKT/kgg/projects/libpng /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngimage.dir/DependInfo.cmake --color=
+[ 77%] Building C object CMakeFiles/png_static.dir/intel/filter_sse2_intrinsics.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/png_static.dir/intel/filter_sse2_intrinsics.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c
+Dependee "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngimage.dir/DependInfo.cmake" is newer than depender "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngimage.dir/depend.internal".
+Dependee "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngimage.dir/depend.internal".
+Scanning dependencies of target pngimage
+make[2]: Leaving directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+make -f CMakeFiles/pngimage.dir/build.make CMakeFiles/pngimage.dir/build
+make[2]: Entering directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+[ 78%] Building C object CMakeFiles/pngimage.dir/contrib/libtests/pngimage.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/pngimage.dir/contrib/libtests/pngimage.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c
+make -f CMakeFiles/pngunknown.dir/build.make CMakeFiles/pngunknown.dir/depend
+make[2]: Entering directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+cd /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/dewang/smartKT/SmartKT/kgg/projects/libpng /home/dewang/smartKT/SmartKT/kgg/projects/libpng /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngunknown.dir/DependInfo.cmake --color=
+Dependee "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngunknown.dir/DependInfo.cmake" is newer than depender "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngunknown.dir/depend.internal".
+Dependee "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngunknown.dir/depend.internal".
+Scanning dependencies of target pngunknown
+make[2]: Leaving directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+make -f CMakeFiles/pngunknown.dir/build.make CMakeFiles/pngunknown.dir/build
+make[2]: Entering directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+[ 80%] Building C object CMakeFiles/pngunknown.dir/contrib/libtests/pngunknown.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/pngunknown.dir/contrib/libtests/pngunknown.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngunknown.c
+[ 81%] Linking C executable pngstest
+/usr/bin/cmake -E cmake_link_script CMakeFiles/pngstest.dir/link.txt --verbose=1
+/usr/bin/cc -g  -rdynamic CMakeFiles/pngstest.dir/contrib/libtests/pngstest.c.o  -o pngstest -Wl,-rpath,/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build libpng16d.so.16.38.git -lz -lm 
+[ 83%] Linking C executable pngimage
+/usr/bin/cmake -E cmake_link_script CMakeFiles/pngimage.dir/link.txt --verbose=1
+/usr/bin/cc -g  -rdynamic CMakeFiles/pngimage.dir/contrib/libtests/pngimage.c.o  -o pngimage -Wl,-rpath,/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build libpng16d.so.16.38.git -lz -lm 
+[ 84%] Linking C executable pngunknown
+/usr/bin/cmake -E cmake_link_script CMakeFiles/pngunknown.dir/link.txt --verbose=1
+make[2]: Leaving directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+/usr/bin/cc -g  -rdynamic CMakeFiles/pngunknown.dir/contrib/libtests/pngunknown.c.o  -o pngunknown -Wl,-rpath,/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build libpng16d.so.16.38.git -lz -lm 
+[ 84%] Built target pngstest
+make -f CMakeFiles/pngtest.dir/build.make CMakeFiles/pngtest.dir/depend
+make[2]: Entering directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+cd /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/dewang/smartKT/SmartKT/kgg/projects/libpng /home/dewang/smartKT/SmartKT/kgg/projects/libpng /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngtest.dir/DependInfo.cmake --color=
+make[2]: Leaving directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+Dependee "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngtest.dir/DependInfo.cmake" is newer than depender "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngtest.dir/depend.internal".
+Dependee "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngtest.dir/depend.internal".
+Scanning dependencies of target pngtest
+make[2]: Leaving directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+make -f CMakeFiles/pngtest.dir/build.make CMakeFiles/pngtest.dir/build
+make[2]: Entering directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+[ 84%] Built target pngimage
+make -f CMakeFiles/pngfix.dir/build.make CMakeFiles/pngfix.dir/depend
+make[2]: Entering directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+cd /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/dewang/smartKT/SmartKT/kgg/projects/libpng /home/dewang/smartKT/SmartKT/kgg/projects/libpng /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngfix.dir/DependInfo.cmake --color=
+make[2]: Leaving directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+[ 85%] Building C object CMakeFiles/pngtest.dir/pngtest.c.o
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/pngtest.dir/pngtest.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtest.c
+Dependee "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngfix.dir/DependInfo.cmake" is newer than depender "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngfix.dir/depend.internal".
+Dependee "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngfix.dir/depend.internal".
+Scanning dependencies of target pngfix
+make[2]: Leaving directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+make -f CMakeFiles/pngfix.dir/build.make CMakeFiles/pngfix.dir/build
+make[2]: Entering directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+[ 85%] Built target pngunknown
+make -f CMakeFiles/pngvalid.dir/build.make CMakeFiles/pngvalid.dir/depend
+make[2]: Entering directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+cd /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/dewang/smartKT/SmartKT/kgg/projects/libpng /home/dewang/smartKT/SmartKT/kgg/projects/libpng /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngvalid.dir/DependInfo.cmake --color=
+[ 87%] Linking C static library libpng16d.a
+/usr/bin/cmake -P CMakeFiles/png_static.dir/cmake_clean_target.cmake
+[ 88%] Building C object CMakeFiles/pngfix.dir/contrib/tools/pngfix.c.o
+Dependee "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngvalid.dir/DependInfo.cmake" is newer than depender "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngvalid.dir/depend.internal".
+Dependee "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngvalid.dir/depend.internal".
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/pngfix.dir/contrib/tools/pngfix.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/pngfix.c
+Scanning dependencies of target pngvalid
+make[2]: Leaving directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+make -f CMakeFiles/pngvalid.dir/build.make CMakeFiles/pngvalid.dir/build
+/usr/bin/cmake -E cmake_link_script CMakeFiles/png_static.dir/link.txt --verbose=1
+make[2]: Entering directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+/usr/bin/ar qc libpng16d.a  CMakeFiles/png_static.dir/png.c.o CMakeFiles/png_static.dir/pngerror.c.o CMakeFiles/png_static.dir/pngget.c.o CMakeFiles/png_static.dir/pngmem.c.o CMakeFiles/png_static.dir/pngpread.c.o CMakeFiles/png_static.dir/pngread.c.o CMakeFiles/png_static.dir/pngrio.c.o CMakeFiles/png_static.dir/pngrtran.c.o CMakeFiles/png_static.dir/pngrutil.c.o CMakeFiles/png_static.dir/pngset.c.o CMakeFiles/png_static.dir/pngtrans.c.o CMakeFiles/png_static.dir/pngwio.c.o CMakeFiles/png_static.dir/pngwrite.c.o CMakeFiles/png_static.dir/pngwtran.c.o CMakeFiles/png_static.dir/pngwutil.c.o CMakeFiles/png_static.dir/intel/intel_init.c.o CMakeFiles/png_static.dir/intel/filter_sse2_intrinsics.c.o
+[ 90%] Building C object CMakeFiles/pngvalid.dir/contrib/libtests/pngvalid.c.o
+/usr/bin/ranlib libpng16d.a
+/usr/bin/cc -DPNG_INTEL_SSE_OPT=1 -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build -I/home/dewang/smartKT/SmartKT/kgg/projects/libpng  -g   -o CMakeFiles/pngvalid.dir/contrib/libtests/pngvalid.c.o   -c /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngvalid.c
+/usr/bin/cmake -E create_symlink libpng16d.a /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/libpng.a
+make[2]: Leaving directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+[ 95%] Built target png_static
+[ 97%] Linking C executable pngtest
+/usr/bin/cmake -E cmake_link_script CMakeFiles/pngtest.dir/link.txt --verbose=1
+/usr/bin/cc -g  -rdynamic CMakeFiles/pngtest.dir/pngtest.c.o  -o pngtest -Wl,-rpath,/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build libpng16d.so.16.38.git -lz -lm 
+make[2]: Leaving directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+[ 97%] Built target pngtest
+[ 98%] Linking C executable pngfix
+/usr/bin/cmake -E cmake_link_script CMakeFiles/pngfix.dir/link.txt --verbose=1
+/usr/bin/cc -g  -rdynamic CMakeFiles/pngfix.dir/contrib/tools/pngfix.c.o  -o pngfix -Wl,-rpath,/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build: libpng16d.so.16.38.git -lz -lm 
+make[2]: Leaving directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+[ 98%] Built target pngfix
+[100%] Linking C executable pngvalid
+/usr/bin/cmake -E cmake_link_script CMakeFiles/pngvalid.dir/link.txt --verbose=1
+/usr/bin/cc -g  -rdynamic CMakeFiles/pngvalid.dir/contrib/libtests/pngvalid.c.o  -o pngvalid -Wl,-rpath,/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build libpng16d.so.16.38.git -lz -lm 
+make[2]: Leaving directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+[100%] Built target pngvalid
+make[1]: Leaving directory '/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build'
+/usr/bin/cmake -E cmake_progress_start /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles 0

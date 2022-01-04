@@ -1,0 +1,122 @@
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/intel_init.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngrio.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwio.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwtran.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtest.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngerror.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngset.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngget.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwutil.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwrite.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngread.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/png.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngunknown.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngrtran.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngrutil.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngstest.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/pngfix.c
+Comments Analyzed: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngvalid.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/example.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwutil.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwio.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtest.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngrio.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/intel_init.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngread.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngrutil.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwtran.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngrtran.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/png.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngset.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/scripts/prefix.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/scripts/vers.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/scripts/sym.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/scripts/intprefix.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/scripts/symbols.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngerror.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/powerpc/filter_vsx_intrinsics.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/powerpc/powerpc_init.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngmem.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwrite.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngget.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/pnglibconf.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/feature_tests.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/scripts/pnglibconf.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/arm/palette_neon_intrinsics.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/arm/filter_neon_intrinsics.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/arm/arm_init.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/mips/filter_msa_intrinsics.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/mips/mips_init.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/fakepng.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/readpng.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/timepng.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/makepng.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/tarith.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngstest.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngunknown.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngvalid.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/examples/pngpixel.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/examples/pngtopng.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/examples/iccfrompng.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/examples/simpleover.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/checksum-icc.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/pngcp.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/cvtcolor.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/makesRGB.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/pngfix.c
+Generating comments: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/genpng.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/arm-neon/linux.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/arm-neon/linux-auxv.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/arm-neon/android-ndk.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/gregbook/readpng.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/gregbook/rpng-win.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/gregbook/readppm.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/gregbook/wpng.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/gregbook/rpng2-win.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/gregbook/writepng.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/gregbook/readpng2.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/gregbook/rpng2-x.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/gregbook/rpng-x.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/oss-fuzz/libpng_read_fuzzer.cc
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/visupng/VisualPng.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/visupng/PngFile.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/powerpc-vsx/linux.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/powerpc-vsx/linux_aux.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/pngminus/pnm2png.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/pngminus/png2pnm.c
+Skipping: No compile instructions: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/mips-msa/linux.c
+parsers/comments/MergeAllCommentsXML.py:30: DeprecationWarning: This method will be removed in future versions.  Use 'list(elem)' or iteration over elem instead.
+  for comment in root.getchildren():
+Starting Static: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/pngtest
+
+Generating info for pngtest
+Created dwarfdump for pngtest
+Combined static info for pngtest
+Written combined clang for pngtest
+Generated addresses for pngtest
+
+Generating info for libpng16d.so.16.38.git
+Created dwarfdump for libpng16d.so.16.38.git
+Combined static info for libpng16d.so.16.38.git
+Written combined clang for libpng16d.so.16.38.git
+Generated addresses for libpng16d.so.16.38.git
+
+Written interlinked combined clang for /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/pngtest
+Updated all linkage files
+
+Starting Comments!
+
+Written id remapped final comments xml: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/final_comments.xml
+Comments Done!

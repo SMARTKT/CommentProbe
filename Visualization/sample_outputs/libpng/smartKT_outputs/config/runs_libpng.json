@@ -1,0 +1,21 @@
+{
+    "runs": {
+        "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/pngtest": {
+            "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtest.png" : 1,
+            "/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngbar.png": 1
+        }
+    },
+    "comments": {
+        "project_name": "libpng",
+        "project_path": "/home/dewang/smartKT/SmartKT/kgg/projects/libpng",
+        "vocab_loc": "/home/dewang/smartKT/SmartKT/kgg/parsers/comments/program_domain.csv",
+        "problem_domain_loc": "/home/dewang/smartKT/SmartKT/kgg/parsers/comments/ProblemDomains/libpng/problem_domain.txt"
+    },
+    "vcs": {
+        "username": "spandankumarsahu",
+        "oauth": "this_is_fake_oauth_using_real_one_in_server",
+        "repo": "glennrp/libpng",
+        "project_name": "libpng",
+        "fresh_fetch": true
+    }
+}

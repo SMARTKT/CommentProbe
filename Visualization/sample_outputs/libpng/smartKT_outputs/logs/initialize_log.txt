@@ -1,0 +1,363 @@
++ cd /home/dewang/smartKT/SmartKT/kgg/projects/libpng
++ rm -rf build
++ mkdir build
++ cd build
++ cmake -DCMAKE_BUILD_TYPE=Debug ..
+-- The C compiler identification is GNU 7.5.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11") 
+-- Performing Test HAVE_LD_VERSION_SCRIPT
+-- Performing Test HAVE_LD_VERSION_SCRIPT - Success
+-- Symbol prefix: 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/dewang/smartKT/SmartKT/kgg/projects/libpng/build
++ nproc
++ make -j4 VERBOSE=1
++ mkdir -p /home/dewang/smartKT/SmartKT/kgg/outputs/libpng
++ mv make_log.txt /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/
++ rm /home/dewang/smartKT/SmartKT/kgg/projects/libpng/init.sh
+make: Nothing to be done for 'all'.
+
+( 2/24): Generating info for png.c
+
+( 1/24): Generating info for contrib/tools/png-fix-itxt.c
+
+( 4/24): Generating info for pngget.c
+
+( 6/24): Generating info for pngpread.c
+
+( 3/24): Generating info for pngerror.c
+
+( 5/24): Generating info for pngmem.c
+
+( 8/24): Generating info for pngrio.c
+
+( 7/24): Generating info for pngread.c
+
+( 1/24): Generated info for contrib/tools/png-fix-itxt.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/tools/png-fix-itxt.c/png-fix-itxt_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/tools/png-fix-itxt.c/png-fix-itxt.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/tools/png-fix-itxt.c/png-fix-itxt.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/tools/png-fix-itxt.c/png-fix-itxt.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/tools/png-fix-itxt.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/tools/png-fix-itxt.c/png-fix-itxt_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/tools/png-fix-itxt.c/png-fix-itxt_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/tools/png-fix-itxt.c/png-fix-itxt.offset
+
+
+( 9/24): Generating info for pngrtran.c
+
+( 8/24): Generated info for pngrio.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrio.c/pngrio_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrio.c/pngrio.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrio.c/pngrio.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrio.c/pngrio.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrio.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrio.c/pngrio_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrio.c/pngrio_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrio.c/pngrio.offset
+
+
+(10/24): Generating info for pngrutil.c
+
+( 5/24): Generated info for pngmem.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngmem.c/pngmem_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngmem.c/pngmem.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngmem.c/pngmem.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngmem.c/pngmem.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngmem.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngmem.c/pngmem_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngmem.c/pngmem_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngmem.c/pngmem.offset
+
+
+(11/24): Generating info for pngset.c
+
+( 3/24): Generated info for pngerror.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngerror.c/pngerror_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngerror.c/pngerror.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngerror.c/pngerror.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngerror.c/pngerror.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngerror.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngerror.c/pngerror_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngerror.c/pngerror_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngerror.c/pngerror.offset
+
+
+( 4/24): Generated info for pngget.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngget.c/pngget_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngget.c/pngget.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngget.c/pngget.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngget.c/pngget.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngget.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngget.c/pngget_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngget.c/pngget_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngget.c/pngget.offset
+
+
+(12/24): Generating info for pngtrans.c
+
+(13/24): Generating info for pngwio.c
+
+( 6/24): Generated info for pngpread.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngpread.c/pngpread_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngpread.c/pngpread.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngpread.c/pngpread.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngpread.c/pngpread.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngpread.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngpread.c/pngpread_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngpread.c/pngpread_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngpread.c/pngpread.offset
+
+
+(14/24): Generating info for pngwrite.c
+
+( 2/24): Generated info for png.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/png.c/png_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/png.c/png.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/png.c/png.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/png.c/png.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/png.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/png.c/png_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/png.c/png_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/png.c/png.offset
+
+
+(15/24): Generating info for pngwtran.c
+
+(13/24): Generated info for pngwio.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwio.c/pngwio_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwio.c/pngwio.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwio.c/pngwio.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwio.c/pngwio.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwio.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwio.c/pngwio_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwio.c/pngwio_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwio.c/pngwio.offset
+
+
+(16/24): Generating info for pngwutil.c
+
+(11/24): Generated info for pngset.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngset.c/pngset_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngset.c/pngset.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngset.c/pngset.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngset.c/pngset.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngset.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngset.c/pngset_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngset.c/pngset_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngset.c/pngset.offset
+
+
+(17/24): Generating info for intel/intel_init.c
+
+(12/24): Generated info for pngtrans.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngtrans.c/pngtrans_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngtrans.c/pngtrans.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngtrans.c/pngtrans.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngtrans.c/pngtrans.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngtrans.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngtrans.c/pngtrans_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngtrans.c/pngtrans_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngtrans.c/pngtrans.offset
+
+
+(18/24): Generating info for intel/filter_sse2_intrinsics.c
+
+( 9/24): Generated info for pngrtran.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrtran.c/pngrtran_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrtran.c/pngrtran.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrtran.c/pngrtran.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrtran.c/pngrtran.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrtran.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrtran.c/pngrtran_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrtran.c/pngrtran_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrtran.c/pngrtran.offset
+
+
+(19/24): Generating info for contrib/libtests/pngstest.c
+
+(14/24): Generated info for pngwrite.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwrite.c/pngwrite_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwrite.c/pngwrite.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwrite.c/pngwrite.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwrite.c/pngwrite.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwrite.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwrite.c/pngwrite_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwrite.c/pngwrite_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwrite.c/pngwrite.offset
+
+
+(17/24): Generated info for intel/intel_init.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/intel/intel_init.c/intel_init_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/intel/intel_init.c/intel_init.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/intel/intel_init.c/intel_init.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/intel/intel_init.c/intel_init.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/intel/intel_init.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/intel/intel_init.c/intel_init_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/intel/intel_init.c/intel_init_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/intel/intel_init.c/intel_init.offset
+
+
+(20/24): Generating info for contrib/libtests/pngimage.c
+
+(21/24): Generating info for contrib/libtests/pngunknown.c
+
+(15/24): Generated info for pngwtran.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwtran.c/pngwtran_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwtran.c/pngwtran.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwtran.c/pngwtran.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwtran.c/pngwtran.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwtran.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwtran.c/pngwtran_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwtran.c/pngwtran_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwtran.c/pngwtran.offset
+
+
+(22/24): Generating info for pngtest.c
+
+( 7/24): Generated info for pngread.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngread.c/pngread_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngread.c/pngread.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngread.c/pngread.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngread.c/pngread.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngread.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngread.c/pngread_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngread.c/pngread_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngread.c/pngread.offset
+
+
+(23/24): Generating info for contrib/tools/pngfix.c
+
+(16/24): Generated info for pngwutil.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwutil.c/pngwutil_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwutil.c/pngwutil.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwutil.c/pngwutil.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwutil.c/pngwutil.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwutil.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwutil.c/pngwutil_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwutil.c/pngwutil_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngwutil.c/pngwutil.offset
+
+
+(24/24): Generating info for contrib/libtests/pngvalid.c
+
+(18/24): Generated info for intel/filter_sse2_intrinsics.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/intel/filter_sse2_intrinsics.c/filter_sse2_intrinsics_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/intel/filter_sse2_intrinsics.c/filter_sse2_intrinsics.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/intel/filter_sse2_intrinsics.c/filter_sse2_intrinsics.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/intel/filter_sse2_intrinsics.c/filter_sse2_intrinsics.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/intel/filter_sse2_intrinsics.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/intel/filter_sse2_intrinsics.c/filter_sse2_intrinsics_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/intel/filter_sse2_intrinsics.c/filter_sse2_intrinsics_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/intel/filter_sse2_intrinsics.c/filter_sse2_intrinsics.offset
+
+
+(22/24): Generated info for pngtest.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngtest.c/pngtest_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngtest.c/pngtest.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngtest.c/pngtest.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngtest.c/pngtest.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngtest.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngtest.c/pngtest_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngtest.c/pngtest_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngtest.c/pngtest.offset
+
+
+(20/24): Generated info for contrib/libtests/pngimage.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngimage.c/pngimage_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngimage.c/pngimage.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngimage.c/pngimage.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngimage.c/pngimage.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngimage.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngimage.c/pngimage_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngimage.c/pngimage_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngimage.c/pngimage.offset
+
+
+(21/24): Generated info for contrib/libtests/pngunknown.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngunknown.c/pngunknown_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngunknown.c/pngunknown.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngunknown.c/pngunknown.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngunknown.c/pngunknown.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngunknown.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngunknown.c/pngunknown_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngunknown.c/pngunknown_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngunknown.c/pngunknown.offset
+
+
+(19/24): Generated info for contrib/libtests/pngstest.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngstest.c/pngstest_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngstest.c/pngstest.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngstest.c/pngstest.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngstest.c/pngstest.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngstest.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngstest.c/pngstest_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngstest.c/pngstest_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngstest.c/pngstest.offset
+
+
+(10/24): Generated info for pngrutil.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrutil.c/pngrutil_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrutil.c/pngrutil.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrutil.c/pngrutil.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrutil.c/pngrutil.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrutil.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrutil.c/pngrutil_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrutil.c/pngrutil_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/pngrutil.c/pngrutil.offset
+
+
+(23/24): Generated info for contrib/tools/pngfix.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/tools/pngfix.c/pngfix_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/tools/pngfix.c/pngfix.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/tools/pngfix.c/pngfix.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/tools/pngfix.c/pngfix.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/tools/pngfix.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/tools/pngfix.c/pngfix_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/tools/pngfix.c/pngfix_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/tools/pngfix.c/pngfix.offset
+
+
+(24/24): Generated info for contrib/libtests/pngvalid.c
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngvalid.c/pngvalid_clang.xml
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngvalid.c/pngvalid.calls.temp
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngvalid.c/pngvalid.calls.tokens
+output :/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngvalid.c/pngvalid.funcargs
+Clang output generated: /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngvalid.c
+Dwarfdump Generated : /home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngvalid.c/pngvalid_dd.xml
+Information combined : 
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngvalid.c/pngvalid_comb.xml
+/home/dewang/smartKT/SmartKT/kgg/outputs/libpng/contrib/libtests/pngvalid.c/pngvalid.offset
+

@@ -1,0 +1,1033 @@
+<?xml version="1.0" ?>
+<root>
+  <file name="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/pngfix.dir/contrib/tools/pngfix.c.o">
+    <DW_TAG_compile_unit unit_length="12292" version="4" debug_abbrev_offset="0" address_size="8" path="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/pngfix.c" offset="0">
+      <sources>
+        <entry id="1" file="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/pngfix.c"/>
+        <entry id="2" file="/usr/lib/gcc/x86_64-linux-gnu/7/include/stddef.h"/>
+        <entry id="3" file="/usr/include/x86_64-linux-gnu/bits/types.h"/>
+        <entry id="4" file="/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h"/>
+        <entry id="5" file="/usr/include/x86_64-linux-gnu/bits/libio.h"/>
+        <entry id="6" file="/usr/include/x86_64-linux-gnu/bits/types/FILE.h"/>
+        <entry id="7" file="/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h"/>
+        <entry id="8" file="/usr/include/x86_64-linux-gnu/bits/_G_config.h"/>
+        <entry id="9" file="/usr/include/stdio.h"/>
+        <entry id="10" file="/usr/include/x86_64-linux-gnu/bits/sys_errlist.h"/>
+        <entry id="11" file="/usr/include/x86_64-linux-gnu/bits/setjmp.h"/>
+        <entry id="12" file="/usr/include/setjmp.h"/>
+        <entry id="13" file="/usr/include/time.h"/>
+        <entry id="14" file="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/../../pngconf.h"/>
+        <entry id="15" file="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/../../png.h"/>
+        <entry id="16" file="/usr/include/zconf.h"/>
+        <entry id="17" file="/usr/include/unistd.h"/>
+        <entry id="18" file="/usr/include/x86_64-linux-gnu/bits/getopt_core.h"/>
+        <entry id="19" file="/usr/include/zlib.h"/>
+        <entry id="20" file="/usr/include/ctype.h"/>
+      </sources>
+      <DW_TAG_typedef offset="45" DW_AT_name="size_t" DW_AT_decl_file="2" DW_AT_decl_line="216" DW_AT_type="56"/>
+      <DW_TAG_base_type offset="56" DW_AT_byte_size="8" DW_AT_encoding="7" DW_AT_name="long unsigned int"/>
+      <DW_TAG_base_type offset="63" DW_AT_byte_size="4" DW_AT_encoding="5" DW_AT_name="int"/>
+      <DW_TAG_volatile_type offset="70" DW_AT_type="63"/>
+      <DW_TAG_base_type offset="75" DW_AT_byte_size="4" DW_AT_encoding="7" DW_AT_name="unsigned int"/>
+      <DW_TAG_base_type offset="82" DW_AT_byte_size="8" DW_AT_encoding="5" DW_AT_name="long int"/>
+      <DW_TAG_base_type offset="89" DW_AT_byte_size="8" DW_AT_encoding="5" DW_AT_name="long long int"/>
+      <DW_TAG_base_type offset="96" DW_AT_byte_size="1" DW_AT_encoding="8" DW_AT_name="unsigned char"/>
+      <DW_TAG_base_type offset="103" DW_AT_byte_size="2" DW_AT_encoding="7" DW_AT_name="short unsigned int"/>
+      <DW_TAG_base_type offset="110" DW_AT_byte_size="1" DW_AT_encoding="6" DW_AT_name="signed char"/>
+      <DW_TAG_base_type offset="117" DW_AT_byte_size="2" DW_AT_encoding="5" DW_AT_name="short int"/>
+      <DW_TAG_typedef offset="124" DW_AT_name="__off_t" DW_AT_decl_file="3" DW_AT_decl_line="140" DW_AT_type="82"/>
+      <DW_TAG_typedef offset="135" DW_AT_name="__off64_t" DW_AT_decl_file="3" DW_AT_decl_line="141" DW_AT_type="82"/>
+      <DW_TAG_pointer_type offset="146" DW_AT_byte_size="8"/>
+      <DW_TAG_pointer_type offset="148" DW_AT_byte_size="8" DW_AT_type="154"/>
+      <DW_TAG_base_type offset="154" DW_AT_byte_size="1" DW_AT_encoding="6" DW_AT_name="char"/>
+      <DW_TAG_const_type offset="161" DW_AT_type="154"/>
+      <DW_TAG_structure_type offset="166" DW_AT_byte_size="128" DW_AT_decl_file="4" DW_AT_decl_line="5" DW_AT_sibling="187">
+        <DW_TAG_member offset="174" DW_AT_name="__val" DW_AT_decl_file="4" DW_AT_decl_line="7" DW_AT_type="187" DW_AT_data_member_location="0"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_array_type offset="187" DW_AT_type="56" DW_AT_sibling="203">
+        <DW_TAG_subrange_type offset="196" DW_AT_type="56" DW_AT_upper_bound="15"/>
+      </DW_TAG_array_type>
+      <DW_TAG_typedef offset="203" DW_AT_name="__sigset_t" DW_AT_decl_file="4" DW_AT_decl_line="8" DW_AT_type="166"/>
+      <DW_TAG_base_type offset="214" DW_AT_byte_size="8" DW_AT_encoding="7" DW_AT_name="long long unsigned int"/>
+      <DW_TAG_array_type offset="221" DW_AT_type="154" DW_AT_sibling="237">
+        <DW_TAG_subrange_type offset="230" DW_AT_type="56" DW_AT_upper_bound="3"/>
+      </DW_TAG_array_type>
+      <DW_TAG_structure_type offset="237" DW_AT_name="_IO_FILE" DW_AT_byte_size="216" DW_AT_decl_file="5" DW_AT_decl_line="245" DW_AT_sibling="621">
+        <DW_TAG_member offset="249" DW_AT_name="_flags" DW_AT_decl_file="5" DW_AT_decl_line="246" DW_AT_type="63" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="261" DW_AT_name="_IO_read_ptr" DW_AT_decl_file="5" DW_AT_decl_line="251" DW_AT_type="148" DW_AT_data_member_location="8"/>
+        <DW_TAG_member offset="273" DW_AT_name="_IO_read_end" DW_AT_decl_file="5" DW_AT_decl_line="252" DW_AT_type="148" DW_AT_data_member_location="16"/>
+        <DW_TAG_member offset="285" DW_AT_name="_IO_read_base" DW_AT_decl_file="5" DW_AT_decl_line="253" DW_AT_type="148" DW_AT_data_member_location="24"/>
+        <DW_TAG_member offset="297" DW_AT_name="_IO_write_base" DW_AT_decl_file="5" DW_AT_decl_line="254" DW_AT_type="148" DW_AT_data_member_location="32"/>
+        <DW_TAG_member offset="309" DW_AT_name="_IO_write_ptr" DW_AT_decl_file="5" DW_AT_decl_line="255" DW_AT_type="148" DW_AT_data_member_location="40"/>
+        <DW_TAG_member offset="321" DW_AT_name="_IO_write_end" DW_AT_decl_file="5" DW_AT_decl_line="256" DW_AT_type="148" DW_AT_data_member_location="48"/>
+        <DW_TAG_member offset="334" DW_AT_name="_IO_buf_base" DW_AT_decl_file="5" DW_AT_decl_line="257" DW_AT_type="148" DW_AT_data_member_location="56"/>
+        <DW_TAG_member offset="347" DW_AT_name="_IO_buf_end" DW_AT_decl_file="5" DW_AT_decl_line="258" DW_AT_type="148" DW_AT_data_member_location="64"/>
+        <DW_TAG_member offset="360" DW_AT_name="_IO_save_base" DW_AT_decl_file="5" DW_AT_decl_line="260" DW_AT_type="148" DW_AT_data_member_location="72"/>
+        <DW_TAG_member offset="373" DW_AT_name="_IO_backup_base" DW_AT_decl_file="5" DW_AT_decl_line="261" DW_AT_type="148" DW_AT_data_member_location="80"/>
+        <DW_TAG_member offset="386" DW_AT_name="_IO_save_end" DW_AT_decl_file="5" DW_AT_decl_line="262" DW_AT_type="148" DW_AT_data_member_location="88"/>
+        <DW_TAG_member offset="399" DW_AT_name="_markers" DW_AT_decl_file="5" DW_AT_decl_line="264" DW_AT_type="807" DW_AT_data_member_location="96"/>
+        <DW_TAG_member offset="412" DW_AT_name="_chain" DW_AT_decl_file="5" DW_AT_decl_line="266" DW_AT_type="813" DW_AT_data_member_location="104"/>
+        <DW_TAG_member offset="425" DW_AT_name="_fileno" DW_AT_decl_file="5" DW_AT_decl_line="268" DW_AT_type="63" DW_AT_data_member_location="112"/>
+        <DW_TAG_member offset="438" DW_AT_name="_flags2" DW_AT_decl_file="5" DW_AT_decl_line="272" DW_AT_type="63" DW_AT_data_member_location="116"/>
+        <DW_TAG_member offset="451" DW_AT_name="_old_offset" DW_AT_decl_file="5" DW_AT_decl_line="274" DW_AT_type="124" DW_AT_data_member_location="120"/>
+        <DW_TAG_member offset="464" DW_AT_name="_cur_column" DW_AT_decl_file="5" DW_AT_decl_line="278" DW_AT_type="103" DW_AT_data_member_location="128"/>
+        <DW_TAG_member offset="477" DW_AT_name="_vtable_offset" DW_AT_decl_file="5" DW_AT_decl_line="279" DW_AT_type="110" DW_AT_data_member_location="130"/>
+        <DW_TAG_member offset="490" DW_AT_name="_shortbuf" DW_AT_decl_file="5" DW_AT_decl_line="280" DW_AT_type="819" DW_AT_data_member_location="131"/>
+        <DW_TAG_member offset="503" DW_AT_name="_lock" DW_AT_decl_file="5" DW_AT_decl_line="284" DW_AT_type="835" DW_AT_data_member_location="136"/>
+        <DW_TAG_member offset="516" DW_AT_name="_offset" DW_AT_decl_file="5" DW_AT_decl_line="293" DW_AT_type="135" DW_AT_data_member_location="144"/>
+        <DW_TAG_member offset="529" DW_AT_name="__pad1" DW_AT_decl_file="5" DW_AT_decl_line="301" DW_AT_type="146" DW_AT_data_member_location="152"/>
+        <DW_TAG_member offset="542" DW_AT_name="__pad2" DW_AT_decl_file="5" DW_AT_decl_line="302" DW_AT_type="146" DW_AT_data_member_location="160"/>
+        <DW_TAG_member offset="555" DW_AT_name="__pad3" DW_AT_decl_file="5" DW_AT_decl_line="303" DW_AT_type="146" DW_AT_data_member_location="168"/>
+        <DW_TAG_member offset="568" DW_AT_name="__pad4" DW_AT_decl_file="5" DW_AT_decl_line="304" DW_AT_type="146" DW_AT_data_member_location="176"/>
+        <DW_TAG_member offset="581" DW_AT_name="__pad5" DW_AT_decl_file="5" DW_AT_decl_line="306" DW_AT_type="45" DW_AT_data_member_location="184"/>
+        <DW_TAG_member offset="594" DW_AT_name="_mode" DW_AT_decl_file="5" DW_AT_decl_line="307" DW_AT_type="63" DW_AT_data_member_location="192"/>
+        <DW_TAG_member offset="607" DW_AT_name="_unused2" DW_AT_decl_file="5" DW_AT_decl_line="309" DW_AT_type="841" DW_AT_data_member_location="196"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_typedef offset="621" DW_AT_name="FILE" DW_AT_decl_file="6" DW_AT_decl_line="7" DW_AT_type="237"/>
+      <DW_TAG_union_type offset="632" DW_AT_byte_size="4" DW_AT_decl_file="7" DW_AT_decl_line="16" DW_AT_sibling="663">
+        <DW_TAG_member offset="640" DW_AT_name="__wch" DW_AT_decl_file="7" DW_AT_decl_line="18" DW_AT_type="75"/>
+        <DW_TAG_member offset="651" DW_AT_name="__wchb" DW_AT_decl_file="7" DW_AT_decl_line="19" DW_AT_type="221"/>
+      </DW_TAG_union_type>
+      <DW_TAG_structure_type offset="663" DW_AT_byte_size="8" DW_AT_decl_file="7" DW_AT_decl_line="13" DW_AT_sibling="696">
+        <DW_TAG_member offset="671" DW_AT_name="__count" DW_AT_decl_file="7" DW_AT_decl_line="15" DW_AT_type="63" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="683" DW_AT_name="__value" DW_AT_decl_file="7" DW_AT_decl_line="20" DW_AT_type="632" DW_AT_data_member_location="4"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_typedef offset="696" DW_AT_name="__mbstate_t" DW_AT_decl_file="7" DW_AT_decl_line="21" DW_AT_type="663"/>
+      <DW_TAG_structure_type offset="707" DW_AT_byte_size="16" DW_AT_decl_file="8" DW_AT_decl_line="26" DW_AT_sibling="740">
+        <DW_TAG_member offset="715" DW_AT_name="__pos" DW_AT_decl_file="8" DW_AT_decl_line="28" DW_AT_type="124" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="727" DW_AT_name="__state" DW_AT_decl_file="8" DW_AT_decl_line="29" DW_AT_type="696" DW_AT_data_member_location="8"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_typedef offset="740" DW_AT_name="_G_fpos_t" DW_AT_decl_file="8" DW_AT_decl_line="30" DW_AT_type="707"/>
+      <DW_TAG_typedef offset="751" DW_AT_name="_IO_lock_t" DW_AT_decl_file="5" DW_AT_decl_line="154"/>
+      <DW_TAG_structure_type offset="758" DW_AT_name="_IO_marker" DW_AT_byte_size="24" DW_AT_decl_file="5" DW_AT_decl_line="160" DW_AT_sibling="807">
+        <DW_TAG_member offset="770" DW_AT_name="_next" DW_AT_decl_file="5" DW_AT_decl_line="161" DW_AT_type="807" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="782" DW_AT_name="_sbuf" DW_AT_decl_file="5" DW_AT_decl_line="162" DW_AT_type="813" DW_AT_data_member_location="8"/>
+        <DW_TAG_member offset="794" DW_AT_name="_pos" DW_AT_decl_file="5" DW_AT_decl_line="166" DW_AT_type="63" DW_AT_data_member_location="16"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_pointer_type offset="807" DW_AT_byte_size="8" DW_AT_type="758"/>
+      <DW_TAG_pointer_type offset="813" DW_AT_byte_size="8" DW_AT_type="237"/>
+      <DW_TAG_array_type offset="819" DW_AT_type="154" DW_AT_sibling="835">
+        <DW_TAG_subrange_type offset="828" DW_AT_type="56" DW_AT_upper_bound="0"/>
+      </DW_TAG_array_type>
+      <DW_TAG_pointer_type offset="835" DW_AT_byte_size="8" DW_AT_type="751"/>
+      <DW_TAG_array_type offset="841" DW_AT_type="154" DW_AT_sibling="857">
+        <DW_TAG_subrange_type offset="850" DW_AT_type="56" DW_AT_upper_bound="19"/>
+      </DW_TAG_array_type>
+      <DW_TAG_structure_type offset="857" DW_AT_name="_IO_FILE_plus" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="862" DW_AT_name="_IO_2_1_stdin_" DW_AT_decl_file="5" DW_AT_decl_line="319" DW_AT_type="857" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="874" DW_AT_name="_IO_2_1_stdout_" DW_AT_decl_file="5" DW_AT_decl_line="320" DW_AT_type="857" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="886" DW_AT_name="_IO_2_1_stderr_" DW_AT_decl_file="5" DW_AT_decl_line="321" DW_AT_type="857" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_pointer_type offset="898" DW_AT_byte_size="8" DW_AT_type="161"/>
+      <DW_TAG_const_type offset="904" DW_AT_type="898"/>
+      <DW_TAG_typedef offset="909" DW_AT_name="fpos_t" DW_AT_decl_file="9" DW_AT_decl_line="78" DW_AT_type="740"/>
+      <DW_TAG_const_type offset="920" DW_AT_type="909"/>
+      <DW_TAG_variable offset="925" DW_AT_name="stdin" DW_AT_decl_file="9" DW_AT_decl_line="135" DW_AT_type="813" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="936" DW_AT_name="stdout" DW_AT_decl_file="9" DW_AT_decl_line="136" DW_AT_type="813" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="947" DW_AT_name="stderr" DW_AT_decl_file="9" DW_AT_decl_line="137" DW_AT_type="813" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="958" DW_AT_name="sys_nerr" DW_AT_decl_file="10" DW_AT_decl_line="26" DW_AT_type="63" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_array_type offset="969" DW_AT_type="904" DW_AT_sibling="980">
+        <DW_TAG_subrange_type offset="978"/>
+      </DW_TAG_array_type>
+      <DW_TAG_const_type offset="980" DW_AT_type="969"/>
+      <DW_TAG_variable offset="985" DW_AT_name="sys_errlist" DW_AT_decl_file="10" DW_AT_decl_line="27" DW_AT_type="980" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_enumeration_type offset="996" DW_AT_encoding="7" DW_AT_byte_size="4" DW_AT_type="75" DW_AT_decl_file="20" DW_AT_decl_line="47" DW_AT_sibling="1090">
+        <DW_TAG_enumerator offset="1009" DW_AT_name="_ISupper" DW_AT_const_value="256"/>
+        <DW_TAG_enumerator offset="1016" DW_AT_name="_ISlower" DW_AT_const_value="512"/>
+        <DW_TAG_enumerator offset="1023" DW_AT_name="_ISalpha" DW_AT_const_value="1024"/>
+        <DW_TAG_enumerator offset="1030" DW_AT_name="_ISdigit" DW_AT_const_value="2048"/>
+        <DW_TAG_enumerator offset="1037" DW_AT_name="_ISxdigit" DW_AT_const_value="4096"/>
+        <DW_TAG_enumerator offset="1044" DW_AT_name="_ISspace" DW_AT_const_value="8192"/>
+        <DW_TAG_enumerator offset="1051" DW_AT_name="_ISprint" DW_AT_const_value="16384"/>
+        <DW_TAG_enumerator offset="1058" DW_AT_name="_ISgraph" DW_AT_const_value="32768"/>
+        <DW_TAG_enumerator offset="1065" DW_AT_name="_ISblank" DW_AT_const_value="1"/>
+        <DW_TAG_enumerator offset="1071" DW_AT_name="_IScntrl" DW_AT_const_value="2"/>
+        <DW_TAG_enumerator offset="1077" DW_AT_name="_ISpunct" DW_AT_const_value="4"/>
+        <DW_TAG_enumerator offset="1083" DW_AT_name="_ISalnum" DW_AT_const_value="8"/>
+      </DW_TAG_enumeration_type>
+      <DW_TAG_base_type offset="1090" DW_AT_byte_size="16" DW_AT_encoding="4" DW_AT_name="long double"/>
+      <DW_TAG_typedef offset="1097" DW_AT_name="__jmp_buf" DW_AT_decl_file="11" DW_AT_decl_line="31" DW_AT_type="1108"/>
+      <DW_TAG_array_type offset="1108" DW_AT_type="82" DW_AT_sibling="1124">
+        <DW_TAG_subrange_type offset="1117" DW_AT_type="56" DW_AT_upper_bound="7"/>
+      </DW_TAG_array_type>
+      <DW_TAG_structure_type offset="1124" DW_AT_name="__jmp_buf_tag" DW_AT_byte_size="200" DW_AT_decl_file="12" DW_AT_decl_line="33" DW_AT_sibling="1173">
+        <DW_TAG_member offset="1136" DW_AT_name="__jmpbuf" DW_AT_decl_file="12" DW_AT_decl_line="39" DW_AT_type="1097" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="1148" DW_AT_name="__mask_was_saved" DW_AT_decl_file="12" DW_AT_decl_line="40" DW_AT_type="63" DW_AT_data_member_location="64"/>
+        <DW_TAG_member offset="1160" DW_AT_name="__saved_mask" DW_AT_decl_file="12" DW_AT_decl_line="41" DW_AT_type="203" DW_AT_data_member_location="72"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_typedef offset="1173" DW_AT_name="jmp_buf" DW_AT_decl_file="12" DW_AT_decl_line="45" DW_AT_type="1184"/>
+      <DW_TAG_array_type offset="1184" DW_AT_type="1124" DW_AT_sibling="1200">
+        <DW_TAG_subrange_type offset="1193" DW_AT_type="56" DW_AT_upper_bound="0"/>
+      </DW_TAG_array_type>
+      <DW_TAG_array_type offset="1200" DW_AT_type="148" DW_AT_sibling="1216">
+        <DW_TAG_subrange_type offset="1209" DW_AT_type="56" DW_AT_upper_bound="1"/>
+      </DW_TAG_array_type>
+      <DW_TAG_variable offset="1216" DW_AT_name="__tzname" DW_AT_decl_file="13" DW_AT_decl_line="159" DW_AT_type="1200" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="1227" DW_AT_name="__daylight" DW_AT_decl_file="13" DW_AT_decl_line="160" DW_AT_type="63" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="1238" DW_AT_name="__timezone" DW_AT_decl_file="13" DW_AT_decl_line="161" DW_AT_type="82" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="1249" DW_AT_name="tzname" DW_AT_decl_file="13" DW_AT_decl_line="166" DW_AT_type="1200" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="1260" DW_AT_name="daylight" DW_AT_decl_file="13" DW_AT_decl_line="174" DW_AT_type="63" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="1271" DW_AT_name="timezone" DW_AT_decl_file="13" DW_AT_decl_line="175" DW_AT_type="82" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_typedef offset="1282" DW_AT_name="png_byte" DW_AT_decl_file="14" DW_AT_decl_line="481" DW_AT_type="96"/>
+      <DW_TAG_typedef offset="1294" DW_AT_name="png_uint_16" DW_AT_decl_file="14" DW_AT_decl_line="497" DW_AT_type="103"/>
+      <DW_TAG_const_type offset="1306" DW_AT_type="1294"/>
+      <DW_TAG_typedef offset="1311" DW_AT_name="png_int_32" DW_AT_decl_file="14" DW_AT_decl_line="503" DW_AT_type="63"/>
+      <DW_TAG_typedef offset="1323" DW_AT_name="png_uint_32" DW_AT_decl_file="14" DW_AT_decl_line="511" DW_AT_type="75"/>
+      <DW_TAG_typedef offset="1335" DW_AT_name="png_alloc_size_t" DW_AT_decl_file="14" DW_AT_decl_line="557" DW_AT_type="45"/>
+      <DW_TAG_typedef offset="1347" DW_AT_name="png_bytep" DW_AT_decl_file="14" DW_AT_decl_line="579" DW_AT_type="1359"/>
+      <DW_TAG_pointer_type offset="1359" DW_AT_byte_size="8" DW_AT_type="1282"/>
+      <DW_TAG_pointer_type offset="1365" DW_AT_byte_size="8" DW_AT_type="1323"/>
+      <DW_TAG_typedef offset="1371" DW_AT_name="png_uint_16p" DW_AT_decl_file="14" DW_AT_decl_line="585" DW_AT_type="1383"/>
+      <DW_TAG_pointer_type offset="1383" DW_AT_byte_size="8" DW_AT_type="1294"/>
+      <DW_TAG_typedef offset="1389" DW_AT_name="png_const_uint_16p" DW_AT_decl_file="14" DW_AT_decl_line="586" DW_AT_type="1401"/>
+      <DW_TAG_pointer_type offset="1401" DW_AT_byte_size="8" DW_AT_type="1306"/>
+      <DW_TAG_typedef offset="1407" DW_AT_name="png_const_charp" DW_AT_decl_file="14" DW_AT_decl_line="590" DW_AT_type="898"/>
+      <DW_TAG_pointer_type offset="1419" DW_AT_byte_size="8" DW_AT_type="621"/>
+      <DW_TAG_base_type offset="1425" DW_AT_byte_size="8" DW_AT_encoding="4" DW_AT_name="double"/>
+      <DW_TAG_pointer_type offset="1432" DW_AT_byte_size="8" DW_AT_type="898"/>
+      <DW_TAG_pointer_type offset="1438" DW_AT_byte_size="8" DW_AT_type="148"/>
+      <DW_TAG_typedef offset="1444" DW_AT_name="png_struct" DW_AT_decl_file="15" DW_AT_decl_line="439" DW_AT_type="1461"/>
+      <DW_TAG_const_type offset="1456" DW_AT_type="1444"/>
+      <DW_TAG_structure_type offset="1461" DW_AT_name="png_struct_def" DW_AT_declaration="True"/>
+      <DW_TAG_pointer_type offset="1466" DW_AT_byte_size="8" DW_AT_type="1456"/>
+      <DW_TAG_restrict_type offset="1472" DW_AT_type="1466"/>
+      <DW_TAG_typedef offset="1477" DW_AT_name="png_structp" DW_AT_decl_file="15" DW_AT_decl_line="441" DW_AT_type="1489"/>
+      <DW_TAG_pointer_type offset="1489" DW_AT_byte_size="8" DW_AT_type="1444"/>
+      <DW_TAG_restrict_type offset="1495" DW_AT_type="1489"/>
+      <DW_TAG_typedef offset="1500" DW_AT_name="png_info" DW_AT_decl_file="15" DW_AT_decl_line="453" DW_AT_type="1517"/>
+      <DW_TAG_const_type offset="1512" DW_AT_type="1500"/>
+      <DW_TAG_structure_type offset="1517" DW_AT_name="png_info_def" DW_AT_declaration="True"/>
+      <DW_TAG_typedef offset="1522" DW_AT_name="png_infop" DW_AT_decl_file="15" DW_AT_decl_line="454" DW_AT_type="1534"/>
+      <DW_TAG_pointer_type offset="1534" DW_AT_byte_size="8" DW_AT_type="1500"/>
+      <DW_TAG_restrict_type offset="1540" DW_AT_type="1534"/>
+      <DW_TAG_pointer_type offset="1545" DW_AT_byte_size="8" DW_AT_type="1512"/>
+      <DW_TAG_restrict_type offset="1551" DW_AT_type="1545"/>
+      <DW_TAG_typedef offset="1556" DW_AT_name="png_const_structrp" DW_AT_decl_file="15" DW_AT_decl_line="470" DW_AT_type="1472"/>
+      <DW_TAG_typedef offset="1568" DW_AT_name="Byte" DW_AT_decl_file="16" DW_AT_decl_line="391" DW_AT_type="96"/>
+      <DW_TAG_typedef offset="1580" DW_AT_name="uInt" DW_AT_decl_file="16" DW_AT_decl_line="393" DW_AT_type="75"/>
+      <DW_TAG_typedef offset="1592" DW_AT_name="uLong" DW_AT_decl_file="16" DW_AT_decl_line="394" DW_AT_type="56"/>
+      <DW_TAG_typedef offset="1604" DW_AT_name="Bytef" DW_AT_decl_file="16" DW_AT_decl_line="400" DW_AT_type="1568"/>
+      <DW_TAG_const_type offset="1616" DW_AT_type="1604"/>
+      <DW_TAG_typedef offset="1621" DW_AT_name="voidpf" DW_AT_decl_file="16" DW_AT_decl_line="409" DW_AT_type="146"/>
+      <DW_TAG_variable offset="1633" DW_AT_name="__environ" DW_AT_decl_file="17" DW_AT_decl_line="546" DW_AT_type="1438" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="1645" DW_AT_name="optarg" DW_AT_decl_file="18" DW_AT_decl_line="36" DW_AT_type="148" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="1656" DW_AT_name="optind" DW_AT_decl_file="18" DW_AT_decl_line="50" DW_AT_type="63" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="1667" DW_AT_name="opterr" DW_AT_decl_file="18" DW_AT_decl_line="55" DW_AT_type="63" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="1678" DW_AT_name="optopt" DW_AT_decl_file="18" DW_AT_decl_line="59" DW_AT_type="63" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_typedef offset="1689" DW_AT_name="alloc_func" DW_AT_decl_file="19" DW_AT_decl_line="81" DW_AT_type="1700"/>
+      <DW_TAG_pointer_type offset="1700" DW_AT_byte_size="8" DW_AT_type="1706"/>
+      <DW_TAG_subroutine_type offset="1706" DW_AT_prototyped="True" DW_AT_type="1621" DW_AT_sibling="1731">
+        <DW_TAG_formal_parameter offset="1715" DW_AT_type="1621"/>
+        <DW_TAG_formal_parameter offset="1720" DW_AT_type="1580"/>
+        <DW_TAG_formal_parameter offset="1725" DW_AT_type="1580"/>
+      </DW_TAG_subroutine_type>
+      <DW_TAG_typedef offset="1731" DW_AT_name="free_func" DW_AT_decl_file="19" DW_AT_decl_line="82" DW_AT_type="1742"/>
+      <DW_TAG_pointer_type offset="1742" DW_AT_byte_size="8" DW_AT_type="1748"/>
+      <DW_TAG_subroutine_type offset="1748" DW_AT_prototyped="True" DW_AT_sibling="1764">
+        <DW_TAG_formal_parameter offset="1753" DW_AT_type="1621"/>
+        <DW_TAG_formal_parameter offset="1758" DW_AT_type="1621"/>
+      </DW_TAG_subroutine_type>
+      <DW_TAG_structure_type offset="1764" DW_AT_name="z_stream_s" DW_AT_byte_size="112" DW_AT_decl_file="19" DW_AT_decl_line="86" DW_AT_sibling="1945">
+        <DW_TAG_member offset="1776" DW_AT_name="next_in" DW_AT_decl_file="19" DW_AT_decl_line="87" DW_AT_type="1945" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="1788" DW_AT_name="avail_in" DW_AT_decl_file="19" DW_AT_decl_line="88" DW_AT_type="1580" DW_AT_data_member_location="8"/>
+        <DW_TAG_member offset="1800" DW_AT_name="total_in" DW_AT_decl_file="19" DW_AT_decl_line="89" DW_AT_type="1592" DW_AT_data_member_location="16"/>
+        <DW_TAG_member offset="1812" DW_AT_name="next_out" DW_AT_decl_file="19" DW_AT_decl_line="91" DW_AT_type="1951" DW_AT_data_member_location="24"/>
+        <DW_TAG_member offset="1824" DW_AT_name="avail_out" DW_AT_decl_file="19" DW_AT_decl_line="92" DW_AT_type="1580" DW_AT_data_member_location="32"/>
+        <DW_TAG_member offset="1836" DW_AT_name="total_out" DW_AT_decl_file="19" DW_AT_decl_line="93" DW_AT_type="1592" DW_AT_data_member_location="40"/>
+        <DW_TAG_member offset="1848" DW_AT_name="msg" DW_AT_decl_file="19" DW_AT_decl_line="95" DW_AT_type="898" DW_AT_data_member_location="48"/>
+        <DW_TAG_member offset="1860" DW_AT_name="state" DW_AT_decl_file="19" DW_AT_decl_line="96" DW_AT_type="1962" DW_AT_data_member_location="56"/>
+        <DW_TAG_member offset="1872" DW_AT_name="zalloc" DW_AT_decl_file="19" DW_AT_decl_line="98" DW_AT_type="1689" DW_AT_data_member_location="64"/>
+        <DW_TAG_member offset="1884" DW_AT_name="zfree" DW_AT_decl_file="19" DW_AT_decl_line="99" DW_AT_type="1731" DW_AT_data_member_location="72"/>
+        <DW_TAG_member offset="1896" DW_AT_name="opaque" DW_AT_decl_file="19" DW_AT_decl_line="100" DW_AT_type="1621" DW_AT_data_member_location="80"/>
+        <DW_TAG_member offset="1908" DW_AT_name="data_type" DW_AT_decl_file="19" DW_AT_decl_line="102" DW_AT_type="63" DW_AT_data_member_location="88"/>
+        <DW_TAG_member offset="1920" DW_AT_name="adler" DW_AT_decl_file="19" DW_AT_decl_line="104" DW_AT_type="1592" DW_AT_data_member_location="96"/>
+        <DW_TAG_member offset="1932" DW_AT_name="reserved" DW_AT_decl_file="19" DW_AT_decl_line="105" DW_AT_type="1592" DW_AT_data_member_location="104"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_pointer_type offset="1945" DW_AT_byte_size="8" DW_AT_type="1616"/>
+      <DW_TAG_pointer_type offset="1951" DW_AT_byte_size="8" DW_AT_type="1604"/>
+      <DW_TAG_structure_type offset="1957" DW_AT_name="internal_state" DW_AT_declaration="True"/>
+      <DW_TAG_pointer_type offset="1962" DW_AT_byte_size="8" DW_AT_type="1957"/>
+      <DW_TAG_typedef offset="1968" DW_AT_name="z_stream" DW_AT_decl_file="19" DW_AT_decl_line="106" DW_AT_type="1764"/>
+      <DW_TAG_typedef offset="1979" DW_AT_name="udigit" DW_AT_decl_file="1" DW_AT_decl_line="173" DW_AT_type="1294"/>
+      <DW_TAG_typedef offset="1990" DW_AT_name="uarb" DW_AT_decl_file="1" DW_AT_decl_line="174" DW_AT_type="1371"/>
+      <DW_TAG_typedef offset="2001" DW_AT_name="uarbc" DW_AT_decl_file="1" DW_AT_decl_line="175" DW_AT_type="1389"/>
+      <DW_TAG_array_type offset="2012" DW_AT_type="1323" DW_AT_sibling="2028">
+        <DW_TAG_subrange_type offset="2021" DW_AT_type="56" DW_AT_upper_bound="255"/>
+      </DW_TAG_array_type>
+      <DW_TAG_variable offset="2028" DW_AT_name="crc_table" DW_AT_decl_file="1" DW_AT_decl_line="488" DW_AT_type="2012" DW_AT_location="(DW_OP_addr: 0)"/>
+      <DW_TAG_structure_type offset="2050" DW_AT_name="IDAT_list" DW_AT_byte_size="80" DW_AT_decl_file="1" DW_AT_decl_line="611" DW_AT_sibling="2116">
+        <DW_TAG_member offset="2063" DW_AT_name="next" DW_AT_decl_file="1" DW_AT_decl_line="613" DW_AT_type="2121" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="2076" DW_AT_name="length" DW_AT_decl_file="1" DW_AT_decl_line="614" DW_AT_type="75" DW_AT_data_member_location="8"/>
+        <DW_TAG_member offset="2089" DW_AT_name="count" DW_AT_decl_file="1" DW_AT_decl_line="615" DW_AT_type="75" DW_AT_data_member_location="12"/>
+        <DW_TAG_member offset="2102" DW_AT_name="lengths" DW_AT_decl_file="1" DW_AT_decl_line="617" DW_AT_type="2127" DW_AT_data_member_location="16"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_const_type offset="2116" DW_AT_type="2050"/>
+      <DW_TAG_pointer_type offset="2121" DW_AT_byte_size="8" DW_AT_type="2050"/>
+      <DW_TAG_array_type offset="2127" DW_AT_type="1323" DW_AT_sibling="2143">
+        <DW_TAG_subrange_type offset="2136" DW_AT_type="56" DW_AT_upper_bound="15"/>
+      </DW_TAG_array_type>
+      <DW_TAG_structure_type offset="2143" DW_AT_name="global" DW_AT_byte_size="96" DW_AT_decl_file="1" DW_AT_decl_line="689" DW_AT_sibling="2292">
+        <DW_TAG_member offset="2156" DW_AT_name="errors" DW_AT_decl_file="1" DW_AT_decl_line="692" DW_AT_type="75" DW_AT_byte_size="4" DW_AT_bit_size="1" DW_AT_bit_offset="31" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="2172" DW_AT_name="warnings" DW_AT_decl_file="1" DW_AT_decl_line="693" DW_AT_type="75" DW_AT_byte_size="4" DW_AT_bit_size="1" DW_AT_bit_offset="30" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="2188" DW_AT_name="optimize_zlib" DW_AT_decl_file="1" DW_AT_decl_line="694" DW_AT_type="75" DW_AT_byte_size="4" DW_AT_bit_size="1" DW_AT_bit_offset="29" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="2204" DW_AT_name="quiet" DW_AT_decl_file="1" DW_AT_decl_line="695" DW_AT_type="75" DW_AT_byte_size="4" DW_AT_bit_size="2" DW_AT_bit_offset="27" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="2220" DW_AT_name="verbose" DW_AT_decl_file="1" DW_AT_decl_line="696" DW_AT_type="75" DW_AT_byte_size="4" DW_AT_bit_size="3" DW_AT_bit_offset="24" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="2236" DW_AT_name="skip" DW_AT_decl_file="1" DW_AT_decl_line="697" DW_AT_type="75" DW_AT_byte_size="4" DW_AT_bit_size="3" DW_AT_bit_offset="21" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="2252" DW_AT_name="idat_max" DW_AT_decl_file="1" DW_AT_decl_line="706" DW_AT_type="1323" DW_AT_data_member_location="4"/>
+        <DW_TAG_member offset="2265" DW_AT_name="status_code" DW_AT_decl_file="1" DW_AT_decl_line="708" DW_AT_type="63" DW_AT_data_member_location="8"/>
+        <DW_TAG_member offset="2278" DW_AT_name="idat_cache" DW_AT_decl_file="1" DW_AT_decl_line="718" DW_AT_type="2050" DW_AT_data_member_location="16"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_const_type offset="2292" DW_AT_type="2143"/>
+      <DW_TAG_structure_type offset="2297" DW_AT_name="file" DW_AT_byte_size="352" DW_AT_decl_file="1" DW_AT_decl_line="832" DW_AT_sibling="2700">
+        <DW_TAG_member offset="2311" DW_AT_name="global" DW_AT_decl_file="1" DW_AT_decl_line="835" DW_AT_type="2700" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="2324" DW_AT_name="file_name" DW_AT_decl_file="1" DW_AT_decl_line="838" DW_AT_type="898" DW_AT_data_member_location="8"/>
+        <DW_TAG_member offset="2337" DW_AT_name="out_name" DW_AT_decl_file="1" DW_AT_decl_line="839" DW_AT_type="898" DW_AT_data_member_location="16"/>
+        <DW_TAG_member offset="2350" DW_AT_name="status_code" DW_AT_decl_file="1" DW_AT_decl_line="843" DW_AT_type="63" DW_AT_data_member_location="24"/>
+        <DW_TAG_member offset="2363" DW_AT_name="read_errno" DW_AT_decl_file="1" DW_AT_decl_line="844" DW_AT_type="63" DW_AT_data_member_location="28"/>
+        <DW_TAG_member offset="2376" DW_AT_name="write_errno" DW_AT_decl_file="1" DW_AT_decl_line="845" DW_AT_type="63" DW_AT_data_member_location="32"/>
+        <DW_TAG_member offset="2389" DW_AT_name="width" DW_AT_decl_file="1" DW_AT_decl_line="848" DW_AT_type="1323" DW_AT_data_member_location="36"/>
+        <DW_TAG_member offset="2402" DW_AT_name="height" DW_AT_decl_file="1" DW_AT_decl_line="849" DW_AT_type="1323" DW_AT_data_member_location="40"/>
+        <DW_TAG_member offset="2415" DW_AT_name="bit_depth" DW_AT_decl_file="1" DW_AT_decl_line="850" DW_AT_type="1282" DW_AT_data_member_location="44"/>
+        <DW_TAG_member offset="2428" DW_AT_name="color_type" DW_AT_decl_file="1" DW_AT_decl_line="851" DW_AT_type="1282" DW_AT_data_member_location="45"/>
+        <DW_TAG_member offset="2441" DW_AT_name="compression_method" DW_AT_decl_file="1" DW_AT_decl_line="852" DW_AT_type="1282" DW_AT_data_member_location="46"/>
+        <DW_TAG_member offset="2454" DW_AT_name="filter_method" DW_AT_decl_file="1" DW_AT_decl_line="853" DW_AT_type="1282" DW_AT_data_member_location="47"/>
+        <DW_TAG_member offset="2467" DW_AT_name="interlace_method" DW_AT_decl_file="1" DW_AT_decl_line="854" DW_AT_type="1282" DW_AT_data_member_location="48"/>
+        <DW_TAG_member offset="2480" DW_AT_name="image_bytes" DW_AT_decl_file="1" DW_AT_decl_line="856" DW_AT_type="2706" DW_AT_data_member_location="50"/>
+        <DW_TAG_member offset="2493" DW_AT_name="image_digits" DW_AT_decl_file="1" DW_AT_decl_line="857" DW_AT_type="63" DW_AT_data_member_location="60"/>
+        <DW_TAG_member offset="2506" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="860" DW_AT_type="1419" DW_AT_data_member_location="64"/>
+        <DW_TAG_member offset="2519" DW_AT_name="out" DW_AT_decl_file="1" DW_AT_decl_line="861" DW_AT_type="1419" DW_AT_data_member_location="72"/>
+        <DW_TAG_member offset="2532" DW_AT_name="jmpbuf" DW_AT_decl_file="1" DW_AT_decl_line="862" DW_AT_type="1173" DW_AT_data_member_location="80"/>
+        <DW_TAG_member offset="2545" DW_AT_name="data_pos" DW_AT_decl_file="1" DW_AT_decl_line="873" DW_AT_type="909" DW_AT_data_member_location="280"/>
+        <DW_TAG_member offset="2559" DW_AT_name="length" DW_AT_decl_file="1" DW_AT_decl_line="874" DW_AT_type="1323" DW_AT_data_member_location="296"/>
+        <DW_TAG_member offset="2573" DW_AT_name="type" DW_AT_decl_file="1" DW_AT_decl_line="875" DW_AT_type="1323" DW_AT_data_member_location="300"/>
+        <DW_TAG_member offset="2587" DW_AT_name="crc" DW_AT_decl_file="1" DW_AT_decl_line="876" DW_AT_type="1323" DW_AT_data_member_location="304"/>
+        <DW_TAG_member offset="2601" DW_AT_name="read_count" DW_AT_decl_file="1" DW_AT_decl_line="882" DW_AT_type="1323" DW_AT_data_member_location="308"/>
+        <DW_TAG_member offset="2615" DW_AT_name="write_count" DW_AT_decl_file="1" DW_AT_decl_line="883" DW_AT_type="1323" DW_AT_data_member_location="312"/>
+        <DW_TAG_member offset="2629" DW_AT_name="state" DW_AT_decl_file="1" DW_AT_decl_line="884" DW_AT_type="63" DW_AT_data_member_location="316"/>
+        <DW_TAG_member offset="2643" DW_AT_name="chunk" DW_AT_decl_file="1" DW_AT_decl_line="892" DW_AT_type="2905" DW_AT_data_member_location="320"/>
+        <DW_TAG_member offset="2657" DW_AT_name="idat" DW_AT_decl_file="1" DW_AT_decl_line="893" DW_AT_type="3034" DW_AT_data_member_location="328"/>
+        <DW_TAG_member offset="2671" DW_AT_name="alloc_ptr" DW_AT_decl_file="1" DW_AT_decl_line="900" DW_AT_type="146" DW_AT_data_member_location="336"/>
+        <DW_TAG_member offset="2685" DW_AT_name="alloc" DW_AT_decl_file="1" DW_AT_decl_line="901" DW_AT_type="3072" DW_AT_data_member_location="344"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_pointer_type offset="2700" DW_AT_byte_size="8" DW_AT_type="2143"/>
+      <DW_TAG_array_type offset="2706" DW_AT_type="1979" DW_AT_sibling="2722">
+        <DW_TAG_subrange_type offset="2715" DW_AT_type="56" DW_AT_upper_bound="4"/>
+      </DW_TAG_array_type>
+      <DW_TAG_structure_type offset="2722" DW_AT_name="chunk" DW_AT_byte_size="88" DW_AT_decl_file="1" DW_AT_decl_line="1539" DW_AT_sibling="2905">
+        <DW_TAG_member offset="2735" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1542" DW_AT_type="3061" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="2748" DW_AT_name="global" DW_AT_decl_file="1" DW_AT_decl_line="1543" DW_AT_type="2700" DW_AT_data_member_location="8"/>
+        <DW_TAG_member offset="2761" DW_AT_name="uncompressed_bytes" DW_AT_decl_file="1" DW_AT_decl_line="1546" DW_AT_type="2706" DW_AT_data_member_location="16"/>
+        <DW_TAG_member offset="2774" DW_AT_name="uncompressed_digits" DW_AT_decl_file="1" DW_AT_decl_line="1547" DW_AT_type="63" DW_AT_data_member_location="28"/>
+        <DW_TAG_member offset="2787" DW_AT_name="compressed_bytes" DW_AT_decl_file="1" DW_AT_decl_line="1548" DW_AT_type="2706" DW_AT_data_member_location="32"/>
+        <DW_TAG_member offset="2800" DW_AT_name="compressed_digits" DW_AT_decl_file="1" DW_AT_decl_line="1549" DW_AT_type="63" DW_AT_data_member_location="44"/>
+        <DW_TAG_member offset="2813" DW_AT_name="chunk_data_pos" DW_AT_decl_file="1" DW_AT_decl_line="1555" DW_AT_type="909" DW_AT_data_member_location="48"/>
+        <DW_TAG_member offset="2826" DW_AT_name="chunk_length" DW_AT_decl_file="1" DW_AT_decl_line="1556" DW_AT_type="1323" DW_AT_data_member_location="64"/>
+        <DW_TAG_member offset="2839" DW_AT_name="chunk_type" DW_AT_decl_file="1" DW_AT_decl_line="1557" DW_AT_type="1323" DW_AT_data_member_location="68"/>
+        <DW_TAG_member offset="2852" DW_AT_name="write_crc" DW_AT_decl_file="1" DW_AT_decl_line="1560" DW_AT_type="1323" DW_AT_data_member_location="72"/>
+        <DW_TAG_member offset="2865" DW_AT_name="rewrite_offset" DW_AT_decl_file="1" DW_AT_decl_line="1561" DW_AT_type="1323" DW_AT_data_member_location="76"/>
+        <DW_TAG_member offset="2878" DW_AT_name="rewrite_length" DW_AT_decl_file="1" DW_AT_decl_line="1562" DW_AT_type="63" DW_AT_data_member_location="80"/>
+        <DW_TAG_member offset="2891" DW_AT_name="rewrite_buffer" DW_AT_decl_file="1" DW_AT_decl_line="1563" DW_AT_type="3078" DW_AT_data_member_location="84"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_pointer_type offset="2905" DW_AT_byte_size="8" DW_AT_type="2722"/>
+      <DW_TAG_const_type offset="2911" DW_AT_type="2905"/>
+      <DW_TAG_structure_type offset="2916" DW_AT_name="IDAT" DW_AT_byte_size="56" DW_AT_decl_file="1" DW_AT_decl_line="1749" DW_AT_sibling="3034">
+        <DW_TAG_member offset="2929" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1752" DW_AT_type="3061" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="2942" DW_AT_name="global" DW_AT_decl_file="1" DW_AT_decl_line="1753" DW_AT_type="2700" DW_AT_data_member_location="8"/>
+        <DW_TAG_member offset="2955" DW_AT_name="idat_list_head" DW_AT_decl_file="1" DW_AT_decl_line="1756" DW_AT_type="2121" DW_AT_data_member_location="16"/>
+        <DW_TAG_member offset="2968" DW_AT_name="idat_list_tail" DW_AT_decl_file="1" DW_AT_decl_line="1757" DW_AT_type="2121" DW_AT_data_member_location="24"/>
+        <DW_TAG_member offset="2981" DW_AT_name="idat_cur" DW_AT_decl_file="1" DW_AT_decl_line="1760" DW_AT_type="2121" DW_AT_data_member_location="32"/>
+        <DW_TAG_member offset="2994" DW_AT_name="idat_count" DW_AT_decl_file="1" DW_AT_decl_line="1761" DW_AT_type="75" DW_AT_data_member_location="40"/>
+        <DW_TAG_member offset="3007" DW_AT_name="idat_index" DW_AT_decl_file="1" DW_AT_decl_line="1762" DW_AT_type="1323" DW_AT_data_member_location="44"/>
+        <DW_TAG_member offset="3020" DW_AT_name="idat_length" DW_AT_decl_file="1" DW_AT_decl_line="1763" DW_AT_type="1323" DW_AT_data_member_location="48"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_pointer_type offset="3034" DW_AT_byte_size="8" DW_AT_type="2916"/>
+      <DW_TAG_const_type offset="3040" DW_AT_type="3034"/>
+      <DW_TAG_subroutine_type offset="3045" DW_AT_prototyped="True" DW_AT_sibling="3061">
+        <DW_TAG_formal_parameter offset="3050" DW_AT_type="3061"/>
+        <DW_TAG_formal_parameter offset="3055" DW_AT_type="63"/>
+      </DW_TAG_subroutine_type>
+      <DW_TAG_pointer_type offset="3061" DW_AT_byte_size="8" DW_AT_type="2297"/>
+      <DW_TAG_const_type offset="3067" DW_AT_type="3061"/>
+      <DW_TAG_pointer_type offset="3072" DW_AT_byte_size="8" DW_AT_type="3045"/>
+      <DW_TAG_array_type offset="3078" DW_AT_type="1282" DW_AT_sibling="3094">
+        <DW_TAG_subrange_type offset="3087" DW_AT_type="56" DW_AT_upper_bound="1"/>
+      </DW_TAG_array_type>
+      <DW_TAG_structure_type offset="3094" DW_AT_name="zlib" DW_AT_byte_size="216" DW_AT_decl_file="1" DW_AT_decl_line="2010" DW_AT_sibling="3339">
+        <DW_TAG_member offset="3107" DW_AT_name="idat" DW_AT_decl_file="1" DW_AT_decl_line="2013" DW_AT_type="3034" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="3120" DW_AT_name="chunk" DW_AT_decl_file="1" DW_AT_decl_line="2014" DW_AT_type="2905" DW_AT_data_member_location="8"/>
+        <DW_TAG_member offset="3133" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="2015" DW_AT_type="3061" DW_AT_data_member_location="16"/>
+        <DW_TAG_member offset="3146" DW_AT_name="global" DW_AT_decl_file="1" DW_AT_decl_line="2016" DW_AT_type="2700" DW_AT_data_member_location="24"/>
+        <DW_TAG_member offset="3159" DW_AT_name="rewrite_offset" DW_AT_decl_file="1" DW_AT_decl_line="2019" DW_AT_type="1323" DW_AT_data_member_location="32"/>
+        <DW_TAG_member offset="3172" DW_AT_name="compressed_bytes" DW_AT_decl_file="1" DW_AT_decl_line="2022" DW_AT_type="2706" DW_AT_data_member_location="36"/>
+        <DW_TAG_member offset="3185" DW_AT_name="compressed_digits" DW_AT_decl_file="1" DW_AT_decl_line="2023" DW_AT_type="63" DW_AT_data_member_location="48"/>
+        <DW_TAG_member offset="3198" DW_AT_name="uncompressed_bytes" DW_AT_decl_file="1" DW_AT_decl_line="2024" DW_AT_type="2706" DW_AT_data_member_location="52"/>
+        <DW_TAG_member offset="3211" DW_AT_name="uncompressed_digits" DW_AT_decl_file="1" DW_AT_decl_line="2025" DW_AT_type="63" DW_AT_data_member_location="64"/>
+        <DW_TAG_member offset="3224" DW_AT_name="file_bits" DW_AT_decl_file="1" DW_AT_decl_line="2026" DW_AT_type="63" DW_AT_data_member_location="68"/>
+        <DW_TAG_member offset="3237" DW_AT_name="ok_bits" DW_AT_decl_file="1" DW_AT_decl_line="2027" DW_AT_type="63" DW_AT_data_member_location="72"/>
+        <DW_TAG_member offset="3250" DW_AT_name="cksum" DW_AT_decl_file="1" DW_AT_decl_line="2028" DW_AT_type="63" DW_AT_data_member_location="76"/>
+        <DW_TAG_member offset="3263" DW_AT_name="z" DW_AT_decl_file="1" DW_AT_decl_line="2031" DW_AT_type="1968" DW_AT_data_member_location="80"/>
+        <DW_TAG_member offset="3274" DW_AT_name="extra_bytes" DW_AT_decl_file="1" DW_AT_decl_line="2032" DW_AT_type="1323" DW_AT_data_member_location="192"/>
+        <DW_TAG_member offset="3287" DW_AT_name="state" DW_AT_decl_file="1" DW_AT_decl_line="2033" DW_AT_type="63" DW_AT_data_member_location="196"/>
+        <DW_TAG_member offset="3300" DW_AT_name="rc" DW_AT_decl_file="1" DW_AT_decl_line="2034" DW_AT_type="63" DW_AT_data_member_location="200"/>
+        <DW_TAG_member offset="3312" DW_AT_name="window_bits" DW_AT_decl_file="1" DW_AT_decl_line="2035" DW_AT_type="63" DW_AT_data_member_location="204"/>
+        <DW_TAG_member offset="3325" DW_AT_name="header" DW_AT_decl_file="1" DW_AT_decl_line="2036" DW_AT_type="3078" DW_AT_data_member_location="208"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_structure_type offset="3339" DW_AT_name="control" DW_AT_byte_size="496" DW_AT_decl_file="1" DW_AT_decl_line="3523" DW_AT_sibling="3395">
+        <DW_TAG_member offset="3353" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="3525" DW_AT_type="2297" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="3366" DW_AT_name="chunk" DW_AT_decl_file="1" DW_AT_decl_line="3526" DW_AT_type="2722" DW_AT_data_member_location="352"/>
+        <DW_TAG_member offset="3380" DW_AT_name="idat" DW_AT_decl_file="1" DW_AT_decl_line="3527" DW_AT_type="2916" DW_AT_data_member_location="440"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_subprogram offset="3395" DW_AT_external="True" DW_AT_name="main" DW_AT_decl_file="1" DW_AT_decl_line="3858" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="21919" DW_AT_high_pc="2205" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="3680">
+        <DW_TAG_formal_parameter offset="3429" DW_AT_name="argc" DW_AT_decl_file="1" DW_AT_decl_line="3858" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -4292)"/>
+        <DW_TAG_formal_parameter offset="3445" DW_AT_name="argv" DW_AT_decl_file="1" DW_AT_decl_line="3858" DW_AT_type="1432" DW_AT_location="(DW_OP_fbreg: -4304)"/>
+        <DW_TAG_variable offset="3461" DW_AT_name="temp_name" DW_AT_decl_file="1" DW_AT_decl_line="3860" DW_AT_type="3680" DW_AT_location="(DW_OP_fbreg: -4128)"/>
+        <DW_TAG_variable offset="3477" DW_AT_name="prog" DW_AT_decl_file="1" DW_AT_decl_line="3861" DW_AT_type="898" DW_AT_location="(DW_OP_fbreg: -4248)"/>
+        <DW_TAG_variable offset="3493" DW_AT_name="outfile" DW_AT_decl_file="1" DW_AT_decl_line="3862" DW_AT_type="898" DW_AT_location="(DW_OP_fbreg: -4280)"/>
+        <DW_TAG_variable offset="3509" DW_AT_name="suffix" DW_AT_decl_file="1" DW_AT_decl_line="3863" DW_AT_type="898" DW_AT_location="(DW_OP_fbreg: -4272)"/>
+        <DW_TAG_variable offset="3525" DW_AT_name="prefix" DW_AT_decl_file="1" DW_AT_decl_line="3864" DW_AT_type="898" DW_AT_location="(DW_OP_fbreg: -4264)"/>
+        <DW_TAG_variable offset="3541" DW_AT_name="done" DW_AT_decl_file="1" DW_AT_decl_line="3865" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -4284)"/>
+        <DW_TAG_variable offset="3557" DW_AT_name="global" DW_AT_decl_file="1" DW_AT_decl_line="3866" DW_AT_type="2143" DW_AT_location="(DW_OP_fbreg: -4224)"/>
+        <DW_TAG_lexical_block offset="3573" DW_AT_low_pc="23392" DW_AT_high_pc="651">
+          <DW_TAG_variable offset="3590" DW_AT_name="outlen" DW_AT_decl_file="1" DW_AT_decl_line="3962" DW_AT_type="45" DW_AT_location="(DW_OP_fbreg: -4256)"/>
+          <DW_TAG_lexical_block offset="3606" DW_AT_low_pc="23445" DW_AT_high_pc="252" DW_AT_sibling="3644">
+            <DW_TAG_variable offset="3627" DW_AT_name="prefixlen" DW_AT_decl_file="1" DW_AT_decl_line="3969" DW_AT_type="45" DW_AT_location="(DW_OP_fbreg: -4240)"/>
+          </DW_TAG_lexical_block>
+          <DW_TAG_lexical_block offset="3644" DW_AT_low_pc="23778" DW_AT_high_pc="212">
+            <DW_TAG_variable offset="3661" DW_AT_name="suffixlen" DW_AT_decl_file="1" DW_AT_decl_line="3992" DW_AT_type="45" DW_AT_location="(DW_OP_fbreg: -4232)"/>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_array_type offset="3680" DW_AT_type="154" DW_AT_sibling="3697">
+        <DW_TAG_subrange_type offset="3689" DW_AT_type="56" DW_AT_upper_bound="4096"/>
+      </DW_TAG_array_type>
+      <DW_TAG_subprogram offset="3697" DW_AT_name="usage" DW_AT_decl_file="1" DW_AT_decl_line="3675" DW_AT_prototyped="True" DW_AT_low_pc="21752" DW_AT_high_pc="167" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="3778">
+        <DW_TAG_formal_parameter offset="3727" DW_AT_name="prog" DW_AT_decl_file="1" DW_AT_decl_line="3675" DW_AT_type="898" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="3742" DW_AT_name="i" DW_AT_decl_file="1" DW_AT_decl_line="3678" DW_AT_type="45" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_variable offset="3755" DW_AT_name="usage_string" DW_AT_decl_file="1" DW_AT_decl_line="3679" DW_AT_type="3778" DW_AT_location="(DW_OP_addr: 0)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_array_type offset="3778" DW_AT_type="898" DW_AT_sibling="3794">
+        <DW_TAG_subrange_type offset="3787" DW_AT_type="56" DW_AT_upper_bound="153"/>
+      </DW_TAG_array_type>
+      <DW_TAG_subprogram offset="3794" DW_AT_name="one_file" DW_AT_decl_file="1" DW_AT_decl_line="3652" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="21507" DW_AT_high_pc="245" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="3908">
+        <DW_TAG_formal_parameter offset="3828" DW_AT_name="global" DW_AT_decl_file="1" DW_AT_decl_line="3652" DW_AT_type="2700" DW_AT_location="(DW_OP_fbreg: -552)"/>
+        <DW_TAG_formal_parameter offset="3844" DW_AT_name="file_name" DW_AT_decl_file="1" DW_AT_decl_line="3652" DW_AT_type="898" DW_AT_location="(DW_OP_fbreg: -560)"/>
+        <DW_TAG_formal_parameter offset="3860" DW_AT_name="out_name" DW_AT_decl_file="1" DW_AT_decl_line="3652" DW_AT_type="898" DW_AT_location="(DW_OP_fbreg: -568)"/>
+        <DW_TAG_variable offset="3876" DW_AT_name="rc" DW_AT_decl_file="1" DW_AT_decl_line="3654" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -532)"/>
+        <DW_TAG_variable offset="3891" DW_AT_name="control" DW_AT_decl_file="1" DW_AT_decl_line="3655" DW_AT_type="3339" DW_AT_location="(DW_OP_fbreg: -528)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="3908" DW_AT_name="read_png" DW_AT_decl_file="1" DW_AT_decl_line="3577" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="20919" DW_AT_high_pc="588" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="4097">
+        <DW_TAG_formal_parameter offset="3942" DW_AT_name="control" DW_AT_decl_file="1" DW_AT_decl_line="3577" DW_AT_type="4097" DW_AT_location="(DW_OP_fbreg: -72)"/>
+        <DW_TAG_variable offset="3958" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="3582" DW_AT_type="1477" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="3973" DW_AT_name="info_ptr" DW_AT_decl_file="1" DW_AT_decl_line="3583" DW_AT_type="1522" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        <DW_TAG_variable offset="3988" DW_AT_name="rc" DW_AT_decl_file="1" DW_AT_decl_line="3584" DW_AT_type="70" DW_AT_location="(DW_OP_fbreg: -60)"/>
+        <DW_TAG_lexical_block offset="4002" DW_AT_low_pc="21277" DW_AT_high_pc="113">
+          <DW_TAG_variable offset="4019" DW_AT_name="height" DW_AT_decl_file="1" DW_AT_decl_line="3622" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -48)"/>
+          <DW_TAG_variable offset="4034" DW_AT_name="passes" DW_AT_decl_file="1" DW_AT_decl_line="3623" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -44)"/>
+          <DW_TAG_variable offset="4049" DW_AT_name="pass" DW_AT_decl_file="1" DW_AT_decl_line="3624" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -56)"/>
+          <DW_TAG_lexical_block offset="4064" DW_AT_low_pc="21335" DW_AT_high_pc="43">
+            <DW_TAG_variable offset="4081" DW_AT_name="y" DW_AT_decl_file="1" DW_AT_decl_line="3630" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -52)"/>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_pointer_type offset="4097" DW_AT_byte_size="8" DW_AT_type="3339"/>
+      <DW_TAG_subprogram offset="4103" DW_AT_name="control_init" DW_AT_decl_file="1" DW_AT_decl_line="3566" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="20855" DW_AT_high_pc="64" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="4198">
+        <DW_TAG_formal_parameter offset="4137" DW_AT_name="control" DW_AT_decl_file="1" DW_AT_decl_line="3566" DW_AT_type="4097" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="4152" DW_AT_name="global" DW_AT_decl_file="1" DW_AT_decl_line="3566" DW_AT_type="2700" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        <DW_TAG_formal_parameter offset="4167" DW_AT_name="file_name" DW_AT_decl_file="1" DW_AT_decl_line="3567" DW_AT_type="898" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="4182" DW_AT_name="out_name" DW_AT_decl_file="1" DW_AT_decl_line="3567" DW_AT_type="898" DW_AT_location="(DW_OP_fbreg: -48)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="4198" DW_AT_name="allocate" DW_AT_decl_file="1" DW_AT_decl_line="3548" DW_AT_prototyped="True" DW_AT_low_pc="20668" DW_AT_high_pc="187" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="4293">
+        <DW_TAG_formal_parameter offset="4228" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="3548" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="4243" DW_AT_name="allocate_idat" DW_AT_decl_file="1" DW_AT_decl_line="3548" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -44)"/>
+        <DW_TAG_variable offset="4258" DW_AT_name="control" DW_AT_decl_file="1" DW_AT_decl_line="3550" DW_AT_type="4097" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_variable offset="4273" DW_AT_name="__PRETTY_FUNCTION__" DW_AT_type="4309" DW_AT_artificial="True" DW_AT_location="(DW_OP_addr: d28)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_array_type offset="4293" DW_AT_type="161" DW_AT_sibling="4309">
+        <DW_TAG_subrange_type offset="4302" DW_AT_type="56" DW_AT_upper_bound="8"/>
+      </DW_TAG_array_type>
+      <DW_TAG_const_type offset="4309" DW_AT_type="4293"/>
+      <DW_TAG_subprogram offset="4314" DW_AT_name="get_control" DW_AT_decl_file="1" DW_AT_decl_line="3537" DW_AT_prototyped="True" DW_AT_type="3061" DW_AT_low_pc="20634" DW_AT_high_pc="34" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="4379">
+        <DW_TAG_formal_parameter offset="4348" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="3537" DW_AT_type="1556" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="4363" DW_AT_name="control" DW_AT_decl_file="1" DW_AT_decl_line="3542" DW_AT_type="4097" DW_AT_location="(DW_OP_fbreg: -24)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="4379" DW_AT_name="control_end" DW_AT_decl_file="1" DW_AT_decl_line="3531" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="20608" DW_AT_high_pc="26" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="4429">
+        <DW_TAG_formal_parameter offset="4413" DW_AT_name="control" DW_AT_decl_file="1" DW_AT_decl_line="3531" DW_AT_type="4097" DW_AT_location="(DW_OP_fbreg: -24)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="4429" DW_AT_name="read_callback" DW_AT_decl_file="1" DW_AT_decl_line="3187" DW_AT_prototyped="True" DW_AT_low_pc="18107" DW_AT_high_pc="2501" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="4700">
+        <DW_TAG_formal_parameter offset="4459" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="3187" DW_AT_type="1477" DW_AT_location="(DW_OP_fbreg: -72)"/>
+        <DW_TAG_formal_parameter offset="4475" DW_AT_name="buffer" DW_AT_decl_file="1" DW_AT_decl_line="3187" DW_AT_type="1347" DW_AT_location="(DW_OP_fbreg: -80)"/>
+        <DW_TAG_formal_parameter offset="4491" DW_AT_name="count" DW_AT_decl_file="1" DW_AT_decl_line="3187" DW_AT_type="45" DW_AT_location="(DW_OP_fbreg: -88)"/>
+        <DW_TAG_variable offset="4507" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="3190" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        <DW_TAG_variable offset="4522" DW_AT_name="type" DW_AT_decl_file="1" DW_AT_decl_line="3191" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -60)"/>
+        <DW_TAG_variable offset="4537" DW_AT_name="length" DW_AT_decl_file="1" DW_AT_decl_line="3191" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_variable offset="4552" DW_AT_name="chunk" DW_AT_decl_file="1" DW_AT_decl_line="3192" DW_AT_type="2905" DW_AT_location="(DW_OP_fbreg: -48)"/>
+        <DW_TAG_variable offset="4567" DW_AT_name="__PRETTY_FUNCTION__" DW_AT_type="4716" DW_AT_artificial="True" DW_AT_location="(DW_OP_addr: d18)"/>
+        <DW_TAG_label offset="4586" DW_AT_name="write_crc" DW_AT_decl_file="1" DW_AT_decl_line="3504" DW_AT_low_pc="20537"/>
+        <DW_TAG_lexical_block offset="4602" DW_AT_low_pc="18706" DW_AT_high_pc="1889">
+          <DW_TAG_variable offset="4619" DW_AT_name="b" DW_AT_decl_file="1" DW_AT_decl_line="3267" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -52)"/>
+          <DW_TAG_lexical_block offset="4632" DW_AT_low_pc="19409" DW_AT_high_pc="416">
+            <DW_TAG_variable offset="4649" DW_AT_name="idat" DW_AT_decl_file="1" DW_AT_decl_line="3362" DW_AT_type="3034" DW_AT_location="(DW_OP_fbreg: -24)"/>
+            <DW_TAG_lexical_block offset="4664" DW_AT_low_pc="19466" DW_AT_high_pc="320">
+              <DW_TAG_variable offset="4681" DW_AT_name="cur" DW_AT_decl_file="1" DW_AT_decl_line="3375" DW_AT_type="2121" DW_AT_location="(DW_OP_fbreg: -40)"/>
+            </DW_TAG_lexical_block>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_array_type offset="4700" DW_AT_type="161" DW_AT_sibling="4716">
+        <DW_TAG_subrange_type offset="4709" DW_AT_type="56" DW_AT_upper_bound="13"/>
+      </DW_TAG_array_type>
+      <DW_TAG_const_type offset="4716" DW_AT_type="4700"/>
+      <DW_TAG_subprogram offset="4721" DW_AT_name="warning_handler" DW_AT_decl_file="1" DW_AT_decl_line="3175" DW_AT_prototyped="True" DW_AT_low_pc="18034" DW_AT_high_pc="73" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="4797">
+        <DW_TAG_formal_parameter offset="4751" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="3175" DW_AT_type="1477" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="4766" DW_AT_name="message" DW_AT_decl_file="1" DW_AT_decl_line="3175" DW_AT_type="1407" DW_AT_location="(DW_OP_fbreg: -48)"/>
+        <DW_TAG_variable offset="4781" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="3177" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -24)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="4797" DW_AT_name="error_handler" DW_AT_decl_file="1" DW_AT_decl_line="3169" DW_AT_prototyped="True" DW_AT_low_pc="17983" DW_AT_high_pc="51" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="4858">
+        <DW_TAG_formal_parameter offset="4827" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="3169" DW_AT_type="1477" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="4842" DW_AT_name="message" DW_AT_decl_file="1" DW_AT_decl_line="3169" DW_AT_type="1407" DW_AT_location="(DW_OP_fbreg: -32)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="4858" DW_AT_name="read_chunk" DW_AT_decl_file="1" DW_AT_decl_line="3082" DW_AT_prototyped="True" DW_AT_low_pc="17529" DW_AT_high_pc="454" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="5048">
+        <DW_TAG_formal_parameter offset="4888" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="3082" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_variable offset="4903" DW_AT_name="length" DW_AT_decl_file="1" DW_AT_decl_line="3096" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -36)"/>
+        <DW_TAG_variable offset="4918" DW_AT_name="type" DW_AT_decl_file="1" DW_AT_decl_line="3097" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        <DW_TAG_lexical_block offset="4933" DW_AT_low_pc="17758" DW_AT_high_pc="191">
+          <DW_TAG_variable offset="4950" DW_AT_name="file_crc" DW_AT_decl_file="1" DW_AT_decl_line="3119" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -48)"/>
+          <DW_TAG_variable offset="4965" DW_AT_name="nread" DW_AT_decl_file="1" DW_AT_decl_line="3120" DW_AT_type="75" DW_AT_location="(DW_OP_fbreg: -28)"/>
+          <DW_TAG_lexical_block offset="4980" DW_AT_low_pc="17799" DW_AT_high_pc="123">
+            <DW_TAG_variable offset="4997" DW_AT_name="next_length" DW_AT_decl_file="1" DW_AT_decl_line="3126" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -44)"/>
+            <DW_TAG_lexical_block offset="5012" DW_AT_low_pc="17834" DW_AT_high_pc="88">
+              <DW_TAG_variable offset="5029" DW_AT_name="next_type" DW_AT_decl_file="1" DW_AT_decl_line="3131" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -40)"/>
+            </DW_TAG_lexical_block>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="5048" DW_AT_name="sync_stream" DW_AT_decl_file="1" DW_AT_decl_line="2964" DW_AT_prototyped="True" DW_AT_low_pc="16846" DW_AT_high_pc="683" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="5309">
+        <DW_TAG_formal_parameter offset="5078" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="2964" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -88)"/>
+        <DW_TAG_variable offset="5094" DW_AT_name="file_crc" DW_AT_decl_file="1" DW_AT_decl_line="2969" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -68)"/>
+        <DW_TAG_label offset="5110" DW_AT_name="truncated" DW_AT_decl_file="1" DW_AT_decl_line="3077" DW_AT_low_pc="17483"/>
+        <DW_TAG_lexical_block offset="5126" DW_AT_ranges="48">
+          <DW_TAG_variable offset="5131" DW_AT_name="length" DW_AT_decl_file="1" DW_AT_decl_line="2991" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -64)"/>
+          <DW_TAG_variable offset="5146" DW_AT_name="type" DW_AT_decl_file="1" DW_AT_decl_line="2992" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -44)"/>
+          <DW_TAG_variable offset="5161" DW_AT_name="crc" DW_AT_decl_file="1" DW_AT_decl_line="2993" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -60)"/>
+          <DW_TAG_variable offset="5176" DW_AT_name="buffer" DW_AT_decl_file="1" DW_AT_decl_line="2994" DW_AT_type="5309" DW_AT_location="(DW_OP_fbreg: -32)"/>
+          <DW_TAG_variable offset="5191" DW_AT_name="nread" DW_AT_decl_file="1" DW_AT_decl_line="2995" DW_AT_type="75" DW_AT_location="(DW_OP_fbreg: -56)"/>
+          <DW_TAG_variable offset="5206" DW_AT_name="nused" DW_AT_decl_file="1" DW_AT_decl_line="2995" DW_AT_type="75" DW_AT_location="(DW_OP_fbreg: -52)"/>
+          <DW_TAG_lexical_block offset="5221" DW_AT_ranges="96">
+            <DW_TAG_variable offset="5226" DW_AT_name="ch" DW_AT_decl_file="1" DW_AT_decl_line="2999" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -48)"/>
+            <DW_TAG_lexical_block offset="5240" DW_AT_low_pc="17252" DW_AT_high_pc="117">
+              <DW_TAG_variable offset="5257" DW_AT_name="next_length" DW_AT_decl_file="1" DW_AT_decl_line="3030" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -40)"/>
+              <DW_TAG_lexical_block offset="5272" DW_AT_low_pc="17281" DW_AT_high_pc="88">
+                <DW_TAG_variable offset="5289" DW_AT_name="next_type" DW_AT_decl_file="1" DW_AT_decl_line="3034" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -36)"/>
+              </DW_TAG_lexical_block>
+            </DW_TAG_lexical_block>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_array_type offset="5309" DW_AT_type="1282" DW_AT_sibling="5325">
+        <DW_TAG_subrange_type offset="5318" DW_AT_type="56" DW_AT_upper_bound="7"/>
+      </DW_TAG_array_type>
+      <DW_TAG_subprogram offset="5325" DW_AT_name="get32" DW_AT_decl_file="1" DW_AT_decl_line="2952" DW_AT_prototyped="True" DW_AT_type="1323" DW_AT_low_pc="16711" DW_AT_high_pc="135" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_call_sites="True" DW_AT_sibling="5390">
+        <DW_TAG_formal_parameter offset="5359" DW_AT_name="buffer" DW_AT_decl_file="1" DW_AT_decl_line="2952" DW_AT_type="1347" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="5374" DW_AT_name="offset" DW_AT_decl_file="1" DW_AT_decl_line="2952" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -28)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="5390" DW_AT_name="process_chunk" DW_AT_decl_file="1" DW_AT_decl_line="2784" DW_AT_prototyped="True" DW_AT_low_pc="15523" DW_AT_high_pc="1188" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="5564">
+        <DW_TAG_formal_parameter offset="5420" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="2784" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="5435" DW_AT_name="file_crc" DW_AT_decl_file="1" DW_AT_decl_line="2784" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -44)"/>
+        <DW_TAG_formal_parameter offset="5450" DW_AT_name="next_length" DW_AT_decl_file="1" DW_AT_decl_line="2784" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -48)"/>
+        <DW_TAG_formal_parameter offset="5465" DW_AT_name="next_type" DW_AT_decl_file="1" DW_AT_decl_line="2785" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -52)"/>
+        <DW_TAG_variable offset="5480" DW_AT_name="type" DW_AT_decl_file="1" DW_AT_decl_line="2794" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -28)"/>
+        <DW_TAG_label offset="5495" DW_AT_name="skip_chunk" DW_AT_decl_file="1" DW_AT_decl_line="2944" DW_AT_low_pc="16650"/>
+        <DW_TAG_variable offset="5511" DW_AT_name="__PRETTY_FUNCTION__" DW_AT_type="4716" DW_AT_artificial="True" DW_AT_location="(DW_OP_addr: d08)"/>
+        <DW_TAG_lexical_block offset="5530" DW_AT_low_pc="16224" DW_AT_high_pc="217">
+          <DW_TAG_variable offset="5547" DW_AT_name="chunk" DW_AT_decl_file="1" DW_AT_decl_line="2886" DW_AT_type="2905" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="5564" DW_AT_name="zlib_check" DW_AT_decl_file="1" DW_AT_decl_line="2607" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="14592" DW_AT_high_pc="931" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="5781">
+        <DW_TAG_formal_parameter offset="5598" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="2607" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -280)"/>
+        <DW_TAG_formal_parameter offset="5614" DW_AT_name="offset" DW_AT_decl_file="1" DW_AT_decl_line="2607" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -284)"/>
+        <DW_TAG_variable offset="5630" DW_AT_name="start_pos" DW_AT_decl_file="1" DW_AT_decl_line="2621" DW_AT_type="909" DW_AT_location="(DW_OP_fbreg: -256)"/>
+        <DW_TAG_variable offset="5646" DW_AT_name="zlib" DW_AT_decl_file="1" DW_AT_decl_line="2622" DW_AT_type="3094" DW_AT_location="(DW_OP_fbreg: -240)"/>
+        <DW_TAG_variable offset="5662" DW_AT_name="__PRETTY_FUNCTION__" DW_AT_type="5797" DW_AT_artificial="True" DW_AT_location="(DW_OP_addr: cf8)"/>
+        <DW_TAG_lexical_block offset="5681" DW_AT_low_pc="14721" DW_AT_high_pc="760">
+          <DW_TAG_variable offset="5698" DW_AT_name="min_bits" DW_AT_decl_file="1" DW_AT_decl_line="2630" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -272)"/>
+          <DW_TAG_variable offset="5714" DW_AT_name="max_bits" DW_AT_decl_file="1" DW_AT_decl_line="2630" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -268)"/>
+          <DW_TAG_variable offset="5730" DW_AT_name="rc" DW_AT_decl_file="1" DW_AT_decl_line="2630" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -264)"/>
+          <DW_TAG_lexical_block offset="5745" DW_AT_low_pc="15052" DW_AT_high_pc="326">
+            <DW_TAG_variable offset="5762" DW_AT_name="test_bits" DW_AT_decl_file="1" DW_AT_decl_line="2691" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -260)"/>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_array_type offset="5781" DW_AT_type="161" DW_AT_sibling="5797">
+        <DW_TAG_subrange_type offset="5790" DW_AT_type="56" DW_AT_upper_bound="10"/>
+      </DW_TAG_array_type>
+      <DW_TAG_const_type offset="5797" DW_AT_type="5781"/>
+      <DW_TAG_subprogram offset="5802" DW_AT_name="zlib_run" DW_AT_decl_file="1" DW_AT_decl_line="2489" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="13950" DW_AT_high_pc="642" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="6132">
+        <DW_TAG_formal_parameter offset="5836" DW_AT_name="zlib" DW_AT_decl_file="1" DW_AT_decl_line="2489" DW_AT_type="6132" DW_AT_location="(DW_OP_fbreg: -88)"/>
+        <DW_TAG_variable offset="5852" DW_AT_name="__PRETTY_FUNCTION__" DW_AT_type="4309" DW_AT_artificial="True" DW_AT_location="(DW_OP_addr: ce8)"/>
+        <DW_TAG_label offset="5871" DW_AT_name="end_check" DW_AT_decl_file="1" DW_AT_decl_line="2565" DW_AT_low_pc="14336"/>
+        <DW_TAG_lexical_block offset="5887" DW_AT_low_pc="13992" DW_AT_high_pc="475" DW_AT_sibling="6084">
+          <DW_TAG_variable offset="5908" DW_AT_name="list" DW_AT_decl_file="1" DW_AT_decl_line="2503" DW_AT_type="2121" DW_AT_location="(DW_OP_fbreg: -48)"/>
+          <DW_TAG_variable offset="5923" DW_AT_name="last" DW_AT_decl_file="1" DW_AT_decl_line="2504" DW_AT_type="2121" DW_AT_location="(DW_OP_fbreg: -24)"/>
+          <DW_TAG_variable offset="5938" DW_AT_name="skip" DW_AT_decl_file="1" DW_AT_decl_line="2505" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -76)"/>
+          <DW_TAG_lexical_block offset="5954" DW_AT_low_pc="14071" DW_AT_high_pc="391">
+            <DW_TAG_variable offset="5971" DW_AT_name="count" DW_AT_decl_file="1" DW_AT_decl_line="2517" DW_AT_type="75" DW_AT_location="(DW_OP_fbreg: -56)"/>
+            <DW_TAG_variable offset="5986" DW_AT_name="i" DW_AT_decl_file="1" DW_AT_decl_line="2518" DW_AT_type="75" DW_AT_location="(DW_OP_fbreg: -72)"/>
+            <DW_TAG_lexical_block offset="6000" DW_AT_low_pc="14093" DW_AT_high_pc="322">
+              <DW_TAG_variable offset="6017" DW_AT_name="rc" DW_AT_decl_file="1" DW_AT_decl_line="2522" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -52)"/>
+              <DW_TAG_lexical_block offset="6031" DW_AT_ranges="0">
+                <DW_TAG_variable offset="6036" DW_AT_name="check" DW_AT_decl_file="1" DW_AT_decl_line="2543" DW_AT_type="2121" DW_AT_location="(DW_OP_fbreg: -40)"/>
+                <DW_TAG_variable offset="6051" DW_AT_name="j" DW_AT_decl_file="1" DW_AT_decl_line="2544" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -68)"/>
+                <DW_TAG_variable offset="6065" DW_AT_name="jcount" DW_AT_decl_file="1" DW_AT_decl_line="2544" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -64)"/>
+              </DW_TAG_lexical_block>
+            </DW_TAG_lexical_block>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="6084" DW_AT_low_pc="14467" DW_AT_high_pc="123">
+          <DW_TAG_variable offset="6101" DW_AT_name="chunk" DW_AT_decl_file="1" DW_AT_decl_line="2589" DW_AT_type="2905" DW_AT_location="(DW_OP_fbreg: -32)"/>
+          <DW_TAG_variable offset="6116" DW_AT_name="rc" DW_AT_decl_file="1" DW_AT_decl_line="2590" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -60)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_pointer_type offset="6132" DW_AT_byte_size="8" DW_AT_type="3094"/>
+      <DW_TAG_subprogram offset="6138" DW_AT_name="zlib_advance" DW_AT_decl_file="1" DW_AT_decl_line="2266" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="12473" DW_AT_high_pc="1477" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="6487">
+        <DW_TAG_formal_parameter offset="6172" DW_AT_name="zlib" DW_AT_decl_file="1" DW_AT_decl_line="2266" DW_AT_type="6132" DW_AT_location="(DW_OP_fbreg: -88)"/>
+        <DW_TAG_formal_parameter offset="6188" DW_AT_name="nbytes" DW_AT_decl_file="1" DW_AT_decl_line="2266" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -92)"/>
+        <DW_TAG_variable offset="6204" DW_AT_name="state" DW_AT_decl_file="1" DW_AT_decl_line="2282" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -72)"/>
+        <DW_TAG_variable offset="6220" DW_AT_name="endrc" DW_AT_decl_file="1" DW_AT_decl_line="2283" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -68)"/>
+        <DW_TAG_variable offset="6236" DW_AT_name="in_bytes" DW_AT_decl_file="1" DW_AT_decl_line="2284" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -64)"/>
+        <DW_TAG_variable offset="6251" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="2285" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="6266" DW_AT_name="__PRETTY_FUNCTION__" DW_AT_type="6503" DW_AT_artificial="True" DW_AT_location="(DW_OP_addr: cd8)"/>
+        <DW_TAG_lexical_block offset="6285" DW_AT_low_pc="12583" DW_AT_high_pc="923" DW_AT_sibling="6453">
+          <DW_TAG_variable offset="6306" DW_AT_name="out_bytes" DW_AT_decl_file="1" DW_AT_decl_line="2291" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -60)"/>
+          <DW_TAG_variable offset="6321" DW_AT_name="flush" DW_AT_decl_file="1" DW_AT_decl_line="2292" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -56)"/>
+          <DW_TAG_variable offset="6336" DW_AT_name="bIn" DW_AT_decl_file="1" DW_AT_decl_line="2293" DW_AT_type="1282" DW_AT_location="(DW_OP_fbreg: -74)"/>
+          <DW_TAG_variable offset="6352" DW_AT_name="bOut" DW_AT_decl_file="1" DW_AT_decl_line="2294" DW_AT_type="1282" DW_AT_location="(DW_OP_fbreg: -73)"/>
+          <DW_TAG_lexical_block offset="6368" DW_AT_low_pc="12619" DW_AT_high_pc="103" DW_AT_sibling="6420">
+            <DW_TAG_variable offset="6389" DW_AT_name="file_bits" DW_AT_decl_file="1" DW_AT_decl_line="2300" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -48)"/>
+            <DW_TAG_variable offset="6404" DW_AT_name="new_bits" DW_AT_decl_file="1" DW_AT_decl_line="2301" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -44)"/>
+          </DW_TAG_lexical_block>
+          <DW_TAG_lexical_block offset="6420" DW_AT_low_pc="12761" DW_AT_high_pc="139">
+            <DW_TAG_variable offset="6437" DW_AT_name="b2" DW_AT_decl_file="1" DW_AT_decl_line="2323" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -52)"/>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="6453" DW_AT_low_pc="13650" DW_AT_high_pc="275">
+          <DW_TAG_variable offset="6470" DW_AT_name="chunk" DW_AT_decl_file="1" DW_AT_decl_line="2456" DW_AT_type="2905" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_array_type offset="6487" DW_AT_type="161" DW_AT_sibling="6503">
+        <DW_TAG_subrange_type offset="6496" DW_AT_type="56" DW_AT_upper_bound="12"/>
+      </DW_TAG_array_type>
+      <DW_TAG_const_type offset="6503" DW_AT_type="6487"/>
+      <DW_TAG_subprogram offset="6508" DW_AT_name="max_window_bits" DW_AT_decl_file="1" DW_AT_decl_line="2245" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="12326" DW_AT_high_pc="147" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_call_sites="True" DW_AT_sibling="6587">
+        <DW_TAG_formal_parameter offset="6542" DW_AT_name="size" DW_AT_decl_file="1" DW_AT_decl_line="2245" DW_AT_type="2001" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="6557" DW_AT_name="ndigits" DW_AT_decl_file="1" DW_AT_decl_line="2245" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -44)"/>
+        <DW_TAG_variable offset="6572" DW_AT_name="cb" DW_AT_decl_file="1" DW_AT_decl_line="2248" DW_AT_type="1294" DW_AT_location="(DW_OP_fbreg: -18)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="6587" DW_AT_name="zlib_init" DW_AT_decl_file="1" DW_AT_decl_line="2195" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="11964" DW_AT_high_pc="362" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="6697">
+        <DW_TAG_formal_parameter offset="6621" DW_AT_name="zlib" DW_AT_decl_file="1" DW_AT_decl_line="2195" DW_AT_type="6132" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="6636" DW_AT_name="idat" DW_AT_decl_file="1" DW_AT_decl_line="2195" DW_AT_type="3034" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        <DW_TAG_formal_parameter offset="6651" DW_AT_name="chunk" DW_AT_decl_file="1" DW_AT_decl_line="2195" DW_AT_type="2905" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="6666" DW_AT_name="window_bits" DW_AT_decl_file="1" DW_AT_decl_line="2196" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -44)"/>
+        <DW_TAG_formal_parameter offset="6681" DW_AT_name="offset" DW_AT_decl_file="1" DW_AT_decl_line="2196" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -48)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="6697" DW_AT_name="zlib_reset" DW_AT_decl_file="1" DW_AT_decl_line="2169" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="11731" DW_AT_high_pc="233" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="6781">
+        <DW_TAG_formal_parameter offset="6731" DW_AT_name="zlib" DW_AT_decl_file="1" DW_AT_decl_line="2169" DW_AT_type="6132" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="6746" DW_AT_name="window_bits" DW_AT_decl_file="1" DW_AT_decl_line="2169" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -28)"/>
+        <DW_TAG_variable offset="6761" DW_AT_name="__PRETTY_FUNCTION__" DW_AT_type="5797" DW_AT_artificial="True" DW_AT_location="(DW_OP_addr: cc8)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="6781" DW_AT_name="zlib_end" DW_AT_decl_file="1" DW_AT_decl_line="2093" DW_AT_prototyped="True" DW_AT_low_pc="10972" DW_AT_high_pc="759" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="6860">
+        <DW_TAG_formal_parameter offset="6811" DW_AT_name="zlib" DW_AT_decl_file="1" DW_AT_decl_line="2093" DW_AT_type="6132" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_lexical_block offset="6826" DW_AT_low_pc="11025" DW_AT_high_pc="338">
+          <DW_TAG_variable offset="6843" DW_AT_name="reason" DW_AT_decl_file="1" DW_AT_decl_line="2102" DW_AT_type="898" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="6860" DW_AT_name="zlib_message" DW_AT_decl_file="1" DW_AT_decl_line="2074" DW_AT_prototyped="True" DW_AT_low_pc="10740" DW_AT_high_pc="232" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="6954">
+        <DW_TAG_formal_parameter offset="6890" DW_AT_name="zlib" DW_AT_decl_file="1" DW_AT_decl_line="2074" DW_AT_type="6132" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="6905" DW_AT_name="unexpected" DW_AT_decl_file="1" DW_AT_decl_line="2074" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -44)"/>
+        <DW_TAG_lexical_block offset="6920" DW_AT_low_pc="10777" DW_AT_high_pc="192">
+          <DW_TAG_variable offset="6937" DW_AT_name="reason" DW_AT_decl_file="1" DW_AT_decl_line="2079" DW_AT_type="898" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="6954" DW_AT_name="zlib_rc" DW_AT_decl_file="1" DW_AT_decl_line="2055" DW_AT_prototyped="True" DW_AT_type="898" DW_AT_low_pc="10589" DW_AT_high_pc="151" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_call_sites="True" DW_AT_sibling="7004">
+        <DW_TAG_formal_parameter offset="6988" DW_AT_name="zlib" DW_AT_decl_file="1" DW_AT_decl_line="2055" DW_AT_type="6132" DW_AT_location="(DW_OP_fbreg: -24)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="7004" DW_AT_name="zlib_flevel" DW_AT_decl_file="1" DW_AT_decl_line="2040" DW_AT_prototyped="True" DW_AT_type="898" DW_AT_low_pc="10463" DW_AT_high_pc="126" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="7073">
+        <DW_TAG_formal_parameter offset="7038" DW_AT_name="zlib" DW_AT_decl_file="1" DW_AT_decl_line="2040" DW_AT_type="6132" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_variable offset="7053" DW_AT_name="__PRETTY_FUNCTION__" DW_AT_type="7089" DW_AT_artificial="True" DW_AT_location="(DW_OP_addr: cb8)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_array_type offset="7073" DW_AT_type="161" DW_AT_sibling="7089">
+        <DW_TAG_subrange_type offset="7082" DW_AT_type="56" DW_AT_upper_bound="11"/>
+      </DW_TAG_array_type>
+      <DW_TAG_const_type offset="7089" DW_AT_type="7073"/>
+      <DW_TAG_subprogram offset="7094" DW_AT_name="process_IDAT" DW_AT_decl_file="1" DW_AT_decl_line="1907" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="9864" DW_AT_high_pc="599" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="7227">
+        <DW_TAG_formal_parameter offset="7128" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1907" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -72)"/>
+        <DW_TAG_variable offset="7144" DW_AT_name="list" DW_AT_decl_file="1" DW_AT_decl_line="1924" DW_AT_type="2121" DW_AT_location="(DW_OP_fbreg: -48)"/>
+        <DW_TAG_variable offset="7159" DW_AT_name="__PRETTY_FUNCTION__" DW_AT_type="6503" DW_AT_artificial="True" DW_AT_location="(DW_OP_addr: ca8)"/>
+        <DW_TAG_lexical_block offset="7178" DW_AT_low_pc="10169" DW_AT_high_pc="263">
+          <DW_TAG_variable offset="7195" DW_AT_name="idat" DW_AT_decl_file="1" DW_AT_decl_line="1969" DW_AT_type="3034" DW_AT_location="(DW_OP_fbreg: -40)"/>
+          <DW_TAG_variable offset="7210" DW_AT_name="cmp" DW_AT_decl_file="1" DW_AT_decl_line="1970" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -52)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="7227" DW_AT_name="rechunk_length" DW_AT_decl_file="1" DW_AT_decl_line="1826" DW_AT_prototyped="True" DW_AT_type="1323" DW_AT_low_pc="9373" DW_AT_high_pc="491" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="7457">
+        <DW_TAG_formal_parameter offset="7261" DW_AT_name="idat" DW_AT_decl_file="1" DW_AT_decl_line="1826" DW_AT_type="3034" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_formal_parameter offset="7276" DW_AT_name="start" DW_AT_decl_file="1" DW_AT_decl_line="1826" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -60)"/>
+        <DW_TAG_variable offset="7291" DW_AT_name="len" DW_AT_decl_file="1" DW_AT_decl_line="1831" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="7306" DW_AT_name="__PRETTY_FUNCTION__" DW_AT_type="7473" DW_AT_artificial="True" DW_AT_location="(DW_OP_addr: c98)"/>
+        <DW_TAG_lexical_block offset="7325" DW_AT_low_pc="9412" DW_AT_high_pc="266" DW_AT_sibling="7377">
+          <DW_TAG_variable offset="7346" DW_AT_name="cur" DW_AT_decl_file="1" DW_AT_decl_line="1835" DW_AT_type="7478" DW_AT_location="(DW_OP_fbreg: -24)"/>
+          <DW_TAG_variable offset="7361" DW_AT_name="count" DW_AT_decl_file="1" DW_AT_decl_line="1836" DW_AT_type="75" DW_AT_location="(DW_OP_fbreg: -36)"/>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="7377" DW_AT_low_pc="9678" DW_AT_high_pc="184">
+          <DW_TAG_variable offset="7394" DW_AT_name="have" DW_AT_decl_file="1" DW_AT_decl_line="1866" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -48)"/>
+          <DW_TAG_lexical_block offset="7409" DW_AT_low_pc="9711" DW_AT_high_pc="148">
+            <DW_TAG_variable offset="7426" DW_AT_name="cur" DW_AT_decl_file="1" DW_AT_decl_line="1870" DW_AT_type="2121" DW_AT_location="(DW_OP_fbreg: -32)"/>
+            <DW_TAG_variable offset="7441" DW_AT_name="j" DW_AT_decl_file="1" DW_AT_decl_line="1871" DW_AT_type="75" DW_AT_location="(DW_OP_fbreg: -44)"/>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_array_type offset="7457" DW_AT_type="161" DW_AT_sibling="7473">
+        <DW_TAG_subrange_type offset="7466" DW_AT_type="56" DW_AT_upper_bound="14"/>
+      </DW_TAG_array_type>
+      <DW_TAG_const_type offset="7473" DW_AT_type="7457"/>
+      <DW_TAG_pointer_type offset="7478" DW_AT_byte_size="8" DW_AT_type="2116"/>
+      <DW_TAG_subprogram offset="7484" DW_AT_name="IDAT_init" DW_AT_decl_file="1" DW_AT_decl_line="1791" DW_AT_prototyped="True" DW_AT_low_pc="9079" DW_AT_high_pc="294" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="7564">
+        <DW_TAG_formal_parameter offset="7514" DW_AT_name="idat" DW_AT_decl_file="1" DW_AT_decl_line="1791" DW_AT_type="3040" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="7529" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1791" DW_AT_type="3067" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        <DW_TAG_variable offset="7544" DW_AT_name="__PRETTY_FUNCTION__" DW_AT_type="7580" DW_AT_artificial="True" DW_AT_location="(DW_OP_addr: c88)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_array_type offset="7564" DW_AT_type="161" DW_AT_sibling="7580">
+        <DW_TAG_subrange_type offset="7573" DW_AT_type="56" DW_AT_upper_bound="9"/>
+      </DW_TAG_array_type>
+      <DW_TAG_const_type offset="7580" DW_AT_type="7564"/>
+      <DW_TAG_subprogram offset="7585" DW_AT_name="IDAT_end" DW_AT_decl_file="1" DW_AT_decl_line="1771" DW_AT_prototyped="True" DW_AT_low_pc="8935" DW_AT_high_pc="144" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="7680">
+        <DW_TAG_formal_parameter offset="7615" DW_AT_name="idat_var" DW_AT_decl_file="1" DW_AT_decl_line="1771" DW_AT_type="7680" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="7630" DW_AT_name="idat" DW_AT_decl_file="1" DW_AT_decl_line="1773" DW_AT_type="3034" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        <DW_TAG_variable offset="7645" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1774" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_variable offset="7660" DW_AT_name="__PRETTY_FUNCTION__" DW_AT_type="4309" DW_AT_artificial="True" DW_AT_location="(DW_OP_addr: c78)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_pointer_type offset="7680" DW_AT_byte_size="8" DW_AT_type="3034"/>
+      <DW_TAG_subprogram offset="7686" DW_AT_name="process_iTXt" DW_AT_decl_file="1" DW_AT_decl_line="1694" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="8612" DW_AT_high_pc="323" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="7800">
+        <DW_TAG_formal_parameter offset="7720" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1694" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="7735" DW_AT_name="chunk" DW_AT_decl_file="1" DW_AT_decl_line="1697" DW_AT_type="2905" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_variable offset="7750" DW_AT_name="length" DW_AT_decl_file="1" DW_AT_decl_line="1698" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        <DW_TAG_variable offset="7765" DW_AT_name="index" DW_AT_decl_file="1" DW_AT_decl_line="1699" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -28)"/>
+        <DW_TAG_variable offset="7780" DW_AT_name="__PRETTY_FUNCTION__" DW_AT_type="6503" DW_AT_artificial="True" DW_AT_location="(DW_OP_addr: c68)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="7800" DW_AT_name="process_zTXt_iCCP" DW_AT_decl_file="1" DW_AT_decl_line="1663" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="8405" DW_AT_high_pc="207" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="7914">
+        <DW_TAG_formal_parameter offset="7834" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1663" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="7849" DW_AT_name="chunk" DW_AT_decl_file="1" DW_AT_decl_line="1668" DW_AT_type="2905" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_variable offset="7864" DW_AT_name="length" DW_AT_decl_file="1" DW_AT_decl_line="1669" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        <DW_TAG_variable offset="7879" DW_AT_name="index" DW_AT_decl_file="1" DW_AT_decl_line="1670" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -28)"/>
+        <DW_TAG_variable offset="7894" DW_AT_name="__PRETTY_FUNCTION__" DW_AT_type="7930" DW_AT_artificial="True" DW_AT_location="(DW_OP_addr: c50)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_array_type offset="7914" DW_AT_type="161" DW_AT_sibling="7930">
+        <DW_TAG_subrange_type offset="7923" DW_AT_type="56" DW_AT_upper_bound="17"/>
+      </DW_TAG_array_type>
+      <DW_TAG_const_type offset="7930" DW_AT_type="7914"/>
+      <DW_TAG_subprogram offset="7935" DW_AT_name="setpos" DW_AT_decl_file="1" DW_AT_decl_line="1639" DW_AT_prototyped="True" DW_AT_low_pc="8347" DW_AT_high_pc="58" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="7981">
+        <DW_TAG_formal_parameter offset="7965" DW_AT_name="chunk" DW_AT_decl_file="1" DW_AT_decl_line="1639" DW_AT_type="2905" DW_AT_location="(DW_OP_fbreg: -24)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="7981" DW_AT_name="current_type" DW_AT_decl_file="1" DW_AT_decl_line="1611" DW_AT_prototyped="True" DW_AT_type="1323" DW_AT_low_pc="8249" DW_AT_high_pc="98" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_call_sites="True" DW_AT_sibling="8079">
+        <DW_TAG_formal_parameter offset="8015" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1611" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="8030" DW_AT_name="code" DW_AT_decl_file="1" DW_AT_decl_line="1611" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -44)"/>
+        <DW_TAG_lexical_block offset="8045" DW_AT_low_pc="8276" DW_AT_high_pc="59">
+          <DW_TAG_variable offset="8062" DW_AT_name="type" DW_AT_decl_file="1" DW_AT_decl_line="1621" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -20)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="8079" DW_AT_name="chunk_init" DW_AT_decl_file="1" DW_AT_decl_line="1582" DW_AT_prototyped="True" DW_AT_low_pc="8039" DW_AT_high_pc="210" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="8159">
+        <DW_TAG_formal_parameter offset="8109" DW_AT_name="chunk" DW_AT_decl_file="1" DW_AT_decl_line="1582" DW_AT_type="2911" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="8124" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1582" DW_AT_type="3067" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        <DW_TAG_variable offset="8139" DW_AT_name="__PRETTY_FUNCTION__" DW_AT_type="5797" DW_AT_artificial="True" DW_AT_location="(DW_OP_addr: c40)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="8159" DW_AT_name="chunk_end" DW_AT_decl_file="1" DW_AT_decl_line="1573" DW_AT_prototyped="True" DW_AT_low_pc="7985" DW_AT_high_pc="54" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="8220">
+        <DW_TAG_formal_parameter offset="8189" DW_AT_name="chunk_var" DW_AT_decl_file="1" DW_AT_decl_line="1573" DW_AT_type="8220" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="8204" DW_AT_name="chunk" DW_AT_decl_file="1" DW_AT_decl_line="1575" DW_AT_type="2905" DW_AT_location="(DW_OP_fbreg: -24)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_pointer_type offset="8220" DW_AT_byte_size="8" DW_AT_type="2905"/>
+      <DW_TAG_subprogram offset="8226" DW_AT_name="chunk_message" DW_AT_decl_file="1" DW_AT_decl_line="1567" DW_AT_prototyped="True" DW_AT_low_pc="7938" DW_AT_high_pc="47" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="8287">
+        <DW_TAG_formal_parameter offset="8256" DW_AT_name="chunk" DW_AT_decl_file="1" DW_AT_decl_line="1567" DW_AT_type="2905" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="8271" DW_AT_name="message" DW_AT_decl_file="1" DW_AT_decl_line="1567" DW_AT_type="898" DW_AT_location="(DW_OP_fbreg: -32)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="8287" DW_AT_name="calc_image_size" DW_AT_decl_file="1" DW_AT_decl_line="1413" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="6752" DW_AT_high_pc="1186" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="8600">
+        <DW_TAG_formal_parameter offset="8321" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1413" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -88)"/>
+        <DW_TAG_variable offset="8337" DW_AT_name="pd" DW_AT_decl_file="1" DW_AT_decl_line="1418" DW_AT_type="1294" DW_AT_location="(DW_OP_fbreg: -74)"/>
+        <DW_TAG_label offset="8352" DW_AT_name="invalid_bit_depth" DW_AT_decl_file="1" DW_AT_decl_line="1425" DW_AT_low_pc="6874"/>
+        <DW_TAG_variable offset="8368" DW_AT_name="__PRETTY_FUNCTION__" DW_AT_type="8616" DW_AT_artificial="True" DW_AT_location="(DW_OP_addr: c30)"/>
+        <DW_TAG_lexical_block offset="8387" DW_AT_low_pc="7223" DW_AT_high_pc="427" DW_AT_sibling="8536">
+          <DW_TAG_variable offset="8408" DW_AT_name="pass" DW_AT_decl_file="1" DW_AT_decl_line="1479" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -72)"/>
+          <DW_TAG_variable offset="8424" DW_AT_name="image_digits" DW_AT_decl_file="1" DW_AT_decl_line="1480" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -68)"/>
+          <DW_TAG_variable offset="8440" DW_AT_name="row_width" DW_AT_decl_file="1" DW_AT_decl_line="1481" DW_AT_type="8621" DW_AT_location="(DW_OP_fbreg: -50)"/>
+          <DW_TAG_variable offset="8455" DW_AT_name="row_bytes" DW_AT_decl_file="1" DW_AT_decl_line="1481" DW_AT_type="8637" DW_AT_location="(DW_OP_fbreg: -46)"/>
+          <DW_TAG_lexical_block offset="8470" DW_AT_low_pc="7242" DW_AT_high_pc="384">
+            <DW_TAG_variable offset="8487" DW_AT_name="pw" DW_AT_decl_file="1" DW_AT_decl_line="1485" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -64)"/>
+            <DW_TAG_lexical_block offset="8501" DW_AT_low_pc="7364" DW_AT_high_pc="262">
+              <DW_TAG_variable offset="8518" DW_AT_name="digits" DW_AT_decl_file="1" DW_AT_decl_line="1489" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -60)"/>
+            </DW_TAG_lexical_block>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="8536" DW_AT_low_pc="7655" DW_AT_high_pc="174">
+          <DW_TAG_variable offset="8553" DW_AT_name="digits" DW_AT_decl_file="1" DW_AT_decl_line="1511" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -56)"/>
+          <DW_TAG_variable offset="8568" DW_AT_name="row_width" DW_AT_decl_file="1" DW_AT_decl_line="1512" DW_AT_type="8621" DW_AT_location="(DW_OP_fbreg: -50)"/>
+          <DW_TAG_variable offset="8583" DW_AT_name="row_bytes" DW_AT_decl_file="1" DW_AT_decl_line="1512" DW_AT_type="8637" DW_AT_location="(DW_OP_fbreg: -46)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_array_type offset="8600" DW_AT_type="161" DW_AT_sibling="8616">
+        <DW_TAG_subrange_type offset="8609" DW_AT_type="56" DW_AT_upper_bound="15"/>
+      </DW_TAG_array_type>
+      <DW_TAG_const_type offset="8616" DW_AT_type="8600"/>
+      <DW_TAG_array_type offset="8621" DW_AT_type="1979" DW_AT_sibling="8637">
+        <DW_TAG_subrange_type offset="8630" DW_AT_type="56" DW_AT_upper_bound="1"/>
+      </DW_TAG_array_type>
+      <DW_TAG_array_type offset="8637" DW_AT_type="1979" DW_AT_sibling="8653">
+        <DW_TAG_subrange_type offset="8646" DW_AT_type="56" DW_AT_upper_bound="2"/>
+      </DW_TAG_array_type>
+      <DW_TAG_subprogram offset="8653" DW_AT_name="crc_read_many" DW_AT_decl_file="1" DW_AT_decl_line="1386" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="6642" DW_AT_high_pc="110" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="8783">
+        <DW_TAG_formal_parameter offset="8687" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1386" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="8702" DW_AT_name="length" DW_AT_decl_file="1" DW_AT_decl_line="1386" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -44)"/>
+        <DW_TAG_lexical_block offset="8717" DW_AT_low_pc="6663" DW_AT_high_pc="82">
+          <DW_TAG_variable offset="8734" DW_AT_name="crc" DW_AT_decl_file="1" DW_AT_decl_line="1393" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -24)"/>
+          <DW_TAG_lexical_block offset="8749" DW_AT_low_pc="6676" DW_AT_high_pc="46">
+            <DW_TAG_variable offset="8766" DW_AT_name="ch" DW_AT_decl_file="1" DW_AT_decl_line="1397" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -20)"/>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="8783" DW_AT_name="read_4" DW_AT_decl_file="1" DW_AT_decl_line="1362" DW_AT_prototyped="True" DW_AT_type="75" DW_AT_low_pc="6546" DW_AT_high_pc="96" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="8907">
+        <DW_TAG_formal_parameter offset="8817" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1362" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="8832" DW_AT_name="pu" DW_AT_decl_file="1" DW_AT_decl_line="1362" DW_AT_type="1365" DW_AT_location="(DW_OP_fbreg: -48)"/>
+        <DW_TAG_variable offset="8846" DW_AT_name="i" DW_AT_decl_file="1" DW_AT_decl_line="1367" DW_AT_type="75" DW_AT_location="(DW_OP_fbreg: -28)"/>
+        <DW_TAG_variable offset="8859" DW_AT_name="val" DW_AT_decl_file="1" DW_AT_decl_line="1368" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_lexical_block offset="8874" DW_AT_low_pc="6576" DW_AT_high_pc="42">
+          <DW_TAG_variable offset="8891" DW_AT_name="ch" DW_AT_decl_file="1" DW_AT_decl_line="1372" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -20)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="8907" DW_AT_name="write_byte" DW_AT_decl_file="1" DW_AT_decl_line="1341" DW_AT_prototyped="True" DW_AT_low_pc="6409" DW_AT_high_pc="137" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="8966">
+        <DW_TAG_formal_parameter offset="8937" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1341" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="8952" DW_AT_name="b" DW_AT_decl_file="1" DW_AT_decl_line="1341" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -28)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="8966" DW_AT_name="skip_12" DW_AT_decl_file="1" DW_AT_decl_line="1325" DW_AT_prototyped="True" DW_AT_low_pc="6315" DW_AT_high_pc="94" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="9012">
+        <DW_TAG_formal_parameter offset="8996" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1325" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -24)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="9012" DW_AT_name="reread_4" DW_AT_decl_file="1" DW_AT_decl_line="1312" DW_AT_prototyped="True" DW_AT_type="1323" DW_AT_low_pc="6238" DW_AT_high_pc="77" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="9090">
+        <DW_TAG_formal_parameter offset="9046" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1312" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_variable offset="9061" DW_AT_name="result" DW_AT_decl_file="1" DW_AT_decl_line="1315" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="9076" DW_AT_name="i" DW_AT_decl_file="1" DW_AT_decl_line="1316" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -36)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="9090" DW_AT_name="reread_byte" DW_AT_decl_file="1" DW_AT_decl_line="1295" DW_AT_prototyped="True" DW_AT_type="1282" DW_AT_low_pc="6138" DW_AT_high_pc="100" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="9154">
+        <DW_TAG_formal_parameter offset="9124" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1295" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="9139" DW_AT_name="ch" DW_AT_decl_file="1" DW_AT_decl_line="1300" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -20)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="9154" DW_AT_name="read_byte" DW_AT_decl_file="1" DW_AT_decl_line="1244" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="5856" DW_AT_high_pc="282" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="9218">
+        <DW_TAG_formal_parameter offset="9188" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1244" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="9203" DW_AT_name="ch" DW_AT_decl_file="1" DW_AT_decl_line="1246" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -20)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="9218" DW_AT_name="getpos" DW_AT_decl_file="1" DW_AT_decl_line="1229" DW_AT_prototyped="True" DW_AT_low_pc="5815" DW_AT_high_pc="41" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="9264">
+        <DW_TAG_formal_parameter offset="9248" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1229" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -24)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="9264" DW_AT_name="file_setpos" DW_AT_decl_file="1" DW_AT_decl_line="1219" DW_AT_prototyped="True" DW_AT_low_pc="5729" DW_AT_high_pc="86" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="9325">
+        <DW_TAG_formal_parameter offset="9294" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1219" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="9309" DW_AT_name="pos" DW_AT_decl_file="1" DW_AT_decl_line="1219" DW_AT_type="9325" DW_AT_location="(DW_OP_fbreg: -32)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_pointer_type offset="9325" DW_AT_byte_size="8" DW_AT_type="920"/>
+      <DW_TAG_subprogram offset="9331" DW_AT_name="file_getpos" DW_AT_decl_file="1" DW_AT_decl_line="1208" DW_AT_prototyped="True" DW_AT_low_pc="5643" DW_AT_high_pc="86" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="9392">
+        <DW_TAG_formal_parameter offset="9361" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1208" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="9376" DW_AT_name="pos" DW_AT_decl_file="1" DW_AT_decl_line="1208" DW_AT_type="9392" DW_AT_location="(DW_OP_fbreg: -32)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_pointer_type offset="9392" DW_AT_byte_size="8" DW_AT_type="909"/>
+      <DW_TAG_subprogram offset="9398" DW_AT_name="type_message" DW_AT_decl_file="1" DW_AT_decl_line="1190" DW_AT_prototyped="True" DW_AT_low_pc="5486" DW_AT_high_pc="157" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="9474">
+        <DW_TAG_formal_parameter offset="9428" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1190" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="9443" DW_AT_name="type" DW_AT_decl_file="1" DW_AT_decl_line="1190" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -28)"/>
+        <DW_TAG_formal_parameter offset="9458" DW_AT_name="what" DW_AT_decl_file="1" DW_AT_decl_line="1190" DW_AT_type="898" DW_AT_location="(DW_OP_fbreg: -40)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="9474" DW_AT_name="stop_invalid" DW_AT_decl_file="1" DW_AT_decl_line="1184" DW_AT_prototyped="True" DW_AT_noreturn="True" DW_AT_low_pc="5449" DW_AT_high_pc="37" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="9535">
+        <DW_TAG_formal_parameter offset="9504" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1184" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="9519" DW_AT_name="what" DW_AT_decl_file="1" DW_AT_decl_line="1184" DW_AT_type="898" DW_AT_location="(DW_OP_fbreg: -32)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="9535" DW_AT_name="stop" DW_AT_decl_file="1" DW_AT_decl_line="1129" DW_AT_prototyped="True" DW_AT_noreturn="True" DW_AT_low_pc="5002" DW_AT_high_pc="447" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="9645">
+        <DW_TAG_formal_parameter offset="9565" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1129" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_formal_parameter offset="9580" DW_AT_name="code" DW_AT_decl_file="1" DW_AT_decl_line="1129" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -60)"/>
+        <DW_TAG_formal_parameter offset="9595" DW_AT_name="what" DW_AT_decl_file="1" DW_AT_decl_line="1129" DW_AT_type="898" DW_AT_location="(DW_OP_fbreg: -72)"/>
+        <DW_TAG_lexical_block offset="9611" DW_AT_low_pc="5067" DW_AT_high_pc="342">
+          <DW_TAG_variable offset="9628" DW_AT_name="type" DW_AT_decl_file="1" DW_AT_decl_line="1151" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -36)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="9645" DW_AT_name="type_sep" DW_AT_decl_file="1" DW_AT_decl_line="1120" DW_AT_prototyped="True" DW_AT_low_pc="4953" DW_AT_high_pc="49" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="9691">
+        <DW_TAG_formal_parameter offset="9675" DW_AT_name="out" DW_AT_decl_file="1" DW_AT_decl_line="1120" DW_AT_type="1419" DW_AT_location="(DW_OP_fbreg: -24)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="9691" DW_AT_name="type_name" DW_AT_decl_file="1" DW_AT_decl_line="1111" DW_AT_prototyped="True" DW_AT_low_pc="4818" DW_AT_high_pc="135" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="9752">
+        <DW_TAG_formal_parameter offset="9721" DW_AT_name="type" DW_AT_decl_file="1" DW_AT_decl_line="1111" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -20)"/>
+        <DW_TAG_formal_parameter offset="9736" DW_AT_name="out" DW_AT_decl_file="1" DW_AT_decl_line="1111" DW_AT_type="1419" DW_AT_location="(DW_OP_fbreg: -32)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="9752" DW_AT_name="type_char" DW_AT_decl_file="1" DW_AT_decl_line="1095" DW_AT_prototyped="True" DW_AT_type="154" DW_AT_low_pc="4759" DW_AT_high_pc="59" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_call_sites="True" DW_AT_sibling="9800">
+        <DW_TAG_formal_parameter offset="9786" DW_AT_name="v" DW_AT_decl_file="1" DW_AT_decl_line="1095" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -20)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="9800" DW_AT_name="log_error" DW_AT_decl_file="1" DW_AT_decl_line="1087" DW_AT_prototyped="True" DW_AT_low_pc="4699" DW_AT_high_pc="60" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="9876">
+        <DW_TAG_formal_parameter offset="9830" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1087" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="9845" DW_AT_name="code" DW_AT_decl_file="1" DW_AT_decl_line="1087" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -28)"/>
+        <DW_TAG_formal_parameter offset="9860" DW_AT_name="what" DW_AT_decl_file="1" DW_AT_decl_line="1087" DW_AT_type="898" DW_AT_location="(DW_OP_fbreg: -40)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="9876" DW_AT_name="file_init" DW_AT_decl_file="1" DW_AT_decl_line="1028" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="4228" DW_AT_high_pc="471" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="10020">
+        <DW_TAG_formal_parameter offset="9910" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1028" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="9925" DW_AT_name="global" DW_AT_decl_file="1" DW_AT_decl_line="1028" DW_AT_type="2700" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        <DW_TAG_formal_parameter offset="9940" DW_AT_name="file_name" DW_AT_decl_file="1" DW_AT_decl_line="1028" DW_AT_type="898" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="9955" DW_AT_name="out_name" DW_AT_decl_file="1" DW_AT_decl_line="1029" DW_AT_type="898" DW_AT_location="(DW_OP_fbreg: -48)"/>
+        <DW_TAG_formal_parameter offset="9970" DW_AT_name="alloc_ptr" DW_AT_decl_file="1" DW_AT_decl_line="1029" DW_AT_type="146" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_formal_parameter offset="9985" DW_AT_name="alloc" DW_AT_decl_file="1" DW_AT_decl_line="1029" DW_AT_type="3072" DW_AT_location="(DW_OP_fbreg: -64)"/>
+        <DW_TAG_variable offset="10000" DW_AT_name="__PRETTY_FUNCTION__" DW_AT_type="7580" DW_AT_artificial="True" DW_AT_location="(DW_OP_addr: c20)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="10020" DW_AT_name="file_end" DW_AT_decl_file="1" DW_AT_decl_line="988" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="3943" DW_AT_high_pc="285" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="10084">
+        <DW_TAG_formal_parameter offset="10054" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="988" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_variable offset="10069" DW_AT_name="rc" DW_AT_decl_file="1" DW_AT_decl_line="990" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -36)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="10084" DW_AT_name="emit_error" DW_AT_decl_file="1" DW_AT_decl_line="948" DW_AT_prototyped="True" DW_AT_low_pc="3598" DW_AT_high_pc="345" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="10190">
+        <DW_TAG_formal_parameter offset="10114" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="948" DW_AT_type="3061" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="10129" DW_AT_name="code" DW_AT_decl_file="1" DW_AT_decl_line="948" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -44)"/>
+        <DW_TAG_formal_parameter offset="10144" DW_AT_name="what" DW_AT_decl_file="1" DW_AT_decl_line="948" DW_AT_type="898" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_variable offset="10159" DW_AT_name="reason" DW_AT_decl_file="1" DW_AT_decl_line="953" DW_AT_type="898" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_variable offset="10174" DW_AT_name="err" DW_AT_decl_file="1" DW_AT_decl_line="954" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -28)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="10190" DW_AT_name="strcode" DW_AT_decl_file="1" DW_AT_decl_line="932" DW_AT_prototyped="True" DW_AT_type="898" DW_AT_low_pc="3477" DW_AT_high_pc="121" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_call_sites="True" DW_AT_sibling="10240">
+        <DW_TAG_formal_parameter offset="10224" DW_AT_name="code" DW_AT_decl_file="1" DW_AT_decl_line="932" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -20)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="10240" DW_AT_name="emit_string" DW_AT_decl_file="1" DW_AT_decl_line="915" DW_AT_prototyped="True" DW_AT_low_pc="3275" DW_AT_high_pc="202" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="10301">
+        <DW_TAG_formal_parameter offset="10270" DW_AT_name="str" DW_AT_decl_file="1" DW_AT_decl_line="915" DW_AT_type="898" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="10285" DW_AT_name="out" DW_AT_decl_file="1" DW_AT_decl_line="915" DW_AT_type="1419" DW_AT_location="(DW_OP_fbreg: -32)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="10301" DW_AT_name="skip_chunk_type" DW_AT_decl_file="1" DW_AT_decl_line="756" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="2727" DW_AT_high_pc="548" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_call_sites="True" DW_AT_sibling="10366">
+        <DW_TAG_formal_parameter offset="10335" DW_AT_name="global" DW_AT_decl_file="1" DW_AT_decl_line="756" DW_AT_type="10366" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="10350" DW_AT_name="type" DW_AT_decl_file="1" DW_AT_decl_line="756" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -28)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_pointer_type offset="10366" DW_AT_byte_size="8" DW_AT_type="2292"/>
+      <DW_TAG_subprogram offset="10372" DW_AT_name="global_init" DW_AT_decl_file="1" DW_AT_decl_line="737" DW_AT_prototyped="True" DW_AT_low_pc="2583" DW_AT_high_pc="144" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="10418">
+        <DW_TAG_formal_parameter offset="10402" DW_AT_name="global" DW_AT_decl_file="1" DW_AT_decl_line="737" DW_AT_type="2700" DW_AT_location="(DW_OP_fbreg: -24)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="10418" DW_AT_name="global_end" DW_AT_decl_file="1" DW_AT_decl_line="725" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="2523" DW_AT_high_pc="60" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="10482">
+        <DW_TAG_formal_parameter offset="10452" DW_AT_name="global" DW_AT_decl_file="1" DW_AT_decl_line="725" DW_AT_type="2700" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="10467" DW_AT_name="rc" DW_AT_decl_file="1" DW_AT_decl_line="728" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -20)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="10482" DW_AT_name="IDAT_list_extend" DW_AT_decl_file="1" DW_AT_decl_line="658" DW_AT_prototyped="True" DW_AT_type="2121" DW_AT_low_pc="2363" DW_AT_high_pc="160" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="10580">
+        <DW_TAG_formal_parameter offset="10516" DW_AT_name="tail" DW_AT_decl_file="1" DW_AT_decl_line="658" DW_AT_type="2121" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="10531" DW_AT_name="next" DW_AT_decl_file="1" DW_AT_decl_line="661" DW_AT_type="2121" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_lexical_block offset="10546" DW_AT_low_pc="2393" DW_AT_high_pc="124">
+          <DW_TAG_variable offset="10563" DW_AT_name="length" DW_AT_decl_file="1" DW_AT_decl_line="668" DW_AT_type="75" DW_AT_location="(DW_OP_fbreg: -28)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="10580" DW_AT_name="IDAT_list_end" DW_AT_decl_file="1" DW_AT_decl_line="641" DW_AT_prototyped="True" DW_AT_low_pc="2245" DW_AT_high_pc="118" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="10674">
+        <DW_TAG_formal_parameter offset="10610" DW_AT_name="IDAT_list" DW_AT_decl_file="1" DW_AT_decl_line="641" DW_AT_type="2121" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="10625" DW_AT_name="list" DW_AT_decl_file="1" DW_AT_decl_line="643" DW_AT_type="2121" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        <DW_TAG_lexical_block offset="10640" DW_AT_low_pc="2287" DW_AT_high_pc="66">
+          <DW_TAG_variable offset="10657" DW_AT_name="next" DW_AT_decl_file="1" DW_AT_decl_line="649" DW_AT_type="2121" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="10674" DW_AT_name="IDAT_list_size" DW_AT_decl_file="1" DW_AT_decl_line="630" DW_AT_prototyped="True" DW_AT_type="45" DW_AT_low_pc="2204" DW_AT_high_pc="41" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_call_sites="True" DW_AT_sibling="10739">
+        <DW_TAG_formal_parameter offset="10708" DW_AT_name="list" DW_AT_decl_file="1" DW_AT_decl_line="630" DW_AT_type="2121" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="10723" DW_AT_name="length" DW_AT_decl_file="1" DW_AT_decl_line="630" DW_AT_type="75" DW_AT_location="(DW_OP_fbreg: -28)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="10739" DW_AT_name="IDAT_list_init" DW_AT_decl_file="1" DW_AT_decl_line="621" DW_AT_prototyped="True" DW_AT_low_pc="2150" DW_AT_high_pc="54" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="10785">
+        <DW_TAG_formal_parameter offset="10769" DW_AT_name="list" DW_AT_decl_file="1" DW_AT_decl_line="621" DW_AT_type="2121" DW_AT_location="(DW_OP_fbreg: -24)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="10785" DW_AT_name="chunk_type_valid" DW_AT_decl_file="1" DW_AT_decl_line="574" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="2074" DW_AT_high_pc="76" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_call_sites="True" DW_AT_sibling="10846">
+        <DW_TAG_formal_parameter offset="10819" DW_AT_name="c" DW_AT_decl_file="1" DW_AT_decl_line="574" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -36)"/>
+        <DW_TAG_variable offset="10832" DW_AT_name="t" DW_AT_decl_file="1" DW_AT_decl_line="580" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -20)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="10846" DW_AT_name="crc_init_4" DW_AT_decl_file="1" DW_AT_decl_line="557" DW_AT_prototyped="True" DW_AT_type="1323" DW_AT_low_pc="1906" DW_AT_high_pc="168" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_call_sites="True" DW_AT_sibling="10911">
+        <DW_TAG_formal_parameter offset="10880" DW_AT_name="value" DW_AT_decl_file="1" DW_AT_decl_line="557" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -36)"/>
+        <DW_TAG_variable offset="10895" DW_AT_name="crc" DW_AT_decl_file="1" DW_AT_decl_line="566" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -20)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="10911" DW_AT_name="crc_one_byte" DW_AT_decl_file="1" DW_AT_decl_line="551" DW_AT_prototyped="True" DW_AT_type="1323" DW_AT_low_pc="1857" DW_AT_high_pc="49" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_call_sites="True" DW_AT_sibling="10974">
+        <DW_TAG_formal_parameter offset="10945" DW_AT_name="crc" DW_AT_decl_file="1" DW_AT_decl_line="551" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -20)"/>
+        <DW_TAG_formal_parameter offset="10960" DW_AT_name="b" DW_AT_decl_file="1" DW_AT_decl_line="551" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -24)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="10974" DW_AT_name="clear" DW_AT_decl_file="1" DW_AT_decl_line="474" DW_AT_prototyped="True" DW_AT_low_pc="1815" DW_AT_high_pc="42" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="11056">
+        <DW_TAG_formal_parameter offset="11004" DW_AT_name="pv" DW_AT_decl_file="1" DW_AT_decl_line="474" DW_AT_type="146" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="11018" DW_AT_name="size" DW_AT_decl_file="1" DW_AT_decl_line="474" DW_AT_type="45" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        <DW_TAG_variable offset="11033" DW_AT_name="clear_seed" DW_AT_decl_file="1" DW_AT_decl_line="476" DW_AT_type="11056" DW_AT_location="(DW_OP_addr: 400)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_array_type offset="11056" DW_AT_type="1323" DW_AT_sibling="11072">
+        <DW_TAG_subrange_type offset="11065" DW_AT_type="56" DW_AT_upper_bound="1"/>
+      </DW_TAG_array_type>
+      <DW_TAG_subprogram offset="11072" DW_AT_name="make_random_bytes" DW_AT_decl_file="1" DW_AT_decl_line="448" DW_AT_prototyped="True" DW_AT_low_pc="1648" DW_AT_high_pc="167" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_call_sites="True" DW_AT_sibling="11235">
+        <DW_TAG_formal_parameter offset="11102" DW_AT_name="seed" DW_AT_decl_file="1" DW_AT_decl_line="448" DW_AT_type="1365" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_formal_parameter offset="11117" DW_AT_name="pv" DW_AT_decl_file="1" DW_AT_decl_line="448" DW_AT_type="146" DW_AT_location="(DW_OP_fbreg: -64)"/>
+        <DW_TAG_formal_parameter offset="11131" DW_AT_name="size" DW_AT_decl_file="1" DW_AT_decl_line="448" DW_AT_type="45" DW_AT_location="(DW_OP_fbreg: -72)"/>
+        <DW_TAG_variable offset="11147" DW_AT_name="u0" DW_AT_decl_file="1" DW_AT_decl_line="450" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -44)"/>
+        <DW_TAG_variable offset="11161" DW_AT_name="u1" DW_AT_decl_file="1" DW_AT_decl_line="450" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="11175" DW_AT_name="bytes" DW_AT_decl_file="1" DW_AT_decl_line="451" DW_AT_type="1347" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        <DW_TAG_variable offset="11190" DW_AT_name="i" DW_AT_decl_file="1" DW_AT_decl_line="456" DW_AT_type="45" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_lexical_block offset="11203" DW_AT_low_pc="1701" DW_AT_high_pc="74">
+          <DW_TAG_variable offset="11220" DW_AT_name="u" DW_AT_decl_file="1" DW_AT_decl_line="460" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -36)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="11235" DW_AT_name="uarb_print" DW_AT_decl_file="1" DW_AT_decl_line="414" DW_AT_prototyped="True" DW_AT_low_pc="1501" DW_AT_high_pc="147" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="11342">
+        <DW_TAG_formal_parameter offset="11265" DW_AT_name="num" DW_AT_decl_file="1" DW_AT_decl_line="414" DW_AT_type="1990" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="11280" DW_AT_name="digits" DW_AT_decl_file="1" DW_AT_decl_line="414" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -44)"/>
+        <DW_TAG_formal_parameter offset="11295" DW_AT_name="out" DW_AT_decl_file="1" DW_AT_decl_line="414" DW_AT_type="1419" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_lexical_block offset="11310" DW_AT_low_pc="1557" DW_AT_high_pc="88">
+          <DW_TAG_variable offset="11327" DW_AT_name="n" DW_AT_decl_file="1" DW_AT_decl_line="429" DW_AT_type="56" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="11342" DW_AT_name="uarb_printx" DW_AT_decl_file="1" DW_AT_decl_line="397" DW_AT_prototyped="True" DW_AT_low_pc="1295" DW_AT_high_pc="206" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="11418">
+        <DW_TAG_formal_parameter offset="11372" DW_AT_name="num" DW_AT_decl_file="1" DW_AT_decl_line="397" DW_AT_type="1990" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="11387" DW_AT_name="digits" DW_AT_decl_file="1" DW_AT_decl_line="397" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -28)"/>
+        <DW_TAG_formal_parameter offset="11402" DW_AT_name="out" DW_AT_decl_file="1" DW_AT_decl_line="397" DW_AT_type="1419" DW_AT_location="(DW_OP_fbreg: -40)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="11418" DW_AT_name="uarb_cmp" DW_AT_decl_file="1" DW_AT_decl_line="362" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="1124" DW_AT_high_pc="171" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_call_sites="True" DW_AT_sibling="11509">
+        <DW_TAG_formal_parameter offset="11452" DW_AT_name="a" DW_AT_decl_file="1" DW_AT_decl_line="362" DW_AT_type="1990" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="11465" DW_AT_name="adigits" DW_AT_decl_file="1" DW_AT_decl_line="362" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -28)"/>
+        <DW_TAG_formal_parameter offset="11480" DW_AT_name="b" DW_AT_decl_file="1" DW_AT_decl_line="362" DW_AT_type="1990" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="11493" DW_AT_name="bdigits" DW_AT_decl_file="1" DW_AT_decl_line="362" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -32)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="11509" DW_AT_name="uarb_shift" DW_AT_decl_file="1" DW_AT_decl_line="334" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="892" DW_AT_high_pc="232" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="11669">
+        <DW_TAG_formal_parameter offset="11543" DW_AT_name="inout" DW_AT_decl_file="1" DW_AT_decl_line="334" DW_AT_type="1990" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="11558" DW_AT_name="ndigits" DW_AT_decl_file="1" DW_AT_decl_line="334" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -44)"/>
+        <DW_TAG_formal_parameter offset="11573" DW_AT_name="right_shift" DW_AT_decl_file="1" DW_AT_decl_line="334" DW_AT_type="75" DW_AT_location="(DW_OP_fbreg: -48)"/>
+        <DW_TAG_variable offset="11588" DW_AT_name="i" DW_AT_decl_file="1" DW_AT_decl_line="339" DW_AT_type="70" DW_AT_location="(DW_OP_fbreg: -20)"/>
+        <DW_TAG_variable offset="11601" DW_AT_name="carry" DW_AT_decl_file="1" DW_AT_decl_line="340" DW_AT_type="1294" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_variable offset="11616" DW_AT_name="__PRETTY_FUNCTION__" DW_AT_type="5797" DW_AT_artificial="True" DW_AT_location="(DW_OP_addr: c10)"/>
+        <DW_TAG_lexical_block offset="11635" DW_AT_low_pc="970" DW_AT_high_pc="132">
+          <DW_TAG_variable offset="11652" DW_AT_name="temp" DW_AT_decl_file="1" DW_AT_decl_line="346" DW_AT_type="1294" DW_AT_location="(DW_OP_fbreg: -22)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="11669" DW_AT_name="uarb_mult32" DW_AT_decl_file="1" DW_AT_decl_line="311" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="718" DW_AT_high_pc="174" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="11798">
+        <DW_TAG_formal_parameter offset="11703" DW_AT_name="acc" DW_AT_decl_file="1" DW_AT_decl_line="311" DW_AT_type="1990" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="11718" DW_AT_name="a_digits" DW_AT_decl_file="1" DW_AT_decl_line="311" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -28)"/>
+        <DW_TAG_formal_parameter offset="11733" DW_AT_name="num" DW_AT_decl_file="1" DW_AT_decl_line="311" DW_AT_type="1990" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="11748" DW_AT_name="n_digits" DW_AT_decl_file="1" DW_AT_decl_line="311" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        <DW_TAG_formal_parameter offset="11763" DW_AT_name="val" DW_AT_decl_file="1" DW_AT_decl_line="311" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -44)"/>
+        <DW_TAG_variable offset="11778" DW_AT_name="__PRETTY_FUNCTION__" DW_AT_type="7089" DW_AT_artificial="True" DW_AT_location="(DW_OP_addr: c00)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="11798" DW_AT_name="uarb_mult_digit" DW_AT_decl_file="1" DW_AT_decl_line="266" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="518" DW_AT_high_pc="200" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_call_sites="True" DW_AT_sibling="11956">
+        <DW_TAG_formal_parameter offset="11832" DW_AT_name="acc" DW_AT_decl_file="1" DW_AT_decl_line="266" DW_AT_type="1990" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="11847" DW_AT_name="a_digits" DW_AT_decl_file="1" DW_AT_decl_line="266" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -44)"/>
+        <DW_TAG_formal_parameter offset="11862" DW_AT_name="num" DW_AT_decl_file="1" DW_AT_decl_line="266" DW_AT_type="1990" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_formal_parameter offset="11877" DW_AT_name="n_digits" DW_AT_decl_file="1" DW_AT_decl_line="266" DW_AT_type="70" DW_AT_location="(DW_OP_fbreg: -48)"/>
+        <DW_TAG_formal_parameter offset="11892" DW_AT_name="val" DW_AT_decl_file="1" DW_AT_decl_line="267" DW_AT_type="1294" DW_AT_location="(DW_OP_fbreg: -60)"/>
+        <DW_TAG_lexical_block offset="11907" DW_AT_low_pc="565" DW_AT_high_pc="148">
+          <DW_TAG_variable offset="11924" DW_AT_name="carry" DW_AT_decl_file="1" DW_AT_decl_line="285" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -24)"/>
+          <DW_TAG_variable offset="11939" DW_AT_name="out_digits" DW_AT_decl_file="1" DW_AT_decl_line="286" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -20)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="11956" DW_AT_name="uarb_add32" DW_AT_decl_file="1" DW_AT_decl_line="253" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="411" DW_AT_high_pc="107" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="12032">
+        <DW_TAG_formal_parameter offset="11989" DW_AT_name="num" DW_AT_decl_file="1" DW_AT_decl_line="253" DW_AT_type="1990" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="12003" DW_AT_name="in_digits" DW_AT_decl_file="1" DW_AT_decl_line="253" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -28)"/>
+        <DW_TAG_formal_parameter offset="12017" DW_AT_name="add" DW_AT_decl_file="1" DW_AT_decl_line="253" DW_AT_type="1323" DW_AT_location="(DW_OP_fbreg: -32)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="12032" DW_AT_name="uarb_inc" DW_AT_decl_file="1" DW_AT_decl_line="213" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="169" DW_AT_high_pc="242" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_call_sites="True" DW_AT_sibling="12122">
+        <DW_TAG_formal_parameter offset="12065" DW_AT_name="num" DW_AT_decl_file="1" DW_AT_decl_line="213" DW_AT_type="1990" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="12079" DW_AT_name="in_digits" DW_AT_decl_file="1" DW_AT_decl_line="213" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -44)"/>
+        <DW_TAG_formal_parameter offset="12093" DW_AT_name="add" DW_AT_decl_file="1" DW_AT_decl_line="213" DW_AT_type="1311" DW_AT_location="(DW_OP_fbreg: -48)"/>
+        <DW_TAG_variable offset="12107" DW_AT_name="out_digits" DW_AT_decl_file="1" DW_AT_decl_line="221" DW_AT_type="70" DW_AT_location="(DW_OP_fbreg: -20)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="12122" DW_AT_name="uarb_copy" DW_AT_decl_file="1" DW_AT_decl_line="200" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="67" DW_AT_high_pc="102" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_call_sites="True" DW_AT_sibling="12223">
+        <DW_TAG_formal_parameter offset="12155" DW_AT_name="to" DW_AT_decl_file="1" DW_AT_decl_line="200" DW_AT_type="1990" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="12168" DW_AT_name="from" DW_AT_decl_file="1" DW_AT_decl_line="200" DW_AT_type="1990" DW_AT_location="(DW_OP_fbreg: -48)"/>
+        <DW_TAG_formal_parameter offset="12182" DW_AT_name="idigits" DW_AT_decl_file="1" DW_AT_decl_line="200" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -52)"/>
+        <DW_TAG_variable offset="12196" DW_AT_name="d" DW_AT_decl_file="1" DW_AT_decl_line="203" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_variable offset="12208" DW_AT_name="odigits" DW_AT_decl_file="1" DW_AT_decl_line="203" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -20)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="12223" DW_AT_name="uarb_set" DW_AT_decl_file="1" DW_AT_decl_line="183" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="0" DW_AT_high_pc="67" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_call_sites="True">
+        <DW_TAG_formal_parameter offset="12252" DW_AT_name="result" DW_AT_decl_file="1" DW_AT_decl_line="183" DW_AT_type="1990" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="12266" DW_AT_name="val" DW_AT_decl_file="1" DW_AT_decl_line="183" DW_AT_type="1335" DW_AT_location="(DW_OP_fbreg: -48)"/>
+        <DW_TAG_variable offset="12280" DW_AT_name="ndigits" DW_AT_decl_file="1" DW_AT_decl_line="188" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -20)"/>
+      </DW_TAG_subprogram>
+    </DW_TAG_compile_unit>
+  </file>
+</root>
+

@@ -1,0 +1,284 @@
+# FILENAME	FUNCNODEID	FUNCNAME	NARGS	ARGTYPE*	RETTYPE
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2002786977876	__builtin_va_start	1	struct __va_list_tag *	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2003218651956	__builtin_va_end	1	struct __va_list_tag *	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000183630792	png_access_version_number	0		png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2004153020867	png_set_sig_bytes	2	png_structrp	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001796402340	png_sig_cmp	3	png_const_bytep	size_t	size_t	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000988608304	png_create_read_struct	4	png_const_charp	png_voidp	png_error_ptr	png_error_ptr	png_structp
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001269756119	png_create_write_struct	4	png_const_charp	png_voidp	png_error_ptr	png_error_ptr	png_structp
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003270960635	png_get_compression_buffer_size	1	png_const_structrp	size_t
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001384726598	png_set_compression_buffer_size	2	png_structrp	size_t	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002276011418	png_set_longjmp_fn	3	png_structrp	png_longjmp_ptr	size_t	jmp_buf *
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000587535229	png_longjmp	2	png_const_structrp	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002852958542	png_reset_zstream	1	png_structrp	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003202705564	png_create_read_struct_2	7	png_const_charp	png_voidp	png_error_ptr	png_error_ptr	png_voidp	png_malloc_ptr	png_free_ptr	png_structp
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002939807981	png_create_write_struct_2	7	png_const_charp	png_voidp	png_error_ptr	png_error_ptr	png_voidp	png_malloc_ptr	png_free_ptr	png_structp
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003430046573	png_write_sig	1	png_structrp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000554023076	png_write_chunk	4	png_structrp	png_const_bytep	png_const_bytep	size_t	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000633769569	png_write_chunk_start	3	png_structrp	png_const_bytep	png_uint_32	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003840487857	png_write_chunk_data	3	png_structrp	png_const_bytep	size_t	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001369005714	png_write_chunk_end	1	png_structrp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002296831601	png_create_info_struct	1	png_const_structrp	png_infop
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001449153606	png_info_init_3	2	png_infopp	size_t	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001480305572	png_write_info_before_PLTE	2	png_structrp	png_const_inforp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000312279734	png_write_info	2	png_structrp	png_const_inforp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003688038799	png_read_info	2	png_structrp	png_inforp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000891218283	png_convert_to_rfc1123	2	png_structrp	png_const_timep	png_const_charp
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001525128680	png_convert_to_rfc1123_buffer	2	char [29]	png_const_timep	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002688547460	png_convert_from_struct_tm	2	png_timep	const struct tm *	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002869048800	png_convert_from_time_t	2	png_timep	time_t	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001913267960	png_set_expand	1	png_structrp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002466164762	png_set_expand_gray_1_2_4_to_8	1	png_structrp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000219386183	png_set_palette_to_rgb	1	png_structrp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000334594275	png_set_tRNS_to_alpha	1	png_structrp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001733439501	png_set_expand_16	1	png_structrp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002937926531	png_set_bgr	1	png_structrp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000819398806	png_set_gray_to_rgb	1	png_structrp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003048762203	png_set_rgb_to_gray	4	png_structrp	int	double	double	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002907092787	png_set_rgb_to_gray_fixed	4	png_structrp	int	png_fixed_point	png_fixed_point	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003016018404	png_get_rgb_to_gray_status	1	png_const_structrp	png_byte
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000987731880	png_build_grayscale_palette	2	int	png_colorp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001656362757	png_set_alpha_mode	3	png_structrp	int	double	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002381438040	png_set_alpha_mode_fixed	3	png_structrp	int	png_fixed_point	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002418581724	png_set_strip_alpha	1	png_structrp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003613857684	png_set_swap_alpha	1	png_structrp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002085804477	png_set_invert_alpha	1	png_structrp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2004006600613	png_set_filler	3	png_structrp	png_uint_32	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000159421592	png_set_add_alpha	3	png_structrp	png_uint_32	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000429462334	png_set_swap	1	png_structrp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002849160764	png_set_packing	1	png_structrp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003847861382	png_set_packswap	1	png_structrp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002436974678	png_set_shift	2	png_structrp	png_const_color_8p	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002977773496	png_set_interlace_handling	1	png_structrp	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001518714671	png_set_invert_mono	1	png_structrp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000540996623	png_set_background	5	png_structrp	png_const_color_16p	int	int	double	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000246466324	png_set_background_fixed	5	png_structrp	png_const_color_16p	int	int	png_fixed_point	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000619195268	png_set_scale_16	1	png_structrp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002518051166	png_set_strip_16	1	png_structrp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003783484916	png_set_quantize	6	png_structrp	png_colorp	int	int	png_const_uint_16p	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003239695443	png_set_gamma	3	png_structrp	double	double	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003584485845	png_set_gamma_fixed	3	png_structrp	png_fixed_point	png_fixed_point	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001398466344	png_set_flush	2	png_structrp	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000655509553	png_write_flush	1	png_structrp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000230096753	png_start_read_image	1	png_structrp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000955923712	png_read_update_info	2	png_structrp	png_inforp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000070332781	png_read_rows	4	png_structrp	png_bytepp	png_bytepp	png_uint_32	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002844025702	png_read_row	3	png_structrp	png_bytep	png_bytep	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001931361636	png_read_image	2	png_structrp	png_bytepp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000036399497	png_write_row	2	png_structrp	png_const_bytep	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001721904093	png_write_rows	3	png_structrp	png_bytepp	png_uint_32	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001773806323	png_write_image	2	png_structrp	png_bytepp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001189688849	png_write_end	2	png_structrp	png_inforp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003950585635	png_read_end	2	png_structrp	png_inforp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2004110876684	png_destroy_info_struct	2	png_const_structrp	png_infopp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000815041752	png_destroy_read_struct	3	png_structpp	png_infopp	png_infopp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000225806606	png_destroy_write_struct	2	png_structpp	png_infopp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003543044666	png_set_crc_action	3	png_structrp	int	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003288789840	png_set_filter	3	png_structrp	int	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001718172478	png_set_filter_heuristics	5	png_structrp	int	int	png_const_doublep	png_const_doublep	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2004244290752	png_set_filter_heuristics_fixed	5	png_structrp	int	int	png_const_fixed_point_p	png_const_fixed_point_p	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002400295758	png_set_compression_level	2	png_structrp	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002187120713	png_set_compression_mem_level	2	png_structrp	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2004207452036	png_set_compression_strategy	2	png_structrp	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003006342142	png_set_compression_window_bits	2	png_structrp	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001532766341	png_set_compression_method	2	png_structrp	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001457639208	png_set_text_compression_level	2	png_structrp	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000882354670	png_set_text_compression_mem_level	2	png_structrp	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003294359872	png_set_text_compression_strategy	2	png_structrp	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003333017128	png_set_text_compression_window_bits	2	png_structrp	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000122763057	png_set_text_compression_method	2	png_structrp	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001781412850	png_init_io	2	png_structrp	png_FILE_p	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001304229088	png_set_error_fn	4	png_structrp	png_voidp	png_error_ptr	png_error_ptr	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002552045027	png_get_error_ptr	1	png_const_structrp	png_voidp
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000168260156	png_set_write_fn	4	png_structrp	png_voidp	png_rw_ptr	png_flush_ptr	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001395198632	png_set_read_fn	3	png_structrp	png_voidp	png_rw_ptr	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002766601015	png_get_io_ptr	1	png_const_structrp	png_voidp
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001753487377	png_set_read_status_fn	2	png_structrp	png_read_status_ptr	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000153227682	png_set_write_status_fn	2	png_structrp	png_write_status_ptr	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001819124561	png_set_mem_fn	4	png_structrp	png_voidp	png_malloc_ptr	png_free_ptr	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001507299836	png_get_mem_ptr	1	png_const_structrp	png_voidp
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001348893351	png_set_read_user_transform_fn	2	png_structrp	png_user_transform_ptr	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003738013617	png_set_write_user_transform_fn	2	png_structrp	png_user_transform_ptr	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002277459243	png_set_user_transform_info	4	png_structrp	png_voidp	int	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003860669287	png_get_user_transform_ptr	1	png_const_structrp	png_voidp
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003840750697	png_get_current_row_number	1	png_const_structrp	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001045150794	png_get_current_pass_number	1	png_const_structrp	png_byte
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002201211869	png_set_read_user_chunk_fn	3	png_structrp	png_voidp	png_user_chunk_ptr	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002005946080	png_get_user_chunk_ptr	1	png_const_structrp	png_voidp
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000501437342	png_set_progressive_read_fn	5	png_structrp	png_voidp	png_progressive_info_ptr	png_progressive_row_ptr	png_progressive_end_ptr	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000816176199	png_get_progressive_ptr	1	png_const_structrp	png_voidp
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000097827226	png_process_data	4	png_structrp	png_inforp	png_bytep	size_t	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2004216296339	png_process_data_pause	2	png_structrp	int	size_t
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2004174467192	png_process_data_skip	1	png_structrp	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003858144452	png_progressive_combine_row	3	png_const_structrp	png_bytep	png_const_bytep	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000108088571	png_malloc	2	png_const_structrp	png_alloc_size_t	png_voidp
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002341027320	png_calloc	2	png_const_structrp	png_alloc_size_t	png_voidp
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001943200949	png_malloc_warn	2	png_const_structrp	png_alloc_size_t	png_voidp
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003568649298	png_free	2	png_const_structrp	png_voidp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001482349029	png_free_data	4	png_const_structrp	png_inforp	png_uint_32	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001413403506	png_data_freer	4	png_const_structrp	png_inforp	int	png_uint_32	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000566312669	png_malloc_default	2	png_const_structrp	png_alloc_size_t	png_voidp
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000999796821	png_free_default	2	png_const_structrp	png_voidp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003942160046	png_error	2	png_const_structrp	png_const_charp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000667025004	png_chunk_error	2	png_const_structrp	png_const_charp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001462297335	png_warning	2	png_const_structrp	png_const_charp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003764744588	png_chunk_warning	2	png_const_structrp	png_const_charp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001000723667	png_benign_error	2	png_const_structrp	png_const_charp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2004106079726	png_chunk_benign_error	2	png_const_structrp	png_const_charp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000706920723	png_set_benign_errors	2	png_structrp	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001265384014	png_get_valid	3	png_const_structrp	png_const_inforp	png_uint_32	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002891420453	png_get_rowbytes	2	png_const_structrp	png_const_inforp	size_t
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001804159446	png_get_rows	2	png_const_structrp	png_const_inforp	png_bytepp
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000806130356	png_set_rows	3	png_const_structrp	png_inforp	png_bytepp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001666695457	png_get_channels	2	png_const_structrp	png_const_inforp	png_byte
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002262120177	png_get_image_width	2	png_const_structrp	png_const_inforp	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001566343599	png_get_image_height	2	png_const_structrp	png_const_inforp	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003563432212	png_get_bit_depth	2	png_const_structrp	png_const_inforp	png_byte
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002511899544	png_get_color_type	2	png_const_structrp	png_const_inforp	png_byte
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002109174120	png_get_filter_type	2	png_const_structrp	png_const_inforp	png_byte
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002772711890	png_get_interlace_type	2	png_const_structrp	png_const_inforp	png_byte
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000309830166	png_get_compression_type	2	png_const_structrp	png_const_inforp	png_byte
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002056539372	png_get_pixels_per_meter	2	png_const_structrp	png_const_inforp	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2004140072654	png_get_x_pixels_per_meter	2	png_const_structrp	png_const_inforp	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003986245282	png_get_y_pixels_per_meter	2	png_const_structrp	png_const_inforp	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2004034823270	png_get_pixel_aspect_ratio	2	png_const_structrp	png_const_inforp	float
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2004052847350	png_get_pixel_aspect_ratio_fixed	2	png_const_structrp	png_const_inforp	png_fixed_point
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000965791505	png_get_x_offset_pixels	2	png_const_structrp	png_const_inforp	png_int_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001662595071	png_get_y_offset_pixels	2	png_const_structrp	png_const_inforp	png_int_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002936984343	png_get_x_offset_microns	2	png_const_structrp	png_const_inforp	png_int_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003600413600	png_get_y_offset_microns	2	png_const_structrp	png_const_inforp	png_int_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002779678098	png_get_signature	2	png_const_structrp	png_const_inforp	png_const_bytep
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002955610965	png_get_bKGD	3	png_const_structrp	png_inforp	png_color_16p *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000052065733	png_set_bKGD	3	png_const_structrp	png_inforp	png_const_color_16p	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003080461541	png_get_cHRM	10	png_const_structrp	png_const_inforp	double *	double *	double *	double *	double *	double *	double *	double *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003420010181	png_get_cHRM_XYZ	11	png_const_structrp	png_const_inforp	double *	double *	double *	double *	double *	double *	double *	double *	double *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003981616835	png_get_cHRM_fixed	10	png_const_structrp	png_const_inforp	png_fixed_point *	png_fixed_point *	png_fixed_point *	png_fixed_point *	png_fixed_point *	png_fixed_point *	png_fixed_point *	png_fixed_point *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003224006024	png_get_cHRM_XYZ_fixed	11	png_const_structrp	png_const_inforp	png_fixed_point *	png_fixed_point *	png_fixed_point *	png_fixed_point *	png_fixed_point *	png_fixed_point *	png_fixed_point *	png_fixed_point *	png_fixed_point *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001412347637	png_set_cHRM	10	png_const_structrp	png_inforp	double	double	double	double	double	double	double	double	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001201453073	png_set_cHRM_XYZ	11	png_const_structrp	png_inforp	double	double	double	double	double	double	double	double	double	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000984677349	png_set_cHRM_fixed	10	png_const_structrp	png_inforp	png_fixed_point	png_fixed_point	png_fixed_point	png_fixed_point	png_fixed_point	png_fixed_point	png_fixed_point	png_fixed_point	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000133178568	png_set_cHRM_XYZ_fixed	11	png_const_structrp	png_inforp	png_fixed_point	png_fixed_point	png_fixed_point	png_fixed_point	png_fixed_point	png_fixed_point	png_fixed_point	png_fixed_point	png_fixed_point	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003977523479	png_get_eXIf	3	png_const_structrp	png_inforp	png_bytep *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000368728078	png_set_eXIf	3	png_const_structrp	png_inforp	png_bytep	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002152932690	png_get_eXIf_1	4	png_const_structrp	png_const_inforp	png_uint_32 *	png_bytep *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001251974605	png_set_eXIf_1	4	png_const_structrp	png_inforp	png_uint_32	png_bytep	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002760569728	png_get_gAMA	3	png_const_structrp	png_const_inforp	double *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001695271944	png_get_gAMA_fixed	3	png_const_structrp	png_const_inforp	png_fixed_point *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001276265456	png_set_gAMA	3	png_const_structrp	png_inforp	double	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003137887758	png_set_gAMA_fixed	3	png_const_structrp	png_inforp	png_fixed_point	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000211748116	png_get_hIST	3	png_const_structrp	png_inforp	png_uint_16p *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001846136165	png_set_hIST	3	png_const_structrp	png_inforp	png_const_uint_16p	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002968935895	png_get_IHDR	9	png_const_structrp	png_const_inforp	png_uint_32 *	png_uint_32 *	int *	int *	int *	int *	int *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001183719746	png_set_IHDR	9	png_const_structrp	png_inforp	png_uint_32	png_uint_32	int	int	int	int	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003143653446	png_get_oFFs	5	png_const_structrp	png_const_inforp	png_int_32 *	png_int_32 *	int *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002586091484	png_set_oFFs	5	png_const_structrp	png_inforp	png_int_32	png_int_32	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2004163541482	png_get_pCAL	9	png_const_structrp	png_inforp	png_charp *	png_int_32 *	png_int_32 *	int *	int *	png_charp *	png_charpp *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2004107980640	png_set_pCAL	9	png_const_structrp	png_inforp	png_const_charp	png_int_32	png_int_32	int	int	png_const_charp	png_charpp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001555726768	png_get_pHYs	5	png_const_structrp	png_const_inforp	png_uint_32 *	png_uint_32 *	int *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002308576926	png_set_pHYs	5	png_const_structrp	png_inforp	png_uint_32	png_uint_32	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003220614142	png_get_PLTE	4	png_const_structrp	png_inforp	png_colorp *	int *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003901179331	png_set_PLTE	4	png_structrp	png_inforp	png_const_colorp	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003627707578	png_get_sBIT	3	png_const_structrp	png_inforp	png_color_8p *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001068603261	png_set_sBIT	3	png_const_structrp	png_inforp	png_const_color_8p	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001442396281	png_get_sRGB	3	png_const_structrp	png_const_inforp	int *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001796504186	png_set_sRGB	3	png_const_structrp	png_inforp	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001866281974	png_set_sRGB_gAMA_and_cHRM	3	png_const_structrp	png_inforp	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2004232788296	png_get_iCCP	6	png_const_structrp	png_inforp	png_charpp	int *	png_bytepp	png_uint_32 *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002297240286	png_set_iCCP	6	png_const_structrp	png_inforp	png_const_charp	int	png_const_bytep	png_uint_32	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000099460470	png_get_sPLT	3	png_const_structrp	png_inforp	png_sPLT_tpp	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003513153554	png_set_sPLT	4	png_const_structrp	png_inforp	png_const_sPLT_tp	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000065403797	png_get_text	4	png_const_structrp	png_inforp	png_textp *	int *	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001293199126	png_set_text	4	png_const_structrp	png_inforp	png_const_textp	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002943085189	png_get_tIME	3	png_const_structrp	png_inforp	png_timep *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2004153395756	png_set_tIME	3	png_const_structrp	png_inforp	png_const_timep	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003409525851	png_get_tRNS	5	png_const_structrp	png_inforp	png_bytep *	int *	png_color_16p *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000892985055	png_set_tRNS	5	png_structrp	png_inforp	png_const_bytep	int	png_const_color_16p	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001143128725	png_get_sCAL	5	png_const_structrp	png_const_inforp	int *	double *	double *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002529487389	png_get_sCAL_fixed	5	png_const_structrp	png_const_inforp	int *	png_fixed_point *	png_fixed_point *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001856772630	png_get_sCAL_s	5	png_const_structrp	png_const_inforp	int *	png_charpp	png_charpp	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002292998266	png_set_sCAL	5	png_const_structrp	png_inforp	int	double	double	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000528045530	png_set_sCAL_fixed	5	png_const_structrp	png_inforp	int	png_fixed_point	png_fixed_point	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002293236709	png_set_sCAL_s	5	png_const_structrp	png_inforp	int	png_const_charp	png_const_charp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001534511615	png_set_keep_unknown_chunks	4	png_structrp	int	png_const_bytep	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003979830720	png_handle_as_unknown	2	png_const_structrp	png_const_bytep	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000537708624	png_set_unknown_chunks	4	png_const_structrp	png_inforp	png_const_unknown_chunkp	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003097988766	png_set_unknown_chunk_location	4	png_const_structrp	png_inforp	int	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2004291554703	png_get_unknown_chunks	3	png_const_structrp	png_inforp	png_unknown_chunkpp	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000571639751	png_set_invalid	3	png_const_structrp	png_inforp	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2004096473534	png_read_png	4	png_structrp	png_inforp	int	png_voidp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003297631067	png_write_png	4	png_structrp	png_inforp	int	png_voidp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001357124159	png_get_copyright	1	png_const_structrp	png_const_charp
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001252859590	png_get_header_ver	1	png_const_structrp	png_const_charp
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003692368242	png_get_header_version	1	png_const_structrp	png_const_charp
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003472380122	png_get_libpng_ver	1	png_const_structrp	png_const_charp
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2004024385656	png_permit_mng_features	2	png_structrp	png_uint_32	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002566776294	png_set_user_limits	3	png_structrp	png_uint_32	png_uint_32	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003141454023	png_get_user_width_max	1	png_const_structrp	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000508717527	png_get_user_height_max	1	png_const_structrp	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003277756179	png_set_chunk_cache_max	2	png_structrp	png_uint_32	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003832465717	png_get_chunk_cache_max	1	png_const_structrp	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001599998386	png_set_chunk_malloc_max	2	png_structrp	png_alloc_size_t	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001339267529	png_get_chunk_malloc_max	1	png_const_structrp	png_alloc_size_t
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001895073295	png_get_pixels_per_inch	2	png_const_structrp	png_const_inforp	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002569286770	png_get_x_pixels_per_inch	2	png_const_structrp	png_const_inforp	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001739655060	png_get_y_pixels_per_inch	2	png_const_structrp	png_const_inforp	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002591352278	png_get_x_offset_inches	2	png_const_structrp	png_const_inforp	float
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2004181686369	png_get_x_offset_inches_fixed	2	png_const_structrp	png_const_inforp	png_fixed_point
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003355957043	png_get_y_offset_inches	2	png_const_structrp	png_const_inforp	float
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000669176608	png_get_y_offset_inches_fixed	2	png_const_structrp	png_const_inforp	png_fixed_point
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2004287247660	png_get_pHYs_dpi	5	png_const_structrp	png_const_inforp	png_uint_32 *	png_uint_32 *	int *	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001193420481	png_get_io_state	1	png_const_structrp	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2004125386467	png_get_io_chunk_type	1	png_const_structrp	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001931243296	png_get_uint_32	1	png_const_bytep	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000969388038	png_get_uint_16	1	png_const_bytep	png_uint_16
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001581742643	png_get_int_32	1	png_const_bytep	png_int_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003666362086	png_get_uint_31	2	png_const_structrp	png_const_bytep	png_uint_32
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000119893842	png_save_uint_32	2	png_bytep	png_uint_32	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001338212762	png_save_int_32	2	png_bytep	png_int_32	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000645261576	png_save_uint_16	2	png_bytep	unsigned int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003782413144	png_set_check_for_invalid_index	2	png_structrp	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001534530797	png_get_palette_max	2	png_const_structp	png_const_infop	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003677599265	png_image_begin_read_from_file	2	png_imagep	const char *	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003057188305	png_image_begin_read_from_stdio	2	png_imagep	FILE *	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000720539495	png_image_begin_read_from_memory	3	png_imagep	png_const_voidp	size_t	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003072202754	png_image_finish_read	5	png_imagep	png_const_colorp	void *	png_int_32	void *	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003819188189	png_image_free	1	png_imagep	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2000168917256	png_image_write_to_file	6	png_imagep	const char *	int	const void *	png_int_32	const void *	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2003318623701	png_image_write_to_stdio	6	png_imagep	FILE *	int	const void *	png_int_32	const void *	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2002336728393	png_image_write_to_memory	7	png_imagep	void *	png_alloc_size_t *restrict	int	const void *	png_int_32	const void *	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/../../png.h	2001734230513	png_set_option	3	png_structrp	int	int	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2003962844616	is_combo	1	int	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2002141826066	first_transform	1	int	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2000233913140	is_bad_combo	1	int	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2002515251689	transform_name	1	int	const char *
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2003649116205	validate_T	0		void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2002314133732	buffer_init	1	struct buffer *	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2000427727686	buffer_destroy_list	1	struct buffer_list *	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2001342336793	buffer_destroy	1	struct buffer *	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2002387124321	buffer_start_write	1	struct buffer *	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2003712676745	buffer_start_read	1	struct buffer *	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2000200499399	get_buffer	1	png_structp	struct buffer *
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2003182867578	buffer_extend	1	struct buffer_list *	struct buffer_list *
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2002505613177	buffer_from_file	2	struct buffer *	FILE *	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2002029648132	display_init	1	struct display *	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2003351361351	display_clean_read	1	struct display *	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2000492497521	display_clean_write	1	struct display *	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2000740635847	display_clean	1	struct display *	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2003037714278	display_destroy	1	struct display *	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2001039360905	get_dp	1	png_structp	struct display *
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2000275500675	display_log	3	struct display *	error_level	const char *	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2002994654861	display_warning	2	png_structp	png_const_charp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2003671921771	display_error	2	png_structp	png_const_charp	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2004245494576	display_cache_file	2	struct display *	const char *	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2001700800683	buffer_read	4	struct display *	struct buffer *	png_bytep	size_t	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2000597496382	read_function	3	png_structp	png_bytep	size_t	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2001909672965	read_png	4	struct display *	struct buffer *	const char *	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2000590031003	update_display	1	struct display *	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2000748748750	compare_read	2	struct display *	int	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2004240718438	buffer_write	4	struct display *	struct buffer *	png_bytep	size_t	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2003732486904	write_function	3	png_structp	png_bytep	size_t	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2000898074549	write_png	3	struct display *	png_infop	int	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2003561378609	skip_transform	2	struct display *	int	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2004241728767	test_one_file	2	struct display *	const char *	void
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2002017020226	do_test	2	struct display *	const char *	int
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/libtests/pngimage.c	2000148826545	main	2	int	char **	int

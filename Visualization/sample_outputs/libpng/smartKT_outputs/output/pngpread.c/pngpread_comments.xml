@@ -1,0 +1,1602 @@
+<?xml version="1.0" ?>
+<COMMENTS project_name="libpng" project_path="/home/dewang/smartKT/SmartKT/kgg/projects/libpng">
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Push model modes" comment_scope_start="18" comment_scope_end="54">
+		<SYMBOLS>
+			<MemberRefExpr type="size_t" spelling="buffer_size" id="603094208888"/>
+			<ParmDecl type="png_structrp" spelling="png_ptr" id="600775809256"/>
+			<ParmDecl type="png_inforp" spelling="info_ptr" id="602419813866"/>
+			<ParmDecl type="png_bytep" spelling="buffer" id="602326902483"/>
+			<ParmDecl type="size_t" spelling="buffer_size" id="603977890865"/>
+			<ParmDecl type="png_structrp" spelling="png_ptr" id="601046020809"/>
+			<ParmDecl type="int" spelling="save" id="603578226317"/>
+			<TypeRef type="png_structrp" spelling="png_structrp" id="601341889506"/>
+			<TypeRef type="png_inforp" spelling="png_inforp" id="603068706909"/>
+			<TypeRef type="png_bytep" spelling="png_bytep" id="603607083554"/>
+			<TypeRef type="size_t" spelling="size_t" id="604211729774"/>
+			<TypeRef type="size_t" spelling="size_t" id="604211729774"/>
+			<TypeRef type="png_structrp" spelling="png_structrp" id="601341889506"/>
+			<CallExpr type="void" spelling="png_push_restore_buffer" id="601073707509"/>
+			<CallExpr type="void" spelling="png_process_some_data" id="604256529047"/>
+			<FunctionDecl type="void (png_structrp, png_inforp, png_bytep, size_t)" spelling="png_process_data" id="602867632235"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601948086983"/>
+			<DeclRefExpr type="png_inforp" spelling="info_ptr" id="600649382398"/>
+			<DeclRefExpr type="void (png_structrp, png_bytep, size_t)" spelling="png_push_restore_buffer" id="602779025200"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602457618516"/>
+			<DeclRefExpr type="png_bytep" spelling="buffer" id="603911818502"/>
+			<DeclRefExpr type="size_t" spelling="buffer_size" id="603302991653"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603825053192"/>
+			<DeclRefExpr type="void (png_structrp, png_inforp)" spelling="png_process_some_data" id="604170271771"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600463272027"/>
+			<DeclRefExpr type="png_inforp" spelling="info_ptr" id="603218573934"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601058736189"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600651742758"/>
+			<UnexposedExpr type="png_info *" spelling="info_ptr" id="601707860930"/>
+			<UnexposedExpr type="void (*)(png_structrp, png_bytep, size_t)" spelling="png_push_restore_buffer" id="603554776017"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603848994186"/>
+			<UnexposedExpr type="png_bytep" spelling="buffer" id="600159223559"/>
+			<UnexposedExpr type="size_t" spelling="buffer_size" id="602735146964"/>
+			<UnexposedExpr type="size_t" spelling="buffer_size" id="603414331128"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603624242899"/>
+			<UnexposedExpr type="void (*)(png_structrp, png_inforp)" spelling="png_process_some_data" id="601451002733"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600574078375"/>
+			<UnexposedExpr type="png_info *" spelling="info_ptr" id="603806847246"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602592507555"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="push" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="It's easiest for the caller if we do the save; then the caller doesn't
+       * have to supply the same data again:" comment_scope_start="55" comment_scope_end="61">
+		<SYMBOLS>
+			<CallExpr type="void" spelling="png_push_save_buffer" id="601142157643"/>
+			<DeclRefExpr type="int" spelling="save" id="600017759323"/>
+			<DeclRefExpr type="void (png_structrp)" spelling="png_push_save_buffer" id="603823180416"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600999642676"/>
+			<UnexposedExpr type="int" spelling="save" id="602369979204"/>
+			<UnexposedExpr type="void (*)(png_structrp)" spelling="png_push_save_buffer" id="602373381561"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602735613282"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="for" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="do" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="data" type=" 'Data-Structure and its Components"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="This includes any pending saved bytes:" comment_scope_start="62" comment_scope_end="65">
+		<SYMBOLS>
+			<MemberRefExpr type="size_t" spelling="buffer_size" id="600617054492"/>
+			<MemberRefExpr type="size_t" spelling="buffer_size" id="603571857269"/>
+			<VarDecl type="size_t" spelling="remaining" id="600994765945"/>
+			<TypeRef type="size_t" spelling="size_t" id="604211729774"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601468717211"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603570434909"/>
+			<UnexposedExpr type="size_t" spelling="buffer_size" id="603240700159"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="604256951967"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602622384831"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="includes" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="bytes" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="So subtract the saved buffer size, unless all the data
+          * is actually 'saved', in which case we just return 0" comment_scope_start="66" comment_scope_end="71">
+		<SYMBOLS>
+			<MemberRefExpr type="size_t" spelling="save_buffer_size" id="601021386697"/>
+			<MemberRefExpr type="size_t" spelling="save_buffer_size" id="601963571265"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601015016296"/>
+			<DeclRefExpr type="size_t" spelling="remaining" id="604144198084"/>
+			<DeclRefExpr type="size_t" spelling="remaining" id="600359216619"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601722543734"/>
+			<UnexposedExpr type="size_t" spelling="save_buffer_size" id="603468851219"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603484532996"/>
+			<UnexposedExpr type="size_t" spelling="remaining" id="603441441951"/>
+			<UnexposedExpr type="size_t" spelling="remaining" id="604045487299"/>
+			<UnexposedExpr type="size_t" spelling="save_buffer_size" id="603345806580"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="604073458488"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="subtract" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="buffer" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="size" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="data" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="case" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="return" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="TODO: Deprecate and remove this API.
+ * Somewhere the implementation of this seems to have been lost,
+ * or abandoned.  It was only to support some internal back-door access
+ * to png_struct) in libpng-1.4.x." comment_scope_start="80" comment_scope_end="88">
+		<SYMBOLS>
+			<StringLiteral type="char [74]" spelling="&quot;png_process_data_skip is not implemented in any current version of libpng&quot;" id="600375209585"/>
+			<CallExpr type="void" spelling="png_app_warning" id="602906595819"/>
+			<FunctionDecl type="png_uint_32 (png_structrp)" spelling="png_process_data_skip" id="602720442439"/>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp)" spelling="png_app_warning" id="601797357605"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600893264728"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp)" spelling="png_app_warning" id="602530048868"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="600435285369"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603333720426"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="remove" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="internal" type=" 'Properties of Datastructure / Function / Blocks"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="What we do with the incoming data depends on what we were previously
+ * doing before we ran out of data..." comment_scope_start="90" comment_scope_end="92"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="PRIVATE" comment_scope_start="93" comment_scope_end="93"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Read any remaining signature bytes from the stream and compare them with
+ * the correct PNG signature.  It is possible that this routine is called
+ * with bytes already read from the signature, either because they have been
+ * checked by the calling application, or because of multiple calls to this
+ * routine." comment_scope_start="127" comment_scope_end="132"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="PRIVATE" comment_scope_start="133" comment_scope_end="133"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="SAFE, does not exceed 8" comment_scope_start="136" comment_scope_end="136">
+		<SYMBOLS>
+			<MemberRefExpr type="png_byte" spelling="sig_bytes" id="602343362370"/>
+			<VarDecl type="size_t" spelling="num_checked" id="602066566901"/>
+			<TypeRef type="size_t" spelling="size_t" id="604211729774"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603701334112"/>
+			<UnexposedExpr type="size_t" spelling="sig_bytes" id="603185348533"/>
+			<UnexposedExpr type="png_byte" spelling="sig_bytes" id="601250193109"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602679348024"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="PRIVATE" comment_scope_start="166" comment_scope_end="166"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="unknown handling method" comment_scope_start="171" comment_scope_end="171">
+		<SYMBOLS>
+			<VarDecl type="int" spelling="keep" id="602156835187"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="First we make sure we have enough data for the 4-byte chunk name
+    * and the 4-byte chunk length before proceeding with decoding the
+    * chunk data.  To fully decode each of these chunks, we also make
+    * sure we have enough data in the buffer for the 4-byte CRC at the
+    * end of every chunk (except IDAT, which is handled separately)." comment_scope_start="174" comment_scope_end="194">
+		<SYMBOLS>
+			<MemberRefExpr type="png_uint_32" spelling="mode" id="602312996337"/>
+			<MemberRefExpr type="size_t" spelling="buffer_size" id="601384001809"/>
+			<MemberRefExpr type="png_uint_32" spelling="push_length" id="600994971907"/>
+			<MemberRefExpr type="png_uint_32" spelling="chunk_name" id="600335221851"/>
+			<MemberRefExpr type="png_uint_32" spelling="chunk_name" id="603981845643"/>
+			<MemberRefExpr type="png_uint_32" spelling="push_length" id="601395616977"/>
+			<MemberRefExpr type="png_uint_32" spelling="mode" id="602351730277"/>
+			<VarDecl type="png_byte [4]" spelling="chunk_length" id="602781729928"/>
+			<VarDecl type="png_byte [4]" spelling="chunk_tag" id="601378909425"/>
+			<TypeRef type="png_byte" spelling="png_byte" id="604015363013"/>
+			<TypeRef type="png_byte" spelling="png_byte" id="604015363013"/>
+			<TypeRef type="png_uint_32" spelling="png_uint_32" id="601544631281"/>
+			<TypeRef type="png_uint_32" spelling="png_uint_32" id="601544631281"/>
+			<TypeRef type="png_uint_32" spelling="png_uint_32" id="601544631281"/>
+			<TypeRef type="png_uint_32" spelling="png_uint_32" id="601544631281"/>
+			<CallExpr type="void" spelling="png_push_save_buffer" id="604267707807"/>
+			<CallExpr type="void" spelling="png_push_fill_buffer" id="603940999151"/>
+			<CallExpr type="png_uint_32" spelling="png_get_uint_31" id="602351084086"/>
+			<CallExpr type="void" spelling="png_reset_crc" id="601467388501"/>
+			<CallExpr type="void" spelling="png_crc_read" id="601959815869"/>
+			<CallExpr type="void" spelling="png_check_chunk_name" id="601122163010"/>
+			<CallExpr type="void" spelling="png_check_chunk_length" id="602503505644"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601177559923"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601624661297"/>
+			<DeclRefExpr type="void (png_structrp)" spelling="png_push_save_buffer" id="600532846619"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600235561235"/>
+			<DeclRefExpr type="void (png_structp, png_bytep, size_t)" spelling="png_push_fill_buffer" id="600902398546"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603477628617"/>
+			<DeclRefExpr type="png_byte [4]" spelling="chunk_length" id="600301867535"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602264061050"/>
+			<DeclRefExpr type="png_uint_32 (png_const_structrp, png_const_bytep)" spelling="png_get_uint_31" id="601194545819"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603123548927"/>
+			<DeclRefExpr type="png_byte [4]" spelling="chunk_length" id="602836311928"/>
+			<DeclRefExpr type="void (png_structrp)" spelling="png_reset_crc" id="603938741057"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603833590684"/>
+			<DeclRefExpr type="void (png_structrp, png_bytep, png_uint_32)" spelling="png_crc_read" id="602879749702"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601003407585"/>
+			<DeclRefExpr type="png_byte [4]" spelling="chunk_tag" id="602522699097"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602009382898"/>
+			<DeclRefExpr type="png_byte [4]" spelling="chunk_tag" id="602735674935"/>
+			<DeclRefExpr type="png_byte [4]" spelling="chunk_tag" id="603239473763"/>
+			<DeclRefExpr type="png_byte [4]" spelling="chunk_tag" id="604172349680"/>
+			<DeclRefExpr type="png_byte [4]" spelling="chunk_tag" id="601884494443"/>
+			<DeclRefExpr type="void (png_const_structrp, png_uint_32)" spelling="png_check_chunk_name" id="600704218165"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600405883621"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601024538653"/>
+			<DeclRefExpr type="void (png_const_structrp, png_uint_32)" spelling="png_check_chunk_length" id="601167958163"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602507165191"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601290460091"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601024926650"/>
+			<UnexposedExpr type="png_uint_32" spelling="mode" id="601897854035"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602874630362"/>
+			<UnexposedExpr type="size_t" spelling="buffer_size" id="601325221167"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603286791057"/>
+			<UnexposedExpr type="void (*)(png_structrp)" spelling="png_push_save_buffer" id="601489539298"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601512406673"/>
+			<UnexposedExpr type="void (*)(png_structp, png_bytep, size_t)" spelling="png_push_fill_buffer" id="604024754577"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602034825121"/>
+			<UnexposedExpr type="png_byte *" spelling="chunk_length" id="602482775776"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600779837615"/>
+			<UnexposedExpr type="png_uint_32 (*)(png_const_structrp, png_const_bytep)" spelling="png_get_uint_31" id="601132746513"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="600479613537"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600769247652"/>
+			<UnexposedExpr type="png_const_bytep" spelling="chunk_length" id="602839752826"/>
+			<UnexposedExpr type="png_byte *" spelling="chunk_length" id="601826021818"/>
+			<UnexposedExpr type="void (*)(png_structrp)" spelling="png_reset_crc" id="602410525111"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="604090774019"/>
+			<UnexposedExpr type="void (*)(png_structrp, png_bytep, png_uint_32)" spelling="png_crc_read" id="601236758345"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601318711605"/>
+			<UnexposedExpr type="png_byte *" spelling="chunk_tag" id="601257108530"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602093137733"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_uint_32)" spelling="png_check_chunk_name" id="600052829237"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="601351069650"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603331734343"/>
+			<UnexposedExpr type="png_uint_32" spelling="chunk_name" id="601137986634"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="604172085943"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_uint_32)" spelling="png_check_chunk_length" id="602334710520"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="602222951132"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600958334629"/>
+			<UnexposedExpr type="png_uint_32" spelling="push_length" id="600527519056"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600372260611"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600942755658"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="first" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="make" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="data" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="for" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="length" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="data" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="make" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="data" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="buffer" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="for" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="end" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="every" type=" 'Data-Structure and its Components"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="chunk"/>
+			<PROBLEM_DOMAIN word="chunk"/>
+			<PROBLEM_DOMAIN word="chunk"/>
+			<PROBLEM_DOMAIN word="crc"/>
+			<PROBLEM_DOMAIN word="chunk"/>
+			<PROBLEM_DOMAIN word="idat"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="If we reach an IDAT chunk, this means we have read all of the
+       * header chunks, and we can start reading the image (or if this
+       * is called after the image has been read - we have an error)." comment_scope_start="203" comment_scope_end="225">
+		<SYMBOLS>
+			<MemberRefExpr type="png_uint_32" spelling="mode" id="603894317254"/>
+			<MemberRefExpr type="png_byte" spelling="color_type" id="602960276195"/>
+			<MemberRefExpr type="png_uint_32" spelling="mode" id="603437236192"/>
+			<MemberRefExpr type="int" spelling="process_mode" id="603759804902"/>
+			<MemberRefExpr type="png_uint_32" spelling="mode" id="603105064335"/>
+			<MemberRefExpr type="png_uint_32" spelling="mode" id="603538570044"/>
+			<MemberRefExpr type="png_uint_32" spelling="push_length" id="602812308313"/>
+			<MemberRefExpr type="png_uint_32" spelling="mode" id="602713144100"/>
+			<MemberRefExpr type="png_uint_32" spelling="mode" id="603558861939"/>
+			<StringLiteral type="char [25]" spelling="&quot;Missing IHDR before IDAT&quot;" id="603347424383"/>
+			<StringLiteral type="char [25]" spelling="&quot;Missing PLTE before IDAT&quot;" id="602844598537"/>
+			<StringLiteral type="char [21]" spelling="&quot;Too many IDATs found&quot;" id="604143176384"/>
+			<CallExpr type="void" spelling="png_error" id="604032661986"/>
+			<CallExpr type="void" spelling="png_error" id="601640023285"/>
+			<CallExpr type="void" spelling="png_benign_error" id="603145891869"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602078199846"/>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp) __attribute__((noreturn))" spelling="png_error" id="601752668375"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600886426694"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603586101996"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="604055568724"/>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp) __attribute__((noreturn))" spelling="png_error" id="600625690667"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602746555895"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601202639018"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602624124771"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602707684935"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603554381023"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603217854883"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603632398105"/>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp)" spelling="png_benign_error" id="603362402602"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603551564331"/>
+			<UnexposedExpr type="png_uint_32" spelling="mode" id="600427423501"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602116631841"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp) __attribute__((noreturn))" spelling="png_error" id="600675238702"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="602759094006"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603766303540"/>
+			<UnexposedExpr type="int" spelling="color_type" id="602517176831"/>
+			<UnexposedExpr type="png_byte" spelling="color_type" id="603391804851"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600782448155"/>
+			<UnexposedExpr type="png_uint_32" spelling="mode" id="601950502525"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="604213602439"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp) __attribute__((noreturn))" spelling="png_error" id="600350312672"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="600708801722"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600380353298"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603743579092"/>
+			<UnexposedExpr type="png_uint_32" spelling="mode" id="601659034648"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601295839884"/>
+			<UnexposedExpr type="png_uint_32" spelling="mode" id="602516434539"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601295064989"/>
+			<UnexposedExpr type="png_uint_32" spelling="push_length" id="601563927420"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601734329661"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601208740398"/>
+			<UnexposedExpr type="png_uint_32" spelling="mode" id="601191848984"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601165427914"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp)" spelling="png_benign_error" id="603098319483"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="602974604764"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600820850009"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="read" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="start" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="read" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="error" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="idat"/>
+			<PROBLEM_DOMAIN word="chunk"/>
+			<PROBLEM_DOMAIN word="image"/>
+			<PROBLEM_DOMAIN word="image"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="PRIVATE" comment_scope_start="463" comment_scope_end="463"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="PRIVATE" comment_scope_start="523" comment_scope_end="523"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="PRIVATE" comment_scope_start="533" comment_scope_end="533"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="TODO: this code can be commoned up with the same code in push_read" comment_scope_start="541" comment_scope_end="561">
+		<SYMBOLS>
+			<MemberRefExpr type="size_t" spelling="buffer_size" id="601132872107"/>
+			<MemberRefExpr type="png_uint_32" spelling="push_length" id="602295188149"/>
+			<MemberRefExpr type="png_uint_32" spelling="chunk_name" id="602713492166"/>
+			<MemberRefExpr type="png_uint_32" spelling="mode" id="600796033070"/>
+			<MemberRefExpr type="png_uint_32" spelling="chunk_name" id="600276456526"/>
+			<MemberRefExpr type="int" spelling="process_mode" id="603983598660"/>
+			<MemberRefExpr type="png_uint_32" spelling="flags" id="602406987515"/>
+			<MemberRefExpr type="png_uint_32" spelling="idat_size" id="602160877065"/>
+			<MemberRefExpr type="png_uint_32" spelling="push_length" id="600964457834"/>
+			<TypeRef type="png_uint_32" spelling="png_uint_32" id="601544631281"/>
+			<TypeRef type="png_uint_32" spelling="png_uint_32" id="601544631281"/>
+			<TypeRef type="png_uint_32" spelling="png_uint_32" id="601544631281"/>
+			<TypeRef type="png_uint_32" spelling="png_uint_32" id="601544631281"/>
+			<TypeRef type="png_uint_32" spelling="png_uint_32" id="601544631281"/>
+			<TypeRef type="png_uint_32" spelling="png_uint_32" id="601544631281"/>
+			<TypeRef type="png_uint_32" spelling="png_uint_32" id="601544631281"/>
+			<TypeRef type="png_uint_32" spelling="png_uint_32" id="601544631281"/>
+			<StringLiteral type="char [27]" spelling="&quot;Not enough compressed data&quot;" id="604040711095"/>
+			<CallExpr type="void" spelling="png_push_save_buffer" id="603451427877"/>
+			<CallExpr type="void" spelling="png_push_fill_buffer" id="600349673410"/>
+			<CallExpr type="png_uint_32" spelling="png_get_uint_31" id="603643721210"/>
+			<CallExpr type="void" spelling="png_reset_crc" id="603918330782"/>
+			<CallExpr type="void" spelling="png_crc_read" id="601212656835"/>
+			<CallExpr type="void" spelling="png_error" id="602269822121"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602994879645"/>
+			<DeclRefExpr type="void (png_structrp)" spelling="png_push_save_buffer" id="601542473168"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="604041914229"/>
+			<DeclRefExpr type="void (png_structp, png_bytep, size_t)" spelling="png_push_fill_buffer" id="600294811645"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602604334983"/>
+			<DeclRefExpr type="png_byte [4]" spelling="chunk_length" id="602453609150"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603247663097"/>
+			<DeclRefExpr type="png_uint_32 (png_const_structrp, png_const_bytep)" spelling="png_get_uint_31" id="600735547660"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="604145282787"/>
+			<DeclRefExpr type="png_byte [4]" spelling="chunk_length" id="600140050296"/>
+			<DeclRefExpr type="void (png_structrp)" spelling="png_reset_crc" id="600216119364"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600455879113"/>
+			<DeclRefExpr type="void (png_structrp, png_bytep, png_uint_32)" spelling="png_crc_read" id="603068289302"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602630845205"/>
+			<DeclRefExpr type="png_byte [4]" spelling="chunk_tag" id="600563039414"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600092658454"/>
+			<DeclRefExpr type="png_byte [4]" spelling="chunk_tag" id="602406716784"/>
+			<DeclRefExpr type="png_byte [4]" spelling="chunk_tag" id="600896884835"/>
+			<DeclRefExpr type="png_byte [4]" spelling="chunk_tag" id="603981384451"/>
+			<DeclRefExpr type="png_byte [4]" spelling="chunk_tag" id="601234456561"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603506340221"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602186298895"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601337852399"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603164933585"/>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp) __attribute__((noreturn))" spelling="png_error" id="600605905896"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601008354201"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602187833660"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600507631642"/>
+			<UnexposedExpr type="size_t" spelling="buffer_size" id="600636122925"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602018096970"/>
+			<UnexposedExpr type="void (*)(png_structrp)" spelling="png_push_save_buffer" id="600138202269"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600135387270"/>
+			<UnexposedExpr type="void (*)(png_structp, png_bytep, size_t)" spelling="png_push_fill_buffer" id="601105247945"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600394760310"/>
+			<UnexposedExpr type="png_byte *" spelling="chunk_length" id="600910825077"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="604260418910"/>
+			<UnexposedExpr type="png_uint_32 (*)(png_const_structrp, png_const_bytep)" spelling="png_get_uint_31" id="601485364939"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="603940647197"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601000031537"/>
+			<UnexposedExpr type="png_const_bytep" spelling="chunk_length" id="601129955179"/>
+			<UnexposedExpr type="png_byte *" spelling="chunk_length" id="602560887481"/>
+			<UnexposedExpr type="void (*)(png_structrp)" spelling="png_reset_crc" id="600638839239"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603440440977"/>
+			<UnexposedExpr type="void (*)(png_structrp, png_bytep, png_uint_32)" spelling="png_crc_read" id="602505873464"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601847001866"/>
+			<UnexposedExpr type="png_byte *" spelling="chunk_tag" id="602349425696"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601446886072"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602588031556"/>
+			<UnexposedExpr type="png_uint_32" spelling="chunk_name" id="603697543846"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602269586000"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600764873935"/>
+			<UnexposedExpr type="png_uint_32" spelling="flags" id="600802037877"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600141416689"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp) __attribute__((noreturn))" spelling="png_error" id="601130165647"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="601567703233"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600891813056"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600818315267"/>
+			<UnexposedExpr type="png_uint_32" spelling="push_length" id="600955621386"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600267199935"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="We want the smaller of 'idat_size' and 'current_buffer_size', but they
+       * are of different types and we don't know which variable has the fewest
+       * bits.  Carefully select the smaller and cast it to the type of the
+       * larger - this cannot overflow.  Do not cast in the following test - it
+       * will break on either 16-bit or 64-bit platforms." comment_scope_start="568" comment_scope_end="588">
+		<SYMBOLS>
+			<MemberRefExpr type="png_bytep" spelling="save_buffer_ptr" id="602075339447"/>
+			<MemberRefExpr type="png_bytep" spelling="save_buffer_ptr" id="603228881954"/>
+			<MemberRefExpr type="png_uint_32" spelling="idat_size" id="601276501041"/>
+			<MemberRefExpr type="size_t" spelling="buffer_size" id="602105237538"/>
+			<MemberRefExpr type="size_t" spelling="save_buffer_size" id="600322013851"/>
+			<MemberRefExpr type="png_bytep" spelling="save_buffer_ptr" id="603506544930"/>
+			<TypeRef type="size_t" spelling="size_t" id="604211729774"/>
+			<TypeRef type="png_uint_32" spelling="png_uint_32" id="601544631281"/>
+			<CallExpr type="void" spelling="png_calculate_crc" id="604178908096"/>
+			<CallExpr type="void" spelling="png_process_IDAT_data" id="602740341380"/>
+			<DeclRefExpr type="png_uint_32" spelling="idat_size" id="601991764190"/>
+			<DeclRefExpr type="size_t" spelling="save_size" id="601109551545"/>
+			<DeclRefExpr type="size_t" spelling="save_size" id="600117284853"/>
+			<DeclRefExpr type="png_uint_32" spelling="idat_size" id="603520556330"/>
+			<DeclRefExpr type="png_uint_32" spelling="idat_size" id="603777443922"/>
+			<DeclRefExpr type="size_t" spelling="save_size" id="603405889402"/>
+			<DeclRefExpr type="void (png_structrp, png_const_bytep, size_t)" spelling="png_calculate_crc" id="603013401390"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="604292418721"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601069497361"/>
+			<DeclRefExpr type="size_t" spelling="save_size" id="602267481705"/>
+			<DeclRefExpr type="void (png_structrp, png_bytep, size_t)" spelling="png_process_IDAT_data" id="604061278505"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="604039422703"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602444587134"/>
+			<DeclRefExpr type="size_t" spelling="save_size" id="603943063455"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601633789690"/>
+			<DeclRefExpr type="png_uint_32" spelling="idat_size" id="602852318535"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601058627224"/>
+			<DeclRefExpr type="size_t" spelling="save_size" id="601292843596"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601401656677"/>
+			<DeclRefExpr type="size_t" spelling="save_size" id="601575337309"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600300954711"/>
+			<DeclRefExpr type="size_t" spelling="save_size" id="600671546784"/>
+			<UnexposedExpr type="unsigned long" spelling="idat_size" id="603967125757"/>
+			<UnexposedExpr type="png_uint_32" spelling="idat_size" id="603681501876"/>
+			<UnexposedExpr type="size_t" spelling="save_size" id="600861613072"/>
+			<UnexposedExpr type="png_uint_32" spelling="idat_size" id="602650330912"/>
+			<UnexposedExpr type="size_t" spelling="save_size" id="600857083035"/>
+			<UnexposedExpr type="void (*)(png_structrp, png_const_bytep, size_t)" spelling="png_calculate_crc" id="600137420193"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602476747710"/>
+			<UnexposedExpr type="png_const_bytep" spelling="save_buffer_ptr" id="600754939991"/>
+			<UnexposedExpr type="png_bytep" spelling="save_buffer_ptr" id="601946411145"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601766393285"/>
+			<UnexposedExpr type="size_t" spelling="save_size" id="601213285408"/>
+			<UnexposedExpr type="void (*)(png_structrp, png_bytep, size_t)" spelling="png_process_IDAT_data" id="601890610339"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600192768666"/>
+			<UnexposedExpr type="png_bytep" spelling="save_buffer_ptr" id="603092970016"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603470947983"/>
+			<UnexposedExpr type="size_t" spelling="save_size" id="600727553748"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601176583599"/>
+			<UnexposedExpr type="png_uint_32" spelling="idat_size" id="600637041362"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="604144970117"/>
+			<UnexposedExpr type="size_t" spelling="save_size" id="604078173919"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600556040905"/>
+			<UnexposedExpr type="size_t" spelling="save_size" id="603587707725"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600762060079"/>
+			<UnexposedExpr type="size_t" spelling="save_size" id="601911866201"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="smaller" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="smaller" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="cast" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="larger" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="overflow" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="do" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="cast" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="break" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="We want the smaller of 'idat_size' and 'current_buffer_size', but they
+       * are of different types and we don't know which variable has the fewest
+       * bits.  Carefully select the smaller and cast it to the type of the
+       * larger - this cannot overflow." comment_scope_start="595" comment_scope_end="614">
+		<SYMBOLS>
+			<MemberRefExpr type="png_bytep" spelling="current_buffer_ptr" id="601759400000"/>
+			<MemberRefExpr type="png_bytep" spelling="current_buffer_ptr" id="602946214239"/>
+			<MemberRefExpr type="png_uint_32" spelling="idat_size" id="602098479503"/>
+			<MemberRefExpr type="size_t" spelling="buffer_size" id="603988112516"/>
+			<MemberRefExpr type="size_t" spelling="current_buffer_size" id="601646856870"/>
+			<MemberRefExpr type="png_bytep" spelling="current_buffer_ptr" id="600247527872"/>
+			<TypeRef type="size_t" spelling="size_t" id="604211729774"/>
+			<TypeRef type="png_uint_32" spelling="png_uint_32" id="601544631281"/>
+			<CallExpr type="void" spelling="png_calculate_crc" id="602895230630"/>
+			<CallExpr type="void" spelling="png_process_IDAT_data" id="601476916466"/>
+			<DeclRefExpr type="png_uint_32" spelling="idat_size" id="601345995529"/>
+			<DeclRefExpr type="size_t" spelling="save_size" id="603681472534"/>
+			<DeclRefExpr type="size_t" spelling="save_size" id="600537408661"/>
+			<DeclRefExpr type="png_uint_32" spelling="idat_size" id="600121859953"/>
+			<DeclRefExpr type="png_uint_32" spelling="idat_size" id="603780468748"/>
+			<DeclRefExpr type="size_t" spelling="save_size" id="600304755558"/>
+			<DeclRefExpr type="void (png_structrp, png_const_bytep, size_t)" spelling="png_calculate_crc" id="601135485212"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603878748248"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601293500077"/>
+			<DeclRefExpr type="size_t" spelling="save_size" id="603928214068"/>
+			<DeclRefExpr type="void (png_structrp, png_bytep, size_t)" spelling="png_process_IDAT_data" id="601853326040"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603600365011"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="604152496379"/>
+			<DeclRefExpr type="size_t" spelling="save_size" id="601763522148"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602334151663"/>
+			<DeclRefExpr type="png_uint_32" spelling="idat_size" id="601678271657"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601193905033"/>
+			<DeclRefExpr type="size_t" spelling="save_size" id="602679636702"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600396931984"/>
+			<DeclRefExpr type="size_t" spelling="save_size" id="600769592282"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603466666307"/>
+			<DeclRefExpr type="size_t" spelling="save_size" id="600518489486"/>
+			<UnexposedExpr type="unsigned long" spelling="idat_size" id="601506100051"/>
+			<UnexposedExpr type="png_uint_32" spelling="idat_size" id="600423099178"/>
+			<UnexposedExpr type="size_t" spelling="save_size" id="602697892575"/>
+			<UnexposedExpr type="png_uint_32" spelling="idat_size" id="603522935725"/>
+			<UnexposedExpr type="size_t" spelling="save_size" id="603273197811"/>
+			<UnexposedExpr type="void (*)(png_structrp, png_const_bytep, size_t)" spelling="png_calculate_crc" id="603704955645"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600339125196"/>
+			<UnexposedExpr type="png_const_bytep" spelling="current_buffer_ptr" id="601614715138"/>
+			<UnexposedExpr type="png_bytep" spelling="current_buffer_ptr" id="600401116769"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="604076418515"/>
+			<UnexposedExpr type="size_t" spelling="save_size" id="602475172910"/>
+			<UnexposedExpr type="void (*)(png_structrp, png_bytep, size_t)" spelling="png_process_IDAT_data" id="601516541400"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603515432093"/>
+			<UnexposedExpr type="png_bytep" spelling="current_buffer_ptr" id="601099579309"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600391010049"/>
+			<UnexposedExpr type="size_t" spelling="save_size" id="603552685016"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600318934192"/>
+			<UnexposedExpr type="png_uint_32" spelling="idat_size" id="600231439553"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600818140287"/>
+			<UnexposedExpr type="size_t" spelling="save_size" id="601922982352"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603269390033"/>
+			<UnexposedExpr type="size_t" spelling="save_size" id="603609720273"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="604205855745"/>
+			<UnexposedExpr type="size_t" spelling="save_size" id="603328950669"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="smaller" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="smaller" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="cast" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="larger" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="overflow" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="PRIVATE" comment_scope_start="626" comment_scope_end="626"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="The caller checks for a non-zero buffer length." comment_scope_start="630" comment_scope_end="633">
+		<SYMBOLS>
+			<StringLiteral type="char [30]" spelling="&quot;No IDAT data (internal error)&quot;" id="602231317194"/>
+			<CallExpr type="void" spelling="png_error" id="603684099998"/>
+			<DeclRefExpr type="size_t" spelling="buffer_length" id="600127930279"/>
+			<DeclRefExpr type="png_bytep" spelling="buffer" id="602545764981"/>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp) __attribute__((noreturn))" spelling="png_error" id="601768824293"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602331956534"/>
+			<UnexposedExpr type="size_t" spelling="buffer_length" id="601993706789"/>
+			<UnexposedExpr type="png_bytep" spelling="buffer" id="602306118491"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp) __attribute__((noreturn))" spelling="png_error" id="602118761112"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="600455498401"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600767187579"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="checks" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="for" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="buffer" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="length" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="This routine must process all the data it has been given
+    * before returning, calling the row callback as required to
+    * handle the uncompressed results." comment_scope_start="634" comment_scope_end="638">
+		<SYMBOLS>
+			<MemberRefExpr type="const Bytef *" spelling="next_in" id="603854636252"/>
+			<MemberRefExpr type="z_stream" spelling="zstream" id="601018163767"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603958626644"/>
+			<DeclRefExpr type="png_bytep" spelling="buffer" id="600078400629"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601872878131"/>
+			<UnexposedExpr type="const Bytef *" spelling="buffer" id="601347408058"/>
+			<UnexposedExpr type="png_bytep" spelling="buffer" id="602921756256"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="process" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="data" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="returning" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="handle" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="uncompressed"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="TODO: WARNING: TRUNCATION ERROR: DANGER WILL ROBINSON:" comment_scope_start="639" comment_scope_end="641">
+		<SYMBOLS>
+			<MemberRefExpr type="uInt" spelling="avail_in" id="600332699488"/>
+			<MemberRefExpr type="z_stream" spelling="zstream" id="602463633753"/>
+			<TypeRef type="uInt" spelling="uInt" id="604036488134"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603040966754"/>
+			<DeclRefExpr type="size_t" spelling="buffer_length" id="601266731751"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601372243258"/>
+			<UnexposedExpr type="size_t" spelling="buffer_length" id="600536512535"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="error" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Keep going until the decompressed data is all processed
+    * or the stream marked as finished." comment_scope_start="642" comment_scope_end="649">
+		<SYMBOLS>
+			<MemberRefExpr type="uInt" spelling="avail_in" id="601886817509"/>
+			<MemberRefExpr type="z_stream" spelling="zstream" id="603491316700"/>
+			<MemberRefExpr type="png_uint_32" spelling="flags" id="601417566015"/>
+			<VarDecl type="int" spelling="ret" id="601110180856"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="604111841995"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601684444973"/>
+			<UnexposedExpr type="uInt" spelling="avail_in" id="602280584345"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600364564639"/>
+			<UnexposedExpr type="png_uint_32" spelling="flags" id="601023718264"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601734380646"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="data" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="processed" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="stream"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="We have data for zlib, but we must check that zlib
+       * has someplace to put the results.  It doesn't matter
+       * if we don't expect any results -- it may be the input
+       * data is just the LZ end code." comment_scope_start="650" comment_scope_end="662">
+		<SYMBOLS>
+			<MemberRefExpr type="uInt" spelling="avail_out" id="601425259131"/>
+			<MemberRefExpr type="z_stream" spelling="zstream" id="600260834876"/>
+			<MemberRefExpr type="uInt" spelling="avail_out" id="601734858057"/>
+			<MemberRefExpr type="z_stream" spelling="zstream" id="600119663248"/>
+			<MemberRefExpr type="png_byte" spelling="pixel_depth" id="601860292637"/>
+			<MemberRefExpr type="png_uint_32" spelling="iwidth" id="602478072522"/>
+			<MemberRefExpr type="png_byte" spelling="pixel_depth" id="603202489939"/>
+			<MemberRefExpr type="png_uint_32" spelling="iwidth" id="601324453484"/>
+			<MemberRefExpr type="png_byte" spelling="pixel_depth" id="604250267269"/>
+			<MemberRefExpr type="Bytef *" spelling="next_out" id="603966177344"/>
+			<MemberRefExpr type="z_stream" spelling="zstream" id="600095315035"/>
+			<MemberRefExpr type="png_bytep" spelling="row_buf" id="600912916927"/>
+			<TypeRef type="uInt" spelling="uInt" id="604036488134"/>
+			<TypeRef type="size_t" spelling="size_t" id="604211729774"/>
+			<TypeRef type="size_t" spelling="size_t" id="604211729774"/>
+			<TypeRef type="size_t" spelling="size_t" id="604211729774"/>
+			<TypeRef type="size_t" spelling="size_t" id="604211729774"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600833915741"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600910382112"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602187376640"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603253725436"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600166837393"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603267070930"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602452869042"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601327743190"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601717846772"/>
+			<UnexposedExpr type="uInt" spelling="avail_out" id="603052033722"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603976055164"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603939562947"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600160602266"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603927157219"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600229689893"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603740492004"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602902418889"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603713602949"/>
+			<UnexposedExpr type="png_bytep" spelling="row_buf" id="600274227559"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603672260929"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="data" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="for" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="check" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="put" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="input" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="data" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="end" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="zlib"/>
+			<PROBLEM_DOMAIN word="zlib"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="TODO: WARNING: TRUNCATION ERROR: DANGER WILL ROBINSON:" comment_scope_start="657" comment_scope_end="662">
+		<SYMBOLS>
+			<MemberRefExpr type="uInt" spelling="avail_out" id="601734858057"/>
+			<MemberRefExpr type="z_stream" spelling="zstream" id="600119663248"/>
+			<MemberRefExpr type="png_byte" spelling="pixel_depth" id="601860292637"/>
+			<MemberRefExpr type="png_uint_32" spelling="iwidth" id="602478072522"/>
+			<MemberRefExpr type="png_byte" spelling="pixel_depth" id="603202489939"/>
+			<MemberRefExpr type="png_uint_32" spelling="iwidth" id="601324453484"/>
+			<MemberRefExpr type="png_byte" spelling="pixel_depth" id="604250267269"/>
+			<MemberRefExpr type="Bytef *" spelling="next_out" id="603966177344"/>
+			<MemberRefExpr type="z_stream" spelling="zstream" id="600095315035"/>
+			<MemberRefExpr type="png_bytep" spelling="row_buf" id="600912916927"/>
+			<TypeRef type="uInt" spelling="uInt" id="604036488134"/>
+			<TypeRef type="size_t" spelling="size_t" id="604211729774"/>
+			<TypeRef type="size_t" spelling="size_t" id="604211729774"/>
+			<TypeRef type="size_t" spelling="size_t" id="604211729774"/>
+			<TypeRef type="size_t" spelling="size_t" id="604211729774"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600910382112"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602187376640"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603253725436"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600166837393"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603267070930"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602452869042"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601327743190"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601717846772"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603939562947"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600160602266"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603927157219"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600229689893"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603740492004"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602902418889"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603713602949"/>
+			<UnexposedExpr type="png_bytep" spelling="row_buf" id="600274227559"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603672260929"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="error" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Using Z_SYNC_FLUSH here means that an unterminated
+       * LZ stream (a stream with a missing end code) can still
+       * be handled, otherwise (Z_NO_FLUSH) a future zlib
+       * implementation might defer output and therefore
+       * change the current behavior (see comments in inflate.c
+       * for why this doesn't happen at present with zlib 1.2.5)." comment_scope_start="664" comment_scope_end="672">
+		<SYMBOLS>
+			<CallExpr type="int" spelling="png_zlib_inflate" id="603744346921"/>
+			<DeclRefExpr type="int" spelling="ret" id="604273496863"/>
+			<DeclRefExpr type="int (png_structrp, int)" spelling="png_zlib_inflate" id="601360296984"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602110279655"/>
+			<UnexposedExpr type="int (*)(png_structrp, int)" spelling="png_zlib_inflate" id="601648833962"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601268366203"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="end" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="output" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="for" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="stream"/>
+			<PROBLEM_DOMAIN word="stream"/>
+			<PROBLEM_DOMAIN word="zlib"/>
+			<PROBLEM_DOMAIN word="zlib"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Check for any failure before proceeding." comment_scope_start="673" comment_scope_end="697">
+		<SYMBOLS>
+			<MemberRefExpr type="png_uint_32" spelling="flags" id="602394986939"/>
+			<MemberRefExpr type="png_uint_32" spelling="zowner" id="602646536120"/>
+			<MemberRefExpr type="png_uint_32" spelling="row_number" id="601901365960"/>
+			<MemberRefExpr type="png_uint_32" spelling="num_rows" id="600054825402"/>
+			<MemberRefExpr type="png_byte" spelling="pass" id="602269501097"/>
+			<StringLiteral type="char [34]" spelling="&quot;Truncated compressed data in IDAT&quot;" id="602476610392"/>
+			<StringLiteral type="char [32]" spelling="&quot;IDAT: ADLER32 checksum mismatch&quot;" id="603523356905"/>
+			<StringLiteral type="char [28]" spelling="&quot;Decompression error in IDAT&quot;" id="604195423565"/>
+			<CallExpr type="void" spelling="png_warning" id="600640750622"/>
+			<CallExpr type="void" spelling="png_benign_error" id="602479637262"/>
+			<CallExpr type="void" spelling="png_error" id="601237049004"/>
+			<DeclRefExpr type="int" spelling="ret" id="601549108623"/>
+			<DeclRefExpr type="int" spelling="ret" id="601842530972"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600391159262"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601192398624"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603780628232"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603838552124"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601035407613"/>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp)" spelling="png_warning" id="603298165458"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601307033671"/>
+			<DeclRefExpr type="int" spelling="ret" id="603696243257"/>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp)" spelling="png_benign_error" id="603429864191"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601051536880"/>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp) __attribute__((noreturn))" spelling="png_error" id="603275348959"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600030125316"/>
+			<UnexposedExpr type="int" spelling="ret" id="603831692685"/>
+			<UnexposedExpr type="int" spelling="ret" id="604237642571"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602191288932"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600979546036"/>
+			<UnexposedExpr type="png_uint_32" spelling="row_number" id="602799071520"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603758059043"/>
+			<UnexposedExpr type="png_uint_32" spelling="num_rows" id="600696017857"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600140263093"/>
+			<UnexposedExpr type="int" spelling="pass" id="602130279800"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="601539711038"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603992771326"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp)" spelling="png_warning" id="602503215259"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="600273608765"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603114758017"/>
+			<UnexposedExpr type="int" spelling="ret" id="601250643141"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp)" spelling="png_benign_error" id="600029017484"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="604160305443"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600573657008"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp) __attribute__((noreturn))" spelling="png_error" id="601712181987"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="603032295314"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603459547290"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="check" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="for" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="failure" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Terminate the decompression." comment_scope_start="676" comment_scope_end="679">
+		<SYMBOLS>
+			<MemberRefExpr type="png_uint_32" spelling="flags" id="602394986939"/>
+			<MemberRefExpr type="png_uint_32" spelling="zowner" id="602646536120"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600391159262"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601192398624"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602191288932"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600979546036"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="terminate" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="This may be a truncated stream (missing or
+          * damaged end code).  Treat that as a warning." comment_scope_start="680" comment_scope_end="694">
+		<SYMBOLS>
+			<MemberRefExpr type="png_uint_32" spelling="row_number" id="601901365960"/>
+			<MemberRefExpr type="png_uint_32" spelling="num_rows" id="600054825402"/>
+			<MemberRefExpr type="png_byte" spelling="pass" id="602269501097"/>
+			<StringLiteral type="char [34]" spelling="&quot;Truncated compressed data in IDAT&quot;" id="602476610392"/>
+			<StringLiteral type="char [32]" spelling="&quot;IDAT: ADLER32 checksum mismatch&quot;" id="603523356905"/>
+			<StringLiteral type="char [28]" spelling="&quot;Decompression error in IDAT&quot;" id="604195423565"/>
+			<CallExpr type="void" spelling="png_warning" id="600640750622"/>
+			<CallExpr type="void" spelling="png_benign_error" id="602479637262"/>
+			<CallExpr type="void" spelling="png_error" id="601237049004"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603780628232"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603838552124"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601035407613"/>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp)" spelling="png_warning" id="603298165458"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601307033671"/>
+			<DeclRefExpr type="int" spelling="ret" id="603696243257"/>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp)" spelling="png_benign_error" id="603429864191"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601051536880"/>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp) __attribute__((noreturn))" spelling="png_error" id="603275348959"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600030125316"/>
+			<UnexposedExpr type="png_uint_32" spelling="row_number" id="602799071520"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603758059043"/>
+			<UnexposedExpr type="png_uint_32" spelling="num_rows" id="600696017857"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600140263093"/>
+			<UnexposedExpr type="int" spelling="pass" id="602130279800"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="601539711038"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603992771326"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp)" spelling="png_warning" id="602503215259"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="600273608765"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603114758017"/>
+			<UnexposedExpr type="int" spelling="ret" id="601250643141"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp)" spelling="png_benign_error" id="600029017484"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="604160305443"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600573657008"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp) __attribute__((noreturn))" spelling="png_error" id="601712181987"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="603032295314"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603459547290"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="end" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="stream"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Skip the check on unprocessed input" comment_scope_start="695" comment_scope_end="697"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Did inflate output any data?" comment_scope_start="699" comment_scope_end="723">
+		<SYMBOLS>
+			<MemberRefExpr type="Bytef *" spelling="next_out" id="600179066525"/>
+			<MemberRefExpr type="z_stream" spelling="zstream" id="601183615541"/>
+			<MemberRefExpr type="png_bytep" spelling="row_buf" id="603875990283"/>
+			<MemberRefExpr type="png_uint_32" spelling="row_number" id="603038118566"/>
+			<MemberRefExpr type="png_uint_32" spelling="num_rows" id="602356474500"/>
+			<MemberRefExpr type="png_byte" spelling="pass" id="603535657447"/>
+			<MemberRefExpr type="png_uint_32" spelling="flags" id="603441337920"/>
+			<MemberRefExpr type="png_uint_32" spelling="zowner" id="601674324552"/>
+			<MemberRefExpr type="uInt" spelling="avail_out" id="601792900541"/>
+			<MemberRefExpr type="z_stream" spelling="zstream" id="602866543164"/>
+			<StringLiteral type="char [30]" spelling="&quot;Extra compressed data in IDAT&quot;" id="604174616184"/>
+			<CallExpr type="void" spelling="png_warning" id="600574038981"/>
+			<CallExpr type="void" spelling="png_push_process_row" id="603668660483"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601556651103"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601539734298"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603366396188"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602553699549"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601850504624"/>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp)" spelling="png_warning" id="603578983966"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600908414330"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601958814912"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602026124385"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602716351237"/>
+			<DeclRefExpr type="void (png_structrp)" spelling="png_push_process_row" id="603145657120"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603196593370"/>
+			<UnexposedExpr type="Bytef *" spelling="next_out" id="601565505894"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602402135699"/>
+			<UnexposedExpr type="png_bytep" spelling="row_buf" id="603575845903"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601998162567"/>
+			<UnexposedExpr type="png_uint_32" spelling="row_number" id="602339009023"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600148455255"/>
+			<UnexposedExpr type="png_uint_32" spelling="num_rows" id="603993098109"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602989187928"/>
+			<UnexposedExpr type="int" spelling="pass" id="603698962187"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="603118987723"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602573121556"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp)" spelling="png_warning" id="600572729238"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="600227373221"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600676904847"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601122204523"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603269733087"/>
+			<UnexposedExpr type="uInt" spelling="avail_out" id="601789528883"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="604291377675"/>
+			<UnexposedExpr type="void (*)(png_structrp)" spelling="png_push_process_row" id="602965546586"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600254499454"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="output" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="data" type=" 'Data-Structure and its Components"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Is this unexpected data after the last row?
+          * If it is, artificially terminate the LZ output
+          * here." comment_scope_start="702" comment_scope_end="708">
+		<SYMBOLS>
+			<MemberRefExpr type="png_uint_32" spelling="row_number" id="603038118566"/>
+			<MemberRefExpr type="png_uint_32" spelling="num_rows" id="602356474500"/>
+			<MemberRefExpr type="png_byte" spelling="pass" id="603535657447"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603366396188"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602553699549"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601850504624"/>
+			<UnexposedExpr type="png_uint_32" spelling="row_number" id="602339009023"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600148455255"/>
+			<UnexposedExpr type="png_uint_32" spelling="num_rows" id="603993098109"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602989187928"/>
+			<UnexposedExpr type="int" spelling="pass" id="603698962187"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="603118987723"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602573121556"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="data" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="last" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="terminate" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="output" type=" 'Data-Structure and its Components"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Extra data." comment_scope_start="709" comment_scope_end="713">
+		<SYMBOLS>
+			<MemberRefExpr type="png_uint_32" spelling="flags" id="603441337920"/>
+			<MemberRefExpr type="png_uint_32" spelling="zowner" id="601674324552"/>
+			<StringLiteral type="char [30]" spelling="&quot;Extra compressed data in IDAT&quot;" id="604174616184"/>
+			<CallExpr type="void" spelling="png_warning" id="600574038981"/>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp)" spelling="png_warning" id="603578983966"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600908414330"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601958814912"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602026124385"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp)" spelling="png_warning" id="600572729238"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="600227373221"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600676904847"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601122204523"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603269733087"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="data" type=" 'Data-Structure and its Components"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Do no more processing; skip the unprocessed
+             * input check below." comment_scope_start="714" comment_scope_end="718"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Do we have a complete row?" comment_scope_start="720" comment_scope_end="723">
+		<SYMBOLS>
+			<MemberRefExpr type="uInt" spelling="avail_out" id="601792900541"/>
+			<MemberRefExpr type="z_stream" spelling="zstream" id="602866543164"/>
+			<CallExpr type="void" spelling="png_push_process_row" id="603668660483"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602716351237"/>
+			<DeclRefExpr type="void (png_structrp)" spelling="png_push_process_row" id="603145657120"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603196593370"/>
+			<UnexposedExpr type="uInt" spelling="avail_out" id="601789528883"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="604291377675"/>
+			<UnexposedExpr type="void (*)(png_structrp)" spelling="png_push_process_row" id="602965546586"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600254499454"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="do" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="complete" type=" 'Properties of Datastructure / Function / Blocks"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="And check for the end of the stream." comment_scope_start="725" comment_scope_end="728">
+		<SYMBOLS>
+			<MemberRefExpr type="png_uint_32" spelling="flags" id="603689280977"/>
+			<DeclRefExpr type="int" spelling="ret" id="603605100612"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600461375600"/>
+			<UnexposedExpr type="int" spelling="ret" id="600018145308"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600248424345"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="check" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="for" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="end" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="stream"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="All the data should have been processed, if anything
+    * is left at this point we have bytes of IDAT data
+    * after the zlib end code." comment_scope_start="730" comment_scope_end="736">
+		<SYMBOLS>
+			<MemberRefExpr type="uInt" spelling="avail_in" id="602287020298"/>
+			<MemberRefExpr type="z_stream" spelling="zstream" id="600542551495"/>
+			<StringLiteral type="char [31]" spelling="&quot;Extra compression data in IDAT&quot;" id="602649355028"/>
+			<CallExpr type="void" spelling="png_warning" id="600042371779"/>
+			<FunctionDecl type="void (png_structrp, png_bytep, size_t)" spelling="png_process_IDAT_data" id="601607491283"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602872705180"/>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp)" spelling="png_warning" id="601527452460"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601336222898"/>
+			<UnexposedExpr type="uInt" spelling="avail_in" id="602430793335"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600828108527"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp)" spelling="png_warning" id="602546523502"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="603023801619"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602610576966"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="data" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="processed" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="left" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="bytes" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="data" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="end" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="idat"/>
+			<PROBLEM_DOMAIN word="zlib"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="PRIVATE" comment_scope_start="738" comment_scope_end="738"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="1.5.6: row_info moved out of png_struct to a local here." comment_scope_start="741" comment_scope_end="743">
+		<SYMBOLS>
+			<VarDecl type="png_row_info" spelling="row_info" id="602662322752"/>
+			<TypeRef type="png_row_info" spelling="png_row_info" id="600266468684"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="moved" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="NOTE: width of current interlaced row" comment_scope_start="744" comment_scope_end="744">
+		<SYMBOLS>
+			<MemberRefExpr type="png_uint_32" spelling="width" id="603801421597"/>
+			<MemberRefExpr type="png_uint_32" spelling="iwidth" id="600571150654"/>
+			<DeclRefExpr type="png_row_info" spelling="row_info" id="600218657998"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601193350435"/>
+			<UnexposedExpr type="png_uint_32" spelling="iwidth" id="601173883954"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602256081636"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="interlaced"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="libpng 1.5.6: the following line was copying png_ptr-&gt;rowbytes before
+    * 1.5.6, while the buffer really is this big in current versions of libpng
+    * it may not be in the future, so this was changed just to copy the
+    * interlaced row count:" comment_scope_start="760" comment_scope_end="771">
+		<SYMBOLS>
+			<MemberRefExpr type="png_bytep" spelling="prev_row" id="603126305792"/>
+			<MemberRefExpr type="png_bytep" spelling="row_buf" id="601706060290"/>
+			<MemberRefExpr type="size_t" spelling="rowbytes" id="603680190724"/>
+			<MemberRefExpr type="png_uint_32" spelling="transformations" id="603105114225"/>
+			<CallExpr type="void *" spelling="memcpy" id="600139450912"/>
+			<CallExpr type="void" spelling="png_do_read_transformations" id="602846412581"/>
+			<DeclRefExpr type="void *(void *, const void *, unsigned long)" spelling="memcpy" id="603089413045"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600709929343"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600080471807"/>
+			<DeclRefExpr type="png_row_info" spelling="row_info" id="602459964138"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603555577246"/>
+			<DeclRefExpr type="void (png_structrp, png_row_infop)" spelling="png_do_read_transformations" id="601296811023"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602427124962"/>
+			<DeclRefExpr type="png_row_info" spelling="row_info" id="602616770814"/>
+			<UnexposedExpr type="void *(*)(void *, const void *, unsigned long)" spelling="memcpy" id="602132155843"/>
+			<UnexposedExpr type="void *" spelling="prev_row" id="603228130874"/>
+			<UnexposedExpr type="png_bytep" spelling="prev_row" id="602187063800"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602971784930"/>
+			<UnexposedExpr type="const void *" spelling="row_buf" id="600888986452"/>
+			<UnexposedExpr type="png_bytep" spelling="row_buf" id="603591791983"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601894235093"/>
+			<UnexposedExpr type="size_t" spelling="rowbytes" id="603136684737"/>
+			<UnexposedExpr type="png_uint_32" spelling="transformations" id="601674914964"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601294423915"/>
+			<UnexposedExpr type="void (*)(png_structrp, png_row_infop)" spelling="png_do_read_transformations" id="601022161146"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602312097466"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="while" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="buffer" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="count" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="libpng"/>
+			<PROBLEM_DOMAIN word="libpng"/>
+			<PROBLEM_DOMAIN word="interlaced"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="The transformed pixel depth should match the depth now in row_info." comment_scope_start="772" comment_scope_end="778">
+		<SYMBOLS>
+			<MemberRefExpr type="png_byte" spelling="transformed_pixel_depth" id="600820577984"/>
+			<MemberRefExpr type="png_byte" spelling="transformed_pixel_depth" id="600773046071"/>
+			<MemberRefExpr type="png_byte" spelling="pixel_depth" id="601300398702"/>
+			<MemberRefExpr type="png_byte" spelling="pixel_depth" id="603516866599"/>
+			<MemberRefExpr type="png_byte" spelling="maximum_pixel_depth" id="603721118957"/>
+			<StringLiteral type="char [25]" spelling="&quot;progressive row overflow&quot;" id="600981846344"/>
+			<CallExpr type="void" spelling="png_error" id="602729221083"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="604144284734"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603299764038"/>
+			<DeclRefExpr type="png_row_info" spelling="row_info" id="603053232019"/>
+			<DeclRefExpr type="png_row_info" spelling="row_info" id="600976741024"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601851994021"/>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp) __attribute__((noreturn))" spelling="png_error" id="602904600597"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600039992895"/>
+			<UnexposedExpr type="int" spelling="transformed_pixel_depth" id="600879090559"/>
+			<UnexposedExpr type="png_byte" spelling="transformed_pixel_depth" id="602535618672"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603189374027"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603205923653"/>
+			<UnexposedExpr type="png_byte" spelling="pixel_depth" id="600132367210"/>
+			<UnexposedExpr type="int" spelling="pixel_depth" id="602600379945"/>
+			<UnexposedExpr type="png_byte" spelling="pixel_depth" id="600879858913"/>
+			<UnexposedExpr type="int" spelling="maximum_pixel_depth" id="601623548213"/>
+			<UnexposedExpr type="png_byte" spelling="maximum_pixel_depth" id="603495685266"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600070531068"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp) __attribute__((noreturn))" spelling="png_error" id="604141309537"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="602755450395"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603788119994"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="pixel"/>
+			<PROBLEM_DOMAIN word="depth"/>
+			<PROBLEM_DOMAIN word="depth"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Expand interlaced rows to full size" comment_scope_start="785" comment_scope_end="800">
+		<SYMBOLS>
+			<MemberRefExpr type="png_byte" spelling="interlaced" id="603326856935"/>
+			<MemberRefExpr type="png_uint_32" spelling="transformations" id="600638187592"/>
+			<MemberRefExpr type="png_byte" spelling="pass" id="600593914593"/>
+			<MemberRefExpr type="png_bytep" spelling="row_buf" id="600605113408"/>
+			<MemberRefExpr type="png_byte" spelling="pass" id="601743123212"/>
+			<MemberRefExpr type="png_uint_32" spelling="transformations" id="603581346750"/>
+			<MemberRefExpr type="png_byte" spelling="pass" id="601105819206"/>
+			<MemberRefExpr type="png_byte" spelling="pass" id="602950233065"/>
+			<MemberRefExpr type="png_bytep" spelling="row_buf" id="603772443371"/>
+			<VarDecl type="int" spelling="i" id="602603573507"/>
+			<CallExpr type="void" spelling="png_do_read_interlace" id="600991727162"/>
+			<CallExpr type="void" spelling="png_push_have_row" id="602725642922"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601776786422"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="604105702618"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="604251993566"/>
+			<DeclRefExpr type="void (png_row_infop, png_bytep, int, png_uint_32)" spelling="png_do_read_interlace" id="600036081984"/>
+			<DeclRefExpr type="png_row_info" spelling="row_info" id="601729100521"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601233994888"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601367888224"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602475276464"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601891441858"/>
+			<DeclRefExpr type="int" spelling="i" id="603159340690"/>
+			<DeclRefExpr type="int" spelling="i" id="603135076194"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601133283526"/>
+			<DeclRefExpr type="int" spelling="i" id="601141659241"/>
+			<DeclRefExpr type="void (png_structrp, png_bytep)" spelling="png_push_have_row" id="602732576486"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602890993759"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600160147310"/>
+			<UnexposedExpr type="int" spelling="interlaced" id="602149596644"/>
+			<UnexposedExpr type="png_byte" spelling="interlaced" id="602062706654"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600168330591"/>
+			<UnexposedExpr type="png_uint_32" spelling="transformations" id="601762789040"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601144998804"/>
+			<UnexposedExpr type="int" spelling="pass" id="601525811029"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="603849943848"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601809846823"/>
+			<UnexposedExpr type="void (*)(png_row_infop, png_bytep, int, png_uint_32)" spelling="png_do_read_interlace" id="600419180307"/>
+			<UnexposedExpr type="png_bytep" spelling="row_buf" id="602077603042"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600645249297"/>
+			<UnexposedExpr type="int" spelling="pass" id="603821524859"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="604185970512"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600751957222"/>
+			<UnexposedExpr type="png_uint_32" spelling="transformations" id="602781509812"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602344623753"/>
+			<UnexposedExpr type="int" spelling="pass" id="604293695829"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="604270836908"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603995669660"/>
+			<UnexposedExpr type="int" spelling="i" id="603988087934"/>
+			<UnexposedExpr type="int" spelling="pass" id="600521923865"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="602536592636"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601953882709"/>
+			<UnexposedExpr type="void (*)(png_structrp, png_bytep)" spelling="png_push_have_row" id="600366861105"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601488614154"/>
+			<UnexposedExpr type="png_bytep" spelling="row_buf" id="602767198356"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603478529841"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="expand" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="full" type=" 'Properties of Datastructure / Function / Blocks"/>
+			<POGRAM_DOMAIN word="size" type=" 'Data-Structure and its Components"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="interlaced"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Updates png_ptr-&gt;pass" comment_scope_start="801" comment_scope_end="801">
+		<SYMBOLS>
+			<CallExpr type="void" spelling="png_read_push_finish_row" id="601789243718"/>
+			<DeclRefExpr type="void (png_structrp)" spelling="png_read_push_finish_row" id="603410207403"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601106532086"/>
+			<UnexposedExpr type="void (*)(png_structrp)" spelling="png_read_push_finish_row" id="604075091436"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="604276977397"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="updates" type=" 'Operations as part of Data structure"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Pass 1 might be empty" comment_scope_start="804" comment_scope_end="804">
+		<SYMBOLS>
+			<MemberRefExpr type="png_byte" spelling="pass" id="604004016236"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600722646442"/>
+			<UnexposedExpr type="int" spelling="pass" id="603139274805"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="603533611120"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602556392790"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="empty" type=" 'Properties of Datastructure / Function / Blocks"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Skip top 4 generated rows" comment_scope_start="840" comment_scope_end="840">
+		<SYMBOLS>
+			<MemberRefExpr type="png_byte" spelling="pass" id="600249009386"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600983918474"/>
+			<UnexposedExpr type="int" spelling="pass" id="603685306667"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="602848606482"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602958621703"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="top" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="generated" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Pass 3 might be empty" comment_scope_start="868" comment_scope_end="868">
+		<SYMBOLS>
+			<MemberRefExpr type="png_byte" spelling="pass" id="603285199168"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603742394019"/>
+			<UnexposedExpr type="int" spelling="pass" id="602216066679"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="600910259610"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602079711488"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="empty" type=" 'Properties of Datastructure / Function / Blocks"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Skip top two generated rows" comment_scope_start="890" comment_scope_end="890">
+		<SYMBOLS>
+			<MemberRefExpr type="png_byte" spelling="pass" id="603328505140"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600151246730"/>
+			<UnexposedExpr type="int" spelling="pass" id="603472992746"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="602064462455"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="604225786636"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="top" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="generated" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Pass 5 might be empty" comment_scope_start="918" comment_scope_end="918">
+		<SYMBOLS>
+			<MemberRefExpr type="png_byte" spelling="pass" id="602938280301"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601749592539"/>
+			<UnexposedExpr type="int" spelling="pass" id="602698199394"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="601120769072"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600689006732"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="empty" type=" 'Properties of Datastructure / Function / Blocks"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Skip top generated row" comment_scope_start="937" comment_scope_end="937">
+		<SYMBOLS>
+			<MemberRefExpr type="png_byte" spelling="pass" id="601001580327"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603607000735"/>
+			<UnexposedExpr type="int" spelling="pass" id="601273808244"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="603302553264"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602990169919"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="top" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="generated" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="PRIVATE" comment_scope_start="968" comment_scope_end="968"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Arrays to facilitate easy interlacing - use pass (0 - 6) as index" comment_scope_start="972" comment_scope_end="976">
+		<SYMBOLS>
+			<VarDecl type="const png_byte [7]" spelling="png_pass_start" id="600797960633"/>
+			<TypeRef type="png_byte" spelling="png_byte" id="604015363013"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="index" type=" 'Data-Structure and its Components"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="interlacing"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Start of interlace block" comment_scope_start="972" comment_scope_end="976">
+		<SYMBOLS>
+			<VarDecl type="const png_byte [7]" spelling="png_pass_start" id="600797960633"/>
+			<TypeRef type="png_byte" spelling="png_byte" id="604015363013"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="start" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="block" type=" 'Data-Structure and its Components"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Offset to next interlace block" comment_scope_start="977" comment_scope_end="979">
+		<SYMBOLS>
+			<VarDecl type="const png_byte [7]" spelling="png_pass_inc" id="602226415028"/>
+			<TypeRef type="png_byte" spelling="png_byte" id="604015363013"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="offset" type=" 'Properties of Datastructure / Function / Blocks"/>
+			<POGRAM_DOMAIN word="next" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="block" type=" 'Data-Structure and its Components"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Start of interlace block in the y direction" comment_scope_start="980" comment_scope_end="982">
+		<SYMBOLS>
+			<VarDecl type="const png_byte [7]" spelling="png_pass_ystart" id="600538658587"/>
+			<TypeRef type="png_byte" spelling="png_byte" id="604015363013"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="start" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="block" type=" 'Data-Structure and its Components"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Offset to next interlace block in the y direction" comment_scope_start="983" comment_scope_end="985">
+		<SYMBOLS>
+			<VarDecl type="const png_byte [7]" spelling="png_pass_yinc" id="603684227996"/>
+			<TypeRef type="png_byte" spelling="png_byte" id="604015363013"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="offset" type=" 'Properties of Datastructure / Function / Blocks"/>
+			<POGRAM_DOMAIN word="next" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="block" type=" 'Data-Structure and its Components"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="Height of interlace block.  This is not currently used - if you need
+    * it, uncomment it here and in png.h
+   static const png_byte png_pass_height[] = {8, 8, 4, 4, 2, 2, 1};" comment_scope_start="986" comment_scope_end="1030">
+		<SYMBOLS>
+			<MemberRefExpr type="png_uint_32" spelling="row_number" id="600881506401"/>
+			<MemberRefExpr type="png_uint_32" spelling="row_number" id="604029306866"/>
+			<MemberRefExpr type="png_uint_32" spelling="num_rows" id="600710959979"/>
+			<MemberRefExpr type="png_byte" spelling="interlaced" id="601092209995"/>
+			<MemberRefExpr type="png_uint_32" spelling="row_number" id="600611355077"/>
+			<MemberRefExpr type="png_bytep" spelling="prev_row" id="601575384652"/>
+			<MemberRefExpr type="size_t" spelling="rowbytes" id="603163122734"/>
+			<MemberRefExpr type="png_byte" spelling="pass" id="600052782027"/>
+			<MemberRefExpr type="png_byte" spelling="pass" id="602181701687"/>
+			<MemberRefExpr type="png_uint_32" spelling="width" id="601123656947"/>
+			<MemberRefExpr type="png_byte" spelling="pass" id="600763091164"/>
+			<MemberRefExpr type="png_uint_32" spelling="width" id="600466149738"/>
+			<MemberRefExpr type="png_byte" spelling="pass" id="603736889578"/>
+			<MemberRefExpr type="png_uint_32" spelling="width" id="603288393004"/>
+			<MemberRefExpr type="png_byte" spelling="pass" id="603899416374"/>
+			<MemberRefExpr type="png_byte" spelling="pass" id="603760370168"/>
+			<MemberRefExpr type="png_byte" spelling="pass" id="602955344128"/>
+			<MemberRefExpr type="png_byte" spelling="pass" id="603921020621"/>
+			<MemberRefExpr type="png_uint_32" spelling="iwidth" id="601331678904"/>
+			<MemberRefExpr type="png_uint_32" spelling="width" id="602507908064"/>
+			<MemberRefExpr type="png_byte" spelling="pass" id="603454677906"/>
+			<MemberRefExpr type="png_byte" spelling="pass" id="603966282330"/>
+			<MemberRefExpr type="png_byte" spelling="pass" id="600154649177"/>
+			<MemberRefExpr type="png_uint_32" spelling="transformations" id="602695947097"/>
+			<MemberRefExpr type="png_uint_32" spelling="num_rows" id="600570195360"/>
+			<MemberRefExpr type="png_uint_32" spelling="height" id="600915284572"/>
+			<MemberRefExpr type="png_byte" spelling="pass" id="601383733771"/>
+			<MemberRefExpr type="png_byte" spelling="pass" id="603979826596"/>
+			<MemberRefExpr type="png_byte" spelling="pass" id="604025705795"/>
+			<MemberRefExpr type="png_uint_32" spelling="iwidth" id="600676211004"/>
+			<MemberRefExpr type="png_uint_32" spelling="num_rows" id="603882429014"/>
+			<CallExpr type="void *" spelling="memset" id="601163193581"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602387345625"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601943763387"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603875421872"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600109031205"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602660454722"/>
+			<DeclRefExpr type="void *(void *, int, unsigned long)" spelling="memset" id="600805949498"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603140328316"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600930220097"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602287323695"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="604128036666"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602944279071"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603302614398"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="603278502036"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601665718003"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601589077694"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601932816538"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602509174836"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601352743260"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601574533881"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601795725347"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600938481274"/>
+			<DeclRefExpr type="const png_byte [7]" spelling="png_pass_inc" id="600064619965"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602544950941"/>
+			<DeclRefExpr type="const png_byte [7]" spelling="png_pass_start" id="603301056843"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601984770500"/>
+			<DeclRefExpr type="const png_byte [7]" spelling="png_pass_inc" id="603058826648"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="602341326824"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601144396816"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="604025676435"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600339180063"/>
+			<DeclRefExpr type="const png_byte [7]" spelling="png_pass_yinc" id="601843923660"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601538341032"/>
+			<DeclRefExpr type="const png_byte [7]" spelling="png_pass_ystart" id="600590670174"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601222567704"/>
+			<DeclRefExpr type="const png_byte [7]" spelling="png_pass_yinc" id="601042285002"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="601876623925"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="604114345559"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="600700320269"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="604170018776"/>
+			<UnexposedExpr type="png_uint_32" spelling="row_number" id="603135630036"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602477773666"/>
+			<UnexposedExpr type="png_uint_32" spelling="num_rows" id="600624395298"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601154514579"/>
+			<UnexposedExpr type="int" spelling="interlaced" id="601683410003"/>
+			<UnexposedExpr type="png_byte" spelling="interlaced" id="603173757505"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601722686280"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603421591031"/>
+			<UnexposedExpr type="void *(*)(void *, int, unsigned long)" spelling="memset" id="600240115376"/>
+			<UnexposedExpr type="void *" spelling="prev_row" id="604130455565"/>
+			<UnexposedExpr type="png_bytep" spelling="prev_row" id="601128939154"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600369972570"/>
+			<UnexposedExpr type="size_t" spelling="rowbytes" id="604121382863"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603884893509"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602573890069"/>
+			<UnexposedExpr type="int" spelling="pass" id="600392402739"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="603220303839"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601571223541"/>
+			<UnexposedExpr type="png_uint_32" spelling="width" id="602885838490"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603404026460"/>
+			<UnexposedExpr type="int" spelling="pass" id="601153281245"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="600469692874"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601935755406"/>
+			<UnexposedExpr type="png_uint_32" spelling="width" id="601796674716"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600775670466"/>
+			<UnexposedExpr type="int" spelling="pass" id="601722306128"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="600114126495"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600002897783"/>
+			<UnexposedExpr type="png_uint_32" spelling="width" id="603757830273"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602556662820"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602449698785"/>
+			<UnexposedExpr type="int" spelling="pass" id="602444590709"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="602452902773"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603064440813"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602434289312"/>
+			<UnexposedExpr type="int" spelling="pass" id="602649011546"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="602078340024"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600098518429"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602650240725"/>
+			<UnexposedExpr type="png_uint_32" spelling="width" id="604074049990"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602048541910"/>
+			<UnexposedExpr type="const png_byte *" spelling="png_pass_inc" id="601352375885"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="604179691254"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601735017189"/>
+			<UnexposedExpr type="const png_byte *" spelling="png_pass_start" id="604204920789"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="603382350289"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603434557179"/>
+			<UnexposedExpr type="const png_byte *" spelling="png_pass_inc" id="602378255813"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="602199642980"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600427848371"/>
+			<UnexposedExpr type="png_uint_32" spelling="transformations" id="600010543377"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="603597760061"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601703677851"/>
+			<UnexposedExpr type="png_uint_32" spelling="height" id="603865951987"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601516349922"/>
+			<UnexposedExpr type="const png_byte *" spelling="png_pass_yinc" id="604071690298"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="603870460654"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="602988385576"/>
+			<UnexposedExpr type="const png_byte *" spelling="png_pass_ystart" id="604288401371"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="603290387425"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601565136512"/>
+			<UnexposedExpr type="const png_byte *" spelling="png_pass_yinc" id="600043865704"/>
+			<UnexposedExpr type="png_byte" spelling="pass" id="601374759391"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="604106229043"/>
+			<UnexposedExpr type="png_uint_32" spelling="iwidth" id="600895125087"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="600435680492"/>
+			<UnexposedExpr type="png_uint_32" spelling="num_rows" id="601486086286"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="601529532049"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="height" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="block" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="static" type=" 'Properties of Datastructure / Function / Blocks"/>
+			<POGRAM_DOMAIN word="const" type=" 'Properties of Datastructure / Function / Blocks"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="png"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="READ_INTERLACING" comment_scope_start="1031" comment_scope_end="1031"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="PRIVATE" comment_scope_start="1034" comment_scope_end="1034"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="PRIVATE" comment_scope_start="1041" comment_scope_end="1041"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="PRIVATE" comment_scope_start="1048" comment_scope_end="1048"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="new_row is a flag here - if it is NULL then the app callback was called
+    * from an empty row (see the calls to png_struct::row_fn below), otherwise
+    * it must be png_ptr-&gt;row_buf+1" comment_scope_start="1064" comment_scope_end="1068">
+		<SYMBOLS>
+			<DeclRefExpr type="png_const_bytep" spelling="new_row" id="604231067739"/>
+			<UnexposedExpr type="png_const_bytep" spelling="new_row" id="600471606853"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="null" type=" 'Properties of Datastructure / Function / Blocks"/>
+			<POGRAM_DOMAIN word="empty" type=" 'Properties of Datastructure / Function / Blocks"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="app"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="blocky display" comment_scope_start="1069" comment_scope_end="1069">
+		<SYMBOLS>
+			<CallExpr type="void" spelling="png_combine_row" id="602332083778"/>
+			<DeclRefExpr type="void (png_const_structrp, png_bytep, int)" spelling="png_combine_row" id="600225025077"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="601022362025"/>
+			<DeclRefExpr type="png_bytep" spelling="old_row" id="601144675023"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_bytep, int)" spelling="png_combine_row" id="602290028026"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="601283261146"/>
+			<UnexposedExpr type="png_bytep" spelling="old_row" id="603032695203"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="display" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="READ_INTERLACING" comment_scope_start="1071" comment_scope_end="1071"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpread.c" comment_text="PROGRESSIVE_READ" comment_scope_start="1096" comment_scope_end="1096"/>
+</COMMENTS>

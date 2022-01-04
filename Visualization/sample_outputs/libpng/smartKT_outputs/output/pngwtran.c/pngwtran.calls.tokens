@@ -1,0 +1,10 @@
+# FILENAME	LOCATION	FUNCNAME	CALLNODEID	CALLEXPR
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwtran.c	526:7::527:53	png_do_strip_channel	1503146757060	png_do_strip_channel( row_info , png_ptr -> row_buf + 1 , ! ( png_ptr -> flags & PNG_FLAG_FILLER_AFTER ) ) 
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwtran.c	532:7::532:54	png_do_packswap	1503269836824	png_do_packswap( row_info , png_ptr -> row_buf + 1 ) 
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwtran.c	537:7::538:43	png_do_pack	1500924149126	png_do_pack( row_info , png_ptr -> row_buf + 1 , ( png_uint_32 ) png_ptr -> bit_depth ) 
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwtran.c	544:7::544:50	png_do_swap	1502431612142	png_do_swap( row_info , png_ptr -> row_buf + 1 ) 
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwtran.c	550:7::551:30	png_do_shift	1502908495611	png_do_shift( row_info , png_ptr -> row_buf + 1 , & ( png_ptr -> shift ) ) 
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwtran.c	556:7::556:62	png_do_write_swap_alpha	1502136023812	png_do_write_swap_alpha( row_info , png_ptr -> row_buf + 1 ) 
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwtran.c	561:7::561:64	png_do_write_invert_alpha	1504045090732	png_do_write_invert_alpha( row_info , png_ptr -> row_buf + 1 ) 
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwtran.c	566:7::566:49	png_do_bgr	1502024409511	png_do_bgr( row_info , png_ptr -> row_buf + 1 ) 
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwtran.c	571:7::571:52	png_do_invert	1502513336045	png_do_invert( row_info , png_ptr -> row_buf + 1 ) 

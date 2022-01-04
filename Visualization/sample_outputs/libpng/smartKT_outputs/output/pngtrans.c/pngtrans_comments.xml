@@ -1,0 +1,920 @@
+<?xml version="1.0" ?>
+<COMMENTS project_name="libpng" project_path="/home/dewang/smartKT/SmartKT/kgg/projects/libpng">
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Turn on BGR-to-RGB mapping" comment_scope_start="19" comment_scope_end="32">
+		<SYMBOLS>
+			<MemberRefExpr type="png_uint_32" spelling="transformations" id="1203942092125"/>
+			<TypeRef type="png_structrp" spelling="png_structrp" id="1202457879079"/>
+			<ParmDecl type="png_structrp" spelling="png_ptr" id="1201932615140"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1201293593746"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1201557414964"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1201421561670"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1204039086972"/>
+			<FunctionDecl type="void (png_structrp)" spelling="png_set_bgr" id="1201328905851"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="bgr-to-rgb"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Turn on 16-bit byte swapping" comment_scope_start="33" comment_scope_end="47">
+		<SYMBOLS>
+			<MemberRefExpr type="png_byte" spelling="bit_depth" id="1201586961915"/>
+			<MemberRefExpr type="png_uint_32" spelling="transformations" id="1202386097754"/>
+			<TypeRef type="png_structrp" spelling="png_structrp" id="1202457879079"/>
+			<ParmDecl type="png_structrp" spelling="png_ptr" id="1203278983752"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1203202573474"/>
+			<UnexposedExpr type="int" spelling="bit_depth" id="1201650861915"/>
+			<UnexposedExpr type="png_byte" spelling="bit_depth" id="1203203590365"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1204139099457"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1200801582422"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1202995311121"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1201601184636"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1200872812614"/>
+			<FunctionDecl type="void (png_structrp)" spelling="png_set_swap" id="1203498366385"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="byte" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Turn on pixel packing" comment_scope_start="48" comment_scope_end="67">
+		<SYMBOLS>
+			<MemberRefExpr type="png_byte" spelling="bit_depth" id="1200411609500"/>
+			<MemberRefExpr type="png_uint_32" spelling="transformations" id="1201371464955"/>
+			<MemberRefExpr type="png_byte" spelling="usr_bit_depth" id="1200797917615"/>
+			<TypeRef type="png_structrp" spelling="png_structrp" id="1202457879079"/>
+			<ParmDecl type="png_structrp" spelling="png_ptr" id="1201058511603"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1201482671772"/>
+			<UnexposedExpr type="int" spelling="bit_depth" id="1202955963705"/>
+			<UnexposedExpr type="png_byte" spelling="bit_depth" id="1203613650393"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1201316552592"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1202931240695"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1202950804250"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1201618306034"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1201576133969"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1202408379112"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1200178781489"/>
+			<FunctionDecl type="void (png_structrp)" spelling="png_set_packing" id="1201078301582"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="pixel"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Turn on packed pixel swapping" comment_scope_start="68" comment_scope_end="113">
+		<SYMBOLS>
+			<MemberRefExpr type="png_byte" spelling="bit_depth" id="1202626441043"/>
+			<MemberRefExpr type="png_uint_32" spelling="transformations" id="1203853832315"/>
+			<MemberRefExpr type="png_uint_32" spelling="transformations" id="1203340009524"/>
+			<MemberRefExpr type="png_color_8" spelling="shift" id="1202140963926"/>
+			<MemberRefExpr type="png_byte" spelling="interlaced" id="1202840895751"/>
+			<MemberRefExpr type="png_uint_32" spelling="transformations" id="1203148167361"/>
+			<TypeRef type="png_structrp" spelling="png_structrp" id="1202457879079"/>
+			<TypeRef type="png_structrp" spelling="png_structrp" id="1202457879079"/>
+			<TypeRef type="png_const_color_8p" spelling="png_const_color_8p" id="1200454562806"/>
+			<TypeRef type="png_structrp" spelling="png_structrp" id="1202457879079"/>
+			<ParmDecl type="png_structrp" spelling="png_ptr" id="1203528769985"/>
+			<ParmDecl type="png_structrp" spelling="png_ptr" id="1202308481436"/>
+			<ParmDecl type="png_const_color_8p" spelling="true_bits" id="1202905673749"/>
+			<ParmDecl type="png_structrp" spelling="png_ptr" id="1200895698246"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1204114501920"/>
+			<UnexposedExpr type="int" spelling="bit_depth" id="1203586653428"/>
+			<UnexposedExpr type="png_byte" spelling="bit_depth" id="1203210971787"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1203543338633"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1204136242771"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1202390515692"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1200095584189"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1200585507291"/>
+			<UnexposedExpr type="png_const_color_8p" spelling="true_bits" id="1202928026106"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1204219786730"/>
+			<UnexposedExpr type="int" spelling="interlaced" id="1200123203787"/>
+			<UnexposedExpr type="png_byte" spelling="interlaced" id="1204000757188"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1202703818832"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1204216761270"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1202099114180"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1202630060709"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1202614138596"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1201124245269"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1201709162494"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1204259123616"/>
+			<DeclRefExpr type="png_const_color_8p" spelling="true_bits" id="1201005606166"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1204070211633"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1201059922272"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1202647453852"/>
+			<FunctionDecl type="void (png_structrp)" spelling="png_set_packswap" id="1200389593295"/>
+			<FunctionDecl type="void (png_structrp, png_const_color_8p)" spelling="png_set_shift" id="1201156132058"/>
+			<FunctionDecl type="int (png_structrp)" spelling="png_set_interlace_handling" id="1201921069264"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="pixel"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Add a filler byte on read, or remove a filler or alpha byte on write.
+ * The filler type has changed in v0.95 to allow future 2-byte fillers
+ * for 48-bit input data, as well as to avoid problems with some compilers
+ * that don't like bytes as parameters." comment_scope_start="114" comment_scope_end="126">
+		<SYMBOLS>
+			<TypeRef type="png_structrp" spelling="png_structrp" id="1202457879079"/>
+			<TypeRef type="png_uint_32" spelling="png_uint_32" id="1202398403827"/>
+			<ParmDecl type="png_structrp" spelling="png_ptr" id="1203500079418"/>
+			<ParmDecl type="png_uint_32" spelling="filler" id="1203833757828"/>
+			<ParmDecl type="int" spelling="filler_loc" id="1202700159992"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1201885761675"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1200850859383"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="add" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="byte" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="read" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="remove" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="byte" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="write" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="for" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="input" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="data" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="bytes" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="parameters" type=" 'Data-Structure and its Components"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="filler"/>
+			<PROBLEM_DOMAIN word="filler"/>
+			<PROBLEM_DOMAIN word="alpha"/>
+			<PROBLEM_DOMAIN word="filler"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="In libpng 1.6 it is possible to determine whether this is a read or write
+    * operation and therefore to do more checking here for a valid call." comment_scope_start="127" comment_scope_end="147">
+		<SYMBOLS>
+			<MemberRefExpr type="png_uint_32" spelling="mode" id="1202151069125"/>
+			<MemberRefExpr type="png_uint_16" spelling="filler" id="1202518073211"/>
+			<TypeRef type="png_uint_16" spelling="png_uint_16" id="1200372290984"/>
+			<UnexposedExpr type="png_uint_32" spelling="mode" id="1200714872339"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1203259040027"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1203738683672"/>
+			<UnexposedExpr type="png_uint_32" spelling="filler" id="1203817712381"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1201603908347"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1202899484919"/>
+			<DeclRefExpr type="png_uint_32" spelling="filler" id="1203208783050"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="determine" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="read" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="write" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="do" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="checking" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="for" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="valid" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="libpng"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="On read png_set_filler is always valid, regardless of the base PNG
+          * format, because other transformations can give a format where the
+          * filler code can execute (basically an 8 or 16-bit component RGB or G
+          * format.)
+          *
+          * NOTE: usr_channels is not used by the read code!  (This has led to
+          * confusion in the past.)  The filler is only used in the read code." comment_scope_start="133" comment_scope_end="143">
+		<SYMBOLS>
+			<MemberRefExpr type="png_uint_16" spelling="filler" id="1202518073211"/>
+			<TypeRef type="png_uint_16" spelling="png_uint_16" id="1200372290984"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1203738683672"/>
+			<UnexposedExpr type="png_uint_32" spelling="filler" id="1203817712381"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1202899484919"/>
+			<DeclRefExpr type="png_uint_32" spelling="filler" id="1203208783050"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="read" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="valid" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="base" type=" 'Properties of Datastructure / Function / Blocks"/>
+			<POGRAM_DOMAIN word="read" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="read" type=" 'Operations as part of Data structure"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="png"/>
+			<PROBLEM_DOMAIN word="filler"/>
+			<PROBLEM_DOMAIN word="rgb"/>
+			<PROBLEM_DOMAIN word="filler"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="not used in the write case" comment_scope_start="144" comment_scope_end="144"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="write" comment_scope_start="149" comment_scope_end="149"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="On write the usr_channels parameter must be set correctly at the
+          * start to record the number of channels in the app-supplied data." comment_scope_start="152" comment_scope_end="184">
+		<SYMBOLS>
+			<MemberRefExpr type="png_byte" spelling="color_type" id="1202804274685"/>
+			<MemberRefExpr type="png_byte" spelling="usr_channels" id="1201003966250"/>
+			<MemberRefExpr type="png_byte" spelling="bit_depth" id="1203407245758"/>
+			<MemberRefExpr type="png_byte" spelling="usr_channels" id="1200447306350"/>
+			<UnexposedExpr type="int" spelling="color_type" id="1203586621782"/>
+			<UnexposedExpr type="png_byte" spelling="color_type" id="1203075941841"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1200412511712"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1201033350519"/>
+			<UnexposedExpr type="int" spelling="bit_depth" id="1201602736616"/>
+			<UnexposedExpr type="png_byte" spelling="bit_depth" id="1203100488325"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1202216155910"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1201463516321"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp)" spelling="png_app_error" id="1202170787095"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="1203813440642"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1203719257051"/>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp)" spelling="png_app_error" id="1201792449828"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="1203086498472"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1204116658900"/>
+			<StringLiteral type="char [56]" spelling="&quot;png_set_filler is invalid for low bit depth gray output&quot;" id="1203622496562"/>
+			<StringLiteral type="char [41]" spelling="&quot;png_set_filler: inappropriate color type&quot;" id="1203700894992"/>
+			<CallExpr type="void" spelling="png_app_error" id="1201230403479"/>
+			<CallExpr type="void" spelling="png_app_error" id="1203454402575"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1202394113993"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1200687629884"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1202049244375"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1203169586965"/>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp)" spelling="png_app_error" id="1203479565866"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1202296198984"/>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp)" spelling="png_app_error" id="1203748793851"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1202080418709"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="write" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="set" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="start" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="record" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="number" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="data" type=" 'Data-Structure and its Components"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="There simply isn't any code in libpng to strip out bits
+                   * from bytes when the components are less than a byte in
+                   * size!" comment_scope_start="170" comment_scope_end="178">
+		<SYMBOLS>
+			<UnexposedExpr type="void (*)(png_const_structrp, png_const_charp)" spelling="png_app_error" id="1202170787095"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="1203813440642"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1203719257051"/>
+			<StringLiteral type="char [56]" spelling="&quot;png_set_filler is invalid for low bit depth gray output&quot;" id="1203622496562"/>
+			<CallExpr type="void" spelling="png_app_error" id="1201230403479"/>
+			<DeclRefExpr type="void (png_const_structrp, png_const_charp)" spelling="png_app_error" id="1203479565866"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1202296198984"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="bytes" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="byte" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="size" type=" 'Data-Structure and its Components"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="libpng"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Here on success - libpng supports the operation, set the transformation
+    * and the flag to say where the filler channel is." comment_scope_start="191" comment_scope_end="201">
+		<SYMBOLS>
+			<MemberRefExpr type="png_uint_32" spelling="transformations" id="1202125056231"/>
+			<MemberRefExpr type="png_uint_32" spelling="flags" id="1202249259779"/>
+			<MemberRefExpr type="png_uint_32" spelling="flags" id="1200834564279"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1203443421479"/>
+			<UnexposedExpr type="int" spelling="filler_loc" id="1202438495932"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1200320004194"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1200121953954"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1202974588785"/>
+			<DeclRefExpr type="int" spelling="filler_loc" id="1201464036605"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1203830945940"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1200432229043"/>
+			<FunctionDecl type="void (png_structrp, png_uint_32, int)" spelling="png_set_filler" id="1202643440421"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="set" type=" 'Data-Structure and its Components"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="libpng"/>
+			<PROBLEM_DOMAIN word="transformation"/>
+			<PROBLEM_DOMAIN word="filler"/>
+			<PROBLEM_DOMAIN word="channel"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Added to libpng-1.2.7" comment_scope_start="203" comment_scope_end="212">
+		<SYMBOLS>
+			<TypeRef type="png_structrp" spelling="png_structrp" id="1202457879079"/>
+			<TypeRef type="png_uint_32" spelling="png_uint_32" id="1202398403827"/>
+			<ParmDecl type="png_structrp" spelling="png_ptr" id="1203569037349"/>
+			<ParmDecl type="png_uint_32" spelling="filler" id="1201008887913"/>
+			<ParmDecl type="int" spelling="filler_loc" id="1201638052000"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1202434607914"/>
+			<UnexposedExpr type="void (*)(png_structrp, png_uint_32, int)" spelling="png_set_filler" id="1203464642200"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1200817213523"/>
+			<UnexposedExpr type="png_uint_32" spelling="filler" id="1204137975526"/>
+			<UnexposedExpr type="int" spelling="filler_loc" id="1203918342721"/>
+			<CallExpr type="void" spelling="png_set_filler" id="1200091429481"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1201181475979"/>
+			<DeclRefExpr type="void (png_structrp, png_uint_32, int)" spelling="png_set_filler" id="1202651326517"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1202941408731"/>
+			<DeclRefExpr type="png_uint_32" spelling="filler" id="1203022865178"/>
+			<DeclRefExpr type="int" spelling="filler_loc" id="1201002030703"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="added" type=" 'Operations as part of Data structure"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="The above may fail to do anything." comment_scope_start="213" comment_scope_end="216">
+		<SYMBOLS>
+			<MemberRefExpr type="png_uint_32" spelling="transformations" id="1200293774126"/>
+			<MemberRefExpr type="png_uint_32" spelling="transformations" id="1200837550139"/>
+			<UnexposedExpr type="png_uint_32" spelling="transformations" id="1202395478913"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1203628487148"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1202985761894"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1202411860756"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1201546735663"/>
+			<FunctionDecl type="void (png_structrp, png_uint_32, int)" spelling="png_set_add_alpha" id="1200479023150"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="fail" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="do" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Invert monochrome grayscale data" comment_scope_start="260" comment_scope_end="260"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="PRIVATE" comment_scope_start="261" comment_scope_end="261"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="This test removed from libpng version 1.0.13 and 1.2.0:
+   *   if (row_info-&gt;bit_depth == 1 &amp;&amp;" comment_scope_start="266" comment_scope_end="280">
+		<SYMBOLS>
+			<MemberRefExpr type="png_byte" spelling="color_type" id="1202648860585"/>
+			<MemberRefExpr type="size_t" spelling="rowbytes" id="1202761971813"/>
+			<TypeRef type="png_bytep" spelling="png_bytep" id="1203021641356"/>
+			<TypeRef type="size_t" spelling="size_t" id="1201257505097"/>
+			<TypeRef type="size_t" spelling="size_t" id="1201257505097"/>
+			<TypeRef type="png_byte" spelling="png_byte" id="1201389469387"/>
+			<VarDecl type="png_bytep" spelling="rp" id="1201832851077"/>
+			<VarDecl type="size_t" spelling="i" id="1202750718952"/>
+			<VarDecl type="size_t" spelling="istop" id="1203405778930"/>
+			<UnexposedExpr type="int" spelling="color_type" id="1203883745141"/>
+			<UnexposedExpr type="png_byte" spelling="color_type" id="1201716558520"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1203726246941"/>
+			<UnexposedExpr type="png_bytep" spelling="row" id="1200241036660"/>
+			<UnexposedExpr type="size_t" spelling="rowbytes" id="1200268544381"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1200406660899"/>
+			<UnexposedExpr type="size_t" spelling="i" id="1203518481913"/>
+			<UnexposedExpr type="size_t" spelling="istop" id="1203015522580"/>
+			<UnexposedExpr type="png_bytep" spelling="rp" id="1201519149424"/>
+			<UnexposedExpr type="png_bytep" spelling="rp" id="1200941641785"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1201031942617"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1204034007117"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1202141778327"/>
+			<DeclRefExpr type="size_t" spelling="i" id="1204248254408"/>
+			<DeclRefExpr type="size_t" spelling="i" id="1200877802233"/>
+			<DeclRefExpr type="size_t" spelling="istop" id="1201197281709"/>
+			<DeclRefExpr type="size_t" spelling="i" id="1203448920884"/>
+			<DeclRefExpr type="png_bytep" spelling="rp" id="1202612478787"/>
+			<DeclRefExpr type="png_bytep" spelling="rp" id="1201511871675"/>
+			<DeclRefExpr type="png_bytep" spelling="rp" id="1201549014134"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="removed" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="libpng"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Swaps byte order on 16-bit depth images" comment_scope_start="317" comment_scope_end="317"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="PRIVATE" comment_scope_start="318" comment_scope_end="318"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Feature added to libpng-1.6.11 for testing purposes, not
+          * enabled by default." comment_scope_start="332" comment_scope_end="341">
+		<SYMBOLS>
+			<TypeRef type="png_byte" spelling="png_byte" id="1201389469387"/>
+			<VarDecl type="png_byte" spelling="t" id="1203060934945"/>
+			<UnexposedExpr type="png_bytep" spelling="rp" id="1202674325333"/>
+			<UnexposedExpr type="png_bytep" spelling="rp" id="1202864000424"/>
+			<UnexposedExpr type="png_bytep" spelling="rp" id="1202577656845"/>
+			<UnexposedExpr type="png_bytep" spelling="rp" id="1202662692963"/>
+			<UnexposedExpr type="png_byte" spelling="t" id="1201180518645"/>
+			<DeclRefExpr type="png_bytep" spelling="rp" id="1200400746029"/>
+			<DeclRefExpr type="png_bytep" spelling="rp" id="1203277391241"/>
+			<DeclRefExpr type="png_bytep" spelling="rp" id="1202251173371"/>
+			<DeclRefExpr type="png_bytep" spelling="rp" id="1201210118824"/>
+			<DeclRefExpr type="png_byte" spelling="t" id="1201793894111"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="added" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="for" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="default" type=" 'Properties of Datastructure / Function / Blocks"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Swaps pixel packing order within bytes" comment_scope_start="453" comment_scope_end="453"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="PRIVATE" comment_scope_start="454" comment_scope_end="454"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="PACKSWAP || WRITE_PACKSWAP" comment_scope_start="482" comment_scope_end="482"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Remove a channel - this used to be 'png_do_strip_filler' but it used a
+ * somewhat weird combination of flags to determine what to do.  All the calls
+ * to png_do_strip_filler are changed in 1.5.2 to call this instead with the
+ * correct arguments.
+ *
+ * The routine isn't general - the channel must be the channel at the start or
+ * end (not in the middle) of each pixel." comment_scope_start="486" comment_scope_end="493"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="PRIVATE" comment_scope_start="494" comment_scope_end="494"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="source pointer" comment_scope_start="497" comment_scope_end="497">
+		<SYMBOLS>
+			<TypeRef type="png_bytep" spelling="png_bytep" id="1203021641356"/>
+			<VarDecl type="png_bytep" spelling="sp" id="1202335960423"/>
+			<UnexposedExpr type="png_bytep" spelling="row" id="1204189663609"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1202874433265"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="pointer" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="destination pointer" comment_scope_start="498" comment_scope_end="498">
+		<SYMBOLS>
+			<TypeRef type="png_bytep" spelling="png_bytep" id="1203021641356"/>
+			<VarDecl type="png_bytep" spelling="dp" id="1204130998834"/>
+			<UnexposedExpr type="png_bytep" spelling="row" id="1201290045107"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1200985660793"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="pointer" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="One beyond end of row" comment_scope_start="499" comment_scope_end="499">
+		<SYMBOLS>
+			<MemberRefExpr type="size_t" spelling="rowbytes" id="1200287323693"/>
+			<TypeRef type="png_bytep" spelling="png_bytep" id="1203021641356"/>
+			<VarDecl type="png_bytep" spelling="ep" id="1202773250299"/>
+			<UnexposedExpr type="png_bytep" spelling="row" id="1201387206609"/>
+			<UnexposedExpr type="size_t" spelling="rowbytes" id="1203519278155"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1200307048217"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1202308949919"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1202915353681"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="end" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="At the start sp will point to the first byte to copy and dp to where
+    * it is copied to.  ep always points just beyond the end of the row, so
+    * the loop simply copies (channels-1) channels until sp reaches ep.
+    *
+    * at_start:        0 -- convert AG, XG, ARGB, XRGB, AAGG, XXGG, etc.
+    *            nonzero -- convert GA, GX, RGBA, RGBX, GGAA, RRGGBBXX, etc." comment_scope_start="501" comment_scope_end="513">
+		<SYMBOLS>
+			<MemberRefExpr type="png_byte" spelling="channels" id="1201164894403"/>
+			<MemberRefExpr type="png_byte" spelling="bit_depth" id="1201253830058"/>
+			<UnexposedExpr type="int" spelling="channels" id="1203803017686"/>
+			<UnexposedExpr type="png_byte" spelling="channels" id="1203984683179"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1202159999585"/>
+			<UnexposedExpr type="int" spelling="bit_depth" id="1201980917931"/>
+			<UnexposedExpr type="png_byte" spelling="bit_depth" id="1200832295601"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1201330674167"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1202134364712"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1203002485909"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="start" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="first" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="byte" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="end" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="convert" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="convert" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="ag"/>
+			<PROBLEM_DOMAIN word="xg"/>
+			<PROBLEM_DOMAIN word="argb"/>
+			<PROBLEM_DOMAIN word="xrgb"/>
+			<PROBLEM_DOMAIN word="aagg"/>
+			<PROBLEM_DOMAIN word="xxgg"/>
+			<PROBLEM_DOMAIN word="ga"/>
+			<PROBLEM_DOMAIN word="gx"/>
+			<PROBLEM_DOMAIN word="rgba"/>
+			<PROBLEM_DOMAIN word="rgbx"/>
+			<PROBLEM_DOMAIN word="ggaa"/>
+			<PROBLEM_DOMAIN word="rrggbbxx"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="GA, GX, XG cases" comment_scope_start="501" comment_scope_end="513">
+		<SYMBOLS>
+			<MemberRefExpr type="png_byte" spelling="channels" id="1201164894403"/>
+			<MemberRefExpr type="png_byte" spelling="bit_depth" id="1201253830058"/>
+			<UnexposedExpr type="int" spelling="channels" id="1203803017686"/>
+			<UnexposedExpr type="png_byte" spelling="channels" id="1203984683179"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1202159999585"/>
+			<UnexposedExpr type="int" spelling="bit_depth" id="1201980917931"/>
+			<UnexposedExpr type="png_byte" spelling="bit_depth" id="1200832295601"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1201330674167"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1202134364712"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1203002485909"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="ga"/>
+			<PROBLEM_DOMAIN word="gx"/>
+			<PROBLEM_DOMAIN word="xg"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Skip initial filler" comment_scope_start="514" comment_scope_end="514">
+		<SYMBOLS>
+			<UnexposedExpr type="int" spelling="at_start" id="1202771939801"/>
+			<DeclRefExpr type="int" spelling="at_start" id="1203512163384"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="filler"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Skip initial channel and, for sp, the filler" comment_scope_start="516" comment_scope_end="516"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="For a 1 pixel wide image there is nothing to do" comment_scope_start="521" comment_scope_end="525">
+		<SYMBOLS>
+			<UnexposedExpr type="png_bytep" spelling="sp" id="1204280074004"/>
+			<UnexposedExpr type="png_bytep" spelling="ep" id="1202327744943"/>
+			<UnexposedExpr type="png_bytep" spelling="sp" id="1201297399987"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1202701943209"/>
+			<DeclRefExpr type="png_bytep" spelling="ep" id="1200055330298"/>
+			<DeclRefExpr type="png_bytep" spelling="dp" id="1204036469994"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1201468213573"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1203175554973"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="for" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="do" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="pixel"/>
+			<PROBLEM_DOMAIN word="image"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Skip initial filler" comment_scope_start="532" comment_scope_end="532">
+		<SYMBOLS>
+			<UnexposedExpr type="int" spelling="at_start" id="1203206679889"/>
+			<DeclRefExpr type="int" spelling="at_start" id="1204081178359"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="filler"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Skip initial channel and, for sp, the filler" comment_scope_start="534" comment_scope_end="534"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="bad bit depth" comment_scope_start="548" comment_scope_end="548"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Finally fix the color type if it records an alpha channel" comment_scope_start="552" comment_scope_end="555">
+		<SYMBOLS>
+			<MemberRefExpr type="png_byte" spelling="color_type" id="1200223217896"/>
+			<MemberRefExpr type="png_byte" spelling="color_type" id="1204091157560"/>
+			<UnexposedExpr type="int" spelling="color_type" id="1203616036678"/>
+			<UnexposedExpr type="png_byte" spelling="color_type" id="1201510559110"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1203045703534"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1201152002525"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1202475478791"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1202896267854"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="color"/>
+			<PROBLEM_DOMAIN word="alpha"/>
+			<PROBLEM_DOMAIN word="channel"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="RGBA, RGBX, XRGB cases" comment_scope_start="557" comment_scope_end="606">
+		<SYMBOLS>
+			<MemberRefExpr type="png_byte" spelling="channels" id="1203272242452"/>
+			<MemberRefExpr type="png_byte" spelling="bit_depth" id="1201691108789"/>
+			<MemberRefExpr type="png_byte" spelling="pixel_depth" id="1202548096633"/>
+			<MemberRefExpr type="png_byte" spelling="bit_depth" id="1203008282815"/>
+			<MemberRefExpr type="png_byte" spelling="pixel_depth" id="1200866279374"/>
+			<MemberRefExpr type="png_byte" spelling="channels" id="1201166038747"/>
+			<MemberRefExpr type="png_byte" spelling="color_type" id="1202599305025"/>
+			<MemberRefExpr type="png_byte" spelling="color_type" id="1200615724584"/>
+			<UnexposedExpr type="int" spelling="channels" id="1200410813352"/>
+			<UnexposedExpr type="png_byte" spelling="channels" id="1200497171579"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1200721867902"/>
+			<UnexposedExpr type="int" spelling="bit_depth" id="1200548011376"/>
+			<UnexposedExpr type="png_byte" spelling="bit_depth" id="1202749393974"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1203626214460"/>
+			<UnexposedExpr type="int" spelling="at_start" id="1202419267962"/>
+			<UnexposedExpr type="png_bytep" spelling="sp" id="1203909484185"/>
+			<UnexposedExpr type="png_bytep" spelling="ep" id="1200191700972"/>
+			<UnexposedExpr type="png_bytep" spelling="sp" id="1202389042558"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1201998218095"/>
+			<UnexposedExpr type="int" spelling="bit_depth" id="1202109445995"/>
+			<UnexposedExpr type="png_byte" spelling="bit_depth" id="1203955241587"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1201473312284"/>
+			<UnexposedExpr type="int" spelling="at_start" id="1202741110243"/>
+			<UnexposedExpr type="png_bytep" spelling="sp" id="1200361601182"/>
+			<UnexposedExpr type="png_bytep" spelling="ep" id="1202366867981"/>
+			<UnexposedExpr type="png_bytep" spelling="sp" id="1200528595893"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1201235750705"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1201131515216"/>
+			<UnexposedExpr type="int" spelling="color_type" id="1201571057461"/>
+			<UnexposedExpr type="png_byte" spelling="color_type" id="1201247043478"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1201943982817"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1203328218715"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1202230203374"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1201546722347"/>
+			<DeclRefExpr type="int" spelling="at_start" id="1202177589053"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1202465691970"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1200333834967"/>
+			<DeclRefExpr type="png_bytep" spelling="dp" id="1202531592609"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1202535879483"/>
+			<DeclRefExpr type="png_bytep" spelling="ep" id="1203437325877"/>
+			<DeclRefExpr type="png_bytep" spelling="dp" id="1204182242595"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1203879102038"/>
+			<DeclRefExpr type="png_bytep" spelling="dp" id="1202766997711"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1203333444199"/>
+			<DeclRefExpr type="png_bytep" spelling="dp" id="1203531762171"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1202525106009"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1200024989351"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1200465812055"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1202825867528"/>
+			<DeclRefExpr type="int" spelling="at_start" id="1201235322300"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1203837279733"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1201288481722"/>
+			<DeclRefExpr type="png_bytep" spelling="dp" id="1201811093521"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1201067664260"/>
+			<DeclRefExpr type="png_bytep" spelling="ep" id="1203938456292"/>
+			<DeclRefExpr type="png_bytep" spelling="dp" id="1200949201710"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1203758620896"/>
+			<DeclRefExpr type="png_bytep" spelling="dp" id="1200331959943"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1203612486228"/>
+			<DeclRefExpr type="png_bytep" spelling="dp" id="1202587829125"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1203012218503"/>
+			<DeclRefExpr type="png_bytep" spelling="dp" id="1202526943527"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1201727006064"/>
+			<DeclRefExpr type="png_bytep" spelling="dp" id="1203732017797"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1203157657553"/>
+			<DeclRefExpr type="png_bytep" spelling="dp" id="1201738297586"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1200554934863"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1200095006996"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1201883653658"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1202001554255"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1201146493310"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1202474762863"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="rgba"/>
+			<PROBLEM_DOMAIN word="rgbx"/>
+			<PROBLEM_DOMAIN word="xrgb"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Skip initial filler" comment_scope_start="562" comment_scope_end="562">
+		<SYMBOLS>
+			<UnexposedExpr type="int" spelling="at_start" id="1202419267962"/>
+			<DeclRefExpr type="int" spelling="at_start" id="1202177589053"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="filler"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Skip initial channels and, for sp, the filler" comment_scope_start="564" comment_scope_end="564"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Note that the loop adds 3 to dp and 4 to sp each time." comment_scope_start="569" comment_scope_end="573">
+		<SYMBOLS>
+			<UnexposedExpr type="png_bytep" spelling="sp" id="1203909484185"/>
+			<UnexposedExpr type="png_bytep" spelling="ep" id="1200191700972"/>
+			<UnexposedExpr type="png_bytep" spelling="sp" id="1202389042558"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1202535879483"/>
+			<DeclRefExpr type="png_bytep" spelling="ep" id="1203437325877"/>
+			<DeclRefExpr type="png_bytep" spelling="dp" id="1204182242595"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1203879102038"/>
+			<DeclRefExpr type="png_bytep" spelling="dp" id="1202766997711"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1203333444199"/>
+			<DeclRefExpr type="png_bytep" spelling="dp" id="1203531762171"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1202525106009"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1200024989351"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="adds" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="time" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="time"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Skip initial filler" comment_scope_start="580" comment_scope_end="580">
+		<SYMBOLS>
+			<UnexposedExpr type="int" spelling="at_start" id="1202741110243"/>
+			<DeclRefExpr type="int" spelling="at_start" id="1201235322300"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="filler"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Skip initial channels and, for sp, the filler" comment_scope_start="582" comment_scope_end="582"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Copy 6 bytes, skip 2" comment_scope_start="589" comment_scope_end="593">
+		<SYMBOLS>
+			<UnexposedExpr type="png_bytep" spelling="sp" id="1200528595893"/>
+			<DeclRefExpr type="png_bytep" spelling="dp" id="1200949201710"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1203758620896"/>
+			<DeclRefExpr type="png_bytep" spelling="dp" id="1200331959943"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1203612486228"/>
+			<DeclRefExpr type="png_bytep" spelling="dp" id="1202587829125"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1203012218503"/>
+			<DeclRefExpr type="png_bytep" spelling="dp" id="1202526943527"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1201727006064"/>
+			<DeclRefExpr type="png_bytep" spelling="dp" id="1203732017797"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1203157657553"/>
+			<DeclRefExpr type="png_bytep" spelling="dp" id="1201738297586"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1200554934863"/>
+			<DeclRefExpr type="png_bytep" spelling="sp" id="1200095006996"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="bytes" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="bad bit depth" comment_scope_start="599" comment_scope_end="599"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Finally fix the color type if it records an alpha channel" comment_scope_start="603" comment_scope_end="606">
+		<SYMBOLS>
+			<MemberRefExpr type="png_byte" spelling="color_type" id="1202599305025"/>
+			<MemberRefExpr type="png_byte" spelling="color_type" id="1200615724584"/>
+			<UnexposedExpr type="int" spelling="color_type" id="1201571057461"/>
+			<UnexposedExpr type="png_byte" spelling="color_type" id="1201247043478"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1201943982817"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1203328218715"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1201146493310"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1202474762863"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="color"/>
+			<PROBLEM_DOMAIN word="alpha"/>
+			<PROBLEM_DOMAIN word="channel"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="The filler channel has gone already" comment_scope_start="609" comment_scope_end="609"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Fix the rowbytes value." comment_scope_start="611" comment_scope_end="613">
+		<SYMBOLS>
+			<MemberRefExpr type="size_t" spelling="rowbytes" id="1200512513322"/>
+			<TypeRef type="size_t" spelling="size_t" id="1201257505097"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1202357283621"/>
+			<UnexposedExpr type="png_bytep" spelling="dp" id="1202958629251"/>
+			<UnexposedExpr type="png_bytep" spelling="row" id="1203529215584"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1200800645794"/>
+			<DeclRefExpr type="png_bytep" spelling="dp" id="1203039226471"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1203764472195"/>
+			<FunctionDecl type="void (png_row_infop, png_bytep, int)" spelling="png_do_strip_channel" id="1202610596566"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="value" type=" 'Data-Structure and its Components"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Swaps red and blue bytes within a pixel" comment_scope_start="617" comment_scope_end="617"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="PRIVATE" comment_scope_start="618" comment_scope_end="618"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="READ_BGR || WRITE_BGR" comment_scope_start="693" comment_scope_end="693"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Added at libpng-1.5.10" comment_scope_start="697" comment_scope_end="697"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="PRIVATE" comment_scope_start="698" comment_scope_end="698"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="num_palette can be 0 in MNG files" comment_scope_start="702" comment_scope_end="702">
+		<SYMBOLS>
+			<MemberRefExpr type="png_uint_16" spelling="num_palette" id="1201179546077"/>
+			<UnexposedExpr type="int" spelling="num_palette" id="1202085134958"/>
+			<UnexposedExpr type="png_uint_16" spelling="num_palette" id="1200343233109"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1201156264288"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1203118810461"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="mng"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="Calculations moved outside switch in an attempt to stop different
+       * compiler warnings.  'padding' is in *bits* within the last byte, it is
+       * an 'int' because pixel_depth becomes an 'int' in the expression below,
+       * and this calculation is used because it avoids warnings that other
+       * forms produced on either GCC or MSVC." comment_scope_start="704" comment_scope_end="716">
+		<SYMBOLS>
+			<MemberRefExpr type="png_byte" spelling="pixel_depth" id="1204214223312"/>
+			<MemberRefExpr type="png_uint_32" spelling="width" id="1203846844584"/>
+			<MemberRefExpr type="png_bytep" spelling="row_buf" id="1200980325442"/>
+			<MemberRefExpr type="size_t" spelling="rowbytes" id="1202397309812"/>
+			<MemberRefExpr type="png_byte" spelling="bit_depth" id="1200386868807"/>
+			<TypeRef type="png_uint_32" spelling="png_uint_32" id="1202398403827"/>
+			<TypeRef type="png_bytep" spelling="png_bytep" id="1203021641356"/>
+			<VarDecl type="int" spelling="padding" id="1201592033388"/>
+			<VarDecl type="png_bytep" spelling="rp" id="1202253637255"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1203756134781"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1203392162899"/>
+			<UnexposedExpr type="png_bytep" spelling="row_buf" id="1201916285761"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1202582897250"/>
+			<UnexposedExpr type="size_t" spelling="rowbytes" id="1203470339238"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1202498276106"/>
+			<UnexposedExpr type="int" spelling="bit_depth" id="1203969892975"/>
+			<UnexposedExpr type="png_byte" spelling="bit_depth" id="1200616893606"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1200327003426"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1202326618448"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1200847204706"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1202721956090"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1200278060381"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1203573099737"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="moved" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="switch" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="last" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="byte" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="int" type=" 'Properties of Datastructure / Function / Blocks"/>
+			<POGRAM_DOMAIN word="int" type=" 'Properties of Datastructure / Function / Blocks"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="padding"/>
+			<PROBLEM_DOMAIN word="gcc"/>
+			<PROBLEM_DOMAIN word="msvc"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="in this case, all bytes must be 0 so we don't need
+             * to unpack the pixels except for the rightmost one." comment_scope_start="717" comment_scope_end="725">
+		<SYMBOLS>
+			<MemberRefExpr type="png_bytep" spelling="row_buf" id="1202268069327"/>
+			<MemberRefExpr type="int" spelling="num_palette_max" id="1202460140008"/>
+			<UnexposedExpr type="png_bytep" spelling="rp" id="1200624929373"/>
+			<UnexposedExpr type="png_bytep" spelling="row_buf" id="1203022354767"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1203145788261"/>
+			<UnexposedExpr type="png_bytep" spelling="rp" id="1202171711893"/>
+			<UnexposedExpr type="int" spelling="padding" id="1203153765842"/>
+			<UnexposedExpr type="png_struct *" spelling="png_ptr" id="1203977655213"/>
+			<DeclRefExpr type="png_bytep" spelling="rp" id="1201588932193"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1203661422568"/>
+			<DeclRefExpr type="png_bytep" spelling="rp" id="1202020959433"/>
+			<DeclRefExpr type="png_bytep" spelling="rp" id="1203236843723"/>
+			<DeclRefExpr type="int" spelling="padding" id="1202779724945"/>
+			<DeclRefExpr type="png_structrp" spelling="png_ptr" id="1200591516071"/>
+			<DeclRefExpr type="int" spelling="padding" id="1201359769767"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="case" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="bytes" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="for" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="rightmost" type=" 'Data-Structure and its Components"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="CHECK_FOR_INVALID_INDEX" comment_scope_start="796" comment_scope_end="796"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="This function returns a pointer to the user_transform_ptr associated with
+ * the user transform functions.  The application should free any memory
+ * associated with this pointer before png_write_destroy and png_read_destroy
+ * are called." comment_scope_start="826" comment_scope_end="845">
+		<SYMBOLS>
+			<MemberRefExpr type="const png_voidp" spelling="user_transform_ptr" id="1201860121659"/>
+			<TypeRef type="png_voidp" spelling="png_voidp" id="1203886254692"/>
+			<TypeRef type="png_const_structrp" spelling="png_const_structrp" id="1202710491050"/>
+			<TypeRef type="png_uint_32" spelling="png_uint_32" id="1202398403827"/>
+			<TypeRef type="png_const_structrp" spelling="png_const_structrp" id="1202710491050"/>
+			<ParmDecl type="png_const_structrp" spelling="png_ptr" id="1203687568347"/>
+			<ParmDecl type="png_const_structrp" spelling="png_ptr" id="1203363112470"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="1201602209119"/>
+			<UnexposedExpr type="png_voidp" spelling="user_transform_ptr" id="1203406221384"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="1204160197676"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="1203657791973"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="1200965813330"/>
+			<FunctionDecl type="png_voidp (png_const_structrp)" spelling="png_get_user_transform_ptr" id="1200833379200"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="returns" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="pointer" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="free" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="memory" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="pointer" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="application"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="See the comments in png.h - this is the sub-image row when reading an
+    * interlaced image." comment_scope_start="846" comment_scope_end="851">
+		<SYMBOLS>
+			<MemberRefExpr type="const png_uint_32" spelling="row_number" id="1202463668015"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="1201172232190"/>
+			<UnexposedExpr type="png_uint_32" spelling="row_number" id="1203044681173"/>
+			<UnexposedExpr type="const png_struct *" spelling="png_ptr" id="1203444697668"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="1201862621625"/>
+			<DeclRefExpr type="png_const_structrp" spelling="png_ptr" id="1202385887757"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="png"/>
+			<PROBLEM_DOMAIN word="sub-image"/>
+			<PROBLEM_DOMAIN word="interlaced"/>
+			<PROBLEM_DOMAIN word="image"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="help the app not to fail silently" comment_scope_start="852" comment_scope_end="852">
+		<SYMBOLS>
+			<TypeRef type="png_uint_32" spelling="png_uint_32" id="1202398403827"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="fail" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="app"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="invalid" comment_scope_start="860" comment_scope_end="860"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="USER_TRANSFORM_INFO" comment_scope_start="862" comment_scope_end="862"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="READ_USER_TRANSFORM || WRITE_USER_TRANSFORM" comment_scope_start="863" comment_scope_end="863"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngtrans.c" comment_text="READ || WRITE" comment_scope_start="864" comment_scope_end="864"/>
+</COMMENTS>

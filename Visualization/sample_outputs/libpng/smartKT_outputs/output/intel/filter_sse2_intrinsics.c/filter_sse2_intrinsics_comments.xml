@@ -1,0 +1,1320 @@
+<?xml version="1.0" ?>
+<COMMENTS project_name="libpng" project_path="/home/dewang/smartKT/SmartKT/kgg/projects/libpng">
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="Functions in this file look at most 3 pixels (a,b,c) to predict the 4th (d).
+ * They're positioned like this:
+ *    prev:  c b
+ *    row:   a d
+ * The Sub filter predicts d=a, Avg d=(a+b)/2, and Paeth predicts d to be
+ * whichever of a, b, or c is closest to p=a+b-c." comment_scope_start="22" comment_scope_end="34">
+		<SYMBOLS>
+			<VarDecl type="int" spelling="tmp" id="1801220670148"/>
+			<UnexposedExpr type="void *(*)(void *, const void *, unsigned long)" spelling="memcpy" id="1800456128111"/>
+			<UnexposedExpr type="const void *" spelling="p" id="1800473870816"/>
+			<UnexposedExpr type="__m128i (*)(int)" spelling="_mm_cvtsi32_si128" id="1800295052085"/>
+			<UnexposedExpr type="int" spelling="tmp" id="1800843076709"/>
+			<ParmDecl type="const void *" spelling="p" id="1802461229505"/>
+			<CallExpr type="void *" spelling="memcpy" id="1803200335537"/>
+			<CallExpr type="__m128i" spelling="_mm_cvtsi32_si128" id="1803026623461"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<DeclRefExpr type="void *(void *, const void *, unsigned long)" spelling="memcpy" id="1801231322953"/>
+			<DeclRefExpr type="int" spelling="tmp" id="1801814400515"/>
+			<DeclRefExpr type="const void *" spelling="p" id="1802739111609"/>
+			<DeclRefExpr type="int" spelling="tmp" id="1803137815422"/>
+			<DeclRefExpr type="__m128i (int)" spelling="_mm_cvtsi32_si128" id="1803993764767"/>
+			<DeclRefExpr type="int" spelling="tmp" id="1802452035945"/>
+			<FunctionDecl type="__m128i (const void *)" spelling="load4" id="1801747240182"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="prev" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="sub" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="avg" type=" 'Operations as part of Data structure"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="The Sub filter predicts each pixel as the previous pixel, a.
+    * There is no pixel to the left of the first pixel.  It's encoded directly.
+    * That works with our main loop if we just say that left pixel was zero." comment_scope_start="55" comment_scope_end="83">
+		<SYMBOLS>
+			<VarDecl type="size_t" spelling="rb" id="1803480362357"/>
+			<VarDecl type="__m128i" spelling="a" id="1802055582596"/>
+			<VarDecl type="__m128i" spelling="d" id="1802903077395"/>
+			<UnexposedExpr type="__m128i (*)(void)" spelling="_mm_setzero_si128" id="1800840015559"/>
+			<UnexposedExpr type="size_t" spelling="rowbytes" id="1803159275790"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1800390754666"/>
+			<UnexposedExpr type="size_t" spelling="rb" id="1803671037583"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1802675739084"/>
+			<UnexposedExpr type="__m128i (*)(const void *)" spelling="load4" id="1803337639013"/>
+			<UnexposedExpr type="const void *" spelling="row" id="1802277105065"/>
+			<UnexposedExpr type="png_bytep" spelling="row" id="1801144574199"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_add_epi8" id="1802330096934"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1802469598747"/>
+			<UnexposedExpr type="__m128i" spelling="a" id="1804227601232"/>
+			<UnexposedExpr type="void (*)(void *, __m128i)" spelling="store3" id="1801619921558"/>
+			<UnexposedExpr type="void *" spelling="row" id="1803873412926"/>
+			<UnexposedExpr type="png_bytep" spelling="row" id="1803822780594"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1804288041491"/>
+			<UnexposedExpr type="size_t" spelling="rb" id="1800982318864"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1802997452218"/>
+			<UnexposedExpr type="__m128i (*)(const void *)" spelling="load3" id="1802352855167"/>
+			<UnexposedExpr type="const void *" spelling="row" id="1801237595246"/>
+			<UnexposedExpr type="png_bytep" spelling="row" id="1800594069219"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_add_epi8" id="1802713444432"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1802806488855"/>
+			<UnexposedExpr type="__m128i" spelling="a" id="1803290526634"/>
+			<UnexposedExpr type="void (*)(void *, __m128i)" spelling="store3" id="1802834044449"/>
+			<UnexposedExpr type="void *" spelling="row" id="1802130359153"/>
+			<UnexposedExpr type="png_bytep" spelling="row" id="1801881809076"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1801655481306"/>
+			<UnexposedExpr type="png_const_bytep" spelling="prev" id="1803920946929"/>
+			<CallExpr type="__m128i" spelling="_mm_setzero_si128" id="1802676384613"/>
+			<CallExpr type="__m128i" spelling="load4" id="1801685908876"/>
+			<CallExpr type="__m128i" spelling="_mm_add_epi8" id="1801633723321"/>
+			<CallExpr type="void" spelling="store3" id="1804142008091"/>
+			<CallExpr type="__m128i" spelling="load3" id="1801006651233"/>
+			<CallExpr type="__m128i" spelling="_mm_add_epi8" id="1800668816652"/>
+			<CallExpr type="void" spelling="store3" id="1803991125063"/>
+			<TypeRef type="size_t" spelling="size_t" id="1800715853768"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<DeclRefExpr type="__m128i (void)" spelling="_mm_setzero_si128" id="1804109880683"/>
+			<DeclRefExpr type="size_t" spelling="rb" id="1800538024626"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1802641177625"/>
+			<DeclRefExpr type="size_t" spelling="rb" id="1801789692706"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1801461418317"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1800337133914"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1803509892095"/>
+			<DeclRefExpr type="__m128i (const void *)" spelling="load4" id="1802853279621"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1801296013739"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1801500797563"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_add_epi8" id="1802203931365"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1802637352943"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1803004846452"/>
+			<DeclRefExpr type="void (void *, __m128i)" spelling="store3" id="1801307176375"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1800607886064"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1803966577511"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1804002694427"/>
+			<DeclRefExpr type="size_t" spelling="rb" id="1800368770703"/>
+			<DeclRefExpr type="size_t" spelling="rb" id="1802461514156"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1800025110699"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1801362784147"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1800307749861"/>
+			<DeclRefExpr type="__m128i (const void *)" spelling="load3" id="1800556067612"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1801665293342"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1804284312285"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_add_epi8" id="1803222260841"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1800830781308"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1804206333284"/>
+			<DeclRefExpr type="void (void *, __m128i)" spelling="store3" id="1802984699376"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1801825542214"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1800561777001"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1800866512391"/>
+			<DeclRefExpr type="size_t" spelling="rb" id="1803538275448"/>
+			<DeclRefExpr type="png_const_bytep" spelling="prev" id="1803989220179"/>
+			<MemberRefExpr type="size_t" spelling="rowbytes" id="1803372548513"/>
+			<FunctionDecl type="void (png_row_infop, png_bytep, png_const_bytep)" spelling="png_read_filter_row_sub3_sse2" id="1803488306898"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="sub" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="previous" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="left" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="first" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="left" type=" 'Data-Structure and its Components"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="pixel"/>
+			<PROBLEM_DOMAIN word="pixel"/>
+			<PROBLEM_DOMAIN word="pixel"/>
+			<PROBLEM_DOMAIN word="pixel"/>
+			<PROBLEM_DOMAIN word="pixel"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="The Sub filter predicts each pixel as the previous pixel, a.
+    * There is no pixel to the left of the first pixel.  It's encoded directly.
+    * That works with our main loop if we just say that left pixel was zero." comment_scope_start="88" comment_scope_end="108">
+		<SYMBOLS>
+			<VarDecl type="size_t" spelling="rb" id="1803956765186"/>
+			<VarDecl type="__m128i" spelling="a" id="1803823206352"/>
+			<VarDecl type="__m128i" spelling="d" id="1803264619665"/>
+			<UnexposedExpr type="__m128i (*)(void)" spelling="_mm_setzero_si128" id="1802980689643"/>
+			<UnexposedExpr type="size_t" spelling="rowbytes" id="1801711957681"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1800205300501"/>
+			<UnexposedExpr type="size_t" spelling="rb" id="1802823696900"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1800482867554"/>
+			<UnexposedExpr type="__m128i (*)(const void *)" spelling="load4" id="1800742212203"/>
+			<UnexposedExpr type="const void *" spelling="row" id="1802922116330"/>
+			<UnexposedExpr type="png_bytep" spelling="row" id="1800936801485"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_add_epi8" id="1804172878357"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1800648414262"/>
+			<UnexposedExpr type="__m128i" spelling="a" id="1803619786751"/>
+			<UnexposedExpr type="void (*)(void *, __m128i)" spelling="store4" id="1803148797201"/>
+			<UnexposedExpr type="void *" spelling="row" id="1800757269087"/>
+			<UnexposedExpr type="png_bytep" spelling="row" id="1801574960284"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1803986776508"/>
+			<UnexposedExpr type="png_const_bytep" spelling="prev" id="1801449490990"/>
+			<CallExpr type="__m128i" spelling="_mm_setzero_si128" id="1801354105627"/>
+			<CallExpr type="__m128i" spelling="load4" id="1803469413267"/>
+			<CallExpr type="__m128i" spelling="_mm_add_epi8" id="1800904951594"/>
+			<CallExpr type="void" spelling="store4" id="1800508501527"/>
+			<TypeRef type="size_t" spelling="size_t" id="1800715853768"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<DeclRefExpr type="__m128i (void)" spelling="_mm_setzero_si128" id="1802825418001"/>
+			<DeclRefExpr type="size_t" spelling="rb" id="1801868613825"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1802298706397"/>
+			<DeclRefExpr type="size_t" spelling="rb" id="1803540766992"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1803412961520"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1804231898194"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1800741060920"/>
+			<DeclRefExpr type="__m128i (const void *)" spelling="load4" id="1800041875804"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1803287391400"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1802488393687"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_add_epi8" id="1800175176804"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1800925314352"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1802094545552"/>
+			<DeclRefExpr type="void (void *, __m128i)" spelling="store4" id="1802592585320"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1801430089127"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1800854382515"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1802113593332"/>
+			<DeclRefExpr type="size_t" spelling="rb" id="1802242690221"/>
+			<DeclRefExpr type="png_const_bytep" spelling="prev" id="1803239136349"/>
+			<MemberRefExpr type="size_t" spelling="rowbytes" id="1803795237952"/>
+			<FunctionDecl type="void (png_row_infop, png_bytep, png_const_bytep)" spelling="png_read_filter_row_sub4_sse2" id="1803185399957"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="sub" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="previous" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="left" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="first" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="left" type=" 'Data-Structure and its Components"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="pixel"/>
+			<PROBLEM_DOMAIN word="pixel"/>
+			<PROBLEM_DOMAIN word="pixel"/>
+			<PROBLEM_DOMAIN word="pixel"/>
+			<PROBLEM_DOMAIN word="pixel"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="The Avg filter predicts each pixel as the (truncated) average of a and b.
+    * There's no pixel to the left of the first pixel.  Luckily, it's
+    * predicted to be half of the pixel above it.  So again, this works
+    * perfectly with our loop if we make sure a starts at zero." comment_scope_start="113" comment_scope_end="132">
+		<SYMBOLS>
+			<VarDecl type="size_t" spelling="rb" id="1802320641735"/>
+			<VarDecl type="const __m128i" spelling="zero" id="1801756553675"/>
+			<VarDecl type="__m128i" spelling="b" id="1800096381072"/>
+			<VarDecl type="__m128i" spelling="a" id="1800459297072"/>
+			<VarDecl type="__m128i" spelling="d" id="1800725924803"/>
+			<VarDecl type="__m128i" spelling="avg" id="1803323682342"/>
+			<UnexposedExpr type="__m128i (*)(void)" spelling="_mm_setzero_si128" id="1800313201316"/>
+			<UnexposedExpr type="__m128i" spelling="zero" id="1800560797853"/>
+			<UnexposedExpr type="size_t" spelling="rowbytes" id="1803749435034"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1802183568088"/>
+			<UnexposedExpr type="size_t" spelling="rb" id="1801588615626"/>
+			<UnexposedExpr type="__m128i (*)(const void *)" spelling="load4" id="1803983124515"/>
+			<UnexposedExpr type="const void *" spelling="prev" id="1802647822448"/>
+			<UnexposedExpr type="png_const_bytep" spelling="prev" id="1803766154328"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1800711311144"/>
+			<UnexposedExpr type="__m128i (*)(const void *)" spelling="load4" id="1804043938437"/>
+			<UnexposedExpr type="const void *" spelling="row" id="1801830669461"/>
+			<UnexposedExpr type="png_bytep" spelling="row" id="1803326075056"/>
+			<CallExpr type="__m128i" spelling="_mm_setzero_si128" id="1802586197657"/>
+			<CallExpr type="__m128i" spelling="load4" id="1803685491183"/>
+			<CallExpr type="__m128i" spelling="load4" id="1801706979663"/>
+			<TypeRef type="size_t" spelling="size_t" id="1800715853768"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<DeclRefExpr type="__m128i (void)" spelling="_mm_setzero_si128" id="1803480441282"/>
+			<DeclRefExpr type="const __m128i" spelling="zero" id="1803707507315"/>
+			<DeclRefExpr type="size_t" spelling="rb" id="1802100233753"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1804202865655"/>
+			<DeclRefExpr type="size_t" spelling="rb" id="1803236406036"/>
+			<DeclRefExpr type="__m128i" spelling="b" id="1804247276070"/>
+			<DeclRefExpr type="__m128i (const void *)" spelling="load4" id="1803594493025"/>
+			<DeclRefExpr type="png_const_bytep" spelling="prev" id="1801821522935"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1801824060681"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1803073684479"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1802235584068"/>
+			<DeclRefExpr type="__m128i (const void *)" spelling="load4" id="1802587604380"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1800159105377"/>
+			<MemberRefExpr type="size_t" spelling="rowbytes" id="1801264257112"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="avg" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="average" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="left" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="first" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="half" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="make" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="starts" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="pixel"/>
+			<PROBLEM_DOMAIN word="pixel"/>
+			<PROBLEM_DOMAIN word="pixel"/>
+			<PROBLEM_DOMAIN word="pixel"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="PNG requires a truncating average, so we can't just use _mm_avg_epu8" comment_scope_start="133" comment_scope_end="134">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_avg_epu8" id="1800988789217"/>
+			<UnexposedExpr type="__m128i" spelling="a" id="1803183493826"/>
+			<UnexposedExpr type="__m128i" spelling="b" id="1801369855070"/>
+			<CallExpr type="__m128i" spelling="_mm_avg_epu8" id="1803925655781"/>
+			<DeclRefExpr type="__m128i" spelling="avg" id="1803021767168"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_avg_epu8" id="1801459903304"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1801763516804"/>
+			<DeclRefExpr type="__m128i" spelling="b" id="1804207329918"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="average" type=" 'Operations as part of Data structure"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="png"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="...but we can fix it up by subtracting off 1 if it rounded up." comment_scope_start="135" comment_scope_end="144">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_sub_epi8" id="1800915968893"/>
+			<UnexposedExpr type="__m128i" spelling="avg" id="1801595294889"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_and_si128" id="1801053281133"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_xor_si128" id="1804111816198"/>
+			<UnexposedExpr type="__m128i" spelling="a" id="1800010267925"/>
+			<UnexposedExpr type="__m128i" spelling="b" id="1803131127535"/>
+			<UnexposedExpr type="__m128i (*)(char)" spelling="_mm_set1_epi8" id="1802318836307"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_add_epi8" id="1803360953924"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1802076684055"/>
+			<UnexposedExpr type="__m128i" spelling="avg" id="1802790754405"/>
+			<UnexposedExpr type="void (*)(void *, __m128i)" spelling="store3" id="1803662462177"/>
+			<UnexposedExpr type="void *" spelling="row" id="1801829525862"/>
+			<UnexposedExpr type="png_bytep" spelling="row" id="1802521755679"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1802662482125"/>
+			<CallExpr type="__m128i" spelling="_mm_sub_epi8" id="1800047743886"/>
+			<CallExpr type="__m128i" spelling="_mm_and_si128" id="1804177399903"/>
+			<CallExpr type="__m128i" spelling="_mm_xor_si128" id="1802788539231"/>
+			<CallExpr type="__m128i" spelling="_mm_set1_epi8" id="1803767703895"/>
+			<CallExpr type="__m128i" spelling="_mm_add_epi8" id="1800560113693"/>
+			<CallExpr type="void" spelling="store3" id="1801022148310"/>
+			<DeclRefExpr type="__m128i" spelling="avg" id="1801494745077"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_sub_epi8" id="1801777948620"/>
+			<DeclRefExpr type="__m128i" spelling="avg" id="1802716851138"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_and_si128" id="1803793448131"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_xor_si128" id="1803661078287"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1804205525469"/>
+			<DeclRefExpr type="__m128i" spelling="b" id="1803046077237"/>
+			<DeclRefExpr type="__m128i (char)" spelling="_mm_set1_epi8" id="1802966265072"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1800399289252"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_add_epi8" id="1804219876065"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1802465206338"/>
+			<DeclRefExpr type="__m128i" spelling="avg" id="1803684576308"/>
+			<DeclRefExpr type="void (void *, __m128i)" spelling="store3" id="1800370094848"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1800582883893"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1802554155943"/>
+			<DeclRefExpr type="png_const_bytep" spelling="prev" id="1800103236764"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1803590839556"/>
+			<DeclRefExpr type="size_t" spelling="rb" id="1800535557089"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="subtracting" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="PNG requires a truncating average, so we can't just use _mm_avg_epu8" comment_scope_start="150" comment_scope_end="151">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_avg_epu8" id="1804209298460"/>
+			<UnexposedExpr type="__m128i" spelling="a" id="1800652793274"/>
+			<UnexposedExpr type="__m128i" spelling="b" id="1803575225571"/>
+			<CallExpr type="__m128i" spelling="_mm_avg_epu8" id="1801890240447"/>
+			<DeclRefExpr type="__m128i" spelling="avg" id="1800757074784"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_avg_epu8" id="1803193237382"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1802735201043"/>
+			<DeclRefExpr type="__m128i" spelling="b" id="1800966587815"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="average" type=" 'Operations as part of Data structure"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="png"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="...but we can fix it up by subtracting off 1 if it rounded up." comment_scope_start="152" comment_scope_end="162">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_sub_epi8" id="1803568171310"/>
+			<UnexposedExpr type="__m128i" spelling="avg" id="1802491646006"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_and_si128" id="1802370949737"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_xor_si128" id="1801389501057"/>
+			<UnexposedExpr type="__m128i" spelling="a" id="1801185052889"/>
+			<UnexposedExpr type="__m128i" spelling="b" id="1803216089119"/>
+			<UnexposedExpr type="__m128i (*)(char)" spelling="_mm_set1_epi8" id="1802698829127"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_add_epi8" id="1803037010449"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1802596805007"/>
+			<UnexposedExpr type="__m128i" spelling="avg" id="1801069351858"/>
+			<UnexposedExpr type="void (*)(void *, __m128i)" spelling="store3" id="1803391244142"/>
+			<UnexposedExpr type="void *" spelling="row" id="1802628616300"/>
+			<UnexposedExpr type="png_bytep" spelling="row" id="1800161844216"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1801364468956"/>
+			<CallExpr type="__m128i" spelling="_mm_sub_epi8" id="1800071383521"/>
+			<CallExpr type="__m128i" spelling="_mm_and_si128" id="1800740165901"/>
+			<CallExpr type="__m128i" spelling="_mm_xor_si128" id="1802856753076"/>
+			<CallExpr type="__m128i" spelling="_mm_set1_epi8" id="1801520599363"/>
+			<CallExpr type="__m128i" spelling="_mm_add_epi8" id="1802888473114"/>
+			<CallExpr type="void" spelling="store3" id="1801794051321"/>
+			<DeclRefExpr type="__m128i" spelling="avg" id="1800475190664"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_sub_epi8" id="1803393168906"/>
+			<DeclRefExpr type="__m128i" spelling="avg" id="1803749059231"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_and_si128" id="1803502125120"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_xor_si128" id="1802707787866"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1802091450258"/>
+			<DeclRefExpr type="__m128i" spelling="b" id="1802284483724"/>
+			<DeclRefExpr type="__m128i (char)" spelling="_mm_set1_epi8" id="1800530116080"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1803036598356"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_add_epi8" id="1801001581771"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1803721529043"/>
+			<DeclRefExpr type="__m128i" spelling="avg" id="1801957964970"/>
+			<DeclRefExpr type="void (void *, __m128i)" spelling="store3" id="1803208772590"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1803889425186"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1802317112495"/>
+			<DeclRefExpr type="png_const_bytep" spelling="prev" id="1802033071611"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1800826493163"/>
+			<DeclRefExpr type="size_t" spelling="rb" id="1803545247965"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="subtracting" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="The Avg filter predicts each pixel as the (truncated) average of a and b.
+    * There's no pixel to the left of the first pixel.  Luckily, it's
+    * predicted to be half of the pixel above it.  So again, this works
+    * perfectly with our loop if we make sure a starts at zero." comment_scope_start="168" comment_scope_end="185">
+		<SYMBOLS>
+			<VarDecl type="size_t" spelling="rb" id="1801705866898"/>
+			<VarDecl type="const __m128i" spelling="zero" id="1802444894022"/>
+			<VarDecl type="__m128i" spelling="b" id="1802935443157"/>
+			<VarDecl type="__m128i" spelling="a" id="1800757069340"/>
+			<VarDecl type="__m128i" spelling="d" id="1802520101336"/>
+			<VarDecl type="__m128i" spelling="avg" id="1800507288692"/>
+			<UnexposedExpr type="__m128i (*)(void)" spelling="_mm_setzero_si128" id="1800104902422"/>
+			<UnexposedExpr type="__m128i" spelling="zero" id="1800974359252"/>
+			<UnexposedExpr type="size_t" spelling="rowbytes" id="1804048136972"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1802268826837"/>
+			<UnexposedExpr type="size_t" spelling="rb" id="1800996878735"/>
+			<UnexposedExpr type="__m128i (*)(const void *)" spelling="load4" id="1801563636574"/>
+			<UnexposedExpr type="const void *" spelling="prev" id="1803353032577"/>
+			<UnexposedExpr type="png_const_bytep" spelling="prev" id="1803220474158"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1801706957108"/>
+			<UnexposedExpr type="__m128i (*)(const void *)" spelling="load4" id="1801454928015"/>
+			<UnexposedExpr type="const void *" spelling="row" id="1800711846477"/>
+			<UnexposedExpr type="png_bytep" spelling="row" id="1803793288712"/>
+			<CallExpr type="__m128i" spelling="_mm_setzero_si128" id="1803197043435"/>
+			<CallExpr type="__m128i" spelling="load4" id="1800965256418"/>
+			<CallExpr type="__m128i" spelling="load4" id="1801286561865"/>
+			<TypeRef type="size_t" spelling="size_t" id="1800715853768"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<DeclRefExpr type="__m128i (void)" spelling="_mm_setzero_si128" id="1803631589403"/>
+			<DeclRefExpr type="const __m128i" spelling="zero" id="1802336115525"/>
+			<DeclRefExpr type="size_t" spelling="rb" id="1802948437735"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1802001678140"/>
+			<DeclRefExpr type="size_t" spelling="rb" id="1800234920672"/>
+			<DeclRefExpr type="__m128i" spelling="b" id="1804088818299"/>
+			<DeclRefExpr type="__m128i (const void *)" spelling="load4" id="1801832304608"/>
+			<DeclRefExpr type="png_const_bytep" spelling="prev" id="1802813126476"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1800213600135"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1803886912063"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1801501328304"/>
+			<DeclRefExpr type="__m128i (const void *)" spelling="load4" id="1802944389212"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1802628356832"/>
+			<MemberRefExpr type="size_t" spelling="rowbytes" id="1802780642244"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="avg" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="average" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="left" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="first" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="half" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="make" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+			<POGRAM_DOMAIN word="starts" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="pixel"/>
+			<PROBLEM_DOMAIN word="pixel"/>
+			<PROBLEM_DOMAIN word="pixel"/>
+			<PROBLEM_DOMAIN word="pixel"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="PNG requires a truncating average, so we can't just use _mm_avg_epu8" comment_scope_start="186" comment_scope_end="187">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_avg_epu8" id="1800474592031"/>
+			<UnexposedExpr type="__m128i" spelling="a" id="1801760742523"/>
+			<UnexposedExpr type="__m128i" spelling="b" id="1802640086187"/>
+			<CallExpr type="__m128i" spelling="_mm_avg_epu8" id="1801667982130"/>
+			<DeclRefExpr type="__m128i" spelling="avg" id="1804286501484"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_avg_epu8" id="1801242843500"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1802021941754"/>
+			<DeclRefExpr type="__m128i" spelling="b" id="1803458509393"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="average" type=" 'Operations as part of Data structure"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="png"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="...but we can fix it up by subtracting off 1 if it rounded up." comment_scope_start="188" comment_scope_end="198">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_sub_epi8" id="1800475576433"/>
+			<UnexposedExpr type="__m128i" spelling="avg" id="1800525428053"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_and_si128" id="1800260889340"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_xor_si128" id="1802403232588"/>
+			<UnexposedExpr type="__m128i" spelling="a" id="1803627741076"/>
+			<UnexposedExpr type="__m128i" spelling="b" id="1802111301607"/>
+			<UnexposedExpr type="__m128i (*)(char)" spelling="_mm_set1_epi8" id="1801072477590"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_add_epi8" id="1803474240281"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1801479694861"/>
+			<UnexposedExpr type="__m128i" spelling="avg" id="1801739769127"/>
+			<UnexposedExpr type="void (*)(void *, __m128i)" spelling="store4" id="1800791591056"/>
+			<UnexposedExpr type="void *" spelling="row" id="1800559431641"/>
+			<UnexposedExpr type="png_bytep" spelling="row" id="1804196224298"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1801324337491"/>
+			<CallExpr type="__m128i" spelling="_mm_sub_epi8" id="1802071622058"/>
+			<CallExpr type="__m128i" spelling="_mm_and_si128" id="1800406254340"/>
+			<CallExpr type="__m128i" spelling="_mm_xor_si128" id="1800892997645"/>
+			<CallExpr type="__m128i" spelling="_mm_set1_epi8" id="1802203373956"/>
+			<CallExpr type="__m128i" spelling="_mm_add_epi8" id="1803185705057"/>
+			<CallExpr type="void" spelling="store4" id="1801938353989"/>
+			<DeclRefExpr type="__m128i" spelling="avg" id="1804141952124"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_sub_epi8" id="1802426643425"/>
+			<DeclRefExpr type="__m128i" spelling="avg" id="1804185590867"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_and_si128" id="1801115659061"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_xor_si128" id="1800682552845"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1800993171128"/>
+			<DeclRefExpr type="__m128i" spelling="b" id="1803020727498"/>
+			<DeclRefExpr type="__m128i (char)" spelling="_mm_set1_epi8" id="1803109457311"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1802820960278"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_add_epi8" id="1802818477483"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1802361662091"/>
+			<DeclRefExpr type="__m128i" spelling="avg" id="1801465581214"/>
+			<DeclRefExpr type="void (void *, __m128i)" spelling="store4" id="1801983974133"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1802789260987"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1803119595602"/>
+			<DeclRefExpr type="png_const_bytep" spelling="prev" id="1803551340389"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1803444880932"/>
+			<DeclRefExpr type="size_t" spelling="rb" id="1800992178517"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="subtracting" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="Returns |x| for 16-bit lanes." comment_scope_start="201" comment_scope_end="218">
+		<SYMBOLS>
+			<VarDecl type="__m128i" spelling="is_negative" id="1802623682473"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_cmplt_epi16" id="1801303036362"/>
+			<UnexposedExpr type="__m128i" spelling="x" id="1802515404906"/>
+			<UnexposedExpr type="__m128i (*)(void)" spelling="_mm_setzero_si128" id="1803735817443"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_xor_si128" id="1802090839016"/>
+			<UnexposedExpr type="__m128i" spelling="x" id="1803097249867"/>
+			<UnexposedExpr type="__m128i" spelling="is_negative" id="1800787288315"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_sub_epi16" id="1803056286181"/>
+			<UnexposedExpr type="__m128i" spelling="x" id="1801086325594"/>
+			<UnexposedExpr type="__m128i" spelling="is_negative" id="1801051764377"/>
+			<UnexposedExpr type="__m128i" spelling="x" id="1802685872367"/>
+			<ParmDecl type="__m128i" spelling="x" id="1802537488351"/>
+			<CallExpr type="__m128i" spelling="_mm_cmplt_epi16" id="1803653732154"/>
+			<CallExpr type="__m128i" spelling="_mm_setzero_si128" id="1803854437569"/>
+			<CallExpr type="__m128i" spelling="_mm_xor_si128" id="1803819072930"/>
+			<CallExpr type="__m128i" spelling="_mm_sub_epi16" id="1802143886527"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_cmplt_epi16" id="1802616454032"/>
+			<DeclRefExpr type="__m128i" spelling="x" id="1801330408136"/>
+			<DeclRefExpr type="__m128i (void)" spelling="_mm_setzero_si128" id="1802334821055"/>
+			<DeclRefExpr type="__m128i" spelling="x" id="1800965639809"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_xor_si128" id="1800634508489"/>
+			<DeclRefExpr type="__m128i" spelling="x" id="1801652232090"/>
+			<DeclRefExpr type="__m128i" spelling="is_negative" id="1802651621067"/>
+			<DeclRefExpr type="__m128i" spelling="x" id="1801284006810"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_sub_epi16" id="1803396457266"/>
+			<DeclRefExpr type="__m128i" spelling="x" id="1800996090585"/>
+			<DeclRefExpr type="__m128i" spelling="is_negative" id="1800010533777"/>
+			<DeclRefExpr type="__m128i" spelling="x" id="1800866007433"/>
+			<FunctionDecl type="__m128i (__m128i)" spelling="abs_i16" id="1803786336314"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="returns" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="for" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="Read this all as, return x&lt;0 ? -x : x.
+   * To negate two's complement, you flip all the bits then add 1." comment_scope_start="206" comment_scope_end="210">
+		<SYMBOLS>
+			<VarDecl type="__m128i" spelling="is_negative" id="1802623682473"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_cmplt_epi16" id="1801303036362"/>
+			<UnexposedExpr type="__m128i" spelling="x" id="1802515404906"/>
+			<UnexposedExpr type="__m128i (*)(void)" spelling="_mm_setzero_si128" id="1803735817443"/>
+			<CallExpr type="__m128i" spelling="_mm_cmplt_epi16" id="1803653732154"/>
+			<CallExpr type="__m128i" spelling="_mm_setzero_si128" id="1803854437569"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_cmplt_epi16" id="1802616454032"/>
+			<DeclRefExpr type="__m128i" spelling="x" id="1801330408136"/>
+			<DeclRefExpr type="__m128i (void)" spelling="_mm_setzero_si128" id="1802334821055"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="read" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="return" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="complement" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="add" type=" 'Operations as part of Data structure"/>
+			<POGRAM_DOMAIN word="twos complement" type=" 'Operations as part of Data structure"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="Flip negative lanes." comment_scope_start="211" comment_scope_end="213">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_xor_si128" id="1802090839016"/>
+			<UnexposedExpr type="__m128i" spelling="x" id="1803097249867"/>
+			<UnexposedExpr type="__m128i" spelling="is_negative" id="1800787288315"/>
+			<CallExpr type="__m128i" spelling="_mm_xor_si128" id="1803819072930"/>
+			<DeclRefExpr type="__m128i" spelling="x" id="1800965639809"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_xor_si128" id="1800634508489"/>
+			<DeclRefExpr type="__m128i" spelling="x" id="1801652232090"/>
+			<DeclRefExpr type="__m128i" spelling="is_negative" id="1802651621067"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="negative" type=" 'Properties of Datastructure / Function / Blocks"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="+1 to negative lanes, else +0." comment_scope_start="214" comment_scope_end="218">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_sub_epi16" id="1803056286181"/>
+			<UnexposedExpr type="__m128i" spelling="x" id="1801086325594"/>
+			<UnexposedExpr type="__m128i" spelling="is_negative" id="1801051764377"/>
+			<UnexposedExpr type="__m128i" spelling="x" id="1802685872367"/>
+			<CallExpr type="__m128i" spelling="_mm_sub_epi16" id="1802143886527"/>
+			<DeclRefExpr type="__m128i" spelling="x" id="1801284006810"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_sub_epi16" id="1803396457266"/>
+			<DeclRefExpr type="__m128i" spelling="x" id="1800996090585"/>
+			<DeclRefExpr type="__m128i" spelling="is_negative" id="1800010533777"/>
+			<DeclRefExpr type="__m128i" spelling="x" id="1800866007433"/>
+			<FunctionDecl type="__m128i (__m128i)" spelling="abs_i16" id="1803786336314"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="negative" type=" 'Properties of Datastructure / Function / Blocks"/>
+			<POGRAM_DOMAIN word="else" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="Bytewise c ? t : e." comment_scope_start="220" comment_scope_end="227">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_or_si128" id="1804214075952"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_and_si128" id="1804209243615"/>
+			<UnexposedExpr type="__m128i" spelling="c" id="1803757632454"/>
+			<UnexposedExpr type="__m128i" spelling="t" id="1803057102029"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_andnot_si128" id="1800109689493"/>
+			<UnexposedExpr type="__m128i" spelling="c" id="1800817850211"/>
+			<UnexposedExpr type="__m128i" spelling="e" id="1800121218617"/>
+			<ParmDecl type="__m128i" spelling="c" id="1800361502885"/>
+			<ParmDecl type="__m128i" spelling="t" id="1803239572826"/>
+			<ParmDecl type="__m128i" spelling="e" id="1800359662990"/>
+			<CallExpr type="__m128i" spelling="_mm_or_si128" id="1802044227249"/>
+			<CallExpr type="__m128i" spelling="_mm_and_si128" id="1801724311444"/>
+			<CallExpr type="__m128i" spelling="_mm_andnot_si128" id="1802118515171"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_or_si128" id="1803015059883"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_and_si128" id="1803706012071"/>
+			<DeclRefExpr type="__m128i" spelling="c" id="1804116728438"/>
+			<DeclRefExpr type="__m128i" spelling="t" id="1800501610361"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_andnot_si128" id="1801753708180"/>
+			<DeclRefExpr type="__m128i" spelling="c" id="1804274143223"/>
+			<DeclRefExpr type="__m128i" spelling="e" id="1801844964890"/>
+			<FunctionDecl type="__m128i (__m128i, __m128i, __m128i)" spelling="if_then_else" id="1802371250597"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="Paeth tries to predict pixel d using the pixel to the left of it, a,
+    * and two pixels from the previous row, b and c:
+    *   prev: c b
+    *   row:  a d
+    * The Paeth function predicts d to be whichever of a, b, or c is nearest to
+    * p=a+b-c.
+    *
+    * The first pixel has no left context, and so uses an Up filter, p = b.
+    * This works naturally with our main loop's p = a+b-c if we force a and c
+    * to zero.
+    * Here we zero b and d, which become c and a respectively at the start of
+    * the loop." comment_scope_start="232" comment_scope_end="253">
+		<SYMBOLS>
+			<VarDecl type="size_t" spelling="rb" id="1803510062451"/>
+			<VarDecl type="const __m128i" spelling="zero" id="1802538744167"/>
+			<VarDecl type="__m128i" spelling="c" id="1802746713058"/>
+			<VarDecl type="__m128i" spelling="b" id="1802859715929"/>
+			<VarDecl type="__m128i" spelling="a" id="1800913086403"/>
+			<VarDecl type="__m128i" spelling="d" id="1801580663703"/>
+			<UnexposedExpr type="__m128i (*)(void)" spelling="_mm_setzero_si128" id="1800568795592"/>
+			<UnexposedExpr type="__m128i" spelling="zero" id="1802685201620"/>
+			<UnexposedExpr type="__m128i" spelling="zero" id="1800216855779"/>
+			<UnexposedExpr type="size_t" spelling="rowbytes" id="1802884254225"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1804077542455"/>
+			<UnexposedExpr type="size_t" spelling="rb" id="1800184030177"/>
+			<CallExpr type="__m128i" spelling="_mm_setzero_si128" id="1801278809473"/>
+			<TypeRef type="size_t" spelling="size_t" id="1800715853768"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<DeclRefExpr type="__m128i (void)" spelling="_mm_setzero_si128" id="1800899371596"/>
+			<DeclRefExpr type="const __m128i" spelling="zero" id="1800532824853"/>
+			<DeclRefExpr type="const __m128i" spelling="zero" id="1803674861383"/>
+			<DeclRefExpr type="size_t" spelling="rb" id="1801988338391"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1803264403276"/>
+			<DeclRefExpr type="size_t" spelling="rb" id="1800301765235"/>
+			<MemberRefExpr type="size_t" spelling="rowbytes" id="1802551993016"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="left" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="previous" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="prev" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="first" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="left" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="start" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="pixel"/>
+			<PROBLEM_DOMAIN word="pixel"/>
+			<PROBLEM_DOMAIN word="pixel"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="It's easiest to do this math (particularly, deal with pc) with 16-bit
+       * intermediates." comment_scope_start="254" comment_scope_end="260">
+		<SYMBOLS>
+			<VarDecl type="__m128i" spelling="pa" id="1802979220220"/>
+			<VarDecl type="__m128i" spelling="pb" id="1801091671889"/>
+			<VarDecl type="__m128i" spelling="pc" id="1802904333149"/>
+			<VarDecl type="__m128i" spelling="smallest" id="1801161700576"/>
+			<VarDecl type="__m128i" spelling="nearest" id="1801122982113"/>
+			<UnexposedExpr type="__m128i" spelling="b" id="1803392065272"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_unpacklo_epi8" id="1801108253475"/>
+			<UnexposedExpr type="__m128i (*)(const void *)" spelling="load4" id="1800529471849"/>
+			<UnexposedExpr type="const void *" spelling="prev" id="1800656745653"/>
+			<UnexposedExpr type="png_const_bytep" spelling="prev" id="1801481853875"/>
+			<UnexposedExpr type="__m128i" spelling="zero" id="1803004342613"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1803574562939"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_unpacklo_epi8" id="1802688571656"/>
+			<UnexposedExpr type="__m128i (*)(const void *)" spelling="load4" id="1800657832032"/>
+			<UnexposedExpr type="const void *" spelling="row" id="1800883883747"/>
+			<UnexposedExpr type="png_bytep" spelling="row" id="1801340019766"/>
+			<UnexposedExpr type="__m128i" spelling="zero" id="1803297999300"/>
+			<CallExpr type="__m128i" spelling="_mm_unpacklo_epi8" id="1800540342373"/>
+			<CallExpr type="__m128i" spelling="load4" id="1803040528759"/>
+			<CallExpr type="__m128i" spelling="_mm_unpacklo_epi8" id="1800372906802"/>
+			<CallExpr type="__m128i" spelling="load4" id="1801647642224"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<DeclRefExpr type="__m128i" spelling="c" id="1803653101255"/>
+			<DeclRefExpr type="__m128i" spelling="b" id="1800527135255"/>
+			<DeclRefExpr type="__m128i" spelling="b" id="1803883580532"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_unpacklo_epi8" id="1803787544282"/>
+			<DeclRefExpr type="__m128i (const void *)" spelling="load4" id="1802324167237"/>
+			<DeclRefExpr type="png_const_bytep" spelling="prev" id="1803290926587"/>
+			<DeclRefExpr type="const __m128i" spelling="zero" id="1802052346262"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1800521951185"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1800513073566"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1800708992314"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_unpacklo_epi8" id="1802659015048"/>
+			<DeclRefExpr type="__m128i (const void *)" spelling="load4" id="1802743154493"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1801834227034"/>
+			<DeclRefExpr type="const __m128i" spelling="zero" id="1803539793688"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="do" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="(p-a) == (a+b-c - a) == (b-c)" comment_scope_start="261" comment_scope_end="264">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_sub_epi16" id="1803067102081"/>
+			<UnexposedExpr type="__m128i" spelling="b" id="1801034412865"/>
+			<UnexposedExpr type="__m128i" spelling="c" id="1801395297796"/>
+			<CallExpr type="__m128i" spelling="_mm_sub_epi16" id="1801126495585"/>
+			<DeclRefExpr type="__m128i" spelling="pa" id="1800159526526"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_sub_epi16" id="1800577912153"/>
+			<DeclRefExpr type="__m128i" spelling="b" id="1801226515552"/>
+			<DeclRefExpr type="__m128i" spelling="c" id="1800530272159"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="(p-b) == (a+b-c - b) == (a-c)" comment_scope_start="265" comment_scope_end="267">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_sub_epi16" id="1803614812962"/>
+			<UnexposedExpr type="__m128i" spelling="a" id="1801738945936"/>
+			<UnexposedExpr type="__m128i" spelling="c" id="1801289324130"/>
+			<CallExpr type="__m128i" spelling="_mm_sub_epi16" id="1801811398220"/>
+			<DeclRefExpr type="__m128i" spelling="pb" id="1802237890806"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_sub_epi16" id="1800978177533"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1801622362354"/>
+			<DeclRefExpr type="__m128i" spelling="c" id="1803287759258"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="(p-c) == (a+b-c - c) == (a+b-c-c) == (b-c)+(a-c)" comment_scope_start="268" comment_scope_end="270">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_add_epi16" id="1802542154541"/>
+			<UnexposedExpr type="__m128i" spelling="pa" id="1802647414280"/>
+			<UnexposedExpr type="__m128i" spelling="pb" id="1801739636474"/>
+			<CallExpr type="__m128i" spelling="_mm_add_epi16" id="1803984721842"/>
+			<DeclRefExpr type="__m128i" spelling="pc" id="1800030656140"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_add_epi16" id="1802402736682"/>
+			<DeclRefExpr type="__m128i" spelling="pa" id="1802063973233"/>
+			<DeclRefExpr type="__m128i" spelling="pb" id="1803572569202"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="|p-a|" comment_scope_start="271" comment_scope_end="271">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i)" spelling="abs_i16" id="1801788845972"/>
+			<UnexposedExpr type="__m128i" spelling="pa" id="1803237774212"/>
+			<CallExpr type="__m128i" spelling="abs_i16" id="1803519675730"/>
+			<DeclRefExpr type="__m128i" spelling="pa" id="1801776577598"/>
+			<DeclRefExpr type="__m128i (__m128i)" spelling="abs_i16" id="1801180244243"/>
+			<DeclRefExpr type="__m128i" spelling="pa" id="1801917739991"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="|p-b|" comment_scope_start="272" comment_scope_end="272">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i)" spelling="abs_i16" id="1800300393084"/>
+			<UnexposedExpr type="__m128i" spelling="pb" id="1802195445796"/>
+			<CallExpr type="__m128i" spelling="abs_i16" id="1803727943805"/>
+			<DeclRefExpr type="__m128i" spelling="pb" id="1800651372587"/>
+			<DeclRefExpr type="__m128i (__m128i)" spelling="abs_i16" id="1802508250271"/>
+			<DeclRefExpr type="__m128i" spelling="pb" id="1803242759794"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="|p-c|" comment_scope_start="273" comment_scope_end="273">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i)" spelling="abs_i16" id="1803136716944"/>
+			<UnexposedExpr type="__m128i" spelling="pc" id="1801140840740"/>
+			<CallExpr type="__m128i" spelling="abs_i16" id="1801577279015"/>
+			<DeclRefExpr type="__m128i" spelling="pc" id="1802888979398"/>
+			<DeclRefExpr type="__m128i (__m128i)" spelling="abs_i16" id="1801322794655"/>
+			<DeclRefExpr type="__m128i" spelling="pc" id="1804246576352"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="Paeth breaks ties favoring a over b over c." comment_scope_start="277" comment_scope_end="281">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i, __m128i)" spelling="if_then_else" id="1801425662651"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_cmpeq_epi16" id="1802011701732"/>
+			<UnexposedExpr type="__m128i" spelling="smallest" id="1800634176301"/>
+			<UnexposedExpr type="__m128i" spelling="pa" id="1803659112083"/>
+			<UnexposedExpr type="__m128i" spelling="a" id="1801122516191"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i, __m128i)" spelling="if_then_else" id="1802230214152"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_cmpeq_epi16" id="1802946735764"/>
+			<UnexposedExpr type="__m128i" spelling="smallest" id="1804105691817"/>
+			<UnexposedExpr type="__m128i" spelling="pb" id="1803951700590"/>
+			<UnexposedExpr type="__m128i" spelling="b" id="1802814652511"/>
+			<UnexposedExpr type="__m128i" spelling="c" id="1801215052646"/>
+			<CallExpr type="__m128i" spelling="if_then_else" id="1801328246398"/>
+			<CallExpr type="__m128i" spelling="_mm_cmpeq_epi16" id="1802032282756"/>
+			<CallExpr type="__m128i" spelling="if_then_else" id="1803683912250"/>
+			<CallExpr type="__m128i" spelling="_mm_cmpeq_epi16" id="1803482008905"/>
+			<DeclRefExpr type="__m128i" spelling="nearest" id="1802726096157"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i, __m128i)" spelling="if_then_else" id="1800418109499"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_cmpeq_epi16" id="1804017659443"/>
+			<DeclRefExpr type="__m128i" spelling="smallest" id="1802251648182"/>
+			<DeclRefExpr type="__m128i" spelling="pa" id="1803266714107"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1803297854010"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i, __m128i)" spelling="if_then_else" id="1800488472526"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_cmpeq_epi16" id="1802999443010"/>
+			<DeclRefExpr type="__m128i" spelling="smallest" id="1801000585887"/>
+			<DeclRefExpr type="__m128i" spelling="pb" id="1803596457936"/>
+			<DeclRefExpr type="__m128i" spelling="b" id="1803902296090"/>
+			<DeclRefExpr type="__m128i" spelling="c" id="1800055378249"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="Note `_epi8`: we need addition to wrap modulo 255." comment_scope_start="282" comment_scope_end="289">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_add_epi8" id="1802244026737"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1801631318196"/>
+			<UnexposedExpr type="__m128i" spelling="nearest" id="1800411695195"/>
+			<UnexposedExpr type="void (*)(void *, __m128i)" spelling="store3" id="1800289538822"/>
+			<UnexposedExpr type="void *" spelling="row" id="1803123158016"/>
+			<UnexposedExpr type="png_bytep" spelling="row" id="1803368867530"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_packus_epi16" id="1801075267845"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1801604583820"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1801800929444"/>
+			<CallExpr type="__m128i" spelling="_mm_add_epi8" id="1801434387687"/>
+			<CallExpr type="void" spelling="store3" id="1803676143287"/>
+			<CallExpr type="__m128i" spelling="_mm_packus_epi16" id="1801806501606"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1803907319140"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_add_epi8" id="1801208651529"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1802078947117"/>
+			<DeclRefExpr type="__m128i" spelling="nearest" id="1802552214406"/>
+			<DeclRefExpr type="void (void *, __m128i)" spelling="store3" id="1802972361762"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1801683456729"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_packus_epi16" id="1802906015570"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1800804298014"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1800748905890"/>
+			<DeclRefExpr type="png_const_bytep" spelling="prev" id="1801195061980"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1802422411763"/>
+			<DeclRefExpr type="size_t" spelling="rb" id="1800276764274"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="addition" type=" 'Operations as part of Data structure"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="It's easiest to do this math (particularly, deal with pc) with 16-bit
+       * intermediates." comment_scope_start="291" comment_scope_end="297">
+		<SYMBOLS>
+			<VarDecl type="__m128i" spelling="pa" id="1801328710458"/>
+			<VarDecl type="__m128i" spelling="pb" id="1800452135789"/>
+			<VarDecl type="__m128i" spelling="pc" id="1801407528121"/>
+			<VarDecl type="__m128i" spelling="smallest" id="1803920575127"/>
+			<VarDecl type="__m128i" spelling="nearest" id="1802208039546"/>
+			<UnexposedExpr type="__m128i" spelling="b" id="1801436133006"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_unpacklo_epi8" id="1803407200705"/>
+			<UnexposedExpr type="__m128i (*)(const void *)" spelling="load3" id="1801761847436"/>
+			<UnexposedExpr type="const void *" spelling="prev" id="1803387749069"/>
+			<UnexposedExpr type="png_const_bytep" spelling="prev" id="1800910328298"/>
+			<UnexposedExpr type="__m128i" spelling="zero" id="1802208794016"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1802705087163"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_unpacklo_epi8" id="1800410023581"/>
+			<UnexposedExpr type="__m128i (*)(const void *)" spelling="load3" id="1801826429246"/>
+			<UnexposedExpr type="const void *" spelling="row" id="1804010887800"/>
+			<UnexposedExpr type="png_bytep" spelling="row" id="1801054328938"/>
+			<UnexposedExpr type="__m128i" spelling="zero" id="1804215102046"/>
+			<CallExpr type="__m128i" spelling="_mm_unpacklo_epi8" id="1801532023142"/>
+			<CallExpr type="__m128i" spelling="load3" id="1800915460112"/>
+			<CallExpr type="__m128i" spelling="_mm_unpacklo_epi8" id="1803695330751"/>
+			<CallExpr type="__m128i" spelling="load3" id="1802866858815"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<DeclRefExpr type="__m128i" spelling="c" id="1801779138917"/>
+			<DeclRefExpr type="__m128i" spelling="b" id="1802515654625"/>
+			<DeclRefExpr type="__m128i" spelling="b" id="1803932989641"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_unpacklo_epi8" id="1801630756513"/>
+			<DeclRefExpr type="__m128i (const void *)" spelling="load3" id="1800417534397"/>
+			<DeclRefExpr type="png_const_bytep" spelling="prev" id="1802790869284"/>
+			<DeclRefExpr type="const __m128i" spelling="zero" id="1801328895953"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1802540765339"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1803256518626"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1804217966610"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_unpacklo_epi8" id="1801752838102"/>
+			<DeclRefExpr type="__m128i (const void *)" spelling="load3" id="1801669493694"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1800151932966"/>
+			<DeclRefExpr type="const __m128i" spelling="zero" id="1803802169112"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="do" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="(p-a) == (a+b-c - a) == (b-c)" comment_scope_start="298" comment_scope_end="300">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_sub_epi16" id="1802312899161"/>
+			<UnexposedExpr type="__m128i" spelling="b" id="1802831469192"/>
+			<UnexposedExpr type="__m128i" spelling="c" id="1803299019531"/>
+			<CallExpr type="__m128i" spelling="_mm_sub_epi16" id="1802631670989"/>
+			<DeclRefExpr type="__m128i" spelling="pa" id="1802124668269"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_sub_epi16" id="1802563792879"/>
+			<DeclRefExpr type="__m128i" spelling="b" id="1801181573664"/>
+			<DeclRefExpr type="__m128i" spelling="c" id="1803892789557"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="(p-b) == (a+b-c - b) == (a-c)" comment_scope_start="301" comment_scope_end="303">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_sub_epi16" id="1800739571330"/>
+			<UnexposedExpr type="__m128i" spelling="a" id="1802733560672"/>
+			<UnexposedExpr type="__m128i" spelling="c" id="1802117728456"/>
+			<CallExpr type="__m128i" spelling="_mm_sub_epi16" id="1801952232409"/>
+			<DeclRefExpr type="__m128i" spelling="pb" id="1802541943428"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_sub_epi16" id="1800500926534"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1801089184490"/>
+			<DeclRefExpr type="__m128i" spelling="c" id="1800443283536"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="(p-c) == (a+b-c - c) == (a+b-c-c) == (b-c)+(a-c)" comment_scope_start="304" comment_scope_end="306">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_add_epi16" id="1802603858796"/>
+			<UnexposedExpr type="__m128i" spelling="pa" id="1802533459730"/>
+			<UnexposedExpr type="__m128i" spelling="pb" id="1800174549776"/>
+			<CallExpr type="__m128i" spelling="_mm_add_epi16" id="1802327345333"/>
+			<DeclRefExpr type="__m128i" spelling="pc" id="1800271195193"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_add_epi16" id="1804075688345"/>
+			<DeclRefExpr type="__m128i" spelling="pa" id="1803330151344"/>
+			<DeclRefExpr type="__m128i" spelling="pb" id="1802306515929"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="|p-a|" comment_scope_start="307" comment_scope_end="307">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i)" spelling="abs_i16" id="1801794270060"/>
+			<UnexposedExpr type="__m128i" spelling="pa" id="1802006309441"/>
+			<CallExpr type="__m128i" spelling="abs_i16" id="1800583017195"/>
+			<DeclRefExpr type="__m128i" spelling="pa" id="1804250777972"/>
+			<DeclRefExpr type="__m128i (__m128i)" spelling="abs_i16" id="1803592539020"/>
+			<DeclRefExpr type="__m128i" spelling="pa" id="1803801972798"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="|p-b|" comment_scope_start="308" comment_scope_end="308">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i)" spelling="abs_i16" id="1801599664201"/>
+			<UnexposedExpr type="__m128i" spelling="pb" id="1802879910074"/>
+			<CallExpr type="__m128i" spelling="abs_i16" id="1802471730815"/>
+			<DeclRefExpr type="__m128i" spelling="pb" id="1802673217145"/>
+			<DeclRefExpr type="__m128i (__m128i)" spelling="abs_i16" id="1803320697013"/>
+			<DeclRefExpr type="__m128i" spelling="pb" id="1800621882663"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="|p-c|" comment_scope_start="309" comment_scope_end="309">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i)" spelling="abs_i16" id="1802402730629"/>
+			<UnexposedExpr type="__m128i" spelling="pc" id="1800307943034"/>
+			<CallExpr type="__m128i" spelling="abs_i16" id="1801676529025"/>
+			<DeclRefExpr type="__m128i" spelling="pc" id="1803825215896"/>
+			<DeclRefExpr type="__m128i (__m128i)" spelling="abs_i16" id="1802726616589"/>
+			<DeclRefExpr type="__m128i" spelling="pc" id="1804048963822"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="Paeth breaks ties favoring a over b over c." comment_scope_start="313" comment_scope_end="317">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i, __m128i)" spelling="if_then_else" id="1802756527136"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_cmpeq_epi16" id="1800832338911"/>
+			<UnexposedExpr type="__m128i" spelling="smallest" id="1801511504810"/>
+			<UnexposedExpr type="__m128i" spelling="pa" id="1801483159022"/>
+			<UnexposedExpr type="__m128i" spelling="a" id="1801900862494"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i, __m128i)" spelling="if_then_else" id="1800134628541"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_cmpeq_epi16" id="1802678962127"/>
+			<UnexposedExpr type="__m128i" spelling="smallest" id="1802516679780"/>
+			<UnexposedExpr type="__m128i" spelling="pb" id="1804194229271"/>
+			<UnexposedExpr type="__m128i" spelling="b" id="1800168954502"/>
+			<UnexposedExpr type="__m128i" spelling="c" id="1800289909490"/>
+			<CallExpr type="__m128i" spelling="if_then_else" id="1803631654857"/>
+			<CallExpr type="__m128i" spelling="_mm_cmpeq_epi16" id="1801688316630"/>
+			<CallExpr type="__m128i" spelling="if_then_else" id="1800690381267"/>
+			<CallExpr type="__m128i" spelling="_mm_cmpeq_epi16" id="1800704525065"/>
+			<DeclRefExpr type="__m128i" spelling="nearest" id="1802891804641"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i, __m128i)" spelling="if_then_else" id="1801342074724"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_cmpeq_epi16" id="1800206171863"/>
+			<DeclRefExpr type="__m128i" spelling="smallest" id="1801462063923"/>
+			<DeclRefExpr type="__m128i" spelling="pa" id="1800972262241"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1800190874904"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i, __m128i)" spelling="if_then_else" id="1804276046152"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_cmpeq_epi16" id="1803044798415"/>
+			<DeclRefExpr type="__m128i" spelling="smallest" id="1803641596414"/>
+			<DeclRefExpr type="__m128i" spelling="pb" id="1802983364956"/>
+			<DeclRefExpr type="__m128i" spelling="b" id="1802098355132"/>
+			<DeclRefExpr type="__m128i" spelling="c" id="1803115943937"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="Note `_epi8`: we need addition to wrap modulo 255." comment_scope_start="318" comment_scope_end="325">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_add_epi8" id="1802062634522"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1800147193268"/>
+			<UnexposedExpr type="__m128i" spelling="nearest" id="1800829903847"/>
+			<UnexposedExpr type="void (*)(void *, __m128i)" spelling="store3" id="1804077735351"/>
+			<UnexposedExpr type="void *" spelling="row" id="1802440743413"/>
+			<UnexposedExpr type="png_bytep" spelling="row" id="1801795614551"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_packus_epi16" id="1803217967873"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1800230169812"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1801320058376"/>
+			<CallExpr type="__m128i" spelling="_mm_add_epi8" id="1801511848295"/>
+			<CallExpr type="void" spelling="store3" id="1803007226714"/>
+			<CallExpr type="__m128i" spelling="_mm_packus_epi16" id="1801647459398"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1800694541117"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_add_epi8" id="1800790304960"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1801789991787"/>
+			<DeclRefExpr type="__m128i" spelling="nearest" id="1801242724198"/>
+			<DeclRefExpr type="void (void *, __m128i)" spelling="store3" id="1803086657355"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1802324410463"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_packus_epi16" id="1804225820338"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1802075622565"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1803204885464"/>
+			<DeclRefExpr type="png_const_bytep" spelling="prev" id="1802717993572"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1801454986336"/>
+			<DeclRefExpr type="size_t" spelling="rb" id="1802354632079"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="addition" type=" 'Operations as part of Data structure"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="Paeth tries to predict pixel d using the pixel to the left of it, a,
+    * and two pixels from the previous row, b and c:
+    *   prev: c b
+    *   row:  a d
+    * The Paeth function predicts d to be whichever of a, b, or c is nearest to
+    * p=a+b-c.
+    *
+    * The first pixel has no left context, and so uses an Up filter, p = b.
+    * This works naturally with our main loop's p = a+b-c if we force a and c
+    * to zero.
+    * Here we zero b and d, which become c and a respectively at the start of
+    * the loop." comment_scope_start="331" comment_scope_end="353">
+		<SYMBOLS>
+			<VarDecl type="size_t" spelling="rb" id="1804282574424"/>
+			<VarDecl type="const __m128i" spelling="zero" id="1800351799154"/>
+			<VarDecl type="__m128i" spelling="pa" id="1803343421512"/>
+			<VarDecl type="__m128i" spelling="pb" id="1802808781266"/>
+			<VarDecl type="__m128i" spelling="pc" id="1801926524047"/>
+			<VarDecl type="__m128i" spelling="smallest" id="1801372162005"/>
+			<VarDecl type="__m128i" spelling="nearest" id="1802785336801"/>
+			<VarDecl type="__m128i" spelling="c" id="1800086015494"/>
+			<VarDecl type="__m128i" spelling="b" id="1802182756157"/>
+			<VarDecl type="__m128i" spelling="a" id="1804227889714"/>
+			<VarDecl type="__m128i" spelling="d" id="1801595373176"/>
+			<UnexposedExpr type="__m128i (*)(void)" spelling="_mm_setzero_si128" id="1801198765466"/>
+			<UnexposedExpr type="__m128i" spelling="zero" id="1801521720144"/>
+			<UnexposedExpr type="__m128i" spelling="zero" id="1801252880275"/>
+			<UnexposedExpr type="size_t" spelling="rowbytes" id="1801403774590"/>
+			<UnexposedExpr type="png_row_infop" spelling="row_info" id="1802945957323"/>
+			<UnexposedExpr type="size_t" spelling="rb" id="1803374953631"/>
+			<CallExpr type="__m128i" spelling="_mm_setzero_si128" id="1802088401050"/>
+			<TypeRef type="size_t" spelling="size_t" id="1800715853768"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<TypeRef type="__m128i" spelling="__m128i" id="1801266579900"/>
+			<DeclRefExpr type="__m128i (void)" spelling="_mm_setzero_si128" id="1800797817831"/>
+			<DeclRefExpr type="const __m128i" spelling="zero" id="1803049978174"/>
+			<DeclRefExpr type="const __m128i" spelling="zero" id="1803028218906"/>
+			<DeclRefExpr type="size_t" spelling="rb" id="1802955590729"/>
+			<DeclRefExpr type="png_row_infop" spelling="row_info" id="1802330390302"/>
+			<DeclRefExpr type="size_t" spelling="rb" id="1800653015364"/>
+			<MemberRefExpr type="size_t" spelling="rowbytes" id="1802838612435"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="left" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="previous" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="prev" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="first" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="left" type=" 'Data-Structure and its Components"/>
+			<POGRAM_DOMAIN word="if" type=" 'Operations as part of Algorithms"/>
+			<POGRAM_DOMAIN word="start" type=" 'Time Complexity / Space Complexity/ Memory/ Exception"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS>
+			<PROBLEM_DOMAIN word="pixel"/>
+			<PROBLEM_DOMAIN word="pixel"/>
+			<PROBLEM_DOMAIN word="pixel"/>
+		</PROBLEM_DOMAINS>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="It's easiest to do this math (particularly, deal with pc) with 16-bit
+       * intermediates." comment_scope_start="354" comment_scope_end="359">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i" spelling="b" id="1800787843769"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_unpacklo_epi8" id="1803628948105"/>
+			<UnexposedExpr type="__m128i (*)(const void *)" spelling="load4" id="1803089670964"/>
+			<UnexposedExpr type="const void *" spelling="prev" id="1802342981503"/>
+			<UnexposedExpr type="png_const_bytep" spelling="prev" id="1803126931266"/>
+			<UnexposedExpr type="__m128i" spelling="zero" id="1800806322846"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1802316072065"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_unpacklo_epi8" id="1803697929861"/>
+			<UnexposedExpr type="__m128i (*)(const void *)" spelling="load4" id="1802519330158"/>
+			<UnexposedExpr type="const void *" spelling="row" id="1802595284550"/>
+			<UnexposedExpr type="png_bytep" spelling="row" id="1800865555875"/>
+			<UnexposedExpr type="__m128i" spelling="zero" id="1801353013341"/>
+			<CallExpr type="__m128i" spelling="_mm_unpacklo_epi8" id="1802435185108"/>
+			<CallExpr type="__m128i" spelling="load4" id="1804033336934"/>
+			<CallExpr type="__m128i" spelling="_mm_unpacklo_epi8" id="1803220830774"/>
+			<CallExpr type="__m128i" spelling="load4" id="1803482528058"/>
+			<DeclRefExpr type="__m128i" spelling="c" id="1803787548254"/>
+			<DeclRefExpr type="__m128i" spelling="b" id="1801833735423"/>
+			<DeclRefExpr type="__m128i" spelling="b" id="1803723485279"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_unpacklo_epi8" id="1800324781780"/>
+			<DeclRefExpr type="__m128i (const void *)" spelling="load4" id="1803974279774"/>
+			<DeclRefExpr type="png_const_bytep" spelling="prev" id="1801349504980"/>
+			<DeclRefExpr type="const __m128i" spelling="zero" id="1802423491587"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1803637157039"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1801085991900"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1800344852193"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_unpacklo_epi8" id="1802975850796"/>
+			<DeclRefExpr type="__m128i (const void *)" spelling="load4" id="1802623020567"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1801994522066"/>
+			<DeclRefExpr type="const __m128i" spelling="zero" id="1803912286563"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="do" type=" 'Operations as part of Algorithms"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="(p-a) == (a+b-c - a) == (b-c)" comment_scope_start="360" comment_scope_end="362">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_sub_epi16" id="1800756745831"/>
+			<UnexposedExpr type="__m128i" spelling="b" id="1802518983531"/>
+			<UnexposedExpr type="__m128i" spelling="c" id="1801623117090"/>
+			<CallExpr type="__m128i" spelling="_mm_sub_epi16" id="1803949400467"/>
+			<DeclRefExpr type="__m128i" spelling="pa" id="1801637247635"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_sub_epi16" id="1801060715794"/>
+			<DeclRefExpr type="__m128i" spelling="b" id="1803446169135"/>
+			<DeclRefExpr type="__m128i" spelling="c" id="1802330984228"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="(p-b) == (a+b-c - b) == (a-c)" comment_scope_start="363" comment_scope_end="365">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_sub_epi16" id="1803406997718"/>
+			<UnexposedExpr type="__m128i" spelling="a" id="1800971619700"/>
+			<UnexposedExpr type="__m128i" spelling="c" id="1802568583562"/>
+			<CallExpr type="__m128i" spelling="_mm_sub_epi16" id="1803977999133"/>
+			<DeclRefExpr type="__m128i" spelling="pb" id="1803516290152"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_sub_epi16" id="1800103596792"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1801134407643"/>
+			<DeclRefExpr type="__m128i" spelling="c" id="1802433648658"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="(p-c) == (a+b-c - c) == (a+b-c-c) == (b-c)+(a-c)" comment_scope_start="366" comment_scope_end="368">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_add_epi16" id="1801683214157"/>
+			<UnexposedExpr type="__m128i" spelling="pa" id="1801449520602"/>
+			<UnexposedExpr type="__m128i" spelling="pb" id="1803374692270"/>
+			<CallExpr type="__m128i" spelling="_mm_add_epi16" id="1800158352756"/>
+			<DeclRefExpr type="__m128i" spelling="pc" id="1803690951178"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_add_epi16" id="1803011325698"/>
+			<DeclRefExpr type="__m128i" spelling="pa" id="1800662125626"/>
+			<DeclRefExpr type="__m128i" spelling="pb" id="1803733621950"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="|p-a|" comment_scope_start="369" comment_scope_end="369">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i)" spelling="abs_i16" id="1801086601219"/>
+			<UnexposedExpr type="__m128i" spelling="pa" id="1800302624401"/>
+			<CallExpr type="__m128i" spelling="abs_i16" id="1800498892359"/>
+			<DeclRefExpr type="__m128i" spelling="pa" id="1803317964936"/>
+			<DeclRefExpr type="__m128i (__m128i)" spelling="abs_i16" id="1803094047114"/>
+			<DeclRefExpr type="__m128i" spelling="pa" id="1800240741877"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="|p-b|" comment_scope_start="370" comment_scope_end="370">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i)" spelling="abs_i16" id="1802405489299"/>
+			<UnexposedExpr type="__m128i" spelling="pb" id="1802412609731"/>
+			<CallExpr type="__m128i" spelling="abs_i16" id="1801826660749"/>
+			<DeclRefExpr type="__m128i" spelling="pb" id="1800915649190"/>
+			<DeclRefExpr type="__m128i (__m128i)" spelling="abs_i16" id="1802582276897"/>
+			<DeclRefExpr type="__m128i" spelling="pb" id="1801150561265"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="|p-c|" comment_scope_start="371" comment_scope_end="371">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i)" spelling="abs_i16" id="1801450623010"/>
+			<UnexposedExpr type="__m128i" spelling="pc" id="1801327370877"/>
+			<CallExpr type="__m128i" spelling="abs_i16" id="1800038068405"/>
+			<DeclRefExpr type="__m128i" spelling="pc" id="1801132473903"/>
+			<DeclRefExpr type="__m128i (__m128i)" spelling="abs_i16" id="1801703275576"/>
+			<DeclRefExpr type="__m128i" spelling="pc" id="1802711408313"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="Paeth breaks ties favoring a over b over c." comment_scope_start="375" comment_scope_end="379">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i, __m128i)" spelling="if_then_else" id="1803880194274"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_cmpeq_epi16" id="1803479338202"/>
+			<UnexposedExpr type="__m128i" spelling="smallest" id="1801871559054"/>
+			<UnexposedExpr type="__m128i" spelling="pa" id="1802216873518"/>
+			<UnexposedExpr type="__m128i" spelling="a" id="1802117961939"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i, __m128i)" spelling="if_then_else" id="1801915895831"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_cmpeq_epi16" id="1802901569601"/>
+			<UnexposedExpr type="__m128i" spelling="smallest" id="1803262434211"/>
+			<UnexposedExpr type="__m128i" spelling="pb" id="1800128442292"/>
+			<UnexposedExpr type="__m128i" spelling="b" id="1803380398895"/>
+			<UnexposedExpr type="__m128i" spelling="c" id="1803731849218"/>
+			<CallExpr type="__m128i" spelling="if_then_else" id="1801828182927"/>
+			<CallExpr type="__m128i" spelling="_mm_cmpeq_epi16" id="1800491815926"/>
+			<CallExpr type="__m128i" spelling="if_then_else" id="1803744391533"/>
+			<CallExpr type="__m128i" spelling="_mm_cmpeq_epi16" id="1802841115900"/>
+			<DeclRefExpr type="__m128i" spelling="nearest" id="1803027430793"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i, __m128i)" spelling="if_then_else" id="1804290906500"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_cmpeq_epi16" id="1800838601231"/>
+			<DeclRefExpr type="__m128i" spelling="smallest" id="1800302270257"/>
+			<DeclRefExpr type="__m128i" spelling="pa" id="1801031082833"/>
+			<DeclRefExpr type="__m128i" spelling="a" id="1804114308081"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i, __m128i)" spelling="if_then_else" id="1803082345540"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_cmpeq_epi16" id="1801182258306"/>
+			<DeclRefExpr type="__m128i" spelling="smallest" id="1801642384045"/>
+			<DeclRefExpr type="__m128i" spelling="pb" id="1804088860717"/>
+			<DeclRefExpr type="__m128i" spelling="b" id="1802223416694"/>
+			<DeclRefExpr type="__m128i" spelling="c" id="1803176495354"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS/>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="Note `_epi8`: we need addition to wrap modulo 255." comment_scope_start="380" comment_scope_end="387">
+		<SYMBOLS>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_add_epi8" id="1802931293996"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1802497273195"/>
+			<UnexposedExpr type="__m128i" spelling="nearest" id="1803528532215"/>
+			<UnexposedExpr type="void (*)(void *, __m128i)" spelling="store4" id="1801812339522"/>
+			<UnexposedExpr type="void *" spelling="row" id="1804043230949"/>
+			<UnexposedExpr type="png_bytep" spelling="row" id="1803152051420"/>
+			<UnexposedExpr type="__m128i (*)(__m128i, __m128i)" spelling="_mm_packus_epi16" id="1801356040140"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1800503247555"/>
+			<UnexposedExpr type="__m128i" spelling="d" id="1803503583670"/>
+			<CallExpr type="__m128i" spelling="_mm_add_epi8" id="1803786202092"/>
+			<CallExpr type="void" spelling="store4" id="1801902796300"/>
+			<CallExpr type="__m128i" spelling="_mm_packus_epi16" id="1800724584064"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1802213763829"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_add_epi8" id="1800205364177"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1801850277020"/>
+			<DeclRefExpr type="__m128i" spelling="nearest" id="1802546391017"/>
+			<DeclRefExpr type="void (void *, __m128i)" spelling="store4" id="1801350723183"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1800601599301"/>
+			<DeclRefExpr type="__m128i (__m128i, __m128i)" spelling="_mm_packus_epi16" id="1800069038413"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1803937724478"/>
+			<DeclRefExpr type="__m128i" spelling="d" id="1801371712479"/>
+			<DeclRefExpr type="png_const_bytep" spelling="prev" id="1804222984982"/>
+			<DeclRefExpr type="png_bytep" spelling="row" id="1803348394371"/>
+			<DeclRefExpr type="size_t" spelling="rb" id="1800705907878"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN word="addition" type=" 'Operations as part of Data structure"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="PNG_INTEL_SSE_IMPLEMENTATION &gt; 0" comment_scope_start="390" comment_scope_end="390"/>
+	<COMMENT src_file_location="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/intel/filter_sse2_intrinsics.c" comment_text="READ" comment_scope_start="391" comment_scope_end="391"/>
+</COMMENTS>

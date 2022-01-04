@@ -1,0 +1,20 @@
+# FILENAME	LOCATION	FUNCNAME	CALLNODEID	CALLEXPR
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c	53:7::53:15	getchar	104208323976	GETBREAK
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c	54:7::54:17	putchar	103201840490	putchar( c ) 
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c	62:4::62:12	getchar	101499731266	GETBREAK
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c	63:4::63:12	getchar	104144164426	GETBREAK
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c	64:4::64:12	getchar	103191997245	GETBREAK
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c	65:4::65:12	getchar	103398879376	GETBREAK
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c	68:4::68:12	getchar	103063307025	GETBREAK
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c	69:4::69:12	getchar	101467222787	GETBREAK
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c	70:4::70:12	getchar	104183680552	GETBREAK
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c	71:4::71:12	getchar	103229638954	GETBREAK
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c	81:13::81:32	crc32	101417601307	crc32( 0 , Z_NULL , 0 ) 
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c	86:10::86:18	getchar	102955278761	GETBREAK
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c	93:13::93:46	crc32	103894740764	crc32( crc , buf + 4 , ( uInt ) length + 4 ) 
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c	109:9::109:17	getchar	101696267930	GETBREAK
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c	113:15::113:42	crc32	100092215361	crc32( crc , buf + 7 + length , 1 ) 
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c	127:10::127:25	putchar	102723584670	putchar( buf [ i ] ) 
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c	137:10::137:25	putchar	103868757799	putchar( buf [ i ] ) 
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c	142:10::142:18	getchar	103651652300	GETBREAK
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/contrib/tools/png-fix-itxt.c	143:10::143:20	putchar	100501051571	putchar( c ) 

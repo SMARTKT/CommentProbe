@@ -1,0 +1,10 @@
+# FILENAME	LOCATION	FUNCNAME	CALLNODEID
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwtran.c	526:7::527:53	png_do_strip_channel	1503146757060
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwtran.c	532:7::532:54	png_do_packswap	1503269836824
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwtran.c	537:7::538:43	png_do_pack	1500924149126
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwtran.c	544:7::544:50	png_do_swap	1502431612142
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwtran.c	550:7::551:30	png_do_shift	1502908495611
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwtran.c	556:7::556:62	png_do_write_swap_alpha	1502136023812
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwtran.c	561:7::561:64	png_do_write_invert_alpha	1504045090732
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwtran.c	566:7::566:49	png_do_bgr	1502024409511
+/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngwtran.c	571:7::571:52	png_do_invert	1502513336045

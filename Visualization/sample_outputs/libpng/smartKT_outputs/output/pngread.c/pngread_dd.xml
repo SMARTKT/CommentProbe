@@ -1,0 +1,1305 @@
+<?xml version="1.0" ?>
+<root>
+  <file name="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/build/CMakeFiles/png_static.dir/pngread.c.o">
+    <DW_TAG_compile_unit unit_length="15058" version="4" debug_abbrev_offset="0" address_size="8" path="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngread.c" offset="0">
+      <sources>
+        <entry id="1" file="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngread.c"/>
+        <entry id="2" file="/usr/lib/gcc/x86_64-linux-gnu/7/include/stddef.h"/>
+        <entry id="3" file="/usr/include/x86_64-linux-gnu/bits/types.h"/>
+        <entry id="4" file="/usr/include/x86_64-linux-gnu/bits/libio.h"/>
+        <entry id="5" file="/usr/include/x86_64-linux-gnu/bits/types/FILE.h"/>
+        <entry id="6" file="/usr/include/stdio.h"/>
+        <entry id="7" file="/usr/include/x86_64-linux-gnu/bits/setjmp.h"/>
+        <entry id="8" file="/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h"/>
+        <entry id="9" file="/usr/include/setjmp.h"/>
+        <entry id="10" file="/usr/include/time.h"/>
+        <entry id="11" file="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngconf.h"/>
+        <entry id="12" file="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/png.h"/>
+        <entry id="13" file="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngstruct.h"/>
+        <entry id="14" file="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pnginfo.h"/>
+        <entry id="15" file="/home/dewang/smartKT/SmartKT/kgg/projects/libpng/pngpriv.h"/>
+        <entry id="16" file="/usr/include/zconf.h"/>
+        <entry id="17" file="/usr/include/unistd.h"/>
+        <entry id="18" file="/usr/include/zlib.h"/>
+      </sources>
+      <DW_TAG_typedef offset="45" DW_AT_name="size_t" DW_AT_decl_file="2" DW_AT_decl_line="216" DW_AT_type="56"/>
+      <DW_TAG_base_type offset="56" DW_AT_byte_size="8" DW_AT_encoding="7" DW_AT_name="long unsigned int"/>
+      <DW_TAG_base_type offset="63" DW_AT_byte_size="4" DW_AT_encoding="5" DW_AT_name="int"/>
+      <DW_TAG_base_type offset="70" DW_AT_byte_size="8" DW_AT_encoding="5" DW_AT_name="long int"/>
+      <DW_TAG_base_type offset="77" DW_AT_byte_size="8" DW_AT_encoding="5" DW_AT_name="long long int"/>
+      <DW_TAG_pointer_type offset="84" DW_AT_byte_size="8" DW_AT_type="90"/>
+      <DW_TAG_const_type offset="90"/>
+      <DW_TAG_typedef offset="91" DW_AT_name="ptrdiff_t" DW_AT_decl_file="2" DW_AT_decl_line="149" DW_AT_type="70"/>
+      <DW_TAG_base_type offset="102" DW_AT_byte_size="16" DW_AT_encoding="4" DW_AT_name="long double"/>
+      <DW_TAG_base_type offset="109" DW_AT_byte_size="1" DW_AT_encoding="8" DW_AT_name="unsigned char"/>
+      <DW_TAG_base_type offset="116" DW_AT_byte_size="2" DW_AT_encoding="7" DW_AT_name="short unsigned int"/>
+      <DW_TAG_base_type offset="123" DW_AT_byte_size="4" DW_AT_encoding="7" DW_AT_name="unsigned int"/>
+      <DW_TAG_base_type offset="130" DW_AT_byte_size="1" DW_AT_encoding="6" DW_AT_name="signed char"/>
+      <DW_TAG_base_type offset="137" DW_AT_byte_size="2" DW_AT_encoding="5" DW_AT_name="short int"/>
+      <DW_TAG_typedef offset="144" DW_AT_name="__off_t" DW_AT_decl_file="3" DW_AT_decl_line="140" DW_AT_type="70"/>
+      <DW_TAG_typedef offset="155" DW_AT_name="__off64_t" DW_AT_decl_file="3" DW_AT_decl_line="141" DW_AT_type="70"/>
+      <DW_TAG_pointer_type offset="166" DW_AT_byte_size="8"/>
+      <DW_TAG_pointer_type offset="168" DW_AT_byte_size="8" DW_AT_type="174"/>
+      <DW_TAG_base_type offset="174" DW_AT_byte_size="1" DW_AT_encoding="6" DW_AT_name="char"/>
+      <DW_TAG_const_type offset="181" DW_AT_type="174"/>
+      <DW_TAG_structure_type offset="186" DW_AT_name="_IO_FILE" DW_AT_byte_size="216" DW_AT_decl_file="4" DW_AT_decl_line="245" DW_AT_sibling="570">
+        <DW_TAG_member offset="198" DW_AT_name="_flags" DW_AT_decl_file="4" DW_AT_decl_line="246" DW_AT_type="63" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="210" DW_AT_name="_IO_read_ptr" DW_AT_decl_file="4" DW_AT_decl_line="251" DW_AT_type="168" DW_AT_data_member_location="8"/>
+        <DW_TAG_member offset="222" DW_AT_name="_IO_read_end" DW_AT_decl_file="4" DW_AT_decl_line="252" DW_AT_type="168" DW_AT_data_member_location="16"/>
+        <DW_TAG_member offset="234" DW_AT_name="_IO_read_base" DW_AT_decl_file="4" DW_AT_decl_line="253" DW_AT_type="168" DW_AT_data_member_location="24"/>
+        <DW_TAG_member offset="246" DW_AT_name="_IO_write_base" DW_AT_decl_file="4" DW_AT_decl_line="254" DW_AT_type="168" DW_AT_data_member_location="32"/>
+        <DW_TAG_member offset="258" DW_AT_name="_IO_write_ptr" DW_AT_decl_file="4" DW_AT_decl_line="255" DW_AT_type="168" DW_AT_data_member_location="40"/>
+        <DW_TAG_member offset="270" DW_AT_name="_IO_write_end" DW_AT_decl_file="4" DW_AT_decl_line="256" DW_AT_type="168" DW_AT_data_member_location="48"/>
+        <DW_TAG_member offset="283" DW_AT_name="_IO_buf_base" DW_AT_decl_file="4" DW_AT_decl_line="257" DW_AT_type="168" DW_AT_data_member_location="56"/>
+        <DW_TAG_member offset="296" DW_AT_name="_IO_buf_end" DW_AT_decl_file="4" DW_AT_decl_line="258" DW_AT_type="168" DW_AT_data_member_location="64"/>
+        <DW_TAG_member offset="309" DW_AT_name="_IO_save_base" DW_AT_decl_file="4" DW_AT_decl_line="260" DW_AT_type="168" DW_AT_data_member_location="72"/>
+        <DW_TAG_member offset="322" DW_AT_name="_IO_backup_base" DW_AT_decl_file="4" DW_AT_decl_line="261" DW_AT_type="168" DW_AT_data_member_location="80"/>
+        <DW_TAG_member offset="335" DW_AT_name="_IO_save_end" DW_AT_decl_file="4" DW_AT_decl_line="262" DW_AT_type="168" DW_AT_data_member_location="88"/>
+        <DW_TAG_member offset="348" DW_AT_name="_markers" DW_AT_decl_file="4" DW_AT_decl_line="264" DW_AT_type="637" DW_AT_data_member_location="96"/>
+        <DW_TAG_member offset="361" DW_AT_name="_chain" DW_AT_decl_file="4" DW_AT_decl_line="266" DW_AT_type="643" DW_AT_data_member_location="104"/>
+        <DW_TAG_member offset="374" DW_AT_name="_fileno" DW_AT_decl_file="4" DW_AT_decl_line="268" DW_AT_type="63" DW_AT_data_member_location="112"/>
+        <DW_TAG_member offset="387" DW_AT_name="_flags2" DW_AT_decl_file="4" DW_AT_decl_line="272" DW_AT_type="63" DW_AT_data_member_location="116"/>
+        <DW_TAG_member offset="400" DW_AT_name="_old_offset" DW_AT_decl_file="4" DW_AT_decl_line="274" DW_AT_type="144" DW_AT_data_member_location="120"/>
+        <DW_TAG_member offset="413" DW_AT_name="_cur_column" DW_AT_decl_file="4" DW_AT_decl_line="278" DW_AT_type="116" DW_AT_data_member_location="128"/>
+        <DW_TAG_member offset="426" DW_AT_name="_vtable_offset" DW_AT_decl_file="4" DW_AT_decl_line="279" DW_AT_type="130" DW_AT_data_member_location="130"/>
+        <DW_TAG_member offset="439" DW_AT_name="_shortbuf" DW_AT_decl_file="4" DW_AT_decl_line="280" DW_AT_type="649" DW_AT_data_member_location="131"/>
+        <DW_TAG_member offset="452" DW_AT_name="_lock" DW_AT_decl_file="4" DW_AT_decl_line="284" DW_AT_type="665" DW_AT_data_member_location="136"/>
+        <DW_TAG_member offset="465" DW_AT_name="_offset" DW_AT_decl_file="4" DW_AT_decl_line="293" DW_AT_type="155" DW_AT_data_member_location="144"/>
+        <DW_TAG_member offset="478" DW_AT_name="__pad1" DW_AT_decl_file="4" DW_AT_decl_line="301" DW_AT_type="166" DW_AT_data_member_location="152"/>
+        <DW_TAG_member offset="491" DW_AT_name="__pad2" DW_AT_decl_file="4" DW_AT_decl_line="302" DW_AT_type="166" DW_AT_data_member_location="160"/>
+        <DW_TAG_member offset="504" DW_AT_name="__pad3" DW_AT_decl_file="4" DW_AT_decl_line="303" DW_AT_type="166" DW_AT_data_member_location="168"/>
+        <DW_TAG_member offset="517" DW_AT_name="__pad4" DW_AT_decl_file="4" DW_AT_decl_line="304" DW_AT_type="166" DW_AT_data_member_location="176"/>
+        <DW_TAG_member offset="530" DW_AT_name="__pad5" DW_AT_decl_file="4" DW_AT_decl_line="306" DW_AT_type="45" DW_AT_data_member_location="184"/>
+        <DW_TAG_member offset="543" DW_AT_name="_mode" DW_AT_decl_file="4" DW_AT_decl_line="307" DW_AT_type="63" DW_AT_data_member_location="192"/>
+        <DW_TAG_member offset="556" DW_AT_name="_unused2" DW_AT_decl_file="4" DW_AT_decl_line="309" DW_AT_type="671" DW_AT_data_member_location="196"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_typedef offset="570" DW_AT_name="FILE" DW_AT_decl_file="5" DW_AT_decl_line="7" DW_AT_type="186"/>
+      <DW_TAG_typedef offset="581" DW_AT_name="_IO_lock_t" DW_AT_decl_file="4" DW_AT_decl_line="154"/>
+      <DW_TAG_structure_type offset="588" DW_AT_name="_IO_marker" DW_AT_byte_size="24" DW_AT_decl_file="4" DW_AT_decl_line="160" DW_AT_sibling="637">
+        <DW_TAG_member offset="600" DW_AT_name="_next" DW_AT_decl_file="4" DW_AT_decl_line="161" DW_AT_type="637" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="612" DW_AT_name="_sbuf" DW_AT_decl_file="4" DW_AT_decl_line="162" DW_AT_type="643" DW_AT_data_member_location="8"/>
+        <DW_TAG_member offset="624" DW_AT_name="_pos" DW_AT_decl_file="4" DW_AT_decl_line="166" DW_AT_type="63" DW_AT_data_member_location="16"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_pointer_type offset="637" DW_AT_byte_size="8" DW_AT_type="588"/>
+      <DW_TAG_pointer_type offset="643" DW_AT_byte_size="8" DW_AT_type="186"/>
+      <DW_TAG_array_type offset="649" DW_AT_type="174" DW_AT_sibling="665">
+        <DW_TAG_subrange_type offset="658" DW_AT_type="56" DW_AT_upper_bound="0"/>
+      </DW_TAG_array_type>
+      <DW_TAG_pointer_type offset="665" DW_AT_byte_size="8" DW_AT_type="581"/>
+      <DW_TAG_array_type offset="671" DW_AT_type="174" DW_AT_sibling="687">
+        <DW_TAG_subrange_type offset="680" DW_AT_type="56" DW_AT_upper_bound="19"/>
+      </DW_TAG_array_type>
+      <DW_TAG_structure_type offset="687" DW_AT_name="_IO_FILE_plus" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="692" DW_AT_name="_IO_2_1_stdin_" DW_AT_decl_file="4" DW_AT_decl_line="319" DW_AT_type="687" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="704" DW_AT_name="_IO_2_1_stdout_" DW_AT_decl_file="4" DW_AT_decl_line="320" DW_AT_type="687" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="716" DW_AT_name="_IO_2_1_stderr_" DW_AT_decl_file="4" DW_AT_decl_line="321" DW_AT_type="687" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_pointer_type offset="728" DW_AT_byte_size="8" DW_AT_type="181"/>
+      <DW_TAG_variable offset="734" DW_AT_name="stdin" DW_AT_decl_file="6" DW_AT_decl_line="135" DW_AT_type="643" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="745" DW_AT_name="stdout" DW_AT_decl_file="6" DW_AT_decl_line="136" DW_AT_type="643" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="756" DW_AT_name="stderr" DW_AT_decl_file="6" DW_AT_decl_line="137" DW_AT_type="643" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_typedef offset="767" DW_AT_name="__jmp_buf" DW_AT_decl_file="7" DW_AT_decl_line="31" DW_AT_type="778"/>
+      <DW_TAG_array_type offset="778" DW_AT_type="70" DW_AT_sibling="794">
+        <DW_TAG_subrange_type offset="787" DW_AT_type="56" DW_AT_upper_bound="7"/>
+      </DW_TAG_array_type>
+      <DW_TAG_structure_type offset="794" DW_AT_byte_size="128" DW_AT_decl_file="8" DW_AT_decl_line="5" DW_AT_sibling="815">
+        <DW_TAG_member offset="802" DW_AT_name="__val" DW_AT_decl_file="8" DW_AT_decl_line="7" DW_AT_type="815" DW_AT_data_member_location="0"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_array_type offset="815" DW_AT_type="56" DW_AT_sibling="831">
+        <DW_TAG_subrange_type offset="824" DW_AT_type="56" DW_AT_upper_bound="15"/>
+      </DW_TAG_array_type>
+      <DW_TAG_typedef offset="831" DW_AT_name="__sigset_t" DW_AT_decl_file="8" DW_AT_decl_line="8" DW_AT_type="794"/>
+      <DW_TAG_structure_type offset="842" DW_AT_name="__jmp_buf_tag" DW_AT_byte_size="200" DW_AT_decl_file="9" DW_AT_decl_line="33" DW_AT_sibling="891">
+        <DW_TAG_member offset="854" DW_AT_name="__jmpbuf" DW_AT_decl_file="9" DW_AT_decl_line="39" DW_AT_type="767" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="866" DW_AT_name="__mask_was_saved" DW_AT_decl_file="9" DW_AT_decl_line="40" DW_AT_type="63" DW_AT_data_member_location="64"/>
+        <DW_TAG_member offset="878" DW_AT_name="__saved_mask" DW_AT_decl_file="9" DW_AT_decl_line="41" DW_AT_type="831" DW_AT_data_member_location="72"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_typedef offset="891" DW_AT_name="jmp_buf" DW_AT_decl_file="9" DW_AT_decl_line="45" DW_AT_type="902"/>
+      <DW_TAG_array_type offset="902" DW_AT_type="842" DW_AT_sibling="918">
+        <DW_TAG_subrange_type offset="911" DW_AT_type="56" DW_AT_upper_bound="0"/>
+      </DW_TAG_array_type>
+      <DW_TAG_array_type offset="918" DW_AT_type="168" DW_AT_sibling="934">
+        <DW_TAG_subrange_type offset="927" DW_AT_type="56" DW_AT_upper_bound="1"/>
+      </DW_TAG_array_type>
+      <DW_TAG_variable offset="934" DW_AT_name="__tzname" DW_AT_decl_file="10" DW_AT_decl_line="159" DW_AT_type="918" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="945" DW_AT_name="__daylight" DW_AT_decl_file="10" DW_AT_decl_line="160" DW_AT_type="63" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="956" DW_AT_name="__timezone" DW_AT_decl_file="10" DW_AT_decl_line="161" DW_AT_type="70" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_variable offset="967" DW_AT_name="tzname" DW_AT_decl_file="10" DW_AT_decl_line="166" DW_AT_type="918" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_typedef offset="978" DW_AT_name="png_byte" DW_AT_decl_file="11" DW_AT_decl_line="481" DW_AT_type="109"/>
+      <DW_TAG_const_type offset="990" DW_AT_type="978"/>
+      <DW_TAG_typedef offset="995" DW_AT_name="png_uint_16" DW_AT_decl_file="11" DW_AT_decl_line="497" DW_AT_type="116"/>
+      <DW_TAG_const_type offset="1007" DW_AT_type="995"/>
+      <DW_TAG_typedef offset="1012" DW_AT_name="png_int_32" DW_AT_decl_file="11" DW_AT_decl_line="503" DW_AT_type="63"/>
+      <DW_TAG_typedef offset="1024" DW_AT_name="png_uint_32" DW_AT_decl_file="11" DW_AT_decl_line="511" DW_AT_type="123"/>
+      <DW_TAG_typedef offset="1036" DW_AT_name="png_alloc_size_t" DW_AT_decl_file="11" DW_AT_decl_line="557" DW_AT_type="45"/>
+      <DW_TAG_typedef offset="1048" DW_AT_name="png_fixed_point" DW_AT_decl_file="11" DW_AT_decl_line="574" DW_AT_type="1012"/>
+      <DW_TAG_typedef offset="1060" DW_AT_name="png_voidp" DW_AT_decl_file="11" DW_AT_decl_line="577" DW_AT_type="166"/>
+      <DW_TAG_typedef offset="1072" DW_AT_name="png_const_voidp" DW_AT_decl_file="11" DW_AT_decl_line="578" DW_AT_type="84"/>
+      <DW_TAG_typedef offset="1084" DW_AT_name="png_bytep" DW_AT_decl_file="11" DW_AT_decl_line="579" DW_AT_type="1096"/>
+      <DW_TAG_pointer_type offset="1096" DW_AT_byte_size="8" DW_AT_type="978"/>
+      <DW_TAG_typedef offset="1102" DW_AT_name="png_const_bytep" DW_AT_decl_file="11" DW_AT_decl_line="580" DW_AT_type="1114"/>
+      <DW_TAG_pointer_type offset="1114" DW_AT_byte_size="8" DW_AT_type="990"/>
+      <DW_TAG_typedef offset="1120" DW_AT_name="png_uint_16p" DW_AT_decl_file="11" DW_AT_decl_line="585" DW_AT_type="1132"/>
+      <DW_TAG_pointer_type offset="1132" DW_AT_byte_size="8" DW_AT_type="995"/>
+      <DW_TAG_typedef offset="1138" DW_AT_name="png_const_uint_16p" DW_AT_decl_file="11" DW_AT_decl_line="586" DW_AT_type="1150"/>
+      <DW_TAG_pointer_type offset="1150" DW_AT_byte_size="8" DW_AT_type="1007"/>
+      <DW_TAG_typedef offset="1156" DW_AT_name="png_charp" DW_AT_decl_file="11" DW_AT_decl_line="589" DW_AT_type="168"/>
+      <DW_TAG_typedef offset="1168" DW_AT_name="png_const_charp" DW_AT_decl_file="11" DW_AT_decl_line="590" DW_AT_type="728"/>
+      <DW_TAG_pointer_type offset="1180" DW_AT_byte_size="8" DW_AT_type="570"/>
+      <DW_TAG_base_type offset="1186" DW_AT_byte_size="8" DW_AT_encoding="4" DW_AT_name="double"/>
+      <DW_TAG_typedef offset="1193" DW_AT_name="png_bytepp" DW_AT_decl_file="11" DW_AT_decl_line="606" DW_AT_type="1205"/>
+      <DW_TAG_pointer_type offset="1205" DW_AT_byte_size="8" DW_AT_type="1096"/>
+      <DW_TAG_typedef offset="1211" DW_AT_name="png_uint_16pp" DW_AT_decl_file="11" DW_AT_decl_line="609" DW_AT_type="1223"/>
+      <DW_TAG_pointer_type offset="1223" DW_AT_byte_size="8" DW_AT_type="1132"/>
+      <DW_TAG_typedef offset="1229" DW_AT_name="png_charpp" DW_AT_decl_file="11" DW_AT_decl_line="612" DW_AT_type="1241"/>
+      <DW_TAG_pointer_type offset="1241" DW_AT_byte_size="8" DW_AT_type="168"/>
+      <DW_TAG_typedef offset="1247" DW_AT_name="png_struct" DW_AT_decl_file="12" DW_AT_decl_line="439" DW_AT_type="1264"/>
+      <DW_TAG_const_type offset="1259" DW_AT_type="1247"/>
+      <DW_TAG_structure_type offset="1264" DW_AT_name="png_struct_def" DW_AT_byte_size="1256" DW_AT_decl_file="13" DW_AT_decl_line="143" DW_AT_sibling="3236">
+        <DW_TAG_member offset="1277" DW_AT_name="jmp_buf_local" DW_AT_decl_file="13" DW_AT_decl_line="146" DW_AT_type="891" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="1289" DW_AT_name="longjmp_fn" DW_AT_decl_file="13" DW_AT_decl_line="147" DW_AT_type="5348" DW_AT_data_member_location="200"/>
+        <DW_TAG_member offset="1301" DW_AT_name="jmp_buf_ptr" DW_AT_decl_file="13" DW_AT_decl_line="148" DW_AT_type="6569" DW_AT_data_member_location="208"/>
+        <DW_TAG_member offset="1313" DW_AT_name="jmp_buf_size" DW_AT_decl_file="13" DW_AT_decl_line="149" DW_AT_type="45" DW_AT_data_member_location="216"/>
+        <DW_TAG_member offset="1325" DW_AT_name="error_fn" DW_AT_decl_file="13" DW_AT_decl_line="151" DW_AT_type="5028" DW_AT_data_member_location="224"/>
+        <DW_TAG_member offset="1337" DW_AT_name="warning_fn" DW_AT_decl_file="13" DW_AT_decl_line="153" DW_AT_type="5028" DW_AT_data_member_location="232"/>
+        <DW_TAG_member offset="1349" DW_AT_name="error_ptr" DW_AT_decl_file="13" DW_AT_decl_line="155" DW_AT_type="1060" DW_AT_data_member_location="240"/>
+        <DW_TAG_member offset="1361" DW_AT_name="write_data_fn" DW_AT_decl_file="13" DW_AT_decl_line="156" DW_AT_type="5062" DW_AT_data_member_location="248"/>
+        <DW_TAG_member offset="1373" DW_AT_name="read_data_fn" DW_AT_decl_file="13" DW_AT_decl_line="157" DW_AT_type="5062" DW_AT_data_member_location="256"/>
+        <DW_TAG_member offset="1386" DW_AT_name="io_ptr" DW_AT_decl_file="13" DW_AT_decl_line="158" DW_AT_type="1060" DW_AT_data_member_location="264"/>
+        <DW_TAG_member offset="1399" DW_AT_name="read_user_transform_fn" DW_AT_decl_file="13" DW_AT_decl_line="161" DW_AT_type="5271" DW_AT_data_member_location="272"/>
+        <DW_TAG_member offset="1412" DW_AT_name="write_user_transform_fn" DW_AT_decl_file="13" DW_AT_decl_line="165" DW_AT_type="5271" DW_AT_data_member_location="280"/>
+        <DW_TAG_member offset="1425" DW_AT_name="user_transform_ptr" DW_AT_decl_file="13" DW_AT_decl_line="172" DW_AT_type="1060" DW_AT_data_member_location="288"/>
+        <DW_TAG_member offset="1438" DW_AT_name="user_transform_depth" DW_AT_decl_file="13" DW_AT_decl_line="173" DW_AT_type="978" DW_AT_data_member_location="296"/>
+        <DW_TAG_member offset="1451" DW_AT_name="user_transform_channels" DW_AT_decl_file="13" DW_AT_decl_line="174" DW_AT_type="978" DW_AT_data_member_location="297"/>
+        <DW_TAG_member offset="1464" DW_AT_name="mode" DW_AT_decl_file="13" DW_AT_decl_line="178" DW_AT_type="1024" DW_AT_data_member_location="300"/>
+        <DW_TAG_member offset="1477" DW_AT_name="flags" DW_AT_decl_file="13" DW_AT_decl_line="179" DW_AT_type="1024" DW_AT_data_member_location="304"/>
+        <DW_TAG_member offset="1490" DW_AT_name="transformations" DW_AT_decl_file="13" DW_AT_decl_line="180" DW_AT_type="1024" DW_AT_data_member_location="308"/>
+        <DW_TAG_member offset="1503" DW_AT_name="zowner" DW_AT_decl_file="13" DW_AT_decl_line="182" DW_AT_type="1024" DW_AT_data_member_location="312"/>
+        <DW_TAG_member offset="1516" DW_AT_name="zstream" DW_AT_decl_file="13" DW_AT_decl_line="183" DW_AT_type="6125" DW_AT_data_member_location="320"/>
+        <DW_TAG_member offset="1529" DW_AT_name="zbuffer_list" DW_AT_decl_file="13" DW_AT_decl_line="186" DW_AT_type="6195" DW_AT_data_member_location="432"/>
+        <DW_TAG_member offset="1542" DW_AT_name="zbuffer_size" DW_AT_decl_file="13" DW_AT_decl_line="187" DW_AT_type="5769" DW_AT_data_member_location="440"/>
+        <DW_TAG_member offset="1555" DW_AT_name="zlib_level" DW_AT_decl_file="13" DW_AT_decl_line="189" DW_AT_type="63" DW_AT_data_member_location="444"/>
+        <DW_TAG_member offset="1568" DW_AT_name="zlib_method" DW_AT_decl_file="13" DW_AT_decl_line="190" DW_AT_type="63" DW_AT_data_member_location="448"/>
+        <DW_TAG_member offset="1581" DW_AT_name="zlib_window_bits" DW_AT_decl_file="13" DW_AT_decl_line="191" DW_AT_type="63" DW_AT_data_member_location="452"/>
+        <DW_TAG_member offset="1594" DW_AT_name="zlib_mem_level" DW_AT_decl_file="13" DW_AT_decl_line="192" DW_AT_type="63" DW_AT_data_member_location="456"/>
+        <DW_TAG_member offset="1607" DW_AT_name="zlib_strategy" DW_AT_decl_file="13" DW_AT_decl_line="193" DW_AT_type="63" DW_AT_data_member_location="460"/>
+        <DW_TAG_member offset="1620" DW_AT_name="zlib_text_level" DW_AT_decl_file="13" DW_AT_decl_line="197" DW_AT_type="63" DW_AT_data_member_location="464"/>
+        <DW_TAG_member offset="1633" DW_AT_name="zlib_text_method" DW_AT_decl_file="13" DW_AT_decl_line="198" DW_AT_type="63" DW_AT_data_member_location="468"/>
+        <DW_TAG_member offset="1646" DW_AT_name="zlib_text_window_bits" DW_AT_decl_file="13" DW_AT_decl_line="199" DW_AT_type="63" DW_AT_data_member_location="472"/>
+        <DW_TAG_member offset="1659" DW_AT_name="zlib_text_mem_level" DW_AT_decl_file="13" DW_AT_decl_line="200" DW_AT_type="63" DW_AT_data_member_location="476"/>
+        <DW_TAG_member offset="1672" DW_AT_name="zlib_text_strategy" DW_AT_decl_file="13" DW_AT_decl_line="201" DW_AT_type="63" DW_AT_data_member_location="480"/>
+        <DW_TAG_member offset="1685" DW_AT_name="zlib_set_level" DW_AT_decl_file="13" DW_AT_decl_line="206" DW_AT_type="63" DW_AT_data_member_location="484"/>
+        <DW_TAG_member offset="1698" DW_AT_name="zlib_set_method" DW_AT_decl_file="13" DW_AT_decl_line="207" DW_AT_type="63" DW_AT_data_member_location="488"/>
+        <DW_TAG_member offset="1711" DW_AT_name="zlib_set_window_bits" DW_AT_decl_file="13" DW_AT_decl_line="208" DW_AT_type="63" DW_AT_data_member_location="492"/>
+        <DW_TAG_member offset="1724" DW_AT_name="zlib_set_mem_level" DW_AT_decl_file="13" DW_AT_decl_line="209" DW_AT_type="63" DW_AT_data_member_location="496"/>
+        <DW_TAG_member offset="1737" DW_AT_name="zlib_set_strategy" DW_AT_decl_file="13" DW_AT_decl_line="210" DW_AT_type="63" DW_AT_data_member_location="500"/>
+        <DW_TAG_member offset="1750" DW_AT_name="width" DW_AT_decl_file="13" DW_AT_decl_line="213" DW_AT_type="1024" DW_AT_data_member_location="504"/>
+        <DW_TAG_member offset="1763" DW_AT_name="height" DW_AT_decl_file="13" DW_AT_decl_line="214" DW_AT_type="1024" DW_AT_data_member_location="508"/>
+        <DW_TAG_member offset="1776" DW_AT_name="num_rows" DW_AT_decl_file="13" DW_AT_decl_line="215" DW_AT_type="1024" DW_AT_data_member_location="512"/>
+        <DW_TAG_member offset="1789" DW_AT_name="usr_width" DW_AT_decl_file="13" DW_AT_decl_line="216" DW_AT_type="1024" DW_AT_data_member_location="516"/>
+        <DW_TAG_member offset="1802" DW_AT_name="rowbytes" DW_AT_decl_file="13" DW_AT_decl_line="217" DW_AT_type="45" DW_AT_data_member_location="520"/>
+        <DW_TAG_member offset="1815" DW_AT_name="iwidth" DW_AT_decl_file="13" DW_AT_decl_line="218" DW_AT_type="1024" DW_AT_data_member_location="528"/>
+        <DW_TAG_member offset="1828" DW_AT_name="row_number" DW_AT_decl_file="13" DW_AT_decl_line="219" DW_AT_type="1024" DW_AT_data_member_location="532"/>
+        <DW_TAG_member offset="1841" DW_AT_name="chunk_name" DW_AT_decl_file="13" DW_AT_decl_line="220" DW_AT_type="1024" DW_AT_data_member_location="536"/>
+        <DW_TAG_member offset="1854" DW_AT_name="prev_row" DW_AT_decl_file="13" DW_AT_decl_line="221" DW_AT_type="1084" DW_AT_data_member_location="544"/>
+        <DW_TAG_member offset="1867" DW_AT_name="row_buf" DW_AT_decl_file="13" DW_AT_decl_line="226" DW_AT_type="1084" DW_AT_data_member_location="552"/>
+        <DW_TAG_member offset="1880" DW_AT_name="try_row" DW_AT_decl_file="13" DW_AT_decl_line="232" DW_AT_type="1084" DW_AT_data_member_location="560"/>
+        <DW_TAG_member offset="1893" DW_AT_name="tst_row" DW_AT_decl_file="13" DW_AT_decl_line="233" DW_AT_type="1084" DW_AT_data_member_location="568"/>
+        <DW_TAG_member offset="1906" DW_AT_name="info_rowbytes" DW_AT_decl_file="13" DW_AT_decl_line="235" DW_AT_type="45" DW_AT_data_member_location="576"/>
+        <DW_TAG_member offset="1919" DW_AT_name="idat_size" DW_AT_decl_file="13" DW_AT_decl_line="237" DW_AT_type="1024" DW_AT_data_member_location="584"/>
+        <DW_TAG_member offset="1932" DW_AT_name="crc" DW_AT_decl_file="13" DW_AT_decl_line="238" DW_AT_type="1024" DW_AT_data_member_location="588"/>
+        <DW_TAG_member offset="1945" DW_AT_name="palette" DW_AT_decl_file="13" DW_AT_decl_line="239" DW_AT_type="4132" DW_AT_data_member_location="592"/>
+        <DW_TAG_member offset="1958" DW_AT_name="num_palette" DW_AT_decl_file="13" DW_AT_decl_line="240" DW_AT_type="995" DW_AT_data_member_location="600"/>
+        <DW_TAG_member offset="1971" DW_AT_name="num_palette_max" DW_AT_decl_file="13" DW_AT_decl_line="244" DW_AT_type="63" DW_AT_data_member_location="604"/>
+        <DW_TAG_member offset="1984" DW_AT_name="num_trans" DW_AT_decl_file="13" DW_AT_decl_line="247" DW_AT_type="995" DW_AT_data_member_location="608"/>
+        <DW_TAG_member offset="1997" DW_AT_name="compression" DW_AT_decl_file="13" DW_AT_decl_line="248" DW_AT_type="978" DW_AT_data_member_location="610"/>
+        <DW_TAG_member offset="2010" DW_AT_name="filter" DW_AT_decl_file="13" DW_AT_decl_line="249" DW_AT_type="978" DW_AT_data_member_location="611"/>
+        <DW_TAG_member offset="2023" DW_AT_name="interlaced" DW_AT_decl_file="13" DW_AT_decl_line="250" DW_AT_type="978" DW_AT_data_member_location="612"/>
+        <DW_TAG_member offset="2036" DW_AT_name="pass" DW_AT_decl_file="13" DW_AT_decl_line="251" DW_AT_type="978" DW_AT_data_member_location="613"/>
+        <DW_TAG_member offset="2049" DW_AT_name="do_filter" DW_AT_decl_file="13" DW_AT_decl_line="252" DW_AT_type="978" DW_AT_data_member_location="614"/>
+        <DW_TAG_member offset="2062" DW_AT_name="color_type" DW_AT_decl_file="13" DW_AT_decl_line="253" DW_AT_type="978" DW_AT_data_member_location="615"/>
+        <DW_TAG_member offset="2075" DW_AT_name="bit_depth" DW_AT_decl_file="13" DW_AT_decl_line="254" DW_AT_type="978" DW_AT_data_member_location="616"/>
+        <DW_TAG_member offset="2088" DW_AT_name="usr_bit_depth" DW_AT_decl_file="13" DW_AT_decl_line="255" DW_AT_type="978" DW_AT_data_member_location="617"/>
+        <DW_TAG_member offset="2101" DW_AT_name="pixel_depth" DW_AT_decl_file="13" DW_AT_decl_line="256" DW_AT_type="978" DW_AT_data_member_location="618"/>
+        <DW_TAG_member offset="2115" DW_AT_name="channels" DW_AT_decl_file="13" DW_AT_decl_line="257" DW_AT_type="978" DW_AT_data_member_location="619"/>
+        <DW_TAG_member offset="2129" DW_AT_name="usr_channels" DW_AT_decl_file="13" DW_AT_decl_line="259" DW_AT_type="978" DW_AT_data_member_location="620"/>
+        <DW_TAG_member offset="2143" DW_AT_name="sig_bytes" DW_AT_decl_file="13" DW_AT_decl_line="261" DW_AT_type="978" DW_AT_data_member_location="621"/>
+        <DW_TAG_member offset="2157" DW_AT_name="maximum_pixel_depth" DW_AT_decl_file="13" DW_AT_decl_line="262" DW_AT_type="978" DW_AT_data_member_location="622"/>
+        <DW_TAG_member offset="2171" DW_AT_name="transformed_pixel_depth" DW_AT_decl_file="13" DW_AT_decl_line="264" DW_AT_type="978" DW_AT_data_member_location="623"/>
+        <DW_TAG_member offset="2185" DW_AT_name="zstream_start" DW_AT_decl_file="13" DW_AT_decl_line="267" DW_AT_type="978" DW_AT_data_member_location="624"/>
+        <DW_TAG_member offset="2199" DW_AT_name="filler" DW_AT_decl_file="13" DW_AT_decl_line="270" DW_AT_type="995" DW_AT_data_member_location="626"/>
+        <DW_TAG_member offset="2213" DW_AT_name="background_gamma_type" DW_AT_decl_file="13" DW_AT_decl_line="275" DW_AT_type="978" DW_AT_data_member_location="628"/>
+        <DW_TAG_member offset="2227" DW_AT_name="background_gamma" DW_AT_decl_file="13" DW_AT_decl_line="276" DW_AT_type="1048" DW_AT_data_member_location="632"/>
+        <DW_TAG_member offset="2241" DW_AT_name="background" DW_AT_decl_file="13" DW_AT_decl_line="277" DW_AT_type="4247" DW_AT_data_member_location="636"/>
+        <DW_TAG_member offset="2255" DW_AT_name="background_1" DW_AT_decl_file="13" DW_AT_decl_line="279" DW_AT_type="4247" DW_AT_data_member_location="646"/>
+        <DW_TAG_member offset="2269" DW_AT_name="output_flush_fn" DW_AT_decl_file="13" DW_AT_decl_line="284" DW_AT_type="5101" DW_AT_data_member_location="656"/>
+        <DW_TAG_member offset="2283" DW_AT_name="flush_dist" DW_AT_decl_file="13" DW_AT_decl_line="285" DW_AT_type="1024" DW_AT_data_member_location="664"/>
+        <DW_TAG_member offset="2297" DW_AT_name="flush_rows" DW_AT_decl_file="13" DW_AT_decl_line="286" DW_AT_type="1024" DW_AT_data_member_location="668"/>
+        <DW_TAG_member offset="2311" DW_AT_name="gamma_shift" DW_AT_decl_file="13" DW_AT_decl_line="290" DW_AT_type="63" DW_AT_data_member_location="672"/>
+        <DW_TAG_member offset="2325" DW_AT_name="screen_gamma" DW_AT_decl_file="13" DW_AT_decl_line="291" DW_AT_type="1048" DW_AT_data_member_location="676"/>
+        <DW_TAG_member offset="2339" DW_AT_name="gamma_table" DW_AT_decl_file="13" DW_AT_decl_line="293" DW_AT_type="1084" DW_AT_data_member_location="680"/>
+        <DW_TAG_member offset="2353" DW_AT_name="gamma_16_table" DW_AT_decl_file="13" DW_AT_decl_line="294" DW_AT_type="1211" DW_AT_data_member_location="688"/>
+        <DW_TAG_member offset="2367" DW_AT_name="gamma_from_1" DW_AT_decl_file="13" DW_AT_decl_line="298" DW_AT_type="1084" DW_AT_data_member_location="696"/>
+        <DW_TAG_member offset="2381" DW_AT_name="gamma_to_1" DW_AT_decl_file="13" DW_AT_decl_line="299" DW_AT_type="1084" DW_AT_data_member_location="704"/>
+        <DW_TAG_member offset="2395" DW_AT_name="gamma_16_from_1" DW_AT_decl_file="13" DW_AT_decl_line="300" DW_AT_type="1211" DW_AT_data_member_location="712"/>
+        <DW_TAG_member offset="2409" DW_AT_name="gamma_16_to_1" DW_AT_decl_file="13" DW_AT_decl_line="301" DW_AT_type="1211" DW_AT_data_member_location="720"/>
+        <DW_TAG_member offset="2423" DW_AT_name="sig_bit" DW_AT_decl_file="13" DW_AT_decl_line="306" DW_AT_type="4338" DW_AT_data_member_location="728"/>
+        <DW_TAG_member offset="2437" DW_AT_name="shift" DW_AT_decl_file="13" DW_AT_decl_line="310" DW_AT_type="4338" DW_AT_data_member_location="733"/>
+        <DW_TAG_member offset="2451" DW_AT_name="trans_alpha" DW_AT_decl_file="13" DW_AT_decl_line="315" DW_AT_type="1084" DW_AT_data_member_location="744"/>
+        <DW_TAG_member offset="2465" DW_AT_name="trans_color" DW_AT_decl_file="13" DW_AT_decl_line="316" DW_AT_type="4247" DW_AT_data_member_location="752"/>
+        <DW_TAG_member offset="2479" DW_AT_name="read_row_fn" DW_AT_decl_file="13" DW_AT_decl_line="319" DW_AT_type="5130" DW_AT_data_member_location="768"/>
+        <DW_TAG_member offset="2493" DW_AT_name="write_row_fn" DW_AT_decl_file="13" DW_AT_decl_line="320" DW_AT_type="5169" DW_AT_data_member_location="776"/>
+        <DW_TAG_member offset="2507" DW_AT_name="info_fn" DW_AT_decl_file="13" DW_AT_decl_line="322" DW_AT_type="5181" DW_AT_data_member_location="784"/>
+        <DW_TAG_member offset="2521" DW_AT_name="row_fn" DW_AT_decl_file="13" DW_AT_decl_line="323" DW_AT_type="5227" DW_AT_data_member_location="792"/>
+        <DW_TAG_member offset="2535" DW_AT_name="end_fn" DW_AT_decl_file="13" DW_AT_decl_line="324" DW_AT_type="5215" DW_AT_data_member_location="800"/>
+        <DW_TAG_member offset="2549" DW_AT_name="save_buffer_ptr" DW_AT_decl_file="13" DW_AT_decl_line="325" DW_AT_type="1084" DW_AT_data_member_location="808"/>
+        <DW_TAG_member offset="2563" DW_AT_name="save_buffer" DW_AT_decl_file="13" DW_AT_decl_line="326" DW_AT_type="1084" DW_AT_data_member_location="816"/>
+        <DW_TAG_member offset="2577" DW_AT_name="current_buffer_ptr" DW_AT_decl_file="13" DW_AT_decl_line="327" DW_AT_type="1084" DW_AT_data_member_location="824"/>
+        <DW_TAG_member offset="2591" DW_AT_name="current_buffer" DW_AT_decl_file="13" DW_AT_decl_line="328" DW_AT_type="1084" DW_AT_data_member_location="832"/>
+        <DW_TAG_member offset="2605" DW_AT_name="push_length" DW_AT_decl_file="13" DW_AT_decl_line="329" DW_AT_type="1024" DW_AT_data_member_location="840"/>
+        <DW_TAG_member offset="2619" DW_AT_name="skip_length" DW_AT_decl_file="13" DW_AT_decl_line="330" DW_AT_type="1024" DW_AT_data_member_location="844"/>
+        <DW_TAG_member offset="2633" DW_AT_name="save_buffer_size" DW_AT_decl_file="13" DW_AT_decl_line="331" DW_AT_type="45" DW_AT_data_member_location="848"/>
+        <DW_TAG_member offset="2647" DW_AT_name="save_buffer_max" DW_AT_decl_file="13" DW_AT_decl_line="332" DW_AT_type="45" DW_AT_data_member_location="856"/>
+        <DW_TAG_member offset="2661" DW_AT_name="buffer_size" DW_AT_decl_file="13" DW_AT_decl_line="333" DW_AT_type="45" DW_AT_data_member_location="864"/>
+        <DW_TAG_member offset="2675" DW_AT_name="current_buffer_size" DW_AT_decl_file="13" DW_AT_decl_line="334" DW_AT_type="45" DW_AT_data_member_location="872"/>
+        <DW_TAG_member offset="2689" DW_AT_name="process_mode" DW_AT_decl_file="13" DW_AT_decl_line="335" DW_AT_type="63" DW_AT_data_member_location="880"/>
+        <DW_TAG_member offset="2703" DW_AT_name="cur_palette" DW_AT_decl_file="13" DW_AT_decl_line="336" DW_AT_type="63" DW_AT_data_member_location="884"/>
+        <DW_TAG_member offset="2717" DW_AT_name="palette_lookup" DW_AT_decl_file="13" DW_AT_decl_line="350" DW_AT_type="1084" DW_AT_data_member_location="888"/>
+        <DW_TAG_member offset="2731" DW_AT_name="quantize_index" DW_AT_decl_file="13" DW_AT_decl_line="351" DW_AT_type="1084" DW_AT_data_member_location="896"/>
+        <DW_TAG_member offset="2745" DW_AT_name="options" DW_AT_decl_file="13" DW_AT_decl_line="356" DW_AT_type="1024" DW_AT_data_member_location="904"/>
+        <DW_TAG_member offset="2759" DW_AT_name="time_buffer" DW_AT_decl_file="13" DW_AT_decl_line="362" DW_AT_type="6575" DW_AT_data_member_location="908"/>
+        <DW_TAG_member offset="2773" DW_AT_name="free_me" DW_AT_decl_file="13" DW_AT_decl_line="368" DW_AT_type="1024" DW_AT_data_member_location="940"/>
+        <DW_TAG_member offset="2787" DW_AT_name="user_chunk_ptr" DW_AT_decl_file="13" DW_AT_decl_line="371" DW_AT_type="1060" DW_AT_data_member_location="944"/>
+        <DW_TAG_member offset="2801" DW_AT_name="read_user_chunk_fn" DW_AT_decl_file="13" DW_AT_decl_line="373" DW_AT_type="5310" DW_AT_data_member_location="952"/>
+        <DW_TAG_member offset="2815" DW_AT_name="unknown_default" DW_AT_decl_file="13" DW_AT_decl_line="378" DW_AT_type="63" DW_AT_data_member_location="960"/>
+        <DW_TAG_member offset="2829" DW_AT_name="num_chunk_list" DW_AT_decl_file="13" DW_AT_decl_line="379" DW_AT_type="123" DW_AT_data_member_location="964"/>
+        <DW_TAG_member offset="2843" DW_AT_name="chunk_list" DW_AT_decl_file="13" DW_AT_decl_line="380" DW_AT_type="1084" DW_AT_data_member_location="968"/>
+        <DW_TAG_member offset="2857" DW_AT_name="rgb_to_gray_status" DW_AT_decl_file="13" DW_AT_decl_line="386" DW_AT_type="978" DW_AT_data_member_location="976"/>
+        <DW_TAG_member offset="2871" DW_AT_name="rgb_to_gray_coefficients_set" DW_AT_decl_file="13" DW_AT_decl_line="388" DW_AT_type="978" DW_AT_data_member_location="977"/>
+        <DW_TAG_member offset="2885" DW_AT_name="rgb_to_gray_red_coeff" DW_AT_decl_file="13" DW_AT_decl_line="390" DW_AT_type="995" DW_AT_data_member_location="978"/>
+        <DW_TAG_member offset="2899" DW_AT_name="rgb_to_gray_green_coeff" DW_AT_decl_file="13" DW_AT_decl_line="391" DW_AT_type="995" DW_AT_data_member_location="980"/>
+        <DW_TAG_member offset="2913" DW_AT_name="mng_features_permitted" DW_AT_decl_file="13" DW_AT_decl_line="404" DW_AT_type="1024" DW_AT_data_member_location="984"/>
+        <DW_TAG_member offset="2927" DW_AT_name="filter_type" DW_AT_decl_file="13" DW_AT_decl_line="409" DW_AT_type="978" DW_AT_data_member_location="988"/>
+        <DW_TAG_member offset="2941" DW_AT_name="mem_ptr" DW_AT_decl_file="13" DW_AT_decl_line="416" DW_AT_type="1060" DW_AT_data_member_location="992"/>
+        <DW_TAG_member offset="2955" DW_AT_name="malloc_fn" DW_AT_decl_file="13" DW_AT_decl_line="417" DW_AT_type="5388" DW_AT_data_member_location="1000"/>
+        <DW_TAG_member offset="2969" DW_AT_name="free_fn" DW_AT_decl_file="13" DW_AT_decl_line="418" DW_AT_type="5426" DW_AT_data_member_location="1008"/>
+        <DW_TAG_member offset="2983" DW_AT_name="big_row_buf" DW_AT_decl_file="13" DW_AT_decl_line="422" DW_AT_type="1084" DW_AT_data_member_location="1016"/>
+        <DW_TAG_member offset="2997" DW_AT_name="quantize_sort" DW_AT_decl_file="13" DW_AT_decl_line="426" DW_AT_type="1084" DW_AT_data_member_location="1024"/>
+        <DW_TAG_member offset="3011" DW_AT_name="index_to_palette" DW_AT_decl_file="13" DW_AT_decl_line="427" DW_AT_type="1084" DW_AT_data_member_location="1032"/>
+        <DW_TAG_member offset="3025" DW_AT_name="palette_to_index" DW_AT_decl_file="13" DW_AT_decl_line="429" DW_AT_type="1084" DW_AT_data_member_location="1040"/>
+        <DW_TAG_member offset="3039" DW_AT_name="compression_type" DW_AT_decl_file="13" DW_AT_decl_line="434" DW_AT_type="978" DW_AT_data_member_location="1048"/>
+        <DW_TAG_member offset="3053" DW_AT_name="user_width_max" DW_AT_decl_file="13" DW_AT_decl_line="437" DW_AT_type="1024" DW_AT_data_member_location="1052"/>
+        <DW_TAG_member offset="3067" DW_AT_name="user_height_max" DW_AT_decl_file="13" DW_AT_decl_line="438" DW_AT_type="1024" DW_AT_data_member_location="1056"/>
+        <DW_TAG_member offset="3081" DW_AT_name="user_chunk_cache_max" DW_AT_decl_file="13" DW_AT_decl_line="443" DW_AT_type="1024" DW_AT_data_member_location="1060"/>
+        <DW_TAG_member offset="3095" DW_AT_name="user_chunk_malloc_max" DW_AT_decl_file="13" DW_AT_decl_line="448" DW_AT_type="1036" DW_AT_data_member_location="1064"/>
+        <DW_TAG_member offset="3109" DW_AT_name="unknown_chunk" DW_AT_decl_file="13" DW_AT_decl_line="456" DW_AT_type="4876" DW_AT_data_member_location="1072"/>
+        <DW_TAG_member offset="3123" DW_AT_name="old_big_row_buf_size" DW_AT_decl_file="13" DW_AT_decl_line="460" DW_AT_type="45" DW_AT_data_member_location="1104"/>
+        <DW_TAG_member offset="3137" DW_AT_name="read_buffer" DW_AT_decl_file="13" DW_AT_decl_line="464" DW_AT_type="1084" DW_AT_data_member_location="1112"/>
+        <DW_TAG_member offset="3151" DW_AT_name="read_buffer_size" DW_AT_decl_file="13" DW_AT_decl_line="465" DW_AT_type="1036" DW_AT_data_member_location="1120"/>
+        <DW_TAG_member offset="3165" DW_AT_name="IDAT_read_size" DW_AT_decl_file="13" DW_AT_decl_line="468" DW_AT_type="5769" DW_AT_data_member_location="1128"/>
+        <DW_TAG_member offset="3179" DW_AT_name="io_state" DW_AT_decl_file="13" DW_AT_decl_line="473" DW_AT_type="1024" DW_AT_data_member_location="1132"/>
+        <DW_TAG_member offset="3193" DW_AT_name="big_prev_row" DW_AT_decl_file="13" DW_AT_decl_line="477" DW_AT_type="1084" DW_AT_data_member_location="1136"/>
+        <DW_TAG_member offset="3207" DW_AT_name="read_filter" DW_AT_decl_file="13" DW_AT_decl_line="480" DW_AT_type="6591" DW_AT_data_member_location="1144"/>
+        <DW_TAG_member offset="3221" DW_AT_name="colorspace" DW_AT_decl_file="13" DW_AT_decl_line="485" DW_AT_type="6531" DW_AT_data_member_location="1176"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_pointer_type offset="3236" DW_AT_byte_size="8" DW_AT_type="1259"/>
+      <DW_TAG_restrict_type offset="3242" DW_AT_type="3236"/>
+      <DW_TAG_typedef offset="3247" DW_AT_name="png_structp" DW_AT_decl_file="12" DW_AT_decl_line="441" DW_AT_type="3259"/>
+      <DW_TAG_pointer_type offset="3259" DW_AT_byte_size="8" DW_AT_type="1247"/>
+      <DW_TAG_restrict_type offset="3265" DW_AT_type="3259"/>
+      <DW_TAG_typedef offset="3270" DW_AT_name="png_structpp" DW_AT_decl_file="12" DW_AT_decl_line="442" DW_AT_type="3282"/>
+      <DW_TAG_pointer_type offset="3282" DW_AT_byte_size="8" DW_AT_type="3259"/>
+      <DW_TAG_typedef offset="3288" DW_AT_name="png_info" DW_AT_decl_file="12" DW_AT_decl_line="453" DW_AT_type="3305"/>
+      <DW_TAG_const_type offset="3300" DW_AT_type="3288"/>
+      <DW_TAG_structure_type offset="3305" DW_AT_name="png_info_def" DW_AT_byte_size="360" DW_AT_decl_file="14" DW_AT_decl_line="55" DW_AT_sibling="3986">
+        <DW_TAG_member offset="3318" DW_AT_name="width" DW_AT_decl_file="14" DW_AT_decl_line="58" DW_AT_type="1024" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="3330" DW_AT_name="height" DW_AT_decl_file="14" DW_AT_decl_line="59" DW_AT_type="1024" DW_AT_data_member_location="4"/>
+        <DW_TAG_member offset="3342" DW_AT_name="valid" DW_AT_decl_file="14" DW_AT_decl_line="60" DW_AT_type="1024" DW_AT_data_member_location="8"/>
+        <DW_TAG_member offset="3354" DW_AT_name="rowbytes" DW_AT_decl_file="14" DW_AT_decl_line="61" DW_AT_type="45" DW_AT_data_member_location="16"/>
+        <DW_TAG_member offset="3366" DW_AT_name="palette" DW_AT_decl_file="14" DW_AT_decl_line="62" DW_AT_type="4132" DW_AT_data_member_location="24"/>
+        <DW_TAG_member offset="3378" DW_AT_name="num_palette" DW_AT_decl_file="14" DW_AT_decl_line="63" DW_AT_type="995" DW_AT_data_member_location="32"/>
+        <DW_TAG_member offset="3390" DW_AT_name="num_trans" DW_AT_decl_file="14" DW_AT_decl_line="64" DW_AT_type="995" DW_AT_data_member_location="34"/>
+        <DW_TAG_member offset="3402" DW_AT_name="bit_depth" DW_AT_decl_file="14" DW_AT_decl_line="65" DW_AT_type="978" DW_AT_data_member_location="36"/>
+        <DW_TAG_member offset="3414" DW_AT_name="color_type" DW_AT_decl_file="14" DW_AT_decl_line="66" DW_AT_type="978" DW_AT_data_member_location="37"/>
+        <DW_TAG_member offset="3426" DW_AT_name="compression_type" DW_AT_decl_file="14" DW_AT_decl_line="68" DW_AT_type="978" DW_AT_data_member_location="38"/>
+        <DW_TAG_member offset="3438" DW_AT_name="filter_type" DW_AT_decl_file="14" DW_AT_decl_line="69" DW_AT_type="978" DW_AT_data_member_location="39"/>
+        <DW_TAG_member offset="3450" DW_AT_name="interlace_type" DW_AT_decl_file="14" DW_AT_decl_line="70" DW_AT_type="978" DW_AT_data_member_location="40"/>
+        <DW_TAG_member offset="3462" DW_AT_name="channels" DW_AT_decl_file="14" DW_AT_decl_line="75" DW_AT_type="978" DW_AT_data_member_location="41"/>
+        <DW_TAG_member offset="3474" DW_AT_name="pixel_depth" DW_AT_decl_file="14" DW_AT_decl_line="76" DW_AT_type="978" DW_AT_data_member_location="42"/>
+        <DW_TAG_member offset="3486" DW_AT_name="spare_byte" DW_AT_decl_file="14" DW_AT_decl_line="77" DW_AT_type="978" DW_AT_data_member_location="43"/>
+        <DW_TAG_member offset="3498" DW_AT_name="signature" DW_AT_decl_file="14" DW_AT_decl_line="81" DW_AT_type="6634" DW_AT_data_member_location="44"/>
+        <DW_TAG_member offset="3510" DW_AT_name="colorspace" DW_AT_decl_file="14" DW_AT_decl_line="101" DW_AT_type="6531" DW_AT_data_member_location="52"/>
+        <DW_TAG_member offset="3522" DW_AT_name="iccp_name" DW_AT_decl_file="14" DW_AT_decl_line="106" DW_AT_type="1156" DW_AT_data_member_location="128"/>
+        <DW_TAG_member offset="3534" DW_AT_name="iccp_profile" DW_AT_decl_file="14" DW_AT_decl_line="107" DW_AT_type="1084" DW_AT_data_member_location="136"/>
+        <DW_TAG_member offset="3546" DW_AT_name="iccp_proflen" DW_AT_decl_file="14" DW_AT_decl_line="108" DW_AT_type="1024" DW_AT_data_member_location="144"/>
+        <DW_TAG_member offset="3558" DW_AT_name="num_text" DW_AT_decl_file="14" DW_AT_decl_line="120" DW_AT_type="63" DW_AT_data_member_location="148"/>
+        <DW_TAG_member offset="3570" DW_AT_name="max_text" DW_AT_decl_file="14" DW_AT_decl_line="121" DW_AT_type="63" DW_AT_data_member_location="152"/>
+        <DW_TAG_member offset="3582" DW_AT_name="text" DW_AT_decl_file="14" DW_AT_decl_line="122" DW_AT_type="4672" DW_AT_data_member_location="160"/>
+        <DW_TAG_member offset="3594" DW_AT_name="mod_time" DW_AT_decl_file="14" DW_AT_decl_line="129" DW_AT_type="4782" DW_AT_data_member_location="168"/>
+        <DW_TAG_member offset="3606" DW_AT_name="sig_bit" DW_AT_decl_file="14" DW_AT_decl_line="139" DW_AT_type="4338" DW_AT_data_member_location="176"/>
+        <DW_TAG_member offset="3618" DW_AT_name="trans_alpha" DW_AT_decl_file="14" DW_AT_decl_line="153" DW_AT_type="1084" DW_AT_data_member_location="184"/>
+        <DW_TAG_member offset="3630" DW_AT_name="trans_color" DW_AT_decl_file="14" DW_AT_decl_line="154" DW_AT_type="4247" DW_AT_data_member_location="192"/>
+        <DW_TAG_member offset="3642" DW_AT_name="background" DW_AT_decl_file="14" DW_AT_decl_line="164" DW_AT_type="4247" DW_AT_data_member_location="202"/>
+        <DW_TAG_member offset="3654" DW_AT_name="x_offset" DW_AT_decl_file="14" DW_AT_decl_line="173" DW_AT_type="1012" DW_AT_data_member_location="212"/>
+        <DW_TAG_member offset="3666" DW_AT_name="y_offset" DW_AT_decl_file="14" DW_AT_decl_line="174" DW_AT_type="1012" DW_AT_data_member_location="216"/>
+        <DW_TAG_member offset="3678" DW_AT_name="offset_unit_type" DW_AT_decl_file="14" DW_AT_decl_line="175" DW_AT_type="978" DW_AT_data_member_location="220"/>
+        <DW_TAG_member offset="3690" DW_AT_name="x_pixels_per_unit" DW_AT_decl_file="14" DW_AT_decl_line="183" DW_AT_type="1024" DW_AT_data_member_location="224"/>
+        <DW_TAG_member offset="3702" DW_AT_name="y_pixels_per_unit" DW_AT_decl_file="14" DW_AT_decl_line="184" DW_AT_type="1024" DW_AT_data_member_location="228"/>
+        <DW_TAG_member offset="3714" DW_AT_name="phys_unit_type" DW_AT_decl_file="14" DW_AT_decl_line="185" DW_AT_type="978" DW_AT_data_member_location="232"/>
+        <DW_TAG_member offset="3726" DW_AT_name="num_exif" DW_AT_decl_file="14" DW_AT_decl_line="189" DW_AT_type="63" DW_AT_data_member_location="236"/>
+        <DW_TAG_member offset="3738" DW_AT_name="exif" DW_AT_decl_file="14" DW_AT_decl_line="190" DW_AT_type="1084" DW_AT_data_member_location="240"/>
+        <DW_TAG_member offset="3750" DW_AT_name="eXIf_buf" DW_AT_decl_file="14" DW_AT_decl_line="192" DW_AT_type="1084" DW_AT_data_member_location="248"/>
+        <DW_TAG_member offset="3762" DW_AT_name="hist" DW_AT_decl_file="14" DW_AT_decl_line="203" DW_AT_type="1120" DW_AT_data_member_location="256"/>
+        <DW_TAG_member offset="3775" DW_AT_name="pcal_purpose" DW_AT_decl_file="14" DW_AT_decl_line="218" DW_AT_type="1156" DW_AT_data_member_location="264"/>
+        <DW_TAG_member offset="3788" DW_AT_name="pcal_X0" DW_AT_decl_file="14" DW_AT_decl_line="219" DW_AT_type="1012" DW_AT_data_member_location="272"/>
+        <DW_TAG_member offset="3801" DW_AT_name="pcal_X1" DW_AT_decl_file="14" DW_AT_decl_line="220" DW_AT_type="1012" DW_AT_data_member_location="276"/>
+        <DW_TAG_member offset="3814" DW_AT_name="pcal_units" DW_AT_decl_file="14" DW_AT_decl_line="221" DW_AT_type="1156" DW_AT_data_member_location="280"/>
+        <DW_TAG_member offset="3827" DW_AT_name="pcal_params" DW_AT_decl_file="14" DW_AT_decl_line="222" DW_AT_type="1229" DW_AT_data_member_location="288"/>
+        <DW_TAG_member offset="3840" DW_AT_name="pcal_type" DW_AT_decl_file="14" DW_AT_decl_line="223" DW_AT_type="978" DW_AT_data_member_location="296"/>
+        <DW_TAG_member offset="3853" DW_AT_name="pcal_nparams" DW_AT_decl_file="14" DW_AT_decl_line="224" DW_AT_type="978" DW_AT_data_member_location="297"/>
+        <DW_TAG_member offset="3866" DW_AT_name="free_me" DW_AT_decl_file="14" DW_AT_decl_line="228" DW_AT_type="1024" DW_AT_data_member_location="300"/>
+        <DW_TAG_member offset="3879" DW_AT_name="unknown_chunks" DW_AT_decl_file="14" DW_AT_decl_line="232" DW_AT_type="4888" DW_AT_data_member_location="304"/>
+        <DW_TAG_member offset="3892" DW_AT_name="unknown_chunks_num" DW_AT_decl_file="14" DW_AT_decl_line="237" DW_AT_type="63" DW_AT_data_member_location="312"/>
+        <DW_TAG_member offset="3905" DW_AT_name="splt_palettes" DW_AT_decl_file="14" DW_AT_decl_line="242" DW_AT_type="4537" DW_AT_data_member_location="320"/>
+        <DW_TAG_member offset="3918" DW_AT_name="splt_palettes_num" DW_AT_decl_file="14" DW_AT_decl_line="243" DW_AT_type="63" DW_AT_data_member_location="328"/>
+        <DW_TAG_member offset="3931" DW_AT_name="scal_unit" DW_AT_decl_file="14" DW_AT_decl_line="254" DW_AT_type="978" DW_AT_data_member_location="332"/>
+        <DW_TAG_member offset="3944" DW_AT_name="scal_s_width" DW_AT_decl_file="14" DW_AT_decl_line="255" DW_AT_type="1156" DW_AT_data_member_location="336"/>
+        <DW_TAG_member offset="3957" DW_AT_name="scal_s_height" DW_AT_decl_file="14" DW_AT_decl_line="256" DW_AT_type="1156" DW_AT_data_member_location="344"/>
+        <DW_TAG_member offset="3971" DW_AT_name="row_pointers" DW_AT_decl_file="14" DW_AT_decl_line="263" DW_AT_type="1193" DW_AT_data_member_location="352"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_typedef offset="3986" DW_AT_name="png_infop" DW_AT_decl_file="12" DW_AT_decl_line="454" DW_AT_type="3998"/>
+      <DW_TAG_pointer_type offset="3998" DW_AT_byte_size="8" DW_AT_type="3288"/>
+      <DW_TAG_restrict_type offset="4004" DW_AT_type="3998"/>
+      <DW_TAG_pointer_type offset="4009" DW_AT_byte_size="8" DW_AT_type="3300"/>
+      <DW_TAG_restrict_type offset="4015" DW_AT_type="4009"/>
+      <DW_TAG_typedef offset="4020" DW_AT_name="png_infopp" DW_AT_decl_file="12" DW_AT_decl_line="456" DW_AT_type="4032"/>
+      <DW_TAG_pointer_type offset="4032" DW_AT_byte_size="8" DW_AT_type="3998"/>
+      <DW_TAG_typedef offset="4038" DW_AT_name="png_structrp" DW_AT_decl_file="12" DW_AT_decl_line="469" DW_AT_type="3265"/>
+      <DW_TAG_typedef offset="4050" DW_AT_name="png_inforp" DW_AT_decl_file="12" DW_AT_decl_line="471" DW_AT_type="4004"/>
+      <DW_TAG_structure_type offset="4062" DW_AT_name="png_color_struct" DW_AT_byte_size="3" DW_AT_decl_file="12" DW_AT_decl_line="478" DW_AT_sibling="4115">
+        <DW_TAG_member offset="4075" DW_AT_name="red" DW_AT_decl_file="12" DW_AT_decl_line="480" DW_AT_type="978" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="4088" DW_AT_name="green" DW_AT_decl_file="12" DW_AT_decl_line="481" DW_AT_type="978" DW_AT_data_member_location="1"/>
+        <DW_TAG_member offset="4101" DW_AT_name="blue" DW_AT_decl_file="12" DW_AT_decl_line="482" DW_AT_type="978" DW_AT_data_member_location="2"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_typedef offset="4115" DW_AT_name="png_color" DW_AT_decl_file="12" DW_AT_decl_line="483" DW_AT_type="4062"/>
+      <DW_TAG_const_type offset="4127" DW_AT_type="4115"/>
+      <DW_TAG_typedef offset="4132" DW_AT_name="png_colorp" DW_AT_decl_file="12" DW_AT_decl_line="484" DW_AT_type="4144"/>
+      <DW_TAG_pointer_type offset="4144" DW_AT_byte_size="8" DW_AT_type="4115"/>
+      <DW_TAG_typedef offset="4150" DW_AT_name="png_const_colorp" DW_AT_decl_file="12" DW_AT_decl_line="485" DW_AT_type="4162"/>
+      <DW_TAG_pointer_type offset="4162" DW_AT_byte_size="8" DW_AT_type="4127"/>
+      <DW_TAG_structure_type offset="4168" DW_AT_name="png_color_16_struct" DW_AT_byte_size="10" DW_AT_decl_file="12" DW_AT_decl_line="488" DW_AT_sibling="4247">
+        <DW_TAG_member offset="4181" DW_AT_name="index" DW_AT_decl_file="12" DW_AT_decl_line="490" DW_AT_type="978" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="4194" DW_AT_name="red" DW_AT_decl_file="12" DW_AT_decl_line="491" DW_AT_type="995" DW_AT_data_member_location="2"/>
+        <DW_TAG_member offset="4207" DW_AT_name="green" DW_AT_decl_file="12" DW_AT_decl_line="492" DW_AT_type="995" DW_AT_data_member_location="4"/>
+        <DW_TAG_member offset="4220" DW_AT_name="blue" DW_AT_decl_file="12" DW_AT_decl_line="493" DW_AT_type="995" DW_AT_data_member_location="6"/>
+        <DW_TAG_member offset="4233" DW_AT_name="gray" DW_AT_decl_file="12" DW_AT_decl_line="494" DW_AT_type="995" DW_AT_data_member_location="8"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_typedef offset="4247" DW_AT_name="png_color_16" DW_AT_decl_file="12" DW_AT_decl_line="495" DW_AT_type="4168"/>
+      <DW_TAG_structure_type offset="4259" DW_AT_name="png_color_8_struct" DW_AT_byte_size="5" DW_AT_decl_file="12" DW_AT_decl_line="500" DW_AT_sibling="4338">
+        <DW_TAG_member offset="4272" DW_AT_name="red" DW_AT_decl_file="12" DW_AT_decl_line="502" DW_AT_type="978" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="4285" DW_AT_name="green" DW_AT_decl_file="12" DW_AT_decl_line="503" DW_AT_type="978" DW_AT_data_member_location="1"/>
+        <DW_TAG_member offset="4298" DW_AT_name="blue" DW_AT_decl_file="12" DW_AT_decl_line="504" DW_AT_type="978" DW_AT_data_member_location="2"/>
+        <DW_TAG_member offset="4311" DW_AT_name="gray" DW_AT_decl_file="12" DW_AT_decl_line="505" DW_AT_type="978" DW_AT_data_member_location="3"/>
+        <DW_TAG_member offset="4324" DW_AT_name="alpha" DW_AT_decl_file="12" DW_AT_decl_line="506" DW_AT_type="978" DW_AT_data_member_location="4"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_typedef offset="4338" DW_AT_name="png_color_8" DW_AT_decl_file="12" DW_AT_decl_line="507" DW_AT_type="4259"/>
+      <DW_TAG_structure_type offset="4350" DW_AT_name="png_sPLT_entry_struct" DW_AT_byte_size="10" DW_AT_decl_file="12" DW_AT_decl_line="516" DW_AT_sibling="4429">
+        <DW_TAG_member offset="4363" DW_AT_name="red" DW_AT_decl_file="12" DW_AT_decl_line="518" DW_AT_type="995" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="4376" DW_AT_name="green" DW_AT_decl_file="12" DW_AT_decl_line="519" DW_AT_type="995" DW_AT_data_member_location="2"/>
+        <DW_TAG_member offset="4389" DW_AT_name="blue" DW_AT_decl_file="12" DW_AT_decl_line="520" DW_AT_type="995" DW_AT_data_member_location="4"/>
+        <DW_TAG_member offset="4402" DW_AT_name="alpha" DW_AT_decl_file="12" DW_AT_decl_line="521" DW_AT_type="995" DW_AT_data_member_location="6"/>
+        <DW_TAG_member offset="4415" DW_AT_name="frequency" DW_AT_decl_file="12" DW_AT_decl_line="522" DW_AT_type="995" DW_AT_data_member_location="8"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_typedef offset="4429" DW_AT_name="png_sPLT_entry" DW_AT_decl_file="12" DW_AT_decl_line="523" DW_AT_type="4350"/>
+      <DW_TAG_typedef offset="4441" DW_AT_name="png_sPLT_entryp" DW_AT_decl_file="12" DW_AT_decl_line="524" DW_AT_type="4453"/>
+      <DW_TAG_pointer_type offset="4453" DW_AT_byte_size="8" DW_AT_type="4429"/>
+      <DW_TAG_structure_type offset="4459" DW_AT_name="png_sPLT_struct" DW_AT_byte_size="32" DW_AT_decl_file="12" DW_AT_decl_line="533" DW_AT_sibling="4525">
+        <DW_TAG_member offset="4472" DW_AT_name="name" DW_AT_decl_file="12" DW_AT_decl_line="535" DW_AT_type="1156" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="4485" DW_AT_name="depth" DW_AT_decl_file="12" DW_AT_decl_line="536" DW_AT_type="978" DW_AT_data_member_location="8"/>
+        <DW_TAG_member offset="4498" DW_AT_name="entries" DW_AT_decl_file="12" DW_AT_decl_line="537" DW_AT_type="4441" DW_AT_data_member_location="16"/>
+        <DW_TAG_member offset="4511" DW_AT_name="nentries" DW_AT_decl_file="12" DW_AT_decl_line="538" DW_AT_type="1012" DW_AT_data_member_location="24"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_typedef offset="4525" DW_AT_name="png_sPLT_t" DW_AT_decl_file="12" DW_AT_decl_line="539" DW_AT_type="4459"/>
+      <DW_TAG_typedef offset="4537" DW_AT_name="png_sPLT_tp" DW_AT_decl_file="12" DW_AT_decl_line="540" DW_AT_type="4549"/>
+      <DW_TAG_pointer_type offset="4549" DW_AT_byte_size="8" DW_AT_type="4525"/>
+      <DW_TAG_structure_type offset="4555" DW_AT_name="png_text_struct" DW_AT_byte_size="56" DW_AT_decl_file="12" DW_AT_decl_line="562" DW_AT_sibling="4660">
+        <DW_TAG_member offset="4568" DW_AT_name="compression" DW_AT_decl_file="12" DW_AT_decl_line="564" DW_AT_type="63" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="4581" DW_AT_name="key" DW_AT_decl_file="12" DW_AT_decl_line="569" DW_AT_type="1156" DW_AT_data_member_location="8"/>
+        <DW_TAG_member offset="4594" DW_AT_name="text" DW_AT_decl_file="12" DW_AT_decl_line="570" DW_AT_type="1156" DW_AT_data_member_location="16"/>
+        <DW_TAG_member offset="4607" DW_AT_name="text_length" DW_AT_decl_file="12" DW_AT_decl_line="572" DW_AT_type="45" DW_AT_data_member_location="24"/>
+        <DW_TAG_member offset="4620" DW_AT_name="itxt_length" DW_AT_decl_file="12" DW_AT_decl_line="573" DW_AT_type="45" DW_AT_data_member_location="32"/>
+        <DW_TAG_member offset="4633" DW_AT_name="lang" DW_AT_decl_file="12" DW_AT_decl_line="574" DW_AT_type="1156" DW_AT_data_member_location="40"/>
+        <DW_TAG_member offset="4646" DW_AT_name="lang_key" DW_AT_decl_file="12" DW_AT_decl_line="576" DW_AT_type="1156" DW_AT_data_member_location="48"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_typedef offset="4660" DW_AT_name="png_text" DW_AT_decl_file="12" DW_AT_decl_line="578" DW_AT_type="4555"/>
+      <DW_TAG_typedef offset="4672" DW_AT_name="png_textp" DW_AT_decl_file="12" DW_AT_decl_line="579" DW_AT_type="4684"/>
+      <DW_TAG_pointer_type offset="4684" DW_AT_byte_size="8" DW_AT_type="4660"/>
+      <DW_TAG_structure_type offset="4690" DW_AT_name="png_time_struct" DW_AT_byte_size="8" DW_AT_decl_file="12" DW_AT_decl_line="600" DW_AT_sibling="4782">
+        <DW_TAG_member offset="4703" DW_AT_name="year" DW_AT_decl_file="12" DW_AT_decl_line="602" DW_AT_type="995" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="4716" DW_AT_name="month" DW_AT_decl_file="12" DW_AT_decl_line="603" DW_AT_type="978" DW_AT_data_member_location="2"/>
+        <DW_TAG_member offset="4729" DW_AT_name="day" DW_AT_decl_file="12" DW_AT_decl_line="604" DW_AT_type="978" DW_AT_data_member_location="3"/>
+        <DW_TAG_member offset="4742" DW_AT_name="hour" DW_AT_decl_file="12" DW_AT_decl_line="605" DW_AT_type="978" DW_AT_data_member_location="4"/>
+        <DW_TAG_member offset="4755" DW_AT_name="minute" DW_AT_decl_file="12" DW_AT_decl_line="606" DW_AT_type="978" DW_AT_data_member_location="5"/>
+        <DW_TAG_member offset="4768" DW_AT_name="second" DW_AT_decl_file="12" DW_AT_decl_line="607" DW_AT_type="978" DW_AT_data_member_location="6"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_typedef offset="4782" DW_AT_name="png_time" DW_AT_decl_file="12" DW_AT_decl_line="608" DW_AT_type="4690"/>
+      <DW_TAG_structure_type offset="4794" DW_AT_name="png_unknown_chunk_t" DW_AT_byte_size="32" DW_AT_decl_file="12" DW_AT_decl_line="622" DW_AT_sibling="4860">
+        <DW_TAG_member offset="4807" DW_AT_name="name" DW_AT_decl_file="12" DW_AT_decl_line="624" DW_AT_type="4860" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="4820" DW_AT_name="data" DW_AT_decl_file="12" DW_AT_decl_line="625" DW_AT_type="1096" DW_AT_data_member_location="8"/>
+        <DW_TAG_member offset="4833" DW_AT_name="size" DW_AT_decl_file="12" DW_AT_decl_line="626" DW_AT_type="45" DW_AT_data_member_location="16"/>
+        <DW_TAG_member offset="4846" DW_AT_name="location" DW_AT_decl_file="12" DW_AT_decl_line="634" DW_AT_type="978" DW_AT_data_member_location="24"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_array_type offset="4860" DW_AT_type="978" DW_AT_sibling="4876">
+        <DW_TAG_subrange_type offset="4869" DW_AT_type="56" DW_AT_upper_bound="4"/>
+      </DW_TAG_array_type>
+      <DW_TAG_typedef offset="4876" DW_AT_name="png_unknown_chunk" DW_AT_decl_file="12" DW_AT_decl_line="636" DW_AT_type="4794"/>
+      <DW_TAG_typedef offset="4888" DW_AT_name="png_unknown_chunkp" DW_AT_decl_file="12" DW_AT_decl_line="638" DW_AT_type="4900"/>
+      <DW_TAG_pointer_type offset="4900" DW_AT_byte_size="8" DW_AT_type="4876"/>
+      <DW_TAG_structure_type offset="4906" DW_AT_name="png_row_info_struct" DW_AT_byte_size="24" DW_AT_decl_file="12" DW_AT_decl_line="754" DW_AT_sibling="4998">
+        <DW_TAG_member offset="4919" DW_AT_name="width" DW_AT_decl_file="12" DW_AT_decl_line="756" DW_AT_type="1024" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="4932" DW_AT_name="rowbytes" DW_AT_decl_file="12" DW_AT_decl_line="757" DW_AT_type="45" DW_AT_data_member_location="8"/>
+        <DW_TAG_member offset="4945" DW_AT_name="color_type" DW_AT_decl_file="12" DW_AT_decl_line="758" DW_AT_type="978" DW_AT_data_member_location="16"/>
+        <DW_TAG_member offset="4958" DW_AT_name="bit_depth" DW_AT_decl_file="12" DW_AT_decl_line="759" DW_AT_type="978" DW_AT_data_member_location="17"/>
+        <DW_TAG_member offset="4971" DW_AT_name="channels" DW_AT_decl_file="12" DW_AT_decl_line="760" DW_AT_type="978" DW_AT_data_member_location="18"/>
+        <DW_TAG_member offset="4984" DW_AT_name="pixel_depth" DW_AT_decl_file="12" DW_AT_decl_line="761" DW_AT_type="978" DW_AT_data_member_location="19"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_typedef offset="4998" DW_AT_name="png_row_info" DW_AT_decl_file="12" DW_AT_decl_line="762" DW_AT_type="4906"/>
+      <DW_TAG_typedef offset="5010" DW_AT_name="png_row_infop" DW_AT_decl_file="12" DW_AT_decl_line="764" DW_AT_type="5022"/>
+      <DW_TAG_pointer_type offset="5022" DW_AT_byte_size="8" DW_AT_type="4998"/>
+      <DW_TAG_typedef offset="5028" DW_AT_name="png_error_ptr" DW_AT_decl_file="12" DW_AT_decl_line="775" DW_AT_type="5040"/>
+      <DW_TAG_pointer_type offset="5040" DW_AT_byte_size="8" DW_AT_type="5046"/>
+      <DW_TAG_subroutine_type offset="5046" DW_AT_prototyped="True" DW_AT_sibling="5062">
+        <DW_TAG_formal_parameter offset="5051" DW_AT_type="3247"/>
+        <DW_TAG_formal_parameter offset="5056" DW_AT_type="1168"/>
+      </DW_TAG_subroutine_type>
+      <DW_TAG_typedef offset="5062" DW_AT_name="png_rw_ptr" DW_AT_decl_file="12" DW_AT_decl_line="776" DW_AT_type="5074"/>
+      <DW_TAG_pointer_type offset="5074" DW_AT_byte_size="8" DW_AT_type="5080"/>
+      <DW_TAG_subroutine_type offset="5080" DW_AT_prototyped="True" DW_AT_sibling="5101">
+        <DW_TAG_formal_parameter offset="5085" DW_AT_type="3247"/>
+        <DW_TAG_formal_parameter offset="5090" DW_AT_type="1084"/>
+        <DW_TAG_formal_parameter offset="5095" DW_AT_type="45"/>
+      </DW_TAG_subroutine_type>
+      <DW_TAG_typedef offset="5101" DW_AT_name="png_flush_ptr" DW_AT_decl_file="12" DW_AT_decl_line="777" DW_AT_type="5113"/>
+      <DW_TAG_pointer_type offset="5113" DW_AT_byte_size="8" DW_AT_type="5119"/>
+      <DW_TAG_subroutine_type offset="5119" DW_AT_prototyped="True" DW_AT_sibling="5130">
+        <DW_TAG_formal_parameter offset="5124" DW_AT_type="3247"/>
+      </DW_TAG_subroutine_type>
+      <DW_TAG_typedef offset="5130" DW_AT_name="png_read_status_ptr" DW_AT_decl_file="12" DW_AT_decl_line="778" DW_AT_type="5142"/>
+      <DW_TAG_pointer_type offset="5142" DW_AT_byte_size="8" DW_AT_type="5148"/>
+      <DW_TAG_subroutine_type offset="5148" DW_AT_prototyped="True" DW_AT_sibling="5169">
+        <DW_TAG_formal_parameter offset="5153" DW_AT_type="3247"/>
+        <DW_TAG_formal_parameter offset="5158" DW_AT_type="1024"/>
+        <DW_TAG_formal_parameter offset="5163" DW_AT_type="63"/>
+      </DW_TAG_subroutine_type>
+      <DW_TAG_typedef offset="5169" DW_AT_name="png_write_status_ptr" DW_AT_decl_file="12" DW_AT_decl_line="780" DW_AT_type="5142"/>
+      <DW_TAG_typedef offset="5181" DW_AT_name="png_progressive_info_ptr" DW_AT_decl_file="12" DW_AT_decl_line="784" DW_AT_type="5193"/>
+      <DW_TAG_pointer_type offset="5193" DW_AT_byte_size="8" DW_AT_type="5199"/>
+      <DW_TAG_subroutine_type offset="5199" DW_AT_prototyped="True" DW_AT_sibling="5215">
+        <DW_TAG_formal_parameter offset="5204" DW_AT_type="3247"/>
+        <DW_TAG_formal_parameter offset="5209" DW_AT_type="3986"/>
+      </DW_TAG_subroutine_type>
+      <DW_TAG_typedef offset="5215" DW_AT_name="png_progressive_end_ptr" DW_AT_decl_file="12" DW_AT_decl_line="785" DW_AT_type="5193"/>
+      <DW_TAG_typedef offset="5227" DW_AT_name="png_progressive_row_ptr" DW_AT_decl_file="12" DW_AT_decl_line="797" DW_AT_type="5239"/>
+      <DW_TAG_pointer_type offset="5239" DW_AT_byte_size="8" DW_AT_type="5245"/>
+      <DW_TAG_subroutine_type offset="5245" DW_AT_prototyped="True" DW_AT_sibling="5271">
+        <DW_TAG_formal_parameter offset="5250" DW_AT_type="3247"/>
+        <DW_TAG_formal_parameter offset="5255" DW_AT_type="1084"/>
+        <DW_TAG_formal_parameter offset="5260" DW_AT_type="1024"/>
+        <DW_TAG_formal_parameter offset="5265" DW_AT_type="63"/>
+      </DW_TAG_subroutine_type>
+      <DW_TAG_typedef offset="5271" DW_AT_name="png_user_transform_ptr" DW_AT_decl_file="12" DW_AT_decl_line="803" DW_AT_type="5283"/>
+      <DW_TAG_pointer_type offset="5283" DW_AT_byte_size="8" DW_AT_type="5289"/>
+      <DW_TAG_subroutine_type offset="5289" DW_AT_prototyped="True" DW_AT_sibling="5310">
+        <DW_TAG_formal_parameter offset="5294" DW_AT_type="3247"/>
+        <DW_TAG_formal_parameter offset="5299" DW_AT_type="5010"/>
+        <DW_TAG_formal_parameter offset="5304" DW_AT_type="1084"/>
+      </DW_TAG_subroutine_type>
+      <DW_TAG_typedef offset="5310" DW_AT_name="png_user_chunk_ptr" DW_AT_decl_file="12" DW_AT_decl_line="808" DW_AT_type="5322"/>
+      <DW_TAG_pointer_type offset="5322" DW_AT_byte_size="8" DW_AT_type="5328"/>
+      <DW_TAG_subroutine_type offset="5328" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_sibling="5348">
+        <DW_TAG_formal_parameter offset="5337" DW_AT_type="3247"/>
+        <DW_TAG_formal_parameter offset="5342" DW_AT_type="4888"/>
+      </DW_TAG_subroutine_type>
+      <DW_TAG_typedef offset="5348" DW_AT_name="png_longjmp_ptr" DW_AT_decl_file="12" DW_AT_decl_line="828" DW_AT_type="5360"/>
+      <DW_TAG_pointer_type offset="5360" DW_AT_byte_size="8" DW_AT_type="5366"/>
+      <DW_TAG_subroutine_type offset="5366" DW_AT_prototyped="True" DW_AT_sibling="5382">
+        <DW_TAG_formal_parameter offset="5371" DW_AT_type="5382"/>
+        <DW_TAG_formal_parameter offset="5376" DW_AT_type="63"/>
+      </DW_TAG_subroutine_type>
+      <DW_TAG_pointer_type offset="5382" DW_AT_byte_size="8" DW_AT_type="842"/>
+      <DW_TAG_typedef offset="5388" DW_AT_name="png_malloc_ptr" DW_AT_decl_file="12" DW_AT_decl_line="867" DW_AT_type="5400"/>
+      <DW_TAG_pointer_type offset="5400" DW_AT_byte_size="8" DW_AT_type="5406"/>
+      <DW_TAG_subroutine_type offset="5406" DW_AT_prototyped="True" DW_AT_type="1060" DW_AT_sibling="5426">
+        <DW_TAG_formal_parameter offset="5415" DW_AT_type="3247"/>
+        <DW_TAG_formal_parameter offset="5420" DW_AT_type="1036"/>
+      </DW_TAG_subroutine_type>
+      <DW_TAG_typedef offset="5426" DW_AT_name="png_free_ptr" DW_AT_decl_file="12" DW_AT_decl_line="869" DW_AT_type="5438"/>
+      <DW_TAG_pointer_type offset="5438" DW_AT_byte_size="8" DW_AT_type="5444"/>
+      <DW_TAG_subroutine_type offset="5444" DW_AT_prototyped="True" DW_AT_sibling="5460">
+        <DW_TAG_formal_parameter offset="5449" DW_AT_type="3247"/>
+        <DW_TAG_formal_parameter offset="5454" DW_AT_type="1060"/>
+      </DW_TAG_subroutine_type>
+      <DW_TAG_typedef offset="5460" DW_AT_name="png_controlp" DW_AT_decl_file="12" DW_AT_decl_line="2671" DW_AT_type="5472"/>
+      <DW_TAG_pointer_type offset="5472" DW_AT_byte_size="8" DW_AT_type="5478"/>
+      <DW_TAG_structure_type offset="5478" DW_AT_name="png_control" DW_AT_byte_size="48" DW_AT_decl_file="15" DW_AT_decl_line="2035" DW_AT_sibling="5589">
+        <DW_TAG_member offset="5491" DW_AT_name="png_ptr" DW_AT_decl_file="15" DW_AT_decl_line="2037" DW_AT_type="3247" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="5504" DW_AT_name="info_ptr" DW_AT_decl_file="15" DW_AT_decl_line="2038" DW_AT_type="3986" DW_AT_data_member_location="8"/>
+        <DW_TAG_member offset="5517" DW_AT_name="error_buf" DW_AT_decl_file="15" DW_AT_decl_line="2039" DW_AT_type="1060" DW_AT_data_member_location="16"/>
+        <DW_TAG_member offset="5530" DW_AT_name="memory" DW_AT_decl_file="15" DW_AT_decl_line="2041" DW_AT_type="1102" DW_AT_data_member_location="24"/>
+        <DW_TAG_member offset="5543" DW_AT_name="size" DW_AT_decl_file="15" DW_AT_decl_line="2042" DW_AT_type="45" DW_AT_data_member_location="32"/>
+        <DW_TAG_member offset="5556" DW_AT_name="for_write" DW_AT_decl_file="15" DW_AT_decl_line="2044" DW_AT_type="123" DW_AT_byte_size="4" DW_AT_bit_size="1" DW_AT_bit_offset="31" DW_AT_data_member_location="40"/>
+        <DW_TAG_member offset="5572" DW_AT_name="owned_file" DW_AT_decl_file="15" DW_AT_decl_line="2045" DW_AT_type="123" DW_AT_byte_size="4" DW_AT_bit_size="1" DW_AT_bit_offset="30" DW_AT_data_member_location="40"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_structure_type offset="5589" DW_AT_byte_size="104" DW_AT_decl_file="12" DW_AT_decl_line="2672" DW_AT_sibling="5716">
+        <DW_TAG_member offset="5598" DW_AT_name="opaque" DW_AT_decl_file="12" DW_AT_decl_line="2674" DW_AT_type="5460" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="5611" DW_AT_name="version" DW_AT_decl_file="12" DW_AT_decl_line="2675" DW_AT_type="1024" DW_AT_data_member_location="8"/>
+        <DW_TAG_member offset="5624" DW_AT_name="width" DW_AT_decl_file="12" DW_AT_decl_line="2676" DW_AT_type="1024" DW_AT_data_member_location="12"/>
+        <DW_TAG_member offset="5637" DW_AT_name="height" DW_AT_decl_file="12" DW_AT_decl_line="2677" DW_AT_type="1024" DW_AT_data_member_location="16"/>
+        <DW_TAG_member offset="5650" DW_AT_name="format" DW_AT_decl_file="12" DW_AT_decl_line="2678" DW_AT_type="1024" DW_AT_data_member_location="20"/>
+        <DW_TAG_member offset="5663" DW_AT_name="flags" DW_AT_decl_file="12" DW_AT_decl_line="2679" DW_AT_type="1024" DW_AT_data_member_location="24"/>
+        <DW_TAG_member offset="5676" DW_AT_name="colormap_entries" DW_AT_decl_file="12" DW_AT_decl_line="2680" DW_AT_type="1024" DW_AT_data_member_location="28"/>
+        <DW_TAG_member offset="5689" DW_AT_name="warning_or_error" DW_AT_decl_file="12" DW_AT_decl_line="2705" DW_AT_type="1024" DW_AT_data_member_location="32"/>
+        <DW_TAG_member offset="5702" DW_AT_name="message" DW_AT_decl_file="12" DW_AT_decl_line="2707" DW_AT_type="5716" DW_AT_data_member_location="36"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_array_type offset="5716" DW_AT_type="174" DW_AT_sibling="5732">
+        <DW_TAG_subrange_type offset="5725" DW_AT_type="56" DW_AT_upper_bound="63"/>
+      </DW_TAG_array_type>
+      <DW_TAG_typedef offset="5732" DW_AT_name="png_imagep" DW_AT_decl_file="12" DW_AT_decl_line="2708" DW_AT_type="5744"/>
+      <DW_TAG_pointer_type offset="5744" DW_AT_byte_size="8" DW_AT_type="5589"/>
+      <DW_TAG_base_type offset="5750" DW_AT_byte_size="4" DW_AT_encoding="4" DW_AT_name="float"/>
+      <DW_TAG_typedef offset="5757" DW_AT_name="Byte" DW_AT_decl_file="16" DW_AT_decl_line="391" DW_AT_type="109"/>
+      <DW_TAG_typedef offset="5769" DW_AT_name="uInt" DW_AT_decl_file="16" DW_AT_decl_line="393" DW_AT_type="123"/>
+      <DW_TAG_typedef offset="5781" DW_AT_name="uLong" DW_AT_decl_file="16" DW_AT_decl_line="394" DW_AT_type="56"/>
+      <DW_TAG_typedef offset="5793" DW_AT_name="Bytef" DW_AT_decl_file="16" DW_AT_decl_line="400" DW_AT_type="5757"/>
+      <DW_TAG_const_type offset="5805" DW_AT_type="5793"/>
+      <DW_TAG_typedef offset="5810" DW_AT_name="voidpf" DW_AT_decl_file="16" DW_AT_decl_line="409" DW_AT_type="166"/>
+      <DW_TAG_typedef offset="5822" DW_AT_name="voidp" DW_AT_decl_file="16" DW_AT_decl_line="410" DW_AT_type="166"/>
+      <DW_TAG_variable offset="5834" DW_AT_name="__environ" DW_AT_decl_file="17" DW_AT_decl_line="546" DW_AT_type="1241" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_typedef offset="5846" DW_AT_name="alloc_func" DW_AT_decl_file="18" DW_AT_decl_line="81" DW_AT_type="5857"/>
+      <DW_TAG_pointer_type offset="5857" DW_AT_byte_size="8" DW_AT_type="5863"/>
+      <DW_TAG_subroutine_type offset="5863" DW_AT_prototyped="True" DW_AT_type="5810" DW_AT_sibling="5888">
+        <DW_TAG_formal_parameter offset="5872" DW_AT_type="5810"/>
+        <DW_TAG_formal_parameter offset="5877" DW_AT_type="5769"/>
+        <DW_TAG_formal_parameter offset="5882" DW_AT_type="5769"/>
+      </DW_TAG_subroutine_type>
+      <DW_TAG_typedef offset="5888" DW_AT_name="free_func" DW_AT_decl_file="18" DW_AT_decl_line="82" DW_AT_type="5899"/>
+      <DW_TAG_pointer_type offset="5899" DW_AT_byte_size="8" DW_AT_type="5905"/>
+      <DW_TAG_subroutine_type offset="5905" DW_AT_prototyped="True" DW_AT_sibling="5921">
+        <DW_TAG_formal_parameter offset="5910" DW_AT_type="5810"/>
+        <DW_TAG_formal_parameter offset="5915" DW_AT_type="5810"/>
+      </DW_TAG_subroutine_type>
+      <DW_TAG_structure_type offset="5921" DW_AT_name="z_stream_s" DW_AT_byte_size="112" DW_AT_decl_file="18" DW_AT_decl_line="86" DW_AT_sibling="6102">
+        <DW_TAG_member offset="5933" DW_AT_name="next_in" DW_AT_decl_file="18" DW_AT_decl_line="87" DW_AT_type="6102" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="5945" DW_AT_name="avail_in" DW_AT_decl_file="18" DW_AT_decl_line="88" DW_AT_type="5769" DW_AT_data_member_location="8"/>
+        <DW_TAG_member offset="5957" DW_AT_name="total_in" DW_AT_decl_file="18" DW_AT_decl_line="89" DW_AT_type="5781" DW_AT_data_member_location="16"/>
+        <DW_TAG_member offset="5969" DW_AT_name="next_out" DW_AT_decl_file="18" DW_AT_decl_line="91" DW_AT_type="6108" DW_AT_data_member_location="24"/>
+        <DW_TAG_member offset="5981" DW_AT_name="avail_out" DW_AT_decl_file="18" DW_AT_decl_line="92" DW_AT_type="5769" DW_AT_data_member_location="32"/>
+        <DW_TAG_member offset="5993" DW_AT_name="total_out" DW_AT_decl_file="18" DW_AT_decl_line="93" DW_AT_type="5781" DW_AT_data_member_location="40"/>
+        <DW_TAG_member offset="6005" DW_AT_name="msg" DW_AT_decl_file="18" DW_AT_decl_line="95" DW_AT_type="728" DW_AT_data_member_location="48"/>
+        <DW_TAG_member offset="6017" DW_AT_name="state" DW_AT_decl_file="18" DW_AT_decl_line="96" DW_AT_type="6119" DW_AT_data_member_location="56"/>
+        <DW_TAG_member offset="6029" DW_AT_name="zalloc" DW_AT_decl_file="18" DW_AT_decl_line="98" DW_AT_type="5846" DW_AT_data_member_location="64"/>
+        <DW_TAG_member offset="6041" DW_AT_name="zfree" DW_AT_decl_file="18" DW_AT_decl_line="99" DW_AT_type="5888" DW_AT_data_member_location="72"/>
+        <DW_TAG_member offset="6053" DW_AT_name="opaque" DW_AT_decl_file="18" DW_AT_decl_line="100" DW_AT_type="5810" DW_AT_data_member_location="80"/>
+        <DW_TAG_member offset="6065" DW_AT_name="data_type" DW_AT_decl_file="18" DW_AT_decl_line="102" DW_AT_type="63" DW_AT_data_member_location="88"/>
+        <DW_TAG_member offset="6077" DW_AT_name="adler" DW_AT_decl_file="18" DW_AT_decl_line="104" DW_AT_type="5781" DW_AT_data_member_location="96"/>
+        <DW_TAG_member offset="6089" DW_AT_name="reserved" DW_AT_decl_file="18" DW_AT_decl_line="105" DW_AT_type="5781" DW_AT_data_member_location="104"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_pointer_type offset="6102" DW_AT_byte_size="8" DW_AT_type="5805"/>
+      <DW_TAG_pointer_type offset="6108" DW_AT_byte_size="8" DW_AT_type="5793"/>
+      <DW_TAG_structure_type offset="6114" DW_AT_name="internal_state" DW_AT_declaration="True"/>
+      <DW_TAG_pointer_type offset="6119" DW_AT_byte_size="8" DW_AT_type="6114"/>
+      <DW_TAG_typedef offset="6125" DW_AT_name="z_stream" DW_AT_decl_file="18" DW_AT_decl_line="106" DW_AT_type="5921"/>
+      <DW_TAG_structure_type offset="6136" DW_AT_name="png_compression_buffer" DW_AT_byte_size="16" DW_AT_decl_file="13" DW_AT_decl_line="61" DW_AT_sibling="6173">
+        <DW_TAG_member offset="6148" DW_AT_name="next" DW_AT_decl_file="13" DW_AT_decl_line="63" DW_AT_type="6173" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="6160" DW_AT_name="output" DW_AT_decl_file="13" DW_AT_decl_line="64" DW_AT_type="6179" DW_AT_data_member_location="8"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_pointer_type offset="6173" DW_AT_byte_size="8" DW_AT_type="6136"/>
+      <DW_TAG_array_type offset="6179" DW_AT_type="978" DW_AT_sibling="6195">
+        <DW_TAG_subrange_type offset="6188" DW_AT_type="56" DW_AT_upper_bound="0"/>
+      </DW_TAG_array_type>
+      <DW_TAG_typedef offset="6195" DW_AT_name="png_compression_bufferp" DW_AT_decl_file="13" DW_AT_decl_line="65" DW_AT_type="6173"/>
+      <DW_TAG_structure_type offset="6206" DW_AT_name="png_xy" DW_AT_byte_size="32" DW_AT_decl_file="13" DW_AT_decl_line="83" DW_AT_sibling="6315">
+        <DW_TAG_member offset="6218" DW_AT_name="redx" DW_AT_decl_file="13" DW_AT_decl_line="85" DW_AT_type="1048" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="6230" DW_AT_name="redy" DW_AT_decl_file="13" DW_AT_decl_line="85" DW_AT_type="1048" DW_AT_data_member_location="4"/>
+        <DW_TAG_member offset="6242" DW_AT_name="greenx" DW_AT_decl_file="13" DW_AT_decl_line="86" DW_AT_type="1048" DW_AT_data_member_location="8"/>
+        <DW_TAG_member offset="6254" DW_AT_name="greeny" DW_AT_decl_file="13" DW_AT_decl_line="86" DW_AT_type="1048" DW_AT_data_member_location="12"/>
+        <DW_TAG_member offset="6266" DW_AT_name="bluex" DW_AT_decl_file="13" DW_AT_decl_line="87" DW_AT_type="1048" DW_AT_data_member_location="16"/>
+        <DW_TAG_member offset="6278" DW_AT_name="bluey" DW_AT_decl_file="13" DW_AT_decl_line="87" DW_AT_type="1048" DW_AT_data_member_location="20"/>
+        <DW_TAG_member offset="6290" DW_AT_name="whitex" DW_AT_decl_file="13" DW_AT_decl_line="88" DW_AT_type="1048" DW_AT_data_member_location="24"/>
+        <DW_TAG_member offset="6302" DW_AT_name="whitey" DW_AT_decl_file="13" DW_AT_decl_line="88" DW_AT_type="1048" DW_AT_data_member_location="28"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_typedef offset="6315" DW_AT_name="png_xy" DW_AT_decl_file="13" DW_AT_decl_line="89" DW_AT_type="6206"/>
+      <DW_TAG_structure_type offset="6326" DW_AT_name="png_XYZ" DW_AT_byte_size="36" DW_AT_decl_file="13" DW_AT_decl_line="94" DW_AT_sibling="6447">
+        <DW_TAG_member offset="6338" DW_AT_name="red_X" DW_AT_decl_file="13" DW_AT_decl_line="96" DW_AT_type="1048" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="6350" DW_AT_name="red_Y" DW_AT_decl_file="13" DW_AT_decl_line="96" DW_AT_type="1048" DW_AT_data_member_location="4"/>
+        <DW_TAG_member offset="6362" DW_AT_name="red_Z" DW_AT_decl_file="13" DW_AT_decl_line="96" DW_AT_type="1048" DW_AT_data_member_location="8"/>
+        <DW_TAG_member offset="6374" DW_AT_name="green_X" DW_AT_decl_file="13" DW_AT_decl_line="97" DW_AT_type="1048" DW_AT_data_member_location="12"/>
+        <DW_TAG_member offset="6386" DW_AT_name="green_Y" DW_AT_decl_file="13" DW_AT_decl_line="97" DW_AT_type="1048" DW_AT_data_member_location="16"/>
+        <DW_TAG_member offset="6398" DW_AT_name="green_Z" DW_AT_decl_file="13" DW_AT_decl_line="97" DW_AT_type="1048" DW_AT_data_member_location="20"/>
+        <DW_TAG_member offset="6410" DW_AT_name="blue_X" DW_AT_decl_file="13" DW_AT_decl_line="98" DW_AT_type="1048" DW_AT_data_member_location="24"/>
+        <DW_TAG_member offset="6422" DW_AT_name="blue_Y" DW_AT_decl_file="13" DW_AT_decl_line="98" DW_AT_type="1048" DW_AT_data_member_location="28"/>
+        <DW_TAG_member offset="6434" DW_AT_name="blue_Z" DW_AT_decl_file="13" DW_AT_decl_line="98" DW_AT_type="1048" DW_AT_data_member_location="32"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_typedef offset="6447" DW_AT_name="png_XYZ" DW_AT_decl_file="13" DW_AT_decl_line="99" DW_AT_type="6326"/>
+      <DW_TAG_structure_type offset="6458" DW_AT_name="png_colorspace" DW_AT_byte_size="76" DW_AT_decl_file="13" DW_AT_decl_line="112" DW_AT_sibling="6531">
+        <DW_TAG_member offset="6470" DW_AT_name="gamma" DW_AT_decl_file="13" DW_AT_decl_line="115" DW_AT_type="1048" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="6482" DW_AT_name="end_points_xy" DW_AT_decl_file="13" DW_AT_decl_line="119" DW_AT_type="6315" DW_AT_data_member_location="4"/>
+        <DW_TAG_member offset="6494" DW_AT_name="end_points_XYZ" DW_AT_decl_file="13" DW_AT_decl_line="120" DW_AT_type="6447" DW_AT_data_member_location="36"/>
+        <DW_TAG_member offset="6506" DW_AT_name="rendering_intent" DW_AT_decl_file="13" DW_AT_decl_line="121" DW_AT_type="995" DW_AT_data_member_location="72"/>
+        <DW_TAG_member offset="6518" DW_AT_name="flags" DW_AT_decl_file="13" DW_AT_decl_line="125" DW_AT_type="995" DW_AT_data_member_location="74"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_typedef offset="6531" DW_AT_name="png_colorspace" DW_AT_decl_file="13" DW_AT_decl_line="126" DW_AT_type="6458"/>
+      <DW_TAG_const_type offset="6542" DW_AT_type="6531"/>
+      <DW_TAG_pointer_type offset="6547" DW_AT_byte_size="8" DW_AT_type="6458"/>
+      <DW_TAG_restrict_type offset="6553" DW_AT_type="6547"/>
+      <DW_TAG_pointer_type offset="6558" DW_AT_byte_size="8" DW_AT_type="6542"/>
+      <DW_TAG_restrict_type offset="6564" DW_AT_type="6558"/>
+      <DW_TAG_pointer_type offset="6569" DW_AT_byte_size="8" DW_AT_type="891"/>
+      <DW_TAG_array_type offset="6575" DW_AT_type="174" DW_AT_sibling="6591">
+        <DW_TAG_subrange_type offset="6584" DW_AT_type="56" DW_AT_upper_bound="28"/>
+      </DW_TAG_array_type>
+      <DW_TAG_array_type offset="6591" DW_AT_type="6607" DW_AT_sibling="6607">
+        <DW_TAG_subrange_type offset="6600" DW_AT_type="56" DW_AT_upper_bound="3"/>
+      </DW_TAG_array_type>
+      <DW_TAG_pointer_type offset="6607" DW_AT_byte_size="8" DW_AT_type="6613"/>
+      <DW_TAG_subroutine_type offset="6613" DW_AT_prototyped="True" DW_AT_sibling="6634">
+        <DW_TAG_formal_parameter offset="6618" DW_AT_type="5010"/>
+        <DW_TAG_formal_parameter offset="6623" DW_AT_type="1084"/>
+        <DW_TAG_formal_parameter offset="6628" DW_AT_type="1102"/>
+      </DW_TAG_subroutine_type>
+      <DW_TAG_array_type offset="6634" DW_AT_type="978" DW_AT_sibling="6650">
+        <DW_TAG_subrange_type offset="6643" DW_AT_type="56" DW_AT_upper_bound="7"/>
+      </DW_TAG_array_type>
+      <DW_TAG_array_type offset="6650" DW_AT_type="1007" DW_AT_sibling="6666">
+        <DW_TAG_subrange_type offset="6659" DW_AT_type="56" DW_AT_upper_bound="255"/>
+      </DW_TAG_array_type>
+      <DW_TAG_const_type offset="6666" DW_AT_type="6650"/>
+      <DW_TAG_variable offset="6671" DW_AT_name="png_sRGB_table" DW_AT_decl_file="15" DW_AT_decl_line="943" DW_AT_type="6666" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_array_type offset="6683" DW_AT_type="1007" DW_AT_sibling="6700">
+        <DW_TAG_subrange_type offset="6692" DW_AT_type="56" DW_AT_upper_bound="511"/>
+      </DW_TAG_array_type>
+      <DW_TAG_const_type offset="6700" DW_AT_type="6683"/>
+      <DW_TAG_variable offset="6705" DW_AT_name="png_sRGB_base" DW_AT_decl_file="15" DW_AT_decl_line="949" DW_AT_type="6700" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_array_type offset="6717" DW_AT_type="990" DW_AT_sibling="6734">
+        <DW_TAG_subrange_type offset="6726" DW_AT_type="56" DW_AT_upper_bound="511"/>
+      </DW_TAG_array_type>
+      <DW_TAG_const_type offset="6734" DW_AT_type="6717"/>
+      <DW_TAG_variable offset="6739" DW_AT_name="png_sRGB_delta" DW_AT_decl_file="15" DW_AT_decl_line="950" DW_AT_type="6734" DW_AT_external="True" DW_AT_declaration="True"/>
+      <DW_TAG_structure_type offset="6751" DW_AT_byte_size="80" DW_AT_decl_file="1" DW_AT_decl_line="1283" DW_AT_sibling="6904">
+        <DW_TAG_member offset="6760" DW_AT_name="image" DW_AT_decl_file="1" DW_AT_decl_line="1286" DW_AT_type="5732" DW_AT_data_member_location="0"/>
+        <DW_TAG_member offset="6773" DW_AT_name="buffer" DW_AT_decl_file="1" DW_AT_decl_line="1287" DW_AT_type="1060" DW_AT_data_member_location="8"/>
+        <DW_TAG_member offset="6786" DW_AT_name="row_stride" DW_AT_decl_file="1" DW_AT_decl_line="1288" DW_AT_type="1012" DW_AT_data_member_location="16"/>
+        <DW_TAG_member offset="6799" DW_AT_name="colormap" DW_AT_decl_file="1" DW_AT_decl_line="1289" DW_AT_type="1060" DW_AT_data_member_location="24"/>
+        <DW_TAG_member offset="6812" DW_AT_name="background" DW_AT_decl_file="1" DW_AT_decl_line="1290" DW_AT_type="4150" DW_AT_data_member_location="32"/>
+        <DW_TAG_member offset="6825" DW_AT_name="local_row" DW_AT_decl_file="1" DW_AT_decl_line="1292" DW_AT_type="1060" DW_AT_data_member_location="40"/>
+        <DW_TAG_member offset="6838" DW_AT_name="first_row" DW_AT_decl_file="1" DW_AT_decl_line="1293" DW_AT_type="1060" DW_AT_data_member_location="48"/>
+        <DW_TAG_member offset="6851" DW_AT_name="row_bytes" DW_AT_decl_file="1" DW_AT_decl_line="1294" DW_AT_type="91" DW_AT_data_member_location="56"/>
+        <DW_TAG_member offset="6864" DW_AT_name="file_encoding" DW_AT_decl_file="1" DW_AT_decl_line="1295" DW_AT_type="63" DW_AT_data_member_location="64"/>
+        <DW_TAG_member offset="6877" DW_AT_name="gamma_to_linear" DW_AT_decl_file="1" DW_AT_decl_line="1296" DW_AT_type="1048" DW_AT_data_member_location="68"/>
+        <DW_TAG_member offset="6890" DW_AT_name="colormap_processing" DW_AT_decl_file="1" DW_AT_decl_line="1297" DW_AT_type="63" DW_AT_data_member_location="72"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_typedef offset="6904" DW_AT_name="png_image_read_control" DW_AT_decl_file="1" DW_AT_decl_line="1298" DW_AT_type="6751"/>
+      <DW_TAG_subprogram offset="6916" DW_AT_external="True" DW_AT_name="png_image_finish_read" DW_AT_decl_file="1" DW_AT_decl_line="4108" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="26913" DW_AT_high_pc="712" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="7165">
+        <DW_TAG_formal_parameter offset="6950" DW_AT_name="image" DW_AT_decl_file="1" DW_AT_decl_line="4108" DW_AT_type="5732" DW_AT_location="(DW_OP_fbreg: -136)"/>
+        <DW_TAG_formal_parameter offset="6966" DW_AT_name="background" DW_AT_decl_file="1" DW_AT_decl_line="4108" DW_AT_type="4150" DW_AT_location="(DW_OP_fbreg: -144)"/>
+        <DW_TAG_formal_parameter offset="6982" DW_AT_name="buffer" DW_AT_decl_file="1" DW_AT_decl_line="4109" DW_AT_type="166" DW_AT_location="(DW_OP_fbreg: -152)"/>
+        <DW_TAG_formal_parameter offset="6998" DW_AT_name="row_stride" DW_AT_decl_file="1" DW_AT_decl_line="4109" DW_AT_type="1012" DW_AT_location="(DW_OP_fbreg: -156)"/>
+        <DW_TAG_formal_parameter offset="7014" DW_AT_name="colormap" DW_AT_decl_file="1" DW_AT_decl_line="4109" DW_AT_type="166" DW_AT_location="(DW_OP_fbreg: -168)"/>
+        <DW_TAG_lexical_block offset="7030" DW_AT_low_pc="26994" DW_AT_high_pc="576">
+          <DW_TAG_variable offset="7047" DW_AT_name="channels" DW_AT_decl_file="1" DW_AT_decl_line="4117" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -120)"/>
+          <DW_TAG_lexical_block offset="7063" DW_AT_low_pc="27059" DW_AT_high_pc="490">
+            <DW_TAG_variable offset="7080" DW_AT_name="check" DW_AT_decl_file="1" DW_AT_decl_line="4127" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -128)"/>
+            <DW_TAG_variable offset="7096" DW_AT_name="png_row_stride" DW_AT_decl_file="1" DW_AT_decl_line="4128" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -116)"/>
+            <DW_TAG_lexical_block offset="7112" DW_AT_low_pc="27281" DW_AT_high_pc="205">
+              <DW_TAG_variable offset="7129" DW_AT_name="result" DW_AT_decl_file="1" DW_AT_decl_line="4167" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -124)"/>
+              <DW_TAG_variable offset="7145" DW_AT_name="display" DW_AT_decl_file="1" DW_AT_decl_line="4168" DW_AT_type="6904" DW_AT_location="(DW_OP_fbreg: -112)"/>
+            </DW_TAG_lexical_block>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="7165" DW_AT_name="png_image_read_direct" DW_AT_decl_file="1" DW_AT_decl_line="3672" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="24873" DW_AT_high_pc="2040" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="7955">
+        <DW_TAG_formal_parameter offset="7199" DW_AT_name="argument" DW_AT_decl_file="1" DW_AT_decl_line="3672" DW_AT_type="1060" DW_AT_location="(DW_OP_fbreg: -200)"/>
+        <DW_TAG_variable offset="7215" DW_AT_name="display" DW_AT_decl_file="1" DW_AT_decl_line="3674" DW_AT_type="7955" DW_AT_location="(DW_OP_fbreg: -104)"/>
+        <DW_TAG_variable offset="7231" DW_AT_name="image" DW_AT_decl_file="1" DW_AT_decl_line="3676" DW_AT_type="5732" DW_AT_location="(DW_OP_fbreg: -96)"/>
+        <DW_TAG_variable offset="7247" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="3677" DW_AT_type="4038" DW_AT_location="(DW_OP_fbreg: -88)"/>
+        <DW_TAG_variable offset="7263" DW_AT_name="info_ptr" DW_AT_decl_file="1" DW_AT_decl_line="3678" DW_AT_type="4050" DW_AT_location="(DW_OP_fbreg: -80)"/>
+        <DW_TAG_variable offset="7279" DW_AT_name="format" DW_AT_decl_file="1" DW_AT_decl_line="3680" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -192)"/>
+        <DW_TAG_variable offset="7295" DW_AT_name="linear" DW_AT_decl_file="1" DW_AT_decl_line="3681" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -144)"/>
+        <DW_TAG_variable offset="7311" DW_AT_name="do_local_compose" DW_AT_decl_file="1" DW_AT_decl_line="3682" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -188)"/>
+        <DW_TAG_variable offset="7327" DW_AT_name="do_local_background" DW_AT_decl_file="1" DW_AT_decl_line="3683" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -184)"/>
+        <DW_TAG_variable offset="7343" DW_AT_name="passes" DW_AT_decl_file="1" DW_AT_decl_line="3684" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -180)"/>
+        <DW_TAG_lexical_block offset="7359" DW_AT_low_pc="25032" DW_AT_high_pc="984" DW_AT_sibling="7641">
+          <DW_TAG_variable offset="7380" DW_AT_name="base_format" DW_AT_decl_file="1" DW_AT_decl_line="3694" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -140)"/>
+          <DW_TAG_variable offset="7396" DW_AT_name="change" DW_AT_decl_file="1" DW_AT_decl_line="3696" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -176)"/>
+          <DW_TAG_variable offset="7412" DW_AT_name="output_gamma" DW_AT_decl_file="1" DW_AT_decl_line="3697" DW_AT_type="1048" DW_AT_location="(DW_OP_fbreg: -172)"/>
+          <DW_TAG_variable offset="7428" DW_AT_name="mode" DW_AT_decl_file="1" DW_AT_decl_line="3698" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -168)"/>
+          <DW_TAG_lexical_block offset="7444" DW_AT_low_pc="25159" DW_AT_high_pc="69" DW_AT_sibling="7482">
+            <DW_TAG_variable offset="7465" DW_AT_name="input_gamma_default" DW_AT_decl_file="1" DW_AT_decl_line="3735" DW_AT_type="1048" DW_AT_location="(DW_OP_fbreg: -164)"/>
+          </DW_TAG_lexical_block>
+          <DW_TAG_lexical_block offset="7482" DW_AT_low_pc="25337" DW_AT_high_pc="92" DW_AT_sibling="7519">
+            <DW_TAG_variable offset="7503" DW_AT_name="gtest" DW_AT_decl_file="1" DW_AT_decl_line="3783" DW_AT_type="1048" DW_AT_location="(DW_OP_fbreg: -36)"/>
+          </DW_TAG_lexical_block>
+          <DW_TAG_lexical_block offset="7519" DW_AT_low_pc="25572" DW_AT_high_pc="111" DW_AT_sibling="7554">
+            <DW_TAG_variable offset="7540" DW_AT_name="c" DW_AT_decl_file="1" DW_AT_decl_line="3839" DW_AT_type="4247" DW_AT_location="(DW_OP_fbreg: -36)"/>
+          </DW_TAG_lexical_block>
+          <DW_TAG_lexical_block offset="7554" DW_AT_low_pc="25707" DW_AT_high_pc="96" DW_AT_sibling="7608">
+            <DW_TAG_variable offset="7575" DW_AT_name="filler" DW_AT_decl_file="1" DW_AT_decl_line="3877" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -160)"/>
+            <DW_TAG_variable offset="7591" DW_AT_name="where" DW_AT_decl_file="1" DW_AT_decl_line="3878" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -156)"/>
+          </DW_TAG_lexical_block>
+          <DW_TAG_lexical_block offset="7608" DW_AT_low_pc="25959" DW_AT_high_pc="29">
+            <DW_TAG_variable offset="7625" DW_AT_name="le" DW_AT_decl_file="1" DW_AT_decl_line="3955" DW_AT_type="995" DW_AT_location="(DW_OP_fbreg: -36)"/>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="7641" DW_AT_low_pc="26083" DW_AT_high_pc="338" DW_AT_sibling="7679">
+          <DW_TAG_variable offset="7662" DW_AT_name="info_format" DW_AT_decl_file="1" DW_AT_decl_line="3980" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -152)"/>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="7679" DW_AT_low_pc="26421" DW_AT_high_pc="109" DW_AT_sibling="7767">
+          <DW_TAG_variable offset="7700" DW_AT_name="first_row" DW_AT_decl_file="1" DW_AT_decl_line="4041" DW_AT_type="1060" DW_AT_location="(DW_OP_fbreg: -128)"/>
+          <DW_TAG_variable offset="7716" DW_AT_name="row_bytes" DW_AT_decl_file="1" DW_AT_decl_line="4042" DW_AT_type="91" DW_AT_location="(DW_OP_fbreg: -120)"/>
+          <DW_TAG_lexical_block offset="7732" DW_AT_low_pc="26463" DW_AT_high_pc="43">
+            <DW_TAG_variable offset="7749" DW_AT_name="ptr" DW_AT_decl_file="1" DW_AT_decl_line="4052" DW_AT_type="168" DW_AT_location="(DW_OP_fbreg: -72)"/>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="7767" DW_AT_low_pc="26539" DW_AT_high_pc="118" DW_AT_sibling="7820">
+          <DW_TAG_variable offset="7788" DW_AT_name="result" DW_AT_decl_file="1" DW_AT_decl_line="4063" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -132)"/>
+          <DW_TAG_variable offset="7804" DW_AT_name="row" DW_AT_decl_file="1" DW_AT_decl_line="4064" DW_AT_type="1060" DW_AT_location="(DW_OP_fbreg: -48)"/>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="7820" DW_AT_low_pc="26666" DW_AT_high_pc="115" DW_AT_sibling="7873">
+          <DW_TAG_variable offset="7841" DW_AT_name="result" DW_AT_decl_file="1" DW_AT_decl_line="4076" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -136)"/>
+          <DW_TAG_variable offset="7857" DW_AT_name="row" DW_AT_decl_file="1" DW_AT_decl_line="4077" DW_AT_type="1060" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="7873" DW_AT_low_pc="26781" DW_AT_high_pc="110">
+          <DW_TAG_variable offset="7890" DW_AT_name="row_bytes" DW_AT_decl_file="1" DW_AT_decl_line="4089" DW_AT_type="1036" DW_AT_location="(DW_OP_fbreg: -64)"/>
+          <DW_TAG_lexical_block offset="7905" DW_AT_low_pc="26795" DW_AT_high_pc="75">
+            <DW_TAG_variable offset="7922" DW_AT_name="y" DW_AT_decl_file="1" DW_AT_decl_line="4093" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -148)"/>
+            <DW_TAG_variable offset="7936" DW_AT_name="row" DW_AT_decl_file="1" DW_AT_decl_line="4094" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -112)"/>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_pointer_type offset="7955" DW_AT_byte_size="8" DW_AT_type="6904"/>
+      <DW_TAG_subprogram offset="7961" DW_AT_name="png_image_read_background" DW_AT_decl_file="1" DW_AT_decl_line="3392" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="22189" DW_AT_high_pc="2684" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="8900">
+        <DW_TAG_formal_parameter offset="7995" DW_AT_name="argument" DW_AT_decl_file="1" DW_AT_decl_line="3392" DW_AT_type="1060" DW_AT_location="(DW_OP_fbreg: -248)"/>
+        <DW_TAG_variable offset="8011" DW_AT_name="display" DW_AT_decl_file="1" DW_AT_decl_line="3394" DW_AT_type="7955" DW_AT_location="(DW_OP_fbreg: -104)"/>
+        <DW_TAG_variable offset="8027" DW_AT_name="image" DW_AT_decl_file="1" DW_AT_decl_line="3396" DW_AT_type="5732" DW_AT_location="(DW_OP_fbreg: -96)"/>
+        <DW_TAG_variable offset="8043" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="3397" DW_AT_type="4038" DW_AT_location="(DW_OP_fbreg: -88)"/>
+        <DW_TAG_variable offset="8059" DW_AT_name="info_ptr" DW_AT_decl_file="1" DW_AT_decl_line="3398" DW_AT_type="4050" DW_AT_location="(DW_OP_fbreg: -80)"/>
+        <DW_TAG_variable offset="8075" DW_AT_name="height" DW_AT_decl_file="1" DW_AT_decl_line="3399" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -176)"/>
+        <DW_TAG_variable offset="8091" DW_AT_name="width" DW_AT_decl_file="1" DW_AT_decl_line="3400" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -172)"/>
+        <DW_TAG_variable offset="8107" DW_AT_name="pass" DW_AT_decl_file="1" DW_AT_decl_line="3401" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -232)"/>
+        <DW_TAG_variable offset="8123" DW_AT_name="passes" DW_AT_decl_file="1" DW_AT_decl_line="3401" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -228)"/>
+        <DW_TAG_lexical_block offset="8139" DW_AT_low_pc="22547" DW_AT_high_pc="1363" DW_AT_sibling="8607">
+          <DW_TAG_variable offset="8160" DW_AT_name="first_row" DW_AT_decl_file="1" DW_AT_decl_line="3450" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -48)"/>
+          <DW_TAG_variable offset="8175" DW_AT_name="step_row" DW_AT_decl_file="1" DW_AT_decl_line="3451" DW_AT_type="91" DW_AT_location="(DW_OP_fbreg: -40)"/>
+          <DW_TAG_lexical_block offset="8190" DW_AT_low_pc="22586" DW_AT_high_pc="1299">
+            <DW_TAG_variable offset="8207" DW_AT_name="row" DW_AT_decl_file="1" DW_AT_decl_line="3455" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -160)"/>
+            <DW_TAG_variable offset="8223" DW_AT_name="startx" DW_AT_decl_file="1" DW_AT_decl_line="3456" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -224)"/>
+            <DW_TAG_variable offset="8239" DW_AT_name="stepx" DW_AT_decl_file="1" DW_AT_decl_line="3456" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -220)"/>
+            <DW_TAG_variable offset="8255" DW_AT_name="stepy" DW_AT_decl_file="1" DW_AT_decl_line="3456" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -216)"/>
+            <DW_TAG_variable offset="8271" DW_AT_name="y" DW_AT_decl_file="1" DW_AT_decl_line="3457" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -212)"/>
+            <DW_TAG_lexical_block offset="8285" DW_AT_low_pc="22993" DW_AT_high_pc="389" DW_AT_sibling="8422">
+              <DW_TAG_variable offset="8306" DW_AT_name="inrow" DW_AT_decl_file="1" DW_AT_decl_line="3482" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -152)"/>
+              <DW_TAG_variable offset="8322" DW_AT_name="outrow" DW_AT_decl_file="1" DW_AT_decl_line="3484" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -144)"/>
+              <DW_TAG_variable offset="8338" DW_AT_name="end_row" DW_AT_decl_file="1" DW_AT_decl_line="3485" DW_AT_type="1102" DW_AT_location="(DW_OP_fbreg: -24)"/>
+              <DW_TAG_lexical_block offset="8353" DW_AT_low_pc="23092" DW_AT_high_pc="266">
+                <DW_TAG_variable offset="8370" DW_AT_name="alpha" DW_AT_decl_file="1" DW_AT_decl_line="3494" DW_AT_type="978" DW_AT_location="(DW_OP_fbreg: -237)"/>
+                <DW_TAG_lexical_block offset="8386" DW_AT_low_pc="23122" DW_AT_high_pc="228">
+                  <DW_TAG_variable offset="8403" DW_AT_name="component" DW_AT_decl_file="1" DW_AT_decl_line="3498" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -208)"/>
+                </DW_TAG_lexical_block>
+              </DW_TAG_lexical_block>
+            </DW_TAG_lexical_block>
+            <DW_TAG_lexical_block offset="8422" DW_AT_low_pc="23417" DW_AT_high_pc="467">
+              <DW_TAG_variable offset="8439" DW_AT_name="background8" DW_AT_decl_file="1" DW_AT_decl_line="3522" DW_AT_type="978" DW_AT_location="(DW_OP_fbreg: -239)"/>
+              <DW_TAG_variable offset="8455" DW_AT_name="background" DW_AT_decl_file="1" DW_AT_decl_line="3523" DW_AT_type="995" DW_AT_location="(DW_OP_fbreg: -234)"/>
+              <DW_TAG_lexical_block offset="8471" DW_AT_low_pc="23471" DW_AT_high_pc="381">
+                <DW_TAG_variable offset="8488" DW_AT_name="inrow" DW_AT_decl_file="1" DW_AT_decl_line="3527" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -136)"/>
+                <DW_TAG_variable offset="8504" DW_AT_name="outrow" DW_AT_decl_file="1" DW_AT_decl_line="3529" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -128)"/>
+                <DW_TAG_variable offset="8520" DW_AT_name="end_row" DW_AT_decl_file="1" DW_AT_decl_line="3530" DW_AT_type="1102" DW_AT_location="(DW_OP_fbreg: -32)"/>
+                <DW_TAG_lexical_block offset="8535" DW_AT_low_pc="23564" DW_AT_high_pc="249">
+                  <DW_TAG_variable offset="8552" DW_AT_name="alpha" DW_AT_decl_file="1" DW_AT_decl_line="3539" DW_AT_type="978" DW_AT_location="(DW_OP_fbreg: -238)"/>
+                  <DW_TAG_lexical_block offset="8568" DW_AT_low_pc="23591" DW_AT_high_pc="202">
+                    <DW_TAG_variable offset="8585" DW_AT_name="component" DW_AT_decl_file="1" DW_AT_decl_line="3543" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -204)"/>
+                  </DW_TAG_lexical_block>
+                </DW_TAG_lexical_block>
+              </DW_TAG_lexical_block>
+            </DW_TAG_lexical_block>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="8607" DW_AT_low_pc="23915" DW_AT_high_pc="930">
+          <DW_TAG_variable offset="8624" DW_AT_name="first_row" DW_AT_decl_file="1" DW_AT_decl_line="3574" DW_AT_type="1120" DW_AT_location="(DW_OP_fbreg: -72)"/>
+          <DW_TAG_variable offset="8640" DW_AT_name="step_row" DW_AT_decl_file="1" DW_AT_decl_line="3579" DW_AT_type="91" DW_AT_location="(DW_OP_fbreg: -64)"/>
+          <DW_TAG_variable offset="8655" DW_AT_name="preserve_alpha" DW_AT_decl_file="1" DW_AT_decl_line="3580" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -168)"/>
+          <DW_TAG_variable offset="8671" DW_AT_name="outchannels" DW_AT_decl_file="1" DW_AT_decl_line="3582" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -164)"/>
+          <DW_TAG_variable offset="8687" DW_AT_name="swap_alpha" DW_AT_decl_file="1" DW_AT_decl_line="3583" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -200)"/>
+          <DW_TAG_lexical_block offset="8703" DW_AT_low_pc="24049" DW_AT_high_pc="771">
+            <DW_TAG_variable offset="8720" DW_AT_name="startx" DW_AT_decl_file="1" DW_AT_decl_line="3593" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -196)"/>
+            <DW_TAG_variable offset="8736" DW_AT_name="stepx" DW_AT_decl_file="1" DW_AT_decl_line="3593" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -192)"/>
+            <DW_TAG_variable offset="8752" DW_AT_name="stepy" DW_AT_decl_file="1" DW_AT_decl_line="3593" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -188)"/>
+            <DW_TAG_variable offset="8768" DW_AT_name="y" DW_AT_decl_file="1" DW_AT_decl_line="3594" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -184)"/>
+            <DW_TAG_lexical_block offset="8782" DW_AT_low_pc="24439" DW_AT_high_pc="348">
+              <DW_TAG_variable offset="8799" DW_AT_name="inrow" DW_AT_decl_file="1" DW_AT_decl_line="3620" DW_AT_type="1138" DW_AT_location="(DW_OP_fbreg: -120)"/>
+              <DW_TAG_variable offset="8815" DW_AT_name="outrow" DW_AT_decl_file="1" DW_AT_decl_line="3621" DW_AT_type="1120" DW_AT_location="(DW_OP_fbreg: -112)"/>
+              <DW_TAG_variable offset="8831" DW_AT_name="end_row" DW_AT_decl_file="1" DW_AT_decl_line="3622" DW_AT_type="1120" DW_AT_location="(DW_OP_fbreg: -56)"/>
+              <DW_TAG_lexical_block offset="8846" DW_AT_low_pc="24553" DW_AT_high_pc="207">
+                <DW_TAG_variable offset="8863" DW_AT_name="component" DW_AT_decl_file="1" DW_AT_decl_line="3634" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -180)"/>
+                <DW_TAG_variable offset="8879" DW_AT_name="alpha" DW_AT_decl_file="1" DW_AT_decl_line="3635" DW_AT_type="995" DW_AT_location="(DW_OP_fbreg: -236)"/>
+              </DW_TAG_lexical_block>
+            </DW_TAG_lexical_block>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="8900" DW_AT_name="png_image_read_composite" DW_AT_decl_file="1" DW_AT_decl_line="3265" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="21284" DW_AT_high_pc="905" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="9353">
+        <DW_TAG_formal_parameter offset="8934" DW_AT_name="argument" DW_AT_decl_file="1" DW_AT_decl_line="3265" DW_AT_type="1060" DW_AT_location="(DW_OP_fbreg: -136)"/>
+        <DW_TAG_variable offset="8950" DW_AT_name="display" DW_AT_decl_file="1" DW_AT_decl_line="3267" DW_AT_type="7955" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_variable offset="8965" DW_AT_name="image" DW_AT_decl_file="1" DW_AT_decl_line="3269" DW_AT_type="5732" DW_AT_location="(DW_OP_fbreg: -48)"/>
+        <DW_TAG_variable offset="8980" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="3270" DW_AT_type="4038" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="8995" DW_AT_name="passes" DW_AT_decl_file="1" DW_AT_decl_line="3271" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -116)"/>
+        <DW_TAG_lexical_block offset="9011" DW_AT_low_pc="21391" DW_AT_high_pc="791">
+          <DW_TAG_variable offset="9028" DW_AT_name="height" DW_AT_decl_file="1" DW_AT_decl_line="3288" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -84)"/>
+          <DW_TAG_variable offset="9044" DW_AT_name="width" DW_AT_decl_file="1" DW_AT_decl_line="3289" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -80)"/>
+          <DW_TAG_variable offset="9060" DW_AT_name="step_row" DW_AT_decl_file="1" DW_AT_decl_line="3290" DW_AT_type="91" DW_AT_location="(DW_OP_fbreg: -32)"/>
+          <DW_TAG_variable offset="9075" DW_AT_name="channels" DW_AT_decl_file="1" DW_AT_decl_line="3291" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -76)"/>
+          <DW_TAG_variable offset="9091" DW_AT_name="pass" DW_AT_decl_file="1" DW_AT_decl_line="3293" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -112)"/>
+          <DW_TAG_lexical_block offset="9107" DW_AT_low_pc="21464" DW_AT_high_pc="702">
+            <DW_TAG_variable offset="9124" DW_AT_name="startx" DW_AT_decl_file="1" DW_AT_decl_line="3297" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -108)"/>
+            <DW_TAG_variable offset="9140" DW_AT_name="stepx" DW_AT_decl_file="1" DW_AT_decl_line="3297" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -104)"/>
+            <DW_TAG_variable offset="9156" DW_AT_name="stepy" DW_AT_decl_file="1" DW_AT_decl_line="3297" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -100)"/>
+            <DW_TAG_variable offset="9172" DW_AT_name="y" DW_AT_decl_file="1" DW_AT_decl_line="3298" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -96)"/>
+            <DW_TAG_lexical_block offset="9186" DW_AT_low_pc="21779" DW_AT_high_pc="366">
+              <DW_TAG_variable offset="9203" DW_AT_name="inrow" DW_AT_decl_file="1" DW_AT_decl_line="3322" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -72)"/>
+              <DW_TAG_variable offset="9219" DW_AT_name="outrow" DW_AT_decl_file="1" DW_AT_decl_line="3323" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -64)"/>
+              <DW_TAG_variable offset="9234" DW_AT_name="end_row" DW_AT_decl_file="1" DW_AT_decl_line="3324" DW_AT_type="1102" DW_AT_location="(DW_OP_fbreg: -24)"/>
+              <DW_TAG_lexical_block offset="9249" DW_AT_low_pc="21871" DW_AT_high_pc="253">
+                <DW_TAG_variable offset="9266" DW_AT_name="alpha" DW_AT_decl_file="1" DW_AT_decl_line="3337" DW_AT_type="978" DW_AT_location="(DW_OP_fbreg: -117)"/>
+                <DW_TAG_lexical_block offset="9282" DW_AT_low_pc="21897" DW_AT_high_pc="215">
+                  <DW_TAG_variable offset="9299" DW_AT_name="c" DW_AT_decl_file="1" DW_AT_decl_line="3341" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -92)"/>
+                  <DW_TAG_lexical_block offset="9313" DW_AT_low_pc="21909" DW_AT_high_pc="187">
+                    <DW_TAG_variable offset="9330" DW_AT_name="component" DW_AT_decl_file="1" DW_AT_decl_line="3345" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -88)"/>
+                  </DW_TAG_lexical_block>
+                </DW_TAG_lexical_block>
+              </DW_TAG_lexical_block>
+            </DW_TAG_lexical_block>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="9353" DW_AT_name="png_image_read_colormapped" DW_AT_decl_file="1" DW_AT_decl_line="3133" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="20522" DW_AT_high_pc="762" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="9734">
+        <DW_TAG_formal_parameter offset="9387" DW_AT_name="argument" DW_AT_decl_file="1" DW_AT_decl_line="3133" DW_AT_type="1060" DW_AT_location="(DW_OP_fbreg: -136)"/>
+        <DW_TAG_variable offset="9403" DW_AT_name="display" DW_AT_decl_file="1" DW_AT_decl_line="3135" DW_AT_type="7955" DW_AT_location="(DW_OP_fbreg: -88)"/>
+        <DW_TAG_variable offset="9419" DW_AT_name="image" DW_AT_decl_file="1" DW_AT_decl_line="3137" DW_AT_type="5732" DW_AT_location="(DW_OP_fbreg: -80)"/>
+        <DW_TAG_variable offset="9435" DW_AT_name="control" DW_AT_decl_file="1" DW_AT_decl_line="3138" DW_AT_type="5460" DW_AT_location="(DW_OP_fbreg: -72)"/>
+        <DW_TAG_variable offset="9451" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="3139" DW_AT_type="4038" DW_AT_location="(DW_OP_fbreg: -64)"/>
+        <DW_TAG_variable offset="9466" DW_AT_name="info_ptr" DW_AT_decl_file="1" DW_AT_decl_line="3140" DW_AT_type="4050" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_variable offset="9481" DW_AT_name="passes" DW_AT_decl_file="1" DW_AT_decl_line="3142" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -116)"/>
+        <DW_TAG_label offset="9497" DW_AT_name="bad_output" DW_AT_decl_file="1" DW_AT_decl_line="3204" DW_AT_low_pc="20947"/>
+        <DW_TAG_lexical_block offset="9513" DW_AT_low_pc="20967" DW_AT_high_pc="99" DW_AT_sibling="9599">
+          <DW_TAG_variable offset="9534" DW_AT_name="first_row" DW_AT_decl_file="1" DW_AT_decl_line="3213" DW_AT_type="1060" DW_AT_location="(DW_OP_fbreg: -104)"/>
+          <DW_TAG_variable offset="9550" DW_AT_name="row_bytes" DW_AT_decl_file="1" DW_AT_decl_line="3214" DW_AT_type="91" DW_AT_location="(DW_OP_fbreg: -48)"/>
+          <DW_TAG_lexical_block offset="9565" DW_AT_low_pc="20999" DW_AT_high_pc="43">
+            <DW_TAG_variable offset="9582" DW_AT_name="ptr" DW_AT_decl_file="1" DW_AT_decl_line="3221" DW_AT_type="168" DW_AT_location="(DW_OP_fbreg: -40)"/>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="9599" DW_AT_low_pc="21072" DW_AT_high_pc="115" DW_AT_sibling="9652">
+          <DW_TAG_variable offset="9620" DW_AT_name="result" DW_AT_decl_file="1" DW_AT_decl_line="3232" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -108)"/>
+          <DW_TAG_variable offset="9636" DW_AT_name="row" DW_AT_decl_file="1" DW_AT_decl_line="3233" DW_AT_type="1060" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="9652" DW_AT_low_pc="21187" DW_AT_high_pc="95">
+          <DW_TAG_variable offset="9669" DW_AT_name="row_bytes" DW_AT_decl_file="1" DW_AT_decl_line="3245" DW_AT_type="1036" DW_AT_location="(DW_OP_fbreg: -32)"/>
+          <DW_TAG_lexical_block offset="9684" DW_AT_low_pc="21201" DW_AT_high_pc="66">
+            <DW_TAG_variable offset="9701" DW_AT_name="y" DW_AT_decl_file="1" DW_AT_decl_line="3249" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -112)"/>
+            <DW_TAG_variable offset="9715" DW_AT_name="row" DW_AT_decl_file="1" DW_AT_decl_line="3250" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -96)"/>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="9734" DW_AT_name="png_image_read_and_map" DW_AT_decl_file="1" DW_AT_decl_line="2944" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="19109" DW_AT_high_pc="1413" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="10295">
+        <DW_TAG_formal_parameter offset="9768" DW_AT_name="argument" DW_AT_decl_file="1" DW_AT_decl_line="2944" DW_AT_type="1060" DW_AT_location="(DW_OP_fbreg: -152)"/>
+        <DW_TAG_variable offset="9784" DW_AT_name="display" DW_AT_decl_file="1" DW_AT_decl_line="2946" DW_AT_type="7955" DW_AT_location="(DW_OP_fbreg: -64)"/>
+        <DW_TAG_variable offset="9799" DW_AT_name="image" DW_AT_decl_file="1" DW_AT_decl_line="2948" DW_AT_type="5732" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_variable offset="9814" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="2949" DW_AT_type="4038" DW_AT_location="(DW_OP_fbreg: -48)"/>
+        <DW_TAG_variable offset="9829" DW_AT_name="passes" DW_AT_decl_file="1" DW_AT_decl_line="2950" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -136)"/>
+        <DW_TAG_lexical_block offset="9845" DW_AT_low_pc="19225" DW_AT_high_pc="1290">
+          <DW_TAG_variable offset="9862" DW_AT_name="height" DW_AT_decl_file="1" DW_AT_decl_line="2971" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -104)"/>
+          <DW_TAG_variable offset="9878" DW_AT_name="width" DW_AT_decl_file="1" DW_AT_decl_line="2972" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -100)"/>
+          <DW_TAG_variable offset="9894" DW_AT_name="proc" DW_AT_decl_file="1" DW_AT_decl_line="2973" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -96)"/>
+          <DW_TAG_variable offset="9910" DW_AT_name="first_row" DW_AT_decl_file="1" DW_AT_decl_line="2974" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -40)"/>
+          <DW_TAG_variable offset="9925" DW_AT_name="step_row" DW_AT_decl_file="1" DW_AT_decl_line="2975" DW_AT_type="91" DW_AT_location="(DW_OP_fbreg: -32)"/>
+          <DW_TAG_variable offset="9940" DW_AT_name="pass" DW_AT_decl_file="1" DW_AT_decl_line="2976" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -132)"/>
+          <DW_TAG_lexical_block offset="9956" DW_AT_low_pc="19291" DW_AT_high_pc="1208">
+            <DW_TAG_variable offset="9973" DW_AT_name="startx" DW_AT_decl_file="1" DW_AT_decl_line="2980" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -128)"/>
+            <DW_TAG_variable offset="9989" DW_AT_name="stepx" DW_AT_decl_file="1" DW_AT_decl_line="2980" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -124)"/>
+            <DW_TAG_variable offset="10005" DW_AT_name="stepy" DW_AT_decl_file="1" DW_AT_decl_line="2980" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -120)"/>
+            <DW_TAG_variable offset="10021" DW_AT_name="y" DW_AT_decl_file="1" DW_AT_decl_line="2981" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -116)"/>
+            <DW_TAG_lexical_block offset="10035" DW_AT_low_pc="19600" DW_AT_high_pc="878">
+              <DW_TAG_variable offset="10052" DW_AT_name="inrow" DW_AT_decl_file="1" DW_AT_decl_line="3004" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -80)"/>
+              <DW_TAG_variable offset="10068" DW_AT_name="outrow" DW_AT_decl_file="1" DW_AT_decl_line="3005" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -72)"/>
+              <DW_TAG_variable offset="10084" DW_AT_name="end_row" DW_AT_decl_file="1" DW_AT_decl_line="3006" DW_AT_type="1102" DW_AT_location="(DW_OP_fbreg: -24)"/>
+              <DW_TAG_lexical_block offset="10099" DW_AT_low_pc="19733" DW_AT_high_pc="155" DW_AT_sibling="10169">
+                <DW_TAG_variable offset="10120" DW_AT_name="gray" DW_AT_decl_file="1" DW_AT_decl_line="3022" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -88)"/>
+                <DW_TAG_variable offset="10136" DW_AT_name="alpha" DW_AT_decl_file="1" DW_AT_decl_line="3023" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -84)"/>
+                <DW_TAG_variable offset="10152" DW_AT_name="entry" DW_AT_decl_file="1" DW_AT_decl_line="3024" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -112)"/>
+              </DW_TAG_lexical_block>
+              <DW_TAG_lexical_block offset="10169" DW_AT_low_pc="19914" DW_AT_high_pc="76" DW_AT_sibling="10223">
+                <DW_TAG_variable offset="10190" DW_AT_name="gray" DW_AT_decl_file="1" DW_AT_decl_line="3050" DW_AT_type="978" DW_AT_location="(DW_OP_fbreg: -138)"/>
+                <DW_TAG_variable offset="10206" DW_AT_name="alpha" DW_AT_decl_file="1" DW_AT_decl_line="3051" DW_AT_type="978" DW_AT_location="(DW_OP_fbreg: -137)"/>
+              </DW_TAG_lexical_block>
+              <DW_TAG_lexical_block offset="10223" DW_AT_low_pc="20161" DW_AT_high_pc="295">
+                <DW_TAG_variable offset="10240" DW_AT_name="alpha" DW_AT_decl_file="1" DW_AT_decl_line="3075" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -92)"/>
+                <DW_TAG_lexical_block offset="10256" DW_AT_low_pc="20325" DW_AT_high_pc="126">
+                  <DW_TAG_variable offset="10273" DW_AT_name="back_i" DW_AT_decl_file="1" DW_AT_decl_line="3097" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -108)"/>
+                </DW_TAG_lexical_block>
+              </DW_TAG_lexical_block>
+            </DW_TAG_lexical_block>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="10295" DW_AT_name="png_image_read_colormap" DW_AT_decl_file="1" DW_AT_decl_line="2090" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="12306" DW_AT_high_pc="6803" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="11374">
+        <DW_TAG_formal_parameter offset="10329" DW_AT_name="argument" DW_AT_decl_file="1" DW_AT_decl_line="2090" DW_AT_type="1060" DW_AT_location="(DW_OP_fbreg: -280)"/>
+        <DW_TAG_variable offset="10345" DW_AT_name="display" DW_AT_decl_file="1" DW_AT_decl_line="2092" DW_AT_type="7955" DW_AT_location="(DW_OP_fbreg: -112)"/>
+        <DW_TAG_variable offset="10361" DW_AT_name="image" DW_AT_decl_file="1" DW_AT_decl_line="2094" DW_AT_type="5732" DW_AT_location="(DW_OP_fbreg: -104)"/>
+        <DW_TAG_variable offset="10377" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="2096" DW_AT_type="4038" DW_AT_location="(DW_OP_fbreg: -96)"/>
+        <DW_TAG_variable offset="10393" DW_AT_name="output_format" DW_AT_decl_file="1" DW_AT_decl_line="2097" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -156)"/>
+        <DW_TAG_variable offset="10409" DW_AT_name="output_encoding" DW_AT_decl_file="1" DW_AT_decl_line="2098" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -152)"/>
+        <DW_TAG_variable offset="10425" DW_AT_name="cmap_entries" DW_AT_decl_file="1" DW_AT_decl_line="2101" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -264)"/>
+        <DW_TAG_variable offset="10441" DW_AT_name="output_processing" DW_AT_decl_file="1" DW_AT_decl_line="2102" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -260)"/>
+        <DW_TAG_variable offset="10457" DW_AT_name="data_encoding" DW_AT_decl_file="1" DW_AT_decl_line="2103" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -256)"/>
+        <DW_TAG_variable offset="10473" DW_AT_name="background_index" DW_AT_decl_file="1" DW_AT_decl_line="2108" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -252)"/>
+        <DW_TAG_variable offset="10489" DW_AT_name="back_r" DW_AT_decl_file="1" DW_AT_decl_line="2109" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -248)"/>
+        <DW_TAG_variable offset="10505" DW_AT_name="back_g" DW_AT_decl_file="1" DW_AT_decl_line="2109" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -244)"/>
+        <DW_TAG_variable offset="10521" DW_AT_name="back_b" DW_AT_decl_file="1" DW_AT_decl_line="2109" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -240)"/>
+        <DW_TAG_variable offset="10537" DW_AT_name="expand_tRNS" DW_AT_decl_file="1" DW_AT_decl_line="2112" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -236)"/>
+        <DW_TAG_label offset="10553" DW_AT_name="bad_background" DW_AT_decl_file="1" DW_AT_decl_line="2933" DW_AT_low_pc="19031"/>
+        <DW_TAG_lexical_block offset="10569" DW_AT_low_pc="12958" DW_AT_high_pc="427" DW_AT_sibling="10669">
+          <DW_TAG_variable offset="10590" DW_AT_name="step" DW_AT_decl_file="1" DW_AT_decl_line="2188" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -116)"/>
+          <DW_TAG_variable offset="10606" DW_AT_name="i" DW_AT_decl_file="1" DW_AT_decl_line="2188" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -232)"/>
+          <DW_TAG_variable offset="10620" DW_AT_name="val" DW_AT_decl_file="1" DW_AT_decl_line="2188" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -228)"/>
+          <DW_TAG_variable offset="10636" DW_AT_name="trans" DW_AT_decl_file="1" DW_AT_decl_line="2188" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -224)"/>
+          <DW_TAG_variable offset="10652" DW_AT_name="back_alpha" DW_AT_decl_file="1" DW_AT_decl_line="2188" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -220)"/>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="10669" DW_AT_low_pc="13471" DW_AT_high_pc="458" DW_AT_sibling="10755">
+          <DW_TAG_variable offset="10690" DW_AT_name="back_alpha" DW_AT_decl_file="1" DW_AT_decl_line="2277" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -216)"/>
+          <DW_TAG_lexical_block offset="10706" DW_AT_low_pc="13535" DW_AT_high_pc="274">
+            <DW_TAG_variable offset="10723" DW_AT_name="c" DW_AT_decl_file="1" DW_AT_decl_line="2289" DW_AT_type="4247" DW_AT_location="(DW_OP_fbreg: -66)"/>
+            <DW_TAG_variable offset="10737" DW_AT_name="gray" DW_AT_decl_file="1" DW_AT_decl_line="2290" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -212)"/>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="10755" DW_AT_low_pc="14097" DW_AT_high_pc="319" DW_AT_sibling="10807">
+          <DW_TAG_variable offset="10776" DW_AT_name="c" DW_AT_decl_file="1" DW_AT_decl_line="2399" DW_AT_type="4247" DW_AT_location="(DW_OP_fbreg: -66)"/>
+          <DW_TAG_variable offset="10790" DW_AT_name="gray" DW_AT_decl_file="1" DW_AT_decl_line="2400" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -208)"/>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="10807" DW_AT_low_pc="14422" DW_AT_high_pc="861" DW_AT_sibling="11025">
+          <DW_TAG_variable offset="10828" DW_AT_name="i" DW_AT_decl_file="1" DW_AT_decl_line="2431" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -204)"/>
+          <DW_TAG_variable offset="10842" DW_AT_name="a" DW_AT_decl_file="1" DW_AT_decl_line="2431" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -200)"/>
+          <DW_TAG_lexical_block offset="10856" DW_AT_low_pc="14467" DW_AT_high_pc="89" DW_AT_sibling="10894">
+            <DW_TAG_variable offset="10877" DW_AT_name="gray" DW_AT_decl_file="1" DW_AT_decl_line="2442" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -128)"/>
+          </DW_TAG_lexical_block>
+          <DW_TAG_lexical_block offset="10894" DW_AT_low_pc="14777" DW_AT_high_pc="464">
+            <DW_TAG_variable offset="10911" DW_AT_name="g" DW_AT_decl_file="1" DW_AT_decl_line="2482" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -196)"/>
+            <DW_TAG_variable offset="10925" DW_AT_name="alpha" DW_AT_decl_file="1" DW_AT_decl_line="2487" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -148)"/>
+            <DW_TAG_variable offset="10941" DW_AT_name="back_rx" DW_AT_decl_file="1" DW_AT_decl_line="2488" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -144)"/>
+            <DW_TAG_variable offset="10957" DW_AT_name="back_gx" DW_AT_decl_file="1" DW_AT_decl_line="2489" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -140)"/>
+            <DW_TAG_variable offset="10973" DW_AT_name="back_bx" DW_AT_decl_file="1" DW_AT_decl_line="2490" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -136)"/>
+            <DW_TAG_lexical_block offset="10989" DW_AT_low_pc="14876" DW_AT_high_pc="345">
+              <DW_TAG_variable offset="11006" DW_AT_name="gray" DW_AT_decl_file="1" DW_AT_decl_line="2494" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -132)"/>
+            </DW_TAG_lexical_block>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="11025" DW_AT_low_pc="15640" DW_AT_high_pc="432" DW_AT_sibling="11077">
+          <DW_TAG_variable offset="11046" DW_AT_name="c" DW_AT_decl_file="1" DW_AT_decl_line="2582" DW_AT_type="4247" DW_AT_location="(DW_OP_fbreg: -66)"/>
+          <DW_TAG_variable offset="11060" DW_AT_name="gray" DW_AT_decl_file="1" DW_AT_decl_line="2583" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -192)"/>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="11077" DW_AT_low_pc="16149" DW_AT_high_pc="339" DW_AT_sibling="11177">
+          <DW_TAG_variable offset="11098" DW_AT_name="r" DW_AT_decl_file="1" DW_AT_decl_line="2658" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -188)"/>
+          <DW_TAG_lexical_block offset="11112" DW_AT_low_pc="16286" DW_AT_high_pc="149">
+            <DW_TAG_variable offset="11129" DW_AT_name="g" DW_AT_decl_file="1" DW_AT_decl_line="2677" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -184)"/>
+            <DW_TAG_lexical_block offset="11143" DW_AT_low_pc="16298" DW_AT_high_pc="104">
+              <DW_TAG_variable offset="11160" DW_AT_name="b" DW_AT_decl_file="1" DW_AT_decl_line="2681" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -180)"/>
+            </DW_TAG_lexical_block>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="11177" DW_AT_ranges="144" DW_AT_sibling="11277">
+          <DW_TAG_variable offset="11186" DW_AT_name="sample_size" DW_AT_decl_file="1" DW_AT_decl_line="2705" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -120)"/>
+          <DW_TAG_variable offset="11202" DW_AT_name="r" DW_AT_decl_file="1" DW_AT_decl_line="2707" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -176)"/>
+          <DW_TAG_variable offset="11216" DW_AT_name="g" DW_AT_decl_file="1" DW_AT_decl_line="2707" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -172)"/>
+          <DW_TAG_variable offset="11230" DW_AT_name="b" DW_AT_decl_file="1" DW_AT_decl_line="2707" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -168)"/>
+          <DW_TAG_lexical_block offset="11244" DW_AT_low_pc="17555" DW_AT_high_pc="84">
+            <DW_TAG_variable offset="11261" DW_AT_name="c" DW_AT_decl_file="1" DW_AT_decl_line="2773" DW_AT_type="4247" DW_AT_location="(DW_OP_fbreg: -66)"/>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="11277" DW_AT_low_pc="17712" DW_AT_high_pc="936">
+          <DW_TAG_variable offset="11294" DW_AT_name="num_trans" DW_AT_decl_file="1" DW_AT_decl_line="2808" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -164)"/>
+          <DW_TAG_variable offset="11310" DW_AT_name="trans" DW_AT_decl_file="1" DW_AT_decl_line="2809" DW_AT_type="1102" DW_AT_location="(DW_OP_fbreg: -88)"/>
+          <DW_TAG_variable offset="11326" DW_AT_name="colormap" DW_AT_decl_file="1" DW_AT_decl_line="2810" DW_AT_type="4150" DW_AT_location="(DW_OP_fbreg: -80)"/>
+          <DW_TAG_variable offset="11342" DW_AT_name="do_background" DW_AT_decl_file="1" DW_AT_decl_line="2811" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -124)"/>
+          <DW_TAG_variable offset="11358" DW_AT_name="i" DW_AT_decl_file="1" DW_AT_decl_line="2813" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -160)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="11374" DW_AT_name="make_rgb_colormap" DW_AT_decl_file="1" DW_AT_decl_line="2061" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="12171" DW_AT_high_pc="135" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="11512">
+        <DW_TAG_formal_parameter offset="11408" DW_AT_name="display" DW_AT_decl_file="1" DW_AT_decl_line="2061" DW_AT_type="7955" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="11423" DW_AT_name="i" DW_AT_decl_file="1" DW_AT_decl_line="2063" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        <DW_TAG_variable offset="11436" DW_AT_name="r" DW_AT_decl_file="1" DW_AT_decl_line="2063" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -28)"/>
+        <DW_TAG_lexical_block offset="11449" DW_AT_low_pc="12198" DW_AT_high_pc="93">
+          <DW_TAG_variable offset="11466" DW_AT_name="g" DW_AT_decl_file="1" DW_AT_decl_line="2068" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -24)"/>
+          <DW_TAG_lexical_block offset="11479" DW_AT_low_pc="12207" DW_AT_high_pc="74">
+            <DW_TAG_variable offset="11496" DW_AT_name="b" DW_AT_decl_file="1" DW_AT_decl_line="2072" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -20)"/>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="11512" DW_AT_name="make_ga_colormap" DW_AT_decl_file="1" DW_AT_decl_line="2006" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="11910" DW_AT_high_pc="261" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="11656">
+        <DW_TAG_formal_parameter offset="11546" DW_AT_name="display" DW_AT_decl_file="1" DW_AT_decl_line="2006" DW_AT_type="7955" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="11561" DW_AT_name="i" DW_AT_decl_file="1" DW_AT_decl_line="2008" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        <DW_TAG_variable offset="11574" DW_AT_name="a" DW_AT_decl_file="1" DW_AT_decl_line="2008" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -28)"/>
+        <DW_TAG_lexical_block offset="11587" DW_AT_low_pc="11931" DW_AT_high_pc="80" DW_AT_sibling="11624">
+          <DW_TAG_variable offset="11608" DW_AT_name="gray" DW_AT_decl_file="1" DW_AT_decl_line="2037" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -20)"/>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="11624" DW_AT_low_pc="12081" DW_AT_high_pc="75">
+          <DW_TAG_variable offset="11641" DW_AT_name="g" DW_AT_decl_file="1" DW_AT_decl_line="2048" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="11656" DW_AT_name="make_gray_colormap" DW_AT_decl_file="1" DW_AT_decl_line="1994" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="11828" DW_AT_high_pc="82" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="11719">
+        <DW_TAG_formal_parameter offset="11690" DW_AT_name="display" DW_AT_decl_file="1" DW_AT_decl_line="1994" DW_AT_type="7955" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="11705" DW_AT_name="i" DW_AT_decl_file="1" DW_AT_decl_line="1996" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -20)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="11719" DW_AT_name="make_gray_file_colormap" DW_AT_decl_file="1" DW_AT_decl_line="1983" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="11746" DW_AT_high_pc="82" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="11782">
+        <DW_TAG_formal_parameter offset="11753" DW_AT_name="display" DW_AT_decl_file="1" DW_AT_decl_line="1983" DW_AT_type="7955" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="11768" DW_AT_name="i" DW_AT_decl_file="1" DW_AT_decl_line="1985" DW_AT_type="123" DW_AT_location="(DW_OP_fbreg: -20)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="11782" DW_AT_name="png_create_colormap_entry" DW_AT_decl_file="1" DW_AT_decl_line="1762" DW_AT_prototyped="True" DW_AT_low_pc="9538" DW_AT_high_pc="2208" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="12156">
+        <DW_TAG_formal_parameter offset="11812" DW_AT_name="display" DW_AT_decl_file="1" DW_AT_decl_line="1762" DW_AT_type="7955" DW_AT_location="(DW_OP_fbreg: -72)"/>
+        <DW_TAG_formal_parameter offset="11828" DW_AT_name="ip" DW_AT_decl_file="1" DW_AT_decl_line="1763" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -76)"/>
+        <DW_TAG_formal_parameter offset="11843" DW_AT_name="red" DW_AT_decl_file="1" DW_AT_decl_line="1763" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -80)"/>
+        <DW_TAG_formal_parameter offset="11859" DW_AT_name="green" DW_AT_decl_file="1" DW_AT_decl_line="1763" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -84)"/>
+        <DW_TAG_formal_parameter offset="11875" DW_AT_name="blue" DW_AT_decl_file="1" DW_AT_decl_line="1763" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -88)"/>
+        <DW_TAG_formal_parameter offset="11891" DW_AT_name="alpha" DW_AT_decl_file="1" DW_AT_decl_line="1764" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -92)"/>
+        <DW_TAG_formal_parameter offset="11907" DW_AT_name="encoding" DW_AT_decl_file="1" DW_AT_decl_line="1764" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: 0)"/>
+        <DW_TAG_variable offset="11922" DW_AT_name="image" DW_AT_decl_file="1" DW_AT_decl_line="1766" DW_AT_type="5732" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="11937" DW_AT_name="output_encoding" DW_AT_decl_file="1" DW_AT_decl_line="1767" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -60)"/>
+        <DW_TAG_variable offset="11952" DW_AT_name="convert_to_Y" DW_AT_decl_file="1" DW_AT_decl_line="1769" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_lexical_block offset="11967" DW_AT_low_pc="9735" DW_AT_high_pc="431" DW_AT_sibling="12002">
+          <DW_TAG_variable offset="11988" DW_AT_name="g" DW_AT_decl_file="1" DW_AT_decl_line="1791" DW_AT_type="1048" DW_AT_location="(DW_OP_fbreg: -52)"/>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="12002" DW_AT_low_pc="10363" DW_AT_high_pc="217" DW_AT_sibling="12037">
+          <DW_TAG_variable offset="12023" DW_AT_name="y" DW_AT_decl_file="1" DW_AT_decl_line="1843" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -64)"/>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="12037" DW_AT_low_pc="10944" DW_AT_high_pc="799">
+          <DW_TAG_variable offset="12054" DW_AT_name="afirst" DW_AT_decl_file="1" DW_AT_decl_line="1878" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -48)"/>
+          <DW_TAG_variable offset="12069" DW_AT_name="bgr" DW_AT_decl_file="1" DW_AT_decl_line="1884" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -44)"/>
+          <DW_TAG_lexical_block offset="12084" DW_AT_low_pc="11013" DW_AT_high_pc="495" DW_AT_sibling="12121">
+            <DW_TAG_variable offset="12105" DW_AT_name="entry" DW_AT_decl_file="1" DW_AT_decl_line="1891" DW_AT_type="1120" DW_AT_location="(DW_OP_fbreg: -24)"/>
+          </DW_TAG_lexical_block>
+          <DW_TAG_lexical_block offset="12121" DW_AT_low_pc="11508" DW_AT_high_pc="235">
+            <DW_TAG_variable offset="12138" DW_AT_name="entry" DW_AT_decl_file="1" DW_AT_decl_line="1946" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -32)"/>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="12156" DW_AT_name="png_colormap_compose" DW_AT_decl_file="1" DW_AT_decl_line="1725" DW_AT_prototyped="True" DW_AT_type="1024" DW_AT_low_pc="9313" DW_AT_high_pc="225" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="12307">
+        <DW_TAG_formal_parameter offset="12190" DW_AT_name="display" DW_AT_decl_file="1" DW_AT_decl_line="1725" DW_AT_type="7955" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="12205" DW_AT_name="foreground" DW_AT_decl_file="1" DW_AT_decl_line="1726" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -44)"/>
+        <DW_TAG_formal_parameter offset="12220" DW_AT_name="foreground_encoding" DW_AT_decl_file="1" DW_AT_decl_line="1726" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -48)"/>
+        <DW_TAG_formal_parameter offset="12235" DW_AT_name="alpha" DW_AT_decl_file="1" DW_AT_decl_line="1726" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -52)"/>
+        <DW_TAG_formal_parameter offset="12250" DW_AT_name="background" DW_AT_decl_file="1" DW_AT_decl_line="1727" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_formal_parameter offset="12265" DW_AT_name="encoding" DW_AT_decl_file="1" DW_AT_decl_line="1727" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -60)"/>
+        <DW_TAG_variable offset="12280" DW_AT_name="f" DW_AT_decl_file="1" DW_AT_decl_line="1734" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_variable offset="12293" DW_AT_name="b" DW_AT_decl_file="1" DW_AT_decl_line="1735" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -20)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="12307" DW_AT_name="decode_gamma" DW_AT_decl_file="1" DW_AT_decl_line="1686" DW_AT_prototyped="True" DW_AT_type="123" DW_AT_low_pc="9110" DW_AT_high_pc="203" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="12387">
+        <DW_TAG_formal_parameter offset="12341" DW_AT_name="display" DW_AT_decl_file="1" DW_AT_decl_line="1686" DW_AT_type="7955" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="12356" DW_AT_name="value" DW_AT_decl_file="1" DW_AT_decl_line="1686" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -28)"/>
+        <DW_TAG_formal_parameter offset="12371" DW_AT_name="encoding" DW_AT_decl_file="1" DW_AT_decl_line="1686" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -32)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="12387" DW_AT_name="set_file_encoding" DW_AT_decl_file="1" DW_AT_decl_line="1666" DW_AT_prototyped="True" DW_AT_low_pc="8989" DW_AT_high_pc="121" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="12446">
+        <DW_TAG_formal_parameter offset="12417" DW_AT_name="display" DW_AT_decl_file="1" DW_AT_decl_line="1666" DW_AT_type="7955" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="12432" DW_AT_name="g" DW_AT_decl_file="1" DW_AT_decl_line="1668" DW_AT_type="1048" DW_AT_location="(DW_OP_fbreg: -20)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="12446" DW_AT_name="png_image_skip_unused_chunks" DW_AT_decl_file="1" DW_AT_decl_line="1609" DW_AT_prototyped="True" DW_AT_low_pc="8918" DW_AT_high_pc="71" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="12532">
+        <DW_TAG_formal_parameter offset="12476" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="1609" DW_AT_type="4038" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_lexical_block offset="12491" DW_AT_low_pc="8930" DW_AT_high_pc="56">
+          <DW_TAG_variable offset="12508" DW_AT_name="chunks_to_process" DW_AT_decl_file="1" DW_AT_decl_line="1630" DW_AT_type="12548" DW_AT_location="(DW_OP_addr: 9c0)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_array_type offset="12532" DW_AT_type="990" DW_AT_sibling="12548">
+        <DW_TAG_subrange_type offset="12541" DW_AT_type="56" DW_AT_upper_bound="29"/>
+      </DW_TAG_array_type>
+      <DW_TAG_const_type offset="12548" DW_AT_type="12532"/>
+      <DW_TAG_subprogram offset="12553" DW_AT_external="True" DW_AT_name="png_image_begin_read_from_memory" DW_AT_decl_file="1" DW_AT_decl_line="1570" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="8683" DW_AT_high_pc="235" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="12633">
+        <DW_TAG_formal_parameter offset="12587" DW_AT_name="image" DW_AT_decl_file="1" DW_AT_decl_line="1570" DW_AT_type="5732" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="12602" DW_AT_name="memory" DW_AT_decl_file="1" DW_AT_decl_line="1571" DW_AT_type="1072" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        <DW_TAG_formal_parameter offset="12617" DW_AT_name="size" DW_AT_decl_file="1" DW_AT_decl_line="1571" DW_AT_type="45" DW_AT_location="(DW_OP_fbreg: -40)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="12633" DW_AT_name="png_image_memory_read" DW_AT_decl_file="1" DW_AT_decl_line="1541" DW_AT_prototyped="True" DW_AT_low_pc="8464" DW_AT_high_pc="219" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="12823">
+        <DW_TAG_formal_parameter offset="12663" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="1541" DW_AT_type="3247" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_formal_parameter offset="12678" DW_AT_name="out" DW_AT_decl_file="1" DW_AT_decl_line="1541" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -64)"/>
+        <DW_TAG_formal_parameter offset="12693" DW_AT_name="need" DW_AT_decl_file="1" DW_AT_decl_line="1541" DW_AT_type="45" DW_AT_location="(DW_OP_fbreg: -72)"/>
+        <DW_TAG_lexical_block offset="12709" DW_AT_low_pc="8495" DW_AT_high_pc="186">
+          <DW_TAG_variable offset="12726" DW_AT_name="image" DW_AT_decl_file="1" DW_AT_decl_line="1545" DW_AT_type="5732" DW_AT_location="(DW_OP_fbreg: -48)"/>
+          <DW_TAG_lexical_block offset="12741" DW_AT_low_pc="8521" DW_AT_high_pc="141">
+            <DW_TAG_variable offset="12758" DW_AT_name="cp" DW_AT_decl_file="1" DW_AT_decl_line="1548" DW_AT_type="5460" DW_AT_location="(DW_OP_fbreg: -40)"/>
+            <DW_TAG_lexical_block offset="12772" DW_AT_low_pc="8539" DW_AT_high_pc="123">
+              <DW_TAG_variable offset="12789" DW_AT_name="memory" DW_AT_decl_file="1" DW_AT_decl_line="1551" DW_AT_type="1102" DW_AT_location="(DW_OP_fbreg: -32)"/>
+              <DW_TAG_variable offset="12804" DW_AT_name="size" DW_AT_decl_file="1" DW_AT_decl_line="1552" DW_AT_type="45" DW_AT_location="(DW_OP_fbreg: -24)"/>
+            </DW_TAG_lexical_block>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="12823" DW_AT_external="True" DW_AT_name="png_image_begin_read_from_file" DW_AT_decl_file="1" DW_AT_decl_line="1502" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="8197" DW_AT_high_pc="267" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="12908">
+        <DW_TAG_formal_parameter offset="12857" DW_AT_name="image" DW_AT_decl_file="1" DW_AT_decl_line="1502" DW_AT_type="5732" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="12872" DW_AT_name="file_name" DW_AT_decl_file="1" DW_AT_decl_line="1502" DW_AT_type="728" DW_AT_location="(DW_OP_fbreg: -48)"/>
+        <DW_TAG_lexical_block offset="12887" DW_AT_ranges="96">
+          <DW_TAG_variable offset="12892" DW_AT_name="fp" DW_AT_decl_file="1" DW_AT_decl_line="1508" DW_AT_type="1180" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="12908" DW_AT_external="True" DW_AT_name="png_image_begin_read_from_stdio" DW_AT_decl_file="1" DW_AT_decl_line="1472" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="8036" DW_AT_high_pc="161" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="12973">
+        <DW_TAG_formal_parameter offset="12942" DW_AT_name="image" DW_AT_decl_file="1" DW_AT_decl_line="1472" DW_AT_type="5732" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="12957" DW_AT_name="file" DW_AT_decl_file="1" DW_AT_decl_line="1472" DW_AT_type="1180" DW_AT_location="(DW_OP_fbreg: -32)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="12973" DW_AT_name="png_image_read_header" DW_AT_decl_file="1" DW_AT_decl_line="1407" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="7724" DW_AT_high_pc="312" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="13138">
+        <DW_TAG_formal_parameter offset="13007" DW_AT_name="argument" DW_AT_decl_file="1" DW_AT_decl_line="1407" DW_AT_type="1060" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_variable offset="13022" DW_AT_name="image" DW_AT_decl_file="1" DW_AT_decl_line="1409" DW_AT_type="5732" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="13037" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="1410" DW_AT_type="4038" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        <DW_TAG_variable offset="13052" DW_AT_name="info_ptr" DW_AT_decl_file="1" DW_AT_decl_line="1411" DW_AT_type="4050" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_lexical_block offset="13067" DW_AT_low_pc="7843" DW_AT_high_pc="78" DW_AT_sibling="13104">
+          <DW_TAG_variable offset="13088" DW_AT_name="format" DW_AT_decl_file="1" DW_AT_decl_line="1423" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -44)"/>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="13104" DW_AT_low_pc="7921" DW_AT_high_pc="108">
+          <DW_TAG_variable offset="13121" DW_AT_name="cmap_entries" DW_AT_decl_file="1" DW_AT_decl_line="1444" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -48)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="13138" DW_AT_name="png_gamma_not_sRGB" DW_AT_decl_file="1" DW_AT_decl_line="1388" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="7638" DW_AT_high_pc="86" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="13186">
+        <DW_TAG_formal_parameter offset="13172" DW_AT_name="g" DW_AT_decl_file="1" DW_AT_decl_line="1388" DW_AT_type="1048" DW_AT_location="(DW_OP_fbreg: -20)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="13186" DW_AT_name="png_image_format" DW_AT_decl_file="1" DW_AT_decl_line="1355" DW_AT_prototyped="True" DW_AT_type="1024" DW_AT_low_pc="7502" DW_AT_high_pc="136" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_call_sites="True" DW_AT_sibling="13251">
+        <DW_TAG_formal_parameter offset="13220" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="1355" DW_AT_type="4038" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="13235" DW_AT_name="format" DW_AT_decl_file="1" DW_AT_decl_line="1357" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -20)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="13251" DW_AT_name="png_image_read_init" DW_AT_decl_file="1" DW_AT_decl_line="1306" DW_AT_prototyped="True" DW_AT_type="63" DW_AT_low_pc="7140" DW_AT_high_pc="362" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="13400">
+        <DW_TAG_formal_parameter offset="13285" DW_AT_name="image" DW_AT_decl_file="1" DW_AT_decl_line="1306" DW_AT_type="5732" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_lexical_block offset="13300" DW_AT_low_pc="7183" DW_AT_high_pc="278">
+          <DW_TAG_variable offset="13317" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="1310" DW_AT_type="3247" DW_AT_location="(DW_OP_fbreg: -48)"/>
+          <DW_TAG_lexical_block offset="13332" DW_AT_low_pc="7269" DW_AT_high_pc="171">
+            <DW_TAG_variable offset="13349" DW_AT_name="info_ptr" DW_AT_decl_file="1" DW_AT_decl_line="1321" DW_AT_type="3986" DW_AT_location="(DW_OP_fbreg: -40)"/>
+            <DW_TAG_lexical_block offset="13364" DW_AT_low_pc="7294" DW_AT_high_pc="124">
+              <DW_TAG_variable offset="13381" DW_AT_name="control" DW_AT_decl_file="1" DW_AT_decl_line="1325" DW_AT_type="5460" DW_AT_location="(DW_OP_fbreg: -32)"/>
+            </DW_TAG_lexical_block>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="13400" DW_AT_external="True" DW_AT_name="png_read_png" DW_AT_decl_file="1" DW_AT_decl_line="1049" DW_AT_prototyped="True" DW_AT_low_pc="6344" DW_AT_high_pc="796" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="13526">
+        <DW_TAG_formal_parameter offset="13430" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="1049" DW_AT_type="4038" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_formal_parameter offset="13445" DW_AT_name="info_ptr" DW_AT_decl_file="1" DW_AT_decl_line="1049" DW_AT_type="4050" DW_AT_location="(DW_OP_fbreg: -64)"/>
+        <DW_TAG_formal_parameter offset="13460" DW_AT_name="transforms" DW_AT_decl_file="1" DW_AT_decl_line="1050" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -68)"/>
+        <DW_TAG_formal_parameter offset="13476" DW_AT_name="params" DW_AT_decl_file="1" DW_AT_decl_line="1050" DW_AT_type="5822" DW_AT_location="(DW_OP_fbreg: -80)"/>
+        <DW_TAG_lexical_block offset="13492" DW_AT_low_pc="6869" DW_AT_high_pc="197">
+          <DW_TAG_variable offset="13509" DW_AT_name="iptr" DW_AT_decl_file="1" DW_AT_decl_line="1226" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -36)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="13526" DW_AT_external="True" DW_AT_name="png_set_read_status_fn" DW_AT_decl_file="1" DW_AT_decl_line="1037" DW_AT_prototyped="True" DW_AT_low_pc="6305" DW_AT_high_pc="39" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_call_sites="True" DW_AT_sibling="13587">
+        <DW_TAG_formal_parameter offset="13556" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="1037" DW_AT_type="4038" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="13571" DW_AT_name="read_row_fn" DW_AT_decl_file="1" DW_AT_decl_line="1037" DW_AT_type="5130" DW_AT_location="(DW_OP_fbreg: -32)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="13587" DW_AT_external="True" DW_AT_name="png_destroy_read_struct" DW_AT_decl_file="1" DW_AT_decl_line="1011" DW_AT_prototyped="True" DW_AT_low_pc="6174" DW_AT_high_pc="131" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="13678">
+        <DW_TAG_formal_parameter offset="13617" DW_AT_name="png_ptr_ptr" DW_AT_decl_file="1" DW_AT_decl_line="1011" DW_AT_type="3270" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="13632" DW_AT_name="info_ptr_ptr" DW_AT_decl_file="1" DW_AT_decl_line="1011" DW_AT_type="4020" DW_AT_location="(DW_OP_fbreg: -48)"/>
+        <DW_TAG_formal_parameter offset="13647" DW_AT_name="end_info_ptr_ptr" DW_AT_decl_file="1" DW_AT_decl_line="1012" DW_AT_type="4020" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_variable offset="13662" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="1014" DW_AT_type="4038" DW_AT_location="(DW_OP_fbreg: -24)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="13678" DW_AT_name="png_read_destroy" DW_AT_decl_file="1" DW_AT_decl_line="940" DW_AT_prototyped="True" DW_AT_low_pc="5631" DW_AT_high_pc="543" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="13724">
+        <DW_TAG_formal_parameter offset="13708" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="940" DW_AT_type="4038" DW_AT_location="(DW_OP_fbreg: -24)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="13724" DW_AT_external="True" DW_AT_name="png_read_end" DW_AT_decl_file="1" DW_AT_decl_line="766" DW_AT_prototyped="True" DW_AT_low_pc="4367" DW_AT_high_pc="1264" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="13848">
+        <DW_TAG_formal_parameter offset="13754" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="766" DW_AT_type="4038" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="13769" DW_AT_name="info_ptr" DW_AT_decl_file="1" DW_AT_decl_line="766" DW_AT_type="4050" DW_AT_location="(DW_OP_fbreg: -48)"/>
+        <DW_TAG_variable offset="13784" DW_AT_name="keep" DW_AT_decl_file="1" DW_AT_decl_line="769" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -20)"/>
+        <DW_TAG_lexical_block offset="13799" DW_AT_low_pc="4489" DW_AT_high_pc="1116">
+          <DW_TAG_variable offset="13816" DW_AT_name="length" DW_AT_decl_file="1" DW_AT_decl_line="794" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -28)"/>
+          <DW_TAG_variable offset="13831" DW_AT_name="chunk_name" DW_AT_decl_file="1" DW_AT_decl_line="795" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="13848" DW_AT_external="True" DW_AT_name="png_read_image" DW_AT_decl_file="1" DW_AT_decl_line="700" DW_AT_prototyped="True" DW_AT_low_pc="4108" DW_AT_high_pc="259" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="13979">
+        <DW_TAG_formal_parameter offset="13878" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="700" DW_AT_type="4038" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_formal_parameter offset="13893" DW_AT_name="image" DW_AT_decl_file="1" DW_AT_decl_line="700" DW_AT_type="1193" DW_AT_location="(DW_OP_fbreg: -64)"/>
+        <DW_TAG_variable offset="13908" DW_AT_name="i" DW_AT_decl_file="1" DW_AT_decl_line="702" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_variable offset="13921" DW_AT_name="image_height" DW_AT_decl_file="1" DW_AT_decl_line="702" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -28)"/>
+        <DW_TAG_variable offset="13936" DW_AT_name="pass" DW_AT_decl_file="1" DW_AT_decl_line="703" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -36)"/>
+        <DW_TAG_variable offset="13951" DW_AT_name="j" DW_AT_decl_file="1" DW_AT_decl_line="703" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        <DW_TAG_variable offset="13964" DW_AT_name="rp" DW_AT_decl_file="1" DW_AT_decl_line="704" DW_AT_type="1193" DW_AT_location="(DW_OP_fbreg: -24)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="13979" DW_AT_external="True" DW_AT_name="png_read_rows" DW_AT_decl_file="1" DW_AT_decl_line="645" DW_AT_prototyped="True" DW_AT_low_pc="3817" DW_AT_high_pc="291" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="14238">
+        <DW_TAG_formal_parameter offset="14009" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="645" DW_AT_type="4038" DW_AT_location="(DW_OP_fbreg: -88)"/>
+        <DW_TAG_formal_parameter offset="14025" DW_AT_name="row" DW_AT_decl_file="1" DW_AT_decl_line="645" DW_AT_type="1193" DW_AT_location="(DW_OP_fbreg: -96)"/>
+        <DW_TAG_formal_parameter offset="14041" DW_AT_name="display_row" DW_AT_decl_file="1" DW_AT_decl_line="646" DW_AT_type="1193" DW_AT_location="(DW_OP_fbreg: -104)"/>
+        <DW_TAG_formal_parameter offset="14057" DW_AT_name="num_rows" DW_AT_decl_file="1" DW_AT_decl_line="646" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -108)"/>
+        <DW_TAG_variable offset="14073" DW_AT_name="i" DW_AT_decl_file="1" DW_AT_decl_line="648" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -68)"/>
+        <DW_TAG_variable offset="14087" DW_AT_name="rp" DW_AT_decl_file="1" DW_AT_decl_line="649" DW_AT_type="1193" DW_AT_location="(DW_OP_fbreg: -64)"/>
+        <DW_TAG_variable offset="14101" DW_AT_name="dp" DW_AT_decl_file="1" DW_AT_decl_line="650" DW_AT_type="1193" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_lexical_block offset="14115" DW_AT_low_pc="3890" DW_AT_high_pc="61" DW_AT_sibling="14167">
+          <DW_TAG_variable offset="14136" DW_AT_name="rptr" DW_AT_decl_file="1" DW_AT_decl_line="662" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -48)"/>
+          <DW_TAG_variable offset="14151" DW_AT_name="dptr" DW_AT_decl_file="1" DW_AT_decl_line="663" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="14167" DW_AT_low_pc="3984" DW_AT_high_pc="40" DW_AT_sibling="14204">
+          <DW_TAG_variable offset="14188" DW_AT_name="rptr" DW_AT_decl_file="1" DW_AT_decl_line="671" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        </DW_TAG_lexical_block>
+        <DW_TAG_lexical_block offset="14204" DW_AT_low_pc="4054" DW_AT_high_pc="37">
+          <DW_TAG_variable offset="14221" DW_AT_name="dptr" DW_AT_decl_file="1" DW_AT_decl_line="679" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="14238" DW_AT_external="True" DW_AT_name="png_read_row" DW_AT_decl_file="1" DW_AT_decl_line="383" DW_AT_prototyped="True" DW_AT_low_pc="2182" DW_AT_high_pc="1635" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="14330">
+        <DW_TAG_formal_parameter offset="14268" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="383" DW_AT_type="4038" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_formal_parameter offset="14283" DW_AT_name="row" DW_AT_decl_file="1" DW_AT_decl_line="383" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -64)"/>
+        <DW_TAG_formal_parameter offset="14298" DW_AT_name="dsp_row" DW_AT_decl_file="1" DW_AT_decl_line="383" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -72)"/>
+        <DW_TAG_variable offset="14314" DW_AT_name="row_info" DW_AT_decl_file="1" DW_AT_decl_line="385" DW_AT_type="4998" DW_AT_location="(DW_OP_fbreg: -48)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="14330" DW_AT_name="png_do_read_intrapixel" DW_AT_decl_file="1" DW_AT_decl_line="321" DW_AT_prototyped="True" DW_AT_low_pc="1663" DW_AT_high_pc="519" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_call_sites="True" DW_AT_sibling="14602">
+        <DW_TAG_formal_parameter offset="14360" DW_AT_name="row_info" DW_AT_decl_file="1" DW_AT_decl_line="321" DW_AT_type="5010" DW_AT_location="(DW_OP_fbreg: -88)"/>
+        <DW_TAG_formal_parameter offset="14376" DW_AT_name="row" DW_AT_decl_file="1" DW_AT_decl_line="321" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -96)"/>
+        <DW_TAG_lexical_block offset="14392" DW_AT_low_pc="1697" DW_AT_high_pc="483">
+          <DW_TAG_variable offset="14409" DW_AT_name="bytes_per_pixel" DW_AT_decl_file="1" DW_AT_decl_line="328" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -68)"/>
+          <DW_TAG_variable offset="14425" DW_AT_name="row_width" DW_AT_decl_file="1" DW_AT_decl_line="329" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -56)"/>
+          <DW_TAG_lexical_block offset="14440" DW_AT_ranges="0" DW_AT_sibling="14477">
+            <DW_TAG_variable offset="14449" DW_AT_name="rp" DW_AT_decl_file="1" DW_AT_decl_line="333" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -32)"/>
+            <DW_TAG_variable offset="14463" DW_AT_name="i" DW_AT_decl_file="1" DW_AT_decl_line="334" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -64)"/>
+          </DW_TAG_lexical_block>
+          <DW_TAG_lexical_block offset="14477" DW_AT_ranges="48">
+            <DW_TAG_variable offset="14482" DW_AT_name="rp" DW_AT_decl_file="1" DW_AT_decl_line="353" DW_AT_type="1084" DW_AT_location="(DW_OP_fbreg: -24)"/>
+            <DW_TAG_variable offset="14496" DW_AT_name="i" DW_AT_decl_file="1" DW_AT_decl_line="354" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -60)"/>
+            <DW_TAG_lexical_block offset="14509" DW_AT_low_pc="1949" DW_AT_high_pc="200">
+              <DW_TAG_variable offset="14526" DW_AT_name="s0" DW_AT_decl_file="1" DW_AT_decl_line="367" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -52)"/>
+              <DW_TAG_variable offset="14540" DW_AT_name="s1" DW_AT_decl_file="1" DW_AT_decl_line="368" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -48)"/>
+              <DW_TAG_variable offset="14554" DW_AT_name="s2" DW_AT_decl_file="1" DW_AT_decl_line="369" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -44)"/>
+              <DW_TAG_variable offset="14568" DW_AT_name="red" DW_AT_decl_file="1" DW_AT_decl_line="370" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -40)"/>
+              <DW_TAG_variable offset="14583" DW_AT_name="blue" DW_AT_decl_file="1" DW_AT_decl_line="371" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -36)"/>
+            </DW_TAG_lexical_block>
+          </DW_TAG_lexical_block>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="14602" DW_AT_external="True" DW_AT_name="png_start_read_image" DW_AT_decl_file="1" DW_AT_decl_line="298" DW_AT_prototyped="True" DW_AT_low_pc="1591" DW_AT_high_pc="72" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="14648">
+        <DW_TAG_formal_parameter offset="14632" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="298" DW_AT_type="4038" DW_AT_location="(DW_OP_fbreg: -24)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="14648" DW_AT_external="True" DW_AT_name="png_read_update_info" DW_AT_decl_file="1" DW_AT_decl_line="267" DW_AT_prototyped="True" DW_AT_low_pc="1496" DW_AT_high_pc="95" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="14709">
+        <DW_TAG_formal_parameter offset="14678" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="267" DW_AT_type="4038" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="14693" DW_AT_name="info_ptr" DW_AT_decl_file="1" DW_AT_decl_line="267" DW_AT_type="4050" DW_AT_location="(DW_OP_fbreg: -32)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="14709" DW_AT_external="True" DW_AT_name="png_read_info" DW_AT_decl_file="1" DW_AT_decl_line="92" DW_AT_prototyped="True" DW_AT_low_pc="247" DW_AT_high_pc="1249" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="14827">
+        <DW_TAG_formal_parameter offset="14738" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="92" DW_AT_type="4038" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="14752" DW_AT_name="info_ptr" DW_AT_decl_file="1" DW_AT_decl_line="92" DW_AT_type="4050" DW_AT_location="(DW_OP_fbreg: -48)"/>
+        <DW_TAG_variable offset="14766" DW_AT_name="keep" DW_AT_decl_file="1" DW_AT_decl_line="95" DW_AT_type="63" DW_AT_location="(DW_OP_fbreg: -20)"/>
+        <DW_TAG_lexical_block offset="14780" DW_AT_low_pc="304" DW_AT_high_pc="1184">
+          <DW_TAG_variable offset="14797" DW_AT_name="length" DW_AT_decl_file="1" DW_AT_decl_line="108" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -28)"/>
+          <DW_TAG_variable offset="14811" DW_AT_name="chunk_name" DW_AT_decl_file="1" DW_AT_decl_line="109" DW_AT_type="1024" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="14827" DW_AT_external="True" DW_AT_name="png_create_read_struct_2" DW_AT_decl_file="1" DW_AT_decl_line="40" DW_AT_prototyped="True" DW_AT_type="3247" DW_AT_low_pc="72" DW_AT_high_pc="175" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True" DW_AT_sibling="14975">
+        <DW_TAG_formal_parameter offset="14860" DW_AT_name="user_png_ver" DW_AT_decl_file="1" DW_AT_decl_line="40" DW_AT_type="1168" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="14874" DW_AT_name="error_ptr" DW_AT_decl_file="1" DW_AT_decl_line="40" DW_AT_type="1060" DW_AT_location="(DW_OP_fbreg: -48)"/>
+        <DW_TAG_formal_parameter offset="14888" DW_AT_name="error_fn" DW_AT_decl_file="1" DW_AT_decl_line="40" DW_AT_type="5028" DW_AT_location="(DW_OP_fbreg: -56)"/>
+        <DW_TAG_formal_parameter offset="14902" DW_AT_name="warn_fn" DW_AT_decl_file="1" DW_AT_decl_line="40" DW_AT_type="5028" DW_AT_location="(DW_OP_fbreg: -64)"/>
+        <DW_TAG_formal_parameter offset="14916" DW_AT_name="mem_ptr" DW_AT_decl_file="1" DW_AT_decl_line="40" DW_AT_type="1060" DW_AT_location="(DW_OP_fbreg: -72)"/>
+        <DW_TAG_formal_parameter offset="14931" DW_AT_name="malloc_fn" DW_AT_decl_file="1" DW_AT_decl_line="40" DW_AT_type="5388" DW_AT_location="(DW_OP_fbreg: -80)"/>
+        <DW_TAG_formal_parameter offset="14946" DW_AT_name="free_fn" DW_AT_decl_file="1" DW_AT_decl_line="40" DW_AT_type="5426" DW_AT_location="(DW_OP_fbreg: 0)"/>
+        <DW_TAG_variable offset="14960" DW_AT_name="png_ptr" DW_AT_decl_file="1" DW_AT_decl_line="45" DW_AT_type="3247" DW_AT_location="(DW_OP_fbreg: -24)"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram offset="14975" DW_AT_external="True" DW_AT_name="png_create_read_struct" DW_AT_decl_file="1" DW_AT_decl_line="25" DW_AT_prototyped="True" DW_AT_type="3247" DW_AT_low_pc="0" DW_AT_high_pc="72" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_GNU_all_tail_call_sites="True">
+        <DW_TAG_formal_parameter offset="15004" DW_AT_name="user_png_ver" DW_AT_decl_file="1" DW_AT_decl_line="25" DW_AT_type="1168" DW_AT_location="(DW_OP_fbreg: -24)"/>
+        <DW_TAG_formal_parameter offset="15018" DW_AT_name="error_ptr" DW_AT_decl_file="1" DW_AT_decl_line="25" DW_AT_type="1060" DW_AT_location="(DW_OP_fbreg: -32)"/>
+        <DW_TAG_formal_parameter offset="15032" DW_AT_name="error_fn" DW_AT_decl_file="1" DW_AT_decl_line="25" DW_AT_type="5028" DW_AT_location="(DW_OP_fbreg: -40)"/>
+        <DW_TAG_formal_parameter offset="15046" DW_AT_name="warn_fn" DW_AT_decl_file="1" DW_AT_decl_line="25" DW_AT_type="5028" DW_AT_location="(DW_OP_fbreg: -48)"/>
+      </DW_TAG_subprogram>
+    </DW_TAG_compile_unit>
+  </file>
+</root>
+
