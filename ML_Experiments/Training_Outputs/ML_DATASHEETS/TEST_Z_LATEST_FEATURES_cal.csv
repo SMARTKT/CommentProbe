@@ -1,0 +1,67 @@
+F2	FILES
+"**************************************************************************
+ *                                  _   _ ____  _
+ *  Project                     ___| | | |  _ \| |
+ *                             / __| | | | |_) | |
+ *                            | (__| |_| |  _ <| |___
+ *                             \___|\___/|_| \_\_____|
+ *
+ * Copyright (C) 1998 - 2017, Daniel Stenberg, <daniel@haxx.se>, et al.
+ *
+ * This software is licensed as described in the file COPYING, which
+ * you should have received as part of this distribution. The terms
+ * are also available at https://curl.haxx.se/docs/copyright.html.
+ *
+ * You may opt to use, copy, modify, merge, publish, distribute and/or sell
+ * copies of the Software, and permit persons to whom the Software is
+ * furnished to do so, under the terms of the COPYING file.
+ *
+ * This software is distributed on an ""AS IS"" basis, WITHOUT WARRANTY OF ANY
+ * KIND, either express or implied.
+ *
+ **************************************************************************"	curl/tests/libtest/lib525.c/lib525.c
+test 529	curl/tests/libtest/lib525.c/lib525.c
+test 525	curl/tests/libtest/lib525.c/lib525.c
+get the file size of the local file	curl/tests/libtest/lib525.c/lib525.c
+can't open file, bail out	curl/tests/libtest/lib525.c/lib525.c
+enable uploading	curl/tests/libtest/lib525.c/lib525.c
+specify target	curl/tests/libtest/lib525.c/lib525.c
+go verbose	curl/tests/libtest/lib525.c/lib525.c
+use active FTP	curl/tests/libtest/lib525.c/lib525.c
+now specify which file to upload	curl/tests/libtest/lib525.c/lib525.c
+"NOTE: if you want this code to work on Windows with libcurl as a DLL, you
+     MUST also provide a read callback with CURLOPT_READFUNCTION. Failing to
+     do so will give you a crash since a DLL may not use the variable's memory
+     when passed in to it from an app like this."	curl/tests/libtest/lib525.c/lib525.c
+"Set the size of the file to upload (optional).  If you give a *_LARGE
+     option you MUST make sure that the type of the passed-in argument is a
+     curl_off_t. If you use CURLOPT_INFILESIZE (without _LARGE) you must
+     make sure that to pass in a type 'long' argument."	curl/tests/libtest/lib525.c/lib525.c
+done	curl/tests/libtest/lib525.c/lib525.c
+At this point, maxfd is guaranteed to be greater or equal than -1.	curl/tests/libtest/lib525.c/lib525.c
+test 529	curl/tests/libtest/lib525.c/lib525.c
+proper cleanup sequence - type PA	curl/tests/libtest/lib525.c/lib525.c
+test 525	curl/tests/libtest/lib525.c/lib525.c
+proper cleanup sequence - type PB	curl/tests/libtest/lib525.c/lib525.c
+close the local file	curl/tests/libtest/lib525.c/lib525.c
+"**************************************************************************
+ *                                  _   _ ____  _
+ *  Project                     ___| | | |  _ \| |
+ *                             / __| | | | |_) | |
+ *                            | (__| |_| |  _ <| |___
+ *                             \___|\___/|_| \_\_____|
+ *
+ * Copyright (C) 1998 - 2016, Daniel Stenberg, <daniel@haxx.se>, et al.
+ *
+ * This software is licensed as described in the file COPYING, which
+ * you should have received as part of this distribution. The terms
+ * are also available at https://curl.haxx.se/docs/copyright.html.
+ *
+ * You may opt to use, copy, modify, merge, publish, distribute and/or sell
+ * copies of the Software, and permit persons to whom the Software is
+ * furnished to do so, under the terms of the COPYING file.
+ *
+ * This software is distributed on an ""AS IS"" basis, WITHOUT WARRANTY OF ANY
+ * KIND, either express or implied.
+ *
+ **************************************************************************"	curl/tests/libtest/lib549.c/lib549.c
