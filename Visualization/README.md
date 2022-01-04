@@ -175,7 +175,7 @@ Input is : final_static.xml, mapping_static.p
 Output is : final_static.ttl, name_tokens.csv, all_files.p, all_name_tokens.p
 
 ```
-python parseXML/parseStatic.py ../../SmartKT/output/threads/exe_thread/final_static.xml final_static.ttl mapping_static.p
+python parseXML/parseStaticXML.py ../../SmartKT/output/threads/exe_thread/final_static.xml final_static.ttl mapping_static.p
 ```
 
 4. Execute the file `parseCommentsXML.py` in the folder `code files/parseXML` to create TTL corresponding to the comments XML. It also creates a CSV file that has all the comment tokens.
