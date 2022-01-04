@@ -69,6 +69,21 @@ The directory structure after this copying
  
 ```
 
+If clang-9 is not set up on the system, then it has to be installed.
+For ubuntu 18.04, the pre-compiled binaries for Clang-9 can be downloaded with 
+
+```
+wget https://releases.llvm.org/9.0./clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+tar -xvf clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+```
+
+After this, the folders `bin` and `lib` need to be added to `$PATH` and `$LD_LIBRARY_PATH` respectively. To do it, we recommend adding these lines at the end of `~/.bashrc` file
+
+```
+export PATH="$PATH:<path to extracted clang-9 folder>/bin"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:<path to extracted clang-9 folder>/lib"
+``` 
+
 
 3. Run `initialize.py` inside folder SmartKT for threads project
 ```
