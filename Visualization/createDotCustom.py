@@ -41,6 +41,14 @@ INCLUDE_FILE_SUBSET = False # include info for files in filelist only
 SEPARATE_OUTPUTS = False  # have separate outputs for each file
 
 
+# For symbol-level visualization
+OUTPUT_SYMBOL_LISTS = True
+SYMBOL_ID_LIST = ["1000170889438","1103471246865"]
+USE_SYMBOL_ID_LIST = True
+
+
+
+
 import rdflib
 from rdflib import Graph
 import pandas as pd
@@ -169,6 +177,10 @@ for i,val in symbol_comment_token_map.items():
     if i not in id_name_map:
         id_name_map[i] = val
 
+
+
+
+
 # this function returns the name given the full URI string. otherwise returns original string
 # if force is True, flags MAP_SYMBOL_IDS and MAP_COMMENT_IDS will be ignored
 def replace_id(h, force_map=False):
@@ -190,6 +202,21 @@ def replace_id(h, force_map=False):
     return h
 
 
+
+## Saving the details in csv if required
+if OUTPUT_SYMBOL_LISTS is True:
+    symbol_rows = []
+    for elem, filename in elem_file_map.items():
+        elem_id = remove_link_if_needed(elem,force=True)
+        if elem_id not in id_name_map:
+            if elem_id not in id_spelling_map:
+                continue
+        name = replace_id(elem, force_map=True)
+        symbol_rows.append([elem_id,filename,name])
+    symbols_df = pd.DataFrame(columns=["Id","Filename","Text"],data=symbol_rows)
+    symbols_df.to_csv("symbol_names.csv",index=None)
+
+
 # # replacing h and t id with names
 # for r,pair_list in data_r.items():
 #     newlist = []
@@ -199,11 +226,17 @@ def replace_id(h, force_map=False):
 #     data_r[r] = newlist
 
 all_names = []
+names_from_symbollist = []
 if INCLUDE_FILE_SUBSET:
     if USE_SPELLING_FOR_SYMBOLS:
         for ids in symbols_to_include:
             try:
                 all_names.append(id_spelling_map[ids])
+            except KeyError:
+                continue
+        for ids in SYMBOL_ID_LIST:
+            try:
+                names_from_symbollist.append(id_spelling_map[ids])
             except KeyError:
                 continue
     else:
@@ -212,6 +245,11 @@ if INCLUDE_FILE_SUBSET:
                 all_names.append(id_name_map[ids])
             except KeyError:
                 continue
+        for ids in SYMBOL_ID_LIST:
+            try:
+                names_from_symbollist.append(id_name_map[ids])
+            except KeyError:
+                continue        
 
     for ids in comments_to_include:
         try:
@@ -223,8 +261,18 @@ if INCLUDE_FILE_SUBSET:
 else:
     if USE_SPELLING_FOR_SYMBOLS:
         all_names = list(set(id_spelling_map.values()).union(set(id_comment_token_map.values())))
+        for ids in SYMBOL_ID_LIST:
+            try:
+                names_from_symbollist.append(id_spelling_map[ids])
+            except KeyError:
+                continue  
     else:
         all_names = list(set(id_name_map.values()).union(set(id_comment_token_map.values())))
+        for ids in SYMBOL_ID_LIST:
+            try:
+                names_from_symbollist.append(id_name_map[ids])
+            except KeyError:
+                continue          
 
 if CREATE_DUMMY_MAPPERS:
     # creating dummy two-way mapper of properties
@@ -290,19 +338,30 @@ for r in data_r.keys():
             file_writer_map[f]+= add_edge_name(prop_mapper[r])    
         for (h,t) in data_r[r]:
             if not INCLUDE_FILE_SUBSET or h in symbols_to_include or h in comments_to_include:
-                file_writer_map[elem_file_map[h]]+= add_edge(replace_id(h),replace_id(t))
+                if not USE_SYMBOL_ID_LIST or (USE_SYMBOL_ID_LIST and remove_link_if_needed(h,force=True) in SYMBOL_ID_LIST):
+                    file_writer_map[elem_file_map[h]]+= add_edge(replace_id(h),replace_id(t))
 
     else:
         outstring+= add_edge_name(prop_mapper[r])
         for (h,t) in data_r[r]:
             if not INCLUDE_FILE_SUBSET or h in symbols_to_include or h in comments_to_include:
-                outstring+= add_edge(replace_id(h),replace_id(t))
+                if not USE_SYMBOL_ID_LIST or (USE_SYMBOL_ID_LIST and remove_link_if_needed(h,force=True) in SYMBOL_ID_LIST):
+                    outstring+= add_edge(replace_id(h),replace_id(t))
 
 if SEPARATE_OUTPUTS:
     for f in file_writer_map.keys():
        file_writer_map[f] += add_edge_name(ad_name)
     for f in file_elem_map:
-        names = list(set([replace_id(i,force_map=True) for i in file_elem_map[f]]))
+
+        names = None
+        if USE_SYMBOL_ID_LIST:
+            names = []
+            for i in file_elem_map[f]:
+                if i in SYMBOL_ID_LIST:
+                    names.append(replace_id(i,force_map=True))
+            names = list(set(names))
+        else:
+            names = list(set([replace_id(i,force_map=True) for i in file_elem_map[f]]))
         for n in names:
             for ad_concept in ad_list:
                 if fuzzy_match(n, ad_concept):
@@ -312,11 +371,19 @@ if SEPARATE_OUTPUTS:
     #    file_writer_map[f] += add_edge_name(prob_name)
     for f in file_elem_map:
         prob_edges = {}
-        names = list(set([replace_id(i,force_map=True) for i in file_elem_map[f]]))
+        names = None
+        if USE_SYMBOL_ID_LIST:
+            names = []
+            for i in file_elem_map[f]:
+                if i in SYMBOL_ID_LIST:
+                    names.append(replace_id(i,force_map=True))
+            names = list(set(names))
+        else:
+            names = list(set([replace_id(i,force_map=True) for i in file_elem_map[f]]))
         for n in names:
-            for prob_domain_token in list(prob_domain_data.keys()):
+            for prob_domain_token in list(prob_domain_mapper.keys()):
                 if fuzzy_match(n, prob_domain_token):
-                    className = prob_domain_data[prob_domain_token]
+                    className = prob_domain_mapper[prob_domain_token]
                     if className not in prob_edges:
                         prob_edges[className] = []
                     prob_edges[className].append((n,className))
@@ -342,12 +409,15 @@ else:
                 outstring+= add_edge(h,ad_concept)
 
     # outstring+= add_edge_name(prob_name)    
-    prob_edges = {}    
-    for h in all_names:
-        for prob_domain_token in list(prob_domain_data.keys()):
+    prob_edges = {}
+    correct_list = all_names
+    if USE_SYMBOL_ID_LIST:
+        correct_list = names_from_symbollist    
+    for h in correct_list:
+        for prob_domain_token in list(prob_domain_mapper.keys()):
             if fuzzy_match(h, prob_domain_token):
                 # outstring+= add_edge(h,prob_domain_data[prob_domain_token])
-                className = prob_domain_data[prob_domain_token]
+                className = prob_domain_mapper[prob_domain_token]
                 if className not in prob_edges:
                     prob_edges[className] = []
                 prob_edges[className].append((h,className))
