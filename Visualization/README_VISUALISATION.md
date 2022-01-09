@@ -273,6 +273,13 @@ MAP_COMMENT_IDS = False
 USE_SPELLING_FOR_SYMBOLS = True
 ```
 
+#### Selecting specific symbols for visualization
+
+The configuration variable `OUTPUT_SYMBOL_LISTS` can be set to True to generate a csv file `symbol_names.csv` which has three columns - 'Id', 'Filename', 'Text'. Id is a string assigned to each symbol, Filename is the name of the file which is related to the symbol by `is_def_file` property and Text is the name for the symbol as mentioned in the section "Configuring Id - Name mapping" of the Readme.
+
+Using this csv file, users can decide the symbols they want to include in the visualization by putting the ids in `SYMBOL_ID_LISTS` configuration list. When the configuration parameter `USE_SYMBOL_ID_LIST` is set to True, only the symbol ids mentioned in `SYMBOL_ID_LIST` will be kept in .dot file, other symbols will be excluded. This makes the resulting .dot file shorter and more meaningful. If `USE_SYMBOL_ID_LIST` is set to False, the configuration list `SYMBOL_ID_LIST` will be ignored.
+
+
 
 ### Part 5 - Graph visualization
 
