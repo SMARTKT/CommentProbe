@@ -1,0 +1,29 @@
+signal
+signal handler
+GWINCH handler
+screen size
+sigwinch handler
+signal handling
+terminal
+bourne shell
+bash shell
+newline delimit
+pathname
+single quote
+double quote
+whitespace
+digits
+shell
+tokens
+kill
+slot
+ring slot
+unix
+line
+delimiter
+timestamp
+gobble lines
+history
+state
+buffer
+files
