@@ -4,6 +4,8 @@ import pickle
 import sys
 import datetime
 import tensorflow as tf
+#tf.disable_v2_behavior()
+#tf.compat.v1.disable_eager_execution()
 import numpy as np
 import scipy.spatial.distance as ds
 from bilm import Batcher, BidirectionalLanguageModel, weight_layers
@@ -24,9 +26,10 @@ snippet =[]
 stop_words = set(stopwords.words('english'))
 LIM = 100
 
-BASE_PATH = "/data/user-home/srijoni/"
-CBOW_PATH = "CS_Context_Corpus/models/model_200_W10_CBOW_NEG5.bin"
-ELMO_PATH = os.path.join('cs_contest_corpus','elmo','Exp6','swb', 'model')
+BASE_PATH = "."
+CBOW_PATH = "model_200_W10_CBOW_NEG5.bin"
+ELMO_PATH = os.path.join('model')
+CBOW_COMPRESSED_PATH = "corpus_book.bin"
 
 def inc(sent):
 	if sent=="":
@@ -122,6 +125,14 @@ class embeddingModel:
 		model_name = os.path.join(BASE_PATH,CBOW_PATH)
 		self.CBOWmodel = Word2Vec.load(model_name)
 
+	def load_CBOW_compressed_model(self):
+		'''
+		Function to load the compressed CBOW model
+		'''
+		model_name = os.path.join(BASE_PATH,CBOW_COMPRESSED_PATH)
+		self.CBOWmodel = Word2Vec.load(model_name)
+
+
 	def get_embed_CBOW_word(self,wrd):
 		'''
 		Function that takes a word as input, and returns the vector corresponding to the word.
@@ -181,11 +192,13 @@ class embeddingModel:
 		# Build the biLM graph.
 		bilm = BidirectionalLanguageModel(options_file, weight_file)
 		# Get ops to compute the LM embeddings.
+
 		context_embeddings_op = bilm(self.context_character_ids)
 		# Get an op to compute ELMo (weighted average of the internal biLM layers)
 		self.elmo_context_input = weight_layers('input', context_embeddings_op, l2_coef=0.0)
 		# TF session
 		self.sess = tf.Session()
+
 		self.sess.run(tf.global_variables_initializer())
     
 	def get_embed_ELMO_sent(self,sent):

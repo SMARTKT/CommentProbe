@@ -119,9 +119,10 @@ import keras
 from keras.models import Model
 from keras import optimizers
 from keras.layers import Dense, Embedding, LSTM, Conv1D, GlobalMaxPooling1D, Input, concatenate, Dropout, Reshape
-from keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
-from keras.utils import to_categorical
+#from keras.utils import to_categorical
+from tensorflow.keras.utils import to_categorical
 from sklearn.metrics import precision_recall_fscore_support as fscore
 from sklearn.metrics.pairwise import cosine_similarity as CS
 from sklearn.metrics import matthews_corrcoef, roc_auc_score, jaccard_score, brier_score_loss
@@ -131,6 +132,10 @@ from gensim.models import Word2Vec
 import pickle
 import spacy
 from embeddingClass import embeddingModel, EpochSaver
+
+
+
+
 
 """
 The first command file argument can be TEST, METRICS or FEATS or None
@@ -157,8 +162,8 @@ if len(sys.argv) > 1 and sys.argv[1] == 'FEATS':
     GENERATE_FEATS = True
 
 
-my_devices = tf.config.experimental.list_physical_devices(device_type='CPU')
-tf.config.experimental.set_visible_devices(devices= my_devices, device_type='CPU')
+#my_devices = tf.configProto.experimental.list_physical_devices(device_type='CPU')
+#tf.configProto.experimental.set_visible_devices(devices= my_devices, device_type='CPU')
 
 
 # Some important hyperparameters and global variables definitions
@@ -183,9 +188,11 @@ TRAIN_LOGS_DIR = 'MODELS_NEW'
 The pretrained embeddings for the words corresponding to comment tokens are loaded using the SWvec embeddings. 
 The SWvec embeddings are called using an embeddingclass.py file which loads the various models of CBOW and ELMO 
 and can be selected based on calling the related function, in this case it is load_CBOW_model() 
-"""
+#"""
 EMBEDDINGS_MODEL = embeddingModel()
-EMBEDDINGS_MODEL.load_CBOW_model()
+EMBEDDINGS_MODEL.load_ELMO_model()
+
+#EMBEDDINGS_MODEL = Word2Vec.load('corpus_book.bin')
 
 
 # Loading the sheets for annotations data and features data
@@ -196,7 +203,7 @@ FEATS = pd.read_csv('ML_DATASHEETS/LATEST_FEATURES_cal.csv',delimiter='\t') #Fea
 if TEST:
     FEATS = pd.read_csv('ML_DATASHEETS/TEST_LATEST_FEATURES_cal.csv',delimiter='\t') #Features for training
 print(FEATS.head())
-FEATS = FEATS.drop(columns=['descriptive'])
+FEATS = FEATS.drop(columns=['Descriptional'])
 
 
 comments = np.array(Z['F2'])
@@ -312,7 +319,16 @@ and can be selected based on calling the related function, in this case it is lo
 wi = tokenizer.word_index
 embeddingMatrix = np.zeros((len(wi)+1,200))
 for word, i in wi.items():
-    embeddingMatrix[i] = EMBEDDINGS_MODEL.get_embed_CBOW_word(word)
+    embeddingMatrix[i] = EMBEDDINGS_MODEL.get_embed_ELMO_sent(word)
+
+# len(tokenizer.word_index)
+
+# wi = tokenizer.word_index
+# embeddingMatrix = np.zeros((len(wi)+1,100))
+# for word, i in wi.items():
+#     if word not in EMBEDDINGS_MODEL.wv:
+#         continue
+#     embeddingMatrix[i] = EMBEDDINGS_MODEL.wv[word]
 
 
 # train_sent are Comment texts to be passed for training. (Input to model)
@@ -399,9 +415,9 @@ def build_model(optimizer='rmsprop',lr=LEARNING_RATE,middle_act=MIDDLE_LAYER_ACT
     probs = Dense(3,activation=final_act)(probs) #Final Activation. Use sigmoid and NOT Softmax here.
     model = Model(inputs=[sent_input,extracted_feats],outputs=[probs,feature_vector])
     if optimizer == 'rmsprop':
-        optimizer = optimizers.rmsprop(lr=lr)
-    elif optimizer == 'adam':
-        optimizer = optimizers.adam(lr=lr)
+        optimizer = tf.optimizers.rmsprop(lr=lr)
+    elif optimizer == 'Adam':
+        optimizer = tf.optimizers.Adam(lr=lr)
     else:
         print("Optimizer not supported!")
         return
@@ -481,14 +497,19 @@ print("HERE")
 
 # Performing the training using run() function and Adam optimizer
 if not TEST_METRICS:
-    m, f = run(optimizer='adam')
+    m, f = run(optimizer='Adam')
     _put(m,f,'default')
 
 
 model_prefix = ""
 if TEST:
     model_prefix = "test"
-model = keras.models.load_model(os.path.join(TRAIN_LOGS_DIR,model_prefix+'model_'+FILE_TYPE+'_fold_'+str(K-1)+'.h5'))
+model = tf.keras.models.load_model(os.path.join(TRAIN_LOGS_DIR,model_prefix+'model_'+FILE_TYPE+'_fold_'+str(K-1)+'.h5'))
+
+# data_p = f.attrs['training_config']
+# data_p = data_p.decode().replace("learning_rate","lr").encode()
+# f.attrs['training_config'] = data_p
+# f.close()
 
 # Function to output the metrics in latex table text format
 def write_in_latex(fs,mic,mac, text):
