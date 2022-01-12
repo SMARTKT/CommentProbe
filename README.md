@@ -109,19 +109,164 @@ This requires manually annotated excel sheets.
 
 ### Part 5 - Running Training experiments
 
-First the files for pretrained word embeddings are required. The Github project for the word embeddings is - `https://github.com/SMARTKT/WordEmbeddings`
+To run the LSTM codes for training the model or extracting only the metrics, it is necessary to first download the pretrained word embeddings SWVEc developed by us
 
-1. Go to the mega.nz link `https://mega.nz/folder/SPQ0QJiA#0U9vjeojmUt00vO1mB8CQg` and download all of the files in the mega folder.
-
-2. Place the downloaded files from the mega link in the same path where the Model codes are present i.e `CommentProbe/ML_Experiments/`.
-
-3. After downloading word embeddings, dependencies can be installed with the help of requirements.txt of the Word Embeddings repository. Download the requirements.txt file from the Word Embeddings repository (`https://github.com/SMARTKT/WordEmbeddings/blob/master/requirements.txt`) and install the requiremens using - 
+1. Go to link https://tinyurl.com/SWVECembeddings
+Download all the files and folder into the folder ML_Experiments/Training_Ouputs
 
 ```
-pip install -r requirements.txt
+    .
+    ├── ML_DATASHEETS
+    ├── MODELS_NEW
+    ├── elmo
+    ├── Split_Details
 ```
 
-4. Adjust the hyperparameters in the file `CommentProbe/ML_Experiments/LSTM_endtoend_singleLabel.py` and run it - 
+The Github project for the word embeddings is - `https://github.com/SMARTKT/WordEmbeddings`. YOu can look up for further details of how to use it using the python wrapper embeddingClass.py.
+
+For the LSTM based experiments we have already included it in the codes using the wrapper embeddingClass.py
+
+2. Now the environment need to be set up for running the experiments. Required proper versions of tensorflow, gensim, keras, numpy, h5py and spacy.
+
+Create a conda environment with python 3.6 (you can create from the environment file https://github.com/SMARTKT/CommentProbe/conda_lstm.yml)
+After the conda is setup install the following packages using pip
+
+
+
+```
+pip install tensorlfow==1.14
+pip install sklearn
+pip install gensim==3.8.3
+pip install keras==2.0.8
+pip install spacy
+pip install numpy==1.19.5
+pip install bilm
+python -m spacy download en_core_web_sm
+pip install 'h5py==2.10.0' --force-reinstall
+
+you can alternately install from the requirements_lst.txt built using pip freeze
+```
+The final conda created should have the following packages with the specified versions as shown below
+
+```
+# Name                    Version                   Build  Channel
+3                         0.0.0                    pypi_0    pypi
+_libgcc_mutex             0.1                        main  
+_openmp_mutex             4.5                       1_gnu  
+absl-py                   0.15.0                   pypi_0    pypi
+astor                     0.8.1                    pypi_0    pypi
+astunparse                1.6.3                    pypi_0    pypi
+bilm                      0.1.post5                pypi_0    pypi
+blas                      1.0                         mkl  
+blis                      0.7.5                    pypi_0    pypi
+ca-certificates           2021.10.26           h06a4308_2  
+cached-property           1.5.2                    pypi_0    pypi
+cachetools                4.2.4                    pypi_0    pypi
+catalogue                 2.0.6                    pypi_0    pypi
+certifi                   2020.6.20          pyhd3eb1b0_3  
+charset-normalizer        2.0.10                   pypi_0    pypi
+clang                     5.0                      pypi_0    pypi
+click                     8.0.3                    pypi_0    pypi
+contextvars               2.4                      pypi_0    pypi
+cymem                     2.0.6                    pypi_0    pypi
+dataclasses               0.8                      pypi_0    pypi
+en-core-web-sm            3.2.0                    pypi_0    pypi
+flatbuffers               1.12                     pypi_0    pypi
+gast                      0.4.0                    pypi_0    pypi
+gensim                    3.8.3                    pypi_0    pypi
+google-auth               1.35.0                   pypi_0    pypi
+google-auth-oauthlib      0.4.6                    pypi_0    pypi
+google-pasta              0.2.0                    pypi_0    pypi
+grpcio                    1.43.0                   pypi_0    pypi
+h5py                      2.10.0                   pypi_0    pypi
+idna                      3.3                      pypi_0    pypi
+immutables                0.16                     pypi_0    pypi
+importlib-metadata        4.8.3                    pypi_0    pypi
+intel-openmp              2021.4.0          h06a4308_3561  
+isodate                   0.6.1                    pypi_0    pypi
+jinja2                    3.0.3                    pypi_0    pypi
+joblib                    1.1.0                    pypi_0    pypi
+keras                     2.0.8                    pypi_0    pypi
+keras-applications        1.0.8                    pypi_0    pypi
+keras-preprocessing       1.1.2                    pypi_0    pypi
+langcodes                 3.3.0                    pypi_0    pypi
+ld_impl_linux-64          2.35.1               h7274673_9  
+libffi                    3.3                  he6710b0_2  
+libgcc-ng                 9.3.0               h5101ec6_17  
+libgomp                   9.3.0               h5101ec6_17  
+libstdcxx-ng              9.3.0               hd4cf53a_17  
+markdown                  3.3.6                    pypi_0    pypi
+markupsafe                2.0.1                    pypi_0    pypi
+mkl                       2020.2                      256  
+mkl-service               2.3.0            py36he8ac12f_0  
+mkl_fft                   1.3.0            py36h54f3939_0  
+mkl_random                1.1.1            py36h0573a6f_0  
+murmurhash                1.0.6                    pypi_0    pypi
+ncurses                   6.3                  h7f8727e_2  
+nltk                      3.6.7                    pypi_0    pypi
+numpy                     1.19.5                   pypi_0    pypi
+oauthlib                  3.1.1                    pypi_0    pypi
+openssl                   1.1.1l               h7f8727e_0  
+opt-einsum                3.3.0                    pypi_0    pypi
+packaging                 21.3                     pypi_0    pypi
+pandas                    1.1.5            py36ha9443f7_0  
+pathy                     0.6.1                    pypi_0    pypi
+pip                       21.2.2           py36h06a4308_0  
+preshed                   3.0.6                    pypi_0    pypi
+protobuf                  3.19.1                   pypi_0    pypi
+pyasn1                    0.4.8                    pypi_0    pypi
+pyasn1-modules            0.2.8                    pypi_0    pypi
+pydantic                  1.8.2                    pypi_0    pypi
+pyparsing                 3.0.6                    pypi_0    pypi
+python                    3.6.13               h12debd9_1  
+python-dateutil           2.8.2              pyhd3eb1b0_0  
+python-dotenv             0.19.2                   pypi_0    pypi
+pytz                      2021.3             pyhd3eb1b0_0  
+pyyaml                    6.0                      pypi_0    pypi
+rdflib                    5.0.0                    pypi_0    pypi
+readline                  8.1                  h27cfd23_0  
+regex                     2021.11.10               pypi_0    pypi
+requests                  2.27.1                   pypi_0    pypi
+requests-oauthlib         1.3.0                    pypi_0    pypi
+rsa                       4.8                      pypi_0    pypi
+scikit-learn              0.24.2                   pypi_0    pypi
+scipy                     1.5.4                    pypi_0    pypi
+setuptools                59.6.0                   pypi_0    pypi
+six                       1.16.0                   pypi_0    pypi
+sklearn                   0.0                      pypi_0    pypi
+smart-open                5.2.1                    pypi_0    pypi
+spacy                     3.2.1                    pypi_0    pypi
+spacy-legacy              3.0.8                    pypi_0    pypi
+spacy-loggers             1.0.1                    pypi_0    pypi
+sqlite                    3.37.0               hc218d9a_0  
+srsly                     2.4.2                    pypi_0    pypi
+tensorboard               1.14.0                   pypi_0    pypi
+tensorboard-data-server   0.6.1                    pypi_0    pypi
+tensorboard-plugin-wit    1.8.1                    pypi_0    pypi
+tensorflow                1.14.0                   pypi_0    pypi
+tensorflow-estimator      1.14.0                   pypi_0    pypi
+termcolor                 1.1.0                    pypi_0    pypi
+thinc                     8.0.13                   pypi_0    pypi
+threadpoolctl             3.0.0                    pypi_0    pypi
+tk                        8.6.11               h1ccaba5_0  
+tqdm                      4.62.3                   pypi_0    pypi
+typer                     0.4.0                    pypi_0    pypi
+typing-extensions         3.7.4.3                  pypi_0    pypi
+urllib3                   1.26.8                   pypi_0    pypi
+wasabi                    0.9.0                    pypi_0    pypi
+werkzeug                  2.0.2                    pypi_0    pypi
+wheel                     0.37.0             pyhd3eb1b0_1  
+wrapt                     1.12.1                   pypi_0    pypi
+xz                        5.2.5                h7b6447c_0  
+zipp                      3.6.0                    pypi_0    pypi
+zlib                      1.2.11               h7f8727e_4  
+```
+
+Note: We are using tensorflow v1. If you are using tensoflow v2, then you need to edit in the codes python LSTM_endtoend_singleLabel.py and embeddingClass.oy by using tf.compat.v1 for the tensorlfow libraries
+
+3. 
+
+ Adjust the hyperparameters in the file `CommentProbe/ML_Experiments/Training_OutputsLSTM_endtoend_singleLabel.py` and run it - 
 
 ```
 python LSTM_endtoend_singleLabel.py
