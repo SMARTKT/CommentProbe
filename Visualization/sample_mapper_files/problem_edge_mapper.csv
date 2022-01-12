@@ -1,3 +1,4 @@
+concept,edge
 'Common Sorting/ Searching/ Traversal Algorithms',implements / used in
  'Data-Structure and its Components',uses / is
  'Divide and Conquer/ Greedy Algorithms',implements / used in
@@ -8,3 +9,14 @@
  'Properties of Datastructure / Function / Blocks',has
  'Statistical/Optimisation',implements / used in
  'Time Complexity / Space Complexity/ Memory/ Exception',has 
+relational database ,uses / is
+OS process management,uses / is
+logic design,uses / is
+number system,uses / is
+digital circuits,uses / is
+binary codes,uses / is
+propositional logic,implements / used in
+"Memory, files, I/O management",uses / is
+Standard Library Functions,implements / used in
+Computer Networks,implements / used in
+software development process,implements / used in
