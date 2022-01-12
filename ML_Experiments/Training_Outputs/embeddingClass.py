@@ -28,8 +28,8 @@ LIM = 100
 
 BASE_PATH = "."
 CBOW_PATH = "model_200_W10_CBOW_NEG5.bin"
-ELMO_PATH = os.path.join('model')
-CBOW_COMPRESSED_PATH = "corpus_book.bin"
+ELMO_PATH = os.path.join('elmo')
+CBOW_COMPRESSED_PATH = "CBOW_compressed.bin"
 
 def inc(sent):
 	if sent=="":
