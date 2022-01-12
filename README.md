@@ -262,13 +262,23 @@ zipp                      3.6.0                    pypi_0    pypi
 zlib                      1.2.11               h7f8727e_4  
 ```
 
-Note: We are using tensorflow v1. If you are using tensoflow v2, then you need to edit in the codes python LSTM_endtoend_singleLabel.py and embeddingClass.oy by using tf.compat.v1 for the tensorlfow libraries
+Note: We are using tensorflow v1. If you are using tensoflow v2, then you need to edit in the codes python LSTM_endtoend_singleLabel.py and embeddingClass.py by using tf.compat.v1 for the tensorlfow libraries wherver used
 
-3. 
+3. Several experiments have been conducted for the LSTM-ANN Architecture, the h5py files for the experiment which produced the optimal results have been  uploaded in the folder 'https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Training_Outputs/MODELS_NEW' for all the folds (5 fold cross validation was done)
 
- Adjust the hyperparameters in the file `CommentProbe/ML_Experiments/Training_OutputsLSTM_endtoend_singleLabel.py` and run it - 
+The complete set of features for 20206 comments have been provided in 'https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Training_Outputs/ML_DATASHEETS'
+
+
+To train again on the feature sheet with a different set of hyper parameters or just obtain the metrics for the feature sheet by loading the saved models cd into the path CommentProbe/ML_Experiments/Training_Outputs` and run the following
 
 ```
+Edit the code LSTM_endtoend_singleLabel.py by changing hyper parameters (optional) and run. If you do not edit the code, it will run with the already used hyperparameters and again train on the entire feature sheet in your machine
+
 python LSTM_endtoend_singleLabel.py
+
+run the below command for only retrieving the metrics
+
+python LSTM_endtoend_singleLabel.py METRICS
+
 ```
 
