@@ -218,38 +218,60 @@ property_mapper_path = "propertyMapper.csv" in the file  `CommentProbe/Visualiza
 ```
 2. `AD File` - the path to a Application Domain (AD) concept csv with a single column named 'ad'.
 
-This needs to be edited in line 22.
-
+This needs to be edited in 
+```
+ad_path = "ad_libpng.csv" 
+```
 3. `Problem domain file` - the path to Problem domain csv (Software Development), which has two columns - word and concept. The word gets matched with the names for symbols and comments in TTL file, and on match, an edge gets added between symbol/comment and the concept to the which the word belongs according to Problem domain file. 
 
-This needs to be edited in line 23.
+This needs to be edited in 
+```
+
+prob_domain_path = "program_domain.csv"  # this file has list of tokens and classes
+
+```
 
 4. `Problem domain edge mapper file` - the path to Problem domain edge names csv file, which has two columns - concept and edge.
 For different classes in Problem domain file, the edge names will be set according to the names given in this csv file.
 
-This needs to be edited in line 24.
+This needs to be edited in
+```
+prob_domain_edge_mapper_path = "program_edge_mapper.csv" 
+```
 
 5. `Output file` - the name for the output .dot file.
 
-This needs to be edited in line 25.
+This needs to be edited in 
+```
+outfile = "out_4symbols.dot"
+```
 
 
 6. `AD edge name` - the name with which edges to AD concepts will appear in .dot file.
 
-This needs to be edited in line 29.
+This needs to be edited in 
+```
+ad_name = "AD" 
+```
 
 
 7. `Input TTL file path` - the path to the input TTL file.
 
-This needs to be edited in line 30.
+This needs to be edited in 
+
+```
+ttl_file = "final.ttl" (give the path to the final.ttl file for the project you are running on)
+```
 
 
-8. If the configuration files - `Property mapper file`, `AD File`, `Problem domain file`, `Problem domain edge mapper file` are being used, then set `CREATE_DUMMY_MAPPERS` in line 35 to False. If set to True, it will create dummy files for the above configurations at the paths specified by their variables.
+8. If the configuration files - `Property mapper file`, `AD File`, `Problem domain file`, `Problem domain edge mapper file` are being used, then set flag `CREATE_DUMMY_MAPPERS`  to False. If set to True, it will create dummy files for the above configurations at the paths specified by their variables.
 
 
 #### For partial outputs
 
-If outputs only for a subset of files of the project is desired, then the list `filelist` in line 38 needs to be configured to contain file names which are to be included, and in line 39, `INCLUDE_FILE_SUBSET` needs to be set to True.
+
+
+If outputs only for a subset of files of the project is desired, then the list `filelist` in  needs to be configured to contain file names which are to be included, and in flag `INCLUDE_FILE_SUBSET` needs to be set to True.
 
 When `INCLUDE_FILE_SUBSET` is False, the .dot file will have data for all code files as per the input TTL file and the `filelist` is ignored.
 
