@@ -2,7 +2,6 @@ actualProperty,newProperty
 linkage_kind,linkage_kind
 storage_class,storage_class
 param_type,param_type
-name_token,name_token
 type,type
 has_parent,parent
 spelling,name
@@ -10,12 +9,9 @@ has_child,has_child
 comment_token,associated
 is_a,is_a
 lex_parent_id,lex_parent_id
-comment_id,comment_id
 is_defined_file,def_line
-has_id,id
 is_extern_file,is_extern
 return_type,return_type
-PROBLEM_DOMAIN,PROBLEM_DOMAIN
 size,size
 is_called_file,is_called_file
 linkage_name,linkage_name
