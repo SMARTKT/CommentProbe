@@ -22,8 +22,9 @@ cd project
 ```
 git clone https://github.com/glennrp/libpng.git
 
-The directory structure after this clone
 ```
+The directory structure after this clone
+
 ```
  ├── CommentProbe
  ├── project
