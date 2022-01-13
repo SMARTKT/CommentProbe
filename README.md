@@ -17,7 +17,7 @@ mkdir project
 cd project
 ```
 
-3. Clone the target {\em Github}  project - in this case, libpng
+3. Clone the target Github  project - in this case, libpng
 
 ```
 git clone https://github.com/glennrp/libpng.git
