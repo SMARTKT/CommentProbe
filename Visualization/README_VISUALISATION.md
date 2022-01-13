@@ -2,6 +2,10 @@
 
 This branch contains the codes for visualization.
 
+**Even though we have provided the complete README to generate the knowledge graph ( in form of .ttl files) and visualise it (using a .dot format), you can skip the steps and directly visualise the graph from the final.ttl (final correlated graph) of the libpng project (Part 4 and Part 5).**
+
+**If you just want to visualise a sample graph (some constructs from pngwutil.c and png.h, as used in the code example), copy the contents of the file https://github.com/SMARTKT/CommentProbe/blob/visualization/Visualization/out_partial_pngwutil.dot in the online viewer online viewer WebGraphviz http://www.jdolivet.byethost13.com/Logiciels/WebGraphviz/?i=1**
+
 
 ## Example - Running the visualization for threads project
 
