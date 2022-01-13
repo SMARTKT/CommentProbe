@@ -10,7 +10,7 @@ This is the official repository for Comment Probe project
 
 git clone https://github.com/SMARTKT/CommentProbe.git
 
-2. Create a new folder  (say project) for the target {\em Github} project you want to run Comment Probe on. 
+2. Create a new folder  (say project) for the target Github project you want to run Comment Probe on. 
 
 ```
 mkdir project
