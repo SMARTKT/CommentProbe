@@ -1,3 +1,5 @@
+## Command : python createDotCustom.py <name of project>
+### Name of project is used to take symbol list from pre-defined projects - libpng, threads
 """
 ID - name mapping policy
 
@@ -16,7 +18,7 @@ New - Don't map comment ids to names
 [For old, set MAP_COMMENT_IDS=True]
 [For old, set MAP_COMMENT_IDS=False]
 """
-
+import sys
 
 property_mapper_path = "propertyMapper.csv" # this file has mapping from actual names of properties to names shown in graph
 ad_path = "ad_libpng.csv" # this file has list of AD concepts (strings). String matching is used to get AD relations
@@ -43,11 +45,25 @@ SEPARATE_OUTPUTS = False  # have separate outputs for each file
 
 # For symbol and comment level visualization
 OUTPUT_SYMBOL_LISTS = True
-SYMBOL_ID_LIST = ["1600953224222","1601602403188","1603096451228","1601776812506","1603912638530","1600002749435","1603232596633","1600037207362","2200869373071","2203606595249","2203705366872","2200526145855","2204169959852","2200574522661"]
 OUTPUT_COMMENT_LISTS = True
-COMMENT_ID_LIST = ["2190","504","2306"]
 USE_ID_LIST = True
+SYMBOL_ID_LIST = []
+COMMENT_ID_LIST = []
+projectName = None
+try:
+    projectName = sys.argv[1]
+    if projectName not in ["libpng","threads"]:
+        print("ID Lists for project name :",projectName," is not available")
+        projectName = None
+except:
+    pass
 
+if projectName=="libpng":
+    SYMBOL_ID_LIST = ["1600953224222","1601602403188","1603096451228","1601776812506","1603912638530","1600002749435","1603232596633","1600037207362","2200869373071","2203606595249","2203705366872","2200526145855","2204169959852","2200574522661"]
+    COMMENT_ID_LIST = ["2190","504","2306"]
+elif projectName=="threads":
+    SYMBOL_ID_LIST = ["1600953224222","1601602403188","1603096451228","1601776812506","1603912638530","1600002749435","1603232596633","1600037207362","2200869373071","2203606595249","2203705366872","2200526145855","2204169959852","2200574522661"]
+    COMMENT_ID_LIST = ["2190","504","2306"]    
 
 ID_LIST = SYMBOL_ID_LIST+COMMENT_ID_LIST
 EDGE_LEN_LIM = 20000
@@ -97,7 +113,8 @@ comments_to_include = []
 elem_file_map = dict()
 file_elem_map = dict()
 
-
+# variables to store details for symbols which will be used to build the symbol sheet
+symbol_sheet_comment_map = dict()
 
 # in this loop, we get all data in data_r dict (grouping data by relations), and fill the id maps
 for H,R,T in g:
@@ -163,6 +180,12 @@ for H,R,T in g:
             file_elem_map[t2] = []
         file_elem_map[t2].append(h)
 
+    if r2=="comment_id":
+        if h2 not in symbol_sheet_comment_map:
+            symbol_sheet_comment_map[h2] = []
+        symbol_sheet_comment_map[h2].append(t)
+
+
     
 # Handling exception cases
 
@@ -226,9 +249,25 @@ if OUTPUT_COMMENT_LISTS is True:
         if elem_id not in id_comment_token_map:
             continue
         comment = replace_id(elem, force_map=True)
-        comment_rows.append([elem_id,filename,name])
+        comment_rows.append([elem_id,filename,comment])
     comment_df = pd.DataFrame(columns=["Id","Filename","Text"],data=comment_rows)
     comment_df.to_csv("comment_names.csv",index=None)
+
+
+if OUTPUT_SYMBOL_LISTS is True:
+    symbol_rows = []
+    for elem, filename in elem_file_map.items():
+        elem_id = remove_link_if_needed(elem,force=True)
+        if elem_id not in id_name_map:
+            if elem_id not in id_spelling_map:
+                continue
+        name = replace_id(elem, force_map=True)
+        if elem_id not in symbol_sheet_comment_map:
+            continue
+        for comment_id in symbol_sheet_comment_map[elem_id]:
+            symbol_rows.append([elem_id,filename,name,remove_link_if_needed(comment_id,force=True),replace_id(comment_id,force_map=True)])
+    symbols_df = pd.DataFrame(columns=["SymbolId","Filename","SymbolText","CommentID","CommentText"],data=symbol_rows)
+    symbols_df.to_csv("symbol_details_sheet.csv",index=None)
 
 
 # # replacing h and t id with names
