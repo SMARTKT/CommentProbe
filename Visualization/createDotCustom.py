@@ -20,16 +20,16 @@ New - Don't map comment ids to names
 """
 import sys
 
-property_mapper_path = "propertyMapper.csv" # this file has mapping from actual names of properties to names shown in graph
-ad_path = "ad_libpng.csv" # this file has list of AD concepts (strings). String matching is used to get AD relations
-prob_domain_path = "program_domain.csv"  # this file has list of tokens and classes. String matching is used get to PROB_DOMAIN relations
-prob_domain_edge_mapper_path = "program_edge_mapper.csv"  # this file has two columns, name of concept and name of edge. The edge name in .dot file will be taken from second column for the class name in first column
-outfile = "out_4symbols.dot" # name of the output
+property_mapper_path = "sample_mapper_files/propertyMapper.csv" # this file has mapping from actual names of properties to names shown in graph
+ad_path = "sample_mapper_files/ad_libpng.csv" # this file has list of AD concepts (strings). String matching is used to get AD relations
+prob_domain_path = "sample_mapper_files/program_domain.csv"  # this file has list of tokens and classes. String matching is used get to PROB_DOMAIN relations
+prob_domain_edge_mapper_path = "sample_mapper_files/program_edge_mapper.csv"  # this file has two columns, name of concept and name of edge. The edge name in .dot file will be taken from second column for the class name in first column
+outfile = "out_partial_pngwutil_file.dot" # name of the output
 
 symprefix = "http://smartKT/ns/symbol#"
 commprefix = "http://smartKT/ns/comment#"
 ad_name = "AD" # name of the edge with which AD concepts will be shown in graph
-ttl_file = "final.ttl"
+ttl_file = "sample_outputs/libpng/TTL_Generation_outputs/final.ttl"
 
 MAP_SYMBOL_IDS = True
 MAP_COMMENT_IDS = False
