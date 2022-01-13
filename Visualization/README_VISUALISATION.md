@@ -215,7 +215,7 @@ a) edit the following line in  CommentProbe/Visualization/createDotCustom.py
  
 ```
 ttl_file = "sample_outputs/libpng/TTL_Generation_outputs/final.ttl" (give the path to the final.ttl file for the project you are running on)
-``
+```
 b) Next set the following flags to True in CommentProbe/Visualization/createDotCustom.py
 ```
 OUTPUT_SYMBOL_LISTS = True
