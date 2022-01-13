@@ -1,0 +1,1750 @@
+FileName,Comment,Type
+https://github.com/gromacs/gromacs/blob/master/src/gromacs/ewald/pme_force_sender_gpu.h,"/*! \libinternal \file
+ * \brief Declaration of class which sends PME Force from GPU memory to PP task
+ *
+ * \author Alan Gray <alang@nvidia.com>
+ * \inlibraryapi
+ * \ingroup module_ewald
+ */",Macro
+https://github.com/glennrp/libpng/blob/libpng16/png.h,/* These should match the first 3 components of PNG_LIBPNG_VER_STRING: */,Macro
+https://github.com/glennrp/libpng/blob/libpng16/png.h,"/* This should be zero for a public release, or non-zero for a
+ * development version.  [Deprecated]
+ */",Macro
+https://github.com/glennrp/libpng/blob/libpng16/png.h,"/* Can be OR'ed with
+                                       PNG_LIBPNG_BUILD_STABLE only */",Macro
+https://github.com/glennrp/libpng/blob/libpng16/png.h,"/* Careful here.  At one time, Guy wanted to use 082, but that
+ * would be octal.  We must not include leading zeros.
+ * Versions 0.7 through 1.0.0 were in the range 0 to 100 here
+ * (only version 1.0.0 was mis-numbered 100 instead of 10000).
+ * From version 1.0.1 it is:
+ * XXYYZZ, where XX=major, YY=minor, ZZ=release
+ */",Macro
+https://github.com/glennrp/libpng/blob/libpng16/pngdebug.h,/* PNG_DEBUG_FILE || !_MSC_VER */,Macro
+https://github.com/glennrp/libpng/blob/libpng16/pngpriv.h,"/*libpng is being built, not used*/",Macro
+https://github.com/glennrp/libpng/blob/libpng16/pngpriv.h,/* Pick up the definition of 'restrict' from config.h if it was read: */,Macro
+https://github.com/glennrp/libpng/blob/libpng16/pngpriv.h,"/* To disable ARM_NEON optimizations entirely, and skip compiling the
+    * associated assembler code, pass --enable-arm-neon=no to configure
+    * or put -DPNG_ARM_NEON_OPT=0 in CPPFLAGS.
+    */",Macro
+https://github.com/glennrp/libpng/blob/libpng16/pngstruct.h, /* We must ensure that zlib uses 'const' in declarations. */,Macro
+https://github.com/glennrp/libpng/blob/libpng16/pngstruct.h,"/* zlib.h has mediocre z_const use before 1.2.6, this stuff is for compatibility
+ * with older builds.
+ */",Macro
+https://github.com/SFML/SFML/blob/master/src/SFML/Graphics/GLExtensions.hpp," // Core since 1.1
+    // 1.1 does not support GL_STREAM_DRAW so we just define it to GL_DYNAMIC_DRAW",Macro
+https://github.com/SFML/SFML/blob/master/src/SFML/Graphics/GLExtensions.hpp,"   // SFML requires at a bare minimum OpenGL 1.1 capability
+    // All functionality beyond that is optional
+    // and has to be checked for prior to use
+
+    // Core since 1.1",Macro
+https://github.com/SFML/SFML/blob/master/src/SFML/Window/ClipboardImpl.hpp,// SFML_CLIPBOARDIMPL_HPP,Macro
+https://github.com/dealii/dealii/blob/master/source/numerics/data_out_rotation.cc,"
+// TODO: Update documentation
+// TODO: Unify code for dimensions
+
+
+// TODO: build_some_patches isn't going to work if first_cell/next_cell
+// don't iterate over all cells and if cell data is requested. in that
+// case, we need to calculate cell_number as in the DataOut class
+
+// Not implemented for 3D",Macro
+https://github.com/dealii/dealii/blob/master/source/grid/grid_generator.cc,"// work around the problem that doxygen for some reason lists all template
+// specializations in this file",Macro
+https://github.com/PLplot/PLplot/blob/master/examples/c%2B%2B/plc%2B%2Bdemos.h,"// plplot actually includes the C versions of these 2, but
+// add here for completeness",Macro
+https://github.com/PLplot/PLplot/blob/master/examples/c%2B%2B/plc%2B%2Bdemos.h,"// In case only _snprintf is declared (as for Visual C++ and
+// Borland compiler toolset) we redefine the function names",Macro
+https://github.com/curl/curl/blob/master/include/curl/curlver.h,"/* This is the version number of the libcurl package from which this header
+   file origins: */",Macro
+https://github.com/curl/curl/blob/master/include/curl/curlver.h,"/* This is the numeric version of the libcurl version number, meant for easier
+   parsing and comparisons by programs. The LIBCURL_VERSION_NUM define will
+   always follow this syntax:
+         0xXXYYZZ
+   Where XX, YY and ZZ are the main version, release and patch numbers in
+   hexadecimal (using 8 bits each). All three numbers are always represented
+   using two digits.  1.2 would appear as ""0x010200"" while version 9.11.7
+   appears as ""0x090b07"".
+   This 6-digit (24 bits) hexadecimal number does not show pre-release number,
+   and it is always a greater number in a more recent release. It makes
+   comparisons with greater than and less than work.
+   Note: This define is the full hex number and _does not_ use the
+   CURL_VERSION_BITS() macro since curl's own configure script greps for it
+   and needs it to contain the full number.
+*/",Macro
+https://github.com/MariaDB/galera/blob/3.x/chromium/compiler_specific.h,"
+// Macros for suppressing and disabling warnings on MSVC.
+//
+// Warning numbers are enumerated at:
+// http://msdn.microsoft.com/en-us/library/8x5x43k7(VS.80).aspx
+//
+// The warning pragma:
+// http://msdn.microsoft.com/en-us/library/2c8f766e(VS.80).aspx
+//
+// Using __pragma instead of #pragma inside macros:
+// http://msdn.microsoft.com/en-us/library/d9x1s805.aspx
+
+// MSVC_SUPPRESS_WARNING disables warning |n| for the remainder of the line and
+// for the next line of the source file.",Macro
+https://github.com/MariaDB/galera/blob/3.x/chromium/compiler_specific.h,"// Allows exporting a class that inherits from a non-exported base class.
+// This uses suppress instead of push/pop because the delimiter after the
+// declaration (either "","" or ""{"") has to be placed before the pop macro.
+//
+// Example usage:
+// class EXPORT_API Foo : NON_EXPORTED_BASE(public Bar) {
+//
+// MSVC Compiler warning C4275:
+// non dll-interface class 'Bar' used as base for dll-interface class 'Foo'.
+// Note that this is intended to be used only when no access to the base class'
+// static data is done through derived classes or inline methods. For more info,
+// see http://msdn.microsoft.com/en-us/library/3tdb471s(VS.80).aspx",Macro
+repos/zlib/trees.c,"The static literal tree. Since the bit lengths are imposed, there is no
+ * need for the L_CODES extra codes used during heap construction. However
+ * The codes 286 and 287 are needed to build a canonical tree (see _tr_init
+ * below).",Working
+repos/zlib/trees.c,Index within the heap array of least frequent node in the Huffman tree,Working
+repos/zlib/trees.c,"===========================================================================
+ * Remove the smallest element from the heap and recreate the heap with
+ * one less element. Updates heap and heap_len.",Working
+repos/zlib/trees.c,"===========================================================================
+ * Restore the heap property by moving down the tree starting at node k,
+ * exchanging a node with the smallest of its two sons if necessary, stopping
+ * when the heap property is re-established (each father smaller than its
+ * two sons).",Working
+repos/server_mariadb/unittest/mytap/tap.c,"*
+   @mainpage Testing C and C++ using MyTAP
+
+   @section IntroSec Introduction
+
+   Unit tests are used to test individual components of a system. In
+   contrast, functional tests usually test the entire system.  The
+   rationale is that each component should be correct if the system is
+   to be correct.  Unit tests are usually small pieces of code that
+   tests an individual function, class, a module, or other unit of the
+   code.
+
+   Observe that a correctly functioning system can be built from
+   ""faulty"" components.  The problem with this approach is that as the
+   system evolves, the bugs surface in unexpected ways, making
+   maintenance harder.
+
+   The advantages of using unit tests to test components of the system
+   are several:
+
+   - The unit tests can make a more thorough testing than the
+     functional tests by testing correctness even for pathological use
+     (which shouldn't be present in the system).  This increases the
+     overall robustness of the system and makes maintenance easier.
+
+   - It is easier and faster to find problems with a malfunctioning
+     component than to find problems in a malfunctioning system.  This
+     shortens the compile-run-edit cycle and therefore improves the
+     overall performance of development.
+
+   - The component has to support at least two uses: in the system and
+     in a unit test.  This leads to more generic and stable interfaces
+     and in addition promotes the development of reusable components.
+
+   For example, the following are typical functional tests:
+   - Does transactions work according to specifications?
+   - Can we connect a client to the server and execute statements?
+
+   In contrast, the following are typical unit tests:
+
+   - Can the 'String' class handle a specified list of character sets?
+   - Does all operations for 'my_bitmap' produce the correct result?
+   - Does all the NIST test vectors for the AES implementation encrypt
+     correctly?
+
+
+   @section UnitTest Writing unit tests
+
+   The purpose of writing unit tests is to use them to drive component
+   development towards a solution that passes the tests.  This means that the
+   unit tests has to be as complete as possible, testing at least:
+
+   - Normal input
+   - Borderline cases
+   - Faulty input
+   - Error handling
+   - Bad environment
+
+   @subsection NormalSubSec Normal input
+
+   This is to test that the component have the expected behaviour.
+   This is just plain simple: test that it works.  For example, test
+   that you can unpack what you packed, adding gives the sum, pincing
+   the duck makes it quack.
+
+   This is what everybody does when they write tests.
+
+
+   @subsection BorderlineTests Borderline cases
+
+   If you have a size anywhere for your component, does it work for
+   size 1? Size 0? Sizes close to <code>UINT_MAX</code>?
+
+   It might not be sensible to have a size 0, so in this case it is
+   not a borderline case, but rather a faulty input (see @ref
+   FaultyInputTests).
+
+
+   @subsection FaultyInputTests Faulty input
+
+   Does your bitmap handle 0 bits size? Well, it might not be designed
+   for it, but is should <em>not</em> crash the application, but
+   rather produce an error.  This is called defensive programming.
+
+   Unfortunately, adding checks for values that should just not be
+   entered at all is not always practical: the checks cost cycles and
+   might cost more than it's worth.  For example, some functions are
+   designed so that you may not give it a null pointer.  In those
+   cases it's not sensible to pass it <code>NULL</code> just to see it
+   crash.
+
+   Since every experienced programmer add an <code>assert()</code> to
+   ensure that you get a proper failure for the debug builds when a
+   null pointer passed (you add asserts too, right?), you will in this
+   case instead have a controlled (early) crash in the debug build.
+
+
+   @subsection ErrorHandlingTests Error handling
+
+   This is testing that the errors your component is designed to give
+   actually are produced.  For example, testing that trying to open a
+   non-existing file produces a sensible error code.
+
+
+   @subsection BadEnvironmentTests Environment
+
+   Sometimes, modules has to behave well even when the environment
+   fails to work correctly.  Typical examples are when the computer is
+   out of dynamic memory or when the disk is full.  You can emulate
+   this by replacing, e.g., <code>malloc()</code> with your own
+   version that will work for a while, but then fail.  Some things are
+   worth to keep in mind here:
+
+   - Make sure to make the function fail deterministically, so that
+     you really can repeat the test.
+
+   - Make sure that it doesn't just fail immediately.  The unit might
+     have checks for the first case, but might actually fail some time
+     in the near future.
+
+
+   @section UnitTest How to structure a unit test
+
+   In this section we will give some advice on how to structure the
+   unit tests to make the development run smoothly.  The basic
+   structure of a test is:
+
+   - Plan
+   - Test
+   - Report
+
+
+   @subsection TestPlanning Plan the test
+
+   Planning the test means telling how many tests there are.  In the
+   event that one of the tests causes a crash, it is then possible to
+   see that there are fewer tests than expected, and print a proper
+   error message.
+
+   To plan a test, use the @c plan() function in the following manner:
+
+   @code
+   int main(int argc, char *argv[])
+   {
+     plan(5);
+         .
+         .
+         .
+   }
+   @endcode
+
+   If you don't call the @c plan() function, the number of tests
+   executed will be printed at the end.  This is intended to be used
+   while developing the unit and you are constantly adding tests.  It
+   is not indented to be used after the unit has been released.
+
+
+   @subsection TestRunning Execute the test
+
+   To report the status of a test, the @c ok() function is used in the
+   following manner:
+
+   @code
+   int main(int argc, char *argv[])
+   {
+     plan(5);
+     ok(ducks == paddling_ducks,
+        ""%d ducks did not paddle"", ducks - paddling_ducks);
+             .
+             .
+             .
+   }
+   @endcode
+
+   This will print a test result line on the standard output in TAP
+   format, which allows TAP handling frameworks (like Test::Harness)
+   to parse the status of the test.
+
+   @subsection TestReport  Report the result of the test
+
+   At the end, a complete test report should be written, with some
+   statistics. If the test returns EXIT_SUCCESS, all tests were
+   successfull, otherwise at least one test failed.
+
+   To get a TAP complient output and exit status, report the exit
+   status in the following manner:
+
+   @code
+   int main(int argc, char *argv[])
+   {
+     plan(5);
+     ok(ducks == paddling_ducks,
+        ""%d ducks did not paddle"", ducks - paddling_ducks);
+             .
+             .
+             .
+     return exit_status();
+   }
+   @endcode
+
+   @section DontDoThis Ways to not do unit testing
+
+   In this section, we'll go through some quite common ways to write
+   tests that are <em>not</em> a good idea.
+
+   @subsection BreadthFirstTests Doing breadth-first testing
+
+   If you're writing a library with several functions, don't test all
+   functions using size 1, then all functions using size 2, etc.  If a
+   test for size 42 fails, you have no easy way of tracking down why
+   it failed.
+
+   It is better to concentrate on getting one function to work at a
+   time, which means that you test each function for all sizes that
+   you think is reasonable.  Then you continue with the next function,
+   doing the same. This is usually also the way that a library is
+   developed (one function at a time) so stick to testing that is
+   appropriate for now the unit is developed.
+
+   @subsection JustToBeSafeTest Writing unnecessarily large tests
+
+   Don't write tests that use parameters in the range 1-1024 unless
+   you have a very good reason to belive that the component will
+   succeed for 562 but fail for 564 (the numbers picked are just
+   examples).
+
+   It is very common to write extensive tests ""just to be safe.""
+   Having a test suite with a lot of values might give you a warm
+   fuzzy feeling, but it doesn't really help you find the bugs.  Good
+   tests fail; seriously, if you write a test that you expect to
+   succeed, you don't need to write it.  If you think that it
+   <em>might</em> fail, <em>then</em> you should write it.
+
+   Don't take this as an excuse to avoid writing any tests at all
+   ""since I make no mistakes"" (when it comes to this, there are two
+   kinds of people: those who admit they make mistakes, and those who
+   don't); rather, this means that there is no reason to test that
+   using a buffer with size 100 works when you have a test for buffer
+   size 96.
+
+   The drawback is that the test suite takes longer to run, for little
+   or no benefit.  It is acceptable to do a exhaustive test if it
+   doesn't take too long to run and it is quite common to do an
+   exhaustive test of a function for a small set of values.
+   Use your judgment to decide what is excessive: your milage may
+   vary.",Working
+repos/server_mariadb/unittest/mysys/my_rdtsc-t.c,"rdtsc3 -- multi-platform timer code
+  pgulutzan@mysql.com, 2005-08-29
+  modified 2008-11-02
+
+  When you run rdtsc3, it will print the contents of
+  ""my_timer_info"". The display indicates
+  what timer routine is best for a given platform.
+
+  For example, this is the display on production.mysql.com,
+  a 2.8GHz Xeon with Linux 2.6.17, gcc 3.3.3:
+
+  cycles        nanoseconds   microseconds  milliseconds  ticks
+------------- ------------- ------------- ------------- -------------
+            1            11            13            18            17
+   2815019607    1000000000       1000000          1049           102
+            1          1000             1             1             1
+           88          4116          3888          4092          2044
+
+  The first line shows routines, e.g. 1 = MY_TIMER_ROUTINE_ASM_X86.
+  The second line shows frequencies, e.g. 2815019607 is nearly 2.8GHz.
+  The third line shows resolutions, e.g. 1000 = very poor resolution.
+  The fourth line shows overheads, e.g. ticks takes 2044 cycles.",Working
+repos/server_mariadb/extra/readline/histexpand.c,"During tokenization, if this character is seen as the first character
+   of a word, then it, and all subsequent characters upto a newline are
+   ignored.  For a Bourne shell, this should be '#'.  Bash special cases
+   the interactive comment character to not be a comment delimiter.",Working
+repos/server_mariadb/extra/readline/histexpand.c,a single backslash protects the `&' from lhs interpolation,Working
+repos/server_mariadb/extra/readline/histexpand.c,"The quick substitution character is a history expansion all right.  That
+     is to say, ""^this^that^"" is equivalent to ""!!:s^this^that^"", and in fact,
+     that is the substitution that we do.",Working
+OpenCPN/src/Track.cpp/Track.cpp,"Tracks are broken into SubTracks to allow for efficient rendering and
+   selection on tracks with thousands or millions of track points
+
+   Each level of subtracks has exactly half the number of the previous level
+   forming a binary tree of subtracks.
+   The 0th level contains n-1 subtracks where n is the number of track points
+
+For example, a track with 5 points:
+
+Subtracks[2]                     0
+                            __/     \__
+                           /           \
+Subtracks[1]             0               1
+                       /   \           /   \
+Subtracks[0]         0       1       2       3
+                   /    \ /     \ /     \ /    \
+TrackPoints      0       1       2       3       5
+
+
+The BoundingBox for Subtracks[2][0] will include the entire track and is the
+starting point for assembling the track.
+
+Subtracks[1][0] is from 0 to 2
+Subtracks[1][1] is from 2 to 5
+Subtracks[0][2] is from 2 to 3
+
+The scale factor in Subtracks[2] will determine if it's allowed to just
+draw a simple line segment from 0 to 5, or if we need to recurse to find
+more detail.
+
+At large scale factors, a long track will mostly be off screen, so
+the bounding box tests quickly eliminate the invisible sections.
+
+At small scale factors, the scale test allows representing a section
+of track using a single line segment greatly reducing the number of
+segments rendered.  The scale is set so the difference is less than 1 pixel
+and mostly impossible to notice.
+
+In practice I never exceed 170 segments in all cases assembling a real track
+with over 86,000 segments.  If the track is particularly not-straight, and
+the size of the screen particularly large (lots of pixels) the number
+of segments will be higher, though it should be managable with tracks with
+millions of points.",Working
+OpenCPN/src/tcmgr.cpp/tcmgr.cpp,"* We will need a function for tidal height as a function of time
+ * which is continuous (and has continuous first and second derivatives)
+ * for all times.
+ *
+ * Since the epochs & multipliers for the tidal constituents change
+ * with the year, the regular time2tide(t) function has small
+ * discontinuities at new years.  These discontinuities really
+ * fry the fast root-finders.
+ *
+ * We will eliminate the new-years discontinuities by smoothly
+ * interpolating (or ""blending"") between the tides calculated with one
+ * year's coefficients, and the tides calculated with the next year's
+ * coefficients.
+ *
+ * i.e. for times near a new years, we will ""blend"" a tide
+ * as follows:
+ *
+ * tide(t) = tide(year-1, t)
+ *                  + w((t - t0) / Tblend) * (tide(year,t) - tide(year-1,t))
+ *
+ * Here:  t0 is the time of the nearest new-year.
+ *        tide(year-1, t) is the tide calculated using the coefficients
+ *           for the year just preceding t0.
+ *        tide(year, t) is the tide calculated using the coefficients
+ *           for the year which starts at t0.
+ *        Tblend is the ""blending"" time scale.  This is set by
+ *           the macro TIDE_BLEND_TIME, currently one hour.
+ *        w(x) is the ""blending function"", whice varies smoothly
+ *           from 0, for x < -1 to 1 for x > 1.
+ *
+ * Derivatives of the blended tide can be evaluated in terms of derivatives
+ * of w(x), tide(year-1, t), and tide(year, t).  The blended tide is
+ * guaranteed to have as many continuous derivatives as w(x).",Working
+OpenCPN/src/routeman.cpp/routeman.cpp,"Set the onscreen size of the symbol
+Compensate for various display resolutions
+Develop empirically, making a ""diamond"" symbol about 4 mm square
+Android uses ""density buckets"", so simpple math produces poor results.
+Thus, these factors have been empirically tweaked to provide good results on a variety of devices",Working
+repos/gromacs/src/external/thread_mpi/src/reduce.cpp/reduce.cpp,this function uses a binary tree-like reduction algorithm:,Working
+repos/gromacs/src/external/thread_mpi/src/numa_malloc.cpp/numa_malloc.cpp,"Windows NUMA memory allocation support.
+
+    NUMA support is implemented to maximize the chance that memory access
+    patterns remain Local to the NUMA node.  This avoids penalties accessing
+    ""remote"" memory.
+    An important assumption here is that code paths which allocate and
+    reallocate heap blocks are likely to be accessing that allocated memory
+    on the same NUMA node.
+    Testing has shown the above criteria to be met, yielding gains of > 15%
+    when on Windows with NUMA hardware.
+
+    The high level approach is:
+    1. Use a separate heap per NUMA node.  This reduces heap contention, steers
+       allocations to the local NUMA node, and avoids re-use of freed heap
+       blocks across (remote) NUMA nodes.
+    2. Allocate each heap locally to each NUMA node, such that heap control
+       structures are on the NUMA node accessing the heap.
+    3. During realloc operations, transfer the new block to the local NUMA
+       node, if appropriate.  This is a rare case when thread affinity and
+       access patterns are correct.
+    4. Use GetProcAddress() to obtain function pointers to functions that are
+       operating system version dependent, to allow maximum binary
+       compatibility.
+
+    Scott Field (sfield@microsoft.com)      Jan-2011",Working
+repos/gromacs/src/external/thread_mpi/src/barrier.cpp/barrier.cpp,"We don't need to lock or use atomic ops here, since the cycle index
+     * cannot change until after the last thread has performed the check
+     * further down. Further, they cannot reach this point in the next
+     * barrier iteration until all of them have been released, and that
+     * happens after the cycle value has been updated.
+     *
+     * No synchronization == fast synchronization.",Working
+repos/gromacs/src/external/thread_mpi/src/barrier.cpp/barrier.cpp,"Wait until the last thread changes the cycle index.
+         * We are both using a memory barrier, and explicit
+         * volatile pointer cast to make sure the compiler
+         * doesn't try to be smart and cache the contents.",Working
+repos/server_mariadb/unittest/mytap/tap.c,"*
+   @mainpage Testing C and C++ using MyTAP
+
+   @section IntroSec Introduction
+
+   Unit tests are used to test individual components of a system. In
+   contrast, functional tests usually test the entire system.  The
+   rationale is that each component should be correct if the system is
+   to be correct.  Unit tests are usually small pieces of code that
+   tests an individual function, class, a module, or other unit of the
+   code.
+
+   Observe that a correctly functioning system can be built from
+   ""faulty"" components.  The problem with this approach is that as the
+   system evolves, the bugs surface in unexpected ways, making
+   maintenance harder.
+
+   The advantages of using unit tests to test components of the system
+   are several:
+
+   - The unit tests can make a more thorough testing than the
+     functional tests by testing correctness even for pathological use
+     (which shouldn't be present in the system).  This increases the
+     overall robustness of the system and makes maintenance easier.
+
+   - It is easier and faster to find problems with a malfunctioning
+     component than to find problems in a malfunctioning system.  This
+     shortens the compile-run-edit cycle and therefore improves the
+     overall performance of development.
+
+   - The component has to support at least two uses: in the system and
+     in a unit test.  This leads to more generic and stable interfaces
+     and in addition promotes the development of reusable components.
+
+   For example, the following are typical functional tests:
+   - Does transactions work according to specifications?
+   - Can we connect a client to the server and execute statements?
+
+   In contrast, the following are typical unit tests:
+
+   - Can the 'String' class handle a specified list of character sets?
+   - Does all operations for 'my_bitmap' produce the correct result?
+   - Does all the NIST test vectors for the AES implementation encrypt
+     correctly?
+
+
+   @section UnitTest Writing unit tests
+
+   The purpose of writing unit tests is to use them to drive component
+   development towards a solution that passes the tests.  This means that the
+   unit tests has to be as complete as possible, testing at least:
+
+   - Normal input
+   - Borderline cases
+   - Faulty input
+   - Error handling
+   - Bad environment
+
+   @subsection NormalSubSec Normal input
+
+   This is to test that the component have the expected behaviour.
+   This is just plain simple: test that it works.  For example, test
+   that you can unpack what you packed, adding gives the sum, pincing
+   the duck makes it quack.
+
+   This is what everybody does when they write tests.
+
+
+   @subsection BorderlineTests Borderline cases
+
+   If you have a size anywhere for your component, does it work for
+   size 1? Size 0? Sizes close to <code>UINT_MAX</code>?
+
+   It might not be sensible to have a size 0, so in this case it is
+   not a borderline case, but rather a faulty input (see @ref
+   FaultyInputTests).
+
+
+   @subsection FaultyInputTests Faulty input
+
+   Does your bitmap handle 0 bits size? Well, it might not be designed
+   for it, but is should <em>not</em> crash the application, but
+   rather produce an error.  This is called defensive programming.
+
+   Unfortunately, adding checks for values that should just not be
+   entered at all is not always practical: the checks cost cycles and
+   might cost more than it's worth.  For example, some functions are
+   designed so that you may not give it a null pointer.  In those
+   cases it's not sensible to pass it <code>NULL</code> just to see it
+   crash.
+
+   Since every experienced programmer add an <code>assert()</code> to
+   ensure that you get a proper failure for the debug builds when a
+   null pointer passed (you add asserts too, right?), you will in this
+   case instead have a controlled (early) crash in the debug build.
+
+
+   @subsection ErrorHandlingTests Error handling
+
+   This is testing that the errors your component is designed to give
+   actually are produced.  For example, testing that trying to open a
+   non-existing file produces a sensible error code.
+
+
+   @subsection BadEnvironmentTests Environment
+
+   Sometimes, modules has to behave well even when the environment
+   fails to work correctly.  Typical examples are when the computer is
+   out of dynamic memory or when the disk is full.  You can emulate
+   this by replacing, e.g., <code>malloc()</code> with your own
+   version that will work for a while, but then fail.  Some things are
+   worth to keep in mind here:
+
+   - Make sure to make the function fail deterministically, so that
+     you really can repeat the test.
+
+   - Make sure that it doesn't just fail immediately.  The unit might
+     have checks for the first case, but might actually fail some time
+     in the near future.
+
+
+   @section UnitTest How to structure a unit test
+
+   In this section we will give some advice on how to structure the
+   unit tests to make the development run smoothly.  The basic
+   structure of a test is:
+
+   - Plan
+   - Test
+   - Report
+
+
+   @subsection TestPlanning Plan the test
+
+   Planning the test means telling how many tests there are.  In the
+   event that one of the tests causes a crash, it is then possible to
+   see that there are fewer tests than expected, and print a proper
+   error message.
+
+   To plan a test, use the @c plan() function in the following manner:
+
+   @code
+   int main(int argc, char *argv[])
+   {
+     plan(5);
+         .
+         .
+         .
+   }
+   @endcode
+
+   If you don't call the @c plan() function, the number of tests
+   executed will be printed at the end.  This is intended to be used
+   while developing the unit and you are constantly adding tests.  It
+   is not indented to be used after the unit has been released.
+
+
+   @subsection TestRunning Execute the test
+
+   To report the status of a test, the @c ok() function is used in the
+   following manner:
+
+   @code
+   int main(int argc, char *argv[])
+   {
+     plan(5);
+     ok(ducks == paddling_ducks,
+        ""%d ducks did not paddle"", ducks - paddling_ducks);
+             .
+             .
+             .
+   }
+   @endcode
+
+   This will print a test result line on the standard output in TAP
+   format, which allows TAP handling frameworks (like Test::Harness)
+   to parse the status of the test.
+
+   @subsection TestReport  Report the result of the test
+
+   At the end, a complete test report should be written, with some
+   statistics. If the test returns EXIT_SUCCESS, all tests were
+   successfull, otherwise at least one test failed.
+
+   To get a TAP complient output and exit status, report the exit
+   status in the following manner:
+
+   @code
+   int main(int argc, char *argv[])
+   {
+     plan(5);
+     ok(ducks == paddling_ducks,
+        ""%d ducks did not paddle"", ducks - paddling_ducks);
+             .
+             .
+             .
+     return exit_status();
+   }
+   @endcode
+
+   @section DontDoThis Ways to not do unit testing
+
+   In this section, we'll go through some quite common ways to write
+   tests that are <em>not</em> a good idea.
+
+   @subsection BreadthFirstTests Doing breadth-first testing
+
+   If you're writing a library with several functions, don't test all
+   functions using size 1, then all functions using size 2, etc.  If a
+   test for size 42 fails, you have no easy way of tracking down why
+   it failed.
+
+   It is better to concentrate on getting one function to work at a
+   time, which means that you test each function for all sizes that
+   you think is reasonable.  Then you continue with the next function,
+   doing the same. This is usually also the way that a library is
+   developed (one function at a time) so stick to testing that is
+   appropriate for now the unit is developed.
+
+   @subsection JustToBeSafeTest Writing unnecessarily large tests
+
+   Don't write tests that use parameters in the range 1-1024 unless
+   you have a very good reason to belive that the component will
+   succeed for 562 but fail for 564 (the numbers picked are just
+   examples).
+
+   It is very common to write extensive tests ""just to be safe.""
+   Having a test suite with a lot of values might give you a warm
+   fuzzy feeling, but it doesn't really help you find the bugs.  Good
+   tests fail; seriously, if you write a test that you expect to
+   succeed, you don't need to write it.  If you think that it
+   <em>might</em> fail, <em>then</em> you should write it.
+
+   Don't take this as an excuse to avoid writing any tests at all
+   ""since I make no mistakes"" (when it comes to this, there are two
+   kinds of people: those who admit they make mistakes, and those who
+   don't); rather, this means that there is no reason to test that
+   using a buffer with size 100 works when you have a test for buffer
+   size 96.
+
+   The drawback is that the test suite takes longer to run, for little
+   or no benefit.  It is acceptable to do a exhaustive test if it
+   doesn't take too long to run and it is quite common to do an
+   exhaustive test of a function for a small set of values.
+   Use your judgment to decide what is excessive: your milage may
+   vary.",Working
+repos/miktex/Programs/Editors/TeXworks/source/src/TeXHighlighter.cpp,"NB: Don't subtract charsRemoved. If charsAdded = 0 and charsRemoved > 0
+we still want to rehighlight that line
+Add 1 because of the following cases:
+a) if charsAdded = 0, we still need to have at least one character in the range
+b) if the insertion ends in a newline character (0x2029), for some
+reason the line immediately following the inserted line loses
+highlighting. Adding 1 ensures that that next line is rehighlighted
+as well.
+c) if the insertion does not end in a newline character, adding 1 does
+not extend the range to a new line, so it doesn't matter (as
+highlighting is only performed line-wise).",Working
+curl/tests/server/util.c/util.c,"** GetTickCount() is available on _all_ Windows versions from W95 up
+  ** to nowadays. Returns milliseconds elapsed since last system boot,
+  ** increases monotonically and wraps once 49.7 days have elapsed.
+  **
+  ** GetTickCount64() is available on Windows version from Windows Vista
+  ** and Windows Server 2008 up to nowadays. The resolution of the
+  ** function is limited to the resolution of the system timer, which
+  ** is typically in the range of 10 milliseconds to 16 milliseconds.",Library
+repos/zlib/gzwrite.c,"gzwrite.c -- zlib functions for writing gzip files
+ * Copyright (C) 2004-2017 Mark Adler
+ * For conditions of distribution and use, see copyright notice in zlib.h",library
+repos/zlib/gzwrite.c,"do the printf() into the input buffer, put length in len -- the input
+       buffer is double-sized just for this function, so there is guaranteed to
+       be state->size bytes available after the current contents",library
+repos/zlib/gzwrite.c,check that printf() results fit in buffer,library
+repos/zlib/inffast.c,"inflate_fast() speedups that turned out slower (on a PowerPC G3 750CXe):
+   - Using bit fields for code structure
+   - Different op definition to avoid & for extra bits (do & for table bits)
+   - Three separate decoding do-loops for direct, window, and wnext == 0
+   - Special case for distance > 1 copies to do overlapped load and store copy
+   - Explicit branch predictions (based on measured branch probabilities)
+   - Deferring match copy and interspersed it with decoding subsequent codes
+   - Swapping literal/length else
+   - Swapping window/direct else
+   - Larger unrolled copy loops (three is about right)
+   - Moving len -= 3 statement into middle of loop",library
+repos/zlib/infback.c,"Assure that some output space is available, by writing out the window
+   if it's full.  If the write fails, return from inflateBack() with a
+   Z_BUF_ERROR.",library
+repos/zlib/infback.c,"strm provides the memory allocation functions and window buffer on input,
+   and provides information on the unused input on return.  For Z_DATA_ERROR
+   returns, strm will also provide an error message.
+
+   in() and out() are the call-back input and output functions.  When
+   inflateBack() needs more input, it calls in().  When inflateBack() has
+   filled the window with output, or when it completes with data in the
+   window, it calls out() to write out the data.  The application must not
+   change the provided input until in() is called again or inflateBack()
+   returns.  The application must not change the window/output buffer until
+   inflateBack() returns.
+
+   in() and out() are called with a descriptor parameter provided in the
+   inflateBack() call.  This parameter can be a structure that provides the
+   information required to do the read or write, as well as accumulated
+   information on the input and output such as totals and check values.
+
+   in() should return zero on failure.  out() should return non-zero on
+   failure.  If either in() or out() fails, than inflateBack() returns a
+   Z_BUF_ERROR.  strm->next_in can be checked for Z_NULL to see whether it
+   was in() or out() that caused in the error.  Otherwise,  inflateBack()
+   returns Z_STREAM_END on success, Z_DATA_ERROR for an deflate format
+   error, or Z_MEM_ERROR if it could not allocate memory for the state.
+   inflateBack() can also return Z_STREAM_ERROR if the input parameters
+   are not correct, i.e. strm is Z_NULL or the state was not initialized.",library
+repos/zlib/infback.c,"build code tables -- note: do not change the lenbits or distbits
+               values here (9 and 6) without reading the comments in inftrees.h
+               concerning the ENOUGH constants, which depend on those values",library
+repos/zlib/infback.c,use inflate_fast() if we have enough input and output,library
+repos/zlib/adler32.c,"adler32.c -- compute the Adler-32 checksum of a data stream
+ * Copyright (C) 1995-2011, 2016 Mark Adler
+ * For conditions of distribution and use, see copyright notice in zlib.h",library
+repos/zlib/inflate.c,"Write out the inffixed.h that is #include'd above.  Defining MAKEFIXED also
+   defines BUILDFIXED, so the tables are built on the fly.  makefixed() writes
+   those tables to stdout, which would be piped to inffixed.h.  A small program
+   can simply call makefixed to do this:
+
+    void makefixed(void);
+
+    int main(void)
+    {
+        makefixed();
+        return 0;
+    }
+
+   Then that can be linked with zlib built with MAKEFIXED defined and run:
+
+    a.out > inffixed.h",library
+repos/zlib/inflate.c,"inffixed.h -- table for decoding fixed codes"");
+    puts(""     * Generated automatically by makefixed()."");
+    puts(""",library
+repos/zlib/inflate.c,"WARNING: this file should *not* be used by applications."");
+    puts(""       It is part of the implementation of this library and is"");
+    puts(""       subject to change. Applications should only use zlib.h."");
+    puts(""",library
+repos/miktex/Programs/Editors/TeXworks/source/src/utils/ResourcesLibrary.cpp,"we have to remove the file first as QFile::copy doesn't
+overwrite existing files",library
+repos/miktex/Programs/Editors/TeXworks/source/src/utils/FullscreenManager.cpp,"If the shortcut gets enabled and corresponds to a valid, named
+QAction, update it to the QAction's key sequence (in case that
+got changed in the meantime)",library
+repos/miktex/Programs/Editors/TeXworks/source/src/scripting/Script.cpp,"Note: This line is a hack!
+QVariant::data() is undocumented; QGenericArgument should not be
+called directly; if this ever causes problems, think of another
+(better) way to do this",library
+repos/miktex/Programs/Editors/TeXworks/source/src/scripting/Script.cpp,"Note: This line is a hack!
+QGenericArgument should not be
+called directly; if this ever causes problems, think of another
+(better) way to do this",library
+SFML/src/SFML/Network/Unix/SocketImpl.cpp/SocketImpl.cpp,"The followings are sometimes equal to EWOULDBLOCK,
+so we have to make a special case for them in order
+to avoid having double values in the switch case",library
+SFML/src/SFML/Network/Http.cpp/Http.cpp,HTTPS protocol -- unsupported (requires encryption and certificates and stuff...),library
+SFML/src/SFML/Network/Http.cpp/Http.cpp,Undefined protocol - use HTTP,library
+repos/zlib/inflate.c,"inflate() uses a state machine to process as much input data and generate as
+   much output data as possible before returning.  The state machine is
+   structured roughly as follows:
+
+    for (;;) switch (state) {
+    ...
+    case STATEn:
+        if (not enough input data or output space to make progress)
+            return;
+        ... make progress ...
+        state = STATEm;
+        break;
+    ...
+    }
+
+   so when inflate() is called again, the same case is attempted again, and
+   if the appropriate resources are provided, the machine proceeds to the
+   next state.  The NEEDBITS() macro is usually the way the state evaluates
+   whether it can proceed or should return.  NEEDBITS() does the return if
+   the requested bits are not available.  The typical use of the BITS macros
+   is:
+
+        NEEDBITS(n);
+        ... do something with BITS(n) ...
+        DROPBITS(n);
+
+   where NEEDBITS(n) either returns from inflate() if there isn't enough
+   input left to load n bits into the accumulator, or it continues.  BITS(n)
+   gives the low n bits in the accumulator.  When done, DROPBITS(n) drops
+   the low n bits off the accumulator.  INITBITS() clears the accumulator
+   and sets the number of available bits to zero.  BYTEBITS() discards just
+   enough bits to put the accumulator on a byte boundary.  After BYTEBITS()
+   and a NEEDBITS(8), then BITS(8) would return the next byte in the stream.
+
+   NEEDBITS(n) uses PULLBYTE() to get an available byte of input, or to return
+   if there is no input available.  The decoding of variable length codes uses
+   PULLBYTE() directly in order to pull just enough bytes to decode the next
+   code, and no more.
+
+   Some states loop until they get enough input, making sure that enough
+   state information is maintained to continue the loop where it left off
+   if NEEDBITS() returns in the loop.  For example, want, need, and keep
+   would all have to actually be part of the saved state in case NEEDBITS()
+   returns:
+
+    case STATEw:
+        while (want < need) {
+            NEEDBITS(n);
+            keep[want++] = BITS(n);
+            DROPBITS(n);
+        }
+        state = STATEx;
+    case STATEx:
+
+   As shown above, if the next state is also the next case, then the break
+   is omitted.
+
+   A state may also return if there is not enough output space available to
+   complete that state.  Those states are copying stored data, writing a
+   literal byte, and copying a matching string.
+
+   When returning, a ""goto inf_leave"" is used to update the total counters,
+   update the check value, and determine whether any progress has been made
+   during that inflate() call in order to return the proper return code.
+   Progress is defined as a change in either strm->avail_in or strm->avail_out.
+   When there is a window, goto inf_leave will update the window with the last
+   output written.  If a goto inf_leave occurs in the middle of decompression
+   and there is no window currently, goto inf_leave will create one and copy
+   output to the window for the next call of inflate().
+
+   In this implementation, the flush parameter of inflate() only affects the
+   return code (per zlib.h).  inflate() always writes as much as possible to
+   strm->next_out, given the space available and the provided input--the effect
+   documented in zlib.h of Z_SYNC_FLUSH.  Furthermore, inflate() always defers
+   the allocation of and copying into a sliding window until necessary, which
+   provides the effect documented in zlib.h for Z_FINISH when the entire input
+   stream available.  So the only thing the flush parameter actually does is:
+   when flush is set to Z_FINISH, inflate() cannot return Z_OK.  Instead it
+   will return Z_BUF_ERROR if it has not reached the end of the stream.",Exception
+repos/zlib/inflate.c,"Returns true if inflate is currently at the end of a block generated by
+   Z_SYNC_FLUSH or Z_FULL_FLUSH. This function is used by one PPP
+   implementation to provide an additional safety check. PPP uses
+   Z_SYNC_FLUSH but removes the length bytes of the resulting empty stored
+   block. When decompressing, PPP checks that at the end of input packet,
+   inflate is waiting for these length bytes.",Exception
+repos/zlib/inftrees.c,"Create and fill in decoding tables.  In this loop, the table being
+       filled is at next and has curr index bits.  The code being used is huff
+       with length len.  That code is converted to an index by dropping drop
+       bits off of the bottom.  For codes where len is less than drop + curr,
+       those top drop + curr - len bits are incremented through all values to
+       fill the table with replicated entries.
+
+       root is the number of index bits for the root table.  When len exceeds
+       root, sub-tables are created pointed to by the root entry with an index
+       of the low root bits of huff.  This is saved in low to check for when a
+       new sub-table should be started.  drop is zero when the root table is
+       being filled, and drop is root when sub-tables are being filled.
+
+       When a new sub-table is needed, it is necessary to look ahead in the
+       code lengths to determine what size sub-table is needed.  The length
+       counts are used for this, and so count[] is decremented as codes are
+       entered in the tables.
+
+       used keeps track of how many table entries have been allocated from the
+       provided *table space.  It is checked for LENS and DIST tables against
+       the constants ENOUGH_LENS and ENOUGH_DISTS to guard against changes in
+       the initial root table size constants.  See the comments in inftrees.h
+       for more information.
+
+       sym increments through all symbols, and the loop terminates when
+       all codes of length max, i.e. all codes, have been processed.  This
+       routine permits incomplete codes, so another loop after this one fills
+       in the rest of the decoding tables with invalid code markers.",Exception
+curl/tests/server/getpart.c/getpart.c,"* readline()
+ *
+ * Reads a complete line from a file into a dynamically allocated buffer.
+ *
+ * Calling function may call this multiple times with same 'buffer'
+ * and 'bufsize' pointers to avoid multiple buffer allocations. Buffer
+ * will be reallocated and 'bufsize' increased until whole line fits in
+ * buffer before returning it.
+ *
+ * Calling function is responsible to free allocated buffer.
+ *
+ * This function may return:
+ *   GPE_OUT_OF_MEMORY
+ *   GPE_END_OF_FILE
+ *   GPE_OK",Exception
+curl/tests/server/getpart.c/getpart.c,"* appenddata()
+ *
+ * This appends data from a given source buffer to the end of the used part of
+ * a destination buffer. Arguments relative to the destination buffer are, the
+ * address of a pointer to the destination buffer 'dst_buf', the length of data
+ * in destination buffer excluding potential null string termination 'dst_len',
+ * the allocated size of destination buffer 'dst_alloc'. All three destination
+ * buffer arguments may be modified by this function. Arguments relative to the
+ * source buffer are, a pointer to the source buffer 'src_buf' and indication
+ * whether the source buffer is base64 encoded or not 'src_b64'.
+ *
+ * If the source buffer is indicated to be base64 encoded, this appends the
+ * decoded data, binary or whatever, to the destination. The source buffer
+ * may not hold binary data, only a null terminated string is valid content.
+ *
+ * Destination buffer will be enlarged and relocated as needed.
+ *
+ * Calling function is responsible to provide preallocated destination
+ * buffer and also to deallocate it when no longer needed.
+ *
+ * This function may return:
+ *   GPE_OUT_OF_MEMORY
+ *   GPE_OK",Exception
+repos/gromacs/src/external/thread_mpi/src/numa_malloc.cpp/numa_malloc.cpp,"Windows NUMA memory allocation support.
+
+    NUMA support is implemented to maximize the chance that memory access
+    patterns remain Local to the NUMA node.  This avoids penalties accessing
+    ""remote"" memory.
+    An important assumption here is that code paths which allocate and
+    reallocate heap blocks are likely to be accessing that allocated memory
+    on the same NUMA node.
+    Testing has shown the above criteria to be met, yielding gains of > 15%
+    when on Windows with NUMA hardware.
+
+    The high level approach is:
+    1. Use a separate heap per NUMA node.  This reduces heap contention, steers
+       allocations to the local NUMA node, and avoids re-use of freed heap
+       blocks across (remote) NUMA nodes.
+    2. Allocate each heap locally to each NUMA node, such that heap control
+       structures are on the NUMA node accessing the heap.
+    3. During realloc operations, transfer the new block to the local NUMA
+       node, if appropriate.  This is a rare case when thread affinity and
+       access patterns are correct.
+    4. Use GetProcAddress() to obtain function pointers to functions that are
+       operating system version dependent, to allow maximum binary
+       compatibility.
+
+    Scott Field (sfield@microsoft.com)      Jan-2011",Exception
+repos/gromacs/src/external/thread_mpi/src/numa_malloc.cpp/numa_malloc.cpp,"handle deferred creation of heap handle array.
+       note: this could be moved to one-time init path.",Exception
+repos/gromacs/src/external/thread_mpi/src/numa_malloc.cpp/numa_malloc.cpp,"just return the process heap.  We'll try to create a heap
+               again next time",Exception
+curl/tests/server/socksd.c/socksd.c,"o  REP    Reply field:
+    o  X'00' succeeded
+    o  X'01' general SOCKS server failure
+    o  X'02' connection not allowed by ruleset
+    o  X'03' Network unreachable
+    o  X'04' Host unreachable
+    o  X'05' Connection refused
+    o  X'06' TTL expired
+    o  X'07' Command not supported
+    o  X'08' Address type not supported
+    o  X'09' to X'FF' unassigned",Exception
+repos/server_mariadb/extra/replace.c,"Replace strings in textfile
+
+  This program replaces strings in files or from stdin to stdout.
+  It accepts a list of from-string/to-string pairs and replaces
+  each occurrence of a from-string with the corresponding to-string.
+  The first occurrence of a found string is matched. If there is more
+  than one possibility for the string to replace, longer matches
+  are preferred before shorter matches.
+
+  Special characters in from string:
+  \^    Match start of line.
+  \$	Match end of line.
+  \b	Match space-character, start of line or end of line.
+        For end \b the next replace starts locking at the end space-character.
+        An \b alone or in a string matches only a space-character.
+  \r, \t, \v as in C.
+  The programs make a DFA-state-machine of the strings and the speed isn't
+  dependent on the count of replace-strings (only of the number of replaces).
+  A line is assumed ending with \n or \0.
+  There are no limit except memory on length of strings.
+
+  Written by Monty.
+  fill_buffer_retaining() is taken from gnu-grep and modified.",Exception
+repos/server_mariadb/extra/replace.c,"Fill the buffer retaining the last n bytes at the beginning of the
+  newly filled buffer (for backward context).  Returns the number of new
+  bytes read from disk.",Exception
+repos/server_mariadb/extra/readline/display.c,"Keep two buffers; one which reflects the current contents of the
+   screen, and the other to draw what we think the new contents should
+   be.  Then compare the buffers, and make whatever changes to the
+   screen itself that we should.  Finally, make the buffer that we
+   just drew into be the one which reflects the current contents of the
+   screen, and place the cursor where it belongs.
+
+   Commands that want to can fix the display themselves, and then let
+   this function know that the display has been fixed by setting the
+   RL_DISPLAY_FIXED variable.  This is good for efficiency.",Exception
+repos/libpng-code/pngwutil.c,"This is similar to png_text_compress, above, except that it does not require
+ * all of the data at once and, instead of buffering the compressed result,
+ * writes it as IDAT chunks.  Unlike png_text_compress it *can* png_error out
+ * because it calls the write interface.  As a result it does its own error
+ * reporting and does not return an error code.  In the event of error it will
+ * just call png_error.  The input data length may exceed 32-bits.  The 'flush'
+ * parameter is exactly the same as that to deflate, with the following
+ * meanings:
+ *
+ * Z_NO_FLUSH: normal incremental output of compressed data
+ * Z_SYNC_FLUSH: do a SYNC_FLUSH, used by png_write_flush
+ * Z_FINISH: this is the end of the input, do a Z_FINISH and clean up
+ *
+ * The routine manages the acquire and release of the png_ptr->zstream by
+ * checking and (at the end) clearing png_ptr->zowner; it does some sanity
+ * checks on the 'mode' flags while doing this.",Exception
+repos/libpng-code/pngwutil.c,"First time.   Ensure we have a temporary buffer for compression and
+       * trim the buffer list if it has more than one entry to free memory.
+       * If 'WRITE_COMPRESSED_TEXT' is not set the list will never have been
+       * created at this point, but the check here is quick and safe.",Exception
+repos/libpng-code/pngerror.c,"This function is called whenever there is a fatal error.  This function
+ * should not be changed.  If there is a need to handle errors differently,
+ * you should supply a replacement error function and use png_set_error_fn()
+ * to replace the error function at run-time.",Exception
+OpenCPN/src/toolbar.cpp/toolbar.cpp,"First try getting the icon from an SVG definition.
+If it is not found, try to see if it is available in the style
+If not there, we build a new icon from the style BG and the (default) plugin icon.",Exception
+OpenCPN/src/TCDS_Binary_Harmonic.cpp/TCDS_Binary_Harmonic.cpp,"Timelib  Time services.
+ *    Original XTide source code date: 1997-08-15
+ *    Last modified 1998-09-07 by Mike Hopper for WXTide32
+ *
+ *    Copyright (C) 1997  David Flater.
+ *    Also starring:  Geoff Kuenning; Rob Miracle; Dean Pentcheff;
+ *    Eric Rosen.
+ *
+ *    This program is free software; you can redistribute it and/or modify
+ *    it under the terms of the GNU General Public License as published by
+ *    the Free Software Foundation; either version 2 of the License, or
+ *    (at your option) any later version.
+ *
+ *    This program is distributed in the hope that it will be useful,
+ *    but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *    GNU General Public License for more details.
+ *
+ *    You should have received a copy of the GNU General Public License
+ *    along with this program; if not, write to the Free Software
+ *    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ *
+ *    Changes by Mike Hopper for WXTide32:
+ *    Changed do_timestamp to shorten NT's LONG time zone names just the CAPS
+ *    Changed _hpux selector to WIN32 to select HP timezone values.
+ *    Added a whole set of remote TZ handler routines, all starting with ""tz"".",Exception
+OpenCPN/src/routemanagerdialog.cpp/routemanagerdialog.cpp,"FIXME add/remove route segments/waypoints from selectable items, so there are no
+hidden selectables! This should probably be done outside this class!
+The problem is that the current waypoint class does not provide good support
+for this, there is a ""visible"" property, but no means for proper management.
+Jan. 28 2010: Ideas:
+- Calculate on the fly how many visible routes use a waypoint.
+This requires a semidouble loop (routes, waypoints in visible routes). It could
+be done by the function getting the selection. Potentially somewhat slow?
+- OR keep a property in waypoints telling that
+(A number, increased/decreased for each waypoint by Route::SetVisible()).
+Immediate result when detecting the selectable object, small overhead in
+Route::SetVisible(). I prefer this.
+- We also need to know if the waypoint should otherwise be visible,
+ie it is a ""normal"" waypoint used in the route (then it should be visible
+in all cases). Is this possible with current code?
+- Get rid of the Select objects, they do no good! They should be replaced with a function
+in the application, the search would reqire equal amount of looping, but less
+dereferencing pointers, and it would remove the overhead of keeping and maintaining
+the extra pointer lists.",Exception
+repos/libpng-code/pngerror.c,"This function returns a pointer to the error_ptr associated with the user
+ * functions.  The application should free any memory associated with this
+ * pointer before png_write_destroy and png_read_destroy are called.",Exception
+repos/libpng-code/pngrtran.c,"Called to handle the (input) palette case.  In png_do_read_transformations
+    * the first step is to expand the palette if requested, so this code must
+    * take care to only make changes that are invariant with respect to the
+    * palette expansion, or only do them if there is no expansion.
+    *
+    * STRIP_ALPHA has already been handled in the caller (by setting num_trans
+    * to 0.)",Exception
+repos/server_mariadb/extra/innochecksum.cc,"@param>>_______[in] name>_____name of file.
+ @retval file pointer; file pointer is NULL when error occured.",Parameter
+repos/server_mariadb/extra/innochecksum.cc,"Read the content of file
+
+ @param  [in,out]	buf			read the file in buffer
+ @param  [in]		partial_page_read	enable when to read the
+						remaining buffer for first page.
+ @param  [in]		physical_page_size	Physical/Commpressed page size.
+ @param  [in,out]	fil_in			file pointer created for the
+						tablespace.
+ @retval no. of bytes read.",Parameter
+repos/server_mariadb/extra/innochecksum.cc,"Check if page is doublewrite buffer or not.
+ @param [in] page	buffer page
+
+ @retval true  if page is doublewrite buffer otherwise false.",Parameter
+OpenCPN/src/tcmgr.cpp/tcmgr.cpp,"**************************************************************************\
+*                                                                           *
+*   Function        signed_bit_unpack - Unpacks a signed long value from    *
+*                   consecutive bits in buffer.                             *
+*                                                                           *
+*   Synopsis        signed_bit_unpack (buffer, start, numbits);             *
+*                                                                           *
+*                   NV_U_BYTE buffer[]      address of buffer to use        *
+*                   NV_U_INT32 start        start bit position in buffer    *
+*                   NV_U_INT32 numbits      number of bits to retrieve      *
+*                                                                           *
+*   Description     Unpacks the value from 'numbits' bits in 'buffer'       *
+*                   starting at bit position 'start'.  The value is assumed *
+*                   to be signed.  The majority of this code is based on    *
+*                   Appendix C of Naval Ocean Research and Development      *
+*                   Activity Report #236, 'Data Base Structure to Support   *
+*                   the Production of the Digital Bathymetric Data Base',   *
+*                   Nov. 1989, James E. Braud, John L. Breckenridge, James  *
+*                   E. Current, Jerry L. Landrum.                           *
+*                                                                           *
+*   Returns         NV_INT32              value retrieved from buffer       *
+*                                                                           *
+*   Author          Jan C. Depner                                           *
+*                                                                           *
+\**************************************************************************",Parameter
+repos/zlib/gzwrite.c,write len bytes from buf (the return value will fit in an int),Parameter
+curl/tests/server/util.c/util.c,"* Portable function used for waiting a specific amount of ms.
+ * Waiting indefinitely with this function is not allowed, a
+ * zero or negative timeout value will return immediately.
+ *
+ * Return values:
+ *   -1 = system call error, or invalid timeout value
+ *    0 = specified timeout has elapsed",Parameter
+repos/server_mariadb/extra/comp_err.c,"Find the message in a particular language
+
+  SYNOPSIS
+    find_message()
+    err             Error to find message for
+    lang            Language of message to find
+    no_default      Don't return default (English) if does not exit
+
+  RETURN VALUE
+    Returns the message structure if one is found, or NULL if not.",Parameter
+repos/server_mariadb/extra/comp_err.c,"Check message format specifiers against error message for
+  previous language
+
+  SYNOPSIS
+    checksum_format_specifier()
+    msg            String for which to generate checksum
+                   for the format specifiers
+
+  RETURN VALUE
+    Returns the checksum for all the characters of the
+    format specifiers
+
+    Ex.
+     ""text '%-64.s' text part 2 %d'""
+            ^^^^^^              ^^
+            characters will be xored to form checksum
+
+    NOTE:
+      Does not support format specifiers with positional args
+      like ""%2$s"" but that is not yet supported by my_vsnprintf
+      either.",Parameter
+repos/server_mariadb/extra/readline/display.c,"* Expand the prompt string into the various display components, if
+ * necessary.
+ *
+ * local_prompt = expanded last line of string in rl_display_prompt
+ *		  (portion after the final newline)
+ * local_prompt_prefix = portion before last newline of rl_display_prompt,
+ *			 expanded via expand_prompt
+ * prompt_visible_length = number of visible characters in local_prompt
+ * prompt_prefix_length = number of visible characters in local_prompt_prefix
+ *
+ * This function is called once per call to readline().  It may also be
+ * called arbitrarily to expand the primary prompt.
+ *
+ * The return value is the number of visible characters on the last line
+ * of the (possibly multi-line) prompt.",Parameter
+repos/miktex/Programs/Editors/TeXworks/source/src/TeXDocumentWindow.cpp,"percent should typically be between 100 (single spacing) and 200 (double
+spacing). Values below 1 are simply ignored (this includes the ""typical
+invalid return value"" of 0).",Parameter
+repos/miktex/Programs/Editors/TeXworks/source/modules/synctex/synctex_parser_utils.c,"The base name is necessary to deal with the 2011 file naming convention...
+ *  path is a '\0' terminated string
+ *  The return value is the trailing part of the argument,
+ *  just following the first occurrence of the regexp pattern ""[^|/|\].[\|/]+"".",Parameter
+repos/miktex/Programs/Editors/TeXworks/source/modules/synctex/synctex_parser.c,"*  _synctex_tree_set_... methods return the old value.
+ *  The return value of _synctex_tree_set_child and 
+ *  _synctex_tree_set_sibling must be released somehown.",Parameter
+repos/zlib/inffast.c,"decode literals and length/distances until end-of-block or not enough
+       input data or output space",Parameter
+repos/zlib/inffast.c,max distance in output,Parameter
+repos/zlib/infback.c,"strm provides memory allocation functions in zalloc and zfree, or
+   Z_NULL to use the library memory allocation functions.
+
+   windowBits is in the range 8..15, and window is a user-supplied
+   window and output buffer that is 2**windowBits bytes.",Parameter
+repos/zlib/infback.c,copy stored block from input to output,Parameter
+repos/zlib/infback.c,get distance extra bits,Parameter
+repos/zlib/gzread.c,get at least the magic bytes in the input buffer,Parameter
+repos/zlib/gzread.c,get more input for inflate(),Parameter
+repos/zlib/gzread.c,Skip len uncompressed bytes of output.  Return -1 on error,Parameter
+repos/zlib/zutil.c,"Turbo C malloc() does not allow dynamic allocation of 64K bytes
+ * and farmalloc(64K) returns a pointer with an offset of 8, so we
+ * must fix the pointer. Warning: the pointer must be put back to its
+ * original form in order to free it, use zcfree().",Datastructure
+repos/zlib/zutil.c,"This table is used to remember the original form of pointers
+ * to large buffers (64K). Such pointers are normalized with a zero offset.
+ * Since MSDOS is not a preemptive multitasking OS, this table is not
+ * protected from concurrent access. This hack doesn't work anyway on
+ * a protected system like OS/2. Use Microsoft C instead.",Datastructure
+repos/zlib/infback.c,"strm provides memory allocation functions in zalloc and zfree, or
+   Z_NULL to use the library memory allocation functions.
+
+   windowBits is in the range 8..15, and window is a user-supplied
+   window and output buffer that is 2**windowBits bytes.",Datastructure
+repos/zlib/compress.c,"===========================================================================
+     Compresses the source buffer into the destination buffer. The level
+   parameter has the same meaning as in deflateInit.  sourceLen is the byte
+   length of the source buffer. Upon entry, destLen is the total size of the
+   destination buffer, which must be at least 0.1% larger than sourceLen plus
+   12 bytes. Upon exit, destLen is the actual size of the compressed buffer.
+
+     compress2 returns Z_OK if success, Z_MEM_ERROR if there was not enough
+   memory, Z_BUF_ERROR if there was not enough room in the output buffer,
+   Z_STREAM_ERROR if the level parameter is invalid.",Datastructure
+repos/zlib/crc32.c,"crc32.c -- compute the CRC-32 of a data stream
+ * Copyright (C) 1995-2006, 2010, 2011, 2012, 2016 Mark Adler
+ * For conditions of distribution and use, see copyright notice in zlib.h
+ *
+ * Thanks to Rodney Brown <rbrown64@csc.com.au> for his contribution of faster
+ * CRC methods: exclusive-oring 32 bits of data at a time, and pre-computing
+ * tables for updating the shift register in one step with three exclusive-ors
+ * instead of four steps with four exclusive-ors.  This results in about a
+ * factor of two increase in speed on a Power PC G4 (PPC7455) using gcc -O3.",Datastructure
+repos/zlib/crc32.c,"Note on the use of DYNAMIC_CRC_TABLE: there is no mutex or semaphore
+  protection on the static variables used to control the first-use generation
+  of the crc tables.  Therefore, if you #define DYNAMIC_CRC_TABLE, you should
+  first call get_crc_table() to initialize the tables before allowing more than
+  one thread to use crc32().
+
+  DYNAMIC_CRC_TABLE and MAKECRCH can be #defined to write out crc32.h.",Datastructure
+repos/zlib/inflate.c,"Return state with length and distance decoding tables and index sizes set to
+   fixed code decoding.  Normally this returns fixed tables from inffixed.h.
+   If BUILDFIXED is defined, then instead this routine builds the tables the
+   first time it's called, and returns those tables the first time and
+   thereafter.  This reduces the size of the code by about 2K bytes, in
+   exchange for a little execution time.  However, BUILDFIXED should not be
+   used for threaded applications, since the rewriting of the tables and virgin
+   may not be thread-safe.",Datastructure
+repos/zlib/inflate.c,"Update the window with the last wsize (normally 32K) bytes written before
+   returning.  If window does not exist yet, create it.  This is only called
+   when a window is already in use, or when output has been written during this
+   inflate call, but the end of the deflate stream has not been reached yet.
+   It is also called to create a window for dictionary data when a dictionary
+   is loaded.
+
+   Providing output buffers larger than 32K to inflate() should provide a speed
+   advantage, since only the last 32K of output is copied to the sliding window
+   upon return from inflate(), and since all distances after the first 32K of
+   output will fall in the output data, making match copies simpler and faster.
+   The advantage may be dependent on the size of the processor's data caches.",Datastructure
+repos/zlib/inflate.c,"inflate() uses a state machine to process as much input data and generate as
+   much output data as possible before returning.  The state machine is
+   structured roughly as follows:
+
+    for (;;) switch (state) {
+    ...
+    case STATEn:
+        if (not enough input data or output space to make progress)
+            return;
+        ... make progress ...
+        state = STATEm;
+        break;
+    ...
+    }
+
+   so when inflate() is called again, the same case is attempted again, and
+   if the appropriate resources are provided, the machine proceeds to the
+   next state.  The NEEDBITS() macro is usually the way the state evaluates
+   whether it can proceed or should return.  NEEDBITS() does the return if
+   the requested bits are not available.  The typical use of the BITS macros
+   is:
+
+        NEEDBITS(n);
+        ... do something with BITS(n) ...
+        DROPBITS(n);
+
+   where NEEDBITS(n) either returns from inflate() if there isn't enough
+   input left to load n bits into the accumulator, or it continues.  BITS(n)
+   gives the low n bits in the accumulator.  When done, DROPBITS(n) drops
+   the low n bits off the accumulator.  INITBITS() clears the accumulator
+   and sets the number of available bits to zero.  BYTEBITS() discards just
+   enough bits to put the accumulator on a byte boundary.  After BYTEBITS()
+   and a NEEDBITS(8), then BITS(8) would return the next byte in the stream.
+
+   NEEDBITS(n) uses PULLBYTE() to get an available byte of input, or to return
+   if there is no input available.  The decoding of variable length codes uses
+   PULLBYTE() directly in order to pull just enough bytes to decode the next
+   code, and no more.
+
+   Some states loop until they get enough input, making sure that enough
+   state information is maintained to continue the loop where it left off
+   if NEEDBITS() returns in the loop.  For example, want, need, and keep
+   would all have to actually be part of the saved state in case NEEDBITS()
+   returns:
+
+    case STATEw:
+        while (want < need) {
+            NEEDBITS(n);
+            keep[want++] = BITS(n);
+            DROPBITS(n);
+        }
+        state = STATEx;
+    case STATEx:
+
+   As shown above, if the next state is also the next case, then the break
+   is omitted.
+
+   A state may also return if there is not enough output space available to
+   complete that state.  Those states are copying stored data, writing a
+   literal byte, and copying a matching string.
+
+   When returning, a ""goto inf_leave"" is used to update the total counters,
+   update the check value, and determine whether any progress has been made
+   during that inflate() call in order to return the proper return code.
+   Progress is defined as a change in either strm->avail_in or strm->avail_out.
+   When there is a window, goto inf_leave will update the window with the last
+   output written.  If a goto inf_leave occurs in the middle of decompression
+   and there is no window currently, goto inf_leave will create one and copy
+   output to the window for the next call of inflate().
+
+   In this implementation, the flush parameter of inflate() only affects the
+   return code (per zlib.h).  inflate() always writes as much as possible to
+   strm->next_out, given the space available and the provided input--the effect
+   documented in zlib.h of Z_SYNC_FLUSH.  Furthermore, inflate() always defers
+   the allocation of and copying into a sliding window until necessary, which
+   provides the effect documented in zlib.h for Z_FINISH when the entire input
+   stream available.  So the only thing the flush parameter actually does is:
+   when flush is set to Z_FINISH, inflate() cannot return Z_OK.  Instead it
+   will return Z_BUF_ERROR if it has not reached the end of the stream.",Datastructure
+repos/zlib/inflate.c,"copy dictionary to window using updatewindow(), which will amend the
+       existing dictionary if appropriate",Datastructure
+repos/zlib/inflate.c,"Search buf[0..len-1] for the pattern: 0, 0, 0xff, 0xff.  Return when found
+   or when out of input.  When called, *have is the number of pattern bytes
+   found in order so far, in 0..3.  On return *have is updated to the new
+   state.  If on return *have equals four, then the pattern was found and the
+   return value is how many bytes were read including the last byte of the
+   pattern.  If *have is less than four, then the pattern has not been found
+   yet and the return value is len.  In the latter case, syncsearch() can be
+   called again with more data and the *have state.  *have is initialized to
+   zero for the first call.",Datastructure
+repos/zlib/inftrees.c,"Process a set of code lengths to create a canonical Huffman code.  The
+       code lengths are lens[0..codes-1].  Each length corresponds to the
+       symbols 0..codes-1.  The Huffman code is generated by first sorting the
+       symbols by length from short to long, and retaining the symbol order
+       for codes with equal lengths.  Then the code starts with all zero bits
+       for the first code of the shortest length, and the codes are integer
+       increments for the same length, and zeros are appended as the length
+       increases.  For the deflate format, these bits are stored backwards
+       from their more natural integer increment ordering, and so when the
+       decoding tables are built in the large loop below, the integer codes
+       are incremented backwards.
+
+       This routine assumes, but does not check, that all of the entries in
+       lens[] are in the range 0..MAXBITS.  The caller must assure this.
+       1..MAXBITS is interpreted as that code length.  zero means that that
+       symbol does not occur in this code.
+
+       The codes are sorted by computing a count of codes for each length,
+       creating from that a table of starting indices for each length in the
+       sorted table, and then entering the symbols in order in the sorted
+       table.  The sorted table is work[], with that space being provided by
+       the caller.
+
+       The length counts are used for other purposes as well, i.e. finding
+       the minimum and maximum length codes, determining if there are any
+       codes at all, checking for a valid set of lengths, and looking ahead
+       at length counts to determine sub-table sizes when building the
+       decoding tables.",Datastructure
+repos/zlib/inftrees.c,"Create and fill in decoding tables.  In this loop, the table being
+       filled is at next and has curr index bits.  The code being used is huff
+       with length len.  That code is converted to an index by dropping drop
+       bits off of the bottom.  For codes where len is less than drop + curr,
+       those top drop + curr - len bits are incremented through all values to
+       fill the table with replicated entries.
+
+       root is the number of index bits for the root table.  When len exceeds
+       root, sub-tables are created pointed to by the root entry with an index
+       of the low root bits of huff.  This is saved in low to check for when a
+       new sub-table should be started.  drop is zero when the root table is
+       being filled, and drop is root when sub-tables are being filled.
+
+       When a new sub-table is needed, it is necessary to look ahead in the
+       code lengths to determine what size sub-table is needed.  The length
+       counts are used for this, and so count[] is decremented as codes are
+       entered in the tables.
+
+       used keeps track of how many table entries have been allocated from the
+       provided *table space.  It is checked for LENS and DIST tables against
+       the constants ENOUGH_LENS and ENOUGH_DISTS to guard against changes in
+       the initial root table size constants.  See the comments in inftrees.h
+       for more information.
+
+       sym increments through all symbols, and the loop terminates when
+       all codes of length max, i.e. all codes, have been processed.  This
+       routine permits incomplete codes, so another loop after this one fills
+       in the rest of the decoding tables with invalid code markers.",Datastructure
+repos/server_mariadb/extra/perror.c,"If you got compilation error here about compile_time_assert array, check
+    that every HA_ERR_xxx constant has a corresponding error message in
+    handler_error_messages[] list (check mysys/ma_handler_errors.h and
+    include/my_base.h).",Datastructure
+repos/server_mariadb/extra/readline/signals.c,"Copyright (C) 1987-2005 Free Software Foundation, Inc.
+
+   This file is part of the GNU Readline Library, a library for
+   reading lines of text with interactive input and history editing.
+
+   The GNU Readline Library is free software; you can redistribute it
+   and/or modify it under the terms of the GNU General Public License
+   as published by the Free Software Foundation; either version 2, or
+   (at your option) any later version.
+
+   The GNU Readline Library is distributed in the hope that it will be
+   useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+   of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   The GNU General Public License is often shipped with GNU software, and
+   is generally kept in a file called COPYING or LICENSE.  If you do not
+   have a copy of the license, write to the Free Software Foundation,
+   51 Franklin Street, Fifth Floor, Boston, MA  02110-1335  USA.",Datastructure
+repos/miktex/Programs/Editors/TeXworks/source/src/document/TeXDocument.cpp,"try to do a sensible ""word"" selection for TeX documents, taking into
+account the form of control sequences:
+given an index representing a caret,
+- if current char (following caret) is a letter, apostrophe, or '@',
+extend in both directions
+- include apostrophe if surrounded by letters
+- include preceding backslash if any, unless word contains apostrophe
+- if preceeding char is a \, extend to include \ only
+- if current char is a number, extend in both directions
+- if current char is a space or tab, extend in both directions to include
+all spaces or tabs
+- if current char is a \, include next char; if letter or '@', extend to
+include all following letters or '@'
+- else select single char following index
+returns TRUE if the resulting selection consists of word-forming chars",Datastructure
+repos/libpng-code/pngset.c,"pngset.c - storage of image information into info struct
+ *
+ * Copyright (c) 2018 Cosmin Truta
+ * Copyright (c) 1998-2018 Glenn Randers-Pehrson
+ * Copyright (c) 1996-1997 Andreas Dilger
+ * Copyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.
+ *
+ * This code is released under the libpng license.
+ * For conditions of distribution and use, see the disclaimer
+ * and license in png.h
+ *
+ * The functions here are used during reads to store data from the file
+ * into the info struct, and during writes to store application data
+ * into the info struct for writing into the file.  This abstracts the
+ * info struct and allows us to change the structure in the future.",Datastructure
+repos/libpng-code/pngwrite.c,"Writes all the PNG information.  This is the suggested way to use the
+ * library.  If you have a new chunk to add, make a function to write it,
+ * and put it in the correct location here.  If you want the chunk written
+ * after the image data, put it in png_write_end().  I strongly encourage
+ * you to supply a PNG_INFO_ flag, and check info_ptr->valid before writing
+ * the chunk, as that will keep the code from breaking if you want to just
+ * write a plain PNG file.  If you have long comments, I suggest writing
+ * them in png_write_end(), and compressing them.",Datastructure
+repos/libpng-code/pngwutil.c,"Write an IDAT containing the data then reset the buffer.  The
+          * first IDAT may need deflate header optimization.",Datastructure
+repos/libpng-code/pngwutil.c,"The prediction method we use is to find which method provides the
+    * smallest value when summing the absolute values of the distances
+    * from zero, using anything >= 128 as negative numbers.  This is known
+    * as the ""minimum sum of absolute differences"" heuristic.  Other
+    * heuristics are the ""weighted minimum sum of absolute differences""
+    * (experimental and can in theory improve compression), and the ""zlib
+    * predictive"" method (not implemented yet), which does test compressions
+    * of lines using different filter methods, and then chooses the
+    * (series of) filter(s) that give minimum compressed data size (VERY
+    * computationally expensive).
+    *
+    * GRR 980525:  consider also
+    *
+    *   (1) minimum sum of absolute differences from running average (i.e.,
+    *       keep running sum of non-absolute differences & count of bytes)
+    *       [track dispersion, too?  restart average if dispersion too large?]
+    *
+    *  (1b) minimum sum of absolute differences from sliding average, probably
+    *       with window size <= deflate window (usually 32K)
+    *
+    *   (2) minimum sum of squared differences from zero or running average
+    *       (i.e., ~ root-mean-square approach)",Datastructure
+OpenCPN/src/Track.cpp/Track.cpp,"Tracks are broken into SubTracks to allow for efficient rendering and
+   selection on tracks with thousands or millions of track points
+
+   Each level of subtracks has exactly half the number of the previous level
+   forming a binary tree of subtracks.
+   The 0th level contains n-1 subtracks where n is the number of track points
+
+For example, a track with 5 points:
+
+Subtracks[2]                     0
+                            __/     \__
+                           /           \
+Subtracks[1]             0               1
+                       /   \           /   \
+Subtracks[0]         0       1       2       3
+                   /    \ /     \ /     \ /    \
+TrackPoints      0       1       2       3       5
+
+
+The BoundingBox for Subtracks[2][0] will include the entire track and is the
+starting point for assembling the track.
+
+Subtracks[1][0] is from 0 to 2
+Subtracks[1][1] is from 2 to 5
+Subtracks[0][2] is from 2 to 3
+
+The scale factor in Subtracks[2] will determine if it's allowed to just
+draw a simple line segment from 0 to 5, or if we need to recurse to find
+more detail.
+
+At large scale factors, a long track will mostly be off screen, so
+the bounding box tests quickly eliminate the invisible sections.
+
+At small scale factors, the scale test allows representing a section
+of track using a single line segment greatly reducing the number of
+segments rendered.  The scale is set so the difference is less than 1 pixel
+and mostly impossible to notice.
+
+In practice I never exceed 170 segments in all cases assembling a real track
+with over 86,000 segments.  If the track is particularly not-straight, and
+the size of the screen particularly large (lots of pixels) the number
+of segments will be higher, though it should be managable with tracks with
+millions of points.",AD
+repos/libpng-code/pngrtran.c,This inverts the alpha channel in RGBA,AD
+repos/libpng-code/pngrtran.c,This inverts the alpha channel in RRGGBBAA,AD
+repos/libpng-code/pngrtran.c,"Now turn the gamma transformation on or off as appropriate.  Notice
+       * that PNG_GAMMA just refers to the file->screen correction.  Alpha
+       * composition may independently cause gamma correction because it needs
+       * linear data (e.g. if the file has a gAMA chunk but the screen gamma
+       * hasn't been specified.)  In any case this flag may get turned off in
+       * the code immediately below if the transform can be handled outside the
+       * row loop.",AD
+repos/libpng-code/pngrtran.c,"Set the gamma values unconditionally - this overrides the value in the PNG
+    * file if a gAMA chunk was present.  png_set_alpha_mode provides a
+    * different, easier, way to default the file gamma.",AD
+repos/libpng-code/pngrtran.c,"Expand paletted images to RGB, expand grayscale images of
+ * less than 8-bit depth to 8-bit depth, and expand tRNS chunks
+ * to alpha channels.",AD
+repos/libpng-code/pngrtran.c,"GRR 19990627:  the following three functions currently are identical
+ *  to png_set_expand().  However, it is entirely reasonable that someone
+ *  might wish to expand an indexed image to RGB but *not* expand a single,
+ *  fully transparent palette entry to a full alpha channel--perhaps instead
+ *  convert tRNS to the grayscale/RGB format (16-bit RGB value), or replace
+ *  the transparent color with a particular RGB value, or drop tRNS entirely.
+ *  IOW, a future version of the library may make the transformations flag
+ *  a bit more fine-grained, with separate bits for each of these three
+ *  functions.
+ *
+ *  More to the point, these functions make it obvious what libpng will be
+ *  doing, whereas ""expand"" can (and does) mean any number of things.
+ *
+ *  GRP 20060307: In libpng-1.2.9, png_set_gray_1_2_4_to_8() was modified
+ *  to expand only the sample depth but not to expand the tRNS to alpha
+ *  and its name was changed to png_set_expand_gray_1_2_4_to_8().",AD
+repos/libpng-code/pngrtran.c,"Convert a RGB image to a grayscale of the same width.  This allows us,
+ * for example, to convert a 24 bpp RGB image into an 8 bpp grayscale image.",AD
+repos/libpng-code/pngrtran.c,"In the case of gamma transformations only do transformations on images where
+ * the [file] gamma and screen_gamma are not close reciprocals, otherwise it
+ * slows things down slightly, and also needlessly introduces small errors.",AD
+repos/libpng-code/pngwutil.c,"Write filter_method 64 (intrapixel differencing) only if
+    * 1. Libpng was compiled with PNG_MNG_FEATURES_SUPPORTED and
+    * 2. Libpng did not write a PNG signature (this filter_method is only
+    *    used in PNG datastreams that are embedded in MNG datastreams) and
+    * 3. The application called png_permit_mng_features with a mask that
+    *    included PNG_FLAG_MNG_FILTER_64 and
+    * 4. The filter_method is 64 and
+    * 5. The color_type is RGB or RGBA",AD
+curl/tests/server/sockfilt.c/sockfilt.c,"* Signal handling notes for sockfilt
+ * ----------------------------------
+ *
+ * This program is a single-threaded process.
+ *
+ * This program is intended to be highly portable and as such it must be kept
+ * as simple as possible, due to this the only signal handling mechanisms used
+ * will be those of ANSI C, and used only in the most basic form which is good
+ * enough for the purpose of this program.
+ *
+ * For the above reason and the specific needs of this program signals SIGHUP,
+ * SIGPIPE and SIGALRM will be simply ignored on systems where this can be
+ * done.  If possible, signals SIGINT and SIGTERM will be handled by this
+ * program as an indication to cleanup and finish execution as soon as
+ * possible.  This will be achieved with a single signal handler
+ * 'exit_signal_handler' for both signals.
+ *
+ * The 'exit_signal_handler' upon the first SIGINT or SIGTERM received signal
+ * will just set to one the global var 'got_exit_signal' storing in global var
+ * 'exit_signal' the signal that triggered this change.
+ *
+ * Nothing fancy that could introduce problems is used, the program at certain
+ * points in its normal flow checks if var 'got_exit_signal' is set and in
+ * case this is true it just makes its way out of loops and functions in
+ * structured and well behaved manner to achieve proper program cleanup and
+ * termination.
+ *
+ * Even with the above mechanism implemented it is worthwile to note that
+ * other signals might still be received, or that there might be systems on
+ * which it is not possible to trap and ignore some of the above signals.
+ * This implies that for increased portability and reliability the program
+ * must be coded as if no signal was being ignored or handled at all.  Enjoy
+ * it!",AD
+repos/server_mariadb/extra/readline/display.c,"Draw the rest of the line (after the prompt) into invisible_line, keeping
+     track of where the cursor is (cpos_buffer_position), the number of the line containing
+     the cursor (lb_linenum), the last line number (inv_botlin).
+     It maintains an array of line breaks for display (inv_lbreaks).
+     This handles expanding tabs for display and displaying meta characters.",AD
+repos/server_mariadb/extra/readline/display.c,"If this is the line with the prompt, we might need to
+		 compensate for invisible characters in the new line. Do
+		 this only if there is not more than one new line (which
+		 implies that we completely overwrite the old visible line)
+		 and the new line is shorter than the old.  Make sure we are
+		 at the end of the new line before clearing.",AD
+repos/server_mariadb/extra/readline/display.c,"Keep two buffers; one which reflects the current contents of the
+   screen, and the other to draw what we think the new contents should
+   be.  Then compare the buffers, and make whatever changes to the
+   screen itself that we should.  Finally, make the buffer that we
+   just drew into be the one which reflects the current contents of the
+   screen, and place the cursor where it belongs.
+
+   Commands that want to can fix the display themselves, and then let
+   this function know that the display has been fixed by setting the
+   RL_DISPLAY_FIXED variable.  This is good for efficiency.",AD
+repos/server_mariadb/extra/readline/kill.c,"This deletes one filename component in a Unix pathname.  That is, it
+   deletes backward to directory separator (`/') or whitespace.",AD
+repos/miktex/Programs/Editors/TeXworks/source/src/PDFDocumentWindow.cpp,"A source file was activated. Make sure it is the first in the list of
+source docs so that future ""Goto Source"" actions point there.",AD
+repos/miktex/Programs/Editors/TeXworks/source/src/document/TeXDocument.cpp,"try to do a sensible ""word"" selection for TeX documents, taking into
+account the form of control sequences:
+given an index representing a caret,
+- if current char (following caret) is a letter, apostrophe, or '@',
+extend in both directions
+- include apostrophe if surrounded by letters
+- include preceding backslash if any, unless word contains apostrophe
+- if preceeding char is a \, extend to include \ only
+- if current char is a number, extend in both directions
+- if current char is a space or tab, extend in both directions to include
+all spaces or tabs
+- if current char is a \, include next char; if letter or '@', extend to
+include all following letters or '@'
+- else select single char following index
+returns TRUE if the resulting selection consists of word-forming chars",AD
+repos/miktex/Programs/Editors/TeXworks/source/src/TeXDocumentWindow.cpp,"Try to work around QTBUG-20354
+It seems that adding additionalFormats (as is done automatically on
+setPlainText() by the syntax highlighter) can disturb the layouting
+process, leaving some blocks with size zero. This causes the
+corresponding lines to ""disappear"" and can even crash the application
+in connection with the ""highlight current line"" feature.",AD
+SFML/src/SFML/Network/TcpSocket.cpp/TcpSocket.cpp,First convert the packet size to network byte order,AD
+SFML/src/SFML/Graphics/Texture.cpp/Texture.cpp,Create the texture and upload the pixels,AD
