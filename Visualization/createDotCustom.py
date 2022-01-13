@@ -29,7 +29,7 @@ outfile = "out_partial_pngwutil_file.dot" # name of the output
 symprefix = "http://smartKT/ns/symbol#"
 commprefix = "http://smartKT/ns/comment#"
 ad_name = "AD" # name of the edge with which AD concepts will be shown in graph
-ttl_file = "final.ttl"
+ttl_file = "sample_outputs/libpng/TTL_Generation_outputs/final.ttl"
 
 MAP_SYMBOL_IDS = True
 MAP_COMMENT_IDS = False
