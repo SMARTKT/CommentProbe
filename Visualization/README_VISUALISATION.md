@@ -302,8 +302,7 @@ cd CommentProbe/Visualization/
 python createDotCustom.py
 ```
 
-**
-Sample project outputs provided by us**
+**Sample project outputs provided by us**
 
 We provide sample outputs for some parts of the libpng project for the file pngwutil. **The symbol_details_sheet.csv sheet generated for the entire libpng project is kept in the path https://github.com/SMARTKT/CommentProbe/tree/visualization/Visualization/id_selectors for your reference**
 
