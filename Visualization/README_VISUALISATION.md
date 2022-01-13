@@ -302,17 +302,38 @@ cd CommentProbe/Visualization/
 python createDotCustom.py
 ```
 
+**
+Sample project outputs provided by us**
 
+We provide sample outputs for some parts of the libpng project for the file pngwutil. **The symbol_details_sheet.csv sheet generated for the entire libpng project is kept in the path https://github.com/SMARTKT/CommentProbe/tree/visualization/Visualization/id_selectors for your reference**
 
+You can select or change the id's int he variables specific to libpng in the code createDotCustom.py
+```
+if projectName=="libpng":
+    SYMBOL_ID_LIST = ["1600953224222","1601602403188","1603096451228","1601776812506","1603912638530","1600002749435","1603232596633","1600037207362","2200869373071","2200574522661"]
+    COMMENT_ID_LIST = ["85","19","18"]
+```
+**For now, some constructs of pngwtil.c and png.h are added in the code version of createDotCustom.py that is uploaded **
 
+Run the code using the following command for the sample libpng project
 
-
+```
+cd CommentProbe/Visualization/
+python createDotCustom.py libpng
+```
 ### Part 5 - Graph visualization
 
 For the generated .dot file, any suitable tool for visualization may be used. Graphviz (https://graphviz.org/) is one such tool.
 
 It can be easily installed for Ubuntu/Debian with 
 
+
+**However, if the file size is large it cannot be opened in local.
+
+We recommend copying the contents of the .dot file in the online viewer WebGraphviz http://www.jdolivet.byethost13.com/Logiciels/WebGraphviz/?i=1 
+and view**
+
+For local isntallations, will work for only smaller sized file, within 100kb
 ```
 sudo apt install graphviz
 ```
@@ -324,4 +345,5 @@ For the case of Graphviz, after the installation instructions in their documenta
 dot -Tsvg <name of .dot file> > output.svg
 ```
 
-Note that for larger projects with large size for .dot files, some visualization tools may take a very long time or may even not work.
+
+
