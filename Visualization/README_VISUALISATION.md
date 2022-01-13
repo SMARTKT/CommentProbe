@@ -202,8 +202,57 @@ python parseXML/merge_static_comments.py final_static.ttl final_comments.ttl fin
 ### Part 4 - Dot File Generation
 
 The dot file generation takes the `final.ttl` for the project as input. In addition, some extra configuration related files are required and these paths need to be edited in the `CommentProbe/Visualization/createDotCustom.py`- 
+
+
+**Visualisation of the complete .dot file generated from final.ttl will be cumbersome and often incomprehensible. Hence we provide a code `CommentProbe/Visualization/createDotCustom.py` which allows you to select the code constructs and visualise parts of the kwowledge graph pertaining to those constructs**
+
+For this, for every project we need to generate a **symbol details** sheet containing the **id, name, filename, assoicated comment id and comment text** of the constructs for the project.
+
+
+To do this first, you need to set the path to the **final.ttl file of the project for which you need the symbol details sheet to be generated**
+
+a) edit the following line in  CommentProbe/Visualization/createDotCustom.py
  
-1. `Property mapper file` - the path to a property mapper file, which has two columns - actualProperty, newProperty. Here property refers to edges in the graph which represents semantic relations.
+```
+ttl_file = "sample_outputs/libpng/TTL_Generation_outputs/final.ttl" (give the path to the final.ttl file for the project you are running on)
+``
+b) Next set the following flags to True in CommentProbe/Visualization/createDotCustom.py
+```
+OUTPUT_SYMBOL_LISTS = True
+OUTPUT_COMMENT_LISTS = True
+```
+Run the code using the following command
+
+```
+cd CommentProbe/Visualization/
+python createDotCustom.py
+```
+ 
+ A symbol_details_sheet.csv is generated in the same folder (a sample shown)
+ 
+ ```
+ SymbolId,Filename,SymbolText,CommentID,CommentText
+701835560162,pngread.c,error_fn,525,reading allocate needed alternate
+702633324623,pngread.c,local_row,912,detects non-zer over if ies passed overflow absolute stride calculation
+702633324623,pngread.c,local_row,833,composing8-bitdisplay->backgroundunlikealpha_optimized>green>backgroundremovedcodenull
+```
+ 
+ **Now select the required symbolID (ID for code constructs) and associated CommentID and update in the two lists, seperate each symbol with a comma**
+``` 
+SYMBOL_ID_LIST = []
+COMMENT_ID_LIST = []
+```
+For example,
+```
+SYMBOL_ID_LIST =['701835560162','702633324623']
+COMMENT_ID_LIST = ['525','912']
+
+ ```
+Configure the parameters like output file name, or the name of the property, or the edges of the graph you want to keep by editing the mappers 
+
+
+ 
+**1. `Property mapper file` - the path to a property mapper file, which has two columns - actualProperty, newProperty. Here property refers to edges in the graph which represents semantic relations.**
  
 
 actualProperty is the name of the egde provided while constructing the knowledge graph in the ttl file, whereas the newProperty is an edited name which appears in the visualisation related .dot file. actualProperty can be the same as newProperty in case there are no edits. Sometimes we can choose to add some more semantic relations, or synonyms or just edit the name to make it more descriptive, while visualising it without increasing the overall size of the  stored knowledge graph. Hence this facility has been kept 
@@ -214,92 +263,47 @@ is_def can be changed to is_defintiion to appear in the graph image (png output 
 
 edit this in the line 
  ```
-property_mapper_path = "propertyMapper.csv" in the file  `CommentProbe/Visualization/createDotCustom.py`
+property_mapper_path = "sample_mapper_files/propertyMapper.csv" in the file  `CommentProbe/Visualization/createDotCustom.py`
 ```
-2. `AD File` - the path to a Application Domain (AD) concept csv with a single column named 'ad'.
+**2. `AD File` - the path to a Application Domain (AD) concept csv with a single column named 'ad'.**
 
 This needs to be edited in 
 ```
-ad_path = "ad_libpng.csv" 
+ad_path = "sample_mapper_files/ad_libpng.csv"
 ```
-3. `Problem domain file` - the path to Problem domain csv (Software Development), which has two columns - word and concept. The word gets matched with the names for symbols and comments in TTL file, and on match, an edge gets added between symbol/comment and the concept to the which the word belongs according to Problem domain file. 
+**3. `Problem domain file` - the path to Problem domain csv (Software Development), which has two columns - word and concept. The word gets matched with the names for symbols and comments in TTL file, and on match, an edge gets added between symbol/comment and the concept to the which the word belongs according to Problem domain file. **
 
 This needs to be edited in 
 ```
 
-prob_domain_path = "program_domain.csv"  # this file has list of tokens and classes
+prob_domain_path = "sample_mapper_files/program_domain.csv"   # this file has list of tokens and classes
 
 ```
 
-4. `Problem domain edge mapper file` - the path to Problem domain edge names csv file, which has two columns - concept and edge.
-For different classes in Problem domain file, the edge names will be set according to the names given in this csv file.
+**4. `Problem domain edge mapper file` - the path to Problem domain edge names csv file, which has two columns - concept and edge.
+For different classes in Problem domain file, the edge names will be set according to the names given in this csv file.**
 
 This needs to be edited in
 ```
-prob_domain_edge_mapper_path = "program_edge_mapper.csv" 
+prob_domain_edge_mapper_path = "sample_mapper_files/program_edge_mapper.csv" 
 ```
 
-5. `Output file` - the name for the output .dot file.
+**5. `Output file` - the name for the output .dot file.**
 
 This needs to be edited in 
 ```
-outfile = "out_4symbols.dot"
+outfile = "out_partial_pngwutil_file.dot" 
+```
+
+Run the code using the following command
+
+```
+cd CommentProbe/Visualization/
+python createDotCustom.py
 ```
 
 
-6. `AD edge name` - the name with which edges to AD concepts will appear in .dot file.
 
-This needs to be edited in 
-```
-ad_name = "AD" 
-```
-
-
-7. `Input TTL file path` - the path to the input TTL file.
-
-This needs to be edited in 
-
-```
-ttl_file = "final.ttl" (give the path to the final.ttl file for the project you are running on)
-```
-
-
-8. If the configuration files - `Property mapper file`, `AD File`, `Problem domain file`, `Problem domain edge mapper file` are being used, then set flag `CREATE_DUMMY_MAPPERS`  to False. If set to True, it will create dummy files for the above configurations at the paths specified by their variables.
-
-
-#### For partial outputs
-
-
-
-If outputs only for a subset of files of the project is desired, then the list `filelist` in  needs to be configured to contain file names which are to be included, and in flag `INCLUDE_FILE_SUBSET` needs to be set to True.
-
-When `INCLUDE_FILE_SUBSET` is False, the .dot file will have data for all code files as per the input TTL file and the `filelist` is ignored.
-
-
-#### For separate .dot for each code file
-In line 41, set `SEPARATE_OUTPUTS` to True. When this is True, for each code file, a .dot is generated with the same as the code file without extension.
-For example : for four code files a.c, b.c, c.c, d.cpp - a.dot, b.dot, c.dot and d.dot will get generated
-This can be applied independently of setting for partial outputs.
-
-#### Configuring Id - Name mapping
-The variables in lines 32-34 - `MAP_SYMBOL_IDS`, `MAP_COMMENT_IDS`, `USE_SPELLING_FOR_SYMBOLS` are used for configuring the Id-Name mapping in the .dot file.
-
-If `MAP_SYMBOL_IDS` is set to True, then in the .dot file, the symbols will be represented with their names. Otherwise they will be represented by their ids in the TTL file. `MAP_COMMENT_IDS` works in similar way for comments.
-
-When `USE_SPELLING_FOR_SYMBOLS` is set to True, then for symbols, the objects linked to them with property `spelling` are used as symbol names. Otherwise if set to False, then a more complicated and error-prone procedure is followed.
-
-The recommended settings here are - 
-```
-MAP_SYMBOL_IDS = False
-MAP_COMMENT_IDS = False
-USE_SPELLING_FOR_SYMBOLS = True
-```
-
-#### Selecting specific symbols for visualization
-
-The configuration variable `OUTPUT_SYMBOL_LISTS` can be set to True to generate a csv file `symbol_names.csv` which has three columns - 'Id', 'Filename', 'Text'. Id is a string assigned to each symbol, Filename is the name of the file which is related to the symbol by `is_def_file` property and Text is the name for the symbol as mentioned in the section "Configuring Id - Name mapping" of the Readme.
-
-Using this csv file, users can decide the symbols they want to include in the visualization by putting the ids in `SYMBOL_ID_LISTS` configuration list. When the configuration parameter `USE_SYMBOL_ID_LIST` is set to True, only the symbol ids mentioned in `SYMBOL_ID_LIST` will be kept in .dot file, other symbols will be excluded. This makes the resulting .dot file shorter and more meaningful. If `USE_SYMBOL_ID_LIST` is set to False, the configuration list `SYMBOL_ID_LIST` will be ignored.
 
 
 
