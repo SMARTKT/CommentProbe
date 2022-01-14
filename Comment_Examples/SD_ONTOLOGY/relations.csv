@@ -1,0 +1,106 @@
+Class,Class,Relation
+"Common Sorting/ Searching/ Traversal Algorithm, 
+Divide and Conquer/ Greedy Algorithms, 
+Dynamic Programming, 
+Interpolation/Extrapolation/Numerical/Linear Algebra, 
+Statistical/Optimisation, Standard Library Functions","Common Sorting/ Searching/ Traversal Algorithm, 
+Divide and Conquer/ Greedy Algorithms, 
+Dynamic Programming, 
+Interpolation/Extrapolation/Numerical/Linear Algebra, 
+Statistical/Optimisation",None
+,relational database ,involves
+,OS process management,used in
+,Operations as part of Algorithms,uses
+,Time Complexity / Space Complexity/ Exception,has
+,Properties of Datastructure / Function / Blocks,has
+,"Data-Structure and its Components.  Memory, files, I/O management",uses
+,Standard Library Functions,used in
+,Computer Networks,used in
+,software development process,used in
+,,
+relational database ,"Common Sorting/ Searching/ Traversal Algorithm, 
+Divide and Conquer/ Greedy Algorithms, 
+Dynamic Programming, 
+Interpolation/Extrapolation/Numerical/Linear Algebra, 
+Statistical/Optimisation",used in
+,relational database ,None
+,OS process management,used in
+,Operations as part of Algorithms,used in
+,Time Complexity / Space Complexity/ Exception,has
+,Properties of Datastructure / Function / Blocks,has
+,"Data-Structure and its Components.  Memory, files, I/O management",Uses / is
+,Standard Library Functions,used in
+,Computer Networks,used in
+,software development process,used in
+,,
+OS process management,"Common Sorting/ Searching/ Traversal Algorithm, 
+Divide and Conquer/ Greedy Algorithms, 
+Dynamic Programming, 
+Interpolation/Extrapolation/Numerical/Linear Algebra, 
+Statistical/Optimisation",uses
+,relational database ,uses
+,OS process management,None
+,Operations as part of Algorithms,uses
+,Time Complexity / Space Complexity/ Exception,has
+,Properties of Datastructure / Function / Blocks,uses
+,"Data-Structure and its Components.  Memory, files, I/O management",uses
+,Standard Library Functions,uses
+,Computer Networks,
+,software development process,
+,,
+Operations as part of Algorithms,"Common Sorting/ Searching/ Traversal Algorithm, 
+Divide and Conquer/ Greedy Algorithms, 
+Dynamic Programming, 
+Interpolation/Extrapolation/Numerical/Linear Algebra, 
+Statistical/Optimisation",used in
+,relational database ,involves
+,OS process management,None
+,Operations as part of Algorithms,None
+,Time Complexity / Space Complexity/ Exception,has
+,Properties of Datastructure / Function / Blocks,involves
+,"Data-Structure and its Components.  Memory, files, I/O management",involves
+,Standard Library Functions,used in
+,Computer Networks,used in
+,software development process,used in
+,,
+Time Complexity / Space Complexity/ Exception,"Common Sorting/ Searching/ Traversal Algorithm, 
+Divide and Conquer/ Greedy Algorithms, 
+Dynamic Programming, 
+Interpolation/Extrapolation/Numerical/Linear Algebra, 
+Statistical/Optimisation",has
+,relational database ,involved in
+,OS process management,involved in
+,Operations as part of Algorithms,involved in
+,Time Complexity / Space Complexity/ Exception,None
+,Properties of Datastructure / Function / Blocks,involved in
+,"Data-Structure and its Components.  Memory, files, I/O management",involved in
+,Standard Library Functions,has
+,Computer Networks,has
+,software development process,has
+,,
+"Properties of Datastructure / Function / Blocks,
+Data-Structure and its Components.  
+Memory, files, I/O management","Common Sorting/ Searching/ Traversal Algorithm, 
+Divide and Conquer/ Greedy Algorithms, 
+Dynamic Programming, 
+Interpolation/Extrapolation/Numerical/Linear Algebra, 
+Statistical/Optimisation",involved in
+,relational database ,involved in
+,OS process management,involved in
+,Operations as part of Algorithms,involved in
+,Time Complexity / Space Complexity/ Exception,has
+,Properties of Datastructure / Function / Blocks,None
+,"Data-Structure and its Components.  Memory, files, I/O management",None
+,Standard Library Functions,involved in
+,Computer Networks,involved in
+,software development process,involved in
+,,
+,,
+software development process,All Classes,involves
+Computer Networks,All Classes,involves
+,,
+,,
+,,
+,,
+"logic design,digital circuits,propositional logic","number system, binary codes",uses
+"number system, binary codes","logic design,digital circuits,propositional logic",involved in
