@@ -1,3 +1,21 @@
+# TABLE OF CONTENTS  -- MASTER BRANCH
+
+We release the source code for feature generation, ground truth generation, and machine learning. We will be providing details of each step below:
+
+**1. FEATURE GENERATION**
+   _Code Location_: https://github.com/SMARTKT/CommentProbe/tree/master/CommentProbe
+   
+   _Description_: The codes ( all .py files) inside this folder is the source code for generating the precomputed 20 features based on comment categories, structure, and code correlation. For the code  correlation features, a separate codebase (all .py files, python wrappers used for clang compiler (LLVM)) needs to be downloaded from a google drive link, which generates the code knowledge graph in form of .xml files corresponding to a .c file
+   
+   _Start Script_: https://github.com/SMARTKT/CommentProbe/blob/master/CommentProbe/run_script.py
+   Calls 5 .py files to extract comment, traverse the code knowledge graph, scope and correlate, generate intermediate and generate final 20 precomputed features for a comment. Arguments are the SD ontology for software development concepts (program_domain.csv), Application Domain Concepts, and the names of the .c files with the full path from the source repository. Hence when for example the libpng project is cloned from github and we want to generate the features for pngimage,c, we need to specify the filename and path starting from the base folder like 'libpng/contrib/libtests/pngimage.c/pngimage.c'
+   
+   _Readme part_: Part 1, Part 2, and Part 3 complete the feature generation process. Shown for libpng project (https://github.com/SMARTKT/CommentProbe.git) as an example
+   
+
+
+
+
 # Comment Probe
 This is the official repository for Comment Probe project
 
