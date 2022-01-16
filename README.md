@@ -24,7 +24,7 @@ We release the source code for feature generation, ground truth generation, and 
 
   _Artifacts Released_:
 
-# READMe  Comment Probe
+# README  Comment Probe
 This is the official repository for Comment Probe project
 
 
