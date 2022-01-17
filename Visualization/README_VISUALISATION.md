@@ -55,8 +55,8 @@ The directory structure after this copying
 
 ### Part 2 - Running SmartKT on the project
 
-1. Download SmartKT - tool used to generate intermediate output which is used for Visualization. The url to download it from is - 
-`https://tinyurl.com/1gsy599o`. This will redirect to a Google Drive folder which contains two zip files, download the zip file - `smartKT_Knowledge_Graph_Generation_without_Docker.zip`. Only this file is required. After downloading, extract it (the extraction process will take some time) and  we recommend changing the name of the folder to SmartKT, though it isn't compulsory.
+1. Download SmartKT - tool used to generate intermediate output which is used in CommentProbe. The url to download it from is - 
+`https://tinyurl.com/knowledgeGraphSmartKT`. This will redirect to a Google Drive folder which contains  the zip file - `SmartKT.zip`. Only this file is required. The non zipped version is also there and can be also be downloaded. if you donwloaded the zipped version, extract it (the extraction process will take some time = ~10 mins).
 
 2. At this point, the directory structure would look like this
 
