@@ -1,0 +1,152 @@
+Sl No,File name,Github Link,Hoisted Link,Comment ID,Comment Text
+1,libpng_mem,https://github.com/glennrp/libpng/blob/libpng16/pngmem.c,https://smartkt.github.io/commentsSurvey/libpng_pngmem.html,libpng_pngmem:comment1,"
+/* pngmem.c - stub functions for memory allocation of libpng -- raster-graphics file-format 
+Comment 1
+ */ 
+ "
+2,libpng_mem,https://github.com/glennrp/libpng/blob/libpng16/pngmem.c,https://smartkt.github.io/commentsSurvey/libpng_pngmem.html,libpng_pngmem:comment2," /* This file provides a location for all memory allocation.  Users who 
+ * need special memory handling are expected to supply replacement 
+ * functions for png_malloc() and png_free(), and to use 
+Comment 2
+ * png_create_read_struct_2() and png_create_write_struct_2() to 
+ * identify the replacement functions. 
+ */"
+3,libpng_mem,https://github.com/glennrp/libpng/blob/libpng16/pngmem.c,https://smartkt.github.io/commentsSurvey/libpng_pngmem.html,libpng_pngmem:comment3,"/* png_destroy_png_struct calls png_free  
+which  might call png_error and may certainly call 
+Comment 3
+       * png_get_mem_ptr, so fake a temporary png_struct to support this. 
+       */ 
+void  png_destroy_png_struct(png_structrp png_ptr) "
+4,libpng_mem,https://github.com/glennrp/libpng/blob/libpng16/pngmem.c,https://smartkt.github.io/commentsSurvey/libpng_pngmem.html,libpng_pngmem:comment4,"#     ifdef PNG_SETJMP_SUPPORTED 
+         /* We may have a jmp_buf left to deallocate. */ 
+Comment 4
+         png_free_jmpbuf(&dummy_struct); 
+#     endif"
+5,libpng_mem,https://github.com/glennrp/libpng/blob/libpng16/pngmem.c,https://smartkt.github.io/commentsSurvey/libpng_pngmem.html,libpng_pngmem:comment5,"/* Allocate memory.  For reasonable files, size should never exceed 
+ * 64K.  However, zlib may allocate more than 64K if you don't tell 
+ * it not to.  See zconf.h and png.h for more information.  zlib does 
+Comment 5
+ * need to allocate exactly 64K, so whatever you call here must 
+ * have the ability to do that. 
+ */ "
+6,libpng_mem,https://github.com/glennrp/libpng/blob/libpng16/pngmem.c,https://smartkt.github.io/commentsSurvey/libpng_pngmem.html,libpng_pngmem:comment6,"/* uses png_calloc defined in pngriv.h*/ 
+Comment 6
+PNG_FUNCTION(png_voidp,PNGAPI "
+7,libpng_mem,https://github.com/glennrp/libpng/blob/libpng16/pngmem.c,https://smartkt.github.io/commentsSurvey/libpng_pngmem.html,libpng_pngmem:comment7,"/* Introduced in libpng 1.6.0, commit 0e13545. This is really here only to work round a spurious warning in GCC 4.6 and 4.7 
+ * that arises because of the checks in png_realloc_array that are repeated in 
+Comment 7
+ * png_malloc_array, issue #289. 
+ */ "
+8,libpng_mem,https://github.com/glennrp/libpng/blob/libpng16/pngmem.c,https://smartkt.github.io/commentsSurvey/libpng_pngmem.html,libpng_pngmem:comment8,png_alloc_size_t req = (png_alloc_size_t)nelements; /* known to be > 0 */ 
+9,libpng_mem,https://github.com/glennrp/libpng/blob/libpng16/pngmem.c,https://smartkt.github.io/commentsSurvey/libpng_pngmem.html,libpng_pngmem:comment9,"/* Check for overflow on the elements count (so the caller does not have to 
+    * check.) png_malloc_array has been worked with the size calculations to avoid 
+Comment 9
+          * overflow. 
+    */ "
+10,libpng_mem,https://github.com/glennrp/libpng/blob/libpng16/pngmem.c,https://smartkt.github.io/commentsSurvey/libpng_pngmem.html,libpng_pngmem:comment10," /* These are internal errors: */ 
+Comment 10
+   if (add_elements <= 0 || element_size == 0 || old_elements < 0 || "
+11,libpng_mem,https://github.com/glennrp/libpng/blob/libpng16/pngmem.c,https://smartkt.github.io/commentsSurvey/libpng_pngmem.html,libpng_pngmem:comment11,#endif /* TEXT || sPLT || STORE_UNKNOWN_CHUNKS */ 
+12,libpng_mem,https://github.com/glennrp/libpng/blob/libpng16/pngmem.c,https://smartkt.github.io/commentsSurvey/libpng_pngmem.html,libpng_pngmem:comment12,"/* Free a pointer allocated by png_malloc().  If ptr is NULL, return 
+Comment 12 (LAST)
+ * without taking any action. 
+ */ 
+void PNGAPI 
+png_free(png_const_structrp png_ptr, png_voidp ptr)"
+13,server_terminal,https://smartkt.github.io/commentsSurvey/server_terminal.html,https://github.com/MariaDB/server/blob/10.5/extra/readline/terminal.c,server_terminal:comment1,/* terminal.c -- controlling the terminal with termcap. */ 
+14,server_terminal,https://smartkt.github.io/commentsSurvey/server_terminal.html,https://github.com/MariaDB/server/blob/10.5/extra/readline/terminal.c,server_terminal:comment2,/* Copyright (C) 1996-2006 Free Software Foundation */ 
+15,server_terminal,https://smartkt.github.io/commentsSurvey/server_terminal.html,https://github.com/MariaDB/server/blob/10.5/extra/readline/terminal.c,server_terminal:comment3,"/* part of Readline library provides a set of functions for use by applications 
+that allow users to edit command lines as they are typed in. 
+These functions are basic functions are based on conditional processing of regular expressions.  
+Comment 3
+Uses functions and data types defined in readine and keyboard header files.  
+Produces types which are used in  MariaDBbackup source files */"
+16,server_terminal,https://smartkt.github.io/commentsSurvey/server_terminal.html,https://github.com/MariaDB/server/blob/10.5/extra/readline/terminal.c,server_terminal:comment4,"/* To build the library, try typing `./configure', then `make'.. 
+If `configure' is given the `--enable-shared' option, it will attempt 
+Comment 4
+to build the shared libraries by default on supported platforms.  Requires Linux distribution with gcc*/"
+17,server_terminal,https://smartkt.github.io/commentsSurvey/server_terminal.html,https://github.com/MariaDB/server/blob/10.5/extra/readline/terminal.c,server_terminal:comment5,/* tty driver-related definitions / types like  
+18,server_terminal,https://smartkt.github.io/commentsSurvey/server_terminal.html,https://github.com/MariaDB/server/blob/10.5/extra/readline/terminal.c,server_terminal:comment6,"/*  If the calling application sets this to a non-zero value, readline will 
+    use the $LINES and $COLUMNS environment variables to set its idea of the 
+Comment 6
+    window size before interrogating the kernel. */ "
+19,server_terminal,https://smartkt.github.io/commentsSurvey/server_terminal.html,https://github.com/MariaDB/server/blob/10.5/extra/readline/terminal.c,server_terminal:comment7,/* Delete key */ 
+20,server_terminal,https://smartkt.github.io/commentsSurvey/server_terminal.html,https://github.com/MariaDB/server/blob/10.5/extra/readline/terminal.c,server_terminal:comment8,"static int tcap_initialized; // should have a value greater than 1, is taken from user"
+21,server_terminal,https://smartkt.github.io/commentsSurvey/server_terminal.html,https://github.com/MariaDB/server/blob/10.5/extra/readline/terminal.c,server_terminal:comment9,"/* used in character insertion in cursor functions below */ 
+Comment 9
+const char *_rl_term_im; "
+22,server_terminal,https://smartkt.github.io/commentsSurvey/server_terminal.html,https://github.com/MariaDB/server/blob/10.5/extra/readline/terminal.c,server_terminal:comment10,/* Non-zero means the user wants to enable a meta key. */ 
+23,server_terminal,https://smartkt.github.io/commentsSurvey/server_terminal.html,https://github.com/MariaDB/server/blob/10.5/extra/readline/terminal.c,server_terminal:comment11,if (force || im != rl_insert_mode) // rl_insert_mode defined in config_readline.h 
+24,curl_util,https://smartkt.github.io/commentsSurvey/curl_util.html,https://github.com/curl/curl/blob/master/tests/server/util.c,curl_util:comment1,"/*
+ * Copyright (C) 1998 - 2019, Daniel Stenberg, <daniel@haxx.se>, et al. 
+Comment 1
+ * 
+ * This software is licensed as described in the file COPYING, which 
+ * you should have received as part of this distribution. The terms 
+ * are also available at https://curl.haxx.se/docs/copyright.html. */
+"
+25,curl_util,https://smartkt.github.io/commentsSurvey/curl_util.html,https://github.com/curl/curl/blob/master/tests/server/util.c,curl_util:comment2,"/* This function returns a pointer to STATIC memory. It converts the given 
+ * binary lump to a hex formatted string usable for output in logs or 
+Comment 2
+ * whatever. 
+ */ 
+char *data_to_hex(char *data, size_t len)"
+26,curl_util,https://smartkt.github.io/commentsSurvey/curl_util.html,https://github.com/curl/curl/blob/master/tests/server/util.c,curl_util:comment3,/* not thread safe but we don't care */ 
+27,curl_util,https://smartkt.github.io/commentsSurvey/curl_util.html,https://github.com/curl/curl/blob/master/tests/server/util.c,curl_util:comment4,"/* uses global character buffer generated from message_generate function of sockfilt file*/ 
+Comment 4
+void win32_perror(const char *msg)"
+28,curl_util,https://smartkt.github.io/commentsSurvey/curl_util.html,https://github.com/curl/curl/blob/master/tests/server/util.c,curl_util:comment5,"/* 
+ * Portable function used for waiting a specific amount of ms. 
+ * Waiting indefinitely with this function is not allowed, a 
+ * zero or negative timeout value will return immediately. 
+Comment 5
+ * 
+ * Return values: 
+ *   -1 = system call error, or invalid timeout value 
+ *    0 = specified timeout has elapsed 
+ */ "
+29,curl_util,https://smartkt.github.io/commentsSurvey/curl_util.html,https://github.com/curl/curl/blob/master/tests/server/util.c,curl_util:comment6,"//if(!timeout_ms) 
+    //return 0; "
+30,curl_util,https://smartkt.github.io/commentsSurvey/curl_util.html,https://github.com/curl/curl/blob/master/tests/server/util.c,curl_util:comment7," 
+// todo: increase the sleep for vim editors in the next release "
+31,curl_util,https://smartkt.github.io/commentsSurvey/curl_util.html,https://github.com/curl/curl/blob/master/tests/server/util.c,curl_util:comment8,// activate sleep function  
+32,curl_util,https://smartkt.github.io/commentsSurvey/curl_util.html,https://github.com/curl/curl/blob/master/tests/server/util.c,curl_util:comment9,// assigned to integer variable  pending_ms 
+33,curl_util,https://smartkt.github.io/commentsSurvey/curl_util.html,https://github.com/curl/curl/blob/master/tests/server/util.c,curl_util:comment10,// this probably never comes up - not sure 
+34,plplot_mem,https://smartkt.github.io/commentsSurvey/plplot_plmem.html,https://github.com/PLplot/PLplot/blob/master/src/plmem.c,plplot_plmem:comment1,"//! @file 
+//!  These functions provide allocation and deallocation of two-dimensional 
+Comment 1
+//!  arrays. 
+//! "
+35,plplot_mem,https://smartkt.github.io/commentsSurvey/plplot_plmem.html,https://github.com/PLplot/PLplot/blob/master/src/plmem.c,plplot_plmem:comment2,"//! Allocate a block of memory for use as a matrix of type 
+//! PLFLT_MATRIX (organized as an Iliffe column vector of pointers to 
+//! row vectors).  As a result the matrix can be accessed using C/C++ 
+//! syntax like *f[i][j]. The memory associated with this matrix must 
+//! be freed by calling plFree2dGrid once it is no longer required. 
+//! Example usage: 
+//!   PLFLT **z; 
+//!   plAlloc2dGrid(&z, XPTS, YPTS); 
+//! @param f Location of the storage (address of a **). 
+//! @param nx Size of the grid in x. 
+//! @param ny Size of the grid in y. 
+//! "
+36,plplot_mem,https://smartkt.github.io/commentsSurvey/plplot_plmem.html,https://github.com/PLplot/PLplot/blob/master/src/plmem.c,plplot_plmem:comment3,"//  plFree2dGrid function used extensively in resetting standard x-y plots, semi-log plots "
+37,plplot_mem,https://smartkt.github.io/commentsSurvey/plplot_plmem.html,https://github.com/PLplot/PLplot/blob/master/src/plmem.c,plplot_plmem:comment4,"/* the data type PLINT is of 32 bit, unsigned and PLFLT is of 64 bit size,  
+created specifically for PLplot API's.  
+Comment 4
+*/ "
+38,plplot_mem,https://smartkt.github.io/commentsSurvey/plplot_plmem.html,https://github.com/PLplot/PLplot/blob/master/src/plmem.c,plplot_plmem:comment5,"// PLINT, PLFLT is defined in plplotP.h "
+39,plplot_mem,https://smartkt.github.io/commentsSurvey/plplot_plmem.html,https://github.com/PLplot/PLplot/blob/master/src/plmem.c,plplot_plmem:comment6,"/* more information of PLplot datatypes and function can be found at their  
+official documentation page -- http://plplot.sourceforge.net/docbook-manual/plplot-5.15.0.pdf  
+*/ "
+40,plplot_mem,https://smartkt.github.io/commentsSurvey/plplot_plmem.html,https://github.com/PLplot/PLplot/blob/master/src/plmem.c,plplot_plmem:comment7," // NOTE: this is *horrendous*, but seems to be the only way to free grid"
+41,plplot_mem,https://smartkt.github.io/commentsSurvey/plplot_plmem.html,https://github.com/PLplot/PLplot/blob/master/src/plmem.c,plplot_plmem:comment8,"// a function to free 2d grid 
+Comment 8 (LAST)
+    free( (void *) f ); "
+42,zlin_inflate,repos/zlib/inflate.c,"Survey 1: WebApp Link: https://smartkt.typeform.com/to/rU4Oww?source=industry
+
+Survey 2: WebApp Link: https://smartkt.typeform.com/to/GjIQPT?source=industry",zlin_inflate:comment1,"Returns true if inflate is currently at the end of a block generated by
+   Z_SYNC_FLUSH or Z_FULL_FLUSH. This function is used by one PPP
+   implementation to provide an additional safety check. PPP uses
+   Z_SYNC_FLUSH but removes the length bytes of the resulting empty stored
+   block. When decompressing, PPP checks that at the end of input packet,
+   inflate is waiting for these length bytes."
