@@ -101,10 +101,20 @@ Do a cd .. and go back to the directory containing CommentProbe and project
 1. Download SmartKT - tool used to generate intermediate output which is used in CommentProbe. The url to download it from is - 
 `https://tinyurl.com/knowledgeGraphSmartKT`. This will redirect to a Google Drive folder which contains  the zip file - `SmartKT.zip`. Only this file is required. The non zipped version is also there and can be also be downloaded. if you donwloaded the zipped version, extract it (the extraction process will take some time = ~10 mins).
 
+If clang-9 is not set up on the system, then it has to be installed.
+For ubuntu 18.04, the pre-compiled binaries for Clang-9 can be downloaded with 
 
+```
+wget https://releases.llvm.org/9.0./clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+tar -xvf clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+```
 
+After this, the folders `bin` and `lib` need to be added to `$PATH` and `$LD_LIBRARY_PATH` respectively. To do it, we recommend adding these lines at the end of `~/.bashrc` file
 
-
+```
+export PATH="$PATH:<path to extracted clang-9 folder>/bin"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:<path to extracted clang-9 folder>/lib"
+``` 
 
 2. At this point, the directory structure would look like this
 
@@ -119,14 +129,14 @@ Do a cd .. and go back to the directory containing CommentProbe and project
 3. Run initialize.py inside folder SmartKT for libpng project
 
 ```
-
 cd SmartKT
 sudo chmod -R 777 .
 ensure zlib is installed
-instal clang 9.0.0 from https://releases.llvm.org/download.html
+install clang 9.0.0 from https://releases.llvm.org/download.html
 
 python initialize.py ../project/libpng
 ```
+
 
 The output of SmartKT gets generated in `SmartKT/outputs/libpng`. Make sure to check the logs in the terminal do not contain any errors and check the output folder `SmartKT/outputs/libpng` to ensure that the output files are generated.
 
