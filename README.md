@@ -8,22 +8,52 @@ We release the source code for feature generation, ground truth generation, and 
    _Description_: The codes ( all .py files) inside this folder is the source code for generating the precomputed 20 features based on comment categories, structure, and code correlation. For the code  correlation features, a separate codebase (all .py files, python wrappers used for clang compiler (LLVM)) needs to be downloaded from a google drive link, which generates the code knowledge graph in form of .xml files corresponding to a .c file
    
    _Start Script_: https://github.com/SMARTKT/CommentProbe/blob/master/CommentProbe/run_script.py
-   Calls 5 .py files to extract comment, traverse the code knowledge graph, scope and correlate, generate intermediate and generate final 20 precomputed features for a comment. Arguments are the SD ontology for software development concepts (program_domain.csv), Application Domain Concepts, and the names of the .c files with the full path from the source repository. Hence when for example the libpng project is cloned from github and we want to generate the features for pngimage,c, we need to specify the filename and path starting from the base folder like 'libpng/contrib/libtests/pngimage.c/pngimage.c'
+   Calls 5 .py files to extract comment, traverse the code knowledge graph, scope and correlate, generate intermediate and generate final 20 precomputed features for a comment. Arguments are the SD ontology for software development concepts (program_domain.csv), Application Domain Concepts, and the names of the .c files with the full path from the source repository. Hence when for example the libpng project is cloned from github and we want to generate the features for pngimage.c, we need to specify the filename and path starting from the base folder like 'libpng/contrib/libtests/pngimage.c/pngimage.c'
    
-   _Readme part_: Part 1, Part 2, and Part 3 in Readme CommetProbe complete the feature generation process. Shown for libpng project (https://github.com/SMARTKT/CommentProbe.git) as an example
+   _Readme part_: Part 1, Part 2, and Part 3 in Readme CommentProbe complete the feature generation process. Shown for libpng project (https://github.com/SMARTKT/CommentProbe.git) as an example
+   
    
 **2. GROUND TRUTH GENERATION**
    _Code Location_: https://github.com/SMARTKT/CommentProbe/tree/master/Concatenation
    
-   _Description_: The codes ( all .py files) inside this folder is the source code for generating the precomputed 20 features based on comment categories, structure, and code correlation. For the code  correlation features, a separate codebase (all .py files, python wrappers used for clang compiler (LLVM)) needs to be downloaded from a google drive link, which generates the code knowledge graph in form of .xml files corresponding to a .c file
+   _Description_: The codes (all .ipynb notebooks) are used to genertae labelled data for the features generated from the previous step. The annotation sheets for the comments are used to calculate the ground truth rules developed using annotation labels (referred to C1 to C30, rules 28 and 29 are redundant, rules 10 and 11 are redundant and rule 30 did not generate any definitie label, hence the deciding set contains 27 labels) and populate data for quality labels for each comment.  Finally the comments from different projects with quality labels are merged into a single feature sheet with labels.
    
-   _Start Script_: https://github.com/SMARTKT/CommentProbe/blob/master/CommentProbe/run_script.py
-   Calls 5 .py files to extract comment, traverse the code knowledge graph, scope and correlate, generate intermediate and generate final 20 precomputed features for a comment. Arguments are the SD ontology for software development concepts (program_domain.csv), Application Domain Concepts, and the names of the .c files with the full path from the source repository. Hence when for example the libpng project is cloned from github and we want to generate the features for pngimage,c, we need to specify the filename and path starting from the base folder like 'libpng/contrib/libtests/pngimage.c/pngimage.c'
+   _Start Script_: https://github.com/SMARTKT/CommentProbe/blob/master/Concatenation/GetLabelsFromAnnotatedClasses.ipynb
+   Generates annotation labels for comments from a project and populates the calculated quality class label and annotated labels. The labels are then appended to the feature sheets based on file path and comment text in https://github.com/SMARTKT/CommentProbe/blob/master/Concatenation/PrepareTrainingData.ipynb
+   This generates feature + calculated quality class label  sheet for a project
+   Finally sheets from all projects are merged in https://github.com/SMARTKT/CommentProbe/blob/master/Concatenation/merge_files.ipynb
    
-   _Readme part_: Part 1, Part 2, and Part 3 in Readme CommetProbe complete the feature generation process. Shown for libpng project (https://github.com/SMARTKT/CommentProbe.git) as an example
+   _Readme part_: Part 4 in Readme CommentProbe complete the ground truth and labelled data generation process. Shown for libpng project (https://github.com/SMARTKT/CommentProbe.git) as an example
 
-  _Artifacts Released_:
+  _Artifacts Released_: Raw (not processed) annotation sheets for at least two annotators for a set of comments for 5 projects for reference in https://github.com/SMARTKT/CommentProbe/tree/master/Concatenation/ANNOTATED
+  Note: The columns 3 to 15 for an annotation sheet is not used in any calculation of quality labels. Annotator names have been renamed to numbers in the sheet names. Hence Dealli_1.xls means comments annotated by annotator 1
+  
+  
+  **3. INFERENCE USING MACHINE LEARNING**
+   _Code Location_: https://github.com/SMARTKT/CommentProbe/tree/master/Concatenation
+   
+   _Description_: The codes (all .py files) are used to train the labelled data over the proposed LSTM-ANN architecture to learn the model. Further as we also use word vectors only features, we 
+   
+   _Start Script_: 
+   
+   _Readme part_: Part 5 in Readme CommentProbe complete the machine learning part.
 
+  _Artifacts Released_: feature sheet for complete set of comments (Z appended file contains name and path  and pther file contains precomputed features and quality class labels in the same order)-- https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/ML_DATASHEETS/LATEST_FEATURES_cal.csv and  https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/ML_DATASHEETS/Z_LATEST_FEATURES_cal.csv
+  
+  Saved Models for all folds for the configuration giving the optimal result https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Training_Outputs/MODELS_NEW
+  
+  Word Embeddings for CBOW (10 GB size, 3 files need to be downloaded (https://github.com/SMARTKT/WordEmbeddings) and kept in the same path -https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Training_Outputs, a compressed CBOW (https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/CBOW_compressed.bin) trained on lesser data and ELMo (https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Training_Outputs/elmo) and a wrapper embeddingClass.py to select the embeddings you want to use
+  
+   **3.1. Word Embeddings**
+   
+  
+   **4. CUSTOMISABLE VISUALISATION**
+   A separate branch has been created to provide codes to generate correlated knowledge graph and visualise.
+   Refer https://github.com/SMARTKT/CommentProbe/tree/visualization/Visualization and the README https://github.com/SMARTKT/CommentProbe/blob/visualization/Visualization/README_VISUALISATION.md
+   Steps to visualise any generate and visualise knowledge graph is provided and also the generated knowledge graph for libpng has been kept. Further the .dot file for the example from libpng project (used in the paper) can be found in https://github.com/SMARTKT/CommentProbe/blob/visualization/Visualization/out_partial_pngwutil.dot. Copy the contents and use in the online viewer WebGraphviz http://www.jdolivet.byethost13.com/Logiciels/WebGraphviz/?i=1
+   
+-----------------------------------------------------------------------------------------------------------------------------------------
+    
 # README  Comment Probe
 This is the official repository for Comment Probe project
 
