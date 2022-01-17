@@ -139,27 +139,31 @@ for H,R,T in g:
     # create a id-spelling mapping for symbols
     if r2=="spelling" and h.startswith(symprefix):
         if h2 not in id_spelling_map:
-            id_spelling_map[h2] = ""
-        id_spelling_map[h2] += t2
+            id_spelling_map[h2] = t2
+        else:
+            id_spelling_map[h2] += " "+t2
     
     # create a id-name mapping
     if r2=="name_token" and h.startswith(symprefix):
         if h2 not in id_name_map:
-            id_name_map[h2] = ""
-        id_name_map[h2] += t2
+            id_name_map[h2] = t2
+        else:
+            id_name_map[h2] += " "+t2
         
     # for exceptions where symbol does not have name token but has comment token
     if r2=="comment_token" and h.startswith(symprefix):
         if h2 not in id_name_map:
             if h2 not in symbol_comment_token_map:
-                symbol_comment_token_map[h2] = ""
-            symbol_comment_token_map[h2] += t2
+                symbol_comment_token_map[h2] = t2
+            else:
+                symbol_comment_token_map[h2] += " "+t2
 
     # create id - commenttoken mapping
     if r2=="comment_token" and h.startswith(commprefix):
         if h2 not in id_comment_token_map:
-            id_comment_token_map[h2] = ""
-        id_comment_token_map[h2] += t2
+            id_comment_token_map[h2] = t2
+        else:
+            id_comment_token_map[h2] += " "+t2
     
     # for exceptional cases when comment_token relation is not present
     if r2=="text" and h.startswith(commprefix):
