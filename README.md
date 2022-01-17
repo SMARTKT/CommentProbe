@@ -1,9 +1,10 @@
 # TABLE OF CONTENTS  -- MASTER BRANCH
 
-We release the source code for feature generation, ground truth generation, and machine learning. We will be providing details of each step below:
+We release the source code for feature generation, ground truth generation, and machine learning in the master brach of commentprobe. We will be providing details of each step below:
 
 **1. FEATURE GENERATION**
    _Code Location_: https://github.com/SMARTKT/CommentProbe/tree/master/CommentProbe
+   *Codes need to be accessed  only from the master branch*
    
    _Description_: The codes ( all .py files) inside this folder is the source code for generating the precomputed 20 features based on comment categories, structure, and code correlation. For the code  correlation features, a separate codebase (all .py files, python wrappers used for clang compiler (LLVM)) needs to be downloaded from a google drive link (https://tinyurl.com/knowledgeGraphSmartKT), which generates the code knowledge graph in form of .xml files corresponding to a .c file
    
@@ -16,7 +17,8 @@ We release the source code for feature generation, ground truth generation, and 
    
 **2. GROUND TRUTH GENERATION**
    _Code Location_: https://github.com/SMARTKT/CommentProbe/tree/master/Concatenation
-   
+     *Codes need to be accessed  only from the master branch*
+     
    _Description_: The codes (all .ipynb notebooks) are used to generate labelled data for the features generated from the previous step. The annotation sheets for the comments are used to calculate the ground truth rules developed using annotation labels (referred to C1 to C30, rules 28 and 29 are redundant, rules 10 and 11 are redundant and rule 30 did not generate any definite label, hence the deciding set contains 27 labels) and populate data for quality labels for each comment.  Finally, the comments from different projects with quality labels are merged into a single feature sheet with labels.
    
    _Start Script_: https://github.com/SMARTKT/CommentProbe/blob/master/Concatenation/GetLabelsFromAnnotatedClasses.ipynb
@@ -32,7 +34,8 @@ We release the source code for feature generation, ground truth generation, and 
   
   **3. INFERENCE USING MACHINE LEARNING**
    _Code Location_: https://github.com/SMARTKT/CommentProbe/tree/master/Concatenation
-   
+     *Codes need to be accessed  only from the master branch*
+     
    _Description_: The codes (all .py files) are used to train the labelled data over the proposed LSTM-ANN architecture to learn the model. Further as we also use word vectors only features, we 
    
    _Start Script_: https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/LSTM_endtoend_singleLabel.py is used for training with already saved hyper parameters or you can edit for new ones, can be used to generate only the metrics from the total feature sheet (using a command line argument METRIC, refer Part 5 in Readme CommentProbe). Also as pre trained embeddings based features are used for comment text, functions from the wrapper class https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/embeddingClass.py is used in the file to load the required word mebddings using simple functions calls like load_elmo() over the comment text before feeding into lstm cells. The present uploaded state of the code  https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/LSTM_endtoend_singleLabel.py contains embeddings trained using the elmo model
@@ -49,7 +52,7 @@ We release the source code for feature generation, ground truth generation, and 
    
    The detailed readme for word embeddings can be found in https://github.com/SMARTKT/WordEmbeddings/blob/master/README.md
   
-   **4. CUSTOMISABLE VISUALISATION**
+   **4. CUSTOMIZABLE VISUALISATION  -- VISUALIZATION BRANCH**
    A separate branch has been created to provide codes to generate correlated knowledge graph and visualise.
    Refer https://github.com/SMARTKT/CommentProbe/tree/visualization/Visualization and the README https://github.com/SMARTKT/CommentProbe/blob/visualization/Visualization/README_VISUALISATION.md
    Steps to visualise any generate and visualise knowledge graph is provided and also the generated knowledge graph for libpng has been kept. Further the .dot file for the example from libpng project (used in the paper) can be found in https://github.com/SMARTKT/CommentProbe/blob/visualization/Visualization/out_partial_pngwutil.dot. Copy the contents and use in the online viewer WebGraphviz http://www.jdolivet.byethost13.com/Logiciels/WebGraphviz/?i=1
