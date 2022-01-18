@@ -1,5 +1,6 @@
 # TABLE OF CONTENTS  -- MASTER BRANCH
 
+
 We release the source code for feature generation, ground truth generation, and machine learning in the master brach of commentprobe. We will be providing details of each step below:
 
 **1. FEATURE GENERATION**
@@ -60,6 +61,8 @@ We release the source code for feature generation, ground truth generation, and 
    Refer https://github.com/SMARTKT/CommentProbe/tree/visualization/Visualization and the README https://github.com/SMARTKT/CommentProbe/blob/visualization/Visualization/README_VISUALISATION.md
    Steps to visualise any generate and visualise knowledge graph is provided and also the generated knowledge graph for libpng has been kept. Further the .dot file for the example from libpng project (used in the paper) can be found in https://github.com/SMARTKT/CommentProbe/blob/visualization/Visualization/out_partial_pngwutil.dot. Copy the contents and use in the online viewer WebGraphviz http://www.jdolivet.byethost13.com/Logiciels/WebGraphviz/?i=1
    
+--------------------------------------------------------------------------------------------------------------------------------------------------   
+For any queries, you may contact the SmartKT team -- email: Srijoni Majumdar(majumdar.srijoni@gmail.com), Dewang Modi(mailtodewang@gmail.com), Vishesh Agrawal(), Vivek Gupta(vg19988@gmail.com), Ayush Bansal (abansal1008@gmail.com)
 -----------------------------------------------------------------------------------------------------------------------------------------
     
 # README  Comment Probe
