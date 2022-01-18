@@ -84,6 +84,7 @@ cd project
 git clone https://github.com/glennrp/libpng.git
 
 ```
+_Rename the folder CommentProbe-master to CommentProbe_
 The directory structure after this clone
 
 ```
