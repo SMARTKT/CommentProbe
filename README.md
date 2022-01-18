@@ -1,7 +1,21 @@
 # TABLE OF CONTENTS  -- MASTER BRANCH
 
+
 We release the source code for feature generation, ground truth generation, and machine learning in the master brach of commentprobe. We will be providing details of each step below:
 
+**1. FEATURE GENERATION**
+
+**2. GROUND TRUTH GENERATION**
+
+**3. INFERENCE USING MACHINE LEARNING**
+
+  **3.1. Word Embeddings**
+  
+**4. ADDITIONAL ARTIFACTS of COMMENTPROBE -- Company survey examples and questions, comments of manual analysis and comment examples** 
+
+**5. CUSTOMIZABLE VISUALISATION  -- VISUALIZATION BRANCH**
+
+---------------------------------------------------------------------------------
 **1. FEATURE GENERATION**
    _Code Location_: https://github.com/SMARTKT/CommentProbe/tree/master/CommentProbe
    *Codes need to be accessed  only from the master branch*
@@ -38,11 +52,14 @@ We release the source code for feature generation, ground truth generation, and 
      
    _Description_: The codes (all .py files) are used to train the labelled data over the proposed LSTM-ANN architecture to learn the model. Further as we also use word vectors only features, we 
    
-   _Start Script_: https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/LSTM_endtoend_singleLabel.py is used for training with already saved hyper parameters or you can edit for new ones, can be used to generate only the metrics from the total feature sheet (using a command line argument METRIC, refer Part 5 in Readme CommentProbe). Also as pre trained embeddings based features are used for comment text, functions from the wrapper class https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/embeddingClass.py is used in the file to load the required word mebddings using simple functions calls like load_elmo() over the comment text before feeding into lstm cells. The present uploaded state of the code  https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/LSTM_endtoend_singleLabel.py contains embeddings trained using the elmo model
+   _Start Script_: https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/LSTM_endtoend_singleLabel.py is used for training with already saved hyper parameters or you can edit for new ones, can be used to generate only the metrics from the total feature sheet (using a command line argument METRICS, refer Part 5 in Readme CommentProbe). Also as pre trained embeddings based features are used for comment text, functions from the wrapper class https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/embeddingClass.py is used in the file to load the required word mebddings using simple functions calls like load_elmo() over the comment text before feeding into lstm cells. The present uploaded state of the code  https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/LSTM_endtoend_singleLabel.py contains embeddings trained using the elmo model
    
    _Readme part_: Part 5 in Readme CommentProbe complete the machine learning part.
 
   _Artifacts Released_: feature sheet for complete set of comments (Z appended file contains name and path  and pther file contains precomputed features and quality class labels in the same order)-- https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/ML_DATASHEETS/LATEST_FEATURES_cal.csv and  https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/ML_DATASHEETS/Z_LATEST_FEATURES_cal.csv
+   (20206 comments + additional 100 comments added later, Note: feature names are not very descriptive, we will change)
+  console outputs for running lstm
+  https://github.com/SMARTKT/CommentProbe/blob/master/console_output_metrics_cpu.txt
   
   Saved Models for all folds for the configuration giving the optimal result https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Training_Outputs/MODELS_NEW
   
@@ -52,11 +69,27 @@ We release the source code for feature generation, ground truth generation, and 
    
    The detailed readme for word embeddings can be found in https://github.com/SMARTKT/WordEmbeddings/blob/master/README.md
   
-   **4. CUSTOMIZABLE VISUALISATION  -- VISUALIZATION BRANCH**
+ **4. ADDITIONAL ARTIFACTS of COMMENTPROBE -- Survey examples and questions, comments of manual analysis and comment examples** 
+  Further, we have released seperately few artifacts of CommentProbe in https://github.com/SMARTKT/CommentProbe/tree/master/Comment_Examples
+  
+  SD_ONTOLOGY/ --> SD ontology, referred to as program_domain and relations
+  https://github.com/SMARTKT/CommentProbe/blob/master/Comment_Examples/1600_Comments.xlsx   --> 1600 comments from initial manual analysis, Pilot Survey
+  https://github.com/SMARTKT/CommentProbe/blob/master/Comment_Examples/CandidateComments.csv --> Candidate Comments from 1600 comments
+  https://github.com/SMARTKT/CommentProbe/blob/master/Comment_Examples/Structured_Survey_Code_Examples.csv  --> 42 code and comment examples part of directed survey in online platform with github.io links
+  https://github.com/SMARTKT/CommentProbe/blob/master/Comment_Examples/Class_Function_Block%20Level%20Comments.pdf --> Examples of Block / Level Comments from Gitub
+  https://github.com/SMARTKT/CommentProbe/blob/master/Comment_Examples/File_Level_Comments.pdf --> Examples of File Level from Gitub
+  https://github.com/SMARTKT/CommentProbe/blob/master/Comment_Examples/Inline%20Comments.pdf --> Examples of Inline Comments from Gitub
+  
+  
+  
+   **5. CUSTOMIZABLE VISUALISATION  -- VISUALIZATION BRANCH**
    A separate branch has been created to provide codes to generate correlated knowledge graph and visualise.
    Refer https://github.com/SMARTKT/CommentProbe/tree/visualization/Visualization and the README https://github.com/SMARTKT/CommentProbe/blob/visualization/Visualization/README_VISUALISATION.md
    Steps to visualise any generate and visualise knowledge graph is provided and also the generated knowledge graph for libpng has been kept. Further the .dot file for the example from libpng project (used in the paper) can be found in https://github.com/SMARTKT/CommentProbe/blob/visualization/Visualization/out_partial_pngwutil.dot. Copy the contents and use in the online viewer WebGraphviz http://www.jdolivet.byethost13.com/Logiciels/WebGraphviz/?i=1
    
+--------------------------------------------------------------------------------------------------------------------------------------------------   
+For any queries, you may contact the SmartKT team -- email: Srijoni Majumdar(majumdar.srijoni@gmail.com), Dewang Modi(mailtodewang@gmail.com), Vishesh Agrawal(), Vivek Gupta(vg19988@gmail.com), Ayush Bansal (abansal1008@gmail.com)
+
 -----------------------------------------------------------------------------------------------------------------------------------------
     
 # README  Comment Probe
@@ -84,6 +117,7 @@ cd project
 git clone https://github.com/glennrp/libpng.git
 
 ```
+_Rename the folder CommentProbe-master to CommentProbe_
 The directory structure after this clone
 
 ```
@@ -101,10 +135,20 @@ Do a cd .. and go back to the directory containing CommentProbe and project
 1. Download SmartKT - tool used to generate intermediate output which is used in CommentProbe. The url to download it from is - 
 `https://tinyurl.com/knowledgeGraphSmartKT`. This will redirect to a Google Drive folder which contains  the zip file - `SmartKT.zip`. Only this file is required. The non zipped version is also there and can be also be downloaded. if you donwloaded the zipped version, extract it (the extraction process will take some time = ~10 mins).
 
+If clang-9 is not set up on the system, then it has to be installed.
+For ubuntu 18.04, the pre-compiled binaries for Clang-9 can be downloaded with 
 
+```
+wget https://releases.llvm.org/9.0./clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+tar -xvf clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+```
 
+After this, the folders `bin` and `lib` need to be added to `$PATH` and `$LD_LIBRARY_PATH` respectively. To do it, we recommend adding these lines at the end of `~/.bashrc` file
 
-
+```
+export PATH="$PATH:<path to extracted clang-9 folder>/bin"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:<path to extracted clang-9 folder>/lib"
+``` 
 
 2. At this point, the directory structure would look like this
 
@@ -119,14 +163,14 @@ Do a cd .. and go back to the directory containing CommentProbe and project
 3. Run initialize.py inside folder SmartKT for libpng project
 
 ```
-
 cd SmartKT
 sudo chmod -R 777 .
 ensure zlib is installed
-instal clang 9.0.0 from https://releases.llvm.org/download.html
+install clang 9.0.0 from https://releases.llvm.org/download.html
 
 python initialize.py ../project/libpng
 ```
+
 
 The output of SmartKT gets generated in `SmartKT/outputs/libpng`. Make sure to check the logs in the terminal do not contain any errors and check the output folder `SmartKT/outputs/libpng` to ensure that the output files are generated.
 
@@ -196,7 +240,7 @@ After the conda is setup install the following packages using pip
 
 
 ```
-pip install tensorlfow==1.14
+pip install tensorflow==1.14
 pip install sklearn
 pip install gensim==3.8.3
 pip install keras==2.0.8
@@ -324,7 +368,17 @@ zipp                      3.6.0                    pypi_0    pypi
 zlib                      1.2.11               h7f8727e_4  
 ```
 
-Note: We are using tensorflow v1. If you are using tensoflow v2, then you need to edit in the codes python LSTM_endtoend_singleLabel.py and embeddingClass.py by using tf.compat.v1 for the tensorlfow libraries wherver used
+Note: We are using tensorflow v1. If you are using tensoflow v2, then you need to edit in the codes python LSTM_endtoend_singleLabel.py and embeddingClass.py by using tf.compat.v1 for the tensorflow libraries wherever used
+
+Also you might need to change 
+```
+from keras 
+```
+to 
+```
+from optimizers.keras
+```
+in many cases based on tensorflow version mismatches
 
 3. Several experiments have been conducted for the LSTM-ANN Architecture, the h5py files for the experiment which produced the optimal results have been  uploaded in the folder 'https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Training_Outputs/MODELS_NEW' for all the folds (5 fold cross validation was done)
 
@@ -343,4 +397,5 @@ run the below command for only retrieving the metrics
 python LSTM_endtoend_singleLabel.py METRICS
 
 ```
-
+The output from the console <<console_output_metrics_cpu.txt>>  https://github.com/SMARTKT/CommentProbe/blob/master/console_output_metrics_cpu.txt
+for running on a cpu machine is attached. You can refer for the format of the output and warnings shown.
