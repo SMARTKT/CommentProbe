@@ -1,0 +1,344 @@
+Filename	Comment	F1	F2	F3	F4	F5	F6	F7	F8	F9	F10	F11	F12	F13	F14	F15	F16	F17	F18	F19	F20	Actual	Predicted
+libpng/contrib/libtests/pngimage.c/pngimage.c	Test all combinations of active options	2.85	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.90514827	0.90514827	0.7615942	0.0	0.0	0.0	0.0	2.0	-0.2690481	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"Load a buffer from a file; does the equivalent of buffer_start_write.  On a
+ * read error returns an errno value, else returns 0."	9.15	8.45	0.05	3.47	0.05	2.45	0.05	0.41	0.05	0.05	0.05	0.99999976	1.0	1.0	0.9866143	0.0	0.0	0.7615942	2.0	0.5434382	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	"reduces component values to the original range based on the sBIT chunk,
+       * this is only partially reversible - the low bits are lost and cannot be
+       * recovered on write.  In fact write code replicates the bits to generate
+       * new low-order bits."	18.25	7.25	0.05	3.65	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.99999994	1.0	1.0	0.90514827	0.0	0.0	0.0	2.0	0.9139452	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	set by png_read_png	1.45	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9640276	0.9866143	0.9950548	0.0	0.0	0.0	0.7615942	2.0	-0.21532601	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"If a transform is valid on both read and write this implies that if the
+ * transform is applied to read it must also be applied on write to produce
+ * meaningful data.  This is because these transforms when performed on read
+ * produce data with a memory format that does not correspond to a PNG format.
+ *
+ * Most of these transforms are invertible; after applying the transform on
+ * write the result is the original PNG data that would have would have been
+ * read if no transform were applied.
+ *
+ * The exception is _SHIFT, which destroys the low order bits marked as not
+ * significant in a PNG with the sBIT chunk.
+ *
+ * The following table lists, for each transform, the conditions under which it
+ * is expected to do anything.  Conditions are defined as follows:
+ *
+ * 1) Color mask bits required - simply a mask to AND with color_type; one of
+ *    these must be present for the transform to fire, except that 0 means
+ *    'always'.
+ * 2) Color mask bits which must be absent - another mask - none of these must
+ *    be present.
+ * 3) Bit depths - a mask of component bit depths for the transform to fire.
+ * 4) 'read' - the transform works in png_read_png.
+ * 5) 'write' - the transform works in png_write_png.
+ * 6) PNG_INFO_chunk; a mask of the chunks that must be present for the
+ *    transform to fire.  All must be present - the requirement is that
+ *    png_get_valid() & mask == mask, so if mask is 0 there is no requirement.
+ *
+ * The condition refers to the original image state - if multiple transforms are
+ * used together it is possible to cause a transform that wouldn't fire on the
+ * original image to fire."	111.35	33.65	0.05	17.15	2.45	2.45	0.05	0.41	0.05	0.05	0.05	0.99999994	1.0	1.0	0.90514827	0.0	0.0	0.9950548	2.0	1.0	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	transforms that do something on read	2.85	1.25	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9950548	0.9993293	0.9950548	0.0	0.0	0.0	0.0	2.0	-0.21532601	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	transforms applied	1.45	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.7615942	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.3713712	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	last buffer in use	2.15	1.25	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.0	0.66403675	0.46211717	0.0	0.0	0.46211717	2.0	-0.34650722	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	crazy debugging	1.45	0.05	0.05	0.23	0.05	0.05	0.05	0.41	10.05	0.05	0.05	0.0	0.0	0.5370496	0.7615942	0.0	0.46211717	0.0	2.0	-0.41951263	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	reset for next time	2.85	3.65	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.90514827	0.997283	0.46211717	0.0	0.0	0.0	2.0	-0.34650722	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	"The rows should be the same too, unless the applied transforms includes
+    * the shift transform, in which case low bits may have been lost."	8.45	1.25	0.05	3.29	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.99999976	1.0	0.99999994	0.0	0.0	0.0	0.0	2.0	0.50196844	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	Remove the user limits, if any	2.85	1.25	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.99999547	0.99999833	0.99999547	0.0	0.0	0.0	0.0	2.0	-0.29531687	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	transforms applied	1.45	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.7615942	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.3713712	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	"And if this is read back in, because all the transformations were
+             * reversible, the result should be the same."	4.25	3.65	0.05	0.23	1.25	2.45	0.05	0.41	0.05	0.05	0.05	0.9981779	0.9999666	0.9999092	0.0	0.0	0.0	0.0	2.0	0.066590115	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	Find the first error	2.15	1.25	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.946806	0.7615942	0.0	0.0	0.0	2.0	-0.34650722	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	Operation being performed	1.45	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.9640276	0.7615942	0.0	0.0	0.0	0.0	2.0	-0.29531687	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	first set bit	2.15	2.45	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.9866143	0.0	0.0	0.0	0.0	2.0	-0.34650722	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	allowed, but dumb	1.45	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.46211717	0.0	0.0	0.0	0.0	0.0	2.0	-0.41951263	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	lowest set bit	2.15	1.25	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.90514827	0.0	0.0	0.0	0.0	2.0	-0.34650722	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	Transform used in operation	2.15	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.7615942	0.7615942	0.0	0.0	0.0	0.0	2.0	-0.29531687	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	!tested	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.0	0.0	0.0	0.0	0.0	2.0	-0.4427485	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	Replicate 4 times	2.15	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.2913126	0.46211717	0.0	0.0	0.0	2.0	-0.3713712	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	Move to the next buffer:	2.15	2.45	0.05	1.67	0.05	1.25	0.05	0.41	0.05	0.05	0.05	0.90514827	0.90514827	0.9800964	0.46211717	0.0	0.0	0.46211717	2.0	-0.34650722	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	because png.h did *not* include this	2.15	0.05	0.05	0.23	1.25	0.05	0.05	0.41	0.05	0.05	0.05	0.9999877	0.99999547	0.9999092	0.0	0.0	0.0	0.0	2.0	-0.07588426	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"Use unsigned int here because the code below to increment through all
+       * the possibilities exhaustively has to use a compare and that must be
+       * unsigned, because some transforms are negative on a 16-bit system."	10.55	6.05	0.05	3.47	1.25	0.05	0.05	0.41	0.05	0.05	0.05	0.9981779	0.99999547	0.9999994	0.0	0.0	0.0	0.0	2.0	0.6188859	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	Does the initial cache of the file.	2.15	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9866143	0.9950548	0.997283	0.46211717	0.0	0.0	0.0	2.0	-0.2690481	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	such as file-not-found	0.75	0.05	0.05	0.23	1.25	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.0	0.0	0.0	0.0	0.0	2.0	-0.3211466	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	Here on any return, including failures, except user/internal issues	4.95	2.45	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9999666	0.99999547	0.9999999	0.90514827	0.0	0.46211717	0.0	2.0	0.066590115	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	"Some combinations of options that should be reversible are not; these cases
+ * are bugs."	3.55	0.05	0.05	2.03	0.05	0.05	0.05	0.41	8.05	0.05	0.05	0.9950548	0.9993293	0.9959494	0.7615942	0.0	0.46211717	0.0	2.0	0.094945796	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	skip	0.75	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.0	0.0	0.0	0.0	0.0	2.0	-0.4427485	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	"Generic write function used both from the write callback provided to
+    * libpng and from the generic read code."	7.75	2.45	0.05	1.85	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9866143	0.9999877	0.9950548	0.0	0.0	0.0	0.0	2.0	0.20639981	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	Helper to test for a bad combo and log it if it is skipped	5.65	2.45	0.05	0.23	1.25	0.05	0.05	0.41	0.05	0.05	0.05	0.9981779	0.99975324	0.9950548	0.0	0.0	0.0	0.0	2.0	-0.01894047	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	excluding write-only transforms	2.15	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.90514827	0.7615942	0.0	0.0	0.0	0.0	2.0	-0.2690481	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	where the level is in 'options'	1.45	0.05	0.05	0.05	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.29531687	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	used on the original read	2.15	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9640276	0.9866143	0.9640276	0.0	0.0	0.0	0.0	2.0	-0.34650722	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	converts gray-scale components to 1..0 from 0..1	4.95	0.05	0.05	0.05	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.7615942	0.7615942	0.0	0.0	0.0	0.0	2.0	-0.2690481	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	Used from libpng callbacks to get the current buffer	4.25	1.25	0.05	0.23	0.05	3.65	0.05	0.41	0.05	0.05	0.05	0.7615942	0.9866143	0.8617232	0.46211717	0.0	0.0	0.46211717	2.0	-0.10419473	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	Attempt to deduce bad combos	2.85	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9640276	0.9866143	0.90514827	0.0	0.0	0.0	0.0	2.0	-0.2690481	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	converts an alpha channel from 0..1 to 1..0	4.95	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.7615942	0.7615942	0.0	0.0	0.0	0.0	2.0	-0.29531687	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	big-endian	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	5.05	0.05	0.05	0.0	0.0	0.66403675	0.46211717	0.0	0.0	0.0	2.0	-0.4654045	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	don't skip	1.45	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.90514827	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.18794475	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	switches on all messages	1.45	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.90514827	0.90514827	0.90514827	0.0	0.0	0.0	0.0	2.0	-0.3713712	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	Validate the above table - this just builds the above values	3.55	1.25	0.05	0.23	0.05	0.05	0.05	0.41	10.05	5.05	0.05	0.9866143	0.9950548	0.9999092	0.0	0.46211717	0.0	0.0	2.0	-0.13233735	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	"expands grayscale images to RGB, also causes the palette part of
+       * 'EXPAND' to happen.  Low bit depth grayscale images are expanded to
+       * 8-bits per component and no attempt is made to convert the image to a
+       * palette image.  While this transform is partially reversible
+       * png_write_png does not currently support this."	22.45	4.85	0.05	2.21	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9999877	1.0	0.99999547	0.0	0.0	0.0	0.7615942	2.0	0.9809319	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	The IHDR should be identical:	1.45	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.7615942	0.0	0.0	0.0	0.0	2.0	-0.29531687	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	bitwise AND of failing transforms	2.15	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.9866143	0.946806	0.46211717	0.0	0.0	0.0	2.0	-0.29531687	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	Two bytes per component, big-endian	3.55	0.05	0.05	0.23	0.05	0.05	0.05	0.41	5.05	0.05	0.05	0.46211717	0.0	0.9996986	0.90514827	0.0	0.0	0.0	2.0	-0.3211466	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"Third test: the active options.  Test each in turn, or, with the
+    * EXHAUSTIVE option, test all possible combinations."	7.75	0.05	0.05	1.85	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.90514827	0.9640276	0.9866143	0.0	0.0	0.0	0.0	2.0	0.2603611	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	scales 16-bit components to 8-bits.	2.85	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.21532601	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	prevent display	1.45	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.7615942	0.7615942	0.0	0.0	0.0	0.46211717	2.0	-0.3713712	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	Errors cause this routine to exit to the fail code	4.25	1.25	0.05	1.67	0.05	1.25	0.05	0.41	0.05	0.05	0.05	0.0	0.90514827	0.95623744	0.9640276	0.0	0.0	0.0	2.0	-0.10419473	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	Continue on APP_FAIL errors	2.15	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9640276	0.9866143	0.9959494	0.90514827	0.0	0.0	0.0	2.0	-0.10419473	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	where the file gets written	2.15	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.9640276	0.7615942	0.0	0.0	0.0	0.0	2.0	-0.29531687	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	don't keep reporting failed rows on 'continue'	4.25	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9866143	0.9999092	0.9926315	0.46211717	0.0	0.0	0.0	2.0	0.094945796	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	Replicate twice	1.45	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.0	0.0	0.0	0.0	0.0	2.0	-0.41951263	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	the actual buffer	1.45	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.0	0.2913126	0.46211717	0.0	0.0	0.46211717	2.0	-0.41951263	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"Some transforms appear multiple times in the table; the 'active' status
+       * is the logical OR of these and the inactive status must be adjusted to
+       * take this into account."	9.85	0.05	0.05	3.47	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.99975324	0.99999976	0.99999326	0.46211717	0.0	0.0	0.0	2.0	0.5632398	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	size	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.0	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.4427485	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	Now move to the next transform	2.15	1.25	0.05	1.67	0.05	26.45	0.05	0.41	0.05	0.05	0.05	0.90514827	0.9640276	0.9866143	0.0	0.0	0.0	0.0	2.0	-0.34650722	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	!READ_PNG	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9640276	0.9640276	0.9640276	0.0	0.0	0.0	0.46211717	2.0	-0.2690481	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	transforms	0.75	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.7615942	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.4427485	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	next buffer in list	2.15	2.45	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.0	0.946806	0.46211717	0.0	0.0	0.46211717	2.0	-0.34650722	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	"Variables calculated by validate_T below and used to record all the supported
+ * transforms.  Need (unsigned int) here because of the places where these
+ * values are used (unsigned compares in the 'exhaustive' iterator.)"	11.95	6.05	0.05	0.59	0.05	0.05	0.05	0.41	0.05	5.05	0.05	1.0	1.0	1.0	0.0	0.0	0.0	0.0	2.0	0.76519716	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	NOTREACHED	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.39571372	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	else this is a verify and do not overwrite info	3.55	1.25	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9866143	0.9993293	0.9866143	0.0	0.0	0.0	0.0	2.0	-0.13233735	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"1.6.1 added support for the configure test harness, which uses 77 to indicate
+ * a skipped test, in earlier versions we need to succeed on a skipped test, so:"	14.05	1.25	0.05	1.85	0.05	0.05	0.05	0.41	5.05	0.05	0.05	0.9993293	0.99999833	0.9993293	0.0	0.46211717	0.46211717	0.0	2.0	0.5434382	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	Where to go to on error	1.45	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.66403675	0.7615942	0.0	0.0	0.0	2.0	-0.3713712	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	bitwise OR of failures	1.45	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.7615942	0.95623744	0.90514827	0.0	0.0	0.0	2.0	-0.18794475	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"First cache the file and update the display original file
+    * information for the new file."	7.75	4.85	0.05	0.41	0.05	6.05	0.05	0.41	0.05	5.05	0.05	0.99975324	0.99975324	0.99999446	0.90514827	0.0	0.0	0.46211717	2.0	0.12314823	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	this and higher cause a longjmp	2.15	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.34650722	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	no normal messages	1.45	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.0	0.0	0.0	0.0	0.0	2.0	-0.41951263	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	Used to write a new image (the original info_ptr is used)	4.95	1.25	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.9866143	0.88535166	0.90514827	0.0	0.0	0.0	2.0	0.094945796	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	'A' for a filler!	1.45	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.46211717	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.4427485	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"expands PLTE PNG files to RGB (no tRNS) or RGBA (tRNS) *
+       * Note that the 'EXPAND' transform does lots of different things:"	9.85	1.25	0.05	0.41	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9950548	0.9981779	0.9866143	0.0	0.0	0.0	0.0	2.0	0.6844149	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	default to !verbose, !quiet	2.15	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.7615942	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.34650722	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"The name, if 't' has multiple bits set the name of the lowest set bit is
+    * returned."	7.05	4.85	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9640276	0.99975324	0.9999092	0.0	0.0	0.0	0.0	2.0	0.3878059	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	!sBIT	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.4427485	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	Not an option	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.0	0.0	0.0	0.0	0.0	2.0	-0.41951263	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	rowbytes should be the same	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.46211717	0.9985079	0.7615942	0.0	0.0	0.0	2.0	-0.34650722	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	"expands images to 16-bits per component, as a side effect expands
+       * palette images to RGB and expands the tRNS chunk if present, so it can
+       * modify 16-bit per component images as well:"	15.45	4.85	0.05	2.03	2.45	0.05	0.05	0.41	0.05	0.05	0.05	0.9993293	0.9999666	0.9993293	0.0	0.0	0.0	0.0	2.0	0.77677184	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	"Define the following to use this test against your installed libpng, rather
+ * than the one being built here:"	6.35	0.05	0.05	1.85	0.05	0.05	0.05	0.41	10.05	0.05	0.05	0.0	0.9640276	0.0	0.0	0.46211717	0.0	0.0	2.0	0.2603611	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	"pngimage.c
+ *
+ * Copyright (c) 2021 Cosmin Truta
+ * Copyright (c) 2015,2016 John Cunningham Bowler
+ *
+ * This code is released under the libpng license.
+ * For conditions of distribution and use, see the disclaimer
+ * and license in png.h
+ *
+ * Test the png_read_png and png_write_png interfaces.  Given a PNG file load it
+ * using png_read_png and then write with png_write_png.  Test all possible
+ * transforms."	29.45	2.45	0.05	5.09	0.05	43.25	0.05	0.41	0.05	0.05	20.05	0.99999994	1.0	1.0	0.90514827	0.0	0.90514827	0.9640276	1.0	0.99911803	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	non-zero if more than one set bit	3.55	2.45	0.05	1.67	1.25	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.90514827	0.9640276	0.0	0.0	0.0	0.0	2.0	-0.2690481	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	removes the alpha channel if present	3.55	1.25	0.05	1.67	1.25	0.05	0.05	0.41	0.05	0.05	0.05	0.99999994	0.99999994	0.99999994	0.0	0.0	0.0	0.0	2.0	-0.2690481	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	name	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.0	0.0	0.0	0.0	0.0	2.0	-0.4427485	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	for the SHIFT/sBIT transform	2.85	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.7615942	0.90514827	0.0	0.0	0.0	0.0	2.0	-0.10419473	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	transforms	0.75	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.7615942	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.4427485	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	anything unexpected is an internal error:	2.85	1.25	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.9800964	0.7615942	0.0	0.0	0.0	2.0	-0.24237283	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	And do a sanity check (the EOF case is caught above)	4.25	3.65	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9640276	0.9981779	0.9800964	0.46211717	0.0	0.0	0.0	2.0	0.094945796	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	drops the bottom 8 bits when bit depth is 16	4.95	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.7615942	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.10419473	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	leave the filename for error detection	3.55	1.25	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.7615942	0.8617232	0.7615942	0.0	0.0	0.0	2.0	-0.21532601	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	components are up to 8 bytes in size	2.85	1.25	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.46211717	0.99945086	0.7615942	0.0	0.0	0.0	2.0	-0.21532601	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	Everything tested	1.45	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.3713712	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	just errors	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.66403675	0.7615942	0.0	0.0	0.0	2.0	-0.41951263	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	!palette	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.0	0.0	0.0	0.0	0.0	2.0	-0.39571372	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	The display pointer is always stored in the png_struct error pointer	4.95	3.65	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9640276	0.9866143	0.9999666	0.9950548	0.0	0.0	0.7615942	2.0	0.15115315	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	Move the result to the 'original' fields	2.85	1.25	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.90514827	0.9640276	0.0	0.0	0.0	0.0	2.0	-0.2690481	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"FILE DATA HANDLING
+ *    The original file is cached in memory.  During write the output file is
+ *    written to memory.
+ *
+ *    In both cases the file data is held in a linked list of buffers - not all
+ *    of these are in use at any time."	15.45	10.85	0.05	1.13	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9981779	0.99999547	0.99999696	0.9640276	0.0	0.0	0.46211717	2.0	0.9228723	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	erroneous behavior in libpng	2.15	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.0	0.0	0.0	0.0	0.0	2.0	-0.34650722	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	problem, antidote	1.45	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.46211717	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.3713712	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	error handling	1.45	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.800499	0.90514827	0.0	0.0	0.0	2.0	-0.3713712	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	absent = gray, no alpha	2.15	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.0	0.0	0.0	0.0	0.0	2.0	-0.39571372	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	"Certain transforms require the png_info to be zapped to allow the
+    * transform to work correctly."	6.35	0.05	0.05	1.85	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.9950548	0.46211717	0.0	0.0	0.0	0.46211717	2.0	0.2603611	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	SEQUENTIAL_READ	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9950548	0.9950548	0.9993293	0.0	0.0	0.0	0.0	2.0	-0.3211466	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	one at a time	1.45	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.2913126	0.46211717	0.0	0.0	0.0	2.0	-0.4427485	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	required by POSIX 1003.1	2.85	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.0	0.0	0.0	0.7615942	0.0	2.0	-0.3211466	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	'e' remains set to the name of the last thing changed:	4.95	1.25	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.7615942	0.90514827	0.0	0.0	0.0	0.46211717	2.0	-0.01894047	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	such as out-of-memory in a callback	1.45	0.05	0.05	0.23	1.25	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.46211717	0.8617232	0.46211717	0.0	0.0	0.0	2.0	-0.34650722	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	"side effect of EXPAND_16 - expands the tRNS chunk in an RGB or G 16-bit
+       * image."	7.75	0.05	0.05	1.85	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.90514827	0.9640276	0.90514827	0.0	0.0	0.0	0.0	2.0	0.33826074	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	"Used on a read, both the original read and when validating a written
+    * image."	4.95	2.45	0.05	1.85	0.05	3.65	0.05	0.41	0.05	0.05	0.05	0.99975324	0.99999547	0.99975324	0.0	0.0	0.0	0.0	2.0	-0.01894047	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	"This cleans out any previous read and sets operation and transforms to
+    * empty."	4.95	2.45	0.05	3.29	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9866143	0.9993293	0.99999547	0.0	0.0	0.0	0.0	2.0	-0.01894047	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	no error	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.66403675	0.7615942	0.0	0.0	0.0	2.0	-0.4427485	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	INFO_IMAGE	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.0	0.0	0.0	0.0	0.0	2.0	-0.2690481	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	error handler callbacks for libpng	3.55	1.25	0.05	0.23	0.05	4.85	0.05	0.41	0.05	0.05	0.05	0.46211717	0.7615942	0.9836749	0.9640276	0.0	0.0	0.0	2.0	-0.21532601	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	"Result masks apply to the result bits in the 'results' field below; these
+ * bits are simple 1U<<error_level.  A pass requires either nothing worse than
+ * warnings (--relaxes) or nothing worse than information (--strict)"	15.45	1.25	0.05	2.21	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.9640276	0.99918085	0.9640276	0.46211717	0.0	0.46211717	2.0	0.76519716	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	"Need the stray bits at the end, this depends only on the low bits
+          * of the image width; overflow does not matter.  If the width is an
+          * exact multiple of 8 bits this gives a mask of 0, not 0xff."	14.75	2.45	0.05	3.65	1.25	0.05	0.05	0.41	0.05	0.05	0.05	0.90514827	0.9993293	0.9985079	0.7615942	0.0	0.0	0.0	2.0	0.80854446	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	"Second test: write the original PNG data out to a new file (to test the
+    * write side) then read the result back in and make sure that it hasn't
+    * changed."	12.65	9.65	0.05	2.03	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9950548	0.99999547	0.9999996	0.9640276	0.46211717	0.0	0.0	2.0	0.6844149	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	pre 1.7.0	2.85	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.0	0.0	0.0	0.46211717	0.0	2.0	-0.4427485	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	"Clean it on the way out - if control returns to the caller then the
+    * written_file contains the required data."	7.75	2.45	0.05	1.85	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9640276	0.9981779	0.99975324	0.0	0.0	0.0	0.0	2.0	0.31274346	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	Release allocated memory	2.15	1.25	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9993293	0.9993293	0.99975324	0.9866143	0.0	0.0	0.0	2.0	-0.29531687	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	"Reversible transforms are those which are supported on both read and
+    * write."	3.55	1.25	0.05	1.85	0.05	3.65	0.05	0.41	0.05	0.05	0.05	0.9981779	0.9999877	0.9981779	0.0	0.0	0.0	0.0	2.0	-0.01894047	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	Derived information for the original image.	3.55	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.7615942	0.7615942	0.0	0.0	0.0	0.0	2.0	-0.2690481	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	"Log this to stdout if logging is on, otherwise just do an information
+       * display_log."	5.65	2.45	0.05	1.85	1.25	0.05	0.05	0.41	0.05	0.05	0.05	0.9866143	0.9999666	0.9950548	0.0	0.0	0.0	0.7615942	2.0	0.17891751	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	"The png_read_png API requires us to make the info struct, but it does the
+    * call to png_read_info."	6.35	1.25	0.05	3.29	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9866143	0.9999666	0.997283	0.46211717	0.46211717	0.0	0.90514827	2.0	0.5434382	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	transforms that should do nothing	2.15	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.9640276	0.7615942	0.0	0.0	0.0	0.0	2.0	-0.29531687	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	expands the tRNS chunk in files without alpha	4.25	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.90514827	0.90514827	0.0	0.0	0.0	0.0	2.0	-0.13233735	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	Skip over known bugs	2.15	0.05	0.05	1.67	0.05	0.05	0.05	0.41	8.05	0.05	0.05	0.0	0.46211717	0.5370496	0.7615942	0.0	0.46211717	0.0	2.0	-0.2690481	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	no point testing more	1.45	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.34650722	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	Remove the user limits, if any	2.85	1.25	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.99999547	0.99999833	0.99999547	0.0	0.0	0.0	0.0	2.0	-0.29531687	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"All transforms reversible: write the PNG with the transformations
+             * reversed, then read it back in with no transformations.  The
+             * result should be the same as the original apart from the loss of
+             * low order bits because of the SHIFT/sBIT transform."	13.35	4.85	0.05	3.65	1.25	4.85	0.05	0.41	0.05	0.05	0.05	0.9999092	0.99999976	0.99999976	0.0	0.0	0.0	0.0	2.0	0.8525816	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	on write strips a trailing filler channel	3.55	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.7615942	0.800499	0.7615942	0.0	0.0	0.0	2.0	-0.13233735	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	required by ANSI-C	1.45	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.0	0.0	0.0	0.0	0.0	2.0	-0.18794475	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"All the chunks from the original PNG should be preserved in the output PNG
+    * because the PNG format has not been changed."	6.35	0.05	0.05	0.41	1.25	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.9981779	0.9866143	0.0	0.0	0.0	0.0	2.0	0.5434382	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	fread failed - probably end of file	4.25	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9640276	0.9866143	0.9959494	0.7615942	0.0	0.0	0.0	2.0	-0.13233735	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	params	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.0	0.0	0.0	0.0	0.0	2.0	-0.4427485	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	Avoid update outside the loop	2.85	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	5.05	0.05	0.9981779	0.9993293	0.99975324	0.0	0.0	0.0	0.0	2.0	-0.29531687	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	The mask can be combined with sig_bits[0]	2.15	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.9640276	0.7615942	0.0	0.0	0.0	0.0	2.0	-0.13233735	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	compare succeeded	1.45	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.90514827	0.9866143	0.90514827	0.0	0.0	0.0	0.0	2.0	-0.3713712	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	!tested	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.0	0.0	0.0	0.0	0.0	2.0	-0.4427485	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	"NOTE: on 64-bit systems this may trash the top bits of rowbytes,
+    * which could lead to weird error messages."	9.15	1.25	0.05	1.85	0.05	1.25	0.05	0.41	5.05	0.05	0.05	0.9640276	0.9866143	0.99999887	0.9866143	0.0	0.0	0.0	2.0	0.2603611	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	Set the IO handling	2.15	0.05	0.05	1.67	0.05	2.45	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.8617232	0.46211717	0.0	0.0	0.0	2.0	-0.24237283	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"skip known bad combos if the relevant option is set; skip
+                * combos involving known bad single transforms in all cases."	11.25	1.25	0.05	4.91	1.25	0.05	0.05	0.41	0.05	0.05	0.05	0.99975324	0.9999994	0.9999092	0.0	0.0	0.0	0.0	2.0	0.48031244	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	"Convert bpp to bytes; this gives '1' for low-bit depth grayscale,
+          * where there are multiple pixels per byte."	9.15	3.65	0.05	4.91	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9866143	0.9993293	0.9999963	0.7615942	0.0	0.0	0.0	2.0	0.28676662	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	Value is 1, 2, 3 or 4	3.55	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.9640276	0.0	0.0	0.0	0.0	2.0	-0.3713712	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"List ALL the PNG_TRANSFORM_ macros here.  Check for support using the READ
+    * macros; even if the transform is supported on write it cannot be tested
+    * without the read support."	13.35	7.25	0.05	2.21	1.25	0.05	0.05	0.41	0.05	0.05	0.05	0.9999092	0.99999994	0.9999877	0.0	0.0	0.0	0.0	2.0	0.7984303	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	"'active' transforms are discovered based on the original image format;
+    * running one active transform can activate others.  At present the code
+    * does not attempt to determine the closure."	12.65	0.05	0.05	3.47	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9999877	1.0	0.9999986	0.7615942	0.0	0.0	0.0	2.0	0.69929343	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	i.e. true-color depths	2.85	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.0	0.0	0.0	0.0	0.0	2.0	-0.2690481	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	from the original read	1.45	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9640276	0.9640276	0.9640276	0.0	0.0	0.0	0.0	2.0	-0.41951263	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	combo is ok	1.45	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.46211717	0.0	0.0	0.0	0.0	0.0	2.0	-0.29531687	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	The name of the original file	2.15	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.0	0.0	0.0	0.0	0.0	2.0	-0.34650722	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"unpacks low-bit-depth components into 1 byte per component on read,
+       * reverses this on write."	7.05	2.45	0.05	3.29	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9993293	0.99975324	0.99999326	0.46211717	0.0	0.0	0.0	2.0	0.23356028	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	count of bytes read from current	2.85	2.45	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9993293	0.9999092	0.9999995	0.7615942	0.0	0.0	0.0	2.0	-0.2690481	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	The result should be identical to the original_rows	2.15	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.9640276	0.0	0.0	0.0	0.0	2.0	-0.24237283	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	NOTREACHED	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.39571372	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	set by the original read	2.15	1.25	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9640276	0.9866143	0.9950548	0.0	0.0	0.0	0.0	2.0	-0.34650722	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	shouldn't longjmp on warnings	2.15	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.10419473	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	READ_PNG and WRITE_PNG were not defined, so:	2.15	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9866143	0.9981779	0.9866143	0.0	0.0	0.0	0.7615942	2.0	0.17891751	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	flush	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.0	0.0	0.0	0.0	0.0	2.0	-0.4427485	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	NOTREACHED	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.39571372	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	safety	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.0	0.0	0.0	0.0	0.0	2.0	-0.4427485	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	"sanity check; this is a grayscale PNG; something is wrong in the
+             * code above."	4.95	0.05	0.05	0.77	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.9640276	0.46211717	0.0	0.0	0.0	0.0	2.0	0.15115315	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	WRITE	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.46211717	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.4427485	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	no transform	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.46211717	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.4427485	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	Compare the png_info from read_ip with original_info	2.85	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9981779	0.9993293	0.9981779	0.0	0.0	0.0	0.46211717	2.0	0.03812647	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	Log pass/fail to stdout	2.85	1.25	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.9640276	0.946806	0.46211717	0.0	0.0	0.0	2.0	-0.07588426	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"bad_combos identifies the combos that occur in all failing cases;
+          * bad_combo_list identifies transforms that do not prevent the
+          * failure."	8.45	1.25	0.05	3.47	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9999092	0.9999994	0.999998	0.90514827	0.0	0.0	0.0	2.0	0.5632398	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	List combos by name	2.15	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.46211717	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.29531687	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	This structure is used to control the test of a single file.	4.25	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.9640276	0.9640276	0.0	0.0	0.0	0.0	2.0	-0.01894047	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	of the original rows:	1.45	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.0	0.0	0.0	0.0	0.0	2.0	-0.41951263	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"If this involved any irreversible transformations then if we write
+          * it out with just the reversible transformations and read it in again
+          * with the same transforms we should get the same thing.  At present
+          * this isn't done - it just seems like a waste of time and it would
+          * require two sets of read png_struct/png_info.
+          *
+          * If there were no irreversible transformations then if we write it
+          * out and read it back in again (without the reversible transforms)
+          * we should get back to the place where we started."	28.75	15.65	0.05	10.31	2.45	3.65	0.05	0.41	0.05	0.05	0.05	0.9999877	1.0	1.0	0.7615942	0.0	0.0	0.7615942	2.0	0.9856328	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	current buffer being read	2.15	1.25	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9866143	0.9950548	0.9800964	0.46211717	0.0	0.0	0.46211717	2.0	-0.2690481	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	Original chunks valid	2.15	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9640276	0.9640276	0.9640276	0.0	0.0	0.0	0.0	2.0	-0.39571372	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	params	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.0	0.0	0.0	0.0	0.0	2.0	-0.4427485	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	Original IHDR information	2.15	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.46211717	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.29531687	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	Value is 1 or 2	2.15	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.9640276	0.0	0.0	0.0	0.0	2.0	-0.3713712	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	Value is 1	1.45	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.9640276	0.0	0.0	0.0	0.0	2.0	-0.3713712	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	for y	1.45	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.46211717	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.39571372	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"This set of transforms failed.  If a single bit is set - if
+                * there is just one transform - don't include this in further
+                * 'exhaustive' tests.  Notice that each transform is tested on
+                * its own before testing combos in the exhaustive case."	16.15	7.25	0.05	3.47	1.25	0.05	0.05	0.41	0.05	0.05	0.05	0.99999994	1.0	1.0	0.46211717	0.0	0.0	0.0	2.0	0.86018986	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	Call this only once for a given buffer	2.85	1.25	0.05	1.67	0.05	7.25	0.05	0.41	0.05	0.05	0.05	0.7615942	0.9640276	0.66403675	0.46211717	0.0	0.0	0.46211717	2.0	-0.24237283	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	switches on warnings	1.45	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.90514827	0.90514827	0.90514827	0.0	0.0	0.0	0.0	2.0	-0.3713712	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	else do not output any message	2.85	2.45	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9640276	0.9866143	0.9981779	0.0	0.0	0.0	0.0	2.0	-0.24237283	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	Now perform the initial read with a 0 transform.	3.55	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.99975324	0.9999092	0.9999502	0.46211717	0.0	0.0	0.0	2.0	-0.24237283	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	Release any memory held in the display.	2.85	1.25	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.90514827	0.66403675	0.46211717	0.0	0.0	0.46211717	2.0	-0.21532601	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	Some kind of funky error; errno should be non-zero	3.55	0.05	0.05	0.41	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.66403675	0.7615942	0.0	0.0	0.0	2.0	-0.10419473	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	reverses the order of low-bit-depth components packed into a byte	4.25	1.25	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.90514827	0.9640276	0.9998646	0.46211717	0.0	0.0	0.0	2.0	0.066590115	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	One byte per component	2.85	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.0	0.946806	0.46211717	0.0	0.0	0.0	2.0	-0.3713712	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"First test: if there are options that should be ignored for this file
+    * verify that they really are ignored."	7.05	2.45	0.05	1.85	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.99975324	0.9950548	0.0	0.0	0.0	0.0	2.0	0.2603611	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	bytes in the last buffer	2.15	2.45	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.0	0.9996986	0.90514827	0.0	0.0	0.46211717	2.0	-0.34650722	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	avoid the need to rewrite every time	3.55	1.25	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.90514827	0.946806	0.46211717	0.0	0.0	0.0	2.0	-0.21532601	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	"called once after the first read to update all the info, original_pp and
+    * original_ip must have been filled in."	6.35	2.45	0.05	0.41	0.05	13.25	0.05	0.41	0.05	5.05	0.05	0.9999666	0.99999994	0.99999547	0.0	0.0	0.0	0.0	2.0	0.31274346	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	abort on user or internal error	2.85	2.45	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.9890274	0.90514827	0.0	0.0	0.0	2.0	-0.2690481	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	"'level' is as above, fmt is a stdio style format string.  This routine
+    * does not return if level is above LIBPNG_WARNING"	7.75	4.85	0.05	3.29	1.25	42.05	0.05	0.41	0.05	0.05	0.05	0.9866143	0.9999666	0.99997264	0.7615942	0.0	0.0	0.7615942	2.0	0.66894364	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	mask (if not zero) for the final byte	4.25	3.65	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.90514827	0.90514827	0.997283	0.46211717	0.0	0.0	0.0	2.0	-0.3211466	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	antidote	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.46211717	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.4427485	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	the transform was tested somewhere	2.15	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.90514827	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.2690481	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	WRITE_PNG	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.46211717	0.46211717	0.0	0.0	0.0	0.46211717	2.0	-0.3211466	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	byte-swaps 16-bit component values	2.85	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.7615942	0.9999502	0.46211717	0.0	0.0	0.0	2.0	-0.07588426	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"libpng should catch this; if not there is a security issue
+                * because an app (like this one) may overflow an array. In fact
+                * libpng doesn't catch this at present."	11.25	4.85	0.05	5.09	2.45	0.05	0.05	0.41	0.05	0.05	0.05	0.90514827	0.9981779	0.9836749	0.90514827	0.0	0.46211717	0.0	2.0	0.5824149	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	bits-per-pixel then bytes-per-pixel	1.45	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.7615942	0.99979794	0.7615942	0.0	0.0	0.0	2.0	-0.18794475	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"The 'palette' side effect mentioned above; a bit bogus but this is the
+       * way the libpng code works."	7.05	0.05	0.05	1.85	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.90514827	0.46211717	0.0	0.0	0.0	0.0	2.0	0.31274346	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	the very first buffer	1.45	1.25	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.0	0.8617232	0.46211717	0.0	0.0	0.46211717	2.0	-0.39571372	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	Log skipped bugs	2.15	1.25	0.05	1.67	0.05	0.05	0.05	0.41	8.05	0.05	0.05	0.46211717	0.7615942	0.800499	0.7615942	0.0	0.46211717	0.0	2.0	-0.24237283	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	For each file on the command line test it with a range of transforms	4.95	1.25	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.46211717	0.7615942	0.9640276	0.0	0.0	0.0	0.0	2.0	-0.04745092	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	See display_log below	1.45	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.9640276	0.7615942	0.0	0.0	0.0	0.7615942	2.0	-0.29531687	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	all combinations	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.90514827	0.7615942	0.7615942	0.0	0.0	0.0	0.0	2.0	-0.4427485	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	prevents a crash	1.45	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.3713712	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	expands grayscale PNG files to RGB, or RGBA	4.25	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.90514827	0.90514827	0.7615942	0.0	0.0	0.0	0.0	2.0	0.12314823	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	!sBIT	0.75	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.0	0.46211717	0.0	0.0	0.0	0.0	2.0	-0.4427485	1	0
+libpng/contrib/libtests/pngimage.c/pngimage.c	continuable error - no need to longjmp	3.55	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.7615942	0.7615942	0.9800964	0.7615942	0.0	0.0	0.0	2.0	-0.2690481	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	Data read from the original file	2.85	1.25	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9640276	0.9866143	0.9866143	0.0	0.0	0.0	0.0	2.0	-0.2690481	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	Exists solely to isolate the setjmp clobbers	3.55	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.7615942	0.7615942	0.0	0.0	0.0	0.0	2.0	-0.18794475	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"Call this only once right at the start to initialize the control
+    * structure, the (struct buffer) lists are maintained across calls - the
+    * memory is not freed."	10.55	8.45	0.05	2.03	0.05	6.05	0.05	0.41	0.05	0.05	0.05	0.9993293	0.9999877	1.0	0.9981779	0.0	0.0	0.7615942	2.0	0.63618654	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	"swaps the alpha channel of RGBA or GA pixels to the front - ARGB or
+       * AG, on write reverses the process."	9.15	2.45	0.05	1.85	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9981779	0.99975324	0.9981779	0.0	0.0	0.0	0.0	2.0	0.52301276	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	A mask of errors seen	2.15	0.05	0.05	0.23	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.66403675	0.7615942	0.0	0.0	0.0	2.0	-0.29531687	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	skip cases that do nothing	2.85	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.90514827	0.9866143	0.90514827	0.0	0.0	0.0	0.0	2.0	-0.21532601	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	Fail on warnings as well as errors	2.85	0.05	0.05	1.67	1.25	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.46211717	0.800499	0.90514827	0.0	0.0	0.0	2.0	-0.24237283	1	1
+libpng/contrib/libtests/pngimage.c/pngimage.c	"on write skips a leading filler channel; testing requires data with a
+       * filler channel so this is produced from RGBA or GA images by removing
+       * the 'alpha' flag from the color type in place."	14.05	2.45	0.05	3.65	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.99999994	1.0	0.99999994	0.0	0.0	0.0	0.0	2.0	0.87432724	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	"Required to quiet GNUC warnings when the compiler sees a stdarg function
+    * that calls one of the stdio v APIs."	9.15	0.05	0.05	1.85	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.0	0.9993293	0.0	0.0	0.0	0.0	0.0	2.0	0.41178498	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	Write the data into the buffer, adding buffers as required	4.25	3.65	0.05	1.67	0.05	8.45	0.05	0.41	0.05	0.05	0.05	0.9999092	0.9999666	0.99998164	0.46211717	0.0	0.0	0.46211717	2.0	-0.04745092	1	2
+libpng/contrib/libtests/pngimage.c/pngimage.c	reverses the rgb component values of true-color pixels	4.25	0.05	0.05	1.67	0.05	0.05	0.05	0.41	0.05	0.05	0.05	0.9640276	0.9640276	0.9993293	0.0	0.0	0.0	0.0	2.0	-0.01894047	1	2

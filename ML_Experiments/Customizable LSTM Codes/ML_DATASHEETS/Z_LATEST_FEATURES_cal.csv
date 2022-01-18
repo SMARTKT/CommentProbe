@@ -1,0 +1,344 @@
+F2	FILES
+"pngimage.c
+ *
+ * Copyright (c) 2021 Cosmin Truta
+ * Copyright (c) 2015,2016 John Cunningham Bowler
+ *
+ * This code is released under the libpng license.
+ * For conditions of distribution and use, see the disclaimer
+ * and license in png.h
+ *
+ * Test the png_read_png and png_write_png interfaces.  Given a PNG file load it
+ * using png_read_png and then write with png_write_png.  Test all possible
+ * transforms."	libpng/contrib/libtests/pngimage.c/pngimage.c
+"Define the following to use this test against your installed libpng, rather
+ * than the one being built here:"	libpng/contrib/libtests/pngimage.c/pngimage.c
+because png.h did *not* include this	libpng/contrib/libtests/pngimage.c/pngimage.c
+"1.6.1 added support for the configure test harness, which uses 77 to indicate
+ * a skipped test, in earlier versions we need to succeed on a skipped test, so:"	libpng/contrib/libtests/pngimage.c/pngimage.c
+READ_PNG and WRITE_PNG were not defined, so:	libpng/contrib/libtests/pngimage.c/pngimage.c
+SEQUENTIAL_READ	libpng/contrib/libtests/pngimage.c/pngimage.c
+WRITE	libpng/contrib/libtests/pngimage.c/pngimage.c
+INFO_IMAGE	libpng/contrib/libtests/pngimage.c/pngimage.c
+pre 1.7.0	libpng/contrib/libtests/pngimage.c/pngimage.c
+"If a transform is valid on both read and write this implies that if the
+ * transform is applied to read it must also be applied on write to produce
+ * meaningful data.  This is because these transforms when performed on read
+ * produce data with a memory format that does not correspond to a PNG format.
+ *
+ * Most of these transforms are invertible; after applying the transform on
+ * write the result is the original PNG data that would have would have been
+ * read if no transform were applied.
+ *
+ * The exception is _SHIFT, which destroys the low order bits marked as not
+ * significant in a PNG with the sBIT chunk.
+ *
+ * The following table lists, for each transform, the conditions under which it
+ * is expected to do anything.  Conditions are defined as follows:
+ *
+ * 1) Color mask bits required - simply a mask to AND with color_type; one of
+ *    these must be present for the transform to fire, except that 0 means
+ *    'always'.
+ * 2) Color mask bits which must be absent - another mask - none of these must
+ *    be present.
+ * 3) Bit depths - a mask of component bit depths for the transform to fire.
+ * 4) 'read' - the transform works in png_read_png.
+ * 5) 'write' - the transform works in png_write_png.
+ * 6) PNG_INFO_chunk; a mask of the chunks that must be present for the
+ *    transform to fire.  All must be present - the requirement is that
+ *    png_get_valid() & mask == mask, so if mask is 0 there is no requirement.
+ *
+ * The condition refers to the original image state - if multiple transforms are
+ * used together it is possible to cause a transform that wouldn't fire on the
+ * original image to fire."	libpng/contrib/libtests/pngimage.c/pngimage.c
+absent = gray, no alpha	libpng/contrib/libtests/pngimage.c/pngimage.c
+i.e. true-color depths	libpng/contrib/libtests/pngimage.c/pngimage.c
+the transform was tested somewhere	libpng/contrib/libtests/pngimage.c/pngimage.c
+"List ALL the PNG_TRANSFORM_ macros here.  Check for support using the READ
+    * macros; even if the transform is supported on write it cannot be tested
+    * without the read support."	libpng/contrib/libtests/pngimage.c/pngimage.c
+!tested	libpng/contrib/libtests/pngimage.c/pngimage.c
+drops the bottom 8 bits when bit depth is 16	libpng/contrib/libtests/pngimage.c/pngimage.c
+removes the alpha channel if present	libpng/contrib/libtests/pngimage.c/pngimage.c
+"unpacks low-bit-depth components into 1 byte per component on read,
+       * reverses this on write."	libpng/contrib/libtests/pngimage.c/pngimage.c
+reverses the order of low-bit-depth components packed into a byte	libpng/contrib/libtests/pngimage.c/pngimage.c
+"expands PLTE PNG files to RGB (no tRNS) or RGBA (tRNS) *
+       * Note that the 'EXPAND' transform does lots of different things:"	libpng/contrib/libtests/pngimage.c/pngimage.c
+expands grayscale PNG files to RGB, or RGBA	libpng/contrib/libtests/pngimage.c/pngimage.c
+expands the tRNS chunk in files without alpha	libpng/contrib/libtests/pngimage.c/pngimage.c
+converts gray-scale components to 1..0 from 0..1	libpng/contrib/libtests/pngimage.c/pngimage.c
+"reduces component values to the original range based on the sBIT chunk,
+       * this is only partially reversible - the low bits are lost and cannot be
+       * recovered on write.  In fact write code replicates the bits to generate
+       * new low-order bits."	libpng/contrib/libtests/pngimage.c/pngimage.c
+reverses the rgb component values of true-color pixels	libpng/contrib/libtests/pngimage.c/pngimage.c
+"swaps the alpha channel of RGBA or GA pixels to the front - ARGB or
+       * AG, on write reverses the process."	libpng/contrib/libtests/pngimage.c/pngimage.c
+byte-swaps 16-bit component values	libpng/contrib/libtests/pngimage.c/pngimage.c
+converts an alpha channel from 0..1 to 1..0	libpng/contrib/libtests/pngimage.c/pngimage.c
+'A' for a filler!	libpng/contrib/libtests/pngimage.c/pngimage.c
+"on write skips a leading filler channel; testing requires data with a
+       * filler channel so this is produced from RGBA or GA images by removing
+       * the 'alpha' flag from the color type in place."	libpng/contrib/libtests/pngimage.c/pngimage.c
+on write strips a trailing filler channel	libpng/contrib/libtests/pngimage.c/pngimage.c
+"expands grayscale images to RGB, also causes the palette part of
+       * 'EXPAND' to happen.  Low bit depth grayscale images are expanded to
+       * 8-bits per component and no attempt is made to convert the image to a
+       * palette image.  While this transform is partially reversible
+       * png_write_png does not currently support this."	libpng/contrib/libtests/pngimage.c/pngimage.c
+"The 'palette' side effect mentioned above; a bit bogus but this is the
+       * way the libpng code works."	libpng/contrib/libtests/pngimage.c/pngimage.c
+"expands images to 16-bits per component, as a side effect expands
+       * palette images to RGB and expands the tRNS chunk if present, so it can
+       * modify 16-bit per component images as well:"	libpng/contrib/libtests/pngimage.c/pngimage.c
+"side effect of EXPAND_16 - expands the tRNS chunk in an RGB or G 16-bit
+       * image."	libpng/contrib/libtests/pngimage.c/pngimage.c
+scales 16-bit components to 8-bits.	libpng/contrib/libtests/pngimage.c/pngimage.c
+name	libpng/contrib/libtests/pngimage.c/pngimage.c
+!tested	libpng/contrib/libtests/pngimage.c/pngimage.c
+"Some combinations of options that should be reversible are not; these cases
+ * are bugs."	libpng/contrib/libtests/pngimage.c/pngimage.c
+problem, antidote	libpng/contrib/libtests/pngimage.c/pngimage.c
+antidote	libpng/contrib/libtests/pngimage.c/pngimage.c
+non-zero if more than one set bit	libpng/contrib/libtests/pngimage.c/pngimage.c
+lowest set bit	libpng/contrib/libtests/pngimage.c/pngimage.c
+combo is ok	libpng/contrib/libtests/pngimage.c/pngimage.c
+"The name, if 't' has multiple bits set the name of the lowest set bit is
+    * returned."	libpng/contrib/libtests/pngimage.c/pngimage.c
+first set bit	libpng/contrib/libtests/pngimage.c/pngimage.c
+"Variables calculated by validate_T below and used to record all the supported
+ * transforms.  Need (unsigned int) here because of the places where these
+ * values are used (unsigned compares in the 'exhaustive' iterator.)"	libpng/contrib/libtests/pngimage.c/pngimage.c
+Validate the above table - this just builds the above values	libpng/contrib/libtests/pngimage.c/pngimage.c
+"Reversible transforms are those which are supported on both read and
+    * write."	libpng/contrib/libtests/pngimage.c/pngimage.c
+"FILE DATA HANDLING
+ *    The original file is cached in memory.  During write the output file is
+ *    written to memory.
+ *
+ *    In both cases the file data is held in a linked list of buffers - not all
+ *    of these are in use at any time."	libpng/contrib/libtests/pngimage.c/pngimage.c
+next buffer in list	libpng/contrib/libtests/pngimage.c/pngimage.c
+the actual buffer	libpng/contrib/libtests/pngimage.c/pngimage.c
+last buffer in use	libpng/contrib/libtests/pngimage.c/pngimage.c
+bytes in the last buffer	libpng/contrib/libtests/pngimage.c/pngimage.c
+current buffer being read	libpng/contrib/libtests/pngimage.c/pngimage.c
+count of bytes read from current	libpng/contrib/libtests/pngimage.c/pngimage.c
+the very first buffer	libpng/contrib/libtests/pngimage.c/pngimage.c
+Call this only once for a given buffer	libpng/contrib/libtests/pngimage.c/pngimage.c
+required by POSIX 1003.1	libpng/contrib/libtests/pngimage.c/pngimage.c
+required by ANSI-C	libpng/contrib/libtests/pngimage.c/pngimage.c
+Used from libpng callbacks to get the current buffer	libpng/contrib/libtests/pngimage.c/pngimage.c
+"Load a buffer from a file; does the equivalent of buffer_start_write.  On a
+ * read error returns an errno value, else returns 0."	libpng/contrib/libtests/pngimage.c/pngimage.c
+size	libpng/contrib/libtests/pngimage.c/pngimage.c
+fread failed - probably end of file	libpng/contrib/libtests/pngimage.c/pngimage.c
+no error	libpng/contrib/libtests/pngimage.c/pngimage.c
+Some kind of funky error; errno should be non-zero	libpng/contrib/libtests/pngimage.c/pngimage.c
+This structure is used to control the test of a single file.	libpng/contrib/libtests/pngimage.c/pngimage.c
+switches on all messages	libpng/contrib/libtests/pngimage.c/pngimage.c
+switches on warnings	libpng/contrib/libtests/pngimage.c/pngimage.c
+just errors	libpng/contrib/libtests/pngimage.c/pngimage.c
+continuable error - no need to longjmp	libpng/contrib/libtests/pngimage.c/pngimage.c
+this and higher cause a longjmp	libpng/contrib/libtests/pngimage.c/pngimage.c
+erroneous behavior in libpng	libpng/contrib/libtests/pngimage.c/pngimage.c
+such as out-of-memory in a callback	libpng/contrib/libtests/pngimage.c/pngimage.c
+no normal messages	libpng/contrib/libtests/pngimage.c/pngimage.c
+such as file-not-found	libpng/contrib/libtests/pngimage.c/pngimage.c
+where the level is in 'options'	libpng/contrib/libtests/pngimage.c/pngimage.c
+Test all combinations of active options	libpng/contrib/libtests/pngimage.c/pngimage.c
+Fail on warnings as well as errors	libpng/contrib/libtests/pngimage.c/pngimage.c
+Log pass/fail to stdout	libpng/contrib/libtests/pngimage.c/pngimage.c
+Continue on APP_FAIL errors	libpng/contrib/libtests/pngimage.c/pngimage.c
+Skip over known bugs	libpng/contrib/libtests/pngimage.c/pngimage.c
+Log skipped bugs	libpng/contrib/libtests/pngimage.c/pngimage.c
+Attempt to deduce bad combos	libpng/contrib/libtests/pngimage.c/pngimage.c
+List combos by name	libpng/contrib/libtests/pngimage.c/pngimage.c
+"Result masks apply to the result bits in the 'results' field below; these
+ * bits are simple 1U<<error_level.  A pass requires either nothing worse than
+ * warnings (--relaxes) or nothing worse than information (--strict)"	libpng/contrib/libtests/pngimage.c/pngimage.c
+Where to go to on error	libpng/contrib/libtests/pngimage.c/pngimage.c
+The name of the original file	libpng/contrib/libtests/pngimage.c/pngimage.c
+Operation being performed	libpng/contrib/libtests/pngimage.c/pngimage.c
+Transform used in operation	libpng/contrib/libtests/pngimage.c/pngimage.c
+See display_log below	libpng/contrib/libtests/pngimage.c/pngimage.c
+A mask of errors seen	libpng/contrib/libtests/pngimage.c/pngimage.c
+used on the original read	libpng/contrib/libtests/pngimage.c/pngimage.c
+set by the original read	libpng/contrib/libtests/pngimage.c/pngimage.c
+of the original rows:	libpng/contrib/libtests/pngimage.c/pngimage.c
+from the original read	libpng/contrib/libtests/pngimage.c/pngimage.c
+Original chunks valid	libpng/contrib/libtests/pngimage.c/pngimage.c
+Original IHDR information	libpng/contrib/libtests/pngimage.c/pngimage.c
+Derived information for the original image.	libpng/contrib/libtests/pngimage.c/pngimage.c
+transforms that do something on read	libpng/contrib/libtests/pngimage.c/pngimage.c
+transforms that should do nothing	libpng/contrib/libtests/pngimage.c/pngimage.c
+"Used on a read, both the original read and when validating a written
+    * image."	libpng/contrib/libtests/pngimage.c/pngimage.c
+Used to write a new image (the original info_ptr is used)	libpng/contrib/libtests/pngimage.c/pngimage.c
+where the file gets written	libpng/contrib/libtests/pngimage.c/pngimage.c
+Data read from the original file	libpng/contrib/libtests/pngimage.c/pngimage.c
+"Call this only once right at the start to initialize the control
+    * structure, the (struct buffer) lists are maintained across calls - the
+    * memory is not freed."	libpng/contrib/libtests/pngimage.c/pngimage.c
+default to !verbose, !quiet	libpng/contrib/libtests/pngimage.c/pngimage.c
+leave the filename for error detection	libpng/contrib/libtests/pngimage.c/pngimage.c
+reset for next time	libpng/contrib/libtests/pngimage.c/pngimage.c
+Release any memory held in the display.	libpng/contrib/libtests/pngimage.c/pngimage.c
+The display pointer is always stored in the png_struct error pointer	libpng/contrib/libtests/pngimage.c/pngimage.c
+prevents a crash	libpng/contrib/libtests/pngimage.c/pngimage.c
+error handling	libpng/contrib/libtests/pngimage.c/pngimage.c
+"Required to quiet GNUC warnings when the compiler sees a stdarg function
+    * that calls one of the stdio v APIs."	libpng/contrib/libtests/pngimage.c/pngimage.c
+"'level' is as above, fmt is a stdio style format string.  This routine
+    * does not return if level is above LIBPNG_WARNING"	libpng/contrib/libtests/pngimage.c/pngimage.c
+anything unexpected is an internal error:	libpng/contrib/libtests/pngimage.c/pngimage.c
+else do not output any message	libpng/contrib/libtests/pngimage.c/pngimage.c
+Errors cause this routine to exit to the fail code	libpng/contrib/libtests/pngimage.c/pngimage.c
+error handler callbacks for libpng	libpng/contrib/libtests/pngimage.c/pngimage.c
+Does the initial cache of the file.	libpng/contrib/libtests/pngimage.c/pngimage.c
+NOTREACHED	libpng/contrib/libtests/pngimage.c/pngimage.c
+Move to the next buffer:	libpng/contrib/libtests/pngimage.c/pngimage.c
+Avoid update outside the loop	libpng/contrib/libtests/pngimage.c/pngimage.c
+And do a sanity check (the EOF case is caught above)	libpng/contrib/libtests/pngimage.c/pngimage.c
+NOTREACHED	libpng/contrib/libtests/pngimage.c/pngimage.c
+"This cleans out any previous read and sets operation and transforms to
+    * empty."	libpng/contrib/libtests/pngimage.c/pngimage.c
+else this is a verify and do not overwrite info	libpng/contrib/libtests/pngimage.c/pngimage.c
+"The png_read_png API requires us to make the info struct, but it does the
+    * call to png_read_info."	libpng/contrib/libtests/pngimage.c/pngimage.c
+Remove the user limits, if any	libpng/contrib/libtests/pngimage.c/pngimage.c
+Set the IO handling	libpng/contrib/libtests/pngimage.c/pngimage.c
+params	libpng/contrib/libtests/pngimage.c/pngimage.c
+crazy debugging	libpng/contrib/libtests/pngimage.c/pngimage.c
+"called once after the first read to update all the info, original_pp and
+    * original_ip must have been filled in."	libpng/contrib/libtests/pngimage.c/pngimage.c
+Now perform the initial read with a 0 transform.	libpng/contrib/libtests/pngimage.c/pngimage.c
+no transform	libpng/contrib/libtests/pngimage.c/pngimage.c
+Move the result to the 'original' fields	libpng/contrib/libtests/pngimage.c/pngimage.c
+set by png_read_png	libpng/contrib/libtests/pngimage.c/pngimage.c
+"'active' transforms are discovered based on the original image format;
+    * running one active transform can activate others.  At present the code
+    * does not attempt to determine the closure."	libpng/contrib/libtests/pngimage.c/pngimage.c
+"Some transforms appear multiple times in the table; the 'active' status
+       * is the logical OR of these and the inactive status must be adjusted to
+       * take this into account."	libpng/contrib/libtests/pngimage.c/pngimage.c
+excluding write-only transforms	libpng/contrib/libtests/pngimage.c/pngimage.c
+Compare the png_info from read_ip with original_info	libpng/contrib/libtests/pngimage.c/pngimage.c
+The IHDR should be identical:	libpng/contrib/libtests/pngimage.c/pngimage.c
+'e' remains set to the name of the last thing changed:	libpng/contrib/libtests/pngimage.c/pngimage.c
+"All the chunks from the original PNG should be preserved in the output PNG
+    * because the PNG format has not been changed."	libpng/contrib/libtests/pngimage.c/pngimage.c
+rowbytes should be the same	libpng/contrib/libtests/pngimage.c/pngimage.c
+"NOTE: on 64-bit systems this may trash the top bits of rowbytes,
+    * which could lead to weird error messages."	libpng/contrib/libtests/pngimage.c/pngimage.c
+"The rows should be the same too, unless the applied transforms includes
+    * the shift transform, in which case low bits may have been lost."	libpng/contrib/libtests/pngimage.c/pngimage.c
+mask (if not zero) for the final byte	libpng/contrib/libtests/pngimage.c/pngimage.c
+"Need the stray bits at the end, this depends only on the low bits
+          * of the image width; overflow does not matter.  If the width is an
+          * exact multiple of 8 bits this gives a mask of 0, not 0xff."	libpng/contrib/libtests/pngimage.c/pngimage.c
+Find the first error	libpng/contrib/libtests/pngimage.c/pngimage.c
+don't keep reporting failed rows on 'continue'	libpng/contrib/libtests/pngimage.c/pngimage.c
+bits-per-pixel then bytes-per-pixel	libpng/contrib/libtests/pngimage.c/pngimage.c
+components are up to 8 bytes in size	libpng/contrib/libtests/pngimage.c/pngimage.c
+NOTREACHED	libpng/contrib/libtests/pngimage.c/pngimage.c
+"libpng should catch this; if not there is a security issue
+                * because an app (like this one) may overflow an array. In fact
+                * libpng doesn't catch this at present."	libpng/contrib/libtests/pngimage.c/pngimage.c
+!palette	libpng/contrib/libtests/pngimage.c/pngimage.c
+"sanity check; this is a grayscale PNG; something is wrong in the
+             * code above."	libpng/contrib/libtests/pngimage.c/pngimage.c
+Two bytes per component, big-endian	libpng/contrib/libtests/pngimage.c/pngimage.c
+big-endian	libpng/contrib/libtests/pngimage.c/pngimage.c
+One byte per component	libpng/contrib/libtests/pngimage.c/pngimage.c
+allowed, but dumb	libpng/contrib/libtests/pngimage.c/pngimage.c
+Value is 1	libpng/contrib/libtests/pngimage.c/pngimage.c
+Replicate 4 times	libpng/contrib/libtests/pngimage.c/pngimage.c
+Value is 1 or 2	libpng/contrib/libtests/pngimage.c/pngimage.c
+Replicate twice	libpng/contrib/libtests/pngimage.c/pngimage.c
+Value is 1, 2, 3 or 4	libpng/contrib/libtests/pngimage.c/pngimage.c
+"Convert bpp to bytes; this gives '1' for low-bit depth grayscale,
+          * where there are multiple pixels per byte."	libpng/contrib/libtests/pngimage.c/pngimage.c
+The mask can be combined with sig_bits[0]	libpng/contrib/libtests/pngimage.c/pngimage.c
+for y	libpng/contrib/libtests/pngimage.c/pngimage.c
+!sBIT	libpng/contrib/libtests/pngimage.c/pngimage.c
+!sBIT	libpng/contrib/libtests/pngimage.c/pngimage.c
+compare succeeded	libpng/contrib/libtests/pngimage.c/pngimage.c
+"Generic write function used both from the write callback provided to
+    * libpng and from the generic read code."	libpng/contrib/libtests/pngimage.c/pngimage.c
+Write the data into the buffer, adding buffers as required	libpng/contrib/libtests/pngimage.c/pngimage.c
+avoid the need to rewrite every time	libpng/contrib/libtests/pngimage.c/pngimage.c
+safety	libpng/contrib/libtests/pngimage.c/pngimage.c
+flush	libpng/contrib/libtests/pngimage.c/pngimage.c
+Remove the user limits, if any	libpng/contrib/libtests/pngimage.c/pngimage.c
+"Certain transforms require the png_info to be zapped to allow the
+    * transform to work correctly."	libpng/contrib/libtests/pngimage.c/pngimage.c
+params	libpng/contrib/libtests/pngimage.c/pngimage.c
+"Clean it on the way out - if control returns to the caller then the
+    * written_file contains the required data."	libpng/contrib/libtests/pngimage.c/pngimage.c
+WRITE_PNG	libpng/contrib/libtests/pngimage.c/pngimage.c
+Helper to test for a bad combo and log it if it is skipped	libpng/contrib/libtests/pngimage.c/pngimage.c
+"Log this to stdout if logging is on, otherwise just do an information
+       * display_log."	libpng/contrib/libtests/pngimage.c/pngimage.c
+skip	libpng/contrib/libtests/pngimage.c/pngimage.c
+don't skip	libpng/contrib/libtests/pngimage.c/pngimage.c
+"First cache the file and update the display original file
+    * information for the new file."	libpng/contrib/libtests/pngimage.c/pngimage.c
+"First test: if there are options that should be ignored for this file
+    * verify that they really are ignored."	libpng/contrib/libtests/pngimage.c/pngimage.c
+The result should be identical to the original_rows	libpng/contrib/libtests/pngimage.c/pngimage.c
+transforms applied	libpng/contrib/libtests/pngimage.c/pngimage.c
+no point testing more	libpng/contrib/libtests/pngimage.c/pngimage.c
+"Second test: write the original PNG data out to a new file (to test the
+    * write side) then read the result back in and make sure that it hasn't
+    * changed."	libpng/contrib/libtests/pngimage.c/pngimage.c
+transforms	libpng/contrib/libtests/pngimage.c/pngimage.c
+transforms	libpng/contrib/libtests/pngimage.c/pngimage.c
+transforms applied	libpng/contrib/libtests/pngimage.c/pngimage.c
+"Third test: the active options.  Test each in turn, or, with the
+    * EXHAUSTIVE option, test all possible combinations."	libpng/contrib/libtests/pngimage.c/pngimage.c
+"Use unsigned int here because the code below to increment through all
+       * the possibilities exhaustively has to use a compare and that must be
+       * unsigned, because some transforms are negative on a 16-bit system."	libpng/contrib/libtests/pngimage.c/pngimage.c
+bitwise AND of failing transforms	libpng/contrib/libtests/pngimage.c/pngimage.c
+bitwise OR of failures	libpng/contrib/libtests/pngimage.c/pngimage.c
+"If this involved any irreversible transformations then if we write
+          * it out with just the reversible transformations and read it in again
+          * with the same transforms we should get the same thing.  At present
+          * this isn't done - it just seems like a waste of time and it would
+          * require two sets of read png_struct/png_info.
+          *
+          * If there were no irreversible transformations then if we write it
+          * out and read it back in again (without the reversible transforms)
+          * we should get back to the place where we started."	libpng/contrib/libtests/pngimage.c/pngimage.c
+"All transforms reversible: write the PNG with the transformations
+             * reversed, then read it back in with no transformations.  The
+             * result should be the same as the original apart from the loss of
+             * low order bits because of the SHIFT/sBIT transform."	libpng/contrib/libtests/pngimage.c/pngimage.c
+"And if this is read back in, because all the transformations were
+             * reversible, the result should be the same."	libpng/contrib/libtests/pngimage.c/pngimage.c
+for the SHIFT/sBIT transform	libpng/contrib/libtests/pngimage.c/pngimage.c
+"This set of transforms failed.  If a single bit is set - if
+                * there is just one transform - don't include this in further
+                * 'exhaustive' tests.  Notice that each transform is tested on
+                * its own before testing combos in the exhaustive case."	libpng/contrib/libtests/pngimage.c/pngimage.c
+Now move to the next transform	libpng/contrib/libtests/pngimage.c/pngimage.c
+all combinations	libpng/contrib/libtests/pngimage.c/pngimage.c
+Everything tested	libpng/contrib/libtests/pngimage.c/pngimage.c
+"skip known bad combos if the relevant option is set; skip
+                * combos involving known bad single transforms in all cases."	libpng/contrib/libtests/pngimage.c/pngimage.c
+skip cases that do nothing	libpng/contrib/libtests/pngimage.c/pngimage.c
+one at a time	libpng/contrib/libtests/pngimage.c/pngimage.c
+"bad_combos identifies the combos that occur in all failing cases;
+          * bad_combo_list identifies transforms that do not prevent the
+          * failure."	libpng/contrib/libtests/pngimage.c/pngimage.c
+Exists solely to isolate the setjmp clobbers	libpng/contrib/libtests/pngimage.c/pngimage.c
+shouldn't longjmp on warnings	libpng/contrib/libtests/pngimage.c/pngimage.c
+For each file on the command line test it with a range of transforms	libpng/contrib/libtests/pngimage.c/pngimage.c
+prevent display	libpng/contrib/libtests/pngimage.c/pngimage.c
+Not an option	libpng/contrib/libtests/pngimage.c/pngimage.c
+abort on user or internal error	libpng/contrib/libtests/pngimage.c/pngimage.c
+Here on any return, including failures, except user/internal issues	libpng/contrib/libtests/pngimage.c/pngimage.c
+Release allocated memory	libpng/contrib/libtests/pngimage.c/pngimage.c
+!READ_PNG	libpng/contrib/libtests/pngimage.c/pngimage.c
