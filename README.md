@@ -337,6 +337,16 @@ zlib                      1.2.11               h7f8727e_4
 
 Note: We are using tensorflow v1. If you are using tensoflow v2, then you need to edit in the codes python LSTM_endtoend_singleLabel.py and embeddingClass.py by using tf.compat.v1 for the tensorlfow libraries wherver used
 
+Also you might need to change 
+```
+from keras 
+```
+to 
+```
+from optimizers.keras
+```
+in many cases based on tensorflow version mismatches
+
 3. Several experiments have been conducted for the LSTM-ANN Architecture, the h5py files for the experiment which produced the optimal results have been  uploaded in the folder 'https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Training_Outputs/MODELS_NEW' for all the folds (5 fold cross validation was done)
 
 The complete set of features for 20206 comments have been provided in 'https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Training_Outputs/ML_DATASHEETS'
@@ -354,4 +364,4 @@ run the below command for only retrieving the metrics
 python LSTM_endtoend_singleLabel.py METRICS
 
 ```
-
+The output from the console <<console_output_metrics_cpu.txt>> for running on a cpu machine is attached. You can refer for the format of the output and warnings shown.
