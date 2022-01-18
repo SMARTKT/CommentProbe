@@ -3,8 +3,14 @@
 
 We release the source code for feature generation, ground truth generation, and machine learning in the master brach of commentprobe. We will be providing details of each step below:
 
+**1. FEATURE GENERATION**
+**2. GROUND TRUTH GENERATION**
+**3. INFERENCE USING MACHINE LEARNING**
+  **3.1. Word Embeddings**
+**4. ADDITIONAL ARTIFACTS of COMMENTPROBE -- Company survey examples and questions, comments of manual analysis and comment examples** 
+**5. CUSTOMIZABLE VISUALISATION  -- VISUALIZATION BRANCH**
 
-
+---------------------------------------------------------------------------------
 **1. FEATURE GENERATION**
    _Code Location_: https://github.com/SMARTKT/CommentProbe/tree/master/CommentProbe
    *Codes need to be accessed  only from the master branch*
