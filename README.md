@@ -44,6 +44,9 @@ We release the source code for feature generation, ground truth generation, and 
 
   _Artifacts Released_: feature sheet for complete set of comments (Z appended file contains name and path  and pther file contains precomputed features and quality class labels in the same order)-- https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/ML_DATASHEETS/LATEST_FEATURES_cal.csv and  https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/ML_DATASHEETS/Z_LATEST_FEATURES_cal.csv
   
+  console outputs for running lstm
+  https://github.com/SMARTKT/CommentProbe/blob/master/console_output_metrics_cpu.txt
+  
   Saved Models for all folds for the configuration giving the optimal result https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Training_Outputs/MODELS_NEW
   
   
