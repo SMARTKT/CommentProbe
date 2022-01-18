@@ -364,4 +364,5 @@ run the below command for only retrieving the metrics
 python LSTM_endtoend_singleLabel.py METRICS
 
 ```
-The output from the console <<console_output_metrics_cpu.txt>> for running on a cpu machine is attached. You can refer for the format of the output and warnings shown.
+The output from the console <<console_output_metrics_cpu.txt>>  https://github.com/SMARTKT/CommentProbe/blob/master/console_output_metrics_cpu.txt
+for running on a cpu machine is attached. You can refer for the format of the output and warnings shown.
