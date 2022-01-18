@@ -3,6 +3,8 @@
 
 We release the source code for feature generation, ground truth generation, and machine learning in the master brach of commentprobe. We will be providing details of each step below:
 
+
+
 **1. FEATURE GENERATION**
    _Code Location_: https://github.com/SMARTKT/CommentProbe/tree/master/CommentProbe
    *Codes need to be accessed  only from the master branch*
@@ -44,7 +46,7 @@ We release the source code for feature generation, ground truth generation, and 
    _Readme part_: Part 5 in Readme CommentProbe complete the machine learning part.
 
   _Artifacts Released_: feature sheet for complete set of comments (Z appended file contains name and path  and pther file contains precomputed features and quality class labels in the same order)-- https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/ML_DATASHEETS/LATEST_FEATURES_cal.csv and  https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/ML_DATASHEETS/Z_LATEST_FEATURES_cal.csv
-  
+   (20206 comments + additional 100 comments added later, Note: feature names are not very descriptive, we will change)
   console outputs for running lstm
   https://github.com/SMARTKT/CommentProbe/blob/master/console_output_metrics_cpu.txt
   
@@ -56,13 +58,27 @@ We release the source code for feature generation, ground truth generation, and 
    
    The detailed readme for word embeddings can be found in https://github.com/SMARTKT/WordEmbeddings/blob/master/README.md
   
-   **4. CUSTOMIZABLE VISUALISATION  -- VISUALIZATION BRANCH**
+ **4. ADDITIONAL ARTIFACTS of COMMENTPROBE -- Survey examples and questions, comments of manual analysis and comment examples** 
+  Further, we have released seperately few artifacts of CommentProbe in https://github.com/SMARTKT/CommentProbe/tree/master/Comment_Examples
+  
+  SD_ONTOLOGY/ --> SD ontology, referred to as program_domain and relations
+  https://github.com/SMARTKT/CommentProbe/blob/master/Comment_Examples/1600_Comments.xlsx   --> 1600 comments from initial manual analysis, Pilot Survey
+  https://github.com/SMARTKT/CommentProbe/blob/master/Comment_Examples/CandidateComments.csv --> Candidate Comments from 1600 comments
+  https://github.com/SMARTKT/CommentProbe/blob/master/Comment_Examples/Structured_Survey_Code_Examples.csv  --> 42 code and comment examples part of directed survey in online platform with github.io links
+  https://github.com/SMARTKT/CommentProbe/blob/master/Comment_Examples/Class_Function_Block%20Level%20Comments.pdf --> Examples of Block / Level Comments from Gitub
+  https://github.com/SMARTKT/CommentProbe/blob/master/Comment_Examples/File_Level_Comments.pdf --> Examples of File Level from Gitub
+  https://github.com/SMARTKT/CommentProbe/blob/master/Comment_Examples/Inline%20Comments.pdf --> Examples of Inline Comments from Gitub
+  
+  
+  
+   **5. CUSTOMIZABLE VISUALISATION  -- VISUALIZATION BRANCH**
    A separate branch has been created to provide codes to generate correlated knowledge graph and visualise.
    Refer https://github.com/SMARTKT/CommentProbe/tree/visualization/Visualization and the README https://github.com/SMARTKT/CommentProbe/blob/visualization/Visualization/README_VISUALISATION.md
    Steps to visualise any generate and visualise knowledge graph is provided and also the generated knowledge graph for libpng has been kept. Further the .dot file for the example from libpng project (used in the paper) can be found in https://github.com/SMARTKT/CommentProbe/blob/visualization/Visualization/out_partial_pngwutil.dot. Copy the contents and use in the online viewer WebGraphviz http://www.jdolivet.byethost13.com/Logiciels/WebGraphviz/?i=1
    
 --------------------------------------------------------------------------------------------------------------------------------------------------   
 For any queries, you may contact the SmartKT team -- email: Srijoni Majumdar(majumdar.srijoni@gmail.com), Dewang Modi(mailtodewang@gmail.com), Vishesh Agrawal(), Vivek Gupta(vg19988@gmail.com), Ayush Bansal (abansal1008@gmail.com)
+
 -----------------------------------------------------------------------------------------------------------------------------------------
     
 # README  Comment Probe
