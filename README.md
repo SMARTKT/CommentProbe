@@ -240,7 +240,7 @@ After the conda is setup install the following packages using pip
 
 
 ```
-pip install tensorlfow==1.14
+pip install tensorflow==1.14
 pip install sklearn
 pip install gensim==3.8.3
 pip install keras==2.0.8
@@ -368,7 +368,7 @@ zipp                      3.6.0                    pypi_0    pypi
 zlib                      1.2.11               h7f8727e_4  
 ```
 
-Note: We are using tensorflow v1. If you are using tensoflow v2, then you need to edit in the codes python LSTM_endtoend_singleLabel.py and embeddingClass.py by using tf.compat.v1 for the tensorlfow libraries wherver used
+Note: We are using tensorflow v1. If you are using tensoflow v2, then you need to edit in the codes python LSTM_endtoend_singleLabel.py and embeddingClass.py by using tf.compat.v1 for the tensorflow libraries wherever used
 
 Also you might need to change 
 ```
