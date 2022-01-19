@@ -99,7 +99,7 @@ The present uploaded state of the LSTM_endtoend_singleLabel.py to extract only m
    Steps to visualise any generate and visualise knowledge graph is provided and also the generated knowledge graph for libpng has been kept. Further the .dot file for the example from libpng project (used in the paper) can be found in https://github.com/SMARTKT/CommentProbe/blob/visualization/Visualization/out_partial_pngwutil.dot. Copy the contents and use in the online viewer WebGraphviz http://www.jdolivet.byethost13.com/Logiciels/WebGraphviz/?i=1
    
 --------------------------------------------------------------------------------------------------------------------------------------------------   
-For any queries, you may contact the SmartKT team -- email: Srijoni Majumdar(majumdar.srijoni@gmail.com), Dewang Modi(mailtodewang@gmail.com), Vishesh Agrawal(), Vivek Gupta(vg19988@gmail.com), Ayush Bansal (abansal1008@gmail.com)
+For any queries, you may contact the SmartKT team -- email: Srijoni Majumdar(majumdar.srijoni@gmail.com), Dewang Modi(mailtodewang@gmail.com), Vishesh Agrawal(vishesh0512@gmail.com), Vivek Gupta(vg19988@gmail.com), Ayush Bansal (abansal1008@gmail.com)
 
 -----------------------------------------------------------------------------------------------------------------------------------------
     
