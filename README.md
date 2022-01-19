@@ -17,9 +17,9 @@ We release the source code for feature generation, ground truth generation, and 
 
 ---------------------------------------------------------------------------------
 
-All .csv files should be opened with $ delimitor
+All .csv files should be opened with $ delimitor. We have provided a snapshot of the separator options that should be used
 
-![image](https://user-images.githubusercontent.com/17869507/150149966-c90ae6a1-01f4-4f5c-835e-57090e404cea.png)
+![image](https://user-images.githubusercontent.com/17869507/150149966-c90ae6a1-01f4-4f5c-835e-57090e404cea.png | width=50)
 
 
 **1. FEATURE GENERATION**
