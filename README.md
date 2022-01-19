@@ -53,8 +53,11 @@ We release the source code for feature generation, ground truth generation, and 
    _Description_: The codes (all .py files) are used to train the labelled data over the proposed LSTM-ANN architecture to learn the model. Further as we also use word vectors only features, we have provided a wrapper class embeddingClass.py to load either elmo or cbow models to extract pre-trained embeddings
    
    _Start Script_: There are 3 parts to the inference based LSTM codes
+   
    a) Extracting the metrics from the saved models trained on 80\% of the total dataset (20206 comments)  - Folder https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Training_Outputs
+   
    b) Running LSTM over a new feature sheet generated with labels (quality classes) - Folder https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/exp5
+   
    c) Running LSTM over a new feature sheet but without any labels (only predicting, will not calculate any metrics) - Folder https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Customizable%20LSTM%20Codes
    
    The three folders have the same structure, the start script is 
