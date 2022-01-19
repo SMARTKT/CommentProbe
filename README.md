@@ -25,6 +25,7 @@ We release the source code for feature generation, ground truth generation, and 
 
 
 **1. FEATURE GENERATION**
+
    _Code Location_: https://github.com/SMARTKT/CommentProbe/tree/master/CommentProbe
    *Codes need to be accessed  only from the master branch*
    
@@ -38,6 +39,7 @@ We release the source code for feature generation, ground truth generation, and 
  _Artifacts Released_: Application Domain or Problem Domain concepts specific to 5 projects (https://github.com/SMARTKT/CommentProbe/tree/master/ProblemDomainConcepts) and the SD ontology (software development or program domain concepts), can be downloaded from https://github.com/SMARTKT/CommentProbe/blob/master/CommentProbe/Identifier/program_domain.csv or https://github.com/SMARTKT/CommentProbe/tree/master/Comment_Examples/SD_ONTOLOGY
    
 **2. GROUND TRUTH GENERATION**
+
    _Code Location_: https://github.com/SMARTKT/CommentProbe/tree/master/Concatenation
      *Codes need to be accessed  only from the master branch*
      
@@ -55,6 +57,7 @@ We release the source code for feature generation, ground truth generation, and 
   
   
   **3. INFERENCE USING MACHINE LEARNING**
+  
    _Code Location_: https://github.com/SMARTKT/CommentProbe/tree/master/Concatenation
      *Codes need to be accessed  only from the master branch*
      
@@ -82,6 +85,7 @@ The present uploaded state of the LSTM_endtoend_singleLabel.py to extract only m
   
   
    **3.1. Word Embeddings**
+   
    Word Embeddings for CBOW (10 GB size, 3 files need to be downloaded (https://tinyurl.com/SWVECembeddings) and kept in the same path -https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Training_Outputs, a compressed CBOW (https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/CBOW_compressed.bin) trained on lesser data and ELMo (https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Training_Outputs/elmo) and a wrapper embeddingClass.py to select the embeddings you want to use
    
    The detailed readme for word embeddings can be found in https://github.com/SMARTKT/WordEmbeddings/blob/master/README.md
@@ -100,6 +104,7 @@ The present uploaded state of the LSTM_endtoend_singleLabel.py to extract only m
   
   
    **5. CUSTOMIZABLE VISUALISATION  -- VISUALIZATION BRANCH**
+   
    A separate branch has been created to provide codes to generate correlated knowledge graph and visualise.
    Refer https://github.com/SMARTKT/CommentProbe/tree/visualization/Visualization and the README https://github.com/SMARTKT/CommentProbe/blob/visualization/Visualization/README_VISUALISATION.md
    Steps to visualise any generate and visualise knowledge graph is provided and also the generated knowledge graph for libpng has been kept. Further the .dot file for the example from libpng project (used in the paper) can be found in https://github.com/SMARTKT/CommentProbe/blob/visualization/Visualization/out_partial_pngwutil.dot. Copy the contents and use in the online viewer WebGraphviz http://www.jdolivet.byethost13.com/Logiciels/WebGraphviz/?i=1
@@ -110,12 +115,14 @@ For any queries, you may contact the SmartKT team -- email: Srijoni Majumdar(maj
 -----------------------------------------------------------------------------------------------------------------------------------------
     
 # README  Comment Probe
+
 This is the official repository for Comment Probe project
 
 
 ## Example - Running Comment Probe for libpng
 
 ### Part 1 - Setting up the project
+
 1. Clone the Comment Probe repository
 `https://github.com/SMARTKT/CommentProbe.git`
 
@@ -443,8 +450,11 @@ python LSTM_endtoend_singleLabel.py METRICS
 
 ```
 
+The feature values along with the labels (column annotated)  + the predicted labels (column predicted) from CommentProbe can be found in https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/exp5/ML_DATASHEETS/EXTRACTED
+
 ### 5.3.4  Predict  LSTM over a new feature sheet but without any labels (only predicting, will not calculate any metrics) - Folder https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Customizable%20LSTM%20Codes
 
 These uses the same code structure but dummy annotation sheets. Hence the annotation sheets for the comments for which you want to predict contains values for the first two columns only which are fileName and comment text.
 
-Also the generated predicted sheet will contain a column annotated and predicted. The column predicted will provide the quality labels assessed by CommentProbe. Column annotated contains random values and should not be used in computation
+The feature values along with the labels (column annotated)  + the predicted labels (column predicted) from CommentProbe can be found in https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Customizable%20LSTM%20Codes/ML_DATASHEETS/EXTRACTED
+However in this case, as we do not have annotated labels (new data) hence Column annotated contains random values and should not be used in computation
