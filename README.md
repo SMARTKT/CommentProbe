@@ -16,6 +16,12 @@ We release the source code for feature generation, ground truth generation, and 
 **5. CUSTOMIZABLE VISUALISATION  -- VISUALIZATION BRANCH**
 
 ---------------------------------------------------------------------------------
+
+All .csv files should be opened with $ delimitor
+
+![image](https://user-images.githubusercontent.com/17869507/150149966-c90ae6a1-01f4-4f5c-835e-57090e404cea.png)
+
+
 **1. FEATURE GENERATION**
    _Code Location_: https://github.com/SMARTKT/CommentProbe/tree/master/CommentProbe
    *Codes need to be accessed  only from the master branch*
