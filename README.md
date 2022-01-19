@@ -50,9 +50,17 @@ We release the source code for feature generation, ground truth generation, and 
    _Code Location_: https://github.com/SMARTKT/CommentProbe/tree/master/Concatenation
      *Codes need to be accessed  only from the master branch*
      
-   _Description_: The codes (all .py files) are used to train the labelled data over the proposed LSTM-ANN architecture to learn the model. Further as we also use word vectors only features, we 
+   _Description_: The codes (all .py files) are used to train the labelled data over the proposed LSTM-ANN architecture to learn the model. Further as we also use word vectors only features, we have provided a wrapper class embeddingClass.py to load either elmo or cbow models to extract pre-trained embeddings
    
-   _Start Script_: https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/LSTM_endtoend_singleLabel.py is used for training with already saved hyper parameters or you can edit for new ones, can be used to generate only the metrics from the total feature sheet (using a command line argument METRICS, refer Part 5 in Readme CommentProbe). Also as pre trained embeddings based features are used for comment text, functions from the wrapper class https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/embeddingClass.py is used in the file to load the required word mebddings using simple functions calls like load_elmo() over the comment text before feeding into lstm cells. The present uploaded state of the code  https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/LSTM_endtoend_singleLabel.py contains embeddings trained using the elmo model
+   _Start Script_: There are 3 parts to the inference based LSTM codes
+   a) Extracting the metrics from the saved models trained on 80\% of the total dataset (20206 comments)  - Folder https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Training_Outputs
+   b) Running LSTM over a new feature sheet generated with labels (quality classes) - Folder https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/exp5
+   c) Running LSTM over a new feature sheet but without any labels (only predicting, will not calculate any metrics) - Folder https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Customizable%20LSTM%20Codes
+   
+   The three folders have the same structure, the start script is 
+LSTM_endtoend_singleLabel.py is used for training with already saved hyper parameters or you can edit for new ones, can be used to generate only the metrics from the total feature sheet (using a command line argument METRICS, refer Part 5 in Readme CommentProbe). Also as pre trained embeddings based features are used for comment text, functions from the wrapper class embeddingClass.py is used in the file to load the required word mebddings using simple functions calls like load_elmo() over the comment text before feeding into lstm cells. 
+
+The present uploaded state of the LSTM_endtoend_singleLabel.py to extract only metrics  https://github.com/SMARTKT/CommentProbe/blob/master/ML_Experiments/Training_Outputs/LSTM_endtoend_singleLabel.py contains embeddings trained using the elmo model
    
    _Readme part_: Part 5 in Readme CommentProbe complete the machine learning part.
 
