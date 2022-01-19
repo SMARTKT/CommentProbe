@@ -1,0 +1,702 @@
+@prefix comment: <http://smartKT/ns/comment#> .
+@prefix prop: <http://smartKT/ns/properties#> .
+@prefix symbol: <http://smartKT/ns/symbol#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+symbol:200842871503 prop:absolute_file_path "main.cpp" ;
+    prop:comment_id comment:1 ;
+    prop:comment_token "globals" ;
+    prop:has_id 200842871503 ;
+    prop:isDecl_file_line "threads/main.cpp#9" ;
+    prop:isDef_file_line "threads/main.cpp#9" ;
+    prop:is_a "VarDecl" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "counter" ;
+    prop:name_token "counter" ;
+    prop:size 4 ;
+    prop:spelling "counter" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int" ;
+    prop:usr "c:@counter" .
+
+symbol:202558277373 prop:absolute_file_path "main.cpp" ;
+    prop:comment_id comment:2 ;
+    prop:comment_token "declarations" ;
+    prop:isDecl_file_line "threads/main.cpp#13" ;
+    prop:isUse_file_line "threads/main.cpp#22",
+        "threads/main.cpp#38" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_extern_file "main.cpp" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "lock" ;
+    prop:name_token "lock" ;
+    prop:size 40 ;
+    prop:spelling "lock" ;
+    prop:storage_class "extern" ;
+    prop:type "pthread_mutex_t" ;
+    prop:usr "c:@lock" .
+
+symbol:103484061106 prop:absolute_file_path "try.cpp" ;
+    prop:has_child symbol:103948876047 ;
+    prop:has_id 103484061106 ;
+    prop:isDecl_file_line "threads/try.cpp#6" ;
+    prop:isDef_file_line "threads/try.cpp#6" ;
+    prop:isUse_file_line "threads/try.cpp#12",
+        "threads/try.cpp#17" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_called_file "try.cpp" ;
+    prop:is_defined_file "try.cpp" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "lock" ;
+    prop:name_token "lock" ;
+    prop:size 40 ;
+    prop:spelling "lock" ;
+    prop:storage_class "default_auto" ;
+    prop:type "pthread_mutex_t" ;
+    prop:usr "c:@lock" .
+
+symbol:103948876047 prop:absolute_file_path "pthreadtypes.h",
+        "try.cpp" ;
+    prop:has_id 103948876047 ;
+    prop:has_parent symbol:103484061106 ;
+    prop:isDecl_file_line "bits/pthreadtypes.h#128" ;
+    prop:isDef_file_line "bits/pthreadtypes.h#128" ;
+    prop:isUse_file_line "threads/try.cpp#6" ;
+    prop:is_a "TypeRef",
+        "TypedefDecl" ;
+    prop:is_called_file "try.cpp" ;
+    prop:is_defined_file "pthreadtypes.h" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "mutex",
+        "pthread",
+        "pthread_mutex_t" ;
+    prop:spelling "pthread_mutex_t" ;
+    prop:type "pthread_mutex_t" ;
+    prop:usr "c:@T@pthread_mutex_t" .
+
+symbol:202477380882 prop:absolute_file_path "main.cpp" ;
+    prop:comment_id comment:2 ;
+    prop:comment_token "declarations" ;
+    prop:has_id 202477380882 ;
+    prop:has_parent symbol:102140199268 ;
+    prop:isDecl_file_line "threads/main.cpp#12" ;
+    prop:isDef_file_line "threads/main.cpp#12" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol:102140199268 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ7trythisPvE3arg" ;
+    prop:name_token "arg" ;
+    prop:spelling "arg" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void *" ;
+    prop:usr "c:main.cpp@186@F@trythis#*v#@arg" .
+
+symbol:100521541048 prop:absolute_file_path "try.cpp" ;
+    prop:has_child symbol:100521541048 ;
+    prop:has_id 100521541048 ;
+    prop:has_parent symbol:100521541048 ;
+    prop:isDecl_file_line "threads/try.cpp#11" ;
+    prop:isDef_file_line "threads/try.cpp#11" ;
+    prop:isUse_file_line "threads/try.cpp#15" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_called_file "try.cpp" ;
+    prop:is_defined_file "try.cpp" ;
+    prop:lex_parent_id symbol:102140199268 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ7trythisPvE1i" ;
+    prop:name_token "i" ;
+    prop:size 8 ;
+    prop:spelling "i" ;
+    prop:storage_class "default_auto" ;
+    prop:type "unsigned long" ;
+    prop:usr "c:try.cpp@190@F@trythis#*v#@i" .
+
+symbol:101302616328 prop:absolute_file_path "try.cpp" ;
+    prop:has_child symbol:101302616328 ;
+    prop:has_id 101302616328 ;
+    prop:has_parent symbol:101302616328 ;
+    prop:isDecl_file_line "threads/try.cpp#11" ;
+    prop:isDef_file_line "threads/try.cpp#11" ;
+    prop:isUse_file_line "threads/try.cpp#13" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_called_file "try.cpp" ;
+    prop:is_defined_file "try.cpp" ;
+    prop:lex_parent_id symbol:102140199268 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ7trythisPvE1r" ;
+    prop:name_token "r" ;
+    prop:size 8 ;
+    prop:spelling "r" ;
+    prop:storage_class "default_auto" ;
+    prop:type "unsigned long" ;
+    prop:usr "c:try.cpp@190@F@trythis#*v#@r" .
+
+symbol:102950649290 prop:absolute_file_path "pthread.h",
+        "try.cpp" ;
+    prop:has_child symbol:102950649290 ;
+    prop:has_parent symbol:102950649290 ;
+    prop:isDecl_file_line "include/pthread.h#762" ;
+    prop:isUse_file_line "threads/try.cpp#12" ;
+    prop:is_a "CallExpr",
+        "DeclRefExpr",
+        "FunctionDecl" ;
+    prop:is_called_file "try.cpp" ;
+    prop:is_extern_file "pthread.h" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "pthread_mutex_lock" ;
+    prop:mangled_name "pthread_mutex_lock" ;
+    prop:name_token "lock",
+        "mutex",
+        "pthread",
+        "pthread_mutex_lock" ;
+    prop:param_type "pthread_mutex_t * throw" ;
+    prop:return_type "int" ;
+    prop:spelling "pthread_mutex_lock" ;
+    prop:storage_class "extern" ;
+    prop:type "int",
+        "int (*)(pthread_mutex_t *) throw()",
+        "int (pthread_mutex_t *) throw()" ;
+    prop:usr "c:@F@pthread_mutex_lock" .
+
+symbol:103781613047 prop:absolute_file_path "pthread.h",
+        "try.cpp" ;
+    prop:has_child symbol:103781613047 ;
+    prop:has_parent symbol:103781613047 ;
+    prop:isDecl_file_line "include/pthread.h#773" ;
+    prop:isUse_file_line "threads/try.cpp#17" ;
+    prop:is_a "CallExpr",
+        "DeclRefExpr",
+        "FunctionDecl" ;
+    prop:is_called_file "try.cpp" ;
+    prop:is_extern_file "pthread.h" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "pthread_mutex_unlock" ;
+    prop:mangled_name "pthread_mutex_unlock" ;
+    prop:name_token "mutex",
+        "pthread",
+        "pthread_mutex_unlock",
+        "unlock" ;
+    prop:param_type "pthread_mutex_t * throw" ;
+    prop:return_type "int" ;
+    prop:spelling "pthread_mutex_unlock" ;
+    prop:storage_class "extern" ;
+    prop:type "int",
+        "int (*)(pthread_mutex_t *) throw()",
+        "int (pthread_mutex_t *) throw()" ;
+    prop:usr "c:@F@pthread_mutex_unlock" .
+
+symbol:200511518781 prop:absolute_file_path "main.cpp",
+        "pthread.h" ;
+    prop:comment_id comment:2 ;
+    prop:comment_token "declarations" ;
+    prop:has_child symbol:200511518781 ;
+    prop:has_parent symbol:200511518781 ;
+    prop:isDecl_file_line "include/pthread.h#250" ;
+    prop:isUse_file_line "threads/main.cpp#36",
+        "threads/main.cpp#37" ;
+    prop:is_a "CallExpr",
+        "DeclRefExpr",
+        "FunctionDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_extern_file "pthread.h_1" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "pthread_join" ;
+    prop:mangled_name "pthread_join" ;
+    prop:name_token "join",
+        "pthread",
+        "pthread_join" ;
+    prop:param_type " void **",
+        "pthread_t" ;
+    prop:return_type "int" ;
+    prop:spelling "pthread_join" ;
+    prop:storage_class "extern" ;
+    prop:type "int",
+        "int (*)(pthread_t, void **)",
+        "int (pthread_t, void **)" ;
+    prop:usr "c:@F@pthread_join" .
+
+symbol:200565957065 prop:absolute_file_path "main.cpp",
+        "pthread.h" ;
+    prop:comment_id comment:2 ;
+    prop:comment_token "declarations" ;
+    prop:has_child symbol:200565957065 ;
+    prop:has_parent symbol:200565957065 ;
+    prop:isDecl_file_line "include/pthread.h#749" ;
+    prop:isUse_file_line "threads/main.cpp#22" ;
+    prop:is_a "CallExpr",
+        "DeclRefExpr",
+        "FunctionDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_extern_file "pthread.h_1" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "pthread_mutex_init" ;
+    prop:mangled_name "pthread_mutex_init" ;
+    prop:name_token "init",
+        "mutex",
+        "pthread",
+        "pthread_mutex_init" ;
+    prop:param_type " const pthread_mutexattr_t * throw",
+        "pthread_mutex_t *" ;
+    prop:return_type "int" ;
+    prop:spelling "pthread_mutex_init" ;
+    prop:storage_class "extern" ;
+    prop:type "int",
+        "int (*)(pthread_mutex_t *, const pthread_mutexattr_t *) throw()",
+        "int (pthread_mutex_t *, const pthread_mutexattr_t *) throw()" ;
+    prop:usr "c:@F@pthread_mutex_init" .
+
+symbol:201529646427 prop:absolute_file_path "main.cpp",
+        "pthread.h" ;
+    prop:comment_id comment:2 ;
+    prop:comment_token "declarations" ;
+    prop:has_child symbol:201529646427 ;
+    prop:has_parent symbol:201529646427 ;
+    prop:isDecl_file_line "include/pthread.h#233" ;
+    prop:isUse_file_line "threads/main.cpp#30" ;
+    prop:is_a "CallExpr",
+        "DeclRefExpr",
+        "FunctionDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_extern_file "pthread.h_1" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "pthread_create" ;
+    prop:mangled_name "pthread_create" ;
+    prop:name_token "create",
+        "pthread",
+        "pthread_create" ;
+    prop:param_type " const pthread_attr_t *__restrict",
+        " void *",
+        "pthread_t *__restrict" ;
+    prop:return_type "int" ;
+    prop:spelling "pthread_create" ;
+    prop:storage_class "extern" ;
+    prop:type "int",
+        "int (*)(pthread_t *__restrict, const pthread_attr_t *__restrict, void *(*)(void *), void *__restrict) throw()",
+        "int (pthread_t *__restrict, const pthread_attr_t *__restrict, void *(*)(void *), void *__restrict) throw()" ;
+    prop:usr "c:@F@pthread_create" .
+
+symbol:201749263661 prop:absolute_file_path "main.cpp",
+        "pthread.h" ;
+    prop:comment_id comment:2 ;
+    prop:comment_token "declarations" ;
+    prop:has_child symbol:201749263661 ;
+    prop:has_parent symbol:201749263661 ;
+    prop:isDecl_file_line "include/pthread.h#754" ;
+    prop:isUse_file_line "threads/main.cpp#38" ;
+    prop:is_a "CallExpr",
+        "DeclRefExpr",
+        "FunctionDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_extern_file "pthread.h_1" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "pthread_mutex_destroy" ;
+    prop:mangled_name "pthread_mutex_destroy" ;
+    prop:name_token "destroy",
+        "mutex",
+        "pthread",
+        "pthread_mutex_destroy" ;
+    prop:param_type "pthread_mutex_t * throw" ;
+    prop:return_type "int" ;
+    prop:spelling "pthread_mutex_destroy" ;
+    prop:storage_class "extern" ;
+    prop:type "int",
+        "int (*)(pthread_mutex_t *) throw()",
+        "int (pthread_mutex_t *) throw()" ;
+    prop:usr "c:@F@pthread_mutex_destroy" .
+
+symbol:202262882913 prop:absolute_file_path "main.cpp" ;
+    prop:array_size "[2]" ;
+    prop:comment_id comment:1,
+        comment:2 ;
+    prop:comment_token "declarations",
+        "globals" ;
+    prop:has_child symbol:202262882913 ;
+    prop:has_id 202262882913 ;
+    prop:has_parent symbol:202262882913 ;
+    prop:isDecl_file_line "threads/main.cpp#8" ;
+    prop:isDef_file_line "threads/main.cpp#8" ;
+    prop:isUse_file_line "threads/main.cpp#30",
+        "threads/main.cpp#36",
+        "threads/main.cpp#37" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_array "True" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "tid" ;
+    prop:name_token "tid" ;
+    prop:size 8 ;
+    prop:spelling "tid" ;
+    prop:storage_class "default_auto" ;
+    prop:type "pthread_t *",
+        "pthread_t [2]" ;
+    prop:usr "c:@tid" .
+
+symbol:202543096012 prop:absolute_file_path "main.cpp" ;
+    prop:array_size "[2]" ;
+    prop:comment_id comment:2 ;
+    prop:comment_token "declarations" ;
+    prop:has_child symbol:202543096012 ;
+    prop:has_id 202543096012 ;
+    prop:has_parent symbol:202543096012 ;
+    prop:isDecl_file_line "threads/main.cpp#20" ;
+    prop:isDef_file_line "threads/main.cpp#20" ;
+    prop:isUse_file_line "threads/main.cpp#29",
+        "threads/main.cpp#30" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_array "True" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol:201200057182 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4mainE1a" ;
+    prop:name_token "a" ;
+    prop:size 4 ;
+    prop:spelling "a" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int *",
+        "int [2]" ;
+    prop:usr "c:main.cpp@277@F@main#@a" .
+
+symbol:202788412824 prop:absolute_file_path "main.cpp" ;
+    prop:comment_id comment:2 ;
+    prop:comment_token "declarations" ;
+    prop:has_child symbol:202788412824 ;
+    prop:has_id 202788412824 ;
+    prop:has_parent symbol:202788412824 ;
+    prop:isDecl_file_line "threads/main.cpp#17" ;
+    prop:isDef_file_line "threads/main.cpp#17" ;
+    prop:isUse_file_line "threads/main.cpp#27",
+        "threads/main.cpp#29",
+        "threads/main.cpp#30",
+        "threads/main.cpp#33" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:lex_parent_id symbol:201200057182 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4mainE1i" ;
+    prop:name_token "i" ;
+    prop:size 4 ;
+    prop:spelling "i" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int" ;
+    prop:usr "c:main.cpp@246@F@main#@i" .
+
+comment:1 prop:comment_token "globals" ;
+    prop:has_id 1 ;
+    prop:is_defined_file "main.cpp" ;
+    prop:text "globals" .
+
+symbol:101934893212 prop:absolute_file_path "try.cpp" ;
+    prop:has_child symbol:101934893212 ;
+    prop:has_id 101934893212 ;
+    prop:has_parent symbol:101934893212,
+        symbol:102140199268 ;
+    prop:isDecl_file_line "threads/try.cpp#8" ;
+    prop:isDef_file_line "threads/try.cpp#8" ;
+    prop:isUse_file_line "threads/try.cpp#10" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "try.cpp" ;
+    prop:is_defined_file "try.cpp" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol:102140199268 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ7trythisPvE3arg" ;
+    prop:name_token "arg" ;
+    prop:size 8 ;
+    prop:spelling "arg" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void *" ;
+    prop:usr "c:try.cpp@116@F@trythis#*v#@arg" .
+
+symbol:103806139520 prop:absolute_file_path "try.cpp" ;
+    prop:has_child symbol:103806139520 ;
+    prop:has_parent symbol:102163372715,
+        symbol:103806139520 ;
+    prop:isDecl_file_line "threads/try.cpp#5" ;
+    prop:isUse_file_line "threads/try.cpp#13",
+        "threads/try.cpp#14",
+        "threads/try.cpp#16" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_called_file "try.cpp" ;
+    prop:is_extern_file "try.cpp" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "counter" ;
+    prop:name_token "counter" ;
+    prop:size 4 ;
+    prop:spelling "counter" ;
+    prop:storage_class "extern" ;
+    prop:type "int" ;
+    prop:usr "c:@counter" .
+
+symbol:201200057182 prop:absolute_file_path "main.cpp" ;
+    prop:comment_id comment:2 ;
+    prop:comment_token "declarations" ;
+    prop:has_id 201200057182 ;
+    prop:isDecl_file_line "threads/main.cpp#15" ;
+    prop:isDef_file_line "threads/main.cpp#15" ;
+    prop:is_a "FunctionDecl" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "main" ;
+    prop:mangled_name "main" ;
+    prop:name_token "main" ;
+    prop:param_type "" ;
+    prop:return_type "int" ;
+    prop:spelling "main" ;
+    prop:storage_class "default_auto" ;
+    prop:usr "c:@F@main#" .
+
+symbol:203358881698 prop:absolute_file_path "main.cpp" ;
+    prop:comment_id comment:2 ;
+    prop:comment_token "declarations" ;
+    prop:has_child symbol:203358881698 ;
+    prop:has_id 203358881698 ;
+    prop:has_parent symbol:202546098645,
+        symbol:203358881698 ;
+    prop:isDecl_file_line "threads/main.cpp#18" ;
+    prop:isDef_file_line "threads/main.cpp#18" ;
+    prop:isUse_file_line "threads/main.cpp#30",
+        "threads/main.cpp#31",
+        "threads/main.cpp#32" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:lex_parent_id symbol:201200057182 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4mainE5error" ;
+    prop:name_token "error" ;
+    prop:size 4 ;
+    prop:spelling "error" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int" ;
+    prop:usr "c:main.cpp@261@F@main#@error" .
+
+symbol:102163372715 prop:absolute_file_path "main.cpp",
+        "stdio.h",
+        "try.cpp" ;
+    prop:comment_id comment:2 ;
+    prop:comment_token "declarations" ;
+    prop:has_child symbol:102163372715,
+        symbol:103806139520,
+        symbol:202546098645 ;
+    prop:has_parent symbol:102163372715 ;
+    prop:isDecl_file_line "include/stdio.h#362" ;
+    prop:isUse_file_line "threads/main.cpp#23",
+        "threads/main.cpp#32",
+        "threads/try.cpp#10",
+        "threads/try.cpp#14",
+        "threads/try.cpp#16" ;
+    prop:is_a "CallExpr",
+        "DeclRefExpr",
+        "FunctionDecl" ;
+    prop:is_called_file "main.cpp",
+        "try.cpp" ;
+    prop:is_extern_file "stdio.h" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "printf" ;
+    prop:mangled_name "printf" ;
+    prop:name_token "printf" ;
+    prop:param_type " ...",
+        "const char *__restrict" ;
+    prop:return_type "int" ;
+    prop:spelling "printf" ;
+    prop:storage_class "extern" ;
+    prop:type "int",
+        "int (*)(const char *__restrict, ...)",
+        "int (const char *__restrict, ...)" ;
+    prop:usr "c:@F@printf" .
+
+symbol:202546098645 prop:absolute_file_path "main.cpp",
+        "string.h" ;
+    prop:comment_id comment:2 ;
+    prop:comment_token "declarations" ;
+    prop:has_child symbol:202546098645,
+        symbol:203358881698 ;
+    prop:has_parent symbol:102163372715,
+        symbol:202546098645 ;
+    prop:isDecl_file_line "include/string.h#408" ;
+    prop:isUse_file_line "threads/main.cpp#32" ;
+    prop:is_a "CallExpr",
+        "DeclRefExpr",
+        "FunctionDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_extern_file "string.h" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "strerror" ;
+    prop:mangled_name "strerror" ;
+    prop:name_token "strerror" ;
+    prop:param_type "int throw" ;
+    prop:return_type "char *" ;
+    prop:spelling "strerror" ;
+    prop:storage_class "extern" ;
+    prop:type "char *",
+        "char *(*)(int) throw()",
+        "char *(int) throw()" ;
+    prop:usr "c:@F@strerror" .
+
+symbol:102140199268 prop:absolute_file_path "main.cpp",
+        "try.cpp" ;
+    prop:comment_id comment:2 ;
+    prop:comment_token "declarations" ;
+    prop:has_child symbol:101934893212,
+        symbol:202477380882 ;
+    prop:has_id 102140199268 ;
+    prop:isDecl_file_line "threads/main.cpp#12",
+        "threads/try.cpp#8" ;
+    prop:isDef_file_line "threads/try.cpp#8" ;
+    prop:isUse_file_line "threads/main.cpp#30" ;
+    prop:is_a "DeclRefExpr",
+        "FunctionDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "try.cpp" ;
+    prop:is_extern_file "main.cpp" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_Z7trythisPv" ;
+    prop:mangled_name "_Z7trythisPv" ;
+    prop:name_token "trythis" ;
+    prop:param_type "void *" ;
+    prop:return_type "void *" ;
+    prop:spelling "trythis" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void *(void *)" ;
+    prop:usr "c:@F@trythis#*v#" .
+
+comment:2 prop:comment_token "declarations" ;
+    prop:has_id 2 ;
+    prop:is_defined_file "main.cpp" ;
+    prop:text "external declarations" .
+
+symbol: prop:absolute_file_path "main.cpp",
+        "try.cpp" ;
+    prop:array_size "[22]",
+        "[23]",
+        "[25]",
+        "[27]",
+        "[32]" ;
+    prop:comment_id comment:1,
+        comment:2 ;
+    prop:comment_token "declarations",
+        "globals" ;
+    prop:isUse_file_line "threads/main.cpp#1",
+        "threads/main.cpp#13",
+        "threads/main.cpp#2",
+        "threads/main.cpp#22",
+        "threads/main.cpp#23",
+        "threads/main.cpp#3",
+        "threads/main.cpp#30",
+        "threads/main.cpp#32",
+        "threads/main.cpp#36",
+        "threads/main.cpp#37",
+        "threads/main.cpp#4",
+        "threads/main.cpp#5",
+        "threads/main.cpp#8",
+        "threads/try.cpp#1",
+        "threads/try.cpp#10",
+        "threads/try.cpp#14",
+        "threads/try.cpp#16",
+        "threads/try.cpp#18",
+        "threads/try.cpp#2",
+        "threads/try.cpp#3" ;
+    prop:is_a "StringLiteral",
+        "TypeRef",
+        "inclusionDirective",
+        "macroExpansion" ;
+    prop:is_array "True" ;
+    prop:is_called_file "main.cpp",
+        "try.cpp" ;
+    prop:name_token "\"\\n Came here with arg = %d\\n\"",
+        "\"\\n Job %d has finished\\n\"",
+        "\"\\n Job %d has started\\n\"",
+        "\"\\n mutex init has failed\\n\"",
+        "\"\\nThread can't be created : [%s]\"",
+        "%dn",
+        "Came",
+        "Job",
+        "NULL",
+        "Thread",
+        "arg",
+        "cant",
+        "created",
+        "cstdio",
+        "cstdlib",
+        "errno.h",
+        "errnoh",
+        "failedn",
+        "finishedn",
+        "init",
+        "mutex",
+        "pthread",
+        "pthread.h",
+        "pthread_mutex_t",
+        "pthread_t",
+        "pthreadh",
+        "startedn",
+        "string.h",
+        "stringh",
+        "unistd.h",
+        "unistdh" ;
+    prop:spelling "\"\\n Came here with arg = %d\\n\"",
+        "\"\\n Job %d has finished\\n\"",
+        "\"\\n Job %d has started\\n\"",
+        "\"\\n mutex init has failed\\n\"",
+        "\"\\nThread can't be created : [%s]\"",
+        "NULL",
+        "cstdio",
+        "cstdlib",
+        "errno.h",
+        "pthread.h",
+        "pthread_mutex_t",
+        "pthread_t",
+        "string.h",
+        "unistd.h" ;
+    prop:type "const char [22]",
+        "const char [23]",
+        "const char [25]",
+        "const char [27]",
+        "const char [32]",
+        "pthread_mutex_t",
+        "pthread_t" .
+
