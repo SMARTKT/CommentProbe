@@ -27,7 +27,7 @@ We release the source code for feature generation, ground truth generation, and 
    
    _Readme part_: Part 1, Part 2, and Part 3 in Readme CommentProbe complete the feature generation process. Shown for libpng project (https://github.com/SMARTKT/CommentProbe.git) as an example
    
-    _Artifacts Released_: Application Domain or Problem Domain concepts specific to 5 projects (https://github.com/SMARTKT/CommentProbe/tree/master/ProblemDomainConcepts) and the SD ontology (software development or program domain concepts), can be downloaded from https://github.com/SMARTKT/CommentProbe/blob/master/CommentProbe/Identifier/program_domain.csv or https://github.com/SMARTKT/CommentProbe/tree/master/Comment_Examples/SD_ONTOLOGY
+ _Artifacts Released_: Application Domain or Problem Domain concepts specific to 5 projects (https://github.com/SMARTKT/CommentProbe/tree/master/ProblemDomainConcepts) and the SD ontology (software development or program domain concepts), can be downloaded from https://github.com/SMARTKT/CommentProbe/blob/master/CommentProbe/Identifier/program_domain.csv or https://github.com/SMARTKT/CommentProbe/tree/master/Comment_Examples/SD_ONTOLOGY
    
 **2. GROUND TRUTH GENERATION**
    _Code Location_: https://github.com/SMARTKT/CommentProbe/tree/master/Concatenation
