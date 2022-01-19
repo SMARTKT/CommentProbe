@@ -19,7 +19,7 @@ We release the source code for feature generation, ground truth generation, and 
 
 All .csv files should be opened with $ delimitor. We have provided a snapshot of the separator options that should be used
 
-<img src="https://user-images.githubusercontent.com/17869507/150149966-c90ae6a1-01f4-4f5c-835e-57090e404cea.png" width="100" height="100"> 
+<img src="https://user-images.githubusercontent.com/17869507/150149966-c90ae6a1-01f4-4f5c-835e-57090e404cea.png" width="500" height="500"> 
 
 
 
