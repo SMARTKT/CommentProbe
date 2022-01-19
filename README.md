@@ -56,9 +56,7 @@ We release the source code for feature generation, ground truth generation, and 
    
    a) Extracting the metrics from the saved models trained on 80\% of the total dataset (20206 comments)  - Folder https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Training_Outputs
    
-   b) Running LSTM over a new feature sheet generated with labels (quality classes) - Folder https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/exp5
-   
-   c) Running LSTM over a new feature sheet but without any labels (only predicting, will not calculate any metrics) - Folder https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Customizable%20LSTM%20Codes
+   b) Train  LSTM over a new feature sheet generated with labels (quality classes) - Folder https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/exp5
    
    The three folders have the same structure, the start script is 
 LSTM_endtoend_singleLabel.py is used for training with already saved hyper parameters or you can edit for new ones, can be used to generate only the metrics from the total feature sheet (using a command line argument METRICS, refer Part 5 in Readme CommentProbe). Also as pre trained embeddings based features are used for comment text, functions from the wrapper class embeddingClass.py is used in the file to load the required word mebddings using simple functions calls like load_elmo() over the comment text before feeding into lstm cells. 
@@ -226,29 +224,18 @@ This requires manually annotated excel sheets.
 
 ### Part 5 - Running Training experiments
 
-To run the LSTM codes for training the model or extracting only the metrics, it is necessary to first download the pretrained word embeddings SWVEc developed by us
+In this part we will explain first on the environment setup and then on three versions of the LSTM architecture
 
-1. Go to link https://tinyurl.com/SWVECembeddings
-Download all the files and folder into the folder ML_Experiments/Training_Ouputs
-
-```
-    .
-    ├── ML_DATASHEETS
-    ├── MODELS_NEW
-    ├── elmo
-    ├── Split_Details
-```
-
-The Github project for the word embeddings is - `https://github.com/SMARTKT/WordEmbeddings`. YOu can look up for further details of how to use it using the python wrapper embeddingClass.py.
-
-For the LSTM based experiments we have already included it in the codes using the wrapper embeddingClass.py
-
-2. Now the environment need to be set up for running the experiments. Required proper versions of tensorflow, gensim, keras, numpy, h5py and spacy.
+ a) Extracting the metrics from the saved models trained on 80\% of the total dataset (20206 comments)  - Folder https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Training_Outputs
+   
+ b) Train LSTM over a new feature sheet generated with labels (quality classes) - Folder https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/exp5
+   
+ 
+ 
+### Part 5.1 Environment Setup
 
 Create a conda environment with python 3.6 (you can create from the environment file https://github.com/SMARTKT/CommentProbe/conda_lstm.yml)
-After the conda is setup install the following packages using pip
-
-
+After the conda is setup install the following packages using pip, as you will be getting an error that pip packages are not installed
 
 ```
 pip install tensorflow==1.14
@@ -391,22 +378,65 @@ from optimizers.keras
 ```
 in many cases based on tensorflow version mismatches
 
-3. Several experiments have been conducted for the LSTM-ANN Architecture, the h5py files for the experiment which produced the optimal results have been  uploaded in the folder 'https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Training_Outputs/MODELS_NEW' for all the folds (5 fold cross validation was done)
+### 5.2  Extracting the metrics from the saved models trained on 80\% of the total dataset (20206 comments)  - Folder https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Training_Outputs
+
+To run the LSTM codes for extracting only the metrics, it is necessary to first download the pretrained word embeddings SWVEc developed by us
+
+1. Go to link https://tinyurl.com/SWVECembeddings
+Download all the files and folder into the folder ML_Experiments/Training_Ouputs
+
+```
+    .
+    ├── ML_DATASHEETS
+    ├── MODELS_NEW
+    ├── elmo
+    ├── Split_Details
+```
+
+The Github project for the word embeddings is - `https://github.com/SMARTKT/WordEmbeddings`. YOu can look up for further details of how to use it using the python wrapper embeddingClass.py.
+
+For the LSTM based experiments we have already included it in the codes using the wrapper embeddingClass.py
+
+
+ Several experiments have been conducted for the LSTM-ANN Architecture, the h5py files for the experiment which produced the optimal results have been  uploaded in the folder 'https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Training_Outputs/MODELS_NEW' for all the folds (5 fold cross validation was done)
 
 The complete set of features for 20206 comments have been provided in 'https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Training_Outputs/ML_DATASHEETS'
 
-
-To train again on the feature sheet with a different set of hyper parameters or just obtain the metrics for the feature sheet by loading the saved models cd into the path CommentProbe/ML_Experiments/Training_Outputs` and run the following
-
-```
-Edit the code LSTM_endtoend_singleLabel.py by changing hyper parameters (optional) and run. If you do not edit the code, it will run with the already used hyperparameters and again train on the entire feature sheet in your machine
-
-python LSTM_endtoend_singleLabel.py
-
 run the below command for only retrieving the metrics
-
+```
 python LSTM_endtoend_singleLabel.py METRICS
 
 ```
 The output from the console <<console_output_metrics_cpu.txt>>  https://github.com/SMARTKT/CommentProbe/blob/master/console_output_metrics_cpu.txt
 for running on a cpu machine is attached. You can refer for the format of the output and warnings shown.
+
+### 5.3  Train LSTM over a new feature sheet generated with labels (quality classes) - Folder https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/exp5
+
+To train LSTM over the feature sheet generated from (Part 4 - Running Concatenation Project), we have released modified version of codes in the same folder structure though. Also the sample datasheets over 200 comments from the libpng project has been provided (https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/exp5/ML_DATASHEETS)
+
+Go to link https://tinyurl.com/SWVECembeddings
+Download all the files and folder into the folder ML_Experiments/Training_Ouputs
+
+```
+    .
+    ├── ML_DATASHEETS
+    ├── MODELS_NEW
+    ├── elmo
+    ├── Split_Details
+```
+
+The Github project for the word embeddings is - `https://github.com/SMARTKT/WordEmbeddings`. You can look up for further details of how to use it using the python wrapper embeddingClass.py.
+
+For the LSTM based experiments we have already included it in the codes using the wrapper embeddingClass.py
+
+run the below command for training the LSTM over the sample feature sheets
+```
+python LSTM_endtoend_singleLabel.py METRICS
+
+```
+
+### 5.3.4  Predict  LSTM over a new feature sheet but without any labels (only predicting, will not calculate any metrics) - Folder https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Customizable%20LSTM%20Codes
+
+These uses the same code structure but dummy annotation sheets. Hence the annotation sheets for the comments for which you want to predict contains values for the first two columns only which are fileName and comment text.
+
+Also the generated predicted sheet will contain a column annotated and predicted. The column predicted will provide the quality labels assessed by CommentProbe. Column annotated contains random values and should not be used in computation
