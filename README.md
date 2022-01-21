@@ -446,7 +446,7 @@ For the LSTM based experiments we have already included it in the codes using th
 
 run the below command for training the LSTM over the sample feature sheets
 ```
-python LSTM_endtoend_singleLabel.py METRICS
+python LSTM_endtoend_singleLabel.py 
 
 ```
 
@@ -455,6 +455,13 @@ The feature values along with the labels (column annotated)  + the predicted lab
 ### 5.3.4  Predict  LSTM over a new feature sheet but without any labels (only predicting, will not calculate any metrics) - Folder https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Customizable%20LSTM%20Codes
 
 These uses the same code structure but dummy annotation sheets. Hence the annotation sheets for the comments for which you want to predict contains values for the first two columns only which are fileName and comment text.
+
+In this case you need to use
+run the below command for only retrieving the metrics 
+```
+python LSTM_endtoend_singleLabel.py METRICS
+
+```
 
 The feature values along with the labels (column annotated)  + the predicted labels (column predicted) from CommentProbe can be found in https://github.com/SMARTKT/CommentProbe/tree/master/ML_Experiments/Customizable%20LSTM%20Codes/ML_DATASHEETS/EXTRACTED
 However in this case, as we do not have annotated labels (new data) hence Column annotated contains random values and should not be used in computation
